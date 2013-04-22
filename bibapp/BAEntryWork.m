@@ -37,6 +37,8 @@
 @synthesize mediaIconRelatedItemType;
 @synthesize mediaIconDisplayLabel;
 @synthesize mediaIconOriginInfoIssuance;
+@synthesize partName;
+@synthesize partNumber;
 
 - (UIImage *)mediaIcon
 {

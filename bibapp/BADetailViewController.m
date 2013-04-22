@@ -393,19 +393,62 @@
         const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
         NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
         NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=\\s/\\s).*(?=\n)" options:NSRegularExpressionCaseInsensitive error:nil];
-        NSArray *results = [regex matchesInString:newString options:0 range:NSMakeRange(0, newString.length)];
         
-        NSMutableString *displayString = [[NSMutableString alloc] init];
-        if ([results count] >= 1) {
-            [displayString appendString:[newString substringWithRange:[[results objectAtIndex:0] range]]];
-        } else {
-            [displayString appendString:[newStringArray objectAtIndex:1]];
+        NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
+        
+        int currentLine = 0;
+        
+        if ([newStringArray count] > currentLine) {
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+            if ([resultsLine count] > 0) {
+                currentLine++;
+            }
         }
         
-        for (NSString *tempString in newStringArray) {
-            if ([tempString hasPrefix:@"In:"]) {
-                [displayString appendFormat:@" - %@", tempString];
+        if ([newStringArray count] > currentLine) {
+            if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
+                currentLine++;
+            }
+        }
+        
+        if ([newStringArray count] > currentLine) {
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+            if ([resultsLine count] > 0) {
+                NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
+                if ([resultPartsBracket count] > 0) {
+                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
+                } else {
+                    [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+                }
+            }
+            NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
+            if ([resultPartsSlash count] > 1) {
+                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
+            } else {
+                NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+                if ([resultPartsDash count] > 1) {
+                    [displayString appendString:[resultPartsDash objectAtIndex:1]];
+                } else {
+                    [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+                }
+            }
+        }
+        
+        currentLine++;
+        
+        if ([newStringArray count] > currentLine) {
+            NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
+            if ([resultPartsCongress count] > 1) {
+                [displayString appendString:[resultPartsCongress objectAtIndex:1]];
+            } else {
+                if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
+                    NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+                    if ([resultPartsDash count] > 1) {
+                        [displayString appendString:[resultPartsDash objectAtIndex:1]];
+                    }
+                }
             }
         }
         
@@ -596,6 +639,26 @@
                 [cell.toc setFrame: CGRectMake(36,top,122,18)];
                 [cell.tocInfo setHidden:NO];
                 [cell.toc setHidden:NO];
+                top += 20;
+            }
+        }
+        
+        if (top < 120) {
+            top = 120;
+        }
+        
+        [cell.loanInfo addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
+        [cell.loan addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (!self.currentEntry.local) {
+            if (self.didLoadISBD) {
+                if (top < 120) {
+                    top = 120;
+                }
+                [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
+                [cell.loan setFrame: CGRectMake(36,top,122,18)];
+                [cell.loanInfo setHidden:NO];
+                [cell.loan setHidden:NO];
                 top += 20;
             }
         }
@@ -954,6 +1017,13 @@
     if (self.currentEntry.tocArray != nil && [self.currentEntry.tocArray count] > 0) {
         [self.scrollViewController setTempTocArray:self.currentEntry.tocArray];
         [self.scrollViewController performSegueWithIdentifier:@"tocListSegue" sender:self];
+    }
+}
+
+- (void)loanAction
+{
+    NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"http://gso.gbv.de/DB=2.1/PPNSET?PPN=%@", self.currentEntry.ppn]];
+    if (![[UIApplication sharedApplication] openURL:url]) {
     }
 }
 

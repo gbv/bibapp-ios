@@ -314,6 +314,16 @@
             [self.tocTitleButton setHidden:NO];
         }
         
+        [self.loanButton addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.loanTitleButton addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.loanButton setHidden:YES];
+        [self.loanTitleButton setHidden:YES];
+        if (!self.currentEntry.local) {
+            [self.loanButton setHidden:NO];
+            [self.loanTitleButton setHidden:NO];
+        }
+        
         [self.titleLabel setText:tempEntry.title];
         [self.subtitleLabel setText:tempEntry.subtitle];
         
@@ -647,19 +657,62 @@
         const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
         NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
         NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=\\s/\\s).*(?=\n)" options:NSRegularExpressionCaseInsensitive error:nil];
-        NSArray *results = [regex matchesInString:newString options:0 range:NSMakeRange(0, newString.length)];
         
-        NSMutableString *displayString = [[NSMutableString alloc] init];
-        if ([results count] >= 1) {
-            [displayString appendString:[newString substringWithRange:[[results objectAtIndex:0] range]]];
-        } else {
-            [displayString appendString:[newStringArray objectAtIndex:1]];
+        NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
+        
+        int currentLine = 0;
+        
+        if ([newStringArray count] > currentLine) {
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+            if ([resultsLine count] > 0) {
+                currentLine++;
+            }
         }
         
-        for (NSString *tempString in newStringArray) {
-            if ([tempString hasPrefix:@"In:"]) {
-                [displayString appendFormat:@" - %@", tempString];
+        if ([newStringArray count] > currentLine) {
+            if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
+                currentLine++;
+            }
+        }
+        
+        if ([newStringArray count] > currentLine) {
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+            if ([resultsLine count] > 0) {
+                NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
+                if ([resultPartsBracket count] > 0) {
+                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
+                } else {
+                    [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+                }
+            }
+            NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
+            if ([resultPartsSlash count] > 1) {
+                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
+            } else {
+                NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+                if ([resultPartsDash count] > 1) {
+                    [displayString appendString:[resultPartsDash objectAtIndex:1]];
+                } else {
+                    [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+                }
+            }
+        }
+        
+        currentLine++;
+        
+        if ([newStringArray count] > currentLine) {
+            NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
+            if ([resultPartsCongress count] > 1) {
+                [displayString appendString:[resultPartsCongress objectAtIndex:1]];
+            } else {
+                if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
+                    NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+                    if ([resultPartsDash count] > 1) {
+                        [displayString appendString:[resultPartsDash objectAtIndex:1]];
+                    }
+                }
             }
         }
         
@@ -762,6 +815,8 @@
     [self setTrashIcon:nil];
     [self setListNavigationBar:nil];
     [self setDetailNavigationBar:nil];
+    [self setLoanButton:nil];
+    [self setLoanTitleButton:nil];
     [super viewDidUnload];
 }
 
@@ -782,6 +837,8 @@
     [self.isbdLabel setHidden:YES];
     [self.tocButton setHidden:YES];
     [self.tocTitleButton setHidden:YES];
+    [self.loanButton setHidden:YES];
+    [self.loanTitleButton setHidden:YES];
     [self.detailTableView setHidden:YES];
     
     [self.defaultTextView setHidden:NO];
@@ -941,6 +998,13 @@
     UIButton* senderButton = (UIButton*)sender;
     [self.tocPopoverController setPopoverContentSize:CGSizeMake(450, 200)];
     [self.tocPopoverController presentPopoverFromRect:senderButton.bounds inView:senderButton permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+}
+
+- (void)loanAction
+{
+    NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"http://gso.gbv.de/DB=2.1/PPNSET?PPN=%@", self.currentEntry.ppn]];
+    if (![[UIApplication sharedApplication] openURL:url]) {
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

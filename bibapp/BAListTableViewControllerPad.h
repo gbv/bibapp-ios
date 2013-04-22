@@ -44,6 +44,8 @@
 @property (strong, nonatomic) BALocation *currentLocation;
 @property (strong, nonatomic) UIPopoverController *tocPopoverController;
 @property (strong, nonatomic) BATocTableViewControllerPad *tocTableViewController;
+@property (weak, nonatomic) IBOutlet UIButton *loanButton;
+@property (weak, nonatomic) IBOutlet UIButton *loanTitleButton;
 
 - (IBAction)trashAction:(id)sender;
 

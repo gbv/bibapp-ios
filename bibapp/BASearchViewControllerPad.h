@@ -56,6 +56,8 @@
 @property (strong, nonatomic) BATocTableViewControllerPad *tocTableViewController;
 @property BOOL initialSearchLocal;
 @property BOOL initialSearch;
+@property (weak, nonatomic) IBOutlet UIButton *loanButton;
+@property (weak, nonatomic) IBOutlet UIButton *loanTitleButton;
 
 - (IBAction)listAction:(id)sender;
 

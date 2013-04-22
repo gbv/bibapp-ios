@@ -37,6 +37,8 @@
 @property (strong, nonatomic) NSString *mediaIconRelatedItemType;
 @property (strong, nonatomic) NSString *mediaIconDisplayLabel;
 @property (strong, nonatomic) NSString *mediaIconOriginInfoIssuance;
+@property (strong, nonatomic) NSString *partName;
+@property (strong, nonatomic) NSString *partNumber;
 
 - (UIImage *)mediaIcon;
 

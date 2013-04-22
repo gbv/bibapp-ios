@@ -317,6 +317,8 @@
             [self.reservation removeAllObjects];
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
+            [self.loanHeader.spinner stopAnimating];
+            [self.reservationHeader.spinner stopAnimating];
                 UITextView *header = [[UITextView alloc] init];
                 [header setText:@"Keine Medien entliehen"];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];

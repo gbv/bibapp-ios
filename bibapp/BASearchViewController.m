@@ -240,11 +240,13 @@
         
         NSString *tempTitlePartNumber = [(GDataXMLElement *)[[titleInfo elementsForName:@"partNumber"] objectAtIndex:0] stringValue];
         if (tempTitlePartNumber != nil) {
+            [tempEntry setPartNumber:tempTitlePartNumber];
             [tempCombinedSubTitle appendString:tempTitlePartNumber];
         }
         
         NSString *tempTitlePartName = [(GDataXMLElement *)[[titleInfo elementsForName:@"partName"] objectAtIndex:0] stringValue];
         if (tempTitlePartName != nil) {
+            [tempEntry setPartName:tempTitlePartName];
             if (![tempCombinedSubTitle isEqualToString:@""]) {
                 [tempCombinedSubTitle appendString:@"; "];
             }
