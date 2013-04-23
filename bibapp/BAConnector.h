@@ -28,7 +28,7 @@
 - (void)getUNAPIDetailsFor:(NSString *)ppn WithFormat:(NSString *)format WithDelegate:(id)delegate;
 - (void)getDetailsForLocal:(NSString *)ppn WithDelegate:(id)delegate;
 - (void)getDetailsFor:(NSString *)ppn WithDelegate:(id)delegate;
-- (void)getCoverFor:(NSString *)ppn WithDelegate:(id)delegate;
+- (void)getCoverFor:(NSString *)number WithDelegate:(id)delegate;
 - (void)loginWithAccount:(NSString *)account WithPassword:(NSString *)password WithDelegate:(id)delegate;
 - (void)accountLoadLoanListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadReservedListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;

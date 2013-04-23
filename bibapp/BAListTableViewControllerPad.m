@@ -354,9 +354,7 @@
             [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
         }
         
-        [self loadCover];
-        
-        
+        [self.coverView setImage:nil];
     } else {
         [self initDetailView];
     }
@@ -373,9 +371,9 @@
     [self.coverView setContentMode:UIViewContentModeCenter];
     [self.coverView setImage:self.currentEntry.mediaIcon];
     
-    NSString *urlString;
-    urlString = [[NSString alloc] initWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", [self.currentEntry ppn]];
-    NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlString]];
+    NSString *urlStringISBN;
+    urlStringISBN = [[NSString alloc] initWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", [self.currentEntry isbn]];
+    NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlStringISBN]];
     UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
     if (image.size.height > 1 && image.size.width > 1) {
         [self.coverView setContentMode:UIViewContentModeScaleAspectFit];
@@ -384,9 +382,21 @@
         [self setCover:image];
         self.foundCover = YES;
     } else {
-        [self.coverView setUserInteractionEnabled:NO];
-        [self setCover:nil];
-        self.foundCover = NO;
+        NSString *urlStringPPN;
+        urlStringPPN = [[NSString alloc] initWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", [self.currentEntry ppn]];
+        NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlStringPPN]];
+        UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+        if (image.size.height > 1 && image.size.width > 1) {
+            [self.coverView setContentMode:UIViewContentModeScaleAspectFit];
+            [self.coverView setImage:image];
+            [self.coverView setUserInteractionEnabled:YES];
+            [self setCover:image];
+            self.foundCover = YES;
+        } else {
+            [self.coverView setUserInteractionEnabled:NO];
+            [self setCover:nil];
+            self.foundCover = NO;
+        }
     }
 }
 
@@ -747,6 +757,21 @@
                     }
                 }
             }
+            [self.currentEntry setIsbn:@""];
+            GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
+            if (tempISBNElement != nil) {
+                NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
+                if (rangeValue.length > 0) {
+                    NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:nil];
+                    NSArray *resultsISBN = [regexLine matchesInString:[tempISBNElement stringValue] options:0 range:NSMakeRange(0, [[tempISBNElement stringValue] length])];
+                    if ([resultsISBN count] > 0) {
+                        for (NSTextCheckingResult *match in resultsISBN) {
+                            NSRange matchRange = [match rangeAtIndex:1];
+                            [self.currentEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+                        }
+                    }
+                }
+            }
         }
         if([self.currentEntry.tocArray count] > 0){
             [self.tocButton setHidden:NO];
@@ -754,7 +779,7 @@
             [self.tocTableViewController.tocArray removeAllObjects];
             [self.tocTableViewController.tocArray addObjectsFromArray:self.currentEntry.tocArray];
         }
-        
+        [self loadCover];
         [self.detailTableView reloadData];
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];

@@ -390,6 +390,8 @@
 		8FED45EC16D235A90056CD88 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FED45F616D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */; };
 		8FED45F716D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */; };
+		8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD873172695C800D66DE6 /* Icon-72.png */; };
+		8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */; };
 		8FF26FFA16393BF100099665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FF916393BF100099665 /* UIKit.framework */; };
 		8FF26FFC16393BF100099665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8FF26FFE16393BF100099665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
@@ -616,6 +618,8 @@
 		8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "bibapp~ipad.storyboard"; sourceTree = "<group>"; };
 		8FED45F416D25B2D0056CD88 /* BASearchViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASearchViewControllerPad.h; sourceTree = "<group>"; };
 		8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASearchViewControllerPad.m; sourceTree = "<group>"; };
+		8FEDD873172695C800D66DE6 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
 		8FF26FF516393BF100099665 /* BibApp LG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp LG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF26FF916393BF100099665 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FF26FFB16393BF100099665 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1061,6 +1065,8 @@
 				8FE5F95F170466E6002EA336 /* iPadIcon.png */,
 				8FE5F95D170466D4002EA336 /* iPadIconLG@2x.png */,
 				8FE5F95B170466C8002EA336 /* iPadIconLG.png */,
+				8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */,
+				8FEDD873172695C800D66DE6 /* Icon-72.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1288,6 +1294,8 @@
 				8F6A7C2C1701CFB800C4E580 /* BATocListCell.xib in Resources */,
 				8FE5F960170466EA002EA336 /* iPadIcon.png in Resources */,
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
+				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
+				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

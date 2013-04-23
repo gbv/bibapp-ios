@@ -218,6 +218,22 @@
         tempPpn = [tempPpn stringByReplacingOccurrencesOfString:@"CIANDO" withString:@""];
         [tempEntry setPpn:tempPpn];
         
+        [tempEntry setIsbn:@""];
+        GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[shortTitleNew elementsForName:@"identifier"] objectAtIndex:0];
+        if (tempISBNElement != nil) {
+            NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
+            if (rangeValue.length > 0) {
+                NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:nil];
+                NSArray *resultsISBN = [regexLine matchesInString:[tempISBNElement stringValue] options:0 range:NSMakeRange(0, [[tempISBNElement stringValue] length])];
+                if ([resultsISBN count] > 0) {
+                    for (NSTextCheckingResult *match in resultsISBN) {
+                        NSRange matchRange = [match rangeAtIndex:1];
+                        [tempEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+                    }
+                }
+            }
+        }
+        
         [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
         [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
         

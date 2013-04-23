@@ -106,7 +106,7 @@
                                         <color key="highlightedColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8mW-bt-WxM">
-                                        <rect key="frame" x="224" y="134" width="460" height="49"/>
+                                        <rect key="frame" x="224" y="134" width="460" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -805,7 +805,7 @@
                                         <color key="highlightedColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRB-gd-bnY">
-                                        <rect key="frame" x="224" y="134" width="460" height="49"/>
+                                        <rect key="frame" x="224" y="134" width="460" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1027,7 +1027,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5uB-Qg-oyJ">
-                                        <rect key="frame" x="44" y="264" width="132" height="24"/>
+                                        <rect key="frame" x="46" y="264" width="132" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Inhaltsverzeichnis">
@@ -1251,6 +1251,7 @@
                 <relationship kind="outlet" name="listNavigationBar" candidateClass="UINavigationBar"/>
                 <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="loanButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loanTitleButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
@@ -1311,9 +1312,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nvZ-Ec-xVW"/>
-        <segue reference="f6G-SO-Bgw"/>
-        <segue reference="OMk-Xb-7pp"/>
-        <segue reference="WjN-WC-96R"/>
+        <segue reference="Uv5-wX-sJh"/>
+        <segue reference="Mij-Xb-KOy"/>
+        <segue reference="Eu4-hp-2DI"/>
+        <segue reference="2NA-DM-dYu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -39,6 +39,7 @@
 @property (strong, nonatomic) NSString *mediaIconOriginInfoIssuance;
 @property (strong, nonatomic) NSString *partName;
 @property (strong, nonatomic) NSString *partNumber;
+@property (strong, nonatomic) NSString *isbn;
 
 - (UIImage *)mediaIcon;
 

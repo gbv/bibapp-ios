@@ -37,6 +37,7 @@
 @property float computedSizeOfTitleCell;
 @property CGRect frame;
 @property (strong, nonatomic) BADetailScrollViewController *scrollViewController;
+@property BOOL searchedCoverByISBN;
 
 - (void)actionButton;
 - (void)initDetailView;

@@ -126,7 +126,7 @@
 							<object class="IBUIButton" id="78892907">
 								<reference key="NSNextResponder" ref="636973865"/>
 								<int key="NSvFlags">-2147483356</int>
-								<string key="NSFrame">{{36, 190}, {122, 18}}</string>
+								<string key="NSFrame">{{36, 191}, {122, 18}}</string>
 								<reference key="NSSuperview" ref="636973865"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="53643915"/>
@@ -254,13 +254,12 @@
 							<object class="IBUIButton" id="304403739">
 								<reference key="NSNextResponder" ref="636973865"/>
 								<int key="NSvFlags">-2147483356</int>
-								<string key="NSFrame">{{36, 216}, {115, 18}}</string>
+								<string key="NSFrame">{{36, 217}, {122, 18}}</string>
 								<reference key="NSSuperview" ref="636973865"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<string key="IBUINormalTitle">Fernleihoptionen</string>
 								<object class="NSColor" key="IBUINormalTitleColor">
@@ -459,11 +458,11 @@
 							<reference ref="36123864"/>
 							<reference ref="473160698"/>
 							<reference ref="93356487"/>
-							<reference ref="78892907"/>
 							<reference ref="344764640"/>
-							<reference ref="53643915"/>
 							<reference ref="273056497"/>
+							<reference ref="53643915"/>
 							<reference ref="304403739"/>
+							<reference ref="78892907"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

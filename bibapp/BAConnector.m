@@ -160,11 +160,11 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
-- (void)getCoverFor:(NSString *)ppn WithDelegate:(id)delegate
+- (void)getCoverFor:(NSString *)number WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getCover"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", ppn]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", number]];
    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
 	[theRequest setHTTPMethod:@"GET"];
@@ -173,7 +173,7 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
-- (void) loginWithAccount:(NSString *)account WithPassword:(NSString *)password WithDelegate:(id)delegate
+- (void)loginWithAccount:(NSString *)account WithPassword:(NSString *)password WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];

@@ -49,6 +49,7 @@
 @synthesize didReturnFromSegue;
 @synthesize computedSizeOfTitleCell;
 @synthesize scrollViewController;
+@synthesize searchedCoverByISBN;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -121,9 +122,7 @@
     [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
     BAConnector *unapiConnectorMods = [BAConnector generateConnector];
     [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
-    BAConnector *coverConnector = [BAConnector generateConnector];
-    [coverConnector getCoverFor:[self.currentEntry ppn] WithDelegate:self];
-   
+
     [self.view setNeedsDisplay];
 }
 
@@ -489,6 +488,24 @@
                     }
                 }
             }
+            [self.currentEntry setIsbn:@""];
+            GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
+            if (tempISBNElement != nil) {
+                NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
+                if (rangeValue.length > 0) {
+                    NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:nil];
+                    NSArray *resultsISBN = [regexLine matchesInString:[tempISBNElement stringValue] options:0 range:NSMakeRange(0, [[tempISBNElement stringValue] length])];
+                    if ([resultsISBN count] > 0) {
+                        for (NSTextCheckingResult *match in resultsISBN) {
+                            NSRange matchRange = [match rangeAtIndex:1];
+                            [self.currentEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+                        }
+                    }
+                }
+            }
+            BAConnector *coverConnector = [BAConnector generateConnector];
+            [coverConnector getCoverFor:[self.currentEntry isbn] WithDelegate:self];
+            [self setSearchedCoverByISBN:YES];
         }
         [((BAItemDetail *)self.view).detailTableView reloadData];
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
@@ -526,6 +543,11 @@
             [((BAItemDetail *)self.view).detailTableView reloadData];
             self.foundCover = YES;
         } else {
+            if (self.searchedCoverByISBN) {
+                BAConnector *coverConnector = [BAConnector generateConnector];
+                [coverConnector getCoverFor:[self.currentEntry ppn] WithDelegate:self];
+                [self setSearchedCoverByISBN:NO];
+            }
             self.foundCover = NO;
         }
         
@@ -636,7 +658,7 @@
                     top = 120;
                 }
                 [cell.tocInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.toc setFrame: CGRectMake(36,top,122,18)];
+                [cell.toc setFrame: CGRectMake(36,top+1,122,18)];
                 [cell.tocInfo setHidden:NO];
                 [cell.toc setHidden:NO];
                 top += 20;
@@ -656,7 +678,7 @@
                     top = 120;
                 }
                 [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.loan setFrame: CGRectMake(36,top,122,18)];
+                [cell.loan setFrame: CGRectMake(36,top+1,122,18)];
                 [cell.loanInfo setHidden:NO];
                 [cell.loan setHidden:NO];
                 top += 20;
