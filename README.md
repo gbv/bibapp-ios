@@ -20,6 +20,6 @@ Weitere Informationen unter http://www.gbv.de/wikis/cls/BibApp
 
 Kontakt:
 
-UB Lüneburg:   christen@leuphana.de
-UB Hildesheim: jarmo.schrader@uni-hildesheim.de
+UB Lüneburg:   christen@leuphana.de  
+UB Hildesheim: jarmo.schrader@uni-hildesheim.de  
 Effective-Webwork GmbH: www.effective-webwork.de
