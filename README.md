@@ -3,7 +3,7 @@ bibapp-ios
 
 Die BibApp ermöglicht den Zugriff auf Kataloge und Nutzerkonten von Bibliotheken von Geräten mit iOS Betriebssystem.
 
-Die BibApp für iOS wurde entwickelt von der Effective Webwork GmbH 
+Die BibApp für iOS wurde entwickelt von der effective WEBWORK GmbH 
 im Auftrag der Universitätsbibliotheken Lüneburg und Hildesheim.
 Alle Rechte vorbehalten.
 
@@ -22,4 +22,4 @@ Kontakt:
 
 UB Lüneburg:   christen@leuphana.de  
 UB Hildesheim: jarmo.schrader@uni-hildesheim.de  
-Effective-Webwork GmbH: www.effective-webwork.de
+effective WEBWORK GmbH: www.effective-webwork.de
