@@ -76,13 +76,18 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
-   NSMutableArray* trustedHosts = [NSMutableArray array];  // In diesem Array stehen die zugelassenen vertrauenswürdigen Hosts
-   if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
-      if ([trustedHosts containsObject:challenge.protectionSpace.host]) {
+    // Add trusted hosts to this array in order to handle authentication challenges
+   NSMutableArray* trustedHosts = [NSMutableArray array];
+   if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
+       [trustedHosts containsObject:challenge.protectionSpace.host])
+   {
          [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-      }
    }
-   [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
+   else
+   {
+       [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
+   }
+
 }
 
 - (void)searchLocalFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate
