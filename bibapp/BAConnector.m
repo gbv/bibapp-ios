@@ -9,8 +9,10 @@
 #include <CoreFoundation/CFURL.h>
 #import "BAConnector.h"
 #import "BAConnectorDelegate.h"
-#import "BAEntryWork.h"
 #import "BADocumentItem.h"
+#import "BAEntryWork.h"
+#import "BAURLRequestService.h"
+
 
 @implementation BAConnector
 
@@ -100,9 +102,7 @@ static BAConnector *sharedConnector = nil;
    term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
    
-   NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -118,9 +118,7 @@ static BAConnector *sharedConnector = nil;
    term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
    
-   NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -130,10 +128,9 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:[NSString stringWithFormat:@"getUNAPIDetails%@", [format capitalizedString]]];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+	
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -144,9 +141,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetailsLocal"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", self.appDelegate.configuration.currentBibDetailURL, ppn]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -157,9 +152,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetails"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=xml", ppn]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -170,9 +163,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getCover"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", number]];
-   NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -183,9 +174,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", self.appDelegate.configuration.currentBibPAIAURL, account, password]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -196,9 +185,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadLoanList"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -213,9 +200,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadFees"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -226,9 +211,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadPatron"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -346,9 +329,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getInfoFeedWithDelegate"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@", self.appDelegate.configuration.currentBibFeedURL]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -359,9 +340,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getLocationInfoForUri"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -372,9 +351,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getLocationsForLibraryByUri"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest setHTTPMethod:@"GET"];
+	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
