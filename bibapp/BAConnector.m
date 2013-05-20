@@ -227,7 +227,6 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRequestDocs"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
@@ -245,11 +244,9 @@ static BAConnector *sharedConnector = nil;
    }
    [jsonString appendString:@"]"];
    
-   [theRequest setHTTPMethod:@"POST"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-   [theRequest setValue:[NSString stringWithFormat:@"%d", [jsonString length]] forHTTPHeaderField:@"Content-Length"];
-   [theRequest setHTTPBody:[jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]];
+   NSUInteger contentLength = [jsonString length];
+   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
    
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
@@ -261,7 +258,6 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRenewDocs"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
@@ -279,11 +275,9 @@ static BAConnector *sharedConnector = nil;
    }
    [jsonString appendString:@"]"];
    
-   [theRequest setHTTPMethod:@"POST"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-   [theRequest setValue:[NSString stringWithFormat:@"%d", [jsonString length]] forHTTPHeaderField:@"Content-Length"];
-   [theRequest setHTTPBody:[jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]];
+   NSUInteger contentLength = [jsonString length];
+   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
    
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
