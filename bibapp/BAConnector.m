@@ -230,16 +230,18 @@ static BAConnector *sharedConnector = nil;
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
-   BOOL first = YES;
+
    for (BADocumentItem *tempDocumentItem in docs) {
+      
+      if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
+      {
+         [jsonString appendString:@","];
+      }
+      
       NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
       NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
       NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      if (first) {
-         first = NO;
-      } else {
-         [jsonString appendString:@","];
-      }
+      
       [jsonString appendString:tempString];
    }
    [jsonString appendString:@"]"];
@@ -261,16 +263,17 @@ static BAConnector *sharedConnector = nil;
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
-   BOOL first = YES;
+
    for (BAEntryWork *tempEntry in docs) {
+      
+      if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+      {
+         [jsonString appendString:@","];
+      }
+      
       NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
       NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
       NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      if (first) {
-         first = NO;
-      } else {
-         [jsonString appendString:@","];
-      }
       [jsonString appendString:tempString];
    }
    [jsonString appendString:@"]"];
@@ -292,16 +295,17 @@ static BAConnector *sharedConnector = nil;
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
-   BOOL first = YES;
+
    for (BAEntryWork *tempEntry in docs) {
+      
+      if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+      {
+         [jsonString appendString:@","];
+      }
+      
       NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
       NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
       NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      if (first) {
-         first = NO;
-      } else {
-         [jsonString appendString:@","];
-      }
       [jsonString appendString:tempString];
    }
    [jsonString appendString:@"]"];
