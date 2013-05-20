@@ -8,10 +8,35 @@
 
 #import "BAURLRequestService.h"
 
+@interface BAURLRequestService()
+
+/**
+ * @details This is the designated initializer of this service
+ */
+- (id)initSingleton;
+
+@end
+
 @implementation BAURLRequestService
 
 static id<BAURLRequestService> sharedInstance;
 
+- (id)init
+{
+   NSException *wrongUsage = [[NSException alloc] initWithName:@"Shared instance exists" reason:@"This is a singleton service class that should not be initialized by calling init()" userInfo:NULL];
+   
+   [wrongUsage raise];
+   
+   return nil;
+}
+
+- (id)initSingleton
+{
+   self = [super init];
+   return self;
+}
+
+#pragma mark - BAURLRequestService methods
 + (id<BAURLRequestService>)sharedInstance
 {
    if (!sharedInstance)
@@ -30,19 +55,17 @@ static id<BAURLRequestService> sharedInstance;
    return theRequest;
 }
 
-- (id)init
+- (NSURLRequest *)postRequestWithURL:(NSURL *)url HTTPBody:(NSData *)body contentLength:(NSUInteger)contentLength
 {
-   NSException *wrongUsage = [[NSException alloc] initWithName:@"Shared instance exists" reason:@"This is a singleton service class that should not be initialized by calling init()" userInfo:NULL];
+   NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
    
-   [wrongUsage raise];
-
-   return nil;
-}
-
-- (id)initSingleton
-{
-   self = [super init];
-   return self;
+   [theRequest setHTTPMethod:@"POST"];
+   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+   [theRequest setValue:[NSString stringWithFormat:@"%d", contentLength] forHTTPHeaderField:@"Content-Length"];
+   [theRequest setHTTPBody:body];
+   
+   return theRequest;
 }
 
 @end

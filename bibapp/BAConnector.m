@@ -222,7 +222,7 @@ static BAConnector *sharedConnector = nil;
    [delegate command:@"accountLoadInterloanList" didFinishLoadingWithResult:token];
 }
 
-- (void)accountRequestDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
+- (void)accountRequestDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRequestDocs"];
@@ -256,7 +256,7 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
-- (void)accountRenewDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
+- (void)accountRenewDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRenewDocs"];
@@ -290,12 +290,11 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
-- (void)accountCancelDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
+- (void)accountCancelDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountCancelDocs"];
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
@@ -313,11 +312,9 @@ static BAConnector *sharedConnector = nil;
    }
    [jsonString appendString:@"]"];
    
-   [theRequest setHTTPMethod:@"POST"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-   [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-   [theRequest setValue:[NSString stringWithFormat:@"%d", [jsonString length]] forHTTPHeaderField:@"Content-Length"];
-   [theRequest setHTTPBody:[jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]];
+   NSUInteger contentLength = [jsonString length];
+   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
    
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
