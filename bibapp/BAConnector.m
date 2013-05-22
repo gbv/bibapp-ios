@@ -129,7 +129,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:[NSString stringWithFormat:@"getUNAPIDetails%@", [format capitalizedString]]];
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
-    NSURLRequest *theRequest = [NSURLRequest requestWithURL:url];
+    NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
 	
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
