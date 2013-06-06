@@ -234,12 +234,17 @@
     } else if ([command isEqualToString:@"getLocationsForLibraryByUri"]) {
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
         BAConnector *locationConnector = [BAConnector generateConnector];
-        BALocation *tempLocation = [locationConnector loadLocationForUri:self.appDelegate.configuration.currentBibLocationUri];
-        [self.locationList addObject:tempLocation];
+        BALocation *tempLocationMain = [locationConnector loadLocationForUri:self.appDelegate.configuration.currentBibLocationUri];
+        [self.locationList addObject:tempLocationMain];
         for (NSString *key in [json objectForKey:self.appDelegate.configuration.currentBibLocationUri]) {
             if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
                 for (NSDictionary *tempUri in [[json objectForKey:self.appDelegate.configuration.currentBibLocationUri] objectForKey:key]) {
                     BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
+                    if ([tempLocation.address isEqualToString:@""]) {
+                        [tempLocation setAddress:tempLocationMain.address];
+                        [tempLocation setGeoLong:tempLocationMain.geoLong];
+                        [tempLocation setGeoLat:tempLocationMain.geoLat];
+                    }
                     [self.locationList addObject:tempLocation];
                 }
             }
