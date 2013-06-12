@@ -25,6 +25,7 @@
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nJ. Schrader (UB Hildesheim),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Universitätsbibliothek Lüneburg\nScharnhorststraße 1\n21335 Lüneburg\n\nTelefon: (04131) 677-1100\nTelefax: (04131) 677-1111\n\nE-mail: unibib@uni-lueneburg.de\nWWW: www.leuphana.de/ub";
     self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Luen4";
+    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=2";
 }
 
 @end

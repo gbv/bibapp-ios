@@ -100,8 +100,28 @@ static BAConnector *sharedConnector = nil;
 	[theRequest setHTTPMethod:@"GET"];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
+       if (first == 1) {
+           BAConnector *searchCountConnector = [BAConnector generateConnector];
+           [searchCountConnector searchCountWithDelegate:self];
+       }
    }
 }
+
+- (void)searchCountWithDelegate:(id)delegate
+{
+    if (![self.appDelegate.configuration.currentBibSearchCountURL isEqualToString:@""]) {
+        [self setConnectorDelegate:delegate];
+        [self setCommand:@"searchCount"];
+        NSURL *url = [NSURL URLWithString:self.appDelegate.configuration.currentBibSearchCountURL];
+        NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+        [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        [theRequest setHTTPMethod:@"GET"];
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+        if (theConnection) {
+        }
+    }
+}
+
 
 - (void)searchCentralFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate
 {
@@ -526,6 +546,11 @@ static BAConnector *sharedConnector = nil;
                                                                                                       CFSTR(""),
                                                                                                       kCFStringEncodingUTF8));
    return returnString;
+}
+
+- (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
+{
+    //used for searchCount.
 }
 
 @end

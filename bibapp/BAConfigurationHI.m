@@ -25,6 +25,7 @@
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nJ. Schrader (UB Hildesheim),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Anschrift\nUniversitätsbibliothek Hildesheim\nMarienburger Platz 22\n31141 Hildesheim\n\nwww.uni-hildesheim.de/bibliothek\n\nAuskunft\nTelefon: (05121) 883-260\nE-Mail: auskunft@uni-hildesheim.de\n\nAusleihe\nTelefon: (05121) 883-264\nE-Mail: ausleihe@uni-hildesheim.de";
     self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Hil2";
+    self.currentBibSearchCountURL = @"";
 }
 
 @end

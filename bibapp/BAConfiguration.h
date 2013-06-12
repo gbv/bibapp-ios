@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSMutableDictionary *currentBibImprint;
 @property (strong, nonatomic) NSString *currentBibContact;
 @property (strong, nonatomic) NSString *currentBibLocationUri;
+@property (strong, nonatomic) NSString *currentBibSearchCountURL;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

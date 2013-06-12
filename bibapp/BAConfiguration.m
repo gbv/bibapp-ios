@@ -22,6 +22,7 @@
 @synthesize currentBibImprint;
 @synthesize currentBibContact;
 @synthesize currentBibLocationUri;
+@synthesize currentBibSearchCountURL;
 
 - (id)init {
     self = [super init];
