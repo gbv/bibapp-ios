@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *saveLocalSwith;
 
 - (IBAction)saveLocalSwithAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end

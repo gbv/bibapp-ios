@@ -37,6 +37,8 @@
     if (appDelegate.options.saveLocalData) {
         [self.saveLocalSwith setOn:YES];
     }
+    
+    [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,4 +65,8 @@
     }
 }
 
+- (void)viewDidUnload {
+    [self setVersionLabel:nil];
+    [super viewDidUnload];
+}
 @end
