@@ -631,6 +631,7 @@
     if (actionSheet.tag == 10) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
             for (BAEntryWork *tempEmtry in self.loan) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
@@ -646,6 +647,7 @@
     } else if (actionSheet.tag == 11) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
             for (BAEntryWork *tempEmtry in self.reservation) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
