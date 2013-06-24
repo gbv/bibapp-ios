@@ -35,9 +35,9 @@
 - (void)accountLoadReservedListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadFeesWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadInterloanWithAccount:(NSString *)account ListWithToken:(NSString *)token WithDelegate:(id)delegate;
-- (void)accountRequestDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
-- (void)accountRenewDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
-- (void)accountCancelDocs:(NSMutableArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
+- (void)accountRequestDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
+- (void)accountRenewDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
+- (void)accountCancelDocs:(NSArray *)docs WithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadPatronWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)getInfoFeedWithDelegate:(id)delegate;
 - (void)getLocationInfoForUri:(NSString *)uri WithDelegate:(id)delegate;

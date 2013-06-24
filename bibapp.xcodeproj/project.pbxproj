@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B034320174944140076CA8B /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
+		3B034321174944140076CA8B /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
+		3B034322174944140076CA8B /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
 		8F052302166C96D600AB6D63 /* BAAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F052301166C96D600AB6D63 /* BAAccount.m */; };
 		8F0D9F7A16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */; };
 		8F0D9F7B16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */; };
@@ -438,6 +441,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B03431E174944140076CA8B /* BAURLRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAURLRequestService.h; path = Connector/Requests/BAURLRequestService.h; sourceTree = "<group>"; };
+		3B03431F174944140076CA8B /* BAURLRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAURLRequestService.m; path = Connector/Requests/BAURLRequestService.m; sourceTree = "<group>"; };
 		8F0336201702F38B001E933F /* BADetailScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADetailScrollViewDelegate.h; sourceTree = "<group>"; };
 		8F052300166C96D600AB6D63 /* BAAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccount.h; sourceTree = "<group>"; };
 		8F052301166C96D600AB6D63 /* BAAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccount.m; sourceTree = "<group>"; };
@@ -722,6 +727,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B03431D174943C50076CA8B /* URLRequests */ = {
+			isa = PBXGroup;
+			children = (
+				3B03431E174944140076CA8B /* BAURLRequestService.h */,
+				3B03431F174944140076CA8B /* BAURLRequestService.m */,
+			);
+			name = URLRequests;
+			sourceTree = "<group>";
+		};
 		8F0D9F7416B68A29000CED81 /* menuIcons@2x */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +832,7 @@
 		8FD47E0816404AC900965F12 /* Connector */ = {
 			isa = PBXGroup;
 			children = (
+				3B03431D174943C50076CA8B /* URLRequests */,
 				8FD47E0E16404B9B00965F12 /* BAConnector.h */,
 				8FD47E0B16404B4B00965F12 /* BAConnector.m */,
 				8FD47E0C16404B4B00965F12 /* BAConnectorDelegate.h */,
@@ -1533,6 +1548,7 @@
 				8F71F19116FB309900AD46D0 /* BADetailScrollViewController.m in Sources */,
 				8F6A7C291701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8F6A7C301701CFDD00C4E580 /* BATocListCell.m in Sources */,
+				3B034321174944140076CA8B /* BAURLRequestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,6 +1621,7 @@
 				8F5ACB8A1704DA4A004C4DB7 /* BADetailScrollViewController.m in Sources */,
 				8F5ACB8B1704DA4A004C4DB7 /* BATocListTableViewController.m in Sources */,
 				8F5ACB8C1704DA4A004C4DB7 /* BATocListCell.m in Sources */,
+				3B034322174944140076CA8B /* BAURLRequestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1677,6 +1694,7 @@
 				8F71F19016FB309900AD46D0 /* BADetailScrollViewController.m in Sources */,
 				8F6A7C281701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8F6A7C2F1701CFDD00C4E580 /* BATocListCell.m in Sources */,
+				3B034320174944140076CA8B /* BAURLRequestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
