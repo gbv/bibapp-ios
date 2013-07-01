@@ -556,6 +556,21 @@
 		8F8A77351781C0D800CCF7DB /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD873172695C800D66DE6 /* Icon-72.png */; };
 		8F8A77361781C0D800CCF7DB /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */; };
 		8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A757C1781BB1500CCF7DB /* BibApp-HI-Info.plist */; };
+		8F8A77451781C26B00CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F8A77461781C28500CCF7DB /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F8A77471781C28B00CCF7DB /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F8A77481781C29A00CCF7DB /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F8A77491781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F8A774A1781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F8A774B1781C29C00CCF7DB /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F8A774C1781C29F00CCF7DB /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F8A774D1781C2A000CCF7DB /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F8A774E1781C2A100CCF7DB /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F8A774F1781C2A200CCF7DB /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F8A77501781C2A500CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
 		8F965383166E93B100CA5D50 /* BAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965382166E93B100CA5D50 /* BAOptions.m */; };
 		8F965389166E97A900CA5D50 /* BAOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965388166E97A900CA5D50 /* BAOptionsViewController.m */; };
 		8FB2FE0516CA4575007382EE /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
@@ -816,6 +831,12 @@
 		8F8A76A71781C05400CCF7DB /* BibApp-IL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-IL-Info.plist"; path = "/Users/johannes/git/bibapp-ios/bibapp/BibApp-IL-Info.plist"; sourceTree = "<absolute>"; };
 		8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HAWK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8A773C1781C0D800CCF7DB /* BibApp-HAWK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HAWK-Info.plist"; path = "/Users/johannes/git/bibapp-ios/bibapp/BibApp-HAWK-Info.plist"; sourceTree = "<absolute>"; };
+		8F8A773D1781C24400CCF7DB /* BAConfigurationBLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationBLS.h; sourceTree = "<group>"; };
+		8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationBLS.m; sourceTree = "<group>"; };
+		8F8A77401781C25400CCF7DB /* BAConfigurationIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationIL.h; sourceTree = "<group>"; };
+		8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationIL.m; sourceTree = "<group>"; };
+		8F8A77431781C26B00CCF7DB /* BAConfigurationHAWK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHAWK.h; sourceTree = "<group>"; };
+		8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationHAWK.m; sourceTree = "<group>"; };
 		8F965381166E93B100CA5D50 /* BAOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptions.h; sourceTree = "<group>"; };
 		8F965382166E93B100CA5D50 /* BAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptions.m; sourceTree = "<group>"; };
 		8F965387166E97A900CA5D50 /* BAOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsViewController.h; sourceTree = "<group>"; };
@@ -1170,6 +1191,12 @@
 				8FDAEC8A16F9D69600E28666 /* BAConfigurationLG.m */,
 				8FDAEC8D16F9D71C00E28666 /* BAConfigurationHI.h */,
 				8FDAEC8E16F9D71C00E28666 /* BAConfigurationHI.m */,
+				8F8A773D1781C24400CCF7DB /* BAConfigurationBLS.h */,
+				8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */,
+				8F8A77401781C25400CCF7DB /* BAConfigurationIL.h */,
+				8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */,
+				8F8A77431781C26B00CCF7DB /* BAConfigurationHAWK.h */,
+				8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -2059,6 +2086,9 @@
 				8F6A7C291701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8F6A7C301701CFDD00C4E580 /* BATocListCell.m in Sources */,
 				3B034321174944140076CA8B /* BAURLRequestService.m in Sources */,
+				8F8A77491781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
+				8F8A774D1781C2A000CCF7DB /* BAConfigurationIL.m in Sources */,
+				8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2132,6 +2162,9 @@
 				8F8A75BF1781BF4700CCF7DB /* BATocListTableViewController.m in Sources */,
 				8F8A75C01781BF4700CCF7DB /* BATocListCell.m in Sources */,
 				8F8A75C11781BF4700CCF7DB /* BAURLRequestService.m in Sources */,
+				8F8A77461781C28500CCF7DB /* BAConfigurationBLS.m in Sources */,
+				8F8A774E1781C2A100CCF7DB /* BAConfigurationIL.m in Sources */,
+				8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2205,6 +2238,9 @@
 				8F8A76541781C05400CCF7DB /* BATocListTableViewController.m in Sources */,
 				8F8A76551781C05400CCF7DB /* BATocListCell.m in Sources */,
 				8F8A76561781C05400CCF7DB /* BAURLRequestService.m in Sources */,
+				8F8A77471781C28B00CCF7DB /* BAConfigurationIL.m in Sources */,
+				8F8A774A1781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
+				8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2278,6 +2314,9 @@
 				8F8A76E91781C0D800CCF7DB /* BATocListTableViewController.m in Sources */,
 				8F8A76EA1781C0D800CCF7DB /* BATocListCell.m in Sources */,
 				8F8A76EB1781C0D800CCF7DB /* BAURLRequestService.m in Sources */,
+				8F8A77451781C26B00CCF7DB /* BAConfigurationHAWK.m in Sources */,
+				8F8A774B1781C29C00CCF7DB /* BAConfigurationBLS.m in Sources */,
+				8F8A774F1781C2A200CCF7DB /* BAConfigurationIL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2351,6 +2390,9 @@
 				8F6A7C281701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8F6A7C2F1701CFDD00C4E580 /* BATocListCell.m in Sources */,
 				3B034320174944140076CA8B /* BAURLRequestService.m in Sources */,
+				8F8A77481781C29A00CCF7DB /* BAConfigurationBLS.m in Sources */,
+				8F8A774C1781C29F00CCF7DB /* BAConfigurationIL.m in Sources */,
+				8F8A77501781C2A500CCF7DB /* BAConfigurationHAWK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
