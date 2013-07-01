@@ -4,10 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BibApp BLS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>BibApp HAWK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>BibApp HI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>BibApp IL.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>BibApp LG.xcscheme</key>
 		<dict>
@@ -33,6 +48,21 @@
 			<true/>
 		</dict>
 		<key>8F5ACB4A1704DA4A004C4DB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8A757E1781BF4700CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8A76131781C05400CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8A76A81781C0D800CCF7DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
