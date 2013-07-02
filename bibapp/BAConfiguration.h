@@ -10,6 +10,8 @@
 
 @interface BAConfiguration : NSObject
 
+@property (strong, nonatomic) NSString *searchTitle;
+@property BOOL *hasLocalDetailURL;
 @property (strong, nonatomic) NSString *currentBibSearchMaximumRecords;
 @property (strong, nonatomic) NSString *currentBibLocalSearchURL;
 @property (strong, nonatomic) NSString *currentBibDetailURL;
@@ -24,5 +26,6 @@
 
 + (id)createConfiguration;
 - (void)initConfiguration;
+- (NSString *)generateLocalDetailURLFor:(NSString *)ppn;
 
 @end

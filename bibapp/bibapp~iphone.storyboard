@@ -300,7 +300,7 @@
                             <tableViewSection headerTitle="Zugangsdaten speichern" id="A1N-u1-S3y">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sgd-do-CdB">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -322,21 +322,83 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Oe7-6f-qRw">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Datenschutz" footerTitle="Wenn Sie das Zählpixel deaktivieren, werden keinerlei statistische Daten erhoben" id="5d8-Um-V2a">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YAB-Fv-4sU">
+                                        <rect key="frame" x="0.0" y="138" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYV-aD-fwW">
-                                                    <rect key="frame" x="20" y="11" width="177" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Zählpixel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SjU-eg-oOk">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R9M-vD-YlS">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="TRi-tn-Ui3">
+                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
+                                                    <connections>
+                                                        <action selector="countPixelSwitchAction:" destination="5J8-e1-zNl" eventType="valueChanged" id="vh9-e7-gZ1"/>
+                                                        <action selector="saveLocalSwithAction:" destination="5J8-e1-zNl" eventType="valueChanged" id="PkC-Pc-Hjm"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Suche" id="u9b-H1-tVK">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Uyk-aN-iam">
+                                        <rect key="frame" x="0.0" y="299" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Katalog" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R9M-vD-YlS">
+                                                    <rect key="frame" x="93" y="11" width="167" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Katalog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYV-aD-fwW">
+                                                    <rect key="frame" x="20" y="11" width="65" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="C3r-VZ-XjQ" kind="push" id="nm4-Je-Rp3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Info" id="Ac7-hR-eSl">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6MX-9g-mOF">
+                                        <rect key="frame" x="0.0" y="391" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DgF-Wf-VFL">
                                                     <rect key="frame" x="205" y="11" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Tt-Zz-JON">
+                                                    <rect key="frame" x="20" y="11" width="177" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,9 +409,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="5d8-Um-V2a">
-                                <cells/>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="5J8-e1-zNl" id="bml-XR-8ff"/>
@@ -359,13 +418,58 @@
                     <tabBarItem key="tabBarItem" title="Optionen" id="IxT-f3-082"/>
                     <navigationItem key="navigationItem" title="Optionen" id="bDa-FT-WRv"/>
                     <connections>
-                        <outlet property="saveLocalSwith" destination="VRs-uM-GCJ" id="ZVk-e1-47X"/>
-                        <outlet property="versionLabel" destination="R9M-vD-YlS" id="2je-Pk-idC"/>
+                        <outlet property="catalogueLabel" destination="R9M-vD-YlS" id="Gx4-cP-HLZ"/>
+                        <outlet property="countPixelSwitch" destination="TRi-tn-Ui3" id="64U-bj-lnQ"/>
+                        <outlet property="saveLocalSwitch" destination="VRs-uM-GCJ" id="3we-ZK-pdx"/>
+                        <outlet property="versionLabel" destination="DgF-Wf-VFL" id="qBy-ox-ZIx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcu-lV-Vhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-275" y="2663"/>
+        </scene>
+        <!--Options Catalogue Table View Controller-->
+        <scene sceneID="ETf-ww-iZL">
+            <objects>
+                <tableViewController id="C3r-VZ-XjQ" customClass="BAOptionsCatalogueTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="azC-6Z-IQ3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Kataloge" id="22K-D6-PTt">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qvS-iv-fRv">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Katalog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOW-Hw-9rX">
+                                                    <rect key="frame" x="20" y="11" width="240" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="C3r-VZ-XjQ" id="2pN-dm-9Ic"/>
+                            <outlet property="delegate" destination="C3r-VZ-XjQ" id="PTE-l4-Sl9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rza-bF-UmY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQe-2E-WJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="2657"/>
         </scene>
         <!--Navigation Controller - Optionen-->
         <scene sceneID="ICT-oz-C3h">
@@ -657,94 +761,6 @@
         <image name="menuIconOptions.png" width="26" height="26"/>
         <image name="menuIconSearch.png" width="24" height="24"/>
     </resources>
-    <classes>
-        <class className="BAAccountViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAAccountViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="actionButtonAction:"/>
-                <relationship kind="outlet" name="accountSegmentedController" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="accountTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="actionButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="BAContactTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAContactTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contactText" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BACoverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="BACoverViewControllerIPhone" superclassName="BACoverViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewControllerIPhone.h"/>
-        </class>
-        <class className="BADetailScrollViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BADetailScrollViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="actionButton:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="BAImpressumTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAImpressumTableViewController.h"/>
-        </class>
-        <class className="BAInfoTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAInfoTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="BAListTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAListTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="trashAction:"/>
-                <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="trashIcon" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="BALocationTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationTableViewController.h"/>
-        </class>
-        <class className="BALocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewController.h"/>
-        </class>
-        <class className="BALocationViewControllerIPhone" superclassName="BALocationViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewControllerIPhone.h"/>
-        </class>
-        <class className="BAOptionsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveLocalSwithAction:"/>
-                <relationship kind="outlet" name="saveLocalSwith" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BASearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BASearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="searchSegmentedController" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="searchTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="BATocListTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BATocListTableViewController.h"/>
-        </class>
-        <class className="BATocViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BATocViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelAction:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -48,6 +48,8 @@
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
+    [self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
     

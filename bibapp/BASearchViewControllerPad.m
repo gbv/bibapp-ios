@@ -82,6 +82,8 @@
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
     
+    [self.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
     

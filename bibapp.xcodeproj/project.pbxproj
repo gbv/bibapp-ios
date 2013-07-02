@@ -83,6 +83,16 @@
 		8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
 		8F114080167F217000E033F6 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
+		8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
+		8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
+		8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
+		8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
+		8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
+		8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1F20D4166DF5D500E74231 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F1F20D8166DF5FE00E74231 /* BAItemAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */; };
 		8F1F20DC166DF84200E74231 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
@@ -98,6 +108,11 @@
 		8F24E6F9166611DD0017AC81 /* BAInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6F8166611DD0017AC81 /* BAInfoCell.m */; };
 		8F24E6FC1666158A0017AC81 /* BAInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6FB1666158A0017AC81 /* BAInfoItem.m */; };
 		8F24E6FF166661590017AC81 /* BADocumentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6FE166661590017AC81 /* BADocumentItem.m */; };
+		8F2F94D81782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F2F94D91782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
 		8F37710D1670B76E00BC066D /* BACoverViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37710C1670B76E00BC066D /* BACoverViewControllerIPhone.m */; };
 		8F3A1313163FD16E00D0B6F1 /* BAItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A1312163FD16E00D0B6F1 /* BAItemCell.xib */; };
 		8F3A131E163FD39C00D0B6F1 /* BAItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A131D163FD39C00D0B6F1 /* BAItemCell.m */; };
@@ -126,6 +141,11 @@
 		8F6A7C301701CFDD00C4E580 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
 		8F71F19016FB309900AD46D0 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8F71F19116FB309900AD46D0 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
+		8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
+		8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
+		8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
+		8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
+		8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
 		8F7B9DD016C3BEE50014A653 /* BALocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B9DCF16C3BEE50014A653 /* BALocationTableViewController.m */; };
 		8F7B9DD116C3BEE50014A653 /* BALocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B9DCF16C3BEE50014A653 /* BALocationTableViewController.m */; };
 		8F7E1ED116D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED016D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib */; };
@@ -134,8 +154,6 @@
 		8F7E1ED616D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED416D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m */; };
 		8F7E1ED816D6569100EE3BF9 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED716D6569100EE3BF9 /* actionButton.png */; };
 		8F7E1ED916D6569100EE3BF9 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED716D6569100EE3BF9 /* actionButton.png */; };
-		8F8A757B1781BAA600CCF7DB /* BibApp-LG-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A757A1781BAA600CCF7DB /* BibApp-LG-Info.plist */; };
-		8F8A757D1781BB1500CCF7DB /* BibApp-HI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A757C1781BB1500CCF7DB /* BibApp-HI-Info.plist */; };
 		8F8A75801781BF4700CCF7DB /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8F8A75811781BF4700CCF7DB /* BAAccountTableHeaderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2190B816B2B05F00512C85 /* BAAccountTableHeaderTextView.m */; };
 		8F8A75821781BF4700CCF7DB /* BADocumentItemElementCellNonLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5D0C216AFDE230024027C /* BADocumentItemElementCellNonLocal.m */; };
@@ -571,6 +589,10 @@
 		8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
 		8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
 		8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F91495D17830DA400FE7924 /* IconIL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F91495C17830DA400FE7924 /* IconIL.png */; };
+		8F91495F17830DC700FE7924 /* IconIL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F91495E17830DC700FE7924 /* IconIL@2x.png */; };
+		8F91496117830E0B00FE7924 /* iPadIconIL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F91496017830E0B00FE7924 /* iPadIconIL.png */; };
+		8F91496317830E1000FE7924 /* iPadIconIL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F91496217830E1000FE7924 /* iPadIconIL@2x.png */; };
 		8F965383166E93B100CA5D50 /* BAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965382166E93B100CA5D50 /* BAOptions.m */; };
 		8F965389166E97A900CA5D50 /* BAOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965388166E97A900CA5D50 /* BAOptionsViewController.m */; };
 		8FB2FE0516CA4575007382EE /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
@@ -759,6 +781,10 @@
 		8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8F1101F6165CEFA2008A8A46 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		8F114087167F217000E033F6 /* BibApp HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1C6F981782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsCatalogueTableViewControllerPad.h; sourceTree = "<group>"; };
+		8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsCatalogueTableViewControllerPad.m; sourceTree = "<group>"; };
+		8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsCatalogueTableViewController.h; sourceTree = "<group>"; };
+		8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsCatalogueTableViewController.m; sourceTree = "<group>"; };
 		8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemAccountCell.xib; sourceTree = "<group>"; };
 		8F1F20D6166DF5FE00E74231 /* BAItemAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAItemAccountCell.h; sourceTree = "<group>"; };
 		8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAItemAccountCell.m; sourceTree = "<group>"; };
@@ -781,6 +807,8 @@
 		8F24E6FB1666158A0017AC81 /* BAInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAInfoItem.m; sourceTree = "<group>"; };
 		8F24E6FD166661580017AC81 /* BADocumentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADocumentItem.h; sourceTree = "<group>"; };
 		8F24E6FE166661590017AC81 /* BADocumentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADocumentItem.m; sourceTree = "<group>"; };
+		8F2F94D61782EE6800723E1E /* BAOptionsTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsTableViewControllerPad.h; sourceTree = "<group>"; };
+		8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsTableViewControllerPad.m; sourceTree = "<group>"; };
 		8F37710B1670B76E00BC066D /* BACoverViewControllerIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACoverViewControllerIPhone.h; sourceTree = "<group>"; };
 		8F37710C1670B76E00BC066D /* BACoverViewControllerIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACoverViewControllerIPhone.m; sourceTree = "<group>"; };
 		8F3A1312163FD16E00D0B6F1 /* BAItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemCell.xib; sourceTree = "<group>"; };
@@ -817,6 +845,8 @@
 		8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocListCell.m; sourceTree = "<group>"; };
 		8F71F18E16FB309900AD46D0 /* BADetailScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADetailScrollViewController.h; sourceTree = "<group>"; };
 		8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADetailScrollViewController.m; sourceTree = "<group>"; };
+		8F72EC0D1782FA6600E1169C /* BAOptionsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsNavigationController.h; sourceTree = "<group>"; };
+		8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsNavigationController.m; sourceTree = "<group>"; };
 		8F7B9DCE16C3BEE50014A653 /* BALocationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALocationTableViewController.h; sourceTree = "<group>"; };
 		8F7B9DCF16C3BEE50014A653 /* BALocationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALocationTableViewController.m; sourceTree = "<group>"; };
 		8F7E1ED016D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAAccountTableHeaderViewPad.xib; sourceTree = "<group>"; };
@@ -837,6 +867,10 @@
 		8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationIL.m; sourceTree = "<group>"; };
 		8F8A77431781C26B00CCF7DB /* BAConfigurationHAWK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHAWK.h; sourceTree = "<group>"; };
 		8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationHAWK.m; sourceTree = "<group>"; };
+		8F91495C17830DA400FE7924 /* IconIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconIL.png; path = ../IconIL.png; sourceTree = "<group>"; };
+		8F91495E17830DC700FE7924 /* IconIL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IconIL@2x.png"; path = "../IconIL@2x.png"; sourceTree = "<group>"; };
+		8F91496017830E0B00FE7924 /* iPadIconIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadIconIL.png; path = ../iPadIconIL.png; sourceTree = "<group>"; };
+		8F91496217830E1000FE7924 /* iPadIconIL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadIconIL@2x.png"; path = "../iPadIconIL@2x.png"; sourceTree = "<group>"; };
 		8F965381166E93B100CA5D50 /* BAOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptions.h; sourceTree = "<group>"; };
 		8F965382166E93B100CA5D50 /* BAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptions.m; sourceTree = "<group>"; };
 		8F965387166E97A900CA5D50 /* BAOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsViewController.h; sourceTree = "<group>"; };
@@ -1238,6 +1272,8 @@
 				8FD47E1D16407D7F00965F12 /* BALocationViewControllerIPhone.m */,
 				8F965387166E97A900CA5D50 /* BAOptionsViewController.h */,
 				8F965388166E97A900CA5D50 /* BAOptionsViewController.m */,
+				8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */,
+				8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */,
 				8FD499B9168310DA008FC33F /* BAPDFViewController.h */,
 				8FD499BA168310DA008FC33F /* BAPDFViewController.m */,
 				8F3A7173163D4FA800FF0A57 /* BASearchViewController.h */,
@@ -1311,6 +1347,12 @@
 				8FE94A8116DCF4C0004D33B7 /* BALocationViewControllerPad.m */,
 				8FE9812416F7210400328531 /* BAOptionsViewControllerPad.h */,
 				8FE9812516F7211000328531 /* BAOptionsViewControllerPad.m */,
+				8F72EC0D1782FA6600E1169C /* BAOptionsNavigationController.h */,
+				8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */,
+				8F2F94D61782EE6800723E1E /* BAOptionsTableViewControllerPad.h */,
+				8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */,
+				8F1C6F981782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.h */,
+				8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */,
 				8FED45F416D25B2D0056CD88 /* BASearchViewControllerPad.h */,
 				8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */,
 				8FD4F8EB16F89C9F00193F33 /* BATocTableViewControllerPad.h */,
@@ -1428,10 +1470,14 @@
 				8F1F20DB166DF84200E74231 /* Icon@2x.png */,
 				8FE6259116CBC9C100F0D213 /* IconLG@2x.png */,
 				8FE6258F16CBC9BA00F0D213 /* IconLG.png */,
+				8F91495E17830DC700FE7924 /* IconIL@2x.png */,
+				8F91495C17830DA400FE7924 /* IconIL.png */,
 				8FE5F961170466EE002EA336 /* iPadIcon@2x.png */,
 				8FE5F95F170466E6002EA336 /* iPadIcon.png */,
 				8FE5F95D170466D4002EA336 /* iPadIconLG@2x.png */,
 				8FE5F95B170466C8002EA336 /* iPadIconLG.png */,
+				8F91496217830E1000FE7924 /* iPadIconIL@2x.png */,
+				8F91496017830E0B00FE7924 /* iPadIconIL.png */,
 				8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */,
 				8FEDD873172695C800D66DE6 /* Icon-72.png */,
 			);
@@ -1604,7 +1650,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BA;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Johannes Schultze";
 			};
 			buildConfigurationList = 8FF26FEF16393BF100099665 /* Build configuration list for PBXProject "bibapp" */;
@@ -1699,7 +1745,6 @@
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
-				8F8A757D1781BB1500CCF7DB /* BibApp-HI-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1844,6 +1889,10 @@
 				8F8A76A01781C05400CCF7DB /* Icon-72.png in Resources */,
 				8F8A76A11781C05400CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A76A21781C05400CCF7DB /* BibApp-HI-Info.plist in Resources */,
+				8F91495D17830DA400FE7924 /* IconIL.png in Resources */,
+				8F91495F17830DC700FE7924 /* IconIL@2x.png in Resources */,
+				8F91496117830E0B00FE7924 /* iPadIconIL.png in Resources */,
+				8F91496317830E1000FE7924 /* iPadIconIL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1986,7 +2035,6 @@
 				8F6A7C2B1701CFB800C4E580 /* BATocListCell.xib in Resources */,
 				8FE5F95C170466CE002EA336 /* iPadIconLG.png in Resources */,
 				8FE5F95E170466D8002EA336 /* iPadIconLG@2x.png in Resources */,
-				8F8A757B1781BAA600CCF7DB /* BibApp-LG-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2089,6 +2137,10 @@
 				8F8A77491781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774D1781C2A000CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
+				8F2F94D91782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
+				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2165,6 +2217,10 @@
 				8F8A77461781C28500CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774E1781C2A100CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
+				8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
+				8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2241,6 +2297,10 @@
 				8F8A77471781C28B00CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A774A1781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */,
+				8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
+				8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2317,6 +2377,10 @@
 				8F8A77451781C26B00CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F8A774B1781C29C00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774F1781C2A200CCF7DB /* BAConfigurationIL.m in Sources */,
+				8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
+				8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2393,6 +2457,10 @@
 				8F8A77481781C29A00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774C1781C29F00CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77501781C2A500CCF7DB /* BAConfigurationHAWK.m in Sources */,
+				8F2F94D81782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
+				8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

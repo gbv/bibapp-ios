@@ -35,7 +35,7 @@
     
     BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (appDelegate.options.saveLocalData) {
-        [self.saveLocalSwith setOn:YES];
+        [self.saveLocalSwitch setOn:YES];
     }
     
     [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"]];
@@ -45,6 +45,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)countPixelSwitchAction:(id)sender {
 }
 
 - (IBAction)saveLocalSwithAction:(id)sender
@@ -67,6 +70,8 @@
 
 - (void)viewDidUnload {
     [self setVersionLabel:nil];
+    [self setCatalogueLabel:nil];
+    [self setCountPixelSwitch:nil];
     [super viewDidUnload];
 }
 @end

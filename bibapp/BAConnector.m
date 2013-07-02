@@ -12,7 +12,7 @@
 #import "BADocumentItem.h"
 #import "BAEntryWork.h"
 #import "BAURLRequestService.h"
-
+#import "BAConfiguration.h"
 
 @implementation BAConnector
 
@@ -160,8 +160,15 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetailsLocal"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", self.appDelegate.configuration.currentBibDetailURL, ppn]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+    
+   NSURL *url;
+   if (!self.appDelegate.configuration.hasLocalDetailURL) {
+      url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", self.appDelegate.configuration.currentBibDetailURL, ppn]];
+   } else {
+      url = [NSURL URLWithString: [self.appDelegate.configuration generateLocalDetailURLFor:ppn]];
+   }
+
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
