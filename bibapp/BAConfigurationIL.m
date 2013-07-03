@@ -14,7 +14,7 @@
     self.hasLocalDetailURL = YES;
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-ilm1";
-    [self.currentBibLocalSearchURLs setObject:@"opac-de-ilm1" forKey:@"Standard-Katalog"];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Ilm1";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Ilm1";
     self.currentBibFeedURL = @"www2.tu-ilmenau.de/ub/weblog/?feed=rss2";

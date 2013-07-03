@@ -32,7 +32,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.currentBibLocalSearchURLs = [[NSMutableDictionary alloc] init];
+        self.currentBibLocalSearchURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
         

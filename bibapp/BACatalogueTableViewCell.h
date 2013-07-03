@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BACatalogueCell : UITableViewCell
+@interface BACatalogueTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *catalogueLabel;
 

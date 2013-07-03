@@ -113,6 +113,11 @@
 		8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
 		8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
 		8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F36FC361784611900C99951 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
+		8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
+		8F36FC381784611900C99951 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
+		8F36FC391784611900C99951 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
+		8F36FC3A1784611900C99951 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
 		8F37710D1670B76E00BC066D /* BACoverViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37710C1670B76E00BC066D /* BACoverViewControllerIPhone.m */; };
 		8F3A1313163FD16E00D0B6F1 /* BAItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A1312163FD16E00D0B6F1 /* BAItemCell.xib */; };
 		8F3A131E163FD39C00D0B6F1 /* BAItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A131D163FD39C00D0B6F1 /* BAItemCell.m */; };
@@ -133,11 +138,11 @@
 		8F57756F16D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F57757016D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F5D8D45165CF2C100773DD5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */; };
-		8F6057DC17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
-		8F6057DD17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
-		8F6057DE17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
-		8F6057DF17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
-		8F6057E017843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
+		8F6057DC17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
+		8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
+		8F6057DE17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
+		8F6057DF17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
+		8F6057E017843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
 		8F6A7C281701C40200C4E580 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F6A7C291701C40200C4E580 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F6A7C2B1701CFB800C4E580 /* BATocListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */; };
@@ -814,6 +819,7 @@
 		8F24E6FE166661590017AC81 /* BADocumentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADocumentItem.m; sourceTree = "<group>"; };
 		8F2F94D61782EE6800723E1E /* BAOptionsTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsTableViewControllerPad.h; sourceTree = "<group>"; };
 		8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsTableViewControllerPad.m; sourceTree = "<group>"; };
+		8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BACatalogueTableViewCell.xib; sourceTree = "<group>"; };
 		8F37710B1670B76E00BC066D /* BACoverViewControllerIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACoverViewControllerIPhone.h; sourceTree = "<group>"; };
 		8F37710C1670B76E00BC066D /* BACoverViewControllerIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACoverViewControllerIPhone.m; sourceTree = "<group>"; };
 		8F3A1312163FD16E00D0B6F1 /* BAItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemCell.xib; sourceTree = "<group>"; };
@@ -843,8 +849,8 @@
 		8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContactTableViewController.m; sourceTree = "<group>"; };
 		8F57756D16D5129A009E143E /* BAAccountViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccountViewControllerPad.h; sourceTree = "<group>"; };
 		8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccountViewControllerPad.m; sourceTree = "<group>"; };
-		8F6057DA17843F45004D3088 /* BACatalogueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACatalogueCell.h; sourceTree = "<group>"; };
-		8F6057DB17843F45004D3088 /* BACatalogueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACatalogueCell.m; sourceTree = "<group>"; };
+		8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACatalogueTableViewCell.h; sourceTree = "<group>"; };
+		8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACatalogueTableViewCell.m; sourceTree = "<group>"; };
 		8F6A7C261701C40200C4E580 /* BATocListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocListTableViewController.h; sourceTree = "<group>"; };
 		8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocListTableViewController.m; sourceTree = "<group>"; };
 		8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocListCell.xib; sourceTree = "<group>"; };
@@ -1149,6 +1155,14 @@
 			name = GDataXML;
 			sourceTree = "<group>";
 		};
+		8F36FC34178460F200C99951 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		8F3A1315163FD1C200D0B6F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1168,6 +1182,7 @@
 		8F3A132A1640074200D0B6F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8F36FC34178460F200C99951 /* Base */,
 				8FED45EB16D2354D0056CD88 /* iPad */,
 				8FED45E916D2352B0056CD88 /* iPhone */,
 			);
@@ -1250,8 +1265,8 @@
 				8FE94A8E16DD086E004D33B7 /* BACoverViewController.m */,
 				8FE94A8516DCF980004D33B7 /* BALocationViewController.h */,
 				8FE94A8616DCF992004D33B7 /* BALocationViewController.m */,
-				8F6057DA17843F45004D3088 /* BACatalogueCell.h */,
-				8F6057DB17843F45004D3088 /* BACatalogueCell.m */,
+				8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */,
+				8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1755,6 +1770,7 @@
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
+				8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1827,6 +1843,7 @@
 				8F8A760B1781BF4700CCF7DB /* Icon-72.png in Resources */,
 				8F8A760C1781BF4700CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A760D1781BF4700CCF7DB /* BibApp-HI-Info.plist in Resources */,
+				8F36FC381784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1903,6 +1920,7 @@
 				8F91495F17830DC700FE7924 /* IconIL@2x.png in Resources */,
 				8F91496117830E0B00FE7924 /* iPadIconIL.png in Resources */,
 				8F91496317830E1000FE7924 /* iPadIconIL@2x.png in Resources */,
+				8F36FC391784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1975,6 +1993,7 @@
 				8F8A77351781C0D800CCF7DB /* Icon-72.png in Resources */,
 				8F8A77361781C0D800CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */,
+				8F36FC3A1784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2045,6 +2064,7 @@
 				8F6A7C2B1701CFB800C4E580 /* BATocListCell.xib in Resources */,
 				8FE5F95C170466CE002EA336 /* iPadIconLG.png in Resources */,
 				8FE5F95E170466D8002EA336 /* iPadIconLG@2x.png in Resources */,
+				8F36FC361784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2151,7 +2171,7 @@
 				8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
-				8F6057DD17843F46004D3088 /* BACatalogueCell.m in Sources */,
+				8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2232,7 +2252,7 @@
 				8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
-				8F6057DE17843F46004D3088 /* BACatalogueCell.m in Sources */,
+				8F6057DE17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2313,7 +2333,7 @@
 				8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
-				8F6057DF17843F46004D3088 /* BACatalogueCell.m in Sources */,
+				8F6057DF17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2394,7 +2414,7 @@
 				8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
-				8F6057E017843F46004D3088 /* BACatalogueCell.m in Sources */,
+				8F6057E017843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2475,7 +2495,7 @@
 				8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
-				8F6057DC17843F46004D3088 /* BACatalogueCell.m in Sources */,
+				8F6057DC17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

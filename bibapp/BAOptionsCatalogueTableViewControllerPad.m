@@ -7,7 +7,7 @@
 //
 
 #import "BAOptionsCatalogueTableViewControllerPad.h"
-#import "BACatalogueCell.h"
+#import "BACatalogueTableViewCell.h"
 
 @interface BAOptionsCatalogueTableViewControllerPad ()
 
@@ -61,21 +61,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CatalogueCell";
-    BACatalogueCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BACatalogueTableViewCell *cell;
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BACatalogueTableViewCell" owner:self options:nil];
+    cell = [nib objectAtIndex:0];
     
-    if (cell == nil) {
-        cell = [[BACatalogueCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    [cell.catalogueLabel setText:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]];
+    if ([self.appDelegate.options.selectedCatalogue isEqualToString:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    } else {
+        [cell setAccessoryType:nil];
     }
     
-    // Configure the cell...
-    int index = 0;
-    for(id key in self.appDelegate.configuration.currentBibLocalSearchURLs) {
-        if (index == indexPath.row) {
-            [cell.catalogueLabel setText:key];
-        }
-    }
-
     return cell;
 }
 

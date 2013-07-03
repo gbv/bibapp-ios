@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Johannes Schultze. All rights reserved.
 //
 
-#import "BACatalogueCell.h"
+#import "BACatalogueTableViewCell.h"
 
-@implementation BACatalogueCell
+@implementation BACatalogueTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

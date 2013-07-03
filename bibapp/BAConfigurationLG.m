@@ -13,9 +13,9 @@
 - (void)initConfiguration{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-luen4";
-    [self.currentBibLocalSearchURLs setObject:@"opac-de-luen4" forKey:@"Standard-Katalog"];
-    [self.currentBibLocalSearchURLs setObject:@"opac-de-luen4" forKey:@"Noch ein Katalog"];
-    [self.currentBibLocalSearchURLs setObject:@"opac-de-luen4" forKey:@"Ein dritter Katalog"];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Standard-Katalog", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Noch ein Katalog", @"Lokale Suche 2", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Ein dritter Katalog", @"Lokale Suche 3", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Luen4";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Luen4";
     self.currentBibFeedURL = @"http://www.leuphana.de/bibliothek/aktuelles.html?type=100";

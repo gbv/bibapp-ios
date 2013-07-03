@@ -13,7 +13,7 @@
 - (void)initConfiguration{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
-    [self.currentBibLocalSearchURLs setObject:@"opac-de-hil2" forKey:@"Standard-Katalog"];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
     self.currentBibFeedURL = @"";
