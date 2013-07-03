@@ -14,6 +14,7 @@
 @property BOOL *hasLocalDetailURL;
 @property (strong, nonatomic) NSString *currentBibSearchMaximumRecords;
 @property (strong, nonatomic) NSString *currentBibLocalSearchURL;
+@property (strong, nonatomic) NSMutableDictionary *currentBibLocalSearchURLs;
 @property (strong, nonatomic) NSString *currentBibDetailURL;
 @property (strong, nonatomic) NSString *currentBibPAIAURL;
 @property (strong, nonatomic) NSString *currentBibFeedURL;

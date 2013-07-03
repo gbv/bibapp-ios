@@ -40,6 +40,14 @@
         self.options = [tempOptionsArray objectAtIndex:0];
     }
     
+    if ([self.options.selectedCatalogue isEqualToString:@""] || self.options.selectedCatalogue == nil) {
+        [self.options setSelectedCatalogue:@"Standard-Katalog"];
+        NSError *error = nil;
+        if (![[self managedObjectContext] save:&error]) {
+            // Handle the error.
+        }
+    }
+    
     NSEntityDescription *entityDescriptionAccount = [NSEntityDescription entityForName:@"BAAccount" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *requestAcount = [[NSFetchRequest alloc] init];
     [requestAcount setEntity:entityDescriptionAccount];

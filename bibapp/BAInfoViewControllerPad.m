@@ -46,15 +46,17 @@
     
     [self.infoNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
-    self.infoFeed = [[NSMutableArray alloc] init];
+    if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+        self.infoFeed = [[NSMutableArray alloc] init];
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [spinner startAnimating];
-    spinner.frame = CGRectMake(0, 0, 320, 44);
-    self.contentTableView.tableFooterView = spinner;
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [spinner startAnimating];
+        spinner.frame = CGRectMake(0, 0, 320, 44);
+        self.contentTableView.tableFooterView = spinner;
     
-    BAConnector *connector = [BAConnector generateConnector];
-    [connector getInfoFeedWithDelegate:self];
+        BAConnector *connector = [BAConnector generateConnector];
+        [connector getInfoFeedWithDelegate:self];
+    }
     
     self.locationList = [[NSMutableArray alloc] init];
     
@@ -77,18 +79,34 @@
 {
     // Return the number of sections.
     if (tableView.tag == 0) {
-        return 4;
-    } else {
-        if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-            return 1;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-            return 1;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-            return 1;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
-            return 1;
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            return 4;
         } else {
-            return 0;
+            return 3;
+        }
+    } else {
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
     }
 }
@@ -98,16 +116,28 @@
     if (tableView.tag == 0) {
         return 1;
     } else {
-        if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-            return [self.infoFeed count];
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-            return 1;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-            return [self.locationList count];
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
-            return [self.appDelegate.configuration.currentBibImprint count];
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                return [self.infoFeed count];
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                return [self.locationList count];
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                return [self.appDelegate.configuration.currentBibImprint count];
+            } else {
+                return 0;
+            }
         } else {
-            return 0;
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                return 1;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                return [self.locationList count];
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                return [self.appDelegate.configuration.currentBibImprint count];
+            } else {
+                return 0;
+            }
         }
     }
 }
@@ -117,58 +147,98 @@
     UITableViewCell *cell;
     if (tableView.tag == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        if (indexPath.section == 0) {
-            [cell.textLabel setText:@"News"];
-        } else if (indexPath.section == 1) {
-            [cell.textLabel setText:@"Kontakt"];
-        } else if (indexPath.section == 2) {
-            [cell.textLabel setText:@"Standorte"];
-        } else if (indexPath.section == 3) {
-            [cell.textLabel setText:@"Impressum"];
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if (indexPath.section == 0) {
+                [cell.textLabel setText:@"News"];
+            } else if (indexPath.section == 1) {
+                [cell.textLabel setText:@"Kontakt"];
+            } else if (indexPath.section == 2) {
+                [cell.textLabel setText:@"Standorte"];
+            } else if (indexPath.section == 3) {
+                [cell.textLabel setText:@"Impressum"];
+            }
+        } else {
+            if (indexPath.section == 0) {
+                [cell.textLabel setText:@"Kontakt"];
+            } else if (indexPath.section == 1) {
+                [cell.textLabel setText:@"Standorte"];
+            } else if (indexPath.section == 2) {
+                [cell.textLabel setText:@"Impressum"];
+            }
         }
         [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         return cell;
     } else {
-        if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-            BAInfoCell *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
-            [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
-            if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
-                [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                BAInfoCell *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
+                [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
+                if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
+                    [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
+                } else {
+                    [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
+                }
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                [cell.contentLabel sizeToFit];
+                return cell;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                BAInfoCell *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                [cell.titleLabel setText:@"Kontakt"];
+                [cell.dateLabel setText:@""];
+                [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
+                [cell.contentLabel sizeToFit];
+                return cell;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                BALocationCellPad *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BALocationCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                return cell;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                BAImpressumCellPad *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
+                [cell.impressumLabel setText:(NSString *)currentObject];
+                [cell.impressumLabel sizeToFit];
+                return cell;
             } else {
-                [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
+                return cell;
             }
-            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-            [cell.contentLabel sizeToFit];
-            return cell;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-            BAInfoCell *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            [cell.titleLabel setText:@"Kontakt"];
-            [cell.dateLabel setText:@""];
-            [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
-            [cell.contentLabel sizeToFit];
-            return cell;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-            BALocationCellPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BALocationCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
-            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-            return cell;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
-            BAImpressumCellPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
-            [cell.impressumLabel setText:(NSString *)currentObject];
-            [cell.impressumLabel sizeToFit];
-            return cell;
         } else {
-            return cell;
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                BAInfoCell *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                [cell.titleLabel setText:@"Kontakt"];
+                [cell.dateLabel setText:@""];
+                [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
+                [cell.contentLabel sizeToFit];
+                return cell;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                BALocationCellPad *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BALocationCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                return cell;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                BAImpressumCellPad *cell;
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCellPad" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+                id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
+                [cell.impressumLabel setText:(NSString *)currentObject];
+                [cell.impressumLabel sizeToFit];
+                return cell;
+            } else {
+                return cell;
+            }
         }
     }
 }
@@ -178,13 +248,20 @@
     if (tableView.tag == 0) {
         [self.contentTableView reloadData];
     } else {
-        if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-            NSURL *url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
-            if (![[UIApplication sharedApplication] openURL:url]) {
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                NSURL *url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
+                if (![[UIApplication sharedApplication] openURL:url]) {
+                }
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                self.currentLocation = [self.locationList objectAtIndex:indexPath.row];
+                [self performSegueWithIdentifier:@"locationSegue" sender:self];
             }
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-            self.currentLocation = [self.locationList objectAtIndex:indexPath.row];
-            [self performSegueWithIdentifier:@"locationSegue" sender:self];
+        } else {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                self.currentLocation = [self.locationList objectAtIndex:indexPath.row];
+                [self performSegueWithIdentifier:@"locationSegue" sender:self];
+            }
         }
     }
 }
@@ -258,24 +335,37 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 1) {
-        if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-            NSString *text;
-            if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
-                text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] content];
+        if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                NSString *text;
+                if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
+                    text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] content];
+                } else {
+                    text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] description];
+                }
+                CGSize textSize = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(576, 10000.0f)];
+                return textSize.height + 80;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                CGSize textSize = [self.appDelegate.configuration.currentBibContact sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
+                return textSize.height + 80;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
+                CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
+                return textSize.height + 40;
             } else {
-                text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] description];
+                return 46;
             }
-            CGSize textSize = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(576, 10000.0f)];
-            return textSize.height + 80;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-            CGSize textSize = [self.appDelegate.configuration.currentBibContact sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-            return textSize.height + 80;
-        } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
-            id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
-            CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-            return textSize.height + 40;
         } else {
-            return 46;
+            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                CGSize textSize = [self.appDelegate.configuration.currentBibContact sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
+                return textSize.height + 80;
+            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
+                CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
+                return textSize.height + 40;
+            } else {
+                return 46;
+            }
         }
     } else {
         return 46;

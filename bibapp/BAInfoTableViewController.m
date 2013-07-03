@@ -38,15 +38,17 @@
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
-    self.infoFeed = [[NSMutableArray alloc] init];
+    if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+        self.infoFeed = [[NSMutableArray alloc] init];
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [spinner startAnimating];
-    spinner.frame = CGRectMake(0, 0, 320, 44);
-    self.infoTableView.tableFooterView = spinner;
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [spinner startAnimating];
+        spinner.frame = CGRectMake(0, 0, 320, 44);
+        self.infoTableView.tableFooterView = spinner;
     
-    BAConnector *connector = [BAConnector generateConnector];
-    [connector getInfoFeedWithDelegate:self];
+        BAConnector *connector = [BAConnector generateConnector];
+        [connector getInfoFeedWithDelegate:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +62,11 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 4;
+    if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+        return 4;
+    } else {
+        return 3;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

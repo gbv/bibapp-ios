@@ -106,8 +106,10 @@ static BAConnector *sharedConnector = nil;
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
        if (first == 1) {
-           BAConnector *searchCountConnector = [BAConnector generateConnector];
-           [searchCountConnector searchCountWithDelegate:self];
+           if (self.appDelegate.options.allowCountPixel) {
+               BAConnector *searchCountConnector = [BAConnector generateConnector];
+               [searchCountConnector searchCountWithDelegate:self];
+           }
        }
    }
 }

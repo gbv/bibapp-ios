@@ -14,6 +14,7 @@
     self.searchTitle = @"Recherche";
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-h360";
+    [self.currentBibLocalSearchURLs setObject:@"opac-de-h360" forKey:@"Standard-Katalog"];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-H360";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-H360";
     self.currentBibFeedURL = @"";

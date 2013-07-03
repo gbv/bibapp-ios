@@ -13,9 +13,10 @@
 - (void)initConfiguration{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
+    [self.currentBibLocalSearchURLs setObject:@"opac-de-hil2" forKey:@"Standard-Katalog"];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
-    self.currentBibFeedURL = @"https://www.uni-hildesheim.de/index.php?id=8920&type=100";
+    self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.85 green:0.2 blue:0.32 alpha:0.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Universitätsbibliothek Hildesheim\n\nMarienburger Platz 22\n31141 Hildesheim\n\nE-Mail: auskunft@uni-hildesheim.de\n\nTelefon: +49 (0) 51 21 - 883 260\nTelefax: +49 (0) 51 21 - 883 266" forKey:@"Anbieter"];

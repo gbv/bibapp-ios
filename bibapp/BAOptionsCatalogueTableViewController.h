@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BAAppDelegate.h"
 
 @interface BAOptionsCatalogueTableViewController : UITableViewController
+
+@property(strong, nonatomic) BAAppDelegate *appDelegate;
 
 @end

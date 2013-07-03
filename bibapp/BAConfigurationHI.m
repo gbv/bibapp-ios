@@ -13,6 +13,7 @@
 - (void)initConfiguration{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
+    [self.currentBibLocalSearchURLs setObject:@"opac-de-hil2" forKey:@"Standard-Katalog"];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
     self.currentBibFeedURL = @"https://www.uni-hildesheim.de/index.php?id=8920&type=100";

@@ -18,6 +18,7 @@
 @synthesize searchTitle;
 @synthesize currentBibSearchMaximumRecords;
 @synthesize currentBibLocalSearchURL;
+@synthesize currentBibLocalSearchURLs;
 @synthesize currentBibDetailURL;
 @synthesize currentBibPAIAURL;
 @synthesize currentBibFeedURL;
@@ -31,6 +32,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.currentBibLocalSearchURLs = [[NSMutableDictionary alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
         

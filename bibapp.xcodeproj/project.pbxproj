@@ -133,6 +133,11 @@
 		8F57756F16D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F57757016D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F5D8D45165CF2C100773DD5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */; };
+		8F6057DC17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
+		8F6057DD17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
+		8F6057DE17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
+		8F6057DF17843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
+		8F6057E017843F46004D3088 /* BACatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueCell.m */; };
 		8F6A7C281701C40200C4E580 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F6A7C291701C40200C4E580 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F6A7C2B1701CFB800C4E580 /* BATocListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */; };
@@ -838,6 +843,8 @@
 		8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContactTableViewController.m; sourceTree = "<group>"; };
 		8F57756D16D5129A009E143E /* BAAccountViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccountViewControllerPad.h; sourceTree = "<group>"; };
 		8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccountViewControllerPad.m; sourceTree = "<group>"; };
+		8F6057DA17843F45004D3088 /* BACatalogueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACatalogueCell.h; sourceTree = "<group>"; };
+		8F6057DB17843F45004D3088 /* BACatalogueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACatalogueCell.m; sourceTree = "<group>"; };
 		8F6A7C261701C40200C4E580 /* BATocListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocListTableViewController.h; sourceTree = "<group>"; };
 		8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocListTableViewController.m; sourceTree = "<group>"; };
 		8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocListCell.xib; sourceTree = "<group>"; };
@@ -1243,6 +1250,8 @@
 				8FE94A8E16DD086E004D33B7 /* BACoverViewController.m */,
 				8FE94A8516DCF980004D33B7 /* BALocationViewController.h */,
 				8FE94A8616DCF992004D33B7 /* BALocationViewController.m */,
+				8F6057DA17843F45004D3088 /* BACatalogueCell.h */,
+				8F6057DB17843F45004D3088 /* BACatalogueCell.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -2142,6 +2151,7 @@
 				8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F6057DD17843F46004D3088 /* BACatalogueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2222,6 +2232,7 @@
 				8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F6057DE17843F46004D3088 /* BACatalogueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2302,6 +2313,7 @@
 				8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F6057DF17843F46004D3088 /* BACatalogueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2382,6 +2394,7 @@
 				8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F6057E017843F46004D3088 /* BACatalogueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2462,6 +2475,7 @@
 				8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F6057DC17843F46004D3088 /* BACatalogueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,8 +41,17 @@
     if (appDelegate.options.saveLocalData) {
         [self.saveLocalSwitch setOn:YES];
     }
+    if (!appDelegate.options.allowCountPixel) {
+        [self.countPixelSwitch setOn:NO];
+    }
     
+    [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
     [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"]];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,5 +164,15 @@
 }
 
 - (IBAction)countPixelSwitchAction:(id)sender {
+    BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([sender isOn]) {
+        [appDelegate.options setAllowCountPixel:YES];
+    } else {
+        [appDelegate.options setAllowCountPixel:NO];
+    }
+    NSError *error = nil;
+    if (![[appDelegate managedObjectContext] save:&error]) {
+        // Handle the error.
+    }
 }
 @end

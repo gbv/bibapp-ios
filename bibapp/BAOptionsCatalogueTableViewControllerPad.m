@@ -7,12 +7,15 @@
 //
 
 #import "BAOptionsCatalogueTableViewControllerPad.h"
+#import "BACatalogueCell.h"
 
 @interface BAOptionsCatalogueTableViewControllerPad ()
 
 @end
 
 @implementation BAOptionsCatalogueTableViewControllerPad
+
+@synthesize appDelegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +35,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,28 +47,37 @@
 
 #pragma mark - Table view data source
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
-}*/
+    return 1;
+}
 
-/*- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
-}*/
+    return [self.appDelegate.configuration.currentBibLocalSearchURLs count];
+}
 
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"CatalogueCell";
+    BACatalogueCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[BACatalogueCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
-    
+    int index = 0;
+    for(id key in self.appDelegate.configuration.currentBibLocalSearchURLs) {
+        if (index == indexPath.row) {
+            [cell.catalogueLabel setText:key];
+        }
+    }
+
     return cell;
-}*/
+}
 
 /*
 // Override to support conditional editing of the table view.
