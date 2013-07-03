@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="BAAccount" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,12 +29,14 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="BAOptions" representedClassName="BAOptions" syncable="YES">
+        <attribute name="allowCountPixel" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="saveLocalData" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="selectedCatalogue" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="BAAccount" positionX="0" positionY="0" width="128" height="90"/>
         <element name="BAEntry" positionX="0" positionY="0" width="128" height="150"/>
         <element name="BALocation" positionX="0" positionY="0" width="128" height="225"/>
-        <element name="BAOptions" positionX="0" positionY="0" width="128" height="60"/>
+        <element name="BAOptions" positionX="0" positionY="0" width="128" height="90"/>
     </elements>
 </model>

@@ -11,6 +11,8 @@
 
 @interface BAOptions : NSManagedObject
 
+@property BOOL allowCountPixel;
 @property BOOL saveLocalData;
+@property (nonatomic, retain) NSString *selectedCatalogue;
 
 @end

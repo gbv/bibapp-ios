@@ -10,6 +10,8 @@
 
 @implementation BAOptions
 
+@dynamic allowCountPixel;
 @dynamic saveLocalData;
+@dynamic selectedCatalogue;
 
 @end
