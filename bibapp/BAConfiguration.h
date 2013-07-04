@@ -28,5 +28,7 @@
 + (id)createConfiguration;
 - (void)initConfiguration;
 - (NSString *)generateLocalDetailURLFor:(NSString *)ppn;
+- (NSString *)getTitleForCatalog:(NSString *)catalogue;
+- (NSString *)getURLForCatalog:(NSString *)catalogue;
 
 @end

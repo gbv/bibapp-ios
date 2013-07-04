@@ -1321,10 +1321,10 @@
             </objects>
             <point key="canvasLocation" x="-1789" y="-1105"/>
         </scene>
-        <!--Options Catalogue Table View Controller Pad - Lokaler Katalog-->
+        <!--Options Catalogue Table View Controller - Lokaler Katalog-->
         <scene sceneID="D8h-2t-fH8">
             <objects>
-                <tableViewController id="lDE-WE-dKX" customClass="BAOptionsCatalogueTableViewControllerPad" sceneMemberID="viewController">
+                <tableViewController id="lDE-WE-dKX" customClass="BAOptionsCatalogueTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0PI-Pt-Fcg">
                         <rect key="frame" x="0.0" y="64" width="540" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1362,6 +1362,114 @@
         <image name="menuIconList.png" width="22" height="28"/>
         <image name="menuIconSearch.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="BAAccountViewControllerPad" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAAccountViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="outlet" name="accountNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="feeTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="feeToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="loanBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="loanTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="loanToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="reservationBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="reservationTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="reservationToolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="BACoverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="BACoverViewControllerPad" superclassName="BACoverViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewControllerPad.h"/>
+        </class>
+        <class className="BAInfoViewControllerPad" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAInfoViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contentTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="infoNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BAListTableViewControllerPad" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAListTableViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="action" name="trashAction:"/>
+                <relationship kind="outlet" name="coverView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detailNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="detailTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="isbdLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="listNavigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="loanButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loanTitleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tocButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tocTitleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="trashIcon" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="BALocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewController.h"/>
+        </class>
+        <class className="BALocationViewControllerPad" superclassName="BALocationViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewControllerPad.h"/>
+        </class>
+        <class className="BAOptionsCatalogueTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsCatalogueTableViewController.h"/>
+        </class>
+        <class className="BAOptionsNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsNavigationController.h"/>
+        </class>
+        <class className="BAOptionsTableViewControllerPad" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsTableViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="action" name="countPixelSwitchAction:"/>
+                <relationship kind="action" name="saveLocalSwitchAction:"/>
+                <relationship kind="outlet" name="catalogueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countPixelSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="saveLocalSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BASearchViewControllerPad" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BASearchViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="action" name="listAction:"/>
+                <relationship kind="outlet" name="coverView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detailTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="isbdLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="listButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loanButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loanTitleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navigationBarDetail" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="navigationBarSearch" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchSegmentedController" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="searchTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tocButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tocTitleButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BATocViewControllerPad" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BATocViewControllerPad.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -83,11 +83,6 @@
 		8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
 		8F114080167F217000E033F6 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
-		8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
-		8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
-		8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
-		8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
-		8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */; };
 		8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
@@ -791,8 +786,6 @@
 		8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8F1101F6165CEFA2008A8A46 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		8F114087167F217000E033F6 /* BibApp HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F1C6F981782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsCatalogueTableViewControllerPad.h; sourceTree = "<group>"; };
-		8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsCatalogueTableViewControllerPad.m; sourceTree = "<group>"; };
 		8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsCatalogueTableViewController.h; sourceTree = "<group>"; };
 		8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsCatalogueTableViewController.m; sourceTree = "<group>"; };
 		8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemAccountCell.xib; sourceTree = "<group>"; };
@@ -1267,6 +1260,8 @@
 				8FE94A8616DCF992004D33B7 /* BALocationViewController.m */,
 				8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */,
 				8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */,
+				8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */,
+				8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1297,8 +1292,6 @@
 				8FD47E1D16407D7F00965F12 /* BALocationViewControllerIPhone.m */,
 				8F965387166E97A900CA5D50 /* BAOptionsViewController.h */,
 				8F965388166E97A900CA5D50 /* BAOptionsViewController.m */,
-				8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */,
-				8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */,
 				8FD499B9168310DA008FC33F /* BAPDFViewController.h */,
 				8FD499BA168310DA008FC33F /* BAPDFViewController.m */,
 				8F3A7173163D4FA800FF0A57 /* BASearchViewController.h */,
@@ -1376,8 +1369,6 @@
 				8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */,
 				8F2F94D61782EE6800723E1E /* BAOptionsTableViewControllerPad.h */,
 				8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */,
-				8F1C6F981782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.h */,
-				8F1C6F991782F42900D169FC /* BAOptionsCatalogueTableViewControllerPad.m */,
 				8FED45F416D25B2D0056CD88 /* BASearchViewControllerPad.h */,
 				8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */,
 				8FD4F8EB16F89C9F00193F33 /* BATocTableViewControllerPad.h */,
@@ -2168,7 +2159,6 @@
 				8F8A774D1781C2A000CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94D91782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
-				8F1C6F9B1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
@@ -2249,7 +2239,6 @@
 				8F8A774E1781C2A100CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
-				8F1C6F9C1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057DE17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
@@ -2330,7 +2319,6 @@
 				8F8A774A1781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
-				8F1C6F9D1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057DF17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
@@ -2411,7 +2399,6 @@
 				8F8A774B1781C29C00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774F1781C2A200CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
-				8F1C6F9E1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057E017843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
@@ -2492,7 +2479,6 @@
 				8F8A774C1781C29F00CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A77501781C2A500CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94D81782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
-				8F1C6F9A1782F42A00D169FC /* BAOptionsCatalogueTableViewControllerPad.m in Sources */,
 				8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057DC17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,

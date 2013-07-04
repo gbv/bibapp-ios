@@ -41,12 +41,15 @@
 
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
+    
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
     
@@ -485,6 +488,19 @@
             BAConnector *connector = [BAConnector generateConnector];
             [connector searchCentralFor:self.searchBar.text WithFirst:[self.booksGVK count]+1 WithDelegate:self];
         }
+    }
+}
+
+- (void)changeCatalogue:(NSNotification *)notif
+{
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.booksLocal removeAllObjects];
+    [self setSearchedLocal:NO];
+    self.lastSearchLocal = @"";
+    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        [self.navigationItem setTitle:@"Lokale Suche"];
+        [self.searchBar setText:@""];
+        [self.searchTableView reloadData];
     }
 }
 

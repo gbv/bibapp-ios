@@ -73,12 +73,15 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
+    
     [self.navigationBarSearch setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.navigationBarDetail setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
     
@@ -150,6 +153,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     [self.searchTableView reloadData];
 }
 
@@ -1498,6 +1502,21 @@
                                                         message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+    }
+}
+
+- (void)changeCatalogue:(NSNotification *)notif
+{
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.booksLocal removeAllObjects];
+    [self setInitialSearchLocal:YES];
+    [self setSearchedLocal:NO];
+    self.lastSearchLocal = @"";
+    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        [self initDetailView];
+        [self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
+        [self.searchBar setText:@""];
+        [self.searchTableView reloadData];
     }
 }
 

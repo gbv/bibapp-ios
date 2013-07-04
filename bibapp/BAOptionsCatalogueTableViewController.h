@@ -11,6 +11,7 @@
 
 @interface BAOptionsCatalogueTableViewController : UITableViewController
 
-@property(strong, nonatomic) BAAppDelegate *appDelegate;
+@property (strong, nonatomic) BAAppDelegate *appDelegate;
+@property int selectedCellIndex;
 
 @end

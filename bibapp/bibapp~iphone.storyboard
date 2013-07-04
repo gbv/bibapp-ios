@@ -437,7 +437,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CatalogueCell" id="qvS-iv-fRv">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CatalogueCell" id="qvS-iv-fRv">
                                 <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -758,6 +758,100 @@
         <image name="menuIconOptions.png" width="26" height="26"/>
         <image name="menuIconSearch.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="BAAccountViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAAccountViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionButtonAction:"/>
+                <relationship kind="outlet" name="accountSegmentedController" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="accountTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="actionButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="BAContactTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAContactTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contactText" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BACoverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="BACoverViewControllerIPhone" superclassName="BACoverViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BACoverViewControllerIPhone.h"/>
+        </class>
+        <class className="BADetailScrollViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BADetailScrollViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionButton:"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="BAImpressumTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAImpressumTableViewController.h"/>
+        </class>
+        <class className="BAInfoTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAInfoTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BAListTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAListTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="trashAction:"/>
+                <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="trashIcon" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="BALocationTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationTableViewController.h"/>
+        </class>
+        <class className="BALocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewController.h"/>
+        </class>
+        <class className="BALocationViewControllerIPhone" superclassName="BALocationViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BALocationViewControllerIPhone.h"/>
+        </class>
+        <class className="BAOptionsCatalogueTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsCatalogueTableViewController.h"/>
+        </class>
+        <class className="BAOptionsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BAOptionsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="countPixelSwitchAction:"/>
+                <relationship kind="action" name="saveLocalSwithAction:"/>
+                <relationship kind="outlet" name="catalogueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countPixelSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="saveLocalSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BASearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BASearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchSegmentedController" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="searchTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BATocListTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BATocListTableViewController.h"/>
+        </class>
+        <class className="BATocViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BATocViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
