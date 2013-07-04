@@ -16,8 +16,8 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Luen4";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Luen4";
-    self.currentBibFeedURL = @"http://www.leuphana.de/bibliothek/aktuelles.html?type=100";
-    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.56 green:0.3 blue:0.32 alpha:0.0];
+    self.currentBibFeedURL = @"http://www.leuphana.de/bibliothek/aktuell.html?type=100";
+    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.56 green:0.3 blue:0.32 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Universitätsbibliothek Lüneburg\nScharnhorststr. 1\n21335 Lüneburg\n\nE-Mail: unibib@uni.leuphana.de\nTelefon: +49 (0) 4131 - 677 1100\nTelefax: +49 (0) 4131 - 677 1111" forKey:@"Anbieter"];
     [self.currentBibImprint setObject:@"Die Universitätsbibliothek Lüneburg ist eine Einrichtung der Leuphana Universität Lüneburg, sie wird vertreten durch ihren Leiter, Torsten Ahlers.\nDie Leuphana Universität ist eine Körperschaft des öffentlichen Rechts in der Trägerschaft einer Stiftung öffentlichen Rechts. Sie wird durch den Präsidenten Sascha Spoun gesetzlich vertreten.\nUmsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 811 305 548 " forKey:@"Vertreter"];

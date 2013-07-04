@@ -18,7 +18,7 @@
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-H360";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-H360";
     self.currentBibFeedURL = @"";
-    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.62 green:0.12 blue:0.19 alpha:0.0];
+    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.62 green:0.12 blue:0.19 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Bibliothek der Bucerius Law School\n\nJungiusstrasse 6\n\n20355 Hamburg\n\nMAIL: martin.vorberg@law-school.de\n\nMOBIL: 0176 7066 3447\n\nPHONE: 49-(0)40-30706-134 " forKey:@"Anbieter"];
     [self.currentBibImprint setObject:@"Die Bibliothek der Bucerius Law School ist das Zentrum der juristischen Informationen unserer Hochschule, sie wird verantwortlich geleitet durch Herrn Martin Vorberg. Die Bucerius Law School gGmbH ist die erste private Hochschule für Rechtswissenschaft in Deutschland, sie wird verantwortlich geleitet durch Herrn Dr. Hariolf Wenzler. Die Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:  DE 212998891." forKey:@"Vertreter"];

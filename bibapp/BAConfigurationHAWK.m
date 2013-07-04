@@ -17,7 +17,7 @@
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
     self.currentBibFeedURL = @"";
-    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.85 green:0.2 blue:0.32 alpha:0.0];
+    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.01 green:0.11 blue:0.26 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Universitätsbibliothek Hildesheim\n\nMarienburger Platz 22\n31141 Hildesheim\n\nE-Mail: auskunft@uni-hildesheim.de\n\nTelefon: +49 (0) 51 21 - 883 260\nTelefax: +49 (0) 51 21 - 883 266" forKey:@"Anbieter"];
     [self.currentBibImprint setObject:@"Die Universitätsbibliothek Hildesheim ist eine Einrichtung der Stiftung Universität Hildesheim, sie wird vertreten durch ihren Leiter, Dr. Ewald Brahms. Die Stiftung Universität Hildesheim ist eine rechtsfähige Stiftung öffentlichen Rechts. Die Stiftung unterhält und fördert die Universität Hildesheim in deren Eigenschaft als Körperschaft des öffentlichen Rechts und übt die Rechtsaufsicht über sie aus. Stiftung Universität Hildesheim und Universität Hildesheim werden vertreten durch ihren Präsidenten Herrn Prof. Dr. Wolfgang-Uwe Friedrich.\n\nUmsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE 239259506." forKey:@"Vertreter"];

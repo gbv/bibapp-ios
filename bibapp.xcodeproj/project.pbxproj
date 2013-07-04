@@ -133,6 +133,14 @@
 		8F57756F16D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F57757016D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
 		8F5D8D45165CF2C100773DD5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */; };
+		8F5E217D17858B7F00EDD948 /* IconHAWK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E217C17858B7F00EDD948 /* IconHAWK.png */; };
+		8F5E217F17858B8700EDD948 /* IconHAWK@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E217E17858B8700EDD948 /* IconHAWK@2x.png */; };
+		8F5E218117858B9000EDD948 /* iPadIconHAWK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E218017858B9000EDD948 /* iPadIconHAWK.png */; };
+		8F5E218317858B9500EDD948 /* iPadIconHAWK@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E218217858B9500EDD948 /* iPadIconHAWK@2x.png */; };
+		8F5E21851785AA6C00EDD948 /* IconBLS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E21841785AA6C00EDD948 /* IconBLS.png */; };
+		8F5E21871785AA7500EDD948 /* IconBLS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E21861785AA7500EDD948 /* IconBLS@2x.png */; };
+		8F5E21891785AA8900EDD948 /* iPadIconBLS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E21881785AA8900EDD948 /* iPadIconBLS.png */; };
+		8F5E218B1785AA9B00EDD948 /* iPadIconBLS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E218A1785AA9B00EDD948 /* iPadIconBLS@2x.png */; };
 		8F6057DC17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
 		8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
 		8F6057DE17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
@@ -842,6 +850,14 @@
 		8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContactTableViewController.m; sourceTree = "<group>"; };
 		8F57756D16D5129A009E143E /* BAAccountViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccountViewControllerPad.h; sourceTree = "<group>"; };
 		8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccountViewControllerPad.m; sourceTree = "<group>"; };
+		8F5E217C17858B7F00EDD948 /* IconHAWK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconHAWK.png; path = ../IconHAWK.png; sourceTree = "<group>"; };
+		8F5E217E17858B8700EDD948 /* IconHAWK@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IconHAWK@2x.png"; path = "../IconHAWK@2x.png"; sourceTree = "<group>"; };
+		8F5E218017858B9000EDD948 /* iPadIconHAWK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadIconHAWK.png; path = ../iPadIconHAWK.png; sourceTree = "<group>"; };
+		8F5E218217858B9500EDD948 /* iPadIconHAWK@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadIconHAWK@2x.png"; path = "../iPadIconHAWK@2x.png"; sourceTree = "<group>"; };
+		8F5E21841785AA6C00EDD948 /* IconBLS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconBLS.png; path = ../IconBLS.png; sourceTree = "<group>"; };
+		8F5E21861785AA7500EDD948 /* IconBLS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IconBLS@2x.png"; path = "../IconBLS@2x.png"; sourceTree = "<group>"; };
+		8F5E21881785AA8900EDD948 /* iPadIconBLS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadIconBLS.png; path = ../iPadIconBLS.png; sourceTree = "<group>"; };
+		8F5E218A1785AA9B00EDD948 /* iPadIconBLS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPadIconBLS@2x.png"; path = "../iPadIconBLS@2x.png"; sourceTree = "<group>"; };
 		8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACatalogueTableViewCell.h; sourceTree = "<group>"; };
 		8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACatalogueTableViewCell.m; sourceTree = "<group>"; };
 		8F6A7C261701C40200C4E580 /* BATocListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocListTableViewController.h; sourceTree = "<group>"; };
@@ -1486,14 +1502,22 @@
 				8F1F20DB166DF84200E74231 /* Icon@2x.png */,
 				8FE6259116CBC9C100F0D213 /* IconLG@2x.png */,
 				8FE6258F16CBC9BA00F0D213 /* IconLG.png */,
+				8F5E21861785AA7500EDD948 /* IconBLS@2x.png */,
+				8F5E21841785AA6C00EDD948 /* IconBLS.png */,
 				8F91495E17830DC700FE7924 /* IconIL@2x.png */,
 				8F91495C17830DA400FE7924 /* IconIL.png */,
+				8F5E217E17858B8700EDD948 /* IconHAWK@2x.png */,
+				8F5E217C17858B7F00EDD948 /* IconHAWK.png */,
 				8FE5F961170466EE002EA336 /* iPadIcon@2x.png */,
 				8FE5F95F170466E6002EA336 /* iPadIcon.png */,
 				8FE5F95D170466D4002EA336 /* iPadIconLG@2x.png */,
 				8FE5F95B170466C8002EA336 /* iPadIconLG.png */,
+				8F5E218A1785AA9B00EDD948 /* iPadIconBLS@2x.png */,
+				8F5E21881785AA8900EDD948 /* iPadIconBLS.png */,
 				8F91496217830E1000FE7924 /* iPadIconIL@2x.png */,
 				8F91496017830E0B00FE7924 /* iPadIconIL.png */,
+				8F5E218217858B9500EDD948 /* iPadIconHAWK@2x.png */,
+				8F5E218017858B9000EDD948 /* iPadIconHAWK.png */,
 				8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */,
 				8FEDD873172695C800D66DE6 /* Icon-72.png */,
 			);
@@ -1835,6 +1859,10 @@
 				8F8A760C1781BF4700CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A760D1781BF4700CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC381784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				8F5E21851785AA6C00EDD948 /* IconBLS.png in Resources */,
+				8F5E21871785AA7500EDD948 /* IconBLS@2x.png in Resources */,
+				8F5E21891785AA8900EDD948 /* iPadIconBLS.png in Resources */,
+				8F5E218B1785AA9B00EDD948 /* iPadIconBLS@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1985,6 +2013,10 @@
 				8F8A77361781C0D800CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC3A1784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				8F5E217D17858B7F00EDD948 /* IconHAWK.png in Resources */,
+				8F5E217F17858B8700EDD948 /* IconHAWK@2x.png in Resources */,
+				8F5E218117858B9000EDD948 /* iPadIconHAWK.png in Resources */,
+				8F5E218317858B9500EDD948 /* iPadIconHAWK@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

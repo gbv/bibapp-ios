@@ -14,10 +14,10 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Icon.png</string>
-				<string>Icon@2x.png</string>
-				<string>iPadIcon.png</string>
-				<string>iPadIcon@2x.png</string>
+				<string>IconBLS.png</string>
+				<string>IconBLS@2x.png</string>
+				<string>iPadIconBLS.png</string>
+				<string>iPadIconBLS@2x.png</string>
 			</array>
 		</dict>
 	</dict>
