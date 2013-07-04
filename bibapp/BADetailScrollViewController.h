@@ -25,6 +25,7 @@
 @property (strong, nonatomic) UIImage *tempCover;
 @property (strong, nonatomic) NSMutableArray *tempTocArray;
 @property (strong, nonatomic) BALocation *tempLocation;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *listButton;
 
 - (IBAction)actionButton:(id)sender;
 

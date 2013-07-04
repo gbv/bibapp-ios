@@ -17,7 +17,7 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Ilm1";
     self.currentBibPAIAURL = @"https://paia-il.effective-webwork.de";
-    self.currentBibFeedURL = @"www2.tu-ilmenau.de/ub/weblog/?feed=rss2";
+    self.currentBibFeedURL = @"http://www2.tu-ilmenau.de/ub/weblog/?feed=rss2";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.0 green:0.45 blue:0.47 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Universitätsbibliothek Ilmenau\n\nDer Direktor\n\nLangewiesener Str.37\n\n98693 Ilmenau\n\nhttp://www.tu-ilmenau.de/ub/\n\nTel.: 03677 69-4701\n\nFax: 03677 69-4700\n\nE-Mail: direktion.ub@tu-ilmenau.de\n\nImpressum der TU Ilmenau:\n\nhttp://www.tu-ilmenau.de/impressum/" forKey:@"Anbieter"];

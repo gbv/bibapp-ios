@@ -94,7 +94,7 @@
     [self.feeHeader.subTitleLabel setText:@""];
     self.feeTableView.tableHeaderView = self.feeHeader;
     
-    [self setLoggedIn:YES];
+    [self setLoggedIn:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated

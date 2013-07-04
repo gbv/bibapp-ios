@@ -63,7 +63,6 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-   
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -80,6 +79,11 @@ static BAConnector *sharedConnector = nil;
 {
     // Add trusted hosts to this array in order to handle authentication challenges
    NSMutableArray* trustedHosts = [NSMutableArray array];
+
+   [trustedHosts addObject:@"paia-bls.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-il.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];
+    
    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
        [trustedHosts containsObject:challenge.protectionSpace.host])
    {

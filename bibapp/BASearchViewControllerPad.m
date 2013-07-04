@@ -1148,6 +1148,32 @@
         [self.listButton setHidden:NO];
         [self.detailTableView setHidden:NO];
         
+        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDescription];
+        
+        NSError *error = nil;
+        NSArray *tempEntries = [self.appDelegate.managedObjectContext executeFetchRequest:request error:&error];
+        BOOL foundPpn = NO;
+        for (BAEntry *tempExistingEntry in tempEntries) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                if ([self.currentEntryLocal.ppn isEqualToString:tempExistingEntry.ppn]) {
+                    foundPpn = YES;
+                }
+            } else {
+                if ([self.currentEntry.ppn isEqualToString:tempExistingEntry.ppn]) {
+                    foundPpn = YES;
+                }
+            }
+        }
+        if (!foundPpn) {
+            [self.listButton setTitle:@"Zur Merkliste hinzufügen" forState:UIControlStateNormal];
+            [self.listButton setEnabled:YES];
+        } else {
+            [self.listButton setTitle:@"Bereits auf der Merkliste" forState:UIControlStateNormal];
+            [self.listButton setEnabled:NO];
+        }
+        
         [self.tocButton addTarget:self action:@selector(tocAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.tocTitleButton addTarget:self action:@selector(tocAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -1493,6 +1519,10 @@
         if (![[self.appDelegate managedObjectContext] save:&error]) {
             // Handle the error.
         }
+        
+        [self.listButton setTitle:@"Bereits auf der Merkliste" forState:UIControlStateNormal];
+        [self.listButton setEnabled:NO];
+        
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"Der Eintrag wurde Ihrer Merkliste hinzugefügt"
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

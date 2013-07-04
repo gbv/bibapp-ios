@@ -115,6 +115,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="listButton" destination="BCH-B3-2JK" id="mVd-4c-rSc"/>
                         <outlet property="scrollView" destination="57c-hX-heg" id="bt2-x5-QeR"/>
                         <segue destination="koJ-Dg-fGo" kind="push" identifier="ItemDetailLocationSegue" id="CbU-PR-FJM"/>
                         <segue destination="96i-OW-akc" kind="modal" identifier="coverSegue" modalTransitionStyle="flipHorizontal" id="hlf-cJ-QAV"/>
@@ -787,6 +788,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BADetailScrollViewController.h"/>
             <relationships>
                 <relationship kind="action" name="actionButton:"/>
+                <relationship kind="outlet" name="listButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>

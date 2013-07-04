@@ -147,8 +147,8 @@
     UITableViewCell *cell;
     if (tableView.tag == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
             if (indexPath.section == 0) {
@@ -169,7 +169,6 @@
                 [cell.textLabel setText:@"Impressum"];
             }
         }
-        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         return cell;
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
@@ -426,15 +425,17 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (cell.isSelected == YES)
-    {
-        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [cell.textLabel setTextColor:[UIColor whiteColor]];
-    }
-    else
-    {
-        [cell setBackgroundColor:[UIColor clearColor]];
-        [cell.textLabel setTextColor:[UIColor blackColor]];
+    if (tableView.tag == 0) {
+        if (cell.isSelected == YES)
+        {
+            [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+            [cell.textLabel setTextColor:[UIColor whiteColor]];
+        }
+        else
+        {
+            [cell setBackgroundColor:[UIColor clearColor]];
+            [cell.textLabel setTextColor:[UIColor blackColor]];
+        }
     }
 }
 
