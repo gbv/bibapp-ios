@@ -409,25 +409,41 @@
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
 {
-    if ([command isEqualToString:@"searchLocal"]) {
+    if ([command isEqualToString:@"searchLocal"] || [command isEqualToString:@"searchCentral"]) {
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
         
         NSMutableArray *tempArray = [[NSMutableArray alloc] init];
         NSArray *setArray = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:numberOfRecords" error:nil];
         if ([setArray count] > 0) {
             GDataXMLElement *set = [setArray objectAtIndex:0];
-            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+            /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
                 self.searchCountLocal = [[set stringValue] integerValue];
             } else {
+                self.searchCount = [[set stringValue] integerValue];
+            }*/
+            if ([command isEqualToString:@"searchLocal"]) {
+                self.searchCountLocal = [[set stringValue] integerValue];
+            } else if ([command isEqualToString:@"searchCentral"]) {
                 self.searchCount = [[set stringValue] integerValue];
             }
         }
         
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
             self.searchedLocal = YES;
         } else {
             [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            self.searched = YES;
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            }
+            self.searchedLocal = YES;
+        } else if ([command isEqualToString:@"searchCentral"]) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            }
             self.searched = YES;
         }
         
@@ -466,9 +482,14 @@
             [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
             [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
             
-            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+            /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
                 [tempEntry setLocal:YES];
             } else {
+                [tempEntry setLocal:NO];
+            }*/
+            if ([command isEqualToString:@"searchLocal"]) {
+                [tempEntry setLocal:YES];
+            } else if ([command isEqualToString:@"searchCentral"]) {
                 [tempEntry setLocal:NO];
             }
             
@@ -620,7 +641,7 @@
             
             [tempArray addObject:tempEntry];
         }
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [self.booksLocal addObjectsFromArray:tempArray];
             if ([tempArray count] > 0) {
                 //self.currentEntryLocal = [tempArray objectAtIndex:0];
@@ -632,10 +653,15 @@
                 //self.currentEntry = [tempArray objectAtIndex:0];
                 //self.position = 0;
             }
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            [self.booksLocal addObjectsFromArray:tempArray];
+        } else if ([command isEqualToString:@"searchCentral"]) {
+            [self.booksGVK addObjectsFromArray:tempArray];
         }
         [self.searchTableView reloadData];
         
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             if(self.initialSearchLocal){
                 if ([tempArray count] > 0) {
                     self.currentEntryLocal = [tempArray objectAtIndex:0];
@@ -646,6 +672,27 @@
             }
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         } else {
+            if(self.initialSearch){
+                if ([tempArray count] > 0) {
+                    self.currentEntry = [tempArray objectAtIndex:0];
+                    self.position = 0;
+                }
+                [self showDetailView];
+                [self setInitialSearch:NO];
+            }
+            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            if(self.initialSearchLocal){
+                if ([tempArray count] > 0) {
+                    self.currentEntryLocal = [tempArray objectAtIndex:0];
+                    self.positionLocal = 0;
+                }
+                [self showDetailView];
+                [self setInitialSearchLocal:NO];
+            }
+            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        } else if ([command isEqualToString:@"searchCentral"]) {
             if(self.initialSearch){
                 if ([tempArray count] > 0) {
                     self.currentEntry = [tempArray objectAtIndex:0];

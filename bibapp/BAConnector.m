@@ -138,7 +138,7 @@ static BAConnector *sharedConnector = nil;
 - (void)searchCentralFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
-   [self setCommand:@"searchLocal"];
+   [self setCommand:@"searchCentral"];
    term = [self encodeToPercentEscapeString:term];
    term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
    term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
