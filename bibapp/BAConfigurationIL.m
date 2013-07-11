@@ -26,7 +26,7 @@
     [self.currentBibImprint setObject:@"ursprünglich: UB Lüneburg, UB Hildesheim, VZG\n\nAnpassung: UB Ilmenau\n\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Universitätsbibliothek Ilmenau\n\nLangewiesener Str.37\n\n98693 Ilmenau\n\nhttp://www.tu-ilmenau.de/ub/\n\nAuskunft:\n\nTel.: 03677 69-4531\n\nE-Mail: auskunft.ub@tu-ilmenau.de\n\nDirektion:\n\nTel.: 03677 69-4701\n\nE-Mail: direktion.ub@tu-ilmenau.de";
     self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
-    self.currentBibSearchCountURL = @"";
+    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EL039&amp;page=20";
 }
 
 - (NSString *)generateLocalDetailURLFor:(NSString *)ppn
