@@ -16,7 +16,7 @@
     self.currentBibLocalSearchURL = @"opac-de-h360";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-h360", @"Standard-Katalog", @"OPAC", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-H360";
-    self.currentBibPAIAURL = @"https://paia-bls.effective-webwork.de";
+    self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-H360";
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.62 green:0.12 blue:0.19 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];

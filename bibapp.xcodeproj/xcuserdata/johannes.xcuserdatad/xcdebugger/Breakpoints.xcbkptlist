@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bibapp/BAConnector.m"
-         timestampString = "394637291.484483"
+         timestampString = "395837620.329986"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "219"
-         endingLineNumber = "219"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
          landmarkName = "-accountLoadLoanListWithAccount:WithToken:WithDelegate:"
          landmarkType = "5">
       </FileBreakpoint>
