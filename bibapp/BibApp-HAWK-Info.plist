@@ -14,10 +14,10 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Icon.png</string>
-				<string>Icon@2x.png</string>
-				<string>iPadIcon.png</string>
-				<string>iPadIcon@2x.png</string>
+				<string>IconHAWK.png</string>
+				<string>IconHAWK@2x.png</string>
+				<string>iPadIconHAWK.png</string>
+				<string>iPadIconHAWK@2x.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -34,7 +34,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationUsageDescription</key>

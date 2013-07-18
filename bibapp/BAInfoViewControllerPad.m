@@ -147,6 +147,9 @@
     UITableViewCell *cell;
     if (tableView.tag == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
             if (indexPath.section == 0) {
                 [cell.textLabel setText:@"News"];
@@ -166,7 +169,6 @@
                 [cell.textLabel setText:@"Impressum"];
             }
         }
-        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         return cell;
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
@@ -246,6 +248,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 0) {
+        [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [[tableView cellForRowAtIndexPath:indexPath].textLabel setTextColor:[UIColor whiteColor]];
         [self.contentTableView reloadData];
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
@@ -405,6 +409,34 @@
 {
     [self setContentTableView:nil];
     [super viewDidUnload];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *currentSelectedIndexPath = [tableView indexPathForSelectedRow];
+    if (currentSelectedIndexPath != nil)
+    {
+        [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
+        [[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
+    }
+    
+    return indexPath;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView.tag == 0) {
+        if (cell.isSelected == YES)
+        {
+            [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+            [cell.textLabel setTextColor:[UIColor whiteColor]];
+        }
+        else
+        {
+            [cell setBackgroundColor:[UIColor clearColor]];
+            [cell.textLabel setTextColor:[UIColor blackColor]];
+        }
+    }
 }
 
 @end

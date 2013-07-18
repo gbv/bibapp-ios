@@ -122,6 +122,11 @@
         [self loadScrollViewWithPage:page + i];
     }
     self.scrollPosition = page;
+    if (![(BADetailViewController *)[self.views objectAtIndex:page] entryOnList]) {
+        [self.listButton setEnabled:YES];
+    } else {
+        [self.listButton setEnabled:NO];
+    }
 }
 
 - (void)loadScrollViewWithPage:(int)page
@@ -181,8 +186,10 @@
 
 - (void)viewDidUnload {
     [self setScrollView:nil];
+    [self setListButton:nil];
     [super viewDidUnload];
 }
+
 - (IBAction)actionButton:(id)sender {
     [(BADetailViewController *)[self.views objectAtIndex:self.scrollPosition] actionButton];
 }

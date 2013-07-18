@@ -73,12 +73,15 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
+    
     [self.navigationBarSearch setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.navigationBarDetail setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
     
@@ -150,6 +153,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     [self.searchTableView reloadData];
 }
 
@@ -405,25 +409,41 @@
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
 {
-    if ([command isEqualToString:@"searchLocal"]) {
+    if ([command isEqualToString:@"searchLocal"] || [command isEqualToString:@"searchCentral"]) {
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
         
         NSMutableArray *tempArray = [[NSMutableArray alloc] init];
         NSArray *setArray = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:numberOfRecords" error:nil];
         if ([setArray count] > 0) {
             GDataXMLElement *set = [setArray objectAtIndex:0];
-            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+            /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
                 self.searchCountLocal = [[set stringValue] integerValue];
             } else {
+                self.searchCount = [[set stringValue] integerValue];
+            }*/
+            if ([command isEqualToString:@"searchLocal"]) {
+                self.searchCountLocal = [[set stringValue] integerValue];
+            } else if ([command isEqualToString:@"searchCentral"]) {
                 self.searchCount = [[set stringValue] integerValue];
             }
         }
         
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
             self.searchedLocal = YES;
         } else {
             [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            self.searched = YES;
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            }
+            self.searchedLocal = YES;
+        } else if ([command isEqualToString:@"searchCentral"]) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            }
             self.searched = YES;
         }
         
@@ -462,9 +482,14 @@
             [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
             [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
             
-            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+            /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
                 [tempEntry setLocal:YES];
             } else {
+                [tempEntry setLocal:NO];
+            }*/
+            if ([command isEqualToString:@"searchLocal"]) {
+                [tempEntry setLocal:YES];
+            } else if ([command isEqualToString:@"searchCentral"]) {
                 [tempEntry setLocal:NO];
             }
             
@@ -616,7 +641,7 @@
             
             [tempArray addObject:tempEntry];
         }
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [self.booksLocal addObjectsFromArray:tempArray];
             if ([tempArray count] > 0) {
                 //self.currentEntryLocal = [tempArray objectAtIndex:0];
@@ -628,10 +653,15 @@
                 //self.currentEntry = [tempArray objectAtIndex:0];
                 //self.position = 0;
             }
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            [self.booksLocal addObjectsFromArray:tempArray];
+        } else if ([command isEqualToString:@"searchCentral"]) {
+            [self.booksGVK addObjectsFromArray:tempArray];
         }
         [self.searchTableView reloadData];
         
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             if(self.initialSearchLocal){
                 if ([tempArray count] > 0) {
                     self.currentEntryLocal = [tempArray objectAtIndex:0];
@@ -642,6 +672,27 @@
             }
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         } else {
+            if(self.initialSearch){
+                if ([tempArray count] > 0) {
+                    self.currentEntry = [tempArray objectAtIndex:0];
+                    self.position = 0;
+                }
+                [self showDetailView];
+                [self setInitialSearch:NO];
+            }
+            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            if(self.initialSearchLocal){
+                if ([tempArray count] > 0) {
+                    self.currentEntryLocal = [tempArray objectAtIndex:0];
+                    self.positionLocal = 0;
+                }
+                [self showDetailView];
+                [self setInitialSearchLocal:NO];
+            }
+            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        } else if ([command isEqualToString:@"searchCentral"]) {
             if(self.initialSearch){
                 if ([tempArray count] > 0) {
                     self.currentEntry = [tempArray objectAtIndex:0];
@@ -1144,6 +1195,32 @@
         [self.listButton setHidden:NO];
         [self.detailTableView setHidden:NO];
         
+        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDescription];
+        
+        NSError *error = nil;
+        NSArray *tempEntries = [self.appDelegate.managedObjectContext executeFetchRequest:request error:&error];
+        BOOL foundPpn = NO;
+        for (BAEntry *tempExistingEntry in tempEntries) {
+            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                if ([self.currentEntryLocal.ppn isEqualToString:tempExistingEntry.ppn]) {
+                    foundPpn = YES;
+                }
+            } else {
+                if ([self.currentEntry.ppn isEqualToString:tempExistingEntry.ppn]) {
+                    foundPpn = YES;
+                }
+            }
+        }
+        if (!foundPpn) {
+            [self.listButton setTitle:@"Zur Merkliste hinzufügen" forState:UIControlStateNormal];
+            [self.listButton setEnabled:YES];
+        } else {
+            [self.listButton setTitle:@"Bereits auf der Merkliste" forState:UIControlStateNormal];
+            [self.listButton setEnabled:NO];
+        }
+        
         [self.tocButton addTarget:self action:@selector(tocAction:) forControlEvents:UIControlEventTouchUpInside];
         [self.tocTitleButton addTarget:self action:@selector(tocAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -1489,6 +1566,10 @@
         if (![[self.appDelegate managedObjectContext] save:&error]) {
             // Handle the error.
         }
+        
+        [self.listButton setTitle:@"Bereits auf der Merkliste" forState:UIControlStateNormal];
+        [self.listButton setEnabled:NO];
+        
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"Der Eintrag wurde Ihrer Merkliste hinzugefügt"
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -1498,6 +1579,21 @@
                                                         message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+    }
+}
+
+- (void)changeCatalogue:(NSNotification *)notif
+{
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.booksLocal removeAllObjects];
+    [self setInitialSearchLocal:YES];
+    [self setSearchedLocal:NO];
+    self.lastSearchLocal = @"";
+    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        [self initDetailView];
+        [self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
+        [self.searchBar setText:@""];
+        [self.searchTableView reloadData];
     }
 }
 

@@ -74,4 +74,27 @@
     return nil;
 }
 
+- (NSString *)getTitleForCatalog:(NSString *)catalogue
+{
+    NSString *title;
+    for (NSArray *tempCatalogue in self.currentBibLocalSearchURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            title = [tempCatalogue objectAtIndex:2];
+        }
+    }
+    return title;
+}
+
+
+- (NSString *)getURLForCatalog:(NSString *)catalogue
+{
+    NSString *title;
+    for (NSArray *tempCatalogue in self.currentBibLocalSearchURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            title = [tempCatalogue objectAtIndex:0];
+        }
+    }
+    return title;
+}
+
 @end

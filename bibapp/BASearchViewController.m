@@ -41,12 +41,15 @@
 
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
+    
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
     
@@ -181,24 +184,42 @@
 {
     GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
     
+    NSLog(@"%@", command);
+    
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     NSArray *setArray = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:numberOfRecords" error:nil];
     if ([setArray count] > 0) {
         GDataXMLElement *set = [setArray objectAtIndex:0];
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             self.searchCountLocal = [[set stringValue] integerValue];
         } else {
+            self.searchCount = [[set stringValue] integerValue];
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            self.searchCountLocal = [[set stringValue] integerValue];
+        } else if ([command isEqualToString:@"searchCentral"]) {
             self.searchCount = [[set stringValue] integerValue];
         }
     }
     
-    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        if ([self isFirstResponder]) {
+    /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        //if ([self isFirstResponder]) {
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+        //}
+        self.searchedLocal = YES;
+    } else {
+        //if ([self isFirstResponder]) {
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+        //}
+        self.searched = YES;
+    }*/
+    if ([command isEqualToString:@"searchLocal"]) {
+        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
         }
         self.searchedLocal = YES;
-    } else {
-        if ([self isFirstResponder]) {
+    } else if ([command isEqualToString:@"searchCentral"]) {
+        if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
         }
         self.searched = YES;
@@ -239,9 +260,14 @@
         [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
         [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
         
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             [tempEntry setLocal:YES];
         } else {
+            [tempEntry setLocal:NO];
+        }*/
+        if ([command isEqualToString:@"searchLocal"]) {
+            [tempEntry setLocal:YES];
+        } else if ([command isEqualToString:@"searchCentral"]) {
             [tempEntry setLocal:NO];
         }
         
@@ -379,11 +405,17 @@
         
         [tempArray addObject:tempEntry];
     }
-    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+    /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.booksLocal addObjectsFromArray:tempArray];
     } else {
         [self.booksGVK addObjectsFromArray:tempArray];
+    }*/
+    if ([command isEqualToString:@"searchLocal"]) {
+        [self.booksLocal addObjectsFromArray:tempArray];
+    } else if ([command isEqualToString:@"searchCentral"]) {
+        [self.booksGVK addObjectsFromArray:tempArray];
     }
+    
     [self.searchTableView reloadData];
     self.searchTableView.tableFooterView = nil;
     
@@ -485,6 +517,19 @@
             BAConnector *connector = [BAConnector generateConnector];
             [connector searchCentralFor:self.searchBar.text WithFirst:[self.booksGVK count]+1 WithDelegate:self];
         }
+    }
+}
+
+- (void)changeCatalogue:(NSNotification *)notif
+{
+    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.booksLocal removeAllObjects];
+    [self setSearchedLocal:NO];
+    self.lastSearchLocal = @"";
+    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        [self.navigationItem setTitle:@"Lokale Suche"];
+        [self.searchBar setText:@""];
+        [self.searchTableView reloadData];
     }
 }
 

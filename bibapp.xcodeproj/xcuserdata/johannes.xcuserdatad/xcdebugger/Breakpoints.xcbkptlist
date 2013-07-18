@@ -8,7 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "bibapp/BADetailViewController.m"
-         timestampString = "388403679.597416"
+         timestampString = "394640077.852856"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "440"
@@ -40,6 +40,19 @@
          startingLineNumber = "668"
          endingLineNumber = "668"
          landmarkName = "-showRenewCancelDialog"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "bibapp/BAConnector.m"
+         timestampString = "394637291.484483"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
+         landmarkName = "-accountLoadLoanListWithAccount:WithToken:WithDelegate:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

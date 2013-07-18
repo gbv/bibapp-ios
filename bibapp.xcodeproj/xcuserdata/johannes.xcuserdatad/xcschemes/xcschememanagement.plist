@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BibAppUnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>8F114037167F217000E033F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F4F7E551786A94D00B61255</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>8FF78FA21679ED1C00D1639F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FFF22C41786B8580077FC8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

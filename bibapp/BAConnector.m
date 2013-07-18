@@ -63,7 +63,6 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-   
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -80,6 +79,11 @@ static BAConnector *sharedConnector = nil;
 {
     // Add trusted hosts to this array in order to handle authentication challenges
    NSMutableArray* trustedHosts = [NSMutableArray array];
+
+   [trustedHosts addObject:@"paia-bls.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-il.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];
+    
    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
        [trustedHosts containsObject:challenge.protectionSpace.host])
    {
@@ -100,8 +104,9 @@ static BAConnector *sharedConnector = nil;
    term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
    term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
    term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-   
+   //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+    
    NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
@@ -133,7 +138,7 @@ static BAConnector *sharedConnector = nil;
 - (void)searchCentralFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
-   [self setCommand:@"searchLocal"];
+   [self setCommand:@"searchCentral"];
    term = [self encodeToPercentEscapeString:term];
    term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
    term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];

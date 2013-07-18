@@ -42,5 +42,6 @@
 - (void)actionButton;
 - (void)initDetailView;
 - (id)initWithFrame:(CGRect)frame;
+- (BOOL)entryOnList;
 
 @end

@@ -958,6 +958,7 @@
                 if (![[self.appDelegate managedObjectContext] save:&error]) {
                     // Handle the error.
                 }
+                [self.scrollViewController.listButton setEnabled:NO];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
@@ -1081,6 +1082,24 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+}
+
+- (BOOL)entryOnList
+{
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    NSError *error = nil;
+    NSArray *tempEntries = [self.appDelegate.managedObjectContext executeFetchRequest:request error:&error];
+    BOOL foundPpn = NO;
+    for (BAEntry *tempExistingEntry in tempEntries) {
+        if ([self.currentEntry.ppn isEqualToString:tempExistingEntry.ppn]) {
+            foundPpn = YES;
+        }
+    }
+    
+    return foundPpn;
 }
 
 @end
