@@ -118,7 +118,7 @@
     [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
-    for (int i = 1; i < 3; i++) {
+    for (int i = 1; i < 5; i++) {
         [self loadScrollViewWithPage:page + i];
     }
     self.scrollPosition = page;

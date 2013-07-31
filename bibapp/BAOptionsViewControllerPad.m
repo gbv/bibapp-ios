@@ -38,7 +38,7 @@
         [self.saveLocalSwith setOn:YES];
     }
     
-    [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"]];
+    [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
