@@ -40,8 +40,10 @@
         self.options = [tempOptionsArray objectAtIndex:0];
     }
     
+    // if the selected catalogue has not been set, the app is started for the first time.
     if ([self.options.selectedCatalogue isEqualToString:@""] || self.options.selectedCatalogue == nil) {
         [self.options setSelectedCatalogue:@"Standard-Katalog"];
+        [self.options setAllowCountPixel:YES];
         NSError *error = nil;
         if (![[self managedObjectContext] save:&error]) {
             // Handle the error.

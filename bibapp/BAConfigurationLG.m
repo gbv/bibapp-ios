@@ -10,7 +10,8 @@
 
 @implementation BAConfigurationLG
 
-- (void)initConfiguration{
+- (void)initConfiguration
+{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-luen4";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Standard-Katalog", @"Lokale Suche", nil]];

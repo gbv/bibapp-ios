@@ -10,7 +10,8 @@
 
 @implementation BAConfigurationHAWK
 
-- (void)initConfiguration{
+- (void)initConfiguration
+{
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", nil]];

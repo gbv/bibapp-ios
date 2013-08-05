@@ -10,7 +10,8 @@
 
 @implementation BAConfigurationBLS
 
-- (void)initConfiguration{
+- (void)initConfiguration
+{
     self.searchTitle = @"Recherche";
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-h360";
