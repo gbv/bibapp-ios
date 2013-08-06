@@ -380,6 +380,7 @@
                 [[alert textFieldAtIndex:0] setText:self.currentAccount];
             }
             [[alert textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
+            [[alert textFieldAtIndex:0] setPlaceholder:@"Benutzernummer"];
             [[alert textFieldAtIndex:1] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
             [alert show];
         }
