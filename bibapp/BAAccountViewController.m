@@ -483,6 +483,8 @@
                 NSString *day = [fee.date substringWithRange: NSMakeRange (8, 2)];
                 [cell.date setText:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
             }
+        } else {
+            [cell.date setText:@""];
         }
         
         return cell;

@@ -184,8 +184,6 @@
 {
     GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
     
-    NSLog(@"%@", command);
-    
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     NSArray *setArray = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:numberOfRecords" error:nil];
     if ([setArray count] > 0) {

@@ -12,7 +12,6 @@
 
 - (void)initConfiguration
 {
-    self.hasLocalDetailURL = YES;
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-ilm1";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", nil]];
@@ -29,11 +28,6 @@
     self.currentBibContact = @"Universitätsbibliothek Ilmenau\nLangewiesener Str.37\n98693 Ilmenau\n\nhttp://www.tu-ilmenau.de/ub/\n\nAuskunft:\nTel.: 03677 69-4531\nE-Mail: auskunft.ub@tu-ilmenau.de\n\nDirektion:\nTel.: 03677 69-4701\nE-Mail: direktion.ub@tu-ilmenau.de";
     self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EL039&amp;page=20";
-}
-
-- (NSString *)generateLocalDetailURLFor:(NSString *)ppn
-{
-    return [[NSString alloc] initWithFormat:@"http://find.bibliothek.tu-ilmenau.de/phpDaia/daia_ws.php?ppn=%@&format=xml", ppn];
 }
 
 @end
