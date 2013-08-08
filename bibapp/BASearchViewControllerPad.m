@@ -1399,11 +1399,19 @@
         }
         UIActionSheet *action;
         if (tempDocumentItem.order) {
-            action = [[UIActionSheet alloc] initWithTitle:nil
-                                                 delegate:self
-                                        cancelButtonTitle:@"Abbrechen"
-                                   destructiveButtonTitle:nil
-                                        otherButtonTitles:orderString, @"Standortinfo", nil];
+            if (tempDocumentItem.location != nil) {
+                action = [[UIActionSheet alloc] initWithTitle:nil
+                                                     delegate:self
+                                            cancelButtonTitle:@"Abbrechen"
+                                       destructiveButtonTitle:nil
+                                            otherButtonTitles:orderString, @"Standortinfo", nil];
+            } else {
+                action = [[UIActionSheet alloc] initWithTitle:nil
+                                                     delegate:self
+                                            cancelButtonTitle:@"Abbrechen"
+                                       destructiveButtonTitle:nil
+                                            otherButtonTitles:orderString, nil];
+            }
         } else {
             action = [[UIActionSheet alloc] initWithTitle:nil
                                                  delegate:self
@@ -1412,11 +1420,13 @@
                                         otherButtonTitles:@"Standortinfo", nil];
         }
         [action setTag:clicked.tag];
-        CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
-        } else {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+        if (![orderString isEqualToString:@""] || (tempDocumentItem.location != nil)) {
+            CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
+            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
+            } else {
+                [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+            }
         }
     } else {
         UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil

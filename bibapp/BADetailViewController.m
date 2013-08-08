@@ -852,11 +852,19 @@
             }
             UIActionSheet *action;
             if (tempDocumentItem.order) {
-                action = [[UIActionSheet alloc] initWithTitle:nil
-                                                     delegate:self
-                                            cancelButtonTitle:@"Abbrechen"
-                                       destructiveButtonTitle:nil
-                                            otherButtonTitles:orderString, @"Standortinfo", nil];
+                if (tempDocumentItem.location != nil) {
+                    action = [[UIActionSheet alloc] initWithTitle:nil
+                                                         delegate:self
+                                                cancelButtonTitle:@"Abbrechen"
+                                           destructiveButtonTitle:nil
+                                                otherButtonTitles:orderString, @"Standortinfo", nil];
+                } else {
+                    action = [[UIActionSheet alloc] initWithTitle:nil
+                                                         delegate:self
+                                                cancelButtonTitle:@"Abbrechen"
+                                           destructiveButtonTitle:nil
+                                                otherButtonTitles:orderString, nil];
+                }
             } else {
                 action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
@@ -865,7 +873,9 @@
                                             otherButtonTitles:@"Standortinfo", nil];
             }
             [action setTag:indexPath.row+1];
-            [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
+            if (![orderString isEqualToString:@""] || (tempDocumentItem.location != nil)) {
+                [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
+            }
         } else {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
