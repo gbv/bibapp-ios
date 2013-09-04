@@ -341,6 +341,7 @@
             [cell.statusInfo setText:statusInfo];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            [self activateActionButton:cell.actionButton];
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
@@ -360,6 +361,7 @@
             [cell.labels setText:tempDocumentItem.label];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            [self activateActionButton:cell.actionButton];
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
@@ -1356,6 +1358,56 @@
         }
         [self showDetailView];
     }
+}
+
+- (void)activateActionButton:(UIButton *) button
+{
+    BOOL hideActionButton = YES;
+    
+    BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:button.tag];
+    BADocumentItemElement *presentation;
+    BADocumentItemElement *loan;
+    
+    [self setCurrentLocation:tempDocumentItem.location];
+    
+    for (BADocumentItemElement *element in tempDocumentItem.services) {
+        if ([element.service isEqualToString:@"presentation"]) {
+            presentation = element;
+        } else if ([element.service isEqualToString:@"loan"]) {
+            loan = element;
+        }
+    }
+    
+    BAEntryWork *tempEntry;
+    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        tempEntry = self.currentEntryLocal;
+    } else {
+        tempEntry = self.currentEntry;
+    }
+    
+    BOOL tempShowButton = NO;
+    if (tempEntry.onlineLocation == nil) {
+        if (loan.available) {
+            if (presentation.available) {
+                if (loan.href != nil) {
+                    tempShowButton = YES;
+                }
+            }
+        } else {
+            if (!presentation.available) {
+                if (loan.href != nil) {
+                    tempShowButton = YES;
+                }
+            }
+        }
+        if (tempShowButton || (tempDocumentItem.location != nil)) {
+            hideActionButton = NO;
+        }
+    } else {
+        hideActionButton = NO;
+    }
+    
+    [button setHidden:hideActionButton];
 }
 
 - (void)actionButtonClick:(id)sender {
