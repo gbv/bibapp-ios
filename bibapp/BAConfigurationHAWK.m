@@ -14,11 +14,12 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"Fachhochschule gesamt", @"Fachhochschule gesamt", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden", @"Holzminden", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-9", @"Goschentor", @"Goschentor", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-4", @"Marienfriedhof", @"Marienfriedhof", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen", @"Göttingen", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-9", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-4", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil3";
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil3";
     self.currentBibFeedURL = @"";
