@@ -200,8 +200,8 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", self.appDelegate.configuration.currentBibPAIAURL, account, password]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, password]];
+   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
    }
@@ -211,7 +211,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadLoanList"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
@@ -226,7 +226,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadFees"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
@@ -237,7 +237,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadPatron"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {
@@ -253,7 +253,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRequestDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
@@ -286,7 +286,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRenewDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];
@@ -318,7 +318,7 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountCancelDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", self.appDelegate.configuration.currentBibPAIAURL, account, token]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
    [jsonString appendString:@"["];

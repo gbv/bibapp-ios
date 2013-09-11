@@ -29,6 +29,12 @@
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibPAIAURL = @"http://paia-hawk.effective-webwork.de/"; //@"https://paia.gbv.de/isil/DE-Hil3";
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-9.effective-webwork.de/", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-4.effective-webwork.de/", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-3.effective-webwork.de/", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-2.effective-webwork.de/", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-1.effective-webwork.de/", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.01 green:0.11 blue:0.26 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Impressum", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
