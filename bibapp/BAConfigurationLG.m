@@ -16,6 +16,7 @@
     self.currentBibLocalSearchURL = @"opac-de-luen4";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-luen4", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Luen4";
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Luen4", @"Standard-Katalog", nil]];
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Luen4";
     self.currentBibFeedURL = @"http://www.leuphana.de/bibliothek/aktuell.html?type=100";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.56 green:0.3 blue:0.32 alpha:1.0];

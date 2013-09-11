@@ -24,6 +24,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.configuration = [BAConfiguration createConfiguration];
+    
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAOptions" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
@@ -42,7 +44,7 @@
     
     // if the selected catalogue has not been set, the app is started for the first time.
     if ([self.options.selectedCatalogue isEqualToString:@""] || self.options.selectedCatalogue == nil) {
-        [self.options setSelectedCatalogue:@"Standard-Katalog"];
+        [self.options setSelectedCatalogue:self.configuration.currentBibStandardCatalogue];
         [self.options setAllowCountPixel:YES];
         NSError *error = nil;
         if (![[self managedObjectContext] save:&error]) {
@@ -64,8 +66,6 @@
     } else {
         self.account = [tempAccountArray objectAtIndex:0];
     }
-    
-    self.configuration = [BAConfiguration createConfiguration];
     
     // Load cached locations
     NSEntityDescription *entityDescriptionLocations = [NSEntityDescription entityForName:@"BALocation" inManagedObjectContext:[self managedObjectContext]];

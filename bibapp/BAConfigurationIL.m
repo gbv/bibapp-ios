@@ -16,6 +16,7 @@
     self.currentBibLocalSearchURL = @"opac-de-ilm1";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Ilm1";
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Ilm1";
     self.currentBibFeedURL = @"http://www2.tu-ilmenau.de/ub/weblog/?feed=rss2";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.0 green:0.45 blue:0.47 alpha:1.0];

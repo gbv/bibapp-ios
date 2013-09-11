@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *currentBibLocalSearchURL;
 @property (strong, nonatomic) NSMutableArray *currentBibLocalSearchURLs;
 @property (strong, nonatomic) NSString *currentBibDetailURL;
+@property (strong, nonatomic) NSMutableArray *currentBibDetailURLs;
 @property (strong, nonatomic) NSString *currentBibPAIAURL;
 @property (strong, nonatomic) NSString *currentBibFeedURL;
 @property (strong, nonatomic) UIColor *currentBibTintColor;
@@ -24,11 +25,13 @@
 @property (strong, nonatomic) NSString *currentBibContact;
 @property (strong, nonatomic) NSString *currentBibLocationUri;
 @property (strong, nonatomic) NSString *currentBibSearchCountURL;
+@property (strong, nonatomic) NSString *currentBibStandardCatalogue;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
 - (NSString *)generateLocalDetailURLFor:(NSString *)ppn;
 - (NSString *)getTitleForCatalog:(NSString *)catalogue;
 - (NSString *)getURLForCatalog:(NSString *)catalogue;
+- (NSString *)getDetailURLForCatalog:(NSString *)catalogue;
 
 @end

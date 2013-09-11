@@ -17,6 +17,7 @@
     self.currentBibLocalSearchURL = @"opac-de-h360";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-h360", @"Standard-Katalog", @"OPAC", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-H360";
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-H360", @"Standard-Katalog", nil]];
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-H360";
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.62 green:0.12 blue:0.19 alpha:1.0];

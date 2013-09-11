@@ -20,6 +20,7 @@
 @synthesize currentBibLocalSearchURL;
 @synthesize currentBibLocalSearchURLs;
 @synthesize currentBibDetailURL;
+@synthesize currentBibDetailURLs;
 @synthesize currentBibPAIAURL;
 @synthesize currentBibFeedURL;
 @synthesize currentBibTintColor;
@@ -28,16 +29,20 @@
 @synthesize currentBibContact;
 @synthesize currentBibLocationUri;
 @synthesize currentBibSearchCountURL;
+@synthesize currentBibStandardCatalogue;
 
 - (id)init {
     self = [super init];
     if (self) {
         self.currentBibLocalSearchURLs = [[NSMutableArray alloc] init];
+        self.currentBibDetailURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
         
         self.searchTitle = @"Suche";
         self.hasLocalDetailURL = NO;
+        
+        self.currentBibStandardCatalogue = @"Standard-Katalog";
     }
     return self;
 }
@@ -88,13 +93,24 @@
 
 - (NSString *)getURLForCatalog:(NSString *)catalogue
 {
-    NSString *title;
+    NSString *url;
     for (NSArray *tempCatalogue in self.currentBibLocalSearchURLs) {
         if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
-            title = [tempCatalogue objectAtIndex:0];
+            url = [tempCatalogue objectAtIndex:0];
         }
     }
-    return title;
+    return url;
+}
+
+- (NSString *)getDetailURLForCatalog:(NSString *)catalogue
+{
+    NSString *url;
+    for (NSArray *tempCatalogue in self.currentBibDetailURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            url = [tempCatalogue objectAtIndex:0];
+        }
+    }
+    return url;
 }
 
 @end
