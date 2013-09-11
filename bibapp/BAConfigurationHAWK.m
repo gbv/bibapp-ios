@@ -28,7 +28,7 @@
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
-    self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil3";
+    self.currentBibPAIAURL = @"http://paia-hawk.effective-webwork.de/"; //@"https://paia.gbv.de/isil/DE-Hil3";
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.01 green:0.11 blue:0.26 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Impressum", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
