@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) BALocation *currentLocation;
 @property BOOL didReturnFromSegue;
+@property BOOL foundLocations;
 
 @end

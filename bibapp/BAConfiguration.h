@@ -24,7 +24,8 @@
 @property (strong, nonatomic) NSMutableArray *currentBibImprintTitles;
 @property (strong, nonatomic) NSMutableDictionary *currentBibImprint;
 @property (strong, nonatomic) NSString *currentBibContact;
-@property (strong, nonatomic) NSString *currentBibLocationUri;
+@property (strong, nonatomic) NSString *currentBibLocationURI;
+@property (strong, nonatomic) NSMutableArray *currentBibLocationURIs;
 @property (strong, nonatomic) NSString *currentBibSearchCountURL;
 @property (strong, nonatomic) NSString *currentBibStandardCatalogue;
 
@@ -35,5 +36,6 @@
 - (NSString *)getURLForCatalog:(NSString *)catalogue;
 - (NSString *)getDetailURLForCatalog:(NSString *)catalogue;
 - (NSString *)getPAIAURLForCatalog:(NSString *)catalogue;
+- (NSString *)getLocationURIForCatalog:(NSString *)catalogue;
 
 @end

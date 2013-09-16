@@ -28,7 +28,8 @@
 @synthesize currentBibImprintTitles;
 @synthesize currentBibImprint;
 @synthesize currentBibContact;
-@synthesize currentBibLocationUri;
+@synthesize currentBibLocationURI;
+@synthesize currentBibLocationURIs;
 @synthesize currentBibSearchCountURL;
 @synthesize currentBibStandardCatalogue;
 
@@ -40,6 +41,7 @@
         self.currentBibPAIAURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
+        self.currentBibLocationURIs = [[NSMutableArray alloc] init];
         
         self.searchTitle = @"Suche";
         self.hasLocalDetailURL = NO;
@@ -119,6 +121,17 @@
 {
     NSString *url;
     for (NSArray *tempCatalogue in self.currentBibPAIAURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            url = [tempCatalogue objectAtIndex:0];
+        }
+    }
+    return url;
+}
+
+- (NSString *)getLocationURIForCatalog:(NSString *)catalogue
+{
+    NSString *url;
+    for (NSArray *tempCatalogue in self.currentBibLocationURIs) {
         if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
             url = [tempCatalogue objectAtIndex:0];
         }

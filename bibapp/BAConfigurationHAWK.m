@@ -22,12 +22,12 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil3";
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-9", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-4", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/opac-de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-9", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-4", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibPAIAURL = @"http://paia-hawk.effective-webwork.de/"; //@"https://paia.gbv.de/isil/DE-Hil3";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-9.effective-webwork.de/", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
@@ -43,7 +43,13 @@
     [self.currentBibImprint setObject:@"Diese App wurde von der Bibliothek der HAWK in Kooperation mit den Universitätsbibliotheken Hildesheim und Lüneburg und der effective WWEBWORK GmbH mit großer Sorgfalt erstellt und geprüft, dennoch kann aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte gegeben werden. Eine Haftung der Bibliothek der HAWK für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt. Die Bibliothek der HAWK behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen. Diese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg), J. Schrader (UB Hildesheim), J. Voss (VZG Göttingen)\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"HAWK Hochschule für angewandte Wissenschaft und Kunst\nHildesheim/Holzminden/Göttingen\nhttp://www.hawk-hhg.de/bibliothek/default.php\n\nHildesheim\nBibliothek Bauwesen, Soziale Arbeit und Gesundheit\nGoschentor 1\n31134 Hildesheim\nTel.: +49(0)5121 881-119\nE-Mail: thekez@hawk-hhg.de\n\nBibliothek Gestaltung, Erhaltung von Kulturgut\nAm Marienfriedhof 1\n31134 Hildesheim\nTel.: +49(0)5121 881-363\nE-Mail: thekeg@hawk-hhg.de\n\nHolzminden\nBibliothek Management, Soziale Arbeit, Bauen\nBillerbeck 2\n37603 Holzminden\nTel.: +49(0)5531 126-256\nE-Mail: thekeho@hawk-hhg.de\n\nGöttingen\nBibliothek Ressourcenmanagement\nBüsgenweg 1A\n37077 Göttingen\nTel.: +49(0)551 5032-153\nE-Mail: thekeR@hawk-hhg.de\n\nBibliothek Naturwissenschaften und Technik\nVon-Ossietzky-Str. 99\n37085 Göttingen\nTel.: +49(0)551 3705-156\nE-Mail: BibliothekN@hawk-hhg.de";
-    self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Hil3";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil3";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-9", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-4", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=3";
 }
 

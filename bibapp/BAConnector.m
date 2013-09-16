@@ -167,7 +167,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getDetailsLocal"];
     
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
-
+ 
    NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
    if (theConnection) {

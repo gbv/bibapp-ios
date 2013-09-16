@@ -61,7 +61,7 @@
     self.locationList = [[NSMutableArray alloc] init];
     
     BAConnector *locationConnector = [BAConnector generateConnector];
-    [locationConnector getLocationsForLibraryByUri:self.appDelegate.configuration.currentBibLocationUri WithDelegate:self];
+    [locationConnector getLocationsForLibraryByUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue] WithDelegate:self];
     
     [self.infoTableView setTag:0];
     [self.contentTableView setTag:1];
@@ -315,18 +315,15 @@
     } else if ([command isEqualToString:@"getLocationsForLibraryByUri"]) {
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
         BAConnector *locationConnector = [BAConnector generateConnector];
-        BALocation *tempLocationMain = [locationConnector loadLocationForUri:self.appDelegate.configuration.currentBibLocationUri];
-        [self.locationList addObject:tempLocationMain];
-        for (NSString *key in [json objectForKey:self.appDelegate.configuration.currentBibLocationUri]) {
-            if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
-                for (NSDictionary *tempUri in [[json objectForKey:self.appDelegate.configuration.currentBibLocationUri] objectForKey:key]) {
-                    BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
-                    //if ([tempLocation.address isEqualToString:@""]) {
-                    //    [tempLocation setAddress:tempLocationMain.address];
-                    //    [tempLocation setGeoLong:tempLocationMain.geoLong];
-                    //    [tempLocation setGeoLat:tempLocationMain.geoLat];
-                    //}
-                    [self.locationList addObject:tempLocation];
+        BALocation *tempLocationMain = [locationConnector loadLocationForUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]];
+        if (tempLocationMain != nil) {
+            [self.locationList addObject:tempLocationMain];
+            for (NSString *key in [json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]]) {
+                if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
+                    for (NSDictionary *tempUri in [[json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]] objectForKey:key]) {
+                        BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
+                        [self.locationList addObject:tempLocation];
+                    }
                 }
             }
         }

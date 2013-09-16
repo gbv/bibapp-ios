@@ -28,7 +28,8 @@
     [self.currentBibImprint setObject:@"Diese App wurde von der Universitätsbibliothek Hildesheim mit großer Sorgfalt  erstellt und geprüft, dennoch können wir aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte geben. Eine Haftung der Universitätsbibliothek Hildesheim für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt.  Die Universitätsbibliothek Hildesheim behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\n\nDiese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nJ. Schrader (UB Hildesheim),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Anschrift\nUniversitätsbibliothek Hildesheim\nMarienburger Platz 22\n31141 Hildesheim\n\nwww.uni-hildesheim.de/bibliothek\n\nAuskunft\nTelefon: (05121) 883-260\nE-Mail: auskunft@uni-hildesheim.de\n\nAusleihe\nTelefon: (05121) 883-264\nE-Mail: ausleihe@uni-hildesheim.de";
-    self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Hil2";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil2";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=3";
 }
 

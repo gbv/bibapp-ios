@@ -28,7 +28,8 @@
     [self.currentBibImprint setObject:@"Die BibApp wurde mit größter Sorgfalt erstellt und geprüft. Dennoch kann auf Grund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte gegeben werden. Eine Haftung für Schäden, die durch die Nutzung der App, der angebotenen Funktionen oder durch Fehlfunktionen der App entstehen, ist grundsätzlich ausgeschlossen.\nEs wird sich vorbehalten, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\nDie App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
     [self.currentBibImprint setObject:@"ursprünglich: UB Lüneburg, UB Hildesheim, VZG\nAnpassung: UB Ilmenau\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Universitätsbibliothek Ilmenau\nLangewiesener Str.37\n98693 Ilmenau\n\nhttp://www.tu-ilmenau.de/ub/\n\nAuskunft:\nTel.: 03677 69-4531\nE-Mail: auskunft.ub@tu-ilmenau.de\n\nDirektion:\nTel.: 03677 69-4701\nE-Mail: direktion.ub@tu-ilmenau.de";
-    self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EL039&amp;page=20";
 }
 

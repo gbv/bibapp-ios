@@ -28,7 +28,8 @@
     [self.currentBibImprint setObject:@"Diese App wurde von der Leuphana Universität Lüneburg mit großer Sorgfalt  erstellt und geprüft, dennoch können wir aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte geben. Eine Haftung der Leuphana Universität Lüneburg für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt.  Die Leuphana Universität Lüneburg behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\n\nDiese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nJ. Schrader (UB Hildesheim),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Universitätsbibliothek Lüneburg\nScharnhorststraße 1\n21335 Lüneburg\n\nTelefon: (04131) 677-1100\nTelefax: (04131) 677-1111\n\nE-mail: unibib@uni-lueneburg.de\nWWW: www.leuphana.de/ub";
-    self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-Luen4";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Luen4";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Luen4", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=2";
 }
 

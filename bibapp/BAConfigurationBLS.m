@@ -29,7 +29,8 @@
     [self.currentBibImprint setObject:@"Diese App wurde von der Bucerius Law School gGmbH mit großer Sorgfalt  erstellt und geprüft, dennoch können wir aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte geben. Eine Haftung der Bucerius Law School gGmbH für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt.  Die Bucerius Law School gGmbH behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\n\nDiese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
     [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nJ. Schrader (UB Hildesheim),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Bibliothek der Bucerius Law School\n\nJungiusstrasse 6\n\n20355 Hamburg\n\nPHONE: 040 30706 134\n\nMOBIL: 0176 7066 3447\n\nMAIL: martin.vorberg@law-school.de\n\nURL: www.law-school.de/bibliothek.html";
-    self.currentBibLocationUri = @"http://uri.gbv.de/organization/isil/DE-H360";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-H360";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-H360", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"";
 }
 
