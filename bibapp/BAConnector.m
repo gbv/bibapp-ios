@@ -81,7 +81,12 @@ static BAConnector *sharedConnector = nil;
    NSMutableArray* trustedHosts = [NSMutableArray array];
 
    [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];
-
+   [trustedHosts addObject:@"paia-hawk-9.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk-4.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk-3.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk-2.effective-webwork.de"];
+   [trustedHosts addObject:@"paia-hawk-1.effective-webwork.de"];
+    
    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
        [trustedHosts containsObject:challenge.protectionSpace.host])
    {
