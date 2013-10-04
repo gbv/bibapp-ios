@@ -32,6 +32,7 @@
 @synthesize currentBibLocationURIs;
 @synthesize currentBibSearchCountURL;
 @synthesize currentBibStandardCatalogue;
+@synthesize currentBibHideDepartment;
 
 - (id)init {
     self = [super init];
@@ -47,6 +48,8 @@
         self.hasLocalDetailURL = NO;
         
         self.currentBibStandardCatalogue = @"Standard-Katalog";
+        
+        self.currentBibHideDepartment = NO;
     }
     return self;
 }

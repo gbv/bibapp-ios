@@ -703,12 +703,20 @@
             
             if (self.currentEntry.onlineLocation == nil) {
                 NSMutableString *titleString = [[NSMutableString alloc] init];
-                if (tempDocumentItem.department != nil) {
+                if (tempDocumentItem.department != nil && !self.appDelegate.configuration.currentBibHideDepartment) {
                     [titleString appendString:tempDocumentItem.department];
                 }
                 if (tempDocumentItem.storage != nil) {
                     if (![tempDocumentItem.storage isEqualToString:@""]) {
-                        [titleString appendFormat:@", %@", tempDocumentItem.storage];
+                        if (!self.appDelegate.configuration.currentBibHideDepartment) {
+                            [titleString appendFormat:@", %@", tempDocumentItem.storage];
+                        } else {
+                            [titleString appendFormat:@"%@", tempDocumentItem.storage];
+                        }
+                    }
+                } else {
+                    if (tempDocumentItem.department != nil && [titleString isEqualToString:@""]) {
+                        [titleString appendString:tempDocumentItem.department];
                     }
                 }
                 [cell.title setText:titleString];
