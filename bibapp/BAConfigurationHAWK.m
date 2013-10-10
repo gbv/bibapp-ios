@@ -45,11 +45,11 @@
     self.currentBibContact = @"HAWK Hochschule für angewandte Wissenschaft und Kunst\nHildesheim/Holzminden/Göttingen\nhttp://www.hawk-hhg.de/bibliothek/default.php\n\nHildesheim\nBibliothek Bauwesen, Soziale Arbeit und Gesundheit\nGoschentor 1\n31134 Hildesheim\nTel.: +49(0)5121 881-119\nE-Mail: thekez@hawk-hhg.de\n\nBibliothek Gestaltung, Erhaltung von Kulturgut\nAm Marienfriedhof 1\n31134 Hildesheim\nTel.: +49(0)5121 881-363\nE-Mail: thekeg@hawk-hhg.de\n\nHolzminden\nBibliothek Management, Soziale Arbeit, Bauen\nBillerbeck 2\n37603 Holzminden\nTel.: +49(0)5531 126-256\nE-Mail: thekeho@hawk-hhg.de\n\nGöttingen\nBibliothek Ressourcenmanagement\nBüsgenweg 1A\n37077 Göttingen\nTel.: +49(0)551 5032-153\nE-Mail: thekeR@hawk-hhg.de\n\nBibliothek Naturwissenschaften und Technik\nVon-Ossietzky-Str. 99\n37085 Göttingen\nTel.: +49(0)551 3705-156\nE-Mail: BibliothekN@hawk-hhg.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil3";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-9", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-4", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-2", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3-1", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Hildesheim, Bibliothek Bauwesen, Soziale Arbeit und Gesundheit", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Hildesheim, Bibliothek Gestaltung, Erhaltung von Kulturgut", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Holzminden, Bibliothek Management, Soziale Arbeit, Bauen", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Bibliothek Ressourcenmanagement", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Bibliothek Naturwissenschaften und Technik", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=3";
 }
 
