@@ -71,12 +71,12 @@
         BALocation *tempLocationMain = [locationConnector loadLocationForUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]];
         if (tempLocationMain != nil) {
             [self.locationList addObject:tempLocationMain];
+            self.foundLocations = YES;
             for (NSString *key in [json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]]) {
                 if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
                     for (NSDictionary *tempUri in [[json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]] objectForKey:key]) {
                         BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
                         [self.locationList addObject:tempLocation];
-                        self.foundLocations = YES;
                     }
                 }
             }
