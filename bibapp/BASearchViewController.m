@@ -89,7 +89,8 @@
         if (self.searchedLocal) {
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
         } else {
-            [self.navigationItem setTitle:@"Lokale Suche"];
+            //[self.navigationItem setTitle:@"Lokale Suche"];
+            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -434,7 +435,8 @@
         if (self.searchedLocal) {
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
         } else {
-            [self.navigationItem setTitle:@"Lokale Suche"];
+            //[self.navigationItem setTitle:@"Lokale Suche"];
+            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -525,7 +527,8 @@
     [self setSearchedLocal:NO];
     self.lastSearchLocal = @"";
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        [self.navigationItem setTitle:@"Lokale Suche"];
+        //[self.navigationItem setTitle:@"Lokale Suche"];
+        [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }

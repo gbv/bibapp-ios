@@ -14,7 +14,7 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-ilm1";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Ilm1";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Ilm1";

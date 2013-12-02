@@ -13,14 +13,13 @@
 - (void)initConfiguration
 {
     self.currentBibSearchMaximumRecords = @"20";
-    //self.currentBibLocalSearchURL = @"opac-de-hil2";
     self.currentBibStandardCatalogue = @"HAWK Bibliothek – Gesamtbestand";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-4", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden, Bauwesen, Soziale Arbeit, Bauen", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Ressourcenmanagement", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Naturwissenschaften", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", @"Lokale Suche", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", @"Lokale Suche BSG", @"Lokale Suche BSG", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-4", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", @"Lokale Suche GK", @"Lokale Suche GK", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden, Bauwesen, Soziale Arbeit, Bauen", @"Lokale Suche MSB", @"Lokale Suche MSB", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Ressourcenmanagement", @"Lokale Suche R", @"Lokale Suche R", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Naturwissenschaften", @"Lokale Suche N", @"Lokale Suche N", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil3";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];

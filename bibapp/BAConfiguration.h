@@ -38,5 +38,6 @@
 - (NSString *)getDetailURLForCatalog:(NSString *)catalogue;
 - (NSString *)getPAIAURLForCatalog:(NSString *)catalogue;
 - (NSString *)getLocationURIForCatalog:(NSString *)catalogue;
+- (NSString *)getSearchTitleForCatalog:(NSString *)catalogue;
 
 @end

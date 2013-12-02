@@ -14,13 +14,11 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"opac-de-hil2";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
-    //self.currentBibPAIAURL = @"https://paia.gbv.de/TEST-DE-Hil2";
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/TEST-DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"https://www.uni-hildesheim.de/index.php?id=8920&type=100";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.85 green:0.2 blue:0.32 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
