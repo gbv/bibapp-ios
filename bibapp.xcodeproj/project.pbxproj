@@ -645,6 +645,10 @@
 		8FBA876F1682054D005A9962 /* BAImpressumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA876E1682054D005A9962 /* BAImpressumCell.m */; };
 		8FBA87701682058E005A9962 /* BAImpressumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA876E1682054D005A9962 /* BAImpressumCell.m */; };
 		8FBA8771168207D1005A9962 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
+		8FBEB64F184C9CA400B6ED41 /* hawk_app_icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB64E184C9CA400B6ED41 /* hawk_app_icon_57x57.png */; };
+		8FBEB651184C9CBB00B6ED41 /* hawk_app_icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */; };
+		8FBEB653184C9CC700B6ED41 /* hawk_app_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */; };
+		8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */; };
 		8FC5465616F62CE4005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FC5465716F62E19005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FD463A516F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
@@ -907,6 +911,10 @@
 		8FBA876B16820535005A9962 /* BAImpressumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAImpressumCell.xib; sourceTree = "<group>"; };
 		8FBA876D1682054C005A9962 /* BAImpressumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAImpressumCell.h; sourceTree = "<group>"; };
 		8FBA876E1682054D005A9962 /* BAImpressumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAImpressumCell.m; sourceTree = "<group>"; };
+		8FBEB64E184C9CA400B6ED41 /* hawk_app_icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_57x57.png; path = ../hawk_app_icon_57x57.png; sourceTree = "<group>"; };
+		8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_114x114.png; path = ../hawk_app_icon_114x114.png; sourceTree = "<group>"; };
+		8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_72x72.png; path = ../hawk_app_icon_72x72.png; sourceTree = "<group>"; };
+		8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_144x144.png; path = ../hawk_app_icon_144x144.png; sourceTree = "<group>"; };
 		8FC5465416F62CDA005A4F6A /* BATocViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewControllerPad.h; sourceTree = "<group>"; };
 		8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewControllerPad.m; sourceTree = "<group>"; };
 		8FD463A416F9F3F700E935EC /* BATocCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocCellPad.xib; sourceTree = "<group>"; };
@@ -1510,6 +1518,10 @@
 				8F5E218017858B9000EDD948 /* iPadIconHAWK.png */,
 				8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */,
 				8FEDD873172695C800D66DE6 /* Icon-72.png */,
+				8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */,
+				8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */,
+				8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */,
+				8FBEB64E184C9CA400B6ED41 /* hawk_app_icon_57x57.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2008,6 +2020,10 @@
 				8F5E217F17858B8700EDD948 /* IconHAWK@2x.png in Resources */,
 				8F5E218117858B9000EDD948 /* iPadIconHAWK.png in Resources */,
 				8F5E218317858B9500EDD948 /* iPadIconHAWK@2x.png in Resources */,
+				8FBEB64F184C9CA400B6ED41 /* hawk_app_icon_57x57.png in Resources */,
+				8FBEB651184C9CBB00B6ED41 /* hawk_app_icon_114x114.png in Resources */,
+				8FBEB653184C9CC700B6ED41 /* hawk_app_icon_72x72.png in Resources */,
+				8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
