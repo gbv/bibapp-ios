@@ -49,46 +49,90 @@
     
     [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.view setBackgroundColor:[UIColor redColor]];
-    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.splitHeightTop)];
     self.mapView.delegate=self;
-    MKMapView *tempMapView = self.mapView;
     
-    [self.view addSubview:tempMapView];
-    /*NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tempMapView]"
-                                                                                     options:0
-                                                                                     metrics:nil
-                                                                                       views:NSDictionaryOfVariableBindings(tempMapView)];
-    
-    [self.view addConstraints:constraintsVerticalMapView];*/
-    
-    NSArray *constraintsHorizontalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempMapView]|"
-                                                                                  options:0
-                                                                                  metrics:nil
-                                                                                    views:NSDictionaryOfVariableBindings(tempMapView)];
-    
-    [self.view addConstraints:constraintsHorizontalMapView];
-    
-    /*BOOL hasGeo = NO;
+    BOOL hasGeo = NO;
     if (self.currentLocation.geoLong != nil && self.currentLocation.geoLat != nil) {
         if (![self.currentLocation.geoLong isEqualToString:@""] && ![self.currentLocation.geoLat isEqualToString:@""]) {
             hasGeo = YES;
-            [self.view addSubview:self.mapView];
+            MKMapView *tempMapView = self.mapView;
+            [self.view addSubview:tempMapView];
+            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]"
+                                                                                          options:0
+                                                                                          metrics:nil
+                                                                                            views:NSDictionaryOfVariableBindings(tempMapView)];
+            
+            [self.view addConstraints:constraintsVerticalMapView];
+            
+            NSArray *constraintsHorizontalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempMapView]|"
+                                                                                            options:0
+                                                                                            metrics:nil
+                                                                                              views:NSDictionaryOfVariableBindings(tempMapView)];
+            
+            [self.view addConstraints:constraintsHorizontalMapView];
+            
             self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacingSplit, self.width, self.splitHeightBottom)];
-            [self.view addSubview:self.textView];
+            UITextView *tempTextView = self.textView;
+            [self.view addSubview:tempTextView];
+            
+            NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]-[tempTextView]"
+                                                                                          options:0
+                                                                                          metrics:nil
+                                                                                            views:NSDictionaryOfVariableBindings(tempMapView, tempTextView)];
+            
+            [self.view addConstraints:constraintsVerticalTextView];
+            
+            NSArray *constraintsHorizontalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempTextView]|"
+                                                                                            options:0
+                                                                                            metrics:nil
+                                                                                              views:NSDictionaryOfVariableBindings(tempTextView)];
+            
+            [self.view addConstraints:constraintsHorizontalTextView];
         }
     }
     if (!hasGeo) {
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.completeHeight)];
-        [self.view addSubview:self.textView];
+        UITextView *tempTextView = self.textView;
+        [self.view addSubview:tempTextView];
+        
+        NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tempTextView]"
+                                                                                       options:0
+                                                                                       metrics:nil
+                                                                                         views:NSDictionaryOfVariableBindings(tempTextView)];
+        
+        [self.view addConstraints:constraintsVerticalTextView];
+        
+        NSArray *constraintsHorizontalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempTextView]|"
+                                                                                         options:0
+                                                                                         metrics:nil
+                                                                                           views:NSDictionaryOfVariableBindings(tempTextView)];
+        
+        [self.view addConstraints:constraintsHorizontalTextView];
     }
+    
+    /*NSLog(@"%@", [self.view constraints]);
+    NSLog(@"%@", [self.mapView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisHorizontal]);
+    NSLog(@"%@", [self.mapView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisVertical]);
+    NSLog(@"%@", [self.textView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisHorizontal]);
+    NSLog(@"%@", [self.textView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisVertical]);*/
+    
+    /*for (UIView *aView in [self.view subviews]) {
+        if ([aView hasAmbiguousLayout]) {
+            NSLog(@"View Frame %@", NSStringFromCGRect(aView.frame));
+            NSLog(@"%@", [aView class]);
+            NSLog(@"%@", [aView constraintsAffectingLayoutForAxis:1]);
+            NSLog(@"%@", [aView constraintsAffectingLayoutForAxis:0]);
+            
+            [aView exerciseAmbiguityInLayout];
+        }
+    }*/
     
     [self.textView setScrollEnabled:YES];
     [self.textView setEditable:NO];
-    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];*/
+    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
 }
 
 - (void)viewWillAppear:(BOOL)animated
