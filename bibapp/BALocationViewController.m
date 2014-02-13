@@ -16,11 +16,10 @@
 
 @implementation BALocationViewController
 
-@synthesize spacing;
-@synthesize spacingSplit;
 @synthesize width;
-@synthesize splitHeightTop;
-@synthesize splitHeightBottom;
+@synthesize mapViewHeight;
+@synthesize textViewHeight;
+@synthesize top;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +31,10 @@
 }
 
 - (void)initSize{
-    self.spacing = 0;
-    self.spacingSplit = 0;
     self.width = 0;
-    self.splitHeightTop = 0;
-    self.splitHeightBottom = 0;
-    self.completeHeight = 0;
+    self.mapViewHeight = 0;
+    self.textViewHeight = 0;
+    self.top = 0;
 }
 
 - (void)viewDidLoad
@@ -51,17 +48,25 @@
     
     //[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.splitHeightTop)];
+    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.mapViewHeight)];
     self.mapView.delegate=self;
     [self.mapView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    MKMapView *tempMapView = self.mapView;
+    
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.textViewHeight)];
+    [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.textView setScrollEnabled:YES];
+    [self.textView setEditable:NO];
+    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
+    UITextView *tempTextView = self.textView;
+    [self.view addSubview:tempTextView];
     
     BOOL hasGeo = NO;
     if (self.currentLocation.geoLong != nil && self.currentLocation.geoLat != nil) {
         if (![self.currentLocation.geoLong isEqualToString:@""] && ![self.currentLocation.geoLat isEqualToString:@""]) {
             hasGeo = YES;
-            MKMapView *tempMapView = self.mapView;
             [self.view addSubview:tempMapView];
-            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(64)-[tempMapView(150)]"
+            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:|-(%f)-[tempMapView(%f)]", self.top, self.mapViewHeight]
                                                                                           options:0
                                                                                           metrics:nil
                                                                                             views:NSDictionaryOfVariableBindings(tempMapView)];
@@ -74,15 +79,18 @@
             
             [self.view addConstraints:constraintsHorizontalMapView];
             
-            self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacingSplit, self.width, self.splitHeightBottom)];
-            [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-            UITextView *tempTextView = self.textView;
-            [self.view addSubview:tempTextView];
             
-            NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]-[tempTextView]"
+            NSArray *constraintsVerticalMapAndTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]-[tempTextView]"
                                                                                           options:0
                                                                                           metrics:nil
                                                                                             views:NSDictionaryOfVariableBindings(tempMapView, tempTextView)];
+            
+            [self.view addConstraints:constraintsVerticalMapAndTextView];
+            
+            NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempTextView]|"
+                                                                                                 options:0
+                                                                                                 metrics:nil
+                                                                                                   views:NSDictionaryOfVariableBindings(tempTextView)];
             
             [self.view addConstraints:constraintsVerticalTextView];
             
@@ -95,12 +103,7 @@
         }
     }
     if (!hasGeo) {
-        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.completeHeight)];
-        [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        UITextView *tempTextView = self.textView;
-        [self.view addSubview:tempTextView];
-        
-        NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tempTextView]"
+        NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tempTextView]|"
                                                                                        options:0
                                                                                        metrics:nil
                                                                                          views:NSDictionaryOfVariableBindings(tempTextView)];
@@ -114,10 +117,6 @@
         
         [self.view addConstraints:constraintsHorizontalTextView];
     }
-    
-    [self.textView setScrollEnabled:YES];
-    [self.textView setEditable:NO];
-    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
 }
 
 - (void)viewWillAppear:(BOOL)animated

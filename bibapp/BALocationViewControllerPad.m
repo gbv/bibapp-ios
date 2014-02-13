@@ -16,12 +16,10 @@
 
 - (void)initSize
 {
-    self.spacing = 20;
-    self.spacingSplit = 330;
+    [super initSize];
     self.width = 507;
-    self.splitHeightTop = 300;
-    self.splitHeightBottom = 270;
-    self.completeHeight = 580;
+    self.mapViewHeight = 300;
+    self.textViewHeight = 270;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
