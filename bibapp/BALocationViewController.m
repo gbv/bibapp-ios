@@ -47,12 +47,13 @@
     
 	// Do any additional setup after loading the view.
     
-    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.splitHeightTop)];
     self.mapView.delegate=self;
+    [self.mapView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     BOOL hasGeo = NO;
     if (self.currentLocation.geoLong != nil && self.currentLocation.geoLat != nil) {
@@ -60,13 +61,12 @@
             hasGeo = YES;
             MKMapView *tempMapView = self.mapView;
             [self.view addSubview:tempMapView];
-            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]"
+            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(64)-[tempMapView(150)]"
                                                                                           options:0
                                                                                           metrics:nil
                                                                                             views:NSDictionaryOfVariableBindings(tempMapView)];
             
             [self.view addConstraints:constraintsVerticalMapView];
-            
             NSArray *constraintsHorizontalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempMapView]|"
                                                                                             options:0
                                                                                             metrics:nil
@@ -75,6 +75,7 @@
             [self.view addConstraints:constraintsHorizontalMapView];
             
             self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacingSplit, self.width, self.splitHeightBottom)];
+            [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
             UITextView *tempTextView = self.textView;
             [self.view addSubview:tempTextView];
             
@@ -95,6 +96,7 @@
     }
     if (!hasGeo) {
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.completeHeight)];
+        [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
         UITextView *tempTextView = self.textView;
         [self.view addSubview:tempTextView];
         
@@ -112,23 +114,6 @@
         
         [self.view addConstraints:constraintsHorizontalTextView];
     }
-    
-    /*NSLog(@"%@", [self.view constraints]);
-    NSLog(@"%@", [self.mapView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisHorizontal]);
-    NSLog(@"%@", [self.mapView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisVertical]);
-    NSLog(@"%@", [self.textView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisHorizontal]);
-    NSLog(@"%@", [self.textView constraintsAffectingLayoutForAxis:UILayoutConstraintAxisVertical]);*/
-    
-    /*for (UIView *aView in [self.view subviews]) {
-        if ([aView hasAmbiguousLayout]) {
-            NSLog(@"View Frame %@", NSStringFromCGRect(aView.frame));
-            NSLog(@"%@", [aView class]);
-            NSLog(@"%@", [aView constraintsAffectingLayoutForAxis:1]);
-            NSLog(@"%@", [aView constraintsAffectingLayoutForAxis:0]);
-            
-            [aView exerciseAmbiguityInLayout];
-        }
-    }*/
     
     [self.textView setScrollEnabled:YES];
     [self.textView setEditable:NO];
