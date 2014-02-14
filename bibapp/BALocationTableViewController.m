@@ -109,7 +109,11 @@
     // Configure the cell...
     
     if (self.foundLocations) {
-        [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
+        if (![[(BALocation *)[self.locationList objectAtIndex:indexPath.row] shortname] isEqualToString:@""]) {
+            [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] shortname]];
+        } else {
+            [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
+        }
     } else {
         [cell.textLabel setText:@"Keine Standortinformationen vorhanden"];
     }
