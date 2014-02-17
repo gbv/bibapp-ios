@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 @property (strong, nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) BALocation *currentLocation;
+@property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 
 @end

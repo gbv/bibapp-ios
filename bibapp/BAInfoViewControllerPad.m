@@ -28,6 +28,7 @@
 @synthesize contentTableView;
 @synthesize locationList;
 @synthesize currentLocation;
+@synthesize statusBarTintUIView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,8 +44,16 @@
     [super viewDidLoad];
 
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [self.infoNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.infoNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.optionsButton setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+        [self.infoNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    }
     
     if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
         self.infoFeed = [[NSMutableArray alloc] init];
@@ -413,8 +422,10 @@
     NSIndexPath *currentSelectedIndexPath = [tableView indexPathForSelectedRow];
     if (currentSelectedIndexPath != nil)
     {
-        [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
-        [[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
+        if (tableView.tag == 0) {
+            [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
+            [[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
+        }
     }
     
     return indexPath;
@@ -434,6 +445,10 @@
             [cell.textLabel setTextColor:[UIColor blackColor]];
         }
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

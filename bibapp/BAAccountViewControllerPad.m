@@ -70,6 +70,7 @@
         [self.feeToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
         [self.loanBarButton setTintColor:[UIColor whiteColor]];
         [self.reservationBarButton setTintColor:[UIColor whiteColor]];
+        [self.optionsButton setTintColor:[UIColor whiteColor]];
     } else {
         [self.statusBarTintUIView setHidden:YES];
     }
