@@ -38,6 +38,7 @@
 @synthesize loanHeader;
 @synthesize reservationHeader;
 @synthesize feeHeader;
+@synthesize statusBarTintUIView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +60,19 @@
     [self.loanToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.reservationToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.feeToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.accountNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.loanToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.reservationToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.feeToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.loanBarButton setTintColor:[UIColor whiteColor]];
+        [self.reservationBarButton setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+    }
     
     self.loan = [[NSMutableArray alloc] init];
     self.reservation = [[NSMutableArray alloc] init];
@@ -743,6 +757,10 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

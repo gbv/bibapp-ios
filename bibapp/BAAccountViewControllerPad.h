@@ -38,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *feeToolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loanBarButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reservationBarButton;
+@property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
 
 - (void)actionButtonClick:(id)sender;
 
