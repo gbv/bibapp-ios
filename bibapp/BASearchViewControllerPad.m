@@ -55,6 +55,8 @@
 @synthesize tocTableViewController;
 @synthesize initialSearchLocal;
 @synthesize initialSearch;
+@synthesize statusBarTintUIView;
+@synthesize optionsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,9 +80,21 @@
     [self.navigationBarSearch setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.navigationBarDetail setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.navigationBarSearch setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.navigationBarDetail setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.searchSegmentedController setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.searchSegmentedController setTintColor:[UIColor whiteColor]];
+        [self.optionsButton setTintColor:[UIColor whiteColor]];
+        [self.optionsButton setEnabled:YES];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+        [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    }
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
@@ -90,15 +104,17 @@
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
     
-    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 75, 704, 75)];
+    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(320, 139, 704, 75)];
     [self.defaultTextView setFont:[UIFont systemFontOfSize:20]];
     [self.defaultTextView setTextAlignment:UITextAlignmentCenter];
-    [self.scrollView addSubview:self.defaultTextView];
+    [self.defaultTextView setEditable:NO];
+    [self.defaultTextView setUserInteractionEnabled:NO];
+    [self.view addSubview:self.defaultTextView];
     
-    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(227, 150, 250, 150)];
+    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(547, 214, 250, 150)];
     [self.defaultImageView setContentMode:UIViewContentModeScaleAspectFill];
     [self.defaultImageView setImage:[UIImage imageNamed:@"Buch_250_gradient.png"]];
-    [self.scrollView addSubview:self.defaultImageView];
+    [self.view addSubview:self.defaultImageView];
     
     [self.searchTableView setTag:0];
     [self.detailTableView setTag:1];
@@ -1667,6 +1683,10 @@
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

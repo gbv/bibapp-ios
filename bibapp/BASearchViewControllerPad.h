@@ -58,6 +58,8 @@
 @property BOOL initialSearch;
 @property (weak, nonatomic) IBOutlet UIButton *loanButton;
 @property (weak, nonatomic) IBOutlet UIButton *loanTitleButton;
+@property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 
 - (IBAction)listAction:(id)sender;
 

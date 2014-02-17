@@ -26,6 +26,7 @@
 @property (strong, nonatomic) BAOptions *options;
 @property (strong, nonatomic) NSMutableArray *locations;
 @property (strong, nonatomic) BAConfiguration *configuration;
+@property BOOL isIOS7;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

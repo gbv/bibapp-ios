@@ -63,7 +63,6 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-hp-mzt">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="7k4-Hm-oTH"/>
                                             <constraint firstAttribute="width" constant="320" id="WP8-lY-Eph"/>
@@ -72,6 +71,7 @@
                                             <segment title="Lokaler Katalog"/>
                                             <segment title="GVK"/>
                                         </segments>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-SS-HB3">
                                         <rect key="frame" x="319" y="0.0" width="1" height="655"/>
@@ -82,7 +82,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sTm-SS-HB3" secondAttribute="trailing" id="3bj-1Y-8qb"/>
                                     <constraint firstItem="bZB-Bi-bUO" firstAttribute="top" secondItem="pQX-qP-oSZ" secondAttribute="bottom" id="Ecw-RH-Bdx"/>
@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="height" constant="655" id="rRg-Mj-wFj"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-Qg-ycn">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-Qg-ycn">
                                 <rect key="frame" x="320" y="20" width="704" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,6 +107,9 @@
                                     <constraint firstAttribute="height" constant="44" id="Su9-nV-5gQ"/>
                                 </constraints>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Detail" id="wRy-j2-esC">
                                         <barButtonItem key="rightBarButtonItem" image="gear2.png" id="dX3-QP-kRP">
@@ -117,7 +120,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5u-pp-yl1">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5u-pp-yl1">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,6 +129,9 @@
                                     <constraint firstAttribute="width" constant="320" id="lXj-ID-5to"/>
                                 </constraints>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Lokale Suche" id="aSD-ag-b0g"/>
                                 </items>
@@ -442,6 +448,11 @@
                                     <outlet property="delegate" destination="clg-3E-Vgu" id="L4p-lW-kIn"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbS-tV-GnB">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -487,10 +498,12 @@
                         <outlet property="loanTitleButton" destination="CbV-Xg-o5S" id="UI9-qt-imb"/>
                         <outlet property="navigationBarDetail" destination="bBh-Qg-ycn" id="UEz-On-BnA"/>
                         <outlet property="navigationBarSearch" destination="I5u-pp-yl1" id="pdf-5G-wjl"/>
+                        <outlet property="optionsButton" destination="dX3-QP-kRP" id="Ek9-Qr-9hC"/>
                         <outlet property="searchBar" destination="pQX-qP-oSZ" id="0Ht-QL-rFM"/>
                         <outlet property="searchDisplayController" destination="5gw-vU-K8b" id="tEa-61-7Q5"/>
                         <outlet property="searchSegmentedController" destination="F3x-hp-mzt" id="r0s-om-nas"/>
                         <outlet property="searchTableView" destination="bZB-Bi-bUO" id="TZx-ET-RPu"/>
+                        <outlet property="statusBarTintUIView" destination="UbS-tV-GnB" id="wSa-Y6-mxd"/>
                         <outlet property="subtitleLabel" destination="ASo-88-dcy" id="RTT-er-6dJ"/>
                         <outlet property="titleLabel" destination="Y27-HR-PeF" id="WCq-c6-Ju3"/>
                         <outlet property="tocButton" destination="kFu-w9-OIf" id="Hn8-1c-xDJ"/>
@@ -1452,9 +1465,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Sjv-hh-bWp"/>
-        <segue reference="Eu4-hp-2DI"/>
         <segue reference="Mij-Xb-KOy"/>
+        <segue reference="Eu4-hp-2DI"/>
         <segue reference="Uv5-wX-sJh"/>
+        <segue reference="nEM-ay-oB3"/>
     </inferredMetricsTieBreakers>
 </document>
