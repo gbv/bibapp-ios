@@ -951,9 +951,13 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="655"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-pp-fRh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="699"/>
+                                    <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-pp-fRh">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="655" id="gXv-PM-TYP"/>
+                                            <constraint firstAttribute="width" constant="320" id="pXP-uT-bGN"/>
+                                        </constraints>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BASearchCell" id="2Qg-1r-WqX">
                                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -981,7 +985,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="6Gd-jX-Xhj"/>
+                                    <constraint firstItem="3OF-pp-fRh" firstAttribute="top" secondItem="sMw-LW-fcB" secondAttribute="top" id="E3A-BQ-5zF"/>
                                     <constraint firstAttribute="bottom" secondItem="zUb-4T-aZm" secondAttribute="bottom" id="XzT-vx-FAy"/>
+                                    <constraint firstItem="3OF-pp-fRh" firstAttribute="leading" secondItem="sMw-LW-fcB" secondAttribute="leading" id="af3-xi-ZA5"/>
                                     <constraint firstAttribute="trailing" secondItem="zUb-4T-aZm" secondAttribute="trailing" id="fXp-ZP-av3"/>
                                     <constraint firstItem="zUb-4T-aZm" firstAttribute="top" secondItem="sMw-LW-fcB" secondAttribute="top" id="p0G-e7-3NC"/>
                                 </constraints>
@@ -1345,7 +1351,6 @@
                             <constraint firstItem="JdZ-re-PGz" firstAttribute="leading" secondItem="sMw-LW-fcB" secondAttribute="trailing" constant="20" id="v10-rr-6M4"/>
                             <constraint firstItem="oJY-rn-bnb" firstAttribute="leading" secondItem="jMt-zs-mIN" secondAttribute="trailing" id="xHV-yx-qut"/>
                             <constraint firstItem="5uB-Qg-oyJ" firstAttribute="leading" secondItem="Mf4-8K-kcR" secondAttribute="trailing" constant="8" id="yaH-Id-Zbz"/>
-                            <constraint firstItem="k5Y-1W-5by" firstAttribute="top" secondItem="eeV-2d-fgH" secondAttribute="bottom" id="zhK-oK-rSh"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -1653,9 +1658,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Sjv-hh-bWp"/>
-        <segue reference="Mij-Xb-KOy"/>
-        <segue reference="Uv5-wX-sJh"/>
-        <segue reference="Eu4-hp-2DI"/>
+        <segue reference="0y8-4D-qGn"/>
+        <segue reference="f6G-SO-Bgw"/>
+        <segue reference="nvZ-Ec-xVW"/>
+        <segue reference="WjN-WC-96R"/>
     </inferredMetricsTieBreakers>
 </document>
