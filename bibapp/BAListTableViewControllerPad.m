@@ -80,7 +80,7 @@
     
     self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(320, 139, 704, 75)];
     [self.defaultTextView setFont:[UIFont systemFontOfSize:20]];
-    [self.defaultTextView setTextAlignment:UITextAlignmentCenter];
+    [self.defaultTextView setTextAlignment:NSTextAlignmentCenter];
     [self.defaultTextView setEditable:NO];
     [self.defaultTextView setUserInteractionEnabled:NO];
     [self.view addSubview:self.defaultTextView];

@@ -90,7 +90,6 @@
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         self.locationManager.delegate = self;
-        self.locationManager.purpose = @"Die App verwendet Ihren Standort, um den Abstand zur nächstgelegenen Bibliothek zu ermitteln, die einen von Ihnen gesuchten Titel besitzt. Die Information wird nicht an die Bibliothek oder Andere übermittelt.";
     }
     [self.locationManager startUpdatingLocation];
     

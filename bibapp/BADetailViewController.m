@@ -596,7 +596,7 @@
         if (![self.currentEntry.subtitle isEqualToString:@""]) {
             top += cell.titleLabel.frame.size.height;
             [cell.subTitleLabel setText:self.currentEntry.subtitle];
-            [cell.subTitleLabel setLineBreakMode:UILineBreakModeTailTruncation];
+            [cell.subTitleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
             [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
             [cell.subTitleLabel sizeToFit];
             if (cell.subTitleLabel.frame.size.height > 15) {

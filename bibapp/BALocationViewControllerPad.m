@@ -68,7 +68,7 @@
         if (![self.view pointInside:[self.view convertPoint:location fromView:self.view.window] withEvent:nil]) {
             // Remove the recognizer first so it's view.window is valid.
             [self.view.window removeGestureRecognizer:sender];
-            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }
