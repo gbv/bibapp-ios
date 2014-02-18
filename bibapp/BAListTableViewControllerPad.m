@@ -45,6 +45,8 @@
 @synthesize currentLocation;
 @synthesize tocPopoverController;
 @synthesize tocTableViewController;
+@synthesize statusBarTintUIView;
+@synthesize optionsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,21 +63,32 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [self.listNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    [self.detailNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.listNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.detailNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.optionsButton setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+        [self.listNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.detailNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    }
     
     [self setCurrentItem: [[BAEntryWork alloc] init]];
     [self setCurrentEntry: [[BAEntryWork alloc] init]];
     
-    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 75, 704, 75)];
+    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(320, 139, 704, 75)];
     [self.defaultTextView setFont:[UIFont systemFontOfSize:20]];
     [self.defaultTextView setTextAlignment:UITextAlignmentCenter];
-    [self.scrollView addSubview:self.defaultTextView];
+    [self.defaultTextView setEditable:NO];
+    [self.defaultTextView setUserInteractionEnabled:NO];
+    [self.view addSubview:self.defaultTextView];
     
-    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(227, 150, 250, 150)];
+    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(547, 214, 250, 150)];
     [self.defaultImageView setContentMode:UIViewContentModeScaleAspectFill];
     [self.defaultImageView setImage:[UIImage imageNamed:@"Buch_250_gradient.png"]];
-    [self.scrollView addSubview:self.defaultImageView];
+    [self.view addSubview:self.defaultImageView];
     
     [self initDetailView];
     
@@ -1051,6 +1064,10 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end
