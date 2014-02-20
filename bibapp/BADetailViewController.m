@@ -799,8 +799,16 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.subtitle.backgroundColor = [UIColor whiteColor];
+                cell.status.backgroundColor = [UIColor whiteColor];
+                cell.statusInfo.backgroundColor = [UIColor whiteColor];
             }else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
