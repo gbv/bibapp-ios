@@ -1203,15 +1203,12 @@
     [self.defaultImageView setHidden:YES];
     
     BAEntryWork *tempEntry;
-    NSInteger *tempPosition;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         tempEntry = self.currentEntryLocal;
-        tempPosition = self.positionLocal;
     } else {
         [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         tempEntry = self.currentEntry;
-        tempPosition = self.position;
     }
     
     if (tempEntry != nil) {

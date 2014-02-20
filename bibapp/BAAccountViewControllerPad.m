@@ -367,9 +367,9 @@
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
             [self showRenewCancelDialogFor:@"cancel"];
         } else if ([command isEqualToString:@"accountLoadReservedList"]) {
-            BAAccountTableHeaderTextView *header;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAAccountTableHeaderTextView" owner:self options:nil];
-            header = [nib objectAtIndex:0];
+            //BAAccountTableHeaderTextView *header;
+            //NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAAccountTableHeaderTextView" owner:self options:nil];
+            //header = [nib objectAtIndex:0];
         }
     }
 }
