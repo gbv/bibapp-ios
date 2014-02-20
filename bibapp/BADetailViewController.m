@@ -563,10 +563,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        BAItemDetailTitleCell *cell;
+        BAItemDetailTitleCell *cell = (BAItemDetailTitleCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemDetailTitleCell"];
+        if (cell == nil) {
+            NSLog(@"Load nib 1");
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        // Keep code for profiling
+        /*
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-        
+        BAItemDetailTitleCell *cell = [nib objectAtIndex:0];
+        */
+         
         if (![self.currentEntry isKindOfClass:[BAEntryWork class]]) {
             BAEntryWork *tempEntry = [[BAEntryWork alloc] init];
             [tempEntry setPpn:[self.currentEntry ppn]];
@@ -695,10 +703,18 @@
         return cell;
     } else {
         if (self.currentEntry.local) {
-            BADocumentItemElementCell *cell;
+            BADocumentItemElementCell *cell = (BADocumentItemElementCell *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCell"];
+            if (cell == nil) {
+                NSLog(@"Load nib 2");
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+            // Keep code for profiling
+            /*
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCell *cell = [nib objectAtIndex:0];
+            */
+             
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             if (self.currentEntry.onlineLocation == nil) {
