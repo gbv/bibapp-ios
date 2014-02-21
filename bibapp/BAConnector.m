@@ -393,7 +393,9 @@ static BAConnector *sharedConnector = nil;
    NSFetchRequest *requestLocation = [[NSFetchRequest alloc] init];
    [requestLocation setEntity:entityDescriptionLocations];
    NSError *error = nil;
-   [self.appDelegate setLocations:[[self.appDelegate.managedObjectContext executeFetchRequest:requestLocation error:&error] mutableCopy]];
+   if (self.appDelegate.locations == nil) {
+      [self.appDelegate setLocations:[[self.appDelegate.managedObjectContext executeFetchRequest:requestLocation error:&error] mutableCopy]];
+   }
    
    for (BALocation *tempLocation in self.appDelegate.locations) {
       if ([uri isEqualToString:tempLocation.uri]) {

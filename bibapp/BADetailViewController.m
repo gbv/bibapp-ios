@@ -565,7 +565,6 @@
     if (indexPath.section == 0) {
         BAItemDetailTitleCell *cell = (BAItemDetailTitleCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemDetailTitleCell"];
         if (cell == nil) {
-            NSLog(@"Load nib 1");
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
         }
@@ -705,7 +704,6 @@
         if (self.currentEntry.local) {
             BADocumentItemElementCell *cell = (BADocumentItemElementCell *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCell"];
             if (cell == nil) {
-                NSLog(@"Load nib 2");
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
             }
@@ -829,9 +827,16 @@
             
             return cell;
         } else {
-            BADocumentItemElementCellNonLocal *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
+            BADocumentItemElementCellNonLocal *cell = (BADocumentItemElementCellNonLocal *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellNonLocal"];
+            if (cell == nil) {
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+            // Keep code for profiling
+            /*
+             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
+             BADocumentItemElementCellNonLocal *cell = [nib objectAtIndex:0];
+             */
             
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
@@ -840,8 +845,12 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.labels.backgroundColor = [UIColor whiteColor];
             }else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;

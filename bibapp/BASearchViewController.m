@@ -109,10 +109,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BAItemCell *cell;
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
-
+    BAItemCell *cell = (BAItemCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemCell"];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
     // Configure the cell...
     BAEntryWork *entry;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {

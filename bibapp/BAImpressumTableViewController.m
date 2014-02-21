@@ -53,16 +53,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BAImpressumCell *cell;
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
+   // Refactor: reuse cell.
+   BAImpressumCell *cell;
+   NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCell" owner:self options:nil];
+   cell = [nib objectAtIndex:0];
     
-    id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.section]];
+   id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.section]];
     
-    [cell.impressumLabel setText:(NSString *)currentObject];
-    [cell.impressumLabel sizeToFit];
+   [cell.impressumLabel setText:(NSString *)currentObject];
+   [cell.impressumLabel sizeToFit];
     
-    return cell;
+   return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

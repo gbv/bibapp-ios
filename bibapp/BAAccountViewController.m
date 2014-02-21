@@ -272,6 +272,7 @@
             [self.reservation removeAllObjects];
             [self.accountTableView reloadData];
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+                // Refactor: Reuse header-object when switching tabs.
                 UITextView *header = [[UITextView alloc] init];
                 [header setText:@"Keine Medien entliehen"];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
