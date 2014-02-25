@@ -225,10 +225,12 @@
 {
     UITableViewCell *cell;
     if (tableView.tag == 0) {
-        BAItemCell *tempCell;
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
-        tempCell = [nib objectAtIndex:0];
-        
+        BAItemCell *tempCell = (BAItemCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemCell"];
+        if (tempCell == nil) {
+           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
+           tempCell = [nib objectAtIndex:0];
+        }
+       
         // Configure the cell...
         BAEntryWork *entry;
         
@@ -262,10 +264,12 @@
         cell = tempCell;
     } else if (tableView.tag == 1) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            BADocumentItemElementCellPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCellPad *cell = (BADocumentItemElementCellPad *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellPad"];
+            if (cell == nil) {
+               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellPad" owner:self options:nil];
+               cell = [nib objectAtIndex:0];
+            }
+           
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             if (self.currentEntryLocal.onlineLocation == nil) {
@@ -369,16 +373,26 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.subtitle.backgroundColor = [UIColor whiteColor];
+                cell.status.backgroundColor = [UIColor whiteColor];
+                cell.statusInfo.backgroundColor = [UIColor whiteColor];
             } else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
         } else {
-            BADocumentItemElementCellNonLocalPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocalPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCellNonLocalPad *cell = (BADocumentItemElementCellNonLocalPad *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellNonLocalPad"];
+            if (cell == nil) {
+               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocalPad" owner:self options:nil];
+               cell = [nib objectAtIndex:0];
+            }
+           
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             [cell.title setText:tempDocumentItem.department];
@@ -389,8 +403,12 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.labels.backgroundColor = [UIColor whiteColor];
             } else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
