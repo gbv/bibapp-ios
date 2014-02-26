@@ -47,9 +47,9 @@
 
     if (self.appDelegate.isIOS7) {
         [self setNeedsStatusBarAppearanceUpdate];
-        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.infoNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.optionsButton setTintColor:[UIColor whiteColor]];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.infoNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
     } else {
         [self.statusBarTintUIView setHidden:YES];
         [self.infoNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -448,7 +448,7 @@
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 @end

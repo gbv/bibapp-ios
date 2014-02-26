@@ -65,10 +65,10 @@
     
     if (self.appDelegate.isIOS7) {
         [self setNeedsStatusBarAppearanceUpdate];
-        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.listNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.detailNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.optionsButton setTintColor:[UIColor whiteColor]];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.listNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.detailNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
     } else {
         [self.statusBarTintUIView setHidden:YES];
         [self.listNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -254,13 +254,21 @@
             [cell.statusInfo setText:statusInfo];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-            
+           
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor whiteColor];
-            }else {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.contentView.backgroundColor = [UIColor whiteColor];
+               cell.title.backgroundColor = [UIColor whiteColor];
+               cell.subtitle.backgroundColor = [UIColor whiteColor];
+               cell.status.backgroundColor = [UIColor whiteColor];
+               cell.statusInfo.backgroundColor = [UIColor whiteColor];
+            } else {
+               cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
+           
             return cell;
         } else {
             BADocumentItemElementCellNonLocalPad *cell;
@@ -275,11 +283,15 @@
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
             
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor whiteColor];
-            }else {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.contentView.backgroundColor = [UIColor whiteColor];
+               cell.title.backgroundColor = [UIColor whiteColor];
+               cell.labels.backgroundColor = [UIColor whiteColor];
+            } else {
+               cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
+           
             return cell;
         }
     }
@@ -1067,7 +1079,7 @@
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 @end

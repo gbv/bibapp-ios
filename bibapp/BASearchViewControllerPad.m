@@ -82,12 +82,12 @@
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     if (self.appDelegate.isIOS7) {
         [self setNeedsStatusBarAppearanceUpdate];
-        [self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.navigationBarSearch setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.navigationBarDetail setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.searchSegmentedController setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [self.searchSegmentedController setTintColor:[UIColor whiteColor]];
-        [self.optionsButton setTintColor:[UIColor whiteColor]];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.navigationBarSearch setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.navigationBarDetail setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.searchSegmentedController setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
         [self.optionsButton setEnabled:YES];
     } else {
         [self.statusBarTintUIView setHidden:YES];
@@ -1701,7 +1701,7 @@
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 @end
