@@ -7,8 +7,11 @@
 //
 
 #import "BADocumentItemElementCellNonLocalPad.h"
+#import "BALocation.h"
 
 @implementation BADocumentItemElementCellNonLocalPad
+
+@synthesize locationConnector;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,6 +27,24 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)loadLocationWithUri:(NSString *)uri {
+   [self performSelectorInBackground:@selector(loadLocationInBackgroundWithUri:) withObject:uri];
+}
+
+- (void)loadLocationInBackgroundWithUri:(NSString *)uri {
+   [self setLocationConnector:[[BAConnector alloc] init]];
+   [self.locationConnector loadLocationForUri:uri WithDelegate:self];
+}
+
+- (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {
+   BALocation *tempLocation = (BALocation *)result;
+   if (![tempLocation.shortname isEqualToString:@""]) {
+      [self.title setText:tempLocation.shortname];
+   } else {
+      [self.title setText:tempLocation.name];
+   }
 }
 
 @end

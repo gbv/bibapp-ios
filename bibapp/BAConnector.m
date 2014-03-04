@@ -521,6 +521,12 @@ static BAConnector *sharedConnector = nil;
    return resultLocation;
 }
 
+- (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate
+{
+   [delegate command:@"loadLocation" didFinishLoadingWithResult:[self loadLocationForUri:uri]];
+}
+
+
 - (NSString*)encodeToPercentEscapeString:(NSString *)string
 {
    NSString *returnString = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,

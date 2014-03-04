@@ -393,7 +393,9 @@
             }
            
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
-            
+           
+            [cell performSelectorInBackground:@selector(loadLocationWithUri:) withObject:tempDocumentItem.uri];
+           
             [cell.title setText:tempDocumentItem.department];
             [cell.labels setText:tempDocumentItem.label];
             [cell.actionButton setTag:indexPath.row];
@@ -858,7 +860,7 @@
             [self.currentDocument setInstitution:[tempInstitution stringValue]];
         }
         
-        BAConnector *locationConnector = [BAConnector generateConnector];
+        //BAConnector *locationConnector = [BAConnector generateConnector];
         NSArray *items = [parser nodesForXPath:@"_def_ns:daia/_def_ns:document/_def_ns:item" error:nil];
         for (GDataXMLElement *item in items) {
             BADocumentItem *tempDocumentItem = [[BADocumentItem alloc] init];
@@ -874,12 +876,12 @@
             NSArray *department = [item elementsForName:@"department"];
             if ([department count] == 1) {
                 [tempDocumentItem setUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]];
-                [tempDocumentItem setLocation:[locationConnector loadLocationForUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]]];
+                /*[tempDocumentItem setLocation:[locationConnector loadLocationForUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]]];
                 if (![tempDocumentItem.location.shortname isEqualToString:@""]) {
                     [tempDocumentItem setDepartment:tempDocumentItem.location.shortname];
                 } else {
                     [tempDocumentItem setDepartment:tempDocumentItem.location.name];
-                }
+                }*/
             }
             
             NSArray *storage = [item elementsForName:@"storage"];
@@ -935,13 +937,13 @@
             BADocumentItem *workingItem;
             BOOL foundItem = NO;
             
-            if (item.department == nil) {
-                [item setDepartment:@"Zusätzliche Exemplare anderer Bibliotheken"];
+            if (item.uri == nil) {
+                [item setUri:@"Zusätzliche Exemplare anderer Bibliotheken"];
             }
             
             for (BADocumentItem *tempWorkingItem in tempItems) {
-                if (item.department != nil && tempWorkingItem.department != nil) {
-                    if ([item.department isEqualToString:tempWorkingItem.department]) {
+                if (item.uri != nil && tempWorkingItem.uri != nil) {
+                    if ([item.uri isEqualToString:tempWorkingItem.uri]) {
                         foundItem = YES;
                         workingItem = tempWorkingItem;
                     }
@@ -949,15 +951,16 @@
             }
             if (!foundItem) {
                 workingItem = [[BADocumentItem alloc] init];
-                NSString *tempDepartment;
-                if (item.department != nil) {
-                    tempDepartment = item.department;
+                NSString *tempUri;
+                if (item.uri != nil) {
+                    tempUri = item.uri;
                 } else {
-                    tempDepartment = @"Zusätzliche Exemplare anderer Bibliotheken";
+                    tempUri = @"Zusätzliche Exemplare anderer Bibliotheken";
                 }
-                [workingItem setDepartment:tempDepartment];
+                [workingItem setDepartment:tempUri];
                 [workingItem setLabel:item.label];
                 [workingItem setLocation:item.location];
+                [workingItem setUri:tempUri];
                 [tempItems addObject:workingItem];
             } else {
                 NSMutableString *tempLabelString = [workingItem.label mutableCopy];
@@ -972,8 +975,8 @@
         
         if (myLocation == nil) {
             sortedArray = [tempItems sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-                NSString *first = [(BADocumentItem*)a department];
-                NSString *second = [(BADocumentItem*)b department];
+                NSString *first = [(BADocumentItem*)a uri];
+                NSString *second = [(BADocumentItem*)b uri];
                 return [first compare:second];
             }];
         } else {

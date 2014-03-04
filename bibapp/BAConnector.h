@@ -43,5 +43,6 @@
 - (void)getLocationInfoForUri:(NSString *)uri WithDelegate:(id)delegate;
 - (void)getLocationsForLibraryByUri:(NSString *)uri WithDelegate:(id)delegate;
 - (BALocation *)loadLocationForUri:(NSString *)uri;
+- (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate;
 
 @end
