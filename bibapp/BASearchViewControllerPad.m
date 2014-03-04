@@ -56,7 +56,6 @@
 @synthesize initialSearchLocal;
 @synthesize initialSearch;
 @synthesize statusBarTintUIView;
-@synthesize optionsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,8 +70,12 @@
 {
     [super viewDidLoad];
 
-	// Do any additional setup after loading the view.
-    
+    // http://stackoverflow.com/a/19106407
+    self.view.autoresizesSubviews = YES;
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+   
+	 // Do any additional setup after loading the view.
+   
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
@@ -88,7 +91,7 @@
         //[self.searchSegmentedController setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
         //[self.optionsButton setTintColor:[UIColor whiteColor]];
-        [self.optionsButton setEnabled:YES];
+        //[self.optionsButton setEnabled:YES];
     } else {
         [self.statusBarTintUIView setHidden:YES];
         [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -128,12 +131,6 @@
     [self.coverView addGestureRecognizer:tap];
     
     [self initDetailView];
-    
-    CALayer *leftBorder = [CALayer layer];
-    leftBorder.borderColor = [UIColor lightGrayColor].CGColor;
-    leftBorder.borderWidth = 1;
-    leftBorder.frame = CGRectMake(-1, 0, 1, self.scrollView.frame.size.height+2);
-    [self.scrollView.layer addSublayer:leftBorder];
     
     self.tocTableViewController = [[BATocTableViewControllerPad alloc] init];
     [self.tocTableViewController setSearchController:self];
