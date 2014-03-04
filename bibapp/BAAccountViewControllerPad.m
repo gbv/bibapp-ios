@@ -179,7 +179,8 @@
 {
     NSError* error;
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
-    
+    //NSLog(@"%@", command);
+    //NSLog(@"%@", json);
     if ([json count] > 0) {
         BOOL foundError = NO;
         if (![json isKindOfClass:[NSMutableArray class]]) {
@@ -194,9 +195,12 @@
         if (foundError) {
             // more detailed when real error codes are implemented
             if (![command isEqualToString:@"login"]) {
-                if ([[json objectForKey:@"code"] isEqualToString:@"401"]) {
+                /*if ([[json objectForKey:@"code"] isEqualToString:@"401"]) {
                     [self loginActionWithMessage:@""];
-                }
+                } else if ([[json objectForKey:@"code"] isEqualToString:@"502"]) {
+                   NSLog(@"%@", [json objectForKey:@"error_description"]);
+                }*/
+               //NSLog(@"%@", json);
             } else {
                 self.isLoggingIn = NO;
                 [self setCurrentPassword:nil];

@@ -415,7 +415,8 @@ static BAConnector *sharedConnector = nil;
    
    if (!foundInCache) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-      if ([NSData dataWithContentsOfURL:url] != nil) {
+      NSData *locationData = [NSData dataWithContentsOfURL:url];
+      if (locationData != nil) {
          BALocation *newLocation = (BALocation *)[NSEntityDescription insertNewObjectForEntityForName:@"BALocation" inManagedObjectContext:[self.appDelegate managedObjectContext]];
          [newLocation setUri:uri];
          [newLocation setTimestamp:[NSDate date]];
@@ -429,7 +430,7 @@ static BAConnector *sharedConnector = nil;
          BOOL foundGeoLong = NO;
          BOOL foundGeoLat = NO;
          BOOL foundDesc = NO;
-         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)[NSData dataWithContentsOfURL:url] options:kNilOptions error:nil];
+         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)locationData options:kNilOptions error:nil];
          
          for (NSString *key in [json objectForKey:uri]) {
             if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/name"]) {
