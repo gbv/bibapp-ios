@@ -420,7 +420,6 @@ static BAConnector *sharedConnector = nil;
 }
 
 - (BALocation *)loadLocationFromCacheForUri:(NSString *)uri {
-   return nil;
    BALocation *resultLocation;
    NSEntityDescription *entityDescriptionLocations = [NSEntityDescription entityForName:@"BALocation" inManagedObjectContext:[self.appDelegate managedObjectContext]];
    NSFetchRequest *requestLocation = [[NSFetchRequest alloc] init];
