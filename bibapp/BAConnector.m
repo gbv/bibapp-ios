@@ -24,6 +24,8 @@ static BAConnector *sharedConnector = nil;
 @synthesize webData;
 @synthesize result;
 @synthesize webDataSynchronous;
+@synthesize currentConnection;
+@synthesize baseURL;
 
 + (id)sharedConnector
 {
@@ -67,7 +69,11 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-   [connectorDelegate command:[self command] didFinishLoadingWithResult:webData];
+   if ([command isEqualToString:@"loadLocationForUri"]) {
+      [connectorDelegate command:[self command] didFinishLoadingWithResult:[self parseLocation:webData ForUri:self.baseURL]];
+   } else {
+      [connectorDelegate command:[self command] didFinishLoadingWithResult:webData];
+   }
 }
 
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
@@ -384,11 +390,38 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
+- (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate
+{
+   [self setConnectorDelegate:delegate];
+   [self setCommand:@"loadLocationForUri"];
+   [self setBaseURL:uri];
+   BALocation *resultLocation = [self loadLocationFromCacheForUri:uri];
+   if (resultLocation == nil) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+         [self setCurrentConnection:theConnection];
+      }
+   } else {
+      [delegate command:@"loadLocationForUri" didFinishLoadingWithResult:resultLocation];
+   }
+}
+
 - (BALocation *)loadLocationForUri:(NSString *)uri
 {
+   BALocation *resultLocation = [self loadLocationFromCacheForUri:uri];
+   if (resultLocation == nil) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
+      NSData *locationData = [NSData dataWithContentsOfURL:url];
+      resultLocation = [self parseLocation:locationData ForUri:uri];
+   }
+   return resultLocation;
+}
+
+- (BALocation *)loadLocationFromCacheForUri:(NSString *)uri {
+   return nil;
    BALocation *resultLocation;
-   BOOL foundInCache = NO;
-   
    NSEntityDescription *entityDescriptionLocations = [NSEntityDescription entityForName:@"BALocation" inManagedObjectContext:[self.appDelegate managedObjectContext]];
    NSFetchRequest *requestLocation = [[NSFetchRequest alloc] init];
    [requestLocation setEntity:entityDescriptionLocations];
@@ -396,13 +429,11 @@ static BAConnector *sharedConnector = nil;
    if (self.appDelegate.locations == nil) {
       [self.appDelegate setLocations:[[self.appDelegate.managedObjectContext executeFetchRequest:requestLocation error:&error] mutableCopy]];
    }
-   
    for (BALocation *tempLocation in self.appDelegate.locations) {
       if ([uri isEqualToString:tempLocation.uri]) {
          NSTimeInterval secondsBetween = [[NSDate date] timeIntervalSinceDate:tempLocation.timestamp];
          if (secondsBetween < 604800) {
             resultLocation = tempLocation;
-            foundInCache = YES;
          } else {
             [self.appDelegate.managedObjectContext deleteObject:tempLocation];
             NSError *error = nil;
@@ -412,120 +443,114 @@ static BAConnector *sharedConnector = nil;
          }
       }
    }
-   
-   if (!foundInCache) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-      NSData *locationData = [NSData dataWithContentsOfURL:url];
-      if (locationData != nil) {
-         BALocation *newLocation = (BALocation *)[NSEntityDescription insertNewObjectForEntityForName:@"BALocation" inManagedObjectContext:[self.appDelegate managedObjectContext]];
-         [newLocation setUri:uri];
-         [newLocation setTimestamp:[NSDate date]];
-         BOOL foundName = NO;
-         BOOL foundShortname = NO;
-         BOOL foundAddress = NO;
-         BOOL foundOpeningHours = NO;
-         BOOL foundEmail = NO;
-         BOOL foundUrl = NO;
-         BOOL foundPhone = NO;
-         BOOL foundGeoLong = NO;
-         BOOL foundGeoLat = NO;
-         BOOL foundDesc = NO;
-         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)locationData options:kNilOptions error:nil];
-         
-         for (NSString *key in [json objectForKey:uri]) {
-            if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/name"]) {
-               [newLocation setName:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundName = YES;
-            }
-            if ([key isEqualToString:@"http://dbpedia.org/property/shortName"]) {
-               [newLocation setShortname:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundShortname = YES;
-            }
-            if ([key isEqualToString:@"http://purl.org/ontology/gbv/address"]) {
-               [newLocation setAddress:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundAddress = YES;
-            }
-            if ([key isEqualToString:@"http://purl.org/ontology/gbv/openinghours"]) {
-               [newLocation setOpeninghours:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundOpeningHours = YES;
-            }
-            if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#email"]) {
-               [newLocation setEmail:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundEmail = YES;
-            }
-            if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#url"]) {
-               [newLocation setUrl:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundUrl = YES;
-            }
-            if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/phone"]) {
-               [newLocation setPhone:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundPhone = YES;
-            }
-            if ([key isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#location"]) {
-               NSString *tempKey = [[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0] objectForKey:@"value"];
-               for (NSString *keyGeo in [json objectForKey:tempKey]) {
-                  if ([keyGeo isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#long"]) {
-                     [newLocation setGeoLong:[[[[json objectForKey:tempKey] objectForKey:keyGeo] objectAtIndex:0]objectForKey:@"value"]];
-                     foundGeoLong = YES;
-                  }
-                  if ([keyGeo isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#lat"]) {
-                     [newLocation setGeoLat:[[[[json objectForKey:tempKey] objectForKey:keyGeo] objectAtIndex:0]objectForKey:@"value"]];
-                     foundGeoLat = YES;
-                  }
-               }
-            }
-            if ([key isEqualToString:@"http://purl.org/dc/elements/1.1/description"]) {
-               [newLocation setDesc:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
-               foundDesc = YES;
-            }
-         }
-         if (!foundName) {
-            [newLocation setName:@""];
-         }
-         if (!foundShortname) {
-            [newLocation setShortname:@""];
-         }
-         if (!foundGeoLong) {
-            [newLocation setGeoLong:@""];
-         }
-         if (!foundGeoLat) {
-            [newLocation setGeoLat:@""];
-         }
-         if (!foundAddress) {
-            [newLocation setAddress:@""];
-         }
-         if (!foundOpeningHours) {
-            [newLocation setOpeninghours:@""];
-         }
-         if (!foundEmail) {
-            [newLocation setEmail:@""];
-         }
-         if (!foundUrl) {
-            [newLocation setUrl:@""];
-         }
-         if (!foundPhone) {
-            [newLocation setPhone:@""];
-         }
-         if( !foundDesc) {
-            [newLocation setDesc:@""];
-         }
-         
-         NSError *error = nil;
-         if (![[self.appDelegate managedObjectContext] save:&error]) {
-            // Handle the error.
-         }
-         
-         resultLocation = newLocation;
-      }
-   }
    return resultLocation;
 }
 
-- (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate
-{
-   [delegate command:@"loadLocation" didFinishLoadingWithResult:[self loadLocationForUri:uri]];
+- (BALocation *)parseLocation:(NSData *)locationData ForUri:(NSString *)uri {
+   BALocation *resultLocation;
+   if (locationData != nil) {
+      BALocation *newLocation = (BALocation *)[NSEntityDescription insertNewObjectForEntityForName:@"BALocation" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+      [newLocation setUri:uri];
+      [newLocation setTimestamp:[NSDate date]];
+      BOOL foundName = NO;
+      BOOL foundShortname = NO;
+      BOOL foundAddress = NO;
+      BOOL foundOpeningHours = NO;
+      BOOL foundEmail = NO;
+      BOOL foundUrl = NO;
+      BOOL foundPhone = NO;
+      BOOL foundGeoLong = NO;
+      BOOL foundGeoLat = NO;
+      BOOL foundDesc = NO;
+      NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)locationData options:kNilOptions error:nil];
+      
+      for (NSString *key in [json objectForKey:uri]) {
+         if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/name"]) {
+            [newLocation setName:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundName = YES;
+         }
+         if ([key isEqualToString:@"http://dbpedia.org/property/shortName"]) {
+            [newLocation setShortname:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundShortname = YES;
+         }
+         if ([key isEqualToString:@"http://purl.org/ontology/gbv/address"]) {
+            [newLocation setAddress:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundAddress = YES;
+         }
+         if ([key isEqualToString:@"http://purl.org/ontology/gbv/openinghours"]) {
+            [newLocation setOpeninghours:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundOpeningHours = YES;
+         }
+         if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#email"]) {
+            [newLocation setEmail:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundEmail = YES;
+         }
+         if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#url"]) {
+            [newLocation setUrl:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundUrl = YES;
+         }
+         if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/phone"]) {
+            [newLocation setPhone:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundPhone = YES;
+         }
+         if ([key isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#location"]) {
+            NSString *tempKey = [[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0] objectForKey:@"value"];
+            for (NSString *keyGeo in [json objectForKey:tempKey]) {
+               if ([keyGeo isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#long"]) {
+                  [newLocation setGeoLong:[[[[json objectForKey:tempKey] objectForKey:keyGeo] objectAtIndex:0]objectForKey:@"value"]];
+                  foundGeoLong = YES;
+               }
+               if ([keyGeo isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#lat"]) {
+                  [newLocation setGeoLat:[[[[json objectForKey:tempKey] objectForKey:keyGeo] objectAtIndex:0]objectForKey:@"value"]];
+                  foundGeoLat = YES;
+               }
+            }
+         }
+         if ([key isEqualToString:@"http://purl.org/dc/elements/1.1/description"]) {
+            [newLocation setDesc:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            foundDesc = YES;
+         }
+      }
+      if (!foundName) {
+         [newLocation setName:@""];
+      }
+      if (!foundShortname) {
+         [newLocation setShortname:@""];
+      }
+      if (!foundGeoLong) {
+         [newLocation setGeoLong:@""];
+      }
+      if (!foundGeoLat) {
+         [newLocation setGeoLat:@""];
+      }
+      if (!foundAddress) {
+         [newLocation setAddress:@""];
+      }
+      if (!foundOpeningHours) {
+         [newLocation setOpeninghours:@""];
+      }
+      if (!foundEmail) {
+         [newLocation setEmail:@""];
+      }
+      if (!foundUrl) {
+         [newLocation setUrl:@""];
+      }
+      if (!foundPhone) {
+         [newLocation setPhone:@""];
+      }
+      if( !foundDesc) {
+         [newLocation setDesc:@""];
+      }
+      
+      NSError *error = nil;
+      if (![[self.appDelegate managedObjectContext] save:&error]) {
+         // Handle the error.
+      }
+      
+      resultLocation = newLocation;
+   }
+   return resultLocation;
 }
-
 
 - (NSString*)encodeToPercentEscapeString:(NSString *)string
 {

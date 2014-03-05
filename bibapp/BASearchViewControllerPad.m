@@ -308,7 +308,8 @@
                     loan = element;
                 }
             }
-            
+           
+            [cell.status setTextColor:[[UIColor alloc] initWithRed:0.474510F green:0.474510F blue:0.474510F alpha:1.0F]];
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
                 [status appendString:@"ausleihbar"];
@@ -393,15 +394,12 @@
             }
            
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
-           
-            [cell performSelectorInBackground:@selector(loadLocationWithUri:) withObject:tempDocumentItem.uri];
-           
             [cell.title setText:tempDocumentItem.department];
             [cell.labels setText:tempDocumentItem.label];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            [cell loadLocationWithUri:tempDocumentItem.uri];
             [self activateActionButton:cell.actionButton];
-            
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
                 cell.title.backgroundColor = [UIColor whiteColor];
@@ -411,7 +409,6 @@
                 cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
                 cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
             return cell;
         }
     }
@@ -957,7 +954,11 @@
                 } else {
                     tempUri = @"Zusätzliche Exemplare anderer Bibliotheken";
                 }
-                [workingItem setDepartment:tempUri];
+                if ([tempUri isEqualToString:@"Zusätzliche Exemplare anderer Bibliotheken"]) {
+                   [workingItem setDepartment:tempUri];
+                } else {
+                   [workingItem setDepartment:@"..."];
+                }
                 [workingItem setLabel:item.label];
                 [workingItem setLocation:item.location];
                 [workingItem setUri:tempUri];

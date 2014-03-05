@@ -30,10 +30,6 @@
 }
 
 - (void)loadLocationWithUri:(NSString *)uri {
-   [self performSelectorInBackground:@selector(loadLocationInBackgroundWithUri:) withObject:uri];
-}
-
-- (void)loadLocationInBackgroundWithUri:(NSString *)uri {
    [self setLocationConnector:[[BAConnector alloc] init]];
    [self.locationConnector loadLocationForUri:uri WithDelegate:self];
 }
@@ -45,6 +41,10 @@
    } else {
       [self.title setText:tempLocation.name];
    }
+}
+
+- (void)prepareForReuse {
+   [self.locationConnector.currentConnection cancel];
 }
 
 @end

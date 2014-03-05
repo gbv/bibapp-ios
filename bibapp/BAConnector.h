@@ -20,6 +20,8 @@
 @property (nonatomic, retain) NSMutableData *webData;
 @property (nonatomic, retain) NSMutableString *result;
 @property (nonatomic, retain) NSData *webDataSynchronous;
+@property (nonatomic, retain) NSURLConnection *currentConnection;
+@property (nonatomic, retain) NSString *baseURL;
 
 + (id)sharedConnector;
 + (id)generateConnector;
@@ -44,5 +46,7 @@
 - (void)getLocationsForLibraryByUri:(NSString *)uri WithDelegate:(id)delegate;
 - (BALocation *)loadLocationForUri:(NSString *)uri;
 - (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate;
+- (BALocation *)parseLocation:(NSData *)locationData ForUri:(NSString *)uri;
+- (BALocation *)loadLocationFromCacheForUri:(NSString *)uri;
 
 @end
