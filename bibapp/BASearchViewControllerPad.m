@@ -1329,29 +1329,27 @@
             [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
             [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
         }
-        
-        [self loadCover];
-
-        
+       
+        if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
+           [self setCover:[self.currentEntry mediaIcon]];
+        } else {
+           [self setCover:[UIImage imageNamed:self.currentEntry.matcode]];
+        }
+       
+        [self.coverView setContentMode:UIViewContentModeCenter];
+        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+           [self.coverView setImage:self.currentEntryLocal.mediaIcon];
+        } else {
+           [self.coverView setImage:self.currentEntry.mediaIcon];
+        }
+       
+        [self performSelectorInBackground:@selector(loadCover) withObject:nil];
     } else {
         [self initDetailView];
     }
 }
 
 - (void)loadCover{
-    if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
-        [self setCover:[self.currentEntry mediaIcon]];
-    } else {
-        [self setCover:[UIImage imageNamed:self.currentEntry.matcode]];
-    }
-    
-    [self.coverView setContentMode:UIViewContentModeCenter];
-    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        [self.coverView setImage:self.currentEntryLocal.mediaIcon];
-    } else {
-        [self.coverView setImage:self.currentEntry.mediaIcon];
-    }
-    
     NSString *urlStringISBN;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         urlStringISBN = [[NSString alloc] initWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", [self.currentEntryLocal isbn]];
