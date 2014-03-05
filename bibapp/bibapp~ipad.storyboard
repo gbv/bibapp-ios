@@ -458,6 +458,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="oem-5T-jCS">
+                                <rect key="frame" x="425" y="192" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -483,10 +487,12 @@
                             <constraint firstItem="qJQ-DU-nNJ" firstAttribute="leading" secondItem="4kL-wa-uOL" secondAttribute="trailing" constant="20" id="Yj5-fO-dM8"/>
                             <constraint firstItem="R0Z-oK-yaG" firstAttribute="leading" secondItem="4kL-wa-uOL" secondAttribute="trailing" id="aP4-4a-aVu"/>
                             <constraint firstItem="bBh-Qg-ycn" firstAttribute="top" secondItem="nwa-Od-fOV" secondAttribute="bottom" id="gck-hn-r1n"/>
+                            <constraint firstItem="oem-5T-jCS" firstAttribute="centerY" secondItem="qJQ-DU-nNJ" secondAttribute="centerY" id="h9C-Ey-e7i"/>
                             <constraint firstItem="8mW-bt-WxM" firstAttribute="top" secondItem="ASo-88-dcy" secondAttribute="bottom" constant="8" id="hYl-re-wu6"/>
                             <constraint firstItem="8mW-bt-WxM" firstAttribute="leading" secondItem="qJQ-DU-nNJ" secondAttribute="trailing" constant="16" id="iGn-Wq-4NI"/>
                             <constraint firstItem="I5u-pp-yl1" firstAttribute="top" secondItem="nwa-Od-fOV" secondAttribute="bottom" id="kzx-TL-F5S"/>
                             <constraint firstItem="Y27-HR-PeF" firstAttribute="top" secondItem="bBh-Qg-ycn" secondAttribute="bottom" constant="20" id="lTY-sO-2du"/>
+                            <constraint firstItem="oem-5T-jCS" firstAttribute="centerX" secondItem="qJQ-DU-nNJ" secondAttribute="centerX" id="qqc-GQ-ZSt"/>
                             <constraint firstItem="I5u-pp-yl1" firstAttribute="top" secondItem="nwa-Od-fOV" secondAttribute="bottom" id="xJw-nu-v9j"/>
                             <constraint firstItem="I5u-pp-yl1" firstAttribute="top" secondItem="nwa-Od-fOV" secondAttribute="bottom" id="xt0-kh-GmS"/>
                         </constraints>
@@ -495,6 +501,7 @@
                     <tabBarItem key="tabBarItem" title="Suche" image="menuIconSearch.png" id="Omk-Uo-vMZ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="coverActivityIndicator" destination="oem-5T-jCS" id="kZU-cU-9ij"/>
                         <outlet property="coverView" destination="qJQ-DU-nNJ" id="LOD-2C-uER"/>
                         <outlet property="detailTableView" destination="R0Z-oK-yaG" id="x8d-mj-y7Q"/>
                         <outlet property="isbdLabel" destination="8mW-bt-WxM" id="Nl4-1S-fkE"/>

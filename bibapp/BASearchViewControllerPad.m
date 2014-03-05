@@ -1343,6 +1343,7 @@
            [self.coverView setImage:self.currentEntry.mediaIcon];
         }
        
+        [self.coverActivityIndicator startAnimating];
         [self performSelectorInBackground:@selector(loadCover) withObject:nil];
     } else {
         [self initDetailView];
@@ -1385,6 +1386,7 @@
             self.foundCover = NO;
         }
     }
+    [self.coverActivityIndicator stopAnimating];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
