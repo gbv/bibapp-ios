@@ -1101,17 +1101,21 @@
                     }
                 }
             }
-            GDataXMLElement *onlineLocation = (GDataXMLElement *)[[mods elementsForName:@"location"] objectAtIndex:0];
+           
             [self.currentEntry setOnlineLocation:nil];
-            if (onlineLocation != nil) {
-                GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                if (onlineLocationUrl != nil) {
-                    NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                    if (rangeValueType.length > 0) {
+            NSArray *onlineLocations = [mods elementsForName:@"location"];
+            for (GDataXMLElement *onlineLocation in onlineLocations) {
+               if (onlineLocation != nil) {
+                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                  if (onlineLocationUrl != nil) {
+                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                     if (rangeValueType.length > 0) {
                         [self.currentEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                    }
-                }
+                     }
+                  }
+               }
             }
+           
             [self.currentEntry setIsbn:@""];
             GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
             if (tempISBNElement != nil) {
