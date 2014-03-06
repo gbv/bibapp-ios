@@ -40,6 +40,12 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reservationBarButton;
 @property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
+@property (strong, nonatomic) UIRefreshControl *loanRefreshControl;
+@property (strong, nonatomic) UIRefreshControl *reservationRefreshControl;
+@property (strong, nonatomic) UIRefreshControl *feeRefreshControl;
+@property (weak, nonatomic) IBOutlet UILabel *loanLoadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reservationLoadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feeLoadingLabel;
 
 - (void)actionButtonClick:(id)sender;
 

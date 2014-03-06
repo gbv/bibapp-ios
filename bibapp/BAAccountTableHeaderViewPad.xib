@@ -19,15 +19,9 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" id="19">
-                    <rect key="frame" x="7" y="4" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="spinner" destination="19" id="20"/>
                 <outlet property="subTitleLabel" destination="9" id="18"/>
             </connections>
         </view>

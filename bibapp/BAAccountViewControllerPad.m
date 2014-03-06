@@ -39,6 +39,12 @@
 @synthesize reservationHeader;
 @synthesize feeHeader;
 @synthesize statusBarTintUIView;
+@synthesize loanRefreshControl;
+@synthesize reservationRefreshControl;
+@synthesize feeRefreshControl;
+@synthesize loanLoadingLabel;
+@synthesize reservationLoadingLabel;
+@synthesize feeLoadingLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -108,8 +114,20 @@
     self.feeHeader = [nibFee objectAtIndex:0];
     [self.feeHeader.subTitleLabel setText:@""];
     self.feeTableView.tableHeaderView = self.feeHeader;
-    
+   
     [self setLoggedIn:NO];
+   
+    [self setLoanRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.loanRefreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
+    [self.loanTableView addSubview:self.loanRefreshControl];
+   
+    [self setReservationRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.reservationRefreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
+    [self.reservationTableView addSubview:self.reservationRefreshControl];
+   
+    [self setFeeRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.feeRefreshControl addTarget:self action:@selector(refreshFee:) forControlEvents:UIControlEventValueChanged];
+    [self.feeTableView addSubview:self.feeRefreshControl];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -120,20 +138,13 @@
     } else {
         [self.successfulEntries removeAllObjects];
         [self.sendEntries removeAllObjects];
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [spinner startAnimating];
-        spinner.frame = CGRectMake(0, 0, 320, 44);
-        self.loanTableView.tableHeaderView = self.loanHeader;
-        [self.loanHeader.spinner setHidden:NO];
-        [self.loanHeader.spinner startAnimating];
-        self.reservationTableView.tableHeaderView = self.reservationHeader;
-        [self.reservationHeader.spinner setHidden:NO];
-        [self.reservationHeader.spinner startAnimating];
+        [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+        [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+        [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
         BAConnector *accountLoanConnector = [BAConnector generateConnector];
         [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
         BAConnector *accountFeesConnector = [BAConnector generateConnector];
         [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        self.feeTableView.tableHeaderView = self.feeHeader;
     }
 }
 
@@ -242,11 +253,15 @@
                 [tempEntryWork setQueue:[document objectForKey:@"queue"]];
                 [tempEntryWork setRenewal:[document objectForKey:@"renewals"]];
                 [tempEntryWork setStorage:[document objectForKey:@"storage"]];
-                
-                NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
-                NSArray* matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
-                NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
-                NSArray* matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+               
+                NSArray *matchesDayFirst;
+                NSArray *matchesYearFirst;
+                if ([document objectForKey:@"duedate"] != nil) {
+                   NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
+                   matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                   NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
+                   matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                }
                 if([matchesDayFirst count] > 0){
                     [tempEntryWork setDate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
                 } else if ([matchesYearFirst count] > 0){
@@ -269,8 +284,6 @@
             }
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
                 if ([self.loan count] == 0) {
                     [self.loanHeader.subTitleLabel setText:@"Keine Medien entliehen"];
                     [self.loanBarButton setEnabled:NO];
@@ -285,6 +298,10 @@
                     [self.reservationTableView setTableHeaderView:nil];
                     [self.reservationBarButton setEnabled:YES];
                 }
+           [self.loanRefreshControl endRefreshing];
+           [self.reservationRefreshControl endRefreshing];
+           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
+           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
         } else if ([command isEqualToString:@"accountLoadFees"]) {
             [self.feesSum removeAllObjects];
             [self.fees removeAllObjects];
@@ -306,7 +323,6 @@
                 [self.fees addObject:tempAmount];
             }
             [self.feeTableView reloadData];
-            [self.feeHeader.spinner stopAnimating];
                 if ([self.fees count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
                     [header setText:@"Keine Gebühren"];
@@ -316,6 +332,8 @@
                 } else {
                     [self.feeTableView setTableHeaderView:nil];
                 }
+           [self.feeRefreshControl endRefreshing];
+           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
         } else if ([command isEqualToString:@"accountLoadInterloanList"]) {
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
@@ -336,8 +354,6 @@
             [self.reservation removeAllObjects];
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
                 UITextView *header = [[UITextView alloc] init];
                 [header setText:@"Keine Medien entliehen"];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
@@ -357,15 +373,12 @@
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 [self.feeHeader.subTitleLabel setText:@"Keine Gebühren"];
-                [self.feeHeader.spinner stopAnimating];
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
-            [self.loanHeader.spinner stopAnimating];
             [self.loanTableView reloadData];
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
             [self showRenewCancelDialogFor:@"renew"];
         } else if ([command isEqualToString:@"accountCancelDocs"]) {
-            [self.reservationHeader.spinner stopAnimating];
             [self.reservationTableView reloadData];
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
@@ -411,9 +424,6 @@
     if (alertView.tag == 0) {
         if (buttonIndex == 0) {
             self.isLoggingIn = NO;
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
-            [self.feeHeader.spinner stopAnimating];
         } else if(buttonIndex == 1) {
             [self setCurrentAccount:[[alertView textFieldAtIndex:0] text]];
             [self setCurrentPassword:[[alertView textFieldAtIndex:1] text]];
@@ -446,8 +456,6 @@
                 }
             }
             self.loanTableView.tableHeaderView = self.loanHeader;
-            [self.loanHeader.spinner setHidden:NO];
-            [self.loanHeader.spinner startAnimating];
             BAConnector *renewConnector = [BAConnector generateConnector];
             [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
         }
@@ -461,8 +469,6 @@
                 }
             }
             self.reservationTableView.tableHeaderView = self.reservationHeader;
-            [self.reservationHeader.spinner setHidden:NO];
-            [self.reservationHeader.spinner startAnimating];
             BAConnector *cancelConnector = [BAConnector generateConnector];
             [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
         }
@@ -743,6 +749,19 @@
     }
 }
 
+- (void)refreshLoanAndReservation:(UIRefreshControl *)refreshControl {
+   [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   BAConnector *accountLoanConnector = [BAConnector generateConnector];
+   [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+}
+
+- (void)refreshFee:(UIRefreshControl *)refreshControl {
+   [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   BAConnector *accountFeesConnector = [BAConnector generateConnector];
+   [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
@@ -766,6 +785,13 @@
 
 - (UIStatusBarStyle) preferredStatusBarStyle{
     return UIStatusBarStyleDefault;
+}
+
+- (void)viewDidLayoutSubviews
+{
+   [self.loanRefreshControl.superview sendSubviewToBack:self.loanRefreshControl];
+   [self.reservationRefreshControl.superview sendSubviewToBack:self.reservationRefreshControl];
+   [self.feeRefreshControl.superview sendSubviewToBack:self.feeRefreshControl];
 }
 
 @end

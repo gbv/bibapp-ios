@@ -730,6 +730,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wird geladen ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91Z-Up-irN">
+                                <rect key="frame" x="0.0" y="90" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wird geladen ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZA-Y2-cG4">
+                                <rect key="frame" x="683" y="90" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wird geladen ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEw-7C-rzP">
+                                <rect key="frame" x="342" y="90" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -763,13 +784,16 @@
                     <tabBarItem key="tabBarItem" title="Konto" image="menuIconAccount.png" id="x5G-YU-9xS"/>
                     <connections>
                         <outlet property="accountNavigationBar" destination="DZd-Lj-kX7" id="UbW-hh-bUU"/>
+                        <outlet property="feeLoadingLabel" destination="bZA-Y2-cG4" id="Np7-du-tPz"/>
                         <outlet property="feeTableView" destination="jPU-g1-bu5" id="IKh-eM-98A"/>
                         <outlet property="feeToolbar" destination="DSL-K5-YuY" id="3XZ-a7-bYM"/>
                         <outlet property="loanBarButton" destination="qpm-54-Zy7" id="dw5-tb-Pvu"/>
+                        <outlet property="loanLoadingLabel" destination="91Z-Up-irN" id="bHK-08-sg1"/>
                         <outlet property="loanTableView" destination="S75-0Y-0De" id="pe4-hH-luo"/>
                         <outlet property="loanToolbar" destination="bWI-fh-sd5" id="4WC-Az-YjK"/>
                         <outlet property="optionsButton" destination="Izu-eV-Zxs" id="8Vx-wp-0Rz"/>
                         <outlet property="reservationBarButton" destination="pgo-5I-HsT" id="7Nt-7I-0jN"/>
+                        <outlet property="reservationLoadingLabel" destination="JEw-7C-rzP" id="5l0-Yi-OFt"/>
                         <outlet property="reservationTableView" destination="NG2-hO-bFy" id="KkY-aH-Muk"/>
                         <outlet property="reservationToolbar" destination="w2v-tE-zzy" id="5gr-ir-0Qh"/>
                         <outlet property="statusBarTintUIView" destination="u4c-xO-Tb2" id="7dl-up-a3Y"/>
@@ -1663,9 +1687,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0y8-4D-qGn"/>
-        <segue reference="f6G-SO-Bgw"/>
         <segue reference="nvZ-Ec-xVW"/>
         <segue reference="WjN-WC-96R"/>
+        <segue reference="f6G-SO-Bgw"/>
+        <segue reference="nEM-ay-oB3"/>
     </inferredMetricsTieBreakers>
 </document>
