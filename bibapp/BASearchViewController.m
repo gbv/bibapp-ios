@@ -393,15 +393,17 @@
         }
         
         // Get link for online location
-        GDataXMLElement *onlineLocation = (GDataXMLElement *)[[shortTitleNew elementsForName:@"location"] objectAtIndex:0];
-        if (onlineLocation != nil) {
-            GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-            if (onlineLocationUrl != nil) {
-                NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                if (rangeValueType.length > 0) {
+        NSArray *onlineLocations = [shortTitleNew elementsForName:@"location"];
+        for (GDataXMLElement *onlineLocation in onlineLocations) {
+           if (onlineLocation != nil) {
+              GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+              if (onlineLocationUrl != nil) {
+                 NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                 if (rangeValueType.length > 0) {
                     [tempEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                }
-            }
+                 }
+              }
+           }
         }
         
         [tempArray addObject:tempEntry];
