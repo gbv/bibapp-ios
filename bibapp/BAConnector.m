@@ -267,22 +267,20 @@ static BAConnector *sharedConnector = nil;
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"["];
-
+   [jsonString appendString:@"{\"doc\":["];
+    
    for (BADocumentItem *tempDocumentItem in docs) {
+      NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
+      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
+      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+      [jsonString appendString:tempString];
       
       if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
       {
          [jsonString appendString:@","];
       }
-      
-      NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      
-      [jsonString appendString:tempString];
    }
-   [jsonString appendString:@"]"];
+   [jsonString appendString:@"]}"];
    
    NSUInteger contentLength = [jsonString length];
    NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -300,21 +298,20 @@ static BAConnector *sharedConnector = nil;
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"["];
+   [jsonString appendString:@"{\"doc\":["];
 
    for (BAEntryWork *tempEntry in docs) {
+      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+      [jsonString appendString:tempString];
       
       if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
       {
          [jsonString appendString:@","];
       }
-      
-      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      [jsonString appendString:tempString];
    }
-   [jsonString appendString:@"]"];
+   [jsonString appendString:@"]}"];
    
    NSUInteger contentLength = [jsonString length];
    NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -332,21 +329,20 @@ static BAConnector *sharedConnector = nil;
    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
 	
    NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"["];
+   [jsonString appendString:@"{\"doc\":["];
 
    for (BAEntryWork *tempEntry in docs) {
+      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+      [jsonString appendString:tempString];
       
       if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
       {
          [jsonString appendString:@","];
       }
-      
-      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      [jsonString appendString:tempString];
    }
-   [jsonString appendString:@"]"];
+   [jsonString appendString:@"]}"];
    
    NSUInteger contentLength = [jsonString length];
    NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
