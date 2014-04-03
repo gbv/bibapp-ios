@@ -136,7 +136,7 @@
     if (!self.loggedIn) {
         [self loginActionWithMessage:@""];
     } else {
-        [self.successfulEntries removeAllObjects];
+        [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
         [self.sendEntries removeAllObjects];
         [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
         [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
@@ -449,7 +449,7 @@
     if (actionSheet.tag == 10) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.loan) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
@@ -462,7 +462,7 @@
     } else if(actionSheet.tag == 11) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.reservation) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
@@ -489,21 +489,21 @@
 - (void)showRenewCancelDialogFor:(NSString *)action
 {
    NSMutableString *statusString = [[NSMutableString alloc] initWithString:@""];
-    
+   
    if ([action isEqualToString:@"renew"]) {
-     [statusString appendFormat:@"%d Titel verlängert.\n\n", [[self.successfulEntries objectAtIndex:0] count]];
+     [statusString appendFormat:@"%d Titel verlängert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count]];
    } else if ([action isEqualToString:@"cancel"]) {
      NSMutableString *requestString = [[NSMutableString alloc] init];
-     if ([self.successfulEntries count] > 1) {
+     if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
          [requestString appendString:@"Vormerkungen"];
      } else {
          [requestString appendString:@"Vormerkung"];
      }
-     [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectAtIndex:0] count], requestString];
+     [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
    }
    
     if ([self.sendEntries count] > 0) {
-        if ([self.sendEntries count] > [[self.successfulEntries objectAtIndex:0] count]) {
+        if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
             if ([action isEqualToString:@"renew"]) {
                 [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
             } else if ([action isEqualToString:@"cancel"]){
@@ -511,7 +511,7 @@
             }
             for (BAEntryWork *tempSendEntry in self.sendEntries) {
                 BOOL wasSuccessful = NO;
-                for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectAtIndex:0]) {
+                for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
                     if ([tempSendEntry.label isEqualToString:[tempSuccessfulEntry valueForKey:@"signature"]]) {
                         wasSuccessful = YES;
                     }
