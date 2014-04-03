@@ -566,7 +566,7 @@
             NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
             [cell.storageLabel setText:storageString];
             if (self.appDelegate.isIOS7) {
-               [cell.checkbox setFrame:CGRectMake(306, 63, 23, 23)];
+               [cell.checkbox setFrame:CGRectMake(306, 64, 23, 23)];
             } else {
                [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
             }
@@ -578,7 +578,7 @@
             [cell.storageTitleLabel setText:@""];
             [cell.storageLabel setText:@""];
             if (self.appDelegate.isIOS7) {
-               [cell.checkbox setFrame:CGRectMake(306, 37, 23, 23)];
+               [cell.checkbox setFrame:CGRectMake(306, 38, 23, 23)];
             } else {
                [cell.checkbox setFrame:CGRectMake(313, 37, 23, 23)];
             }
