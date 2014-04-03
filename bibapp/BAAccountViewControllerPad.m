@@ -536,7 +536,7 @@
         BAItemAccountCell *cell;
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemAccountCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        
+       
         // Configure the cell...
         BAEntryWork *item;
         if (tableView.tag == 0) {
@@ -565,7 +565,11 @@
             [cell.renewalLabel setText:renewalString];
             NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
             [cell.storageLabel setText:storageString];
-            [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
+            if (self.appDelegate.isIOS7) {
+               [cell.checkbox setFrame:CGRectMake(306, 63, 23, 23)];
+            } else {
+               [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
+            }
         } else if(tableView.tag == 1) {
             [cell.queueTitleLabel setText:@""];
             [cell.queueLabel setText:@""];
@@ -573,7 +577,11 @@
             [cell.renewalLabel setText:@""];
             [cell.storageTitleLabel setText:@""];
             [cell.storageLabel setText:@""];
-            [cell.checkbox setFrame:CGRectMake(313, 37, 23, 23)];
+            if (self.appDelegate.isIOS7) {
+               [cell.checkbox setFrame:CGRectMake(306, 37, 23, 23)];
+            } else {
+               [cell.checkbox setFrame:CGRectMake(313, 37, 23, 23)];
+            }
         }
         
         [cell.dateLabel setText:item.date];
