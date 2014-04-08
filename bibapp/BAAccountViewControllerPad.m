@@ -270,16 +270,21 @@
                     NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
                     [tempEntryWork setDate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
                 }
-                
-                if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([[document objectForKey:@"cancancel"] integerValue] == 1)) {
-                    [tempEntryWork setCanRenewCancel:YES];
-                } else {
-                    [tempEntryWork setCanRenewCancel:NO];
-                }
+               
                 if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
                     [self.loan addObject:tempEntryWork];
+                    if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([document objectForKey:@"canrenew"] == nil)) {
+                       [tempEntryWork setCanRenewCancel:YES];
+                    } else {
+                       [tempEntryWork setCanRenewCancel:NO];
+                    }
                 } else if ([[document objectForKey:@"status"] integerValue] == 1) {
                     [self.reservation addObject:tempEntryWork];
+                    if ([[document objectForKey:@"canrenew"] integerValue] == 1) {
+                       [tempEntryWork setCanRenewCancel:YES];
+                    } else {
+                       [tempEntryWork setCanRenewCancel:NO];
+                    }
                 }
             }
             [self.loanTableView reloadData];
@@ -490,8 +495,27 @@
 {
    NSMutableString *statusString = [[NSMutableString alloc] initWithString:@""];
    
+   int renewalsCounter = 0;
    if ([action isEqualToString:@"renew"]) {
-     [statusString appendFormat:@"%d Titel verlängert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count]];
+      for (BAEntryWork *tempSendEntry in self.sendEntries) {
+         for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+            NSLog(@"%@", tempSendEntry.item);
+            NSLog(@"%@", [tempSuccessfulEntry objectForKey:@"item"]);
+            NSLog(@"--------------------");
+            NSLog(@"%d", [tempSendEntry.renewal integerValue]);
+            NSLog(@"%d", [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]);
+            if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
+               if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
+                  renewalsCounter++;
+               }
+            }
+         }
+      }
+      if (renewalsCounter > 0) {
+         [statusString appendFormat:@"%d von %d Titel(n) verlängert.\n\n", renewalsCounter, [self.sendEntries count]];
+      } else {
+         [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
+      }
    } else if ([action isEqualToString:@"cancel"]) {
      NSMutableString *requestString = [[NSMutableString alloc] init];
      if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
@@ -501,7 +525,6 @@
      }
      [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
    }
-   
     if ([self.sendEntries count] > 0) {
         if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
             if ([action isEqualToString:@"renew"]) {
