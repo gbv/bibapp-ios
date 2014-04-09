@@ -206,11 +206,19 @@
         if (foundError) {
             // more detailed when real error codes are implemented
             if (![command isEqualToString:@"login"]) {
-                /*if ([[json objectForKey:@"code"] isEqualToString:@"401"]) {
+                NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+                if ([errorCode isEqualToString:@"401"]) {
                     [self loginActionWithMessage:@""];
-                } else if ([[json objectForKey:@"code"] isEqualToString:@"502"]) {
-                   NSLog(@"%@", [json objectForKey:@"error_description"]);
-                }*/
+                } else if ([errorCode isEqualToString:@"403"]) {
+                } else if ([errorCode isEqualToString:@"502"]) {
+                }
+                BAConnector *accountLoanConnector = [BAConnector generateConnector];
+                [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:[json objectForKey:@"error_description"]
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert setTag:20];
+                [alert show];
                //NSLog(@"%@", json);
             } else {
                 self.isLoggingIn = NO;
@@ -280,7 +288,7 @@
                     }
                 } else if ([[document objectForKey:@"status"] integerValue] == 1) {
                     [self.reservation addObject:tempEntryWork];
-                    if ([[document objectForKey:@"canrenew"] integerValue] == 1) {
+                    if ([[document objectForKey:@"cancancel"] integerValue] == 1) {
                        [tempEntryWork setCanRenewCancel:YES];
                     } else {
                        [tempEntryWork setCanRenewCancel:NO];
