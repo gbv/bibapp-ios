@@ -499,11 +499,6 @@
    if ([action isEqualToString:@"renew"]) {
       for (BAEntryWork *tempSendEntry in self.sendEntries) {
          for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
-            NSLog(@"%@", tempSendEntry.item);
-            NSLog(@"%@", [tempSuccessfulEntry objectForKey:@"item"]);
-            NSLog(@"--------------------");
-            NSLog(@"%d", [tempSendEntry.renewal integerValue]);
-            NSLog(@"%d", [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]);
             if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
                if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
                   renewalsCounter++;
@@ -515,6 +510,14 @@
          [statusString appendFormat:@"%d von %d Titel(n) verlängert.\n\n", renewalsCounter, [self.sendEntries count]];
       } else {
          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
+      }
+      for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+         if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
+            if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
+               [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
+            }
+            [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
+         }
       }
    } else if ([action isEqualToString:@"cancel"]) {
      NSMutableString *requestString = [[NSMutableString alloc] init];
