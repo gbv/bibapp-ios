@@ -1239,7 +1239,7 @@
 		8FD499BA168310DA008FC33F /* BAPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPDFViewController.m; sourceTree = "<group>"; };
 		8FD4F8EB16F89C9F00193F33 /* BATocTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocTableViewControllerPad.h; sourceTree = "<group>"; };
 		8FD4F8EC16F89C9F00193F33 /* BATocTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocTableViewControllerPad.m; sourceTree = "<group>"; };
-		8FD6110B190916EA009E2358 /* BibApp HI copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HI copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD6110B190916EA009E2358 /* BibApp ThULB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp ThULB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD6110C190916EB009E2358 /* BibApp HI copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp HI copy-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp HI copy-Info.plist"; sourceTree = "<absolute>"; };
 		8FD611A7190916EF009E2358 /* BibApp EAHJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp EAHJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD611A8190916F0009E2358 /* BibApp HI copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp HI copy 2-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp HI copy 2-Info.plist"; sourceTree = "<absolute>"; };
@@ -1793,7 +1793,7 @@
 				8F8A76A61781C05400CCF7DB /* BibApp IL.app */,
 				8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */,
 				8FFF22C51786B8580077FC8B /* BibAppUnitTests.octest */,
-				8FD6110B190916EA009E2358 /* BibApp HI copy.app */,
+				8FD6110B190916EA009E2358 /* BibApp ThULB.app */,
 				8FD611A7190916EF009E2358 /* BibApp EAHJ.app */,
 			);
 			name = Products;
@@ -2021,7 +2021,7 @@
 			);
 			name = "BibApp ThULB";
 			productName = bibapp;
-			productReference = 8FD6110B190916EA009E2358 /* BibApp HI copy.app */;
+			productReference = 8FD6110B190916EA009E2358 /* BibApp ThULB.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FD6110D190916EF009E2358 /* BibApp EAHJ */ = {

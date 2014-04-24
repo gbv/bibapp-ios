@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FD61071190916EA009E2358"
-               BuildableName = "BibApp HI copy.app"
+               BuildableName = "BibApp ThULB.app"
                BlueprintName = "BibApp ThULB"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FD61071190916EA009E2358"
-            BuildableName = "BibApp HI copy.app"
+            BuildableName = "BibApp ThULB.app"
             BlueprintName = "BibApp ThULB"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FD61071190916EA009E2358"
-            BuildableName = "BibApp HI copy.app"
+            BuildableName = "BibApp ThULB.app"
             BlueprintName = "BibApp ThULB"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FD61071190916EA009E2358"
-            BuildableName = "BibApp HI copy.app"
+            BuildableName = "BibApp ThULB.app"
             BlueprintName = "BibApp ThULB"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
