@@ -12,6 +12,8 @@
 #import "BAConfigurationBLS.h"
 #import "BAConfigurationIL.h"
 #import "BAConfigurationHAWK.h"
+#import "BAConfigurationThULB.h"
+#import "BAConfigurationEAHJ.h"
 
 @implementation BAConfiguration
 
@@ -60,6 +62,9 @@
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *bundleName = [NSString stringWithFormat:@"%@", [info objectForKey:@"CFBundleDisplayName"]];
+   
+   NSLog(@"%@", bundleName);
+   
     if([bundleName isEqualToString:@"BibApp LG"]){
         currentConfiguration = [[BAConfigurationLG alloc] init];
     } else if([bundleName isEqualToString:@"BibApp HI"]){
@@ -70,6 +75,10 @@
         currentConfiguration = [[BAConfigurationIL alloc] init];
     } else if([bundleName isEqualToString:@"BibApp HAWK"]){
         currentConfiguration = [[BAConfigurationHAWK alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp ThULB"]){
+       currentConfiguration = [[BAConfigurationThULB alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp EAHJ"]){
+       currentConfiguration = [[BAConfigurationEAHJ alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;

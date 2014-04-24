@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BibApp EAHJ.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>BibApp ThULB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>BibAppUnitTests.xcscheme</key>
 		<dict>
@@ -73,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>8F8A76A81781C0D800CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD61071190916EA009E2358</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD6110D190916EF009E2358</key>
 		<dict>
 			<key>primary</key>
 			<true/>
