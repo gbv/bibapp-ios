@@ -1240,9 +1240,9 @@
 		8FD4F8EB16F89C9F00193F33 /* BATocTableViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocTableViewControllerPad.h; sourceTree = "<group>"; };
 		8FD4F8EC16F89C9F00193F33 /* BATocTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocTableViewControllerPad.m; sourceTree = "<group>"; };
 		8FD6110B190916EA009E2358 /* BibApp ThULB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp ThULB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FD6110C190916EB009E2358 /* BibApp HI copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp HI copy-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp HI copy-Info.plist"; sourceTree = "<absolute>"; };
+		8FD6110C190916EB009E2358 /* BibApp-ThULB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ThULB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ThULB-Info.plist"; sourceTree = "<absolute>"; };
 		8FD611A7190916EF009E2358 /* BibApp EAHJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp EAHJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FD611A8190916F0009E2358 /* BibApp HI copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp HI copy 2-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp HI copy 2-Info.plist"; sourceTree = "<absolute>"; };
+		8FD611A8190916F0009E2358 /* BibApp-EAHJ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-EAHJ-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-EAHJ-Info.plist"; sourceTree = "<absolute>"; };
 		8FD611A91909182D009E2358 /* BAConfigurationThULB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationThULB.h; sourceTree = "<group>"; };
 		8FD611AA1909182D009E2358 /* BAConfigurationThULB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationThULB.m; sourceTree = "<group>"; };
 		8FD611AC1909183E009E2358 /* BAConfigurationEAHJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationEAHJ.h; sourceTree = "<group>"; };
@@ -1779,8 +1779,6 @@
 				8FFF22C91786B8580077FC8B /* BibAppUnitTests */,
 				8FF26FF816393BF100099665 /* Frameworks */,
 				8FF26FF616393BF100099665 /* Products */,
-				8FD6110C190916EB009E2358 /* BibApp HI copy-Info.plist */,
-				8FD611A8190916F0009E2358 /* BibApp HI copy 2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1845,6 +1843,8 @@
 				8F8A76121781BF4800CCF7DB /* BibApp-BLS-Info.plist */,
 				8F8A76A71781C05400CCF7DB /* BibApp-IL-Info.plist */,
 				8F8A773C1781C0D800CCF7DB /* BibApp-HAWK-Info.plist */,
+				8FD6110C190916EB009E2358 /* BibApp-ThULB-Info.plist */,
+				8FD611A8190916F0009E2358 /* BibApp-EAHJ-Info.plist */,
 				8FF2700416393BF200099665 /* InfoPlist.strings */,
 				8FF2700716393BF200099665 /* main.m */,
 				8FF2700916393BF200099665 /* bibapp-Prefix.pch */,
@@ -3436,7 +3436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp HI copy-Info.plist";
+				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp ThULB";
@@ -3457,7 +3457,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp HI copy-Info.plist";
+				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp ThULB";
@@ -3478,7 +3478,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp HI copy 2-Info.plist";
+				INFOPLIST_FILE = "BibApp-EAHJ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp EAHJ";
@@ -3499,7 +3499,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp HI copy 2-Info.plist";
+				INFOPLIST_FILE = "BibApp-EAHJ-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp EAHJ";
