@@ -213,8 +213,9 @@
                 } else if ([errorCode isEqualToString:@"502"]) {
                 }
                 NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:PAIA %@", errorCode];
-                BAConnector *accountLoanConnector = [BAConnector generateConnector];
-                [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                // What was the purpose of this call? Leads to an infinit loop in case of errors.
+                //BAConnector *accountLoanConnector = [BAConnector generateConnector];
+                //[accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:errorDisplay
                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
