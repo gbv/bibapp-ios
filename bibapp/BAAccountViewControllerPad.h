@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSString *currentAccount;
 @property (strong, nonatomic) NSString *currentPassword;
 @property (strong, nonatomic) NSString *currentToken;
+@property (strong, nonatomic) NSArray *currentScope;
 @property BOOL isLoggingIn;
 @property BOOL loggedIn;
 @property (weak, nonatomic) IBOutlet UITableView *loanTableView;
