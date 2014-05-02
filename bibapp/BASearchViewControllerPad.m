@@ -1050,7 +1050,15 @@
             }
             NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
             if ([resultPartsSlash count] > 1) {
-                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
+                BOOL firstPart = YES;
+                for (int i = 1; i < [resultPartsSlash count]; i++) {
+                   if (!firstPart) {
+                      [displayString appendString:@" / "];
+                   } else {
+                      firstPart = NO;
+                   }
+                   [displayString appendString:[resultPartsSlash objectAtIndex:i]];
+                }
             } else {
                 NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
                 if ([resultPartsDash count] > 1) {

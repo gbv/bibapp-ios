@@ -603,7 +603,7 @@
             NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
             [cell.storageLabel setText:storageString];
             if (self.appDelegate.isIOS7) {
-               [cell.checkbox setFrame:CGRectMake(306, 64, 23, 23)];
+               [cell.checkbox setFrame:CGRectMake(307, 64, 23, 23)];
             } else {
                [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
             }
