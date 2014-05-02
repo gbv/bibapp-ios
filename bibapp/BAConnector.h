@@ -48,5 +48,7 @@
 - (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate;
 - (BALocation *)parseLocation:(NSData *)locationData ForUri:(NSString *)uri;
 - (BALocation *)loadLocationFromCacheForUri:(NSString *)uri;
+- (BOOL)checkScope:(NSString *)scope;
+- (void)displayError;
 
 @end

@@ -222,10 +222,14 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadLoanList"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkScope:@"read_items"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -237,10 +241,14 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadFees"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkScope:@"read_fees"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -248,10 +256,14 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadPatron"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkScope:@"read_patron"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -264,30 +276,34 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRequestDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	
-   NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"{\"doc\":["];
-    
-   for (BADocumentItem *tempDocumentItem in docs) {
-      NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      [jsonString appendString:tempString];
+   if ([self checkScope:@"write_items"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
       
-      if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
-      {
-         [jsonString appendString:@","];
+      NSMutableString*jsonString = [[NSMutableString alloc] init];
+      [jsonString appendString:@"{\"doc\":["];
+       
+      for (BADocumentItem *tempDocumentItem in docs) {
+         NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
+         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
+         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+         [jsonString appendString:tempString];
+         
+         if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
+         {
+            [jsonString appendString:@","];
+         }
       }
-   }
-   [jsonString appendString:@"]}"];
-   
-   NSUInteger contentLength = [jsonString length];
-   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-   
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+      [jsonString appendString:@"]}"];
+      
+      NSUInteger contentLength = [jsonString length];
+      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+      
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -295,30 +311,34 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRenewDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	
-   NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"{\"doc\":["];
-
-   for (BAEntryWork *tempEntry in docs) {
-      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      [jsonString appendString:tempString];
+   if ([self checkScope:@"write_items"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
       
-      if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
-      {
-         [jsonString appendString:@","];
+      NSMutableString*jsonString = [[NSMutableString alloc] init];
+      [jsonString appendString:@"{\"doc\":["];
+
+      for (BAEntryWork *tempEntry in docs) {
+         NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+         [jsonString appendString:tempString];
+         
+         if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+         {
+            [jsonString appendString:@","];
+         }
       }
-   }
-   [jsonString appendString:@"]}"];
-   
-   NSUInteger contentLength = [jsonString length];
-   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-   
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+      [jsonString appendString:@"]}"];
+      
+      NSUInteger contentLength = [jsonString length];
+      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+      
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -326,30 +346,34 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountCancelDocs"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-	
-   NSMutableString*jsonString = [[NSMutableString alloc] init];
-   [jsonString appendString:@"{\"doc\":["];
-
-   for (BAEntryWork *tempEntry in docs) {
-      NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-      NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-      NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-      [jsonString appendString:tempString];
+   if ([self checkScope:@"write_items"]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
       
-      if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
-      {
-         [jsonString appendString:@","];
+      NSMutableString*jsonString = [[NSMutableString alloc] init];
+      [jsonString appendString:@"{\"doc\":["];
+
+      for (BAEntryWork *tempEntry in docs) {
+         NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+         [jsonString appendString:tempString];
+         
+         if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+         {
+            [jsonString appendString:@","];
+         }
       }
-   }
-   [jsonString appendString:@"]}"];
-   
-   NSUInteger contentLength = [jsonString length];
-   NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-   
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+      [jsonString appendString:@"]}"];
+      
+      NSUInteger contentLength = [jsonString length];
+      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+      
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   } else {
+      [self displayError];
    }
 }
 
@@ -569,6 +593,24 @@ static BAConnector *sharedConnector = nil;
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
 {
     //used for searchCount.
+}
+
+- (BOOL)checkScope:(NSString *)scope {
+   BOOL isAllowed = NO;
+   for (NSString *tempScope in self.appDelegate.currentScope) {
+      if ([tempScope isEqualToString:scope]) {
+         isAllowed= YES;
+      }
+   }
+   return isAllowed;
+}
+
+- (void)displayError {
+   //[self.connectorDelegate commandIsNotInScope:self.command];
+   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                   message:@"Ihr Konto hat nicht die erforderlichen Berechtigungen für diesen Vorgang."
+                                                  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+   [alert show];
 }
 
 @end

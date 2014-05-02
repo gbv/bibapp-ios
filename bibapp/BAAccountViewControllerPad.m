@@ -243,7 +243,8 @@
                 [self.appDelegate setCurrentPassword:self.currentPassword];
                 [self.appDelegate setCurrentToken:self.currentToken];
                 [self setCurrentScope:[[json objectForKey:@"scope"] componentsSeparatedByString:@" "]];
-
+                [self.appDelegate setCurrentScope: self.currentScope];
+               
                 BAConnector *accountPatronConnector = [BAConnector generateConnector];
                 [accountPatronConnector accountLoadPatronWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
                 BAConnector *accountLoanConnector = [BAConnector generateConnector];

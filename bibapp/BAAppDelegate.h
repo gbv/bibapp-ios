@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *currentAccount;
 @property (strong, nonatomic) NSString *currentPassword;
 @property (strong, nonatomic) NSString *currentToken;
+@property (strong, nonatomic) NSArray *currentScope;
 @property (strong, nonatomic) BAAccount *account;
 @property (strong, nonatomic) BAOptions *options;
 @property (strong, nonatomic) NSMutableArray *locations;
