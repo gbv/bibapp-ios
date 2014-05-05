@@ -596,7 +596,7 @@ static BAConnector *sharedConnector = nil;
 }
 
 - (BOOL)checkScope:(NSString *)scope {
-   BOOL isAllowed = NO;
+   BOOL isAllowed = YES;
    for (NSString *tempScope in self.appDelegate.currentScope) {
       if ([tempScope isEqualToString:scope]) {
          isAllowed= YES;
