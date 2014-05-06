@@ -1024,7 +1024,7 @@
         int currentLine = 0;
         
         if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\](?=\\n)" options:NSRegularExpressionCaseInsensitive error:nil];
             NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
             if ([resultsLine count] > 0) {
                 currentLine++;
@@ -1043,7 +1043,17 @@
             if ([resultsLine count] > 0) {
                 NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
                 if ([resultPartsBracket count] > 0) {
-                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
+                    NSMutableString *tempBracketString = [[NSMutableString alloc] init];
+                    BOOL firstPart = YES;
+                    for (int i = 1; i < [resultPartsBracket count]; i++) {
+                       if (!firstPart) {
+                          [tempBracketString appendString:@"]"];
+                       } else {
+                          firstPart = NO;
+                       }
+                       [tempBracketString appendString:[resultPartsBracket objectAtIndex:i]];
+                    }
+                    [newStringArray setObject:tempBracketString atIndexedSubscript:currentLine];
                 } else {
                     [newStringArray setObject:@"" atIndexedSubscript:currentLine];
                 }
