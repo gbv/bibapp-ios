@@ -196,4 +196,8 @@
     }
 }
 
+- (void)commandIsNotInScope:(NSString *)command {
+   // ToDo: reset state if necessary
+}
+
 @end

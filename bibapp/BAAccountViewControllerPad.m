@@ -210,18 +210,14 @@
                 NSString *errorCode = [[json objectForKey:@"code"] stringValue];
                 if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
                     [self loginActionWithMessage:@""];
-                } else if ([errorCode isEqualToString:@"403"]) {
-                } else if ([errorCode isEqualToString:@"502"]) {
-                }
-                NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:PAIA %@", errorCode];
-                // What was the purpose of this call? Leads to an infinit loop in case of errors.
-                //BAConnector *accountLoanConnector = [BAConnector generateConnector];
-                //[accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                } else {
+                   NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
+                   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:errorDisplay
                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert setTag:20];
-                [alert show];
+                   [alert setTag:20];
+                   [alert show];
+                }
             } else {
                 self.isLoggingIn = NO;
                 [self setCurrentPassword:nil];
@@ -525,9 +521,9 @@
       }
       for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
          if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
-            if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
-               [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
-            }
+            //if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
+            //   [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
+            //}
             [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
          }
       }
@@ -838,6 +834,10 @@
    [self.loanRefreshControl.superview sendSubviewToBack:self.loanRefreshControl];
    [self.reservationRefreshControl.superview sendSubviewToBack:self.reservationRefreshControl];
    [self.feeRefreshControl.superview sendSubviewToBack:self.feeRefreshControl];
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   // ToDo: reset state if necessary
 }
 
 @end

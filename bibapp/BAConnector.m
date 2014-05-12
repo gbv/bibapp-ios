@@ -596,7 +596,7 @@ static BAConnector *sharedConnector = nil;
 }
 
 - (BOOL)checkScope:(NSString *)scope {
-   BOOL isAllowed = YES;
+   BOOL isAllowed = NO;
    for (NSString *tempScope in self.appDelegate.currentScope) {
       if ([tempScope isEqualToString:scope]) {
          isAllowed= YES;
@@ -606,7 +606,7 @@ static BAConnector *sharedConnector = nil;
 }
 
 - (void)displayError {
-   //[self.connectorDelegate commandIsNotInScope:self.command];
+   [self.connectorDelegate commandIsNotInScope:self.command];
    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                    message:@"Ihr Konto hat nicht die erforderlichen Berechtigungen für diesen Vorgang."
                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

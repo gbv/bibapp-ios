@@ -47,4 +47,8 @@
    [self.locationConnector.currentConnection cancel];
 }
 
+- (void)commandIsNotInScope:(NSString *)command {
+   // ToDo: reset state if necessary
+}
+
 @end
