@@ -209,6 +209,7 @@
             if (![command isEqualToString:@"login"]) {
                 NSString *errorCode = [[json objectForKey:@"code"] stringValue];
                 if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
+                    NSLog(@"error: %@ -> auto login ...", errorCode);
                     [self loginActionWithMessage:@""];
                 } else {
                    NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
@@ -837,7 +838,17 @@
 }
 
 - (void)commandIsNotInScope:(NSString *)command {
-   // ToDo: reset state if necessary
+   if ([command isEqualToString:@"accountRenewDocs"]) {
+      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountLoanConnector = [BAConnector generateConnector];
+      [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   } else if ([command isEqualToString:@"accountCancelDocs"]) {
+      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountLoanConnector = [BAConnector generateConnector];
+      [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   }
 }
 
 @end

@@ -609,7 +609,7 @@ static BAConnector *sharedConnector = nil;
    [self.connectorDelegate commandIsNotInScope:self.command];
    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                    message:@"Ihr Konto hat nicht die erforderlichen Berechtigungen für diesen Vorgang."
-                                                  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
    [alert show];
 }
 
