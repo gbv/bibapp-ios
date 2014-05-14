@@ -205,7 +205,6 @@
             }
         }
         if (foundError) {
-            // more detailed when real error codes are implemented
             if (![command isEqualToString:@"login"]) {
                 NSString *errorCode = [[json objectForKey:@"code"] stringValue];
                 if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {

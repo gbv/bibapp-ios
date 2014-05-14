@@ -1672,9 +1672,9 @@
 		8FED45E916D2352B0056CD88 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */,
 				8F2190B716B2B05F00512C85 /* BAAccountTableHeaderTextView.h */,
 				8F2190B816B2B05F00512C85 /* BAAccountTableHeaderTextView.m */,
+				8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */,
 				8FFFCFDE1667B23700326BE9 /* BADocumentItemCell.h */,
 				8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */,
 				8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */,

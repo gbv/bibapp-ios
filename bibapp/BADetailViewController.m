@@ -387,74 +387,92 @@
         [((BAItemDetail *)self.view).detailTableView reloadData];
         ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
     } else if ([command isEqualToString:@"getUNAPIDetailsIsbd"]) {
-        NSString *resultString = [[NSString alloc] initWithData:(NSData *)result encoding:NSASCIIStringEncoding];
-        
-        const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
-        NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
-        NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
-        
-        NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
-        
-        int currentLine = 0;
-        
-        if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
-            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
-            if ([resultsLine count] > 0) {
-                currentLine++;
-            }
-        }
-        
-        if ([newStringArray count] > currentLine) {
-            if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
-                currentLine++;
-            }
-        }
-        
-        if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
-            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
-            if ([resultsLine count] > 0) {
-                NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
-                if ([resultPartsBracket count] > 0) {
-                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
-                } else {
-                    [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+       NSString *resultString = [[NSString alloc] initWithData:(NSData *)result encoding:NSASCIIStringEncoding];
+       
+       const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
+       NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
+       NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
+       
+       NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
+       
+       int currentLine = 0;
+       
+       if ([newStringArray count] > currentLine) {
+          NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\](?=\\n)" options:NSRegularExpressionCaseInsensitive error:nil];
+          NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+          if ([resultsLine count] > 0) {
+             currentLine++;
+          }
+       }
+       
+       if ([newStringArray count] > currentLine) {
+          if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
+             currentLine++;
+          }
+       }
+       
+       if ([newStringArray count] > currentLine) {
+          NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+          NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+          if ([resultsLine count] > 0) {
+             NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
+             if ([resultPartsBracket count] > 0) {
+                NSMutableString *tempBracketString = [[NSMutableString alloc] init];
+                BOOL firstPart = YES;
+                for (int i = 1; i < [resultPartsBracket count]; i++) {
+                   if (!firstPart) {
+                      [tempBracketString appendString:@"]"];
+                   } else {
+                      firstPart = NO;
+                   }
+                   [tempBracketString appendString:[resultPartsBracket objectAtIndex:i]];
                 }
-            }
-            NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
-            if ([resultPartsSlash count] > 1) {
-                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
-            } else {
+                [newStringArray setObject:tempBracketString atIndexedSubscript:currentLine];
+             } else {
+                [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+             }
+          }
+          NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
+          if ([resultPartsSlash count] > 1) {
+             BOOL firstPart = YES;
+             for (int i = 1; i < [resultPartsSlash count]; i++) {
+                if (!firstPart) {
+                   [displayString appendString:@" / "];
+                } else {
+                   firstPart = NO;
+                }
+                [displayString appendString:[resultPartsSlash objectAtIndex:i]];
+             }
+          } else {
+             NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+             if ([resultPartsDash count] > 1) {
+                [displayString appendString:[resultPartsDash objectAtIndex:1]];
+             } else {
+                [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+             }
+          }
+       }
+       
+       currentLine++;
+       
+       if ([newStringArray count] > currentLine) {
+          NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
+          if ([resultPartsCongress count] > 1) {
+             [displayString appendString:[resultPartsCongress objectAtIndex:1]];
+          } else {
+             if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
                 NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
                 if ([resultPartsDash count] > 1) {
-                    [displayString appendString:[resultPartsDash objectAtIndex:1]];
-                } else {
-                    [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+                   [displayString appendString:[resultPartsDash objectAtIndex:1]];
                 }
-            }
-        }
-        
-        currentLine++;
-        
-        if ([newStringArray count] > currentLine) {
-            NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
-            if ([resultPartsCongress count] > 1) {
-                [displayString appendString:[resultPartsCongress objectAtIndex:1]];
-            } else {
-                if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
-                    NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
-                    if ([resultPartsDash count] > 1) {
-                        [displayString appendString:[resultPartsDash objectAtIndex:1]];
-                    }
-                }
-            }
-        }
-        
+             }
+          }
+       }
+       
         [self.currentEntry setInfoText:displayString];
         self.didLoadISBD = YES;
         [((BAItemDetail *)self.view).detailTableView reloadData];
-        
+       
         [((BAItemDetail *)self.view).detailTableView beginUpdates];
         [((BAItemDetail *)self.view).detailTableView reloadRowsAtIndexPaths:0 withRowAnimation:UITableViewRowAnimationNone];
         [((BAItemDetail *)self.view).detailTableView endUpdates];
