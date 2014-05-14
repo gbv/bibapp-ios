@@ -139,7 +139,7 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="S0m-BL-wOg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="BCH-B3-2JK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="BCH-B3-2JK">
                             <connections>
                                 <action selector="actionButton:" destination="rmh-MV-fVc" id="oVi-A7-aYa"/>
                             </connections>
