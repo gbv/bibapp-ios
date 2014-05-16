@@ -261,6 +261,7 @@
                 [tempEntryWork setQueue:[document objectForKey:@"queue"]];
                 [tempEntryWork setRenewal:[document objectForKey:@"renewals"]];
                 [tempEntryWork setStorage:[document objectForKey:@"storage"]];
+                [tempEntryWork setStatus:[document objectForKey:@"status"]];
                
                 NSArray *matchesDayFirst;
                 NSArray *matchesYearFirst;
@@ -597,8 +598,9 @@
             [cell.queueLabel setText:queueString];
             NSString *renewalString = [NSString stringWithFormat:@"%@", item.renewal];
             [cell.renewalLabel setText:renewalString];
-            NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
-            [cell.storageLabel setText:storageString];
+            //NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
+            //[cell.storageLabel setText:storageString];
+            [cell.storageLabel setText:[item statusDisplay]];
             if (self.appDelegate.isIOS7) {
                [cell.checkbox setFrame:CGRectMake(307, 64, 23, 23)];
             } else {

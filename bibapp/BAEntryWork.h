@@ -26,6 +26,7 @@
 @property (strong, nonatomic) NSString *queue;
 @property (strong, nonatomic) NSString *renewal;
 @property (strong, nonatomic) NSString *storage;
+@property (strong, nonatomic) NSNumber *status;
 @property (strong, nonatomic) NSString *toc;
 @property (strong, nonatomic) NSMutableArray *tocArray;
 @property (strong, nonatomic) NSString *onlineLocation;
@@ -42,5 +43,6 @@
 @property (strong, nonatomic) NSString *isbn;
 
 - (UIImage *)mediaIcon;
+- (NSString *)statusDisplay;
 
 @end

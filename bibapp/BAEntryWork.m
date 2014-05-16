@@ -26,6 +26,7 @@
 @synthesize queue;
 @synthesize renewal;
 @synthesize storage;
+@synthesize status;
 @synthesize onlineLocation;
 @synthesize toc;
 @synthesize tocArray;
@@ -145,6 +146,32 @@
         }
     }
     return [UIImage imageNamed:self.matcode];
+}
+
+- (NSString *)statusDisplay {
+   /*
+    0 - "verfügbar" (sollte im Nutzerkonto aber nicht vorkommen)
+    1 - "vorgemerkt"
+    2 - "bestellt"
+    3 - "ausgeliehen"
+    4 - "abholbereit"
+    5 - "abgelehnt" (sollte im Nutzerkonto aber nicht vorkommen)
+    */
+   NSString *result;
+   if ([self.status integerValue] == 0) {
+      result = @"verfügbar";
+   } else if ([self.status integerValue] == 1) {
+      result = @"vorgemerkt";
+   } else if ([self.status integerValue] == 2) {
+      result = @"bestellt";
+   } else if ([self.status integerValue] == 3) {
+      result = @"ausgeliehen";
+   } else if ([self.status integerValue] == 4) {
+      result = @"abholbereit";
+   } else if ([self.status integerValue] == 5) {
+      result = @"abgelehnt";
+   }
+   return result;
 }
 
 @end
