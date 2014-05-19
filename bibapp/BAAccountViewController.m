@@ -196,6 +196,7 @@
                 [tempEntryWork setQueue:[document objectForKey:@"queue"]];
                 [tempEntryWork setRenewal:[document objectForKey:@"renewals"]];
                 [tempEntryWork setStorage:[document objectForKey:@"storage"]];
+                [tempEntryWork setStatus:[document objectForKey:@"status"]];
                 
                 NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
                 NSArray* matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
@@ -453,8 +454,9 @@
             [cell.queueLabel setText:queueString];
             NSString *renewalString = [NSString stringWithFormat:@"%@", item.renewal];
             [cell.renewalLabel setText:renewalString];
-            NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
-            [cell.storageLabel setText:storageString];
+            //NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
+            //[cell.storageLabel setText:storageString];
+            [cell.storageLabel setText:[item statusDisplay]];
             if (self.appDelegate.isIOS7) {
                [cell.checkbox setFrame:CGRectMake(287, 64, 23, 23)];
             } else {
