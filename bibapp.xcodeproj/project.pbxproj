@@ -87,6 +87,155 @@
 		8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1D8345192A2E7000A9898D /* BAConfigurationThULB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD611AA1909182D009E2358 /* BAConfigurationThULB.m */; };
+		8F1D8346192A2E7000A9898D /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
+		8F1D8347192A2E7000A9898D /* BAConfigurationEAHJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD611AD1909183E009E2358 /* BAConfigurationEAHJ.m */; };
+		8F1D8348192A2E7000A9898D /* BAAccountTableHeaderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2190B816B2B05F00512C85 /* BAAccountTableHeaderTextView.m */; };
+		8F1D8349192A2E7000A9898D /* BADocumentItemElementCellNonLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5D0C216AFDE230024027C /* BADocumentItemElementCellNonLocal.m */; };
+		8F1D834A192A2E7000A9898D /* BAImpressumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA876E1682054D005A9962 /* BAImpressumCell.m */; };
+		8F1D834B192A2E7000A9898D /* BAImpressumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA87681681FF49005A9962 /* BAImpressumTableViewController.m */; };
+		8F1D834C192A2E7000A9898D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1101F4165CEEA8008A8A46 /* GDataXMLNode.m */; };
+		8F1D834D192A2E7000A9898D /* BAConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47E0B16404B4B00965F12 /* BAConnector.m */; };
+		8F1D834E192A2E7000A9898D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2700716393BF200099665 /* main.m */; };
+		8F1D834F192A2E7000A9898D /* BAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2700B16393BF200099665 /* BAAppDelegate.m */; };
+		8F1D8350192A2E7000A9898D /* bibapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2701316393BF200099665 /* bibapp.xcdatamodeld */; };
+		8F1D8351192A2E7000A9898D /* BAEntryWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7170163D4F1200FF0A57 /* BAEntryWork.m */; };
+		8F1D8352192A2E7000A9898D /* BASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7176163D629100FF0A57 /* BASearchViewController.m */; };
+		8F1D8353192A2E7000A9898D /* BADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A717D163D859B00FF0A57 /* BADetailViewController.m */; };
+		8F1D8354192A2E7000A9898D /* BAAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7180163D93A300FF0A57 /* BAAccountViewController.m */; };
+		8F1D8355192A2E7000A9898D /* BAListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7183163DA13100FF0A57 /* BAListTableViewController.m */; };
+		8F1D8356192A2E7000A9898D /* BAItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A131D163FD39C00D0B6F1 /* BAItemCell.m */; };
+		8F1D8357192A2E7000A9898D /* BAItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A1326163FE2F000D0B6F1 /* BAItemDetail.m */; };
+		8F1D8358192A2E7000A9898D /* BAItemDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A132C1640077000D0B6F1 /* BAItemDetailCell.m */; };
+		8F1D8359192A2E7000A9898D /* BALocationViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD47E1D16407D7F00965F12 /* BALocationViewControllerIPhone.m */; };
+		8F1D835A192A2E7000A9898D /* BAInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6F21666075F0017AC81 /* BAInfoTableViewController.m */; };
+		8F1D835B192A2E7000A9898D /* BAInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6F8166611DD0017AC81 /* BAInfoCell.m */; };
+		8F1D835C192A2E7000A9898D /* BAInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6FB1666158A0017AC81 /* BAInfoItem.m */; };
+		8F1D835D192A2E7000A9898D /* BADocumentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F24E6FE166661590017AC81 /* BADocumentItem.m */; };
+		8F1D835E192A2E7000A9898D /* BADocumentItemElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFC31667593800326BE9 /* BADocumentItemElement.m */; };
+		8F1D835F192A2E7000A9898D /* BADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFC71667673600326BE9 /* BADocument.m */; };
+		8F1D8360192A2E7000A9898D /* BADocumentItemElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFCC1667860700326BE9 /* BADocumentItemElementCell.m */; };
+		8F1D8361192A2E7000A9898D /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
+		8F1D8362192A2E7000A9898D /* BADocumentElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC82E31668D11F0054D0D5 /* BADocumentElement.m */; };
+		8F1D8363192A2E7000A9898D /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD76DD6166A59D000814DB9 /* BAEntry.m */; };
+		8F1D8364192A2E7000A9898D /* BAAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F052301166C96D600AB6D63 /* BAAccount.m */; };
+		8F1D8365192A2E7000A9898D /* BAItemAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */; };
+		8F1D8366192A2E7000A9898D /* BAFee.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20DE166E1B2700E74231 /* BAFee.m */; };
+		8F1D8367192A2E7000A9898D /* BAFeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20E3166E1EDB00E74231 /* BAFeeCell.m */; };
+		8F1D8368192A2E7000A9898D /* BAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965382166E93B100CA5D50 /* BAOptions.m */; };
+		8F1D8369192A2E7000A9898D /* BAOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F965388166E97A900CA5D50 /* BAOptionsViewController.m */; };
+		8F1D836A192A2E7000A9898D /* BAItemDetailTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5BFEB166F85A50039AB6C /* BAItemDetailTitleCell.m */; };
+		8F1D836B192A2E7000A9898D /* BACoverViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F37710C1670B76E00BC066D /* BACoverViewControllerIPhone.m */; };
+		8F1D836C192A2E7000A9898D /* BATocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */; };
+		8F1D836D192A2E7000A9898D /* BAPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD499BA168310DA008FC33F /* BAPDFViewController.m */; };
+		8F1D836E192A2E7000A9898D /* BALocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D9F9016B6C2E5000CED81 /* BALocation.m */; };
+		8F1D836F192A2E7000A9898D /* BAContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */; };
+		8F1D8370192A2E7000A9898D /* BALocationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B9DCF16C3BEE50014A653 /* BALocationTableViewController.m */; };
+		8F1D8371192A2E7000A9898D /* BASearchViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */; };
+		8F1D8372192A2E7000A9898D /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
+		8F1D8373192A2E7000A9898D /* BAAccountTableHeaderViewPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED416D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m */; };
+		8F1D8374192A2E7000A9898D /* BADocumentItemElementCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A7916DCBF9C004D33B7 /* BADocumentItemElementCellPad.m */; };
+		8F1D8375192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A7D16DCBFB5004D33B7 /* BADocumentItemElementCellNonLocalPad.m */; };
+		8F1D8376192A2E7000A9898D /* BALocationViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A8116DCF4C0004D33B7 /* BALocationViewControllerPad.m */; };
+		8F1D8377192A2E7000A9898D /* BALocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A8616DCF992004D33B7 /* BALocationViewController.m */; };
+		8F1D8378192A2E7000A9898D /* BACoverViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A8A16DD06FF004D33B7 /* BACoverViewControllerPad.m */; };
+		8F1D8379192A2E7000A9898D /* BACoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE94A8E16DD086E004D33B7 /* BACoverViewController.m */; };
+		8F1D837A192A2E7000A9898D /* BAListTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7C10016F365030073D037 /* BAListTableViewControllerPad.m */; };
+		8F1D837B192A2E7000A9898D /* BAOptionsViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9812516F7211000328531 /* BAOptionsViewControllerPad.m */; };
+		8F1D837C192A2E7000A9898D /* BAInfoViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9812916F7241D00328531 /* BAInfoViewControllerPad.m */; };
+		8F1D837D192A2E7000A9898D /* BAInfoCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9813016F7395100328531 /* BAInfoCellPad.m */; };
+		8F1D837E192A2E7000A9898D /* BAImpressumCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9813716F74A6300328531 /* BAImpressumCellPad.m */; };
+		8F1D837F192A2E7000A9898D /* BALocationCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9813E16F7589F00328531 /* BALocationCellPad.m */; };
+		8F1D8380192A2E7000A9898D /* BATocTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4F8EC16F89C9F00193F33 /* BATocTableViewControllerPad.m */; };
+		8F1D8381192A2E7000A9898D /* BAConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEC8616F9D64A00E28666 /* BAConfiguration.m */; };
+		8F1D8382192A2E7000A9898D /* BAConfigurationLG.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEC8A16F9D69600E28666 /* BAConfigurationLG.m */; };
+		8F1D8383192A2E7000A9898D /* BAConfigurationHI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAEC8E16F9D71C00E28666 /* BAConfigurationHI.m */; };
+		8F1D8384192A2E7000A9898D /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
+		8F1D8385192A2E7000A9898D /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
+		8F1D8386192A2E7000A9898D /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
+		8F1D8387192A2E7000A9898D /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
+		8F1D8388192A2E7000A9898D /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
+		8F1D8389192A2E7000A9898D /* BAConfigurationBLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A773E1781C24400CCF7DB /* BAConfigurationBLS.m */; };
+		8F1D838A192A2E7000A9898D /* BAConfigurationIL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77411781C25400CCF7DB /* BAConfigurationIL.m */; };
+		8F1D838B192A2E7000A9898D /* BAConfigurationHAWK.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */; };
+		8F1D838C192A2E7000A9898D /* BAOptionsTableViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F94D71782EE6800723E1E /* BAOptionsTableViewControllerPad.m */; };
+		8F1D838D192A2E7000A9898D /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
+		8F1D838E192A2E7000A9898D /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
+		8F1D838F192A2E7000A9898D /* BACatalogueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6057DB17843F45004D3088 /* BACatalogueTableViewCell.m */; };
+		8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1101F6165CEFA2008A8A46 /* libxml2.dylib */; };
+		8F1D8392192A2E7000A9898D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0DD14F16BAA590005DEB43 /* CoreLocation.framework */; };
+		8F1D8393192A2E7000A9898D /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */; };
+		8F1D8394192A2E7000A9898D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD47E1A16407C4F00965F12 /* MapKit.framework */; };
+		8F1D8395192A2E7000A9898D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD47E0F1640510400965F12 /* QuartzCore.framework */; };
+		8F1D8396192A2E7000A9898D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FF916393BF100099665 /* UIKit.framework */; };
+		8F1D8397192A2E7000A9898D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
+		8F1D8398192A2E7000A9898D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
+		8F1D8399192A2E7000A9898D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
+		8F1D839B192A2E7000A9898D /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
+		8F1D839C192A2E7000A9898D /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
+		8F1D839D192A2E7000A9898D /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
+		8F1D839E192A2E7000A9898D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
+		8F1D839F192A2E7000A9898D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
+		8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
+		8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
+		8F1D83A2192A2E7000A9898D /* bibapp~iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */; };
+		8F1D83A3192A2E7000A9898D /* BAItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A1312163FD16E00D0B6F1 /* BAItemCell.xib */; };
+		8F1D83A4192A2E7000A9898D /* BAItemDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A1323163FE22E00D0B6F1 /* BAItemDetail.xib */; };
+		8F1D83A5192A2E7000A9898D /* BAItemDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A13281640072F00D0B6F1 /* BAItemDetailCell.xib */; };
+		8F1D83A6192A2E7000A9898D /* BAInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F24E6F5166611AB0017AC81 /* BAInfoCell.xib */; };
+		8F1D83A7192A2E7000A9898D /* BADocumentItemElementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFC91667846300326BE9 /* BADocumentItemElementCell.xib */; };
+		8F1D83A8192A2E7000A9898D /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
+		8F1D83A9192A2E7000A9898D /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
+		8F1D83AA192A2E7000A9898D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
+		8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
+		8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
+		8F1D83AD192A2E7000A9898D /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
+		8F1D83AE192A2E7000A9898D /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
+		8F1D83AF192A2E7000A9898D /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
+		8F1D83B0192A2E7000A9898D /* menuIconOptions.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B216B1448300844658 /* menuIconOptions.png */; };
+		8F1D83B1192A2E7000A9898D /* menuIconSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B316B1448300844658 /* menuIconSearch.png */; };
+		8F1D83B2192A2E7000A9898D /* menuIconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */; };
+		8F1D83B3192A2E7000A9898D /* menuIconInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7616B68AD8000CED81 /* menuIconInfo@2x.png */; };
+		8F1D83B4192A2E7000A9898D /* menuIconList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7716B68AD8000CED81 /* menuIconList@2x.png */; };
+		8F1D83B5192A2E7000A9898D /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
+		8F1D83B6192A2E7000A9898D /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
+		8F1D83B7192A2E7000A9898D /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
+		8F1D83B8192A2E7000A9898D /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
+		8F1D83B9192A2E7000A9898D /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
+		8F1D83BA192A2E7000A9898D /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
+		8F1D83BB192A2E7000A9898D /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
+		8F1D83BC192A2E7000A9898D /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
+		8F1D83BD192A2E7000A9898D /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
+		8F1D83BE192A2E7000A9898D /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
+		8F1D83BF192A2E7000A9898D /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
+		8F1D83C0192A2E7000A9898D /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
+		8F1D83C1192A2E7000A9898D /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
+		8F1D83C2192A2E7000A9898D /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
+		8F1D83C3192A2E7000A9898D /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
+		8F1D83C4192A2E7000A9898D /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
+		8F1D83C5192A2E7000A9898D /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
+		8F1D83C6192A2E7000A9898D /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
+		8F1D83C7192A2E7000A9898D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
+		8F1D83C8192A2E7000A9898D /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
+		8F1D83C9192A2E7000A9898D /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
+		8F1D83CA192A2E7000A9898D /* BAAccountTableHeaderViewPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED016D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib */; };
+		8F1D83CB192A2E7000A9898D /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED716D6569100EE3BF9 /* actionButton.png */; };
+		8F1D83CC192A2E7000A9898D /* Buch_250_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A6D16DCAE1F004D33B7 /* Buch_250_gradient.png */; };
+		8F1D83CD192A2E7000A9898D /* BADocumentItemElementCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A7216DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib */; };
+		8F1D83CE192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A7516DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib */; };
+		8F1D83CF192A2E7000A9898D /* BAListTableViewControllerPad.h in Resources */ = {isa = PBXBuildFile; fileRef = 8FD7C0FD16F364F20073D037 /* BAListTableViewControllerPad.h */; };
+		8F1D83D0192A2E7000A9898D /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD7C10316F37EC00073D037 /* gear.png */; };
+		8F1D83D1192A2E7000A9898D /* gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD7C10416F37EC00073D037 /* gear2.png */; };
+		8F1D83D2192A2E7000A9898D /* BAInfoCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE9812C16F7393600328531 /* BAInfoCellPad.xib */; };
+		8F1D83D3192A2E7000A9898D /* BAImpressumCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE9813316F74A2700328531 /* BAImpressumCellPad.xib */; };
+		8F1D83D4192A2E7000A9898D /* BALocationCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE9813A16F7588000328531 /* BALocationCellPad.xib */; };
+		8F1D83D5192A2E7000A9898D /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
+		8F1D83D6192A2E7000A9898D /* BATocListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */; };
+		8F1D83D7192A2E7000A9898D /* iPadIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F95F170466E6002EA336 /* iPadIcon.png */; };
+		8F1D83D8192A2E7000A9898D /* iPadIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F961170466EE002EA336 /* iPadIcon@2x.png */; };
+		8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD873172695C800D66DE6 /* Icon-72.png */; };
+		8F1D83DA192A2E7000A9898D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */; };
+		8F1D83DB192A2E7000A9898D /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
 		8F1F20D4166DF5D500E74231 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F1F20D8166DF5FE00E74231 /* BAItemAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */; };
 		8F1F20DC166DF84200E74231 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
@@ -1096,6 +1245,8 @@
 		8F114087167F217000E033F6 /* BibApp HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1C6F9F1782F55A00D169FC /* BAOptionsCatalogueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsCatalogueTableViewController.h; sourceTree = "<group>"; };
 		8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsCatalogueTableViewController.m; sourceTree = "<group>"; };
+		8F1D83DF192A2E7000A9898D /* BibApp EAHJ copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp EAHJ copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1D83E0192A2E7200A9898D /* BibApp EAHJ copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp EAHJ copy-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp EAHJ copy-Info.plist"; sourceTree = "<absolute>"; };
 		8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemAccountCell.xib; sourceTree = "<group>"; };
 		8F1F20D6166DF5FE00E74231 /* BAItemAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAItemAccountCell.h; sourceTree = "<group>"; };
 		8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAItemAccountCell.m; sourceTree = "<group>"; };
@@ -1359,6 +1510,22 @@
 				8F11405F167F217000E033F6 /* Foundation.framework in Frameworks */,
 				8F114060167F217000E033F6 /* CoreGraphics.framework in Frameworks */,
 				8F114061167F217000E033F6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F1D8390192A2E7000A9898D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */,
+				8F1D8392192A2E7000A9898D /* CoreLocation.framework in Frameworks */,
+				8F1D8393192A2E7000A9898D /* QuickLook.framework in Frameworks */,
+				8F1D8394192A2E7000A9898D /* MapKit.framework in Frameworks */,
+				8F1D8395192A2E7000A9898D /* QuartzCore.framework in Frameworks */,
+				8F1D8396192A2E7000A9898D /* UIKit.framework in Frameworks */,
+				8F1D8397192A2E7000A9898D /* Foundation.framework in Frameworks */,
+				8F1D8398192A2E7000A9898D /* CoreGraphics.framework in Frameworks */,
+				8F1D8399192A2E7000A9898D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1779,6 +1946,7 @@
 				8FFF22C91786B8580077FC8B /* BibAppUnitTests */,
 				8FF26FF816393BF100099665 /* Frameworks */,
 				8FF26FF616393BF100099665 /* Products */,
+				8F1D83E0192A2E7200A9898D /* BibApp EAHJ copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1793,6 +1961,7 @@
 				8FFF22C51786B8580077FC8B /* BibAppUnitTests.octest */,
 				8FD6110B190916EA009E2358 /* BibApp ThULB.app */,
 				8FD611A7190916EF009E2358 /* BibApp EAHJ.app */,
+				8F1D83DF192A2E7000A9898D /* BibApp EAHJ copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1956,6 +2125,23 @@
 			productReference = 8F114087167F217000E033F6 /* BibApp HI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8F1D8343192A2E7000A9898D /* BibApp BUW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F1D83DC192A2E7000A9898D /* Build configuration list for PBXNativeTarget "BibApp BUW" */;
+			buildPhases = (
+				8F1D8344192A2E7000A9898D /* Sources */,
+				8F1D8390192A2E7000A9898D /* Frameworks */,
+				8F1D839A192A2E7000A9898D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BibApp BUW";
+			productName = bibapp;
+			productReference = 8F1D83DF192A2E7000A9898D /* BibApp EAHJ copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8F8A757E1781BF4700CCF7DB /* BibApp BLS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8A760E1781BF4700CCF7DB /* Build configuration list for PBXNativeTarget "BibApp BLS" */;
@@ -2107,6 +2293,7 @@
 				8F8A76A81781C0D800CCF7DB /* BibApp HAWK */,
 				8FD61071190916EA009E2358 /* BibApp ThULB */,
 				8FD6110D190916EF009E2358 /* BibApp EAHJ */,
+				8F1D8343192A2E7000A9898D /* BibApp BUW */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 			);
 		};
@@ -2182,6 +2369,78 @@
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
 				8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F1D839A192A2E7000A9898D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F1D839B192A2E7000A9898D /* BAAccountTableHeaderTextView.xib in Resources */,
+				8F1D839C192A2E7000A9898D /* BADocumentItemElementCellNonLocal.xib in Resources */,
+				8F1D839D192A2E7000A9898D /* BAImpressumCell.xib in Resources */,
+				8F1D839E192A2E7000A9898D /* InfoPlist.strings in Resources */,
+				8F1D839F192A2E7000A9898D /* Default.png in Resources */,
+				8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */,
+				8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */,
+				8F1D83A2192A2E7000A9898D /* bibapp~iphone.storyboard in Resources */,
+				8F1D83A3192A2E7000A9898D /* BAItemCell.xib in Resources */,
+				8F1D83A4192A2E7000A9898D /* BAItemDetail.xib in Resources */,
+				8F1D83A5192A2E7000A9898D /* BAItemDetailCell.xib in Resources */,
+				8F1D83A6192A2E7000A9898D /* BAInfoCell.xib in Resources */,
+				8F1D83A7192A2E7000A9898D /* BADocumentItemElementCell.xib in Resources */,
+				8F1D83A8192A2E7000A9898D /* BADocumentItemCell.xib in Resources */,
+				8F1D83A9192A2E7000A9898D /* BAItemAccountCell.xib in Resources */,
+				8F1D83AA192A2E7000A9898D /* Icon@2x.png in Resources */,
+				8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */,
+				8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */,
+				8F1D83AD192A2E7000A9898D /* BAItemDetailTitleCell.xib in Resources */,
+				8F1D83AE192A2E7000A9898D /* menuIconAccount.png in Resources */,
+				8F1D83AF192A2E7000A9898D /* menuIconList.png in Resources */,
+				8F1D83B0192A2E7000A9898D /* menuIconOptions.png in Resources */,
+				8F1D83B1192A2E7000A9898D /* menuIconSearch.png in Resources */,
+				8F1D83B2192A2E7000A9898D /* menuIconAccount@2x.png in Resources */,
+				8F1D83B3192A2E7000A9898D /* menuIconInfo@2x.png in Resources */,
+				8F1D83B4192A2E7000A9898D /* menuIconList@2x.png in Resources */,
+				8F1D83B5192A2E7000A9898D /* menuIconOptions@2x.png in Resources */,
+				8F1D83B6192A2E7000A9898D /* menuIconSearch@2x.png in Resources */,
+				8F1D83B7192A2E7000A9898D /* menuIconInfo.png in Resources */,
+				8F1D83B8192A2E7000A9898D /* mediaIconA.png in Resources */,
+				8F1D83B9192A2E7000A9898D /* mediaIconB.png in Resources */,
+				8F1D83BA192A2E7000A9898D /* mediaIconE.png in Resources */,
+				8F1D83BB192A2E7000A9898D /* mediaIconG.png in Resources */,
+				8F1D83BC192A2E7000A9898D /* mediaIconH.png in Resources */,
+				8F1D83BD192A2E7000A9898D /* mediaIconI.png in Resources */,
+				8F1D83BE192A2E7000A9898D /* mediaIconK.png in Resources */,
+				8F1D83BF192A2E7000A9898D /* mediaIconL.png in Resources */,
+				8F1D83C0192A2E7000A9898D /* mediaIconM.png in Resources */,
+				8F1D83C1192A2E7000A9898D /* mediaIconO.png in Resources */,
+				8F1D83C2192A2E7000A9898D /* mediaIconP.png in Resources */,
+				8F1D83C3192A2E7000A9898D /* mediaIconS.png in Resources */,
+				8F1D83C4192A2E7000A9898D /* mediaIconT.png in Resources */,
+				8F1D83C5192A2E7000A9898D /* mediaIconV.png in Resources */,
+				8F1D83C6192A2E7000A9898D /* mediaIconX.png in Resources */,
+				8F1D83C7192A2E7000A9898D /* Icon.png in Resources */,
+				8F1D83C8192A2E7000A9898D /* bibapp~ipad.storyboard in Resources */,
+				8F1D83C9192A2E7000A9898D /* transparentImage.png in Resources */,
+				8F1D83CA192A2E7000A9898D /* BAAccountTableHeaderViewPad.xib in Resources */,
+				8F1D83CB192A2E7000A9898D /* actionButton.png in Resources */,
+				8F1D83CC192A2E7000A9898D /* Buch_250_gradient.png in Resources */,
+				8F1D83CD192A2E7000A9898D /* BADocumentItemElementCellPad.xib in Resources */,
+				8F1D83CE192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				8F1D83CF192A2E7000A9898D /* BAListTableViewControllerPad.h in Resources */,
+				8F1D83D0192A2E7000A9898D /* gear.png in Resources */,
+				8F1D83D1192A2E7000A9898D /* gear2.png in Resources */,
+				8F1D83D2192A2E7000A9898D /* BAInfoCellPad.xib in Resources */,
+				8F1D83D3192A2E7000A9898D /* BAImpressumCellPad.xib in Resources */,
+				8F1D83D4192A2E7000A9898D /* BALocationCellPad.xib in Resources */,
+				8F1D83D5192A2E7000A9898D /* BATocCellPad.xib in Resources */,
+				8F1D83D6192A2E7000A9898D /* BATocListCell.xib in Resources */,
+				8F1D83D7192A2E7000A9898D /* iPadIcon.png in Resources */,
+				8F1D83D8192A2E7000A9898D /* iPadIcon@2x.png in Resources */,
+				8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */,
+				8F1D83DA192A2E7000A9898D /* Icon-72@2x.png in Resources */,
+				8F1D83DB192A2E7000A9898D /* BACatalogueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2741,6 +3000,88 @@
 				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
 				8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F1D8344192A2E7000A9898D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F1D8345192A2E7000A9898D /* BAConfigurationThULB.m in Sources */,
+				8F1D8346192A2E7000A9898D /* BATocViewControllerPad.m in Sources */,
+				8F1D8347192A2E7000A9898D /* BAConfigurationEAHJ.m in Sources */,
+				8F1D8348192A2E7000A9898D /* BAAccountTableHeaderTextView.m in Sources */,
+				8F1D8349192A2E7000A9898D /* BADocumentItemElementCellNonLocal.m in Sources */,
+				8F1D834A192A2E7000A9898D /* BAImpressumCell.m in Sources */,
+				8F1D834B192A2E7000A9898D /* BAImpressumTableViewController.m in Sources */,
+				8F1D834C192A2E7000A9898D /* GDataXMLNode.m in Sources */,
+				8F1D834D192A2E7000A9898D /* BAConnector.m in Sources */,
+				8F1D834E192A2E7000A9898D /* main.m in Sources */,
+				8F1D834F192A2E7000A9898D /* BAAppDelegate.m in Sources */,
+				8F1D8350192A2E7000A9898D /* bibapp.xcdatamodeld in Sources */,
+				8F1D8351192A2E7000A9898D /* BAEntryWork.m in Sources */,
+				8F1D8352192A2E7000A9898D /* BASearchViewController.m in Sources */,
+				8F1D8353192A2E7000A9898D /* BADetailViewController.m in Sources */,
+				8F1D8354192A2E7000A9898D /* BAAccountViewController.m in Sources */,
+				8F1D8355192A2E7000A9898D /* BAListTableViewController.m in Sources */,
+				8F1D8356192A2E7000A9898D /* BAItemCell.m in Sources */,
+				8F1D8357192A2E7000A9898D /* BAItemDetail.m in Sources */,
+				8F1D8358192A2E7000A9898D /* BAItemDetailCell.m in Sources */,
+				8F1D8359192A2E7000A9898D /* BALocationViewControllerIPhone.m in Sources */,
+				8F1D835A192A2E7000A9898D /* BAInfoTableViewController.m in Sources */,
+				8F1D835B192A2E7000A9898D /* BAInfoCell.m in Sources */,
+				8F1D835C192A2E7000A9898D /* BAInfoItem.m in Sources */,
+				8F1D835D192A2E7000A9898D /* BADocumentItem.m in Sources */,
+				8F1D835E192A2E7000A9898D /* BADocumentItemElement.m in Sources */,
+				8F1D835F192A2E7000A9898D /* BADocument.m in Sources */,
+				8F1D8360192A2E7000A9898D /* BADocumentItemElementCell.m in Sources */,
+				8F1D8361192A2E7000A9898D /* BADocumentItemCell.m in Sources */,
+				8F1D8362192A2E7000A9898D /* BADocumentElement.m in Sources */,
+				8F1D8363192A2E7000A9898D /* BAEntry.m in Sources */,
+				8F1D8364192A2E7000A9898D /* BAAccount.m in Sources */,
+				8F1D8365192A2E7000A9898D /* BAItemAccountCell.m in Sources */,
+				8F1D8366192A2E7000A9898D /* BAFee.m in Sources */,
+				8F1D8367192A2E7000A9898D /* BAFeeCell.m in Sources */,
+				8F1D8368192A2E7000A9898D /* BAOptions.m in Sources */,
+				8F1D8369192A2E7000A9898D /* BAOptionsViewController.m in Sources */,
+				8F1D836A192A2E7000A9898D /* BAItemDetailTitleCell.m in Sources */,
+				8F1D836B192A2E7000A9898D /* BACoverViewControllerIPhone.m in Sources */,
+				8F1D836C192A2E7000A9898D /* BATocViewController.m in Sources */,
+				8F1D836D192A2E7000A9898D /* BAPDFViewController.m in Sources */,
+				8F1D836E192A2E7000A9898D /* BALocation.m in Sources */,
+				8F1D836F192A2E7000A9898D /* BAContactTableViewController.m in Sources */,
+				8F1D8370192A2E7000A9898D /* BALocationTableViewController.m in Sources */,
+				8F1D8371192A2E7000A9898D /* BASearchViewControllerPad.m in Sources */,
+				8F1D8372192A2E7000A9898D /* BAAccountViewControllerPad.m in Sources */,
+				8F1D8373192A2E7000A9898D /* BAAccountTableHeaderViewPad.m in Sources */,
+				8F1D8374192A2E7000A9898D /* BADocumentItemElementCellPad.m in Sources */,
+				8F1D8375192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.m in Sources */,
+				8F1D8376192A2E7000A9898D /* BALocationViewControllerPad.m in Sources */,
+				8F1D8377192A2E7000A9898D /* BALocationViewController.m in Sources */,
+				8F1D8378192A2E7000A9898D /* BACoverViewControllerPad.m in Sources */,
+				8F1D8379192A2E7000A9898D /* BACoverViewController.m in Sources */,
+				8F1D837A192A2E7000A9898D /* BAListTableViewControllerPad.m in Sources */,
+				8F1D837B192A2E7000A9898D /* BAOptionsViewControllerPad.m in Sources */,
+				8F1D837C192A2E7000A9898D /* BAInfoViewControllerPad.m in Sources */,
+				8F1D837D192A2E7000A9898D /* BAInfoCellPad.m in Sources */,
+				8F1D837E192A2E7000A9898D /* BAImpressumCellPad.m in Sources */,
+				8F1D837F192A2E7000A9898D /* BALocationCellPad.m in Sources */,
+				8F1D8380192A2E7000A9898D /* BATocTableViewControllerPad.m in Sources */,
+				8F1D8381192A2E7000A9898D /* BAConfiguration.m in Sources */,
+				8F1D8382192A2E7000A9898D /* BAConfigurationLG.m in Sources */,
+				8F1D8383192A2E7000A9898D /* BAConfigurationHI.m in Sources */,
+				8F1D8384192A2E7000A9898D /* BATocCellPad.m in Sources */,
+				8F1D8385192A2E7000A9898D /* BADetailScrollViewController.m in Sources */,
+				8F1D8386192A2E7000A9898D /* BATocListTableViewController.m in Sources */,
+				8F1D8387192A2E7000A9898D /* BATocListCell.m in Sources */,
+				8F1D8388192A2E7000A9898D /* BAURLRequestService.m in Sources */,
+				8F1D8389192A2E7000A9898D /* BAConfigurationBLS.m in Sources */,
+				8F1D838A192A2E7000A9898D /* BAConfigurationIL.m in Sources */,
+				8F1D838B192A2E7000A9898D /* BAConfigurationHAWK.m in Sources */,
+				8F1D838C192A2E7000A9898D /* BAOptionsTableViewControllerPad.m in Sources */,
+				8F1D838D192A2E7000A9898D /* BAOptionsCatalogueTableViewController.m in Sources */,
+				8F1D838E192A2E7000A9898D /* BAOptionsNavigationController.m in Sources */,
+				8F1D838F192A2E7000A9898D /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3308,6 +3649,48 @@
 			};
 			name = Release;
 		};
+		8F1D83DD192A2E7000A9898D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "BibApp EAHJ copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_NAME = "BibApp EAHJ copy";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8F1D83DE192A2E7000A9898D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "BibApp EAHJ copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_NAME = "BibApp EAHJ copy";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		8F8A760F1781BF4700CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3650,6 +4033,15 @@
 			buildConfigurations = (
 				8F114085167F217000E033F6 /* Debug */,
 				8F114086167F217000E033F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F1D83DC192A2E7000A9898D /* Build configuration list for PBXNativeTarget "BibApp BUW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F1D83DD192A2E7000A9898D /* Debug */,
+				8F1D83DE192A2E7000A9898D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

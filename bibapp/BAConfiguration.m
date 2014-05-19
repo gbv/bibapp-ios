@@ -14,6 +14,7 @@
 #import "BAConfigurationHAWK.h"
 #import "BAConfigurationThULB.h"
 #import "BAConfigurationEAHJ.h"
+#import "BAConfigurationBUW.h"
 
 @implementation BAConfiguration
 
@@ -79,6 +80,8 @@
        currentConfiguration = [[BAConfigurationThULB alloc] init];
     } else if([bundleName isEqualToString:@"BibApp EAHJ"]){
        currentConfiguration = [[BAConfigurationEAHJ alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp BUW"]){
+       currentConfiguration = [[BAConfigurationBUW alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BibApp BUW.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>BibApp EAHJ.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -58,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>8F114037167F217000E033F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F1D8343192A2E7000A9898D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
