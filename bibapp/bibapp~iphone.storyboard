@@ -71,7 +71,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-EW-Jr5">
-                                <rect key="frame" x="0.0" y="137" width="320" height="295"/>
+                                <rect key="frame" x="0.0" y="137" width="320" height="294"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -98,12 +98,12 @@
                             <constraint firstItem="I6E-gq-r1R" firstAttribute="leading" secondItem="byj-PU-ga7" secondAttribute="leading" id="3dq-hX-YBZ"/>
                             <constraint firstItem="I6E-gq-r1R" firstAttribute="top" secondItem="u16-WO-XY6" secondAttribute="bottom" id="4cC-Rb-g7Q"/>
                             <constraint firstItem="ekv-EW-Jr5" firstAttribute="top" secondItem="Tha-RQ-EyF" secondAttribute="bottom" id="BVc-5G-eTZ"/>
-                            <constraint firstAttribute="bottom" secondItem="ekv-EW-Jr5" secondAttribute="bottom" constant="48" id="QPC-yD-Uo0"/>
                             <constraint firstAttribute="centerX" secondItem="ekv-EW-Jr5" secondAttribute="centerX" id="VW1-7K-A39"/>
                             <constraint firstAttribute="centerX" secondItem="Tha-RQ-EyF" secondAttribute="centerX" id="YOb-RA-yVX"/>
                             <constraint firstItem="Tha-RQ-EyF" firstAttribute="top" secondItem="I6E-gq-r1R" secondAttribute="bottom" constant="1" id="eh0-WG-Ubj"/>
                             <constraint firstAttribute="centerX" secondItem="I6E-gq-r1R" secondAttribute="centerX" id="pQ4-9b-inD"/>
                             <constraint firstAttribute="trailing" secondItem="I6E-gq-r1R" secondAttribute="trailing" id="rme-FY-crB"/>
+                            <constraint firstItem="ZW8-gz-ElT" firstAttribute="top" secondItem="ekv-EW-Jr5" secondAttribute="bottom" id="rwe-1C-4pi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lokale Suche" id="Lan-Iy-QBW"/>
@@ -832,7 +832,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="NMk-sz-0Om"/>
         <segue reference="CbU-PR-FJM"/>
-        <segue reference="EAD-4d-1KH"/>
     </inferredMetricsTieBreakers>
 </document>
