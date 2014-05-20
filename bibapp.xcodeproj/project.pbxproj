@@ -3648,8 +3648,8 @@
 		8F114085167F217000E033F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3671,8 +3671,8 @@
 		8F114086167F217000E033F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3694,8 +3694,8 @@
 		8F1D83DD192A2E7000A9898D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "BUW AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BUW LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3717,8 +3717,8 @@
 		8F1D83DE192A2E7000A9898D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "BUW AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BUW LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3740,8 +3740,8 @@
 		8F8A760F1781BF4700CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3761,8 +3761,8 @@
 		8F8A76101781BF4700CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3784,8 +3784,8 @@
 		8F8A76A41781C05400CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3805,8 +3805,8 @@
 		8F8A76A51781C05400CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3828,8 +3828,8 @@
 		8F8A77391781C0D800CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3849,8 +3849,8 @@
 		8F8A773A1781C0D800CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -4006,8 +4006,8 @@
 		8FF2702F16393BF200099665 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "LG Icons";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG Launchimages";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -4029,8 +4029,8 @@
 		8FF2703016393BF200099665 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "LG Icons";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG Launchimages";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
