@@ -3872,6 +3872,8 @@
 		8FD61109190916EA009E2358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3893,6 +3895,8 @@
 		8FD6110A190916EA009E2358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3914,6 +3918,8 @@
 		8FD611A5190916EF009E2358 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "EAHJ AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAHJ LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3935,6 +3941,8 @@
 		8FD611A6190916EF009E2358 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "EAHJ AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAHJ LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";

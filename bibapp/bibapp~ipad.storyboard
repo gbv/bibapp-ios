@@ -291,6 +291,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="W0x-1u-afr" kind="modal" identifier="tocSegue" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="IQa-mr-9vz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1380,8 +1383,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="f6G-SO-Bgw"/>
-        <segue reference="nvZ-Ec-xVW"/>
-        <segue reference="nEM-ay-oB3"/>
+        <segue reference="Sjv-hh-bWp"/>
+        <segue reference="Uv5-wX-sJh"/>
+        <segue reference="Mij-Xb-KOy"/>
+        <segue reference="WjN-WC-96R"/>
     </inferredMetricsTieBreakers>
 </document>

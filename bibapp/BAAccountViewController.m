@@ -598,8 +598,16 @@
     } else {
         if (!self.isLoggingIn) {
             self.isLoggingIn = YES;
+           
+            NSMutableString *displayString = [message mutableCopy];
+            if (message != nil) {
+               if (![message isEqualToString:@""]) {
+                  [displayString appendString:@"\n\n"];
+               }
+            }
+            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren."];
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
-                                                            message:message
+                                                            message:displayString
                                                            delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];
             [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
             [alert setTag:0];
