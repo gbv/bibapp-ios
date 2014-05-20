@@ -82,6 +82,13 @@
 		8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
 		8F114080167F217000E033F6 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
+		8F180736192B3A7B0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F180737192B3A7B0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F180738192B3A7C0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F180739192B3A7D0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F18073A192B3A7E0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F18073B192B3A7F0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F18073C192B3A7F0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
 		8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C6FA01782F55A00D169FC /* BAOptionsCatalogueTableViewController.m */; };
@@ -2334,6 +2341,7 @@
 				8F114072167F217000E033F6 /* BADocumentItemElementCell.xib in Resources */,
 				8F11407A167F217000E033F6 /* BADocumentItemCell.xib in Resources */,
 				8F11407B167F217000E033F6 /* BAItemAccountCell.xib in Resources */,
+				8F180737192B3A7B0099F579 /* Images.xcassets in Resources */,
 				8F11407D167F217000E033F6 /* Icon@2x.png in Resources */,
 				8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */,
 				8F114080167F217000E033F6 /* checkbox.png in Resources */,
@@ -2488,6 +2496,7 @@
 				8F8A75E21781BF4700CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A75E31781BF4700CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A75E41781BF4700CCF7DB /* menuIconAccount@2x.png in Resources */,
+				8F180738192B3A7C0099F579 /* Images.xcassets in Resources */,
 				8F8A75E51781BF4700CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A75E61781BF4700CCF7DB /* menuIconList@2x.png in Resources */,
 				8F8A75E71781BF4700CCF7DB /* menuIconOptions@2x.png in Resources */,
@@ -2565,6 +2574,7 @@
 				8F8A76771781C05400CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A76781781C05400CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A76791781C05400CCF7DB /* menuIconAccount@2x.png in Resources */,
+				8F180739192B3A7D0099F579 /* Images.xcassets in Resources */,
 				8F8A767A1781C05400CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A767B1781C05400CCF7DB /* menuIconList@2x.png in Resources */,
 				8F8A767C1781C05400CCF7DB /* menuIconOptions@2x.png in Resources */,
@@ -2669,6 +2679,7 @@
 				8F8A77271781C0D800CCF7DB /* actionButton.png in Resources */,
 				8F8A77281781C0D800CCF7DB /* Buch_250_gradient.png in Resources */,
 				8F8A77291781C0D800CCF7DB /* BADocumentItemElementCellPad.xib in Resources */,
+				8F18073A192B3A7E0099F579 /* Images.xcassets in Resources */,
 				8F8A772A1781C0D800CCF7DB /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8F8A772B1781C0D800CCF7DB /* BAListTableViewControllerPad.h in Resources */,
 				8F8A772C1781C0D800CCF7DB /* gear.png in Resources */,
@@ -2714,6 +2725,7 @@
 				8FD610D3190916EA009E2358 /* BADocumentItemElementCell.xib in Resources */,
 				8FD610D4190916EA009E2358 /* BADocumentItemCell.xib in Resources */,
 				8FD610D5190916EA009E2358 /* BAItemAccountCell.xib in Resources */,
+				8F18073B192B3A7F0099F579 /* Images.xcassets in Resources */,
 				8FD610D6190916EA009E2358 /* Icon@2x.png in Resources */,
 				8FD610D7190916EA009E2358 /* BAFeeCell.xib in Resources */,
 				8FD610D8190916EA009E2358 /* checkbox.png in Resources */,
@@ -2786,6 +2798,7 @@
 				8FD6116F190916EF009E2358 /* BADocumentItemElementCell.xib in Resources */,
 				8FD61170190916EF009E2358 /* BADocumentItemCell.xib in Resources */,
 				8FD61171190916EF009E2358 /* BAItemAccountCell.xib in Resources */,
+				8F18073C192B3A7F0099F579 /* Images.xcassets in Resources */,
 				8FD61172190916EF009E2358 /* Icon@2x.png in Resources */,
 				8FD61173190916EF009E2358 /* BAFeeCell.xib in Resources */,
 				8FD61174190916EF009E2358 /* checkbox.png in Resources */,
@@ -2859,6 +2872,7 @@
 				8F1F20E1166E1EA700E74231 /* BAFeeCell.xib in Resources */,
 				8FF5BFE7166F2FAD0039AB6C /* checkbox.png in Resources */,
 				8FF5BFE9166F82520039AB6C /* BAItemDetailTitleCell.xib in Resources */,
+				8F180736192B3A7B0099F579 /* Images.xcassets in Resources */,
 				8FBA876C16820535005A9962 /* BAImpressumCell.xib in Resources */,
 				8FE5D0BF16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FFE76B416B1448300844658 /* menuIconAccount.png in Resources */,
@@ -3976,6 +3990,8 @@
 		8FF2702F16393BF200099665 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "LG Icons";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG Launchimages";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -3997,6 +4013,8 @@
 		8FF2703016393BF200099665 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "LG Icons";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG Launchimages";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";

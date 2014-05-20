@@ -9,18 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>IconLG.png</string>
-				<string>IconLG@2x.png</string>
-				<string>iPadIconLG.png</string>
-				<string>iPadIconLG@2x.png</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>${rfc1034identifier}de.leuphana.bibliothek.bibapp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
