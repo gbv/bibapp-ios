@@ -479,12 +479,12 @@
         }*/
         if ([command isEqualToString:@"searchLocal"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
             }
             self.searchedLocal = YES;
         } else if ([command isEqualToString:@"searchCentral"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
             }
             self.searched = YES;
         }
@@ -1190,7 +1190,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
         } else {
             //[self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
             [self.navigationBarSearch.topItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -1201,7 +1201,7 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
         } else {
             [self.navigationBarSearch.topItem setTitle:@"GVK Suche"];
         }
