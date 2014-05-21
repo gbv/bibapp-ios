@@ -228,7 +228,9 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
    if ([self checkNetworkReachability]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, password]];
+      NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      NSString *tempPassword = [password stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, tempPassword]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
