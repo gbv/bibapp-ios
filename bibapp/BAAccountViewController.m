@@ -293,7 +293,11 @@
             [self setSuccessfulEntries:[json mutableCopy]];
             [self showRenewCancelDialog];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
-            [self.navigationController.navigationBar.topItem setTitle:[json objectForKey:@"name"]];
+            NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
+            if ([[json objectForKey:@"status"] integerValue] == 3) {
+               [displayName appendString:@" (gesperrt)"];
+            }
+            [self.navigationController.navigationBar.topItem setTitle:displayName];
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
