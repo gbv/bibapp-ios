@@ -10,8 +10,12 @@
 #import "BAAppDelegate.h"
 #import "BAConnectorDelegate.h"
 #import "BALocation.h"
+#import "Reachability.h"
 
 @interface BAConnector : NSObject <NSURLConnectionDelegate>
+
+FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_SCOPE;
+FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 
 @property (strong, nonatomic) BAAppDelegate *appDelegate;
 @property (nonatomic, retain) BAConnector *instance;
@@ -50,5 +54,6 @@
 - (BALocation *)loadLocationFromCacheForUri:(NSString *)uri;
 - (BOOL)checkScope:(NSString *)scope;
 - (void)displayError;
+- (BOOL)checkNetworkReachability;
 
 @end

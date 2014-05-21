@@ -76,22 +76,25 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (!self.loggedIn) {
-        [self loginActionWithMessage:@""];
-    } else {
-        [self.successfulEntries removeAllObjects];
-        [self.sendEntries removeAllObjects];
-        [self.actionButton setEnabled:YES];
-        //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        //[spinner startAnimating];
-        //spinner.frame = CGRectMake(0, 0, 320, 44);
-        //self.accountTableView.tableHeaderView = spinner;
-        [self.refreshControl beginRefreshing];
-        [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-        BAConnector *accountLoanConnector = [BAConnector generateConnector];
-        [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        BAConnector *accountFeesConnector = [BAConnector generateConnector];
-        [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+       if (!self.loggedIn) {
+           [self loginActionWithMessage:@""];
+       } else {
+           [self.successfulEntries removeAllObjects];
+           [self.sendEntries removeAllObjects];
+           [self.actionButton setEnabled:YES];
+           //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+           //[spinner startAnimating];
+           //spinner.frame = CGRectMake(0, 0, 320, 44);
+           //self.accountTableView.tableHeaderView = spinner;
+           [self.refreshControl beginRefreshing];
+           [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+           BAConnector *accountLoanConnector = [BAConnector generateConnector];
+           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+           BAConnector *accountFeesConnector = [BAConnector generateConnector];
+           [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+       }
     }
 }
 
@@ -351,41 +354,39 @@
 {
     [self.sendEntries removeAllObjects];
     [self.successfulEntries removeAllObjects];
-    if (!self.loggedIn) {
-        [self loginActionWithMessage:@""];
-    } else {
-        [self.accountTableView setEditing:NO animated:NO];
-        [self.accountTableView reloadData];
-    }
-    if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-        [self.actionButton setEnabled:YES];
-        //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        //[spinner startAnimating];
-        //spinner.frame = CGRectMake(0, 0, 320, 44);
-        //self.accountTableView.tableHeaderView = spinner;
-        [self.refreshControl beginRefreshing];
-        [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-        BAConnector *accountLoanConnector = [BAConnector generateConnector];
-        [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-    } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
-        //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        //[spinner startAnimating];
-        //spinner.frame = CGRectMake(0, 0, 320, 44);
-        //self.accountTableView.tableHeaderView = spinner;
-        [self.refreshControl beginRefreshing];
-        [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-        BAConnector *accountLoanConnector = [BAConnector generateConnector];
-        [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        [self.actionButton setEnabled:YES];
-    } else if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
-        self.accountTableView.tableHeaderView = nil;
-        BAConnector *accountFeesConnector = [BAConnector generateConnector];
-        [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        [self.actionButton setEnabled:NO];
-    } else if ([self.accountSegmentedController selectedSegmentIndex] == 3) {
-        [self.actionButton setEnabled:NO];
-    } else {
-        [self.actionButton setEnabled:NO];
+   
+    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+       if (!self.loggedIn) {
+          
+              [self loginActionWithMessage:@""];
+          
+       } else {
+           [self.accountTableView setEditing:NO animated:NO];
+           [self.accountTableView reloadData];
+       }
+       if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+           [self.actionButton setEnabled:YES];
+           [self.refreshControl beginRefreshing];
+           [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+           BAConnector *accountLoanConnector = [BAConnector generateConnector];
+           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+       } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
+           [self.refreshControl beginRefreshing];
+           [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+           BAConnector *accountLoanConnector = [BAConnector generateConnector];
+           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+           [self.actionButton setEnabled:YES];
+       } else if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
+           self.accountTableView.tableHeaderView = nil;
+           BAConnector *accountFeesConnector = [BAConnector generateConnector];
+           [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+           [self.actionButton setEnabled:NO];
+       } else if ([self.accountSegmentedController selectedSegmentIndex] == 3) {
+           [self.actionButton setEnabled:NO];
+       } else {
+           [self.actionButton setEnabled:NO];
+       }
     }
 }
 
@@ -813,6 +814,10 @@
 - (void)viewDidLayoutSubviews
 {
    [self.refreshControl.superview sendSubviewToBack:self.refreshControl];
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

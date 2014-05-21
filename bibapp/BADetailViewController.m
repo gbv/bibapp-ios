@@ -594,7 +594,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
         BAItemDetailTitleCell *cell = [nib objectAtIndex:0];
         */
-         
+       
         if (![self.currentEntry isKindOfClass:[BAEntryWork class]]) {
             BAEntryWork *tempEntry = [[BAEntryWork alloc] init];
             [tempEntry setPpn:[self.currentEntry ppn]];
@@ -1175,7 +1175,12 @@
 }
 
 - (void)commandIsNotInScope:(NSString *)command {
-   // ToDo: reset state if necessary
+   ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
+   self.didLoadISBD = YES;
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

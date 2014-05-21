@@ -16,6 +16,9 @@
 
 @implementation BAConnector
 
+NSString *const ERROR_MESSAGE_SCOPE = @"Ihr Konto ist für diesen Vorgang gesperrt.";
+NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY = @"Keine Internetverbindung verfügbar.";
+
 static BAConnector *sharedConnector = nil;
 
 @synthesize appDelegate;
@@ -109,22 +112,24 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"searchLocal"];
-   term = [self encodeToPercentEscapeString:term];
-   term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-   term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
-   term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-   //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-    
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
-       if (first == 1) {
-           if (self.appDelegate.options.allowCountPixel) {
-               BAConnector *searchCountConnector = [BAConnector generateConnector];
-               [searchCountConnector searchCountWithDelegate:self];
-           }
-       }
+   if ([self checkNetworkReachability]) {
+      term = [self encodeToPercentEscapeString:term];
+      term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+      term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
+      term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
+      //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+       
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+          if (first == 1) {
+              if (self.appDelegate.options.allowCountPixel) {
+                  BAConnector *searchCountConnector = [BAConnector generateConnector];
+                  [searchCountConnector searchCountWithDelegate:self];
+              }
+          }
+      }
    }
 }
 
@@ -133,12 +138,14 @@ static BAConnector *sharedConnector = nil;
     if (![self.appDelegate.configuration.currentBibSearchCountURL isEqualToString:@""]) {
         [self setConnectorDelegate:delegate];
         [self setCommand:@"searchCount"];
-        NSURL *url = [NSURL URLWithString:self.appDelegate.configuration.currentBibSearchCountURL];
-        NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-        [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-        [theRequest setHTTPMethod:@"GET"];
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-        if (theConnection) {
+        if ([self checkNetworkReachability]) {
+           NSURL *url = [NSURL URLWithString:self.appDelegate.configuration.currentBibSearchCountURL];
+           NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+           [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+           [theRequest setHTTPMethod:@"GET"];
+           NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+           if (theConnection) {
+           }
         }
     }
 }
@@ -148,15 +155,17 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"searchCentral"];
-   term = [self encodeToPercentEscapeString:term];
-   term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-   term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
-   term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-   
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      term = [self encodeToPercentEscapeString:term];
+      term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+      term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
+      term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -164,24 +173,27 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:[NSString stringWithFormat:@"getUNAPIDetails%@", [format capitalizedString]]];
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
-    NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-	
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
-   }
+   //if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   //}
 }
 
 - (void)getDetailsForLocal:(NSString *)ppn WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetailsLocal"];
+   if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
     
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
- 
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -189,10 +201,12 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetails"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=xml", ppn]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=xml", ppn]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -200,21 +214,25 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getCover"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", number]];
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
-   }
+   //if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", number]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   //}
 }
 
 - (void)loginWithAccount:(NSString *)account WithPassword:(NSString *)password WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, password]];
-   NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, password]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -222,14 +240,16 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadLoanList"];
-   if ([self checkScope:@"read_items"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"read_items"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-   } else {
-      [self displayError];
    }
 }
 
@@ -241,14 +261,16 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadFees"];
-   if ([self checkScope:@"read_fees"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"read_fees"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-   } else {
-      [self displayError];
    }
 }
 
@@ -256,14 +278,16 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountLoadPatron"];
-   if ([self checkScope:@"read_patron"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"read_patron"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-   } else {
-      [self displayError];
    }
 }
 
@@ -276,34 +300,36 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRequestDocs"];
-   if ([self checkScope:@"write_items"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      
-      NSMutableString*jsonString = [[NSMutableString alloc] init];
-      [jsonString appendString:@"{\"doc\":["];
-       
-      for (BADocumentItem *tempDocumentItem in docs) {
-         NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
-         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
-         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-         [jsonString appendString:tempString];
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"write_items"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
          
-         if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
-         {
-            [jsonString appendString:@","];
+         NSMutableString*jsonString = [[NSMutableString alloc] init];
+         [jsonString appendString:@"{\"doc\":["];
+          
+         for (BADocumentItem *tempDocumentItem in docs) {
+            NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
+            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+            [jsonString appendString:tempString];
+            
+            if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
+            {
+               [jsonString appendString:@","];
+            }
          }
+         [jsonString appendString:@"]}"];
+         
+         NSUInteger contentLength = [jsonString length];
+         NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+         
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-      [jsonString appendString:@"]}"];
-      
-      NSUInteger contentLength = [jsonString length];
-      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-      
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
-   } else {
-      [self displayError];
    }
 }
 
@@ -311,34 +337,36 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountRenewDocs"];
-   if ([self checkScope:@"write_items"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      
-      NSMutableString*jsonString = [[NSMutableString alloc] init];
-      [jsonString appendString:@"{\"doc\":["];
-
-      for (BAEntryWork *tempEntry in docs) {
-         NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-         [jsonString appendString:tempString];
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"write_items"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
          
-         if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
-         {
-            [jsonString appendString:@","];
+         NSMutableString*jsonString = [[NSMutableString alloc] init];
+         [jsonString appendString:@"{\"doc\":["];
+
+         for (BAEntryWork *tempEntry in docs) {
+            NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+            [jsonString appendString:tempString];
+            
+            if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+            {
+               [jsonString appendString:@","];
+            }
          }
+         [jsonString appendString:@"]}"];
+         
+         NSUInteger contentLength = [jsonString length];
+         NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+         
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-      [jsonString appendString:@"]}"];
-      
-      NSUInteger contentLength = [jsonString length];
-      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-      
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
-   } else {
-      [self displayError];
    }
 }
 
@@ -346,34 +374,36 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"accountCancelDocs"];
-   if ([self checkScope:@"write_items"]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-      
-      NSMutableString*jsonString = [[NSMutableString alloc] init];
-      [jsonString appendString:@"{\"doc\":["];
-
-      for (BAEntryWork *tempEntry in docs) {
-         NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-         NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-         NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-         [jsonString appendString:tempString];
+   if ([self checkNetworkReachability]) {
+      if ([self checkScope:@"write_items"]) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
          
-         if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
-         {
-            [jsonString appendString:@","];
+         NSMutableString*jsonString = [[NSMutableString alloc] init];
+         [jsonString appendString:@"{\"doc\":["];
+
+         for (BAEntryWork *tempEntry in docs) {
+            NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+            [jsonString appendString:tempString];
+            
+            if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
+            {
+               [jsonString appendString:@","];
+            }
          }
+         [jsonString appendString:@"]}"];
+         
+         NSUInteger contentLength = [jsonString length];
+         NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+         
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+         }
+      } else {
+         [self displayError];
       }
-      [jsonString appendString:@"]}"];
-      
-      NSUInteger contentLength = [jsonString length];
-      NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-      
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
-   } else {
-      [self displayError];
    }
 }
 
@@ -381,21 +411,25 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getInfoFeedWithDelegate"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@", self.appDelegate.configuration.currentBibFeedURL]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
-   }
+   //if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@", self.appDelegate.configuration.currentBibFeedURL]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   //}
 }
 
 - (void)getLocationInfoForUri:(NSString *)uri WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getLocationInfoForUri"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -403,10 +437,12 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getLocationsForLibraryByUri"];
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-	NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-   NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-   if (theConnection) {
+   if ([self checkNetworkReachability]) {
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
    }
 }
 
@@ -414,17 +450,19 @@ static BAConnector *sharedConnector = nil;
 {
    [self setConnectorDelegate:delegate];
    [self setCommand:@"loadLocationForUri"];
-   [self setBaseURL:uri];
-   BALocation *resultLocation = [self loadLocationFromCacheForUri:uri];
-   if (resultLocation == nil) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-         [self setCurrentConnection:theConnection];
+   if ([self checkNetworkReachability]) {
+      [self setBaseURL:uri];
+      BALocation *resultLocation = [self loadLocationFromCacheForUri:uri];
+      if (resultLocation == nil) {
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
+         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+         if (theConnection) {
+            [self setCurrentConnection:theConnection];
+         }
+      } else {
+         [delegate command:@"loadLocationForUri" didFinishLoadingWithResult:resultLocation];
       }
-   } else {
-      [delegate command:@"loadLocationForUri" didFinishLoadingWithResult:resultLocation];
    }
 }
 
@@ -608,9 +646,25 @@ static BAConnector *sharedConnector = nil;
 - (void)displayError {
    [self.connectorDelegate commandIsNotInScope:self.command];
    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                   message:@"Ihr Konto ist für diesen Vorgang gesperrt."
+                                                   message:ERROR_MESSAGE_SCOPE
                                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
    [alert show];
+}
+
+- (BOOL)checkNetworkReachability {
+   BOOL isNetworkReachable = NO;
+   Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+   NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+   if ((networkStatus != ReachableViaWiFi) && (networkStatus != ReachableViaWWAN)) {
+      [self.connectorDelegate networkIsNotReachable:self.command];
+      UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                      message:ERROR_MESSAGE_NETWORK_REACHABILITY
+                                                     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+      [alert show];
+   } else {
+      isNetworkReachable = YES;
+   }
+   return isNetworkReachable;
 }
 
 @end

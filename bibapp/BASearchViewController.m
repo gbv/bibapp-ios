@@ -539,7 +539,11 @@
 }
 
 - (void)commandIsNotInScope:(NSString *)command {
-   // ToDo: reset state if necessary
+   self.searchTableView.tableFooterView = nil;
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

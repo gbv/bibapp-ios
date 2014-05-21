@@ -64,8 +64,6 @@
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *bundleName = [NSString stringWithFormat:@"%@", [info objectForKey:@"CFBundleDisplayName"]];
    
-   NSLog(@"%@", bundleName);
-   
     if([bundleName isEqualToString:@"BibApp LG"]){
         currentConfiguration = [[BAConfigurationLG alloc] init];
     } else if([bundleName isEqualToString:@"BibApp HI"]){

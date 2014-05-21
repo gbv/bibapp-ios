@@ -37,17 +37,20 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    
-    if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
-        self.infoFeed = [[NSMutableArray alloc] init];
-    
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [spinner startAnimating];
-        spinner.frame = CGRectMake(0, 0, 320, 44);
-        self.infoTableView.tableFooterView = spinner;
-    
-        BAConnector *connector = [BAConnector generateConnector];
-        [connector getInfoFeedWithDelegate:self];
+   
+    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+       if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+           self.infoFeed = [[NSMutableArray alloc] init];
+       
+           UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+           [spinner startAnimating];
+           spinner.frame = CGRectMake(0, 0, 320, 44);
+           self.infoTableView.tableFooterView = spinner;
+       
+           BAConnector *connector = [BAConnector generateConnector];
+           [connector getInfoFeedWithDelegate:self];
+       }
     }
 }
 
@@ -197,6 +200,10 @@
 }
 
 - (void)commandIsNotInScope:(NSString *)command {
+   // ToDo: reset state if necessary
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
    // ToDo: reset state if necessary
 }
 

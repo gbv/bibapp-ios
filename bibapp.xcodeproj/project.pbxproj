@@ -816,6 +816,22 @@
 		8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */; };
 		8FC5465616F62CE4005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FC5465716F62E19005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
+		8FCFF425192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF426192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF427192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF428192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF429192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF42A192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF42B192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF42C192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
+		8FCFF42E192C813100A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF42F192C86D400A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF430192C86F200A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF431192C86F800A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF432192C86FE00A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
 		8FD463A516F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A616F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A916F9F41600E935EC /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
@@ -1395,6 +1411,9 @@
 		8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_144x144.png; path = ../hawk_app_icon_144x144.png; sourceTree = "<group>"; };
 		8FC5465416F62CDA005A4F6A /* BATocViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewControllerPad.h; sourceTree = "<group>"; };
 		8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewControllerPad.m; sourceTree = "<group>"; };
+		8FCFF423192C80D700A3E93F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8FCFF424192C80D700A3E93F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FD463A416F9F3F700E935EC /* BATocCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocCellPad.xib; sourceTree = "<group>"; };
 		8FD463A716F9F40500E935EC /* BATocCellPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocCellPad.h; sourceTree = "<group>"; };
 		8FD463A816F9F41600E935EC /* BATocCellPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocCellPad.m; sourceTree = "<group>"; };
@@ -1520,6 +1539,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF42F192C86D400A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2416CA663A007382EE /* libxml2.dylib in Frameworks */,
 				8F0DD15116BAA59B005DEB43 /* CoreLocation.framework in Frameworks */,
 				8F11405B167F217000E033F6 /* QuickLook.framework in Frameworks */,
@@ -1536,6 +1556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */,
 				8F1D8392192A2E7000A9898D /* CoreLocation.framework in Frameworks */,
 				8F1D8393192A2E7000A9898D /* QuickLook.framework in Frameworks */,
@@ -1552,6 +1573,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF430192C86F200A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A75C31781BF4700CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A75C41781BF4700CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A75C51781BF4700CCF7DB /* QuickLook.framework in Frameworks */,
@@ -1568,6 +1590,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF431192C86F800A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76581781C05400CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A76591781C05400CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A765A1781C05400CCF7DB /* QuickLook.framework in Frameworks */,
@@ -1584,6 +1607,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF432192C86FE00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76ED1781C0D800CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A76EE1781C0D800CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A76EF1781C0D800CCF7DB /* QuickLook.framework in Frameworks */,
@@ -1600,6 +1624,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD610BD190916EA009E2358 /* libxml2.dylib in Frameworks */,
 				8FD610BE190916EA009E2358 /* CoreLocation.framework in Frameworks */,
 				8FD610BF190916EA009E2358 /* QuickLook.framework in Frameworks */,
@@ -1616,6 +1641,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD61159190916EF009E2358 /* libxml2.dylib in Frameworks */,
 				8FD6115A190916EF009E2358 /* CoreLocation.framework in Frameworks */,
 				8FD6115B190916EF009E2358 /* QuickLook.framework in Frameworks */,
@@ -1632,6 +1658,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCFF42E192C813100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2316CA6631007382EE /* libxml2.dylib in Frameworks */,
 				8F0DD15016BAA591005DEB43 /* CoreLocation.framework in Frameworks */,
 				8F4FC4D21670CD4F00CFA4C5 /* QuickLook.framework in Frameworks */,
@@ -1681,6 +1708,7 @@
 		8F1101EC165CEB39008A8A46 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8FCFF422192C80A500A3E93F /* Reachability */,
 				8F1101F2165CEE98008A8A46 /* GDataXML */,
 			);
 			name = ExternalClasses;
@@ -1766,6 +1794,15 @@
 				8F965382166E93B100CA5D50 /* BAOptions.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8FCFF422192C80A500A3E93F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8FCFF423192C80D700A3E93F /* Reachability.h */,
+				8FCFF424192C80D700A3E93F /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		8FD47E0816404AC900965F12 /* Connector */ = {
@@ -1989,6 +2026,7 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */,
 				8F0DD14F16BAA590005DEB43 /* CoreLocation.framework */,
 				8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */,
 				8F1101F6165CEFA2008A8A46 /* libxml2.dylib */,
@@ -2958,6 +2996,7 @@
 				8FD611B719091B14009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD611B819091B14009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8FC5465716F62E19005A4F6A /* BATocViewControllerPad.m in Sources */,
+				8FCFF426192C80D700A3E93F /* Reachability.m in Sources */,
 				8F2190BA16B2B20F00512C85 /* BAAccountTableHeaderTextView.m in Sources */,
 				8FE5D0C416AFDE570024027C /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8FBA87701682058E005A9962 /* BAImpressumCell.m in Sources */,
@@ -3041,6 +3080,7 @@
 				8F1D8345192A2E7000A9898D /* BAConfigurationThULB.m in Sources */,
 				8F1D8346192A2E7000A9898D /* BATocViewControllerPad.m in Sources */,
 				8F1D8347192A2E7000A9898D /* BAConfigurationEAHJ.m in Sources */,
+				8FCFF42C192C80D700A3E93F /* Reachability.m in Sources */,
 				8F1D8348192A2E7000A9898D /* BAAccountTableHeaderTextView.m in Sources */,
 				8F1D8349192A2E7000A9898D /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F1D834A192A2E7000A9898D /* BAImpressumCell.m in Sources */,
@@ -3124,6 +3164,7 @@
 				8FD611B519091B0D009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD611B619091B0D009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8F8A75801781BF4700CCF7DB /* BATocViewControllerPad.m in Sources */,
+				8FCFF427192C80D700A3E93F /* Reachability.m in Sources */,
 				8F8A75811781BF4700CCF7DB /* BAAccountTableHeaderTextView.m in Sources */,
 				8F8A75821781BF4700CCF7DB /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F8A75831781BF4700CCF7DB /* BAImpressumCell.m in Sources */,
@@ -3207,6 +3248,7 @@
 				8FD611B319091B06009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD611B419091B06009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8F8A76151781C05400CCF7DB /* BATocViewControllerPad.m in Sources */,
+				8FCFF428192C80D700A3E93F /* Reachability.m in Sources */,
 				8F8A76161781C05400CCF7DB /* BAAccountTableHeaderTextView.m in Sources */,
 				8F8A76171781C05400CCF7DB /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F8A76181781C05400CCF7DB /* BAImpressumCell.m in Sources */,
@@ -3290,6 +3332,7 @@
 				8FD611B119091AFF009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD611B219091AFF009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8F8A76AA1781C0D800CCF7DB /* BATocViewControllerPad.m in Sources */,
+				8FCFF429192C80D700A3E93F /* Reachability.m in Sources */,
 				8F8A76AB1781C0D800CCF7DB /* BAAccountTableHeaderTextView.m in Sources */,
 				8F8A76AC1781C0D800CCF7DB /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F8A76AD1781C0D800CCF7DB /* BAImpressumCell.m in Sources */,
@@ -3373,6 +3416,7 @@
 				8FD611B019091AF6009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8FD61073190916EA009E2358 /* BATocViewControllerPad.m in Sources */,
 				8FD61074190916EA009E2358 /* BAAccountTableHeaderTextView.m in Sources */,
+				8FCFF42A192C80D700A3E93F /* Reachability.m in Sources */,
 				8FD61075190916EA009E2358 /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8FD61076190916EA009E2358 /* BAImpressumCell.m in Sources */,
 				8FD61077190916EA009E2358 /* BAImpressumTableViewController.m in Sources */,
@@ -3456,6 +3500,7 @@
 				8FD611AF19091AEF009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD6110F190916EF009E2358 /* BATocViewControllerPad.m in Sources */,
 				8FD611AE1909183E009E2358 /* BAConfigurationEAHJ.m in Sources */,
+				8FCFF42B192C80D700A3E93F /* Reachability.m in Sources */,
 				8FD61110190916EF009E2358 /* BAAccountTableHeaderTextView.m in Sources */,
 				8FD61111190916EF009E2358 /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8FD61112190916EF009E2358 /* BAImpressumCell.m in Sources */,
@@ -3539,6 +3584,7 @@
 				8FD611B919091B1A009E2358 /* BAConfigurationThULB.m in Sources */,
 				8FD611BA19091B1A009E2358 /* BAConfigurationEAHJ.m in Sources */,
 				8F5D8D45165CF2C100773DD5 /* GDataXMLNode.m in Sources */,
+				8FCFF425192C80D700A3E93F /* Reachability.m in Sources */,
 				8FD47E111640517500965F12 /* BAConnector.m in Sources */,
 				8FF2700816393BF200099665 /* main.m in Sources */,
 				8FF2700C16393BF200099665 /* BAAppDelegate.m in Sources */,

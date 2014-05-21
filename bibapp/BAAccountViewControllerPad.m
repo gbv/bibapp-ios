@@ -134,18 +134,22 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (!self.loggedIn) {
-        [self loginActionWithMessage:@""];
-    } else {
-        [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
-        [self.sendEntries removeAllObjects];
-        [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-        [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-        [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-        BAConnector *accountLoanConnector = [BAConnector generateConnector];
-        [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        BAConnector *accountFeesConnector = [BAConnector generateConnector];
-        [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+       if (!self.loggedIn) {
+          
+              [self loginActionWithMessage:@""];
+       } else {
+           [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+           [self.sendEntries removeAllObjects];
+           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           BAConnector *accountLoanConnector = [BAConnector generateConnector];
+           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+           BAConnector *accountFeesConnector = [BAConnector generateConnector];
+           [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+       }
     }
 }
 
@@ -858,6 +862,10 @@
       BAConnector *accountLoanConnector = [BAConnector generateConnector];
       [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
    }
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end
