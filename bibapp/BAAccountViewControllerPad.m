@@ -137,7 +137,6 @@
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
        if (!self.loggedIn) {
-          
               [self loginActionWithMessage:@""];
        } else {
            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
@@ -364,7 +363,11 @@
             [self setSuccessfulEntries:[json mutableCopy]];
             [self showRenewCancelDialogFor:@"cancel"];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
-            [self.accountNavigationBar.topItem setTitle:[json objectForKey:@"name"]];
+            NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
+            if ([[json objectForKey:@"status"] integerValue] == 3) {
+               [displayName appendString:@" (Konto gesperrt)"];
+            }
+            [self.accountNavigationBar.topItem setTitle:displayName];
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
