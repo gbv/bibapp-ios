@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BibApp BAT.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>BibApp BLS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -19,10 +24,30 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>BibApp FHE.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>BibApp FHN.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>BibApp FHS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>BibApp HFMW.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>BibApp HI.xcscheme</key>
 		<dict>
@@ -43,6 +68,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+		<key>BibApp UBE.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>BibAppUnitTests.xcscheme</key>
 		<dict>
@@ -93,6 +123,36 @@
 			<true/>
 		</dict>
 		<key>8F8A76A81781C0D800CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F4ED19501E6B006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F58F19502224006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F6311950228D006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F6D3195022BC006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F7751950230D006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F8171950233A006CD05A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
