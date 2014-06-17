@@ -15,6 +15,12 @@
 #import "BAConfigurationThULB.h"
 #import "BAConfigurationEAHJ.h"
 #import "BAConfigurationBUW.h"
+#import "BAConfigurationBAT.h"
+#import "BAConfigurationHFMW.h"
+#import "BAConfigurationFHN.h"
+#import "BAConfigurationFHE.h"
+#import "BAConfigurationFHS.h"
+#import "BAConfigurationUBE.h"
 
 @implementation BAConfiguration
 
@@ -80,6 +86,18 @@
        currentConfiguration = [[BAConfigurationEAHJ alloc] init];
     } else if([bundleName isEqualToString:@"BibApp BUW"]){
        currentConfiguration = [[BAConfigurationBUW alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp BAT"]){
+        currentConfiguration = [[BAConfigurationBAT alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp HFMW"]){
+        currentConfiguration = [[BAConfigurationHFMW alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp FHN"]){
+        currentConfiguration = [[BAConfigurationFHN alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp FHE"]){
+        currentConfiguration = [[BAConfigurationFHE alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp FHS"]){
+        currentConfiguration = [[BAConfigurationFHS alloc] init];
+    } else if([bundleName isEqualToString:@"BibApp UBE"]){
+        currentConfiguration = [[BAConfigurationUBE alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;
