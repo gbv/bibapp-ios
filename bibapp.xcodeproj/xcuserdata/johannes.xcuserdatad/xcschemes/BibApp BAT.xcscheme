@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
                BuildableName = "BibApp BAT.app"
-               BlueprintName = "BibApp BAT"
+               BlueprintName = "BibApp BA Th&#xfc;ringen"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BAT.app"
-            BlueprintName = "BibApp BAT"
+            BlueprintName = "BibApp BA Th&#xfc;ringen"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -53,7 +53,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BAT.app"
-            BlueprintName = "BibApp BAT"
+            BlueprintName = "BibApp BA Th&#xfc;ringen"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,7 +71,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BAT.app"
-            BlueprintName = "BibApp BAT"
+            BlueprintName = "BibApp BA Th&#xfc;ringen"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
