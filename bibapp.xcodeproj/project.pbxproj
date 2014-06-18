@@ -2390,8 +2390,8 @@
 		8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-BA-Thüringen-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-BA-Thüringen-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F62F19502224006CD05A /* BibApp HFM We.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HFM We.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HFM-We-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-HFM-We-Info.plist"; sourceTree = "<absolute>"; };
-		8FA8F6D11950228D006CD05A /* BibApp FHN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F6D21950228D006CD05A /* BibApp FHN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp FHN-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp FHN-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F6D11950228D006CD05A /* BibApp NDH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp NDH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-NDH-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-NDH-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F773195022BC006CD05A /* BibApp FHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F774195022BC006CD05A /* BibApp FHE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp FHE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp FHE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F8151950230D006CD05A /* BibApp FHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3161,7 +3161,7 @@
 				8F1D83DF192A2E7000A9898D /* BibApp UB We.app */,
 				8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */,
 				8FA8F62F19502224006CD05A /* BibApp HFM We.app */,
-				8FA8F6D11950228D006CD05A /* BibApp FHN.app */,
+				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
 				8FA8F8151950230D006CD05A /* BibApp FHS.app */,
 				8FA8F8B71950233A006CD05A /* BibApp UBE.app */,
@@ -3221,7 +3221,7 @@
 				8F1D83E0192A2E7200A9898D /* BibApp-UB-We-Info.plist */,
 				8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */,
 				8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */,
-				8FA8F6D21950228D006CD05A /* BibApp FHN-Info.plist */,
+				8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */,
 				8FA8F774195022BC006CD05A /* BibApp FHE-Info.plist */,
 				8FA8F8161950230D006CD05A /* BibApp FHS-Info.plist */,
 				8FA8F8B81950233A006CD05A /* BibApp UBE-Info.plist */,
@@ -3439,9 +3439,9 @@
 			productReference = 8FA8F62F19502224006CD05A /* BibApp HFM We.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F6311950228D006CD05A /* BibApp FHN */ = {
+		8FA8F6311950228D006CD05A /* BibApp NDH */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F6CE1950228D006CD05A /* Build configuration list for PBXNativeTarget "BibApp FHN" */;
+			buildConfigurationList = 8FA8F6CE1950228D006CD05A /* Build configuration list for PBXNativeTarget "BibApp NDH" */;
 			buildPhases = (
 				8FA8F6321950228D006CD05A /* Sources */,
 				8FA8F6801950228D006CD05A /* Frameworks */,
@@ -3451,9 +3451,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp FHN";
+			name = "BibApp NDH";
 			productName = bibapp;
-			productReference = 8FA8F6D11950228D006CD05A /* BibApp FHN.app */;
+			productReference = 8FA8F6D11950228D006CD05A /* BibApp NDH.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FA8F6D3195022BC006CD05A /* BibApp FHE */ = {
@@ -3610,7 +3610,7 @@
 				8F1D8343192A2E7000A9898D /* BibApp UB We */,
 				8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */,
 				8FA8F58F19502224006CD05A /* BibApp HFM We */,
-				8FA8F6311950228D006CD05A /* BibApp FHN */,
+				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
 				8FA8F7751950230D006CD05A /* BibApp FHS */,
 				8FA8F8171950233A006CD05A /* BibApp UBE */,
@@ -6304,10 +6304,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHN-Info.plist";
+				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp FHN";
+				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6327,10 +6327,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHN-Info.plist";
+				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp FHN";
+				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6769,7 +6769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F6CE1950228D006CD05A /* Build configuration list for PBXNativeTarget "BibApp FHN" */ = {
+		8FA8F6CE1950228D006CD05A /* Build configuration list for PBXNativeTarget "BibApp NDH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F6CF1950228D006CD05A /* Debug */,
