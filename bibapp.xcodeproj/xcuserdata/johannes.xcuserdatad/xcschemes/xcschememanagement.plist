@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BibApp BAT.xcscheme</key>
+		<key>BibApp BA Thüringen.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
@@ -14,12 +14,7 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BibApp BUW.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
-		<key>BibApp EAHJ.xcscheme</key>
+		<key>BibApp EAH Jena.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
@@ -29,22 +24,12 @@
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>BibApp FHN.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>BibApp FHS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>13</integer>
-		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>BibApp HFMW.xcscheme</key>
+		<key>BibApp HFM We.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>10</integer>
@@ -64,12 +49,27 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BibApp NDH.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>BibApp SM.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>BibApp UBE.xcscheme</key>
+		<key>BibApp UB We.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>BibApp UFB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>14</integer>
