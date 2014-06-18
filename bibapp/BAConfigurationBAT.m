@@ -22,7 +22,7 @@
     //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"http://www.uni-weimar.de/de/universitaet/aktuell/pinnwaende/rss/bereich/bibliothek/";
-    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.77 green:0.18 blue:0.36 alpha:1.0];
+    self.currentBibTintColor = [UIColor colorWithRed:0.549020F green:0.694118F blue:0.062745F alpha:1.0F];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil]; // Vertreter?
     [self.currentBibImprint setObject:@"Staatliche Studienakademie Thüringen\nBerufsakademien Gera und Eisenach\nDirektor Prof. Dr. rer. pol. habil. Burkhard Utecht\nWeg der Freundschaft 4A\n07546 Gera\nTel.: +49 365 / 4341-0\nFax: +49 365 / 4341-103\nE-Mail: info@ba-gera.de\nInternet: http://www.ba-gera.de\nDie Staatliche Studienakademie Thüringen ist eine rechtsfähige Körperschaft des öffentlichen Rechts.\nZuständige Behörde für die Rechts- und Fachaufsicht\nThüringer Ministerium für Bildung, Wissenschaft und Kultur\nPostfach 900463\n99107 Erfurt\nTel.: +49 361 / 37 9-00\nFax: +49 361 / 37 94 690\nE-Mail: poststelle@tmbwk.thueringen.de" forKey:@"Anbieter"];
     //[self.currentBibImprint setObject:@"" forKey:@"Vertreter"];
