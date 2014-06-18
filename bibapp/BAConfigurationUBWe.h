@@ -8,6 +8,6 @@
 
 #import "BAConfiguration.h"
 
-@interface BAConfigurationBUW : BAConfiguration
+@interface BAConfigurationUBWe : BAConfiguration
 
 @end

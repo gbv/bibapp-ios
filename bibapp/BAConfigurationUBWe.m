@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Johannes Schultze. All rights reserved.
 //
 
-#import "BAConfigurationBUW.h"
+#import "BAConfigurationUBWe.h"
 
-@implementation BAConfigurationBUW
+@implementation BAConfigurationUBWe
 
 - (void)initConfiguration
 {

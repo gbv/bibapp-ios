@@ -14,13 +14,13 @@
 #import "BAConfigurationHAWK.h"
 #import "BAConfigurationThULB.h"
 #import "BAConfigurationEAHJ.h"
-#import "BAConfigurationBUW.h"
+#import "BAConfigurationUBWe.h"
 #import "BAConfigurationBAT.h"
-#import "BAConfigurationHFMW.h"
-#import "BAConfigurationFHN.h"
+#import "BAConfigurationHFMWe.h"
+#import "BAConfigurationNDH.h"
 #import "BAConfigurationFHE.h"
-#import "BAConfigurationFHS.h"
-#import "BAConfigurationUBE.h"
+#import "BAConfigurationSM.h"
+#import "BAConfigurationUFB.h"
 
 @implementation BAConfiguration
 
@@ -85,19 +85,19 @@
     } else if([bundleName isEqualToString:@"BibApp EAHJ"]){
        currentConfiguration = [[BAConfigurationEAHJ alloc] init];
     } else if([bundleName isEqualToString:@"BibApp BUW"]){
-       currentConfiguration = [[BAConfigurationBUW alloc] init];
+       currentConfiguration = [[BAConfigurationUBWe alloc] init];
     } else if([bundleName isEqualToString:@"BibApp BAT"]){
         currentConfiguration = [[BAConfigurationBAT alloc] init];
     } else if([bundleName isEqualToString:@"BibApp HFMW"]){
-        currentConfiguration = [[BAConfigurationHFMW alloc] init];
+        currentConfiguration = [[BAConfigurationHFMWe alloc] init];
     } else if([bundleName isEqualToString:@"BibApp FHN"]){
-        currentConfiguration = [[BAConfigurationFHN alloc] init];
+        currentConfiguration = [[BAConfigurationNDH alloc] init];
     } else if([bundleName isEqualToString:@"BibApp FHE"]){
         currentConfiguration = [[BAConfigurationFHE alloc] init];
     } else if([bundleName isEqualToString:@"BibApp FHS"]){
-        currentConfiguration = [[BAConfigurationFHS alloc] init];
+        currentConfiguration = [[BAConfigurationSM alloc] init];
     } else if([bundleName isEqualToString:@"BibApp UBE"]){
-        currentConfiguration = [[BAConfigurationUBE alloc] init];
+        currentConfiguration = [[BAConfigurationUFB alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;

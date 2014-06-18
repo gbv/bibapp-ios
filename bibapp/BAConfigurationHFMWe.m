@@ -1,14 +1,14 @@
 //
-//  BAConfigurationUBE.m
+//  BAConfigurationHFMW.m
 //  bibapp
 //
 //  Created by Johannes Schultze on 17.06.14.
 //  Copyright (c) 2014 Johannes Schultze. All rights reserved.
 //
 
-#import "BAConfigurationUBE.h"
+#import "BAConfigurationHFMWe.h"
 
-@implementation BAConfigurationUBE
+@implementation BAConfigurationHFMWe
 
 - (void)initConfiguration
 {
@@ -22,7 +22,7 @@
     //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"http://www.uni-weimar.de/de/universitaet/aktuell/pinnwaende/rss/bereich/bibliothek/";
-    self.currentBibTintColor = [UIColor colorWithRed:0.050980F green:0.188235F blue:0.274510F alpha:1.0F];
+    self.currentBibTintColor = [UIColor colorWithRed:0.200000F green:0.403922F blue:0.701961F alpha:1.0F];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"" forKey:@"Anbieter"];
     [self.currentBibImprint setObject:@"" forKey:@"Vertreter"];

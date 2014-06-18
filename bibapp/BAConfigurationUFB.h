@@ -1,5 +1,5 @@
 //
-//  BAConfigurationFHS.h
+//  BAConfigurationUBE.h
 //  bibapp
 //
 //  Created by Johannes Schultze on 17.06.14.
@@ -8,6 +8,6 @@
 
 #import "BAConfiguration.h"
 
-@interface BAConfigurationFHS : BAConfiguration
+@interface BAConfigurationUFB : BAConfiguration
 
 @end

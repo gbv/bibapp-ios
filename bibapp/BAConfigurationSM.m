@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Johannes Schultze. All rights reserved.
 //
 
-#import "BAConfigurationFHS.h"
+#import "BAConfigurationSM.h"
 
-@implementation BAConfigurationFHS
+@implementation BAConfigurationSM
 
 - (void)initConfiguration
 {
