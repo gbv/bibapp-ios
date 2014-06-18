@@ -2456,8 +2456,8 @@
 		8FD4F8EC16F89C9F00193F33 /* BATocTableViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocTableViewControllerPad.m; sourceTree = "<group>"; };
 		8FD6110B190916EA009E2358 /* BibApp ThULB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp ThULB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD6110C190916EB009E2358 /* BibApp-ThULB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ThULB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ThULB-Info.plist"; sourceTree = "<absolute>"; };
-		8FD611A7190916EF009E2358 /* BibApp EAHJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp EAHJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FD611A8190916F0009E2358 /* BibApp-EAHJ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-EAHJ-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-EAHJ-Info.plist"; sourceTree = "<absolute>"; };
+		8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp EAH Jena.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD611A8190916F0009E2358 /* BibApp-EAH-Jena-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-EAH-Jena-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-EAH-Jena-Info.plist"; sourceTree = "<absolute>"; };
 		8FD611A91909182D009E2358 /* BAConfigurationThULB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationThULB.h; sourceTree = "<group>"; };
 		8FD611AA1909182D009E2358 /* BAConfigurationThULB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationThULB.m; sourceTree = "<group>"; };
 		8FD611AC1909183E009E2358 /* BAConfigurationEAHJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationEAHJ.h; sourceTree = "<group>"; };
@@ -3157,7 +3157,7 @@
 				8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */,
 				8FFF22C51786B8580077FC8B /* BibAppUnitTests.octest */,
 				8FD6110B190916EA009E2358 /* BibApp ThULB.app */,
-				8FD611A7190916EF009E2358 /* BibApp EAHJ.app */,
+				8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */,
 				8F1D83DF192A2E7000A9898D /* BibApp BUW.app */,
 				8FA8F58D19501E6B006CD05A /* BibApp BAT.app */,
 				8FA8F62F19502224006CD05A /* BibApp HFMW.app */,
@@ -3217,7 +3217,7 @@
 				8F8A76A71781C05400CCF7DB /* BibApp-IL-Info.plist */,
 				8F8A773C1781C0D800CCF7DB /* BibApp-HAWK-Info.plist */,
 				8FD6110C190916EB009E2358 /* BibApp-ThULB-Info.plist */,
-				8FD611A8190916F0009E2358 /* BibApp-EAHJ-Info.plist */,
+				8FD611A8190916F0009E2358 /* BibApp-EAH-Jena-Info.plist */,
 				8F1D83E0192A2E7200A9898D /* BibApp BUW-Info.plist */,
 				8FA8F58E19501E6D006CD05A /* BibApp BAT-Info.plist */,
 				8FA8F63019502224006CD05A /* BibApp HFMW-Info.plist */,
@@ -3524,9 +3524,9 @@
 			productReference = 8FD6110B190916EA009E2358 /* BibApp ThULB.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FD6110D190916EF009E2358 /* BibApp EAHJ */ = {
+		8FD6110D190916EF009E2358 /* BibApp EAH Jena */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FD611A4190916EF009E2358 /* Build configuration list for PBXNativeTarget "BibApp EAHJ" */;
+			buildConfigurationList = 8FD611A4190916EF009E2358 /* Build configuration list for PBXNativeTarget "BibApp EAH Jena" */;
 			buildPhases = (
 				8FD6110E190916EF009E2358 /* Sources */,
 				8FD61158190916EF009E2358 /* Frameworks */,
@@ -3536,9 +3536,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp EAHJ";
+			name = "BibApp EAH Jena";
 			productName = bibapp;
-			productReference = 8FD611A7190916EF009E2358 /* BibApp EAHJ.app */;
+			productReference = 8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FF26FF416393BF100099665 /* BibApp LG */ = {
@@ -3606,7 +3606,7 @@
 				8F8A76131781C05400CCF7DB /* BibApp IL */,
 				8F8A76A81781C0D800CCF7DB /* BibApp HAWK */,
 				8FD61071190916EA009E2358 /* BibApp ThULB */,
-				8FD6110D190916EF009E2358 /* BibApp EAHJ */,
+				8FD6110D190916EF009E2358 /* BibApp EAH Jena */,
 				8F1D8343192A2E7000A9898D /* BibApp BUW */,
 				8FA8F4ED19501E6B006CD05A /* BibApp BAT */,
 				8FA8F58F19502224006CD05A /* BibApp HFMW */,
@@ -6534,10 +6534,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-EAHJ-Info.plist";
+				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp EAHJ";
+				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6557,10 +6557,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-EAHJ-Info.plist";
+				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp EAHJ";
+				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6814,7 +6814,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FD611A4190916EF009E2358 /* Build configuration list for PBXNativeTarget "BibApp EAHJ" */ = {
+		8FD611A4190916EF009E2358 /* Build configuration list for PBXNativeTarget "BibApp EAH Jena" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FD611A5190916EF009E2358 /* Debug */,
