@@ -22,7 +22,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>${rfc1034identifier}de.effective-webwork.bibapp.fhs</string>
+	<string>${rfc1034identifier}de.effective-webwork.bibapp.sm</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

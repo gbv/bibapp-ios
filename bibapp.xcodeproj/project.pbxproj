@@ -292,6 +292,20 @@
 		8F40D3CC163A7FDD001386F9 /* bibapp~iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */; };
 		8F4FC4CF1670C97300CFA4C5 /* BATocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */; };
 		8F4FC4D21670CD4F00CFA4C5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */; };
+		8F5319271951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319281951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319291951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192A1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192B1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192C1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192D1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192E1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F53192F1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319301951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319311951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319321951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319331951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
+		8F5319341951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
 		8F56394816BFC2750092A9B5 /* BAContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */; };
 		8F56394916BFC2750092A9B5 /* BAContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */; };
 		8F57756F16D5129A009E143E /* BAAccountViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */; };
@@ -2334,6 +2348,7 @@
 		8F4FC4CD1670C97300CFA4C5 /* BATocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewController.h; sourceTree = "<group>"; };
 		8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewController.m; sourceTree = "<group>"; };
 		8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BibApp-SM-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8F56394616BFC2750092A9B5 /* BAContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAContactTableViewController.h; sourceTree = "<group>"; };
 		8F56394716BFC2750092A9B5 /* BAContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContactTableViewController.m; sourceTree = "<group>"; };
 		8F57756D16D5129A009E143E /* BAAccountViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccountViewControllerPad.h; sourceTree = "<group>"; };
@@ -2393,9 +2408,8 @@
 		8FA8F6D11950228D006CD05A /* BibApp NDH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp NDH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-NDH-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-NDH-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F773195022BC006CD05A /* BibApp FHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F774195022BC006CD05A /* BibApp FHE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp FHE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp FHE-Info.plist"; sourceTree = "<absolute>"; };
-		8FA8F8151950230D006CD05A /* BibApp FHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F8161950230D006CD05A /* BibApp FHS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp FHS-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp FHS-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-FHE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-FHE-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F8151950230D006CD05A /* BibApp SM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp SM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F8B71950233A006CD05A /* BibApp UBE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp UBE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F8B81950233A006CD05A /* BibApp UBE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp UBE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp UBE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F8B91950268E006CD05A /* BAConfigurationBAT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationBAT.h; sourceTree = "<group>"; };
@@ -3163,7 +3177,7 @@
 				8FA8F62F19502224006CD05A /* BibApp HFM We.app */,
 				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
-				8FA8F8151950230D006CD05A /* BibApp FHS.app */,
+				8FA8F8151950230D006CD05A /* BibApp SM.app */,
 				8FA8F8B71950233A006CD05A /* BibApp UBE.app */,
 			);
 			name = Products;
@@ -3222,8 +3236,8 @@
 				8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */,
 				8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */,
 				8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */,
-				8FA8F774195022BC006CD05A /* BibApp FHE-Info.plist */,
-				8FA8F8161950230D006CD05A /* BibApp FHS-Info.plist */,
+				8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */,
+				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
 				8FA8F8B81950233A006CD05A /* BibApp UBE-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
 				8FF2700416393BF200099665 /* InfoPlist.strings */,
@@ -3473,9 +3487,9 @@
 			productReference = 8FA8F773195022BC006CD05A /* BibApp FHE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F7751950230D006CD05A /* BibApp FHS */ = {
+		8FA8F7751950230D006CD05A /* BibApp SM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F8121950230D006CD05A /* Build configuration list for PBXNativeTarget "BibApp FHS" */;
+			buildConfigurationList = 8FA8F8121950230D006CD05A /* Build configuration list for PBXNativeTarget "BibApp SM" */;
 			buildPhases = (
 				8FA8F7761950230D006CD05A /* Sources */,
 				8FA8F7C41950230D006CD05A /* Frameworks */,
@@ -3485,9 +3499,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp FHS";
+			name = "BibApp SM";
 			productName = bibapp;
-			productReference = 8FA8F8151950230D006CD05A /* BibApp FHS.app */;
+			productReference = 8FA8F8151950230D006CD05A /* BibApp SM.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FA8F8171950233A006CD05A /* BibApp UBE */ = {
@@ -3612,7 +3626,7 @@
 				8FA8F58F19502224006CD05A /* BibApp HFM We */,
 				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
-				8FA8F7751950230D006CD05A /* BibApp FHS */,
+				8FA8F7751950230D006CD05A /* BibApp SM */,
 				8FA8F8171950233A006CD05A /* BibApp UBE */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 			);
@@ -3685,6 +3699,7 @@
 				8FE9813C16F7588000328531 /* BALocationCellPad.xib in Resources */,
 				8FD463A616F9F3F700E935EC /* BATocCellPad.xib in Resources */,
 				8F6A7C2C1701CFB800C4E580 /* BATocListCell.xib in Resources */,
+				8F5319281951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FE5F960170466EA002EA336 /* iPadIcon.png in Resources */,
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
@@ -3758,6 +3773,7 @@
 				8F1D83D4192A2E7000A9898D /* BALocationCellPad.xib in Resources */,
 				8F1D83D5192A2E7000A9898D /* BATocCellPad.xib in Resources */,
 				8F1D83D6192A2E7000A9898D /* BATocListCell.xib in Resources */,
+				8F53192E1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F1D83D7192A2E7000A9898D /* iPadIcon.png in Resources */,
 				8F1D83D8192A2E7000A9898D /* iPadIcon@2x.png in Resources */,
 				8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */,
@@ -3780,6 +3796,7 @@
 				8F8A75D41781BF4700CCF7DB /* bibapp~iphone.storyboard in Resources */,
 				8F8A75D51781BF4700CCF7DB /* BAItemCell.xib in Resources */,
 				8F8A75D61781BF4700CCF7DB /* BAItemDetail.xib in Resources */,
+				8F5319291951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F8A75D71781BF4700CCF7DB /* BAItemDetailCell.xib in Resources */,
 				8F8A75D81781BF4700CCF7DB /* BAInfoCell.xib in Resources */,
 				8F8A75D91781BF4700CCF7DB /* BADocumentItemElementCell.xib in Resources */,
@@ -3858,6 +3875,7 @@
 				8F8A76691781C05400CCF7DB /* bibapp~iphone.storyboard in Resources */,
 				8F8A766A1781C05400CCF7DB /* BAItemCell.xib in Resources */,
 				8F8A766B1781C05400CCF7DB /* BAItemDetail.xib in Resources */,
+				8F53192A1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F8A766C1781C05400CCF7DB /* BAItemDetailCell.xib in Resources */,
 				8F8A766D1781C05400CCF7DB /* BAInfoCell.xib in Resources */,
 				8F8A766E1781C05400CCF7DB /* BADocumentItemElementCell.xib in Resources */,
@@ -3968,6 +3986,7 @@
 				8F8A771E1781C0D800CCF7DB /* mediaIconP.png in Resources */,
 				8F8A771F1781C0D800CCF7DB /* mediaIconS.png in Resources */,
 				8F8A77201781C0D800CCF7DB /* mediaIconT.png in Resources */,
+				8F53192B1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F8A77211781C0D800CCF7DB /* mediaIconV.png in Resources */,
 				8F8A77221781C0D800CCF7DB /* mediaIconX.png in Resources */,
 				8F8A77231781C0D800CCF7DB /* Icon.png in Resources */,
@@ -4069,6 +4088,7 @@
 				8FA8F58219501E6B006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F58319501E6B006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F58419501E6B006CD05A /* BATocListCell.xib in Resources */,
+				8F53192F1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F58519501E6B006CD05A /* iPadIcon.png in Resources */,
 				8FA8F58619501E6B006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F58719501E6B006CD05A /* Icon-72.png in Resources */,
@@ -4142,6 +4162,7 @@
 				8FA8F62419502224006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F62519502224006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F62619502224006CD05A /* BATocListCell.xib in Resources */,
+				8F5319301951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F62719502224006CD05A /* iPadIcon.png in Resources */,
 				8FA8F62819502224006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F62919502224006CD05A /* Icon-72.png in Resources */,
@@ -4215,6 +4236,7 @@
 				8FA8F6C61950228D006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F6C71950228D006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F6C81950228D006CD05A /* BATocListCell.xib in Resources */,
+				8F5319311951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F6C91950228D006CD05A /* iPadIcon.png in Resources */,
 				8FA8F6CA1950228D006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F6CB1950228D006CD05A /* Icon-72.png in Resources */,
@@ -4288,6 +4310,7 @@
 				8FA8F768195022BC006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F769195022BC006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F76A195022BC006CD05A /* BATocListCell.xib in Resources */,
+				8F5319321951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F76B195022BC006CD05A /* iPadIcon.png in Resources */,
 				8FA8F76C195022BC006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F76D195022BC006CD05A /* Icon-72.png in Resources */,
@@ -4361,6 +4384,7 @@
 				8FA8F80A1950230D006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F80B1950230D006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F80C1950230D006CD05A /* BATocListCell.xib in Resources */,
+				8F5319331951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F80D1950230D006CD05A /* iPadIcon.png in Resources */,
 				8FA8F80E1950230D006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F80F1950230D006CD05A /* Icon-72.png in Resources */,
@@ -4434,6 +4458,7 @@
 				8FA8F8AC1950233A006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F8AD1950233A006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F8AE1950233A006CD05A /* BATocListCell.xib in Resources */,
+				8F5319341951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F8AF1950233A006CD05A /* iPadIcon.png in Resources */,
 				8FA8F8B01950233A006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F8B11950233A006CD05A /* Icon-72.png in Resources */,
@@ -4507,6 +4532,7 @@
 				8FD61100190916EA009E2358 /* BALocationCellPad.xib in Resources */,
 				8FD61101190916EA009E2358 /* BATocCellPad.xib in Resources */,
 				8FD61102190916EA009E2358 /* BATocListCell.xib in Resources */,
+				8F53192C1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD61103190916EA009E2358 /* iPadIcon.png in Resources */,
 				8FD61104190916EA009E2358 /* iPadIcon@2x.png in Resources */,
 				8FD61105190916EA009E2358 /* Icon-72.png in Resources */,
@@ -4580,6 +4606,7 @@
 				8FD6119C190916EF009E2358 /* BALocationCellPad.xib in Resources */,
 				8FD6119D190916EF009E2358 /* BATocCellPad.xib in Resources */,
 				8FD6119E190916EF009E2358 /* BATocListCell.xib in Resources */,
+				8F53192D1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD6119F190916EF009E2358 /* iPadIcon.png in Resources */,
 				8FD611A0190916EF009E2358 /* iPadIcon@2x.png in Resources */,
 				8FD611A1190916EF009E2358 /* Icon-72.png in Resources */,
@@ -4602,6 +4629,7 @@
 				8F3A13291640072F00D0B6F1 /* BAItemDetailCell.xib in Resources */,
 				8F24E6F6166611AB0017AC81 /* BAInfoCell.xib in Resources */,
 				8FFFCFCA1667846300326BE9 /* BADocumentItemElementCell.xib in Resources */,
+				8F5319271951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */,
 				8F1F20D4166DF5D500E74231 /* BAItemAccountCell.xib in Resources */,
 				8F1F20DC166DF84200E74231 /* Icon@2x.png in Resources */,
@@ -6350,7 +6378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHE-Info.plist";
+				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp FHE";
@@ -6373,7 +6401,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHE-Info.plist";
+				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp FHE";
@@ -6396,10 +6424,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHS-Info.plist";
+				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp FHS";
+				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6419,10 +6447,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp FHS-Info.plist";
+				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp FHS";
+				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6787,7 +6815,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F8121950230D006CD05A /* Build configuration list for PBXNativeTarget "BibApp FHS" */ = {
+		8FA8F8121950230D006CD05A /* Build configuration list for PBXNativeTarget "BibApp SM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F8131950230D006CD05A /* Debug */,
