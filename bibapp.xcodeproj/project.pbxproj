@@ -2410,8 +2410,8 @@
 		8FA8F773195022BC006CD05A /* BibApp FHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-FHE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-FHE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F8151950230D006CD05A /* BibApp SM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp SM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F8B71950233A006CD05A /* BibApp UBE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp UBE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F8B81950233A006CD05A /* BibApp UBE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp UBE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp UBE-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F8B71950233A006CD05A /* BibApp UFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp UFB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-UFB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-UFB-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F8B91950268E006CD05A /* BAConfigurationBAT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationBAT.h; sourceTree = "<group>"; };
 		8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationBAT.m; sourceTree = "<group>"; };
 		8FA8F8C9195026F5006CD05A /* BAConfigurationHFMW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHFMW.h; sourceTree = "<group>"; };
@@ -3178,7 +3178,7 @@
 				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
 				8FA8F8151950230D006CD05A /* BibApp SM.app */,
-				8FA8F8B71950233A006CD05A /* BibApp UBE.app */,
+				8FA8F8B71950233A006CD05A /* BibApp UFB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3238,7 +3238,7 @@
 				8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */,
 				8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */,
 				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
-				8FA8F8B81950233A006CD05A /* BibApp UBE-Info.plist */,
+				8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
 				8FF2700416393BF200099665 /* InfoPlist.strings */,
 				8FF2700716393BF200099665 /* main.m */,
@@ -3504,9 +3504,9 @@
 			productReference = 8FA8F8151950230D006CD05A /* BibApp SM.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F8171950233A006CD05A /* BibApp UBE */ = {
+		8FA8F8171950233A006CD05A /* BibApp UFB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F8B41950233A006CD05A /* Build configuration list for PBXNativeTarget "BibApp UBE" */;
+			buildConfigurationList = 8FA8F8B41950233A006CD05A /* Build configuration list for PBXNativeTarget "BibApp UFB" */;
 			buildPhases = (
 				8FA8F8181950233A006CD05A /* Sources */,
 				8FA8F8661950233A006CD05A /* Frameworks */,
@@ -3516,9 +3516,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp UBE";
+			name = "BibApp UFB";
 			productName = bibapp;
-			productReference = 8FA8F8B71950233A006CD05A /* BibApp UBE.app */;
+			productReference = 8FA8F8B71950233A006CD05A /* BibApp UFB.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FD61071190916EA009E2358 /* BibApp ThULB */ = {
@@ -3627,7 +3627,7 @@
 				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
 				8FA8F7751950230D006CD05A /* BibApp SM */,
-				8FA8F8171950233A006CD05A /* BibApp UBE */,
+				8FA8F8171950233A006CD05A /* BibApp UFB */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 			);
 		};
@@ -6470,10 +6470,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp UBE-Info.plist";
+				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp UBE";
+				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6493,10 +6493,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp UBE-Info.plist";
+				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp UBE";
+				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6824,7 +6824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F8B41950233A006CD05A /* Build configuration list for PBXNativeTarget "BibApp UBE" */ = {
+		8FA8F8B41950233A006CD05A /* Build configuration list for PBXNativeTarget "BibApp UFB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F8B51950233A006CD05A /* Debug */,
