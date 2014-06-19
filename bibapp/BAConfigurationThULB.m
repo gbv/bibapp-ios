@@ -20,6 +20,7 @@
    self.currentBibPAIAURL = @"https://jenopc5.thulb.uni-jena.de:7242/DE-27";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-27", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.thulb.uni-jena.de";
+   [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.thulb.uni-jena.de", @"Standard-Katalog", nil]];
    self.currentBibTintColor = [UIColor colorWithRed:0.337255F green:0.556863F blue:0.745098F alpha:1.0F];
    self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
    [self.currentBibImprint setObject:@"Thüringer Universitäts- und Landesbibliothek Jena Bibliotheksplatz 2\n07743 Jena\n\nE-Mail: thulb_direktion@thulb.uni-jena.de\n\nTel.: +49 3641 9-40000\nFax: +49 3641 9-40002\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Anbieter"];

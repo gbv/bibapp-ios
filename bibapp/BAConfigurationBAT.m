@@ -23,7 +23,9 @@
     self.currentBibPAIAURL = @"https://paia.gbv.de/DE-Hil2/";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-Ga20", @"BA Gera", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-Ei6", @"BA Eisenach", nil]];
-    self.currentBibFeedURL = @"";
+    self.currentBibFeedURL = @"http://www.ba-gera.de";
+    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.ba-gera.de", @"BA Gera", nil]];
+    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.ba-eisenach.de", @"BA Eisenach", nil]];
     self.currentBibTintColor = [UIColor colorWithRed:0.549020F green:0.694118F blue:0.062745F alpha:1.0F];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil]; // Vertreter?
     [self.currentBibImprint setObject:@"Staatliche Studienakademie Thüringen\nBerufsakademien Gera und Eisenach\nDirektor Prof. Dr. rer. pol. habil. Burkhard Utecht\nWeg der Freundschaft 4A\n07546 Gera\nTel.: +49 365 / 4341-0\nFax: +49 365 / 4341-103\nE-Mail: info@ba-gera.de\nInternet: http://www.ba-gera.de\nDie Staatliche Studienakademie Thüringen ist eine rechtsfähige Körperschaft des öffentlichen Rechts.\nZuständige Behörde für die Rechts- und Fachaufsicht\nThüringer Ministerium für Bildung, Wissenschaft und Kultur\nPostfach 900463\n99107 Erfurt\nTel.: +49 361 / 37 9-00\nFax: +49 361 / 37 94 690\nE-Mail: poststelle@tmbwk.thueringen.de" forKey:@"Anbieter"];
@@ -36,6 +38,7 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"BA Gera", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"BA Eisenach", nil]];
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=2";
+    self.currentBibFeedURLIsWebsite = YES;
 }
 
 @end

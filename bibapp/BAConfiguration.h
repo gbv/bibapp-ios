@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSString *currentBibPAIAURL;
 @property (strong, nonatomic) NSMutableArray *currentBibPAIAURLs;
 @property (strong, nonatomic) NSString *currentBibFeedURL;
+@property (strong, nonatomic) NSMutableArray *currentBibFeedURLs;
 @property (strong, nonatomic) UIColor *currentBibTintColor;
 @property (strong, nonatomic) NSMutableArray *currentBibImprintTitles;
 @property (strong, nonatomic) NSMutableDictionary *currentBibImprint;
@@ -40,5 +41,6 @@
 - (NSString *)getPAIAURLForCatalog:(NSString *)catalogue;
 - (NSString *)getLocationURIForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchTitleForCatalog:(NSString *)catalogue;
+- (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
 
 @end

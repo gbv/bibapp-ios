@@ -118,7 +118,7 @@
            return cell;
         } else {
            UITableViewCell *cell = [[UITableViewCell alloc] init];
-           [cell.textLabel setText:self.appDelegate.configuration.currentBibFeedURL];
+           [cell.textLabel setText:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
            return cell;
         }
     }
@@ -137,7 +137,7 @@
         if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
             url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
         } else {
-            url = [NSURL URLWithString:self.appDelegate.configuration.currentBibFeedURL];
+            url = [NSURL URLWithString:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
         }
         if (![[UIApplication sharedApplication] openURL:url]) {
             NSLog(@"%@%@",@"Failed to open url:",[url description]);

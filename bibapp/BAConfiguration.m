@@ -33,6 +33,7 @@
 @synthesize currentBibPAIAURL;
 @synthesize currentBibPAIAURLs;
 @synthesize currentBibFeedURL;
+@synthesize currentBibFeedURLs;
 @synthesize currentBibTintColor;
 @synthesize currentBibImprintTitles;
 @synthesize currentBibImprint;
@@ -50,6 +51,7 @@
         self.currentBibLocalSearchURLs = [[NSMutableArray alloc] init];
         self.currentBibDetailURLs = [[NSMutableArray alloc] init];
         self.currentBibPAIAURLs = [[NSMutableArray alloc] init];
+        self.currentBibFeedURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
@@ -178,6 +180,17 @@
     for (NSArray *tempCatalogue in self.currentBibLocalSearchURLs) {
         if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
             title = [tempCatalogue objectAtIndex:3];
+        }
+    }
+    return title;
+}
+
+- (NSString *)getFeedURLForCatalog:(NSString *)catalogue
+{
+    NSString *title;
+    for (NSArray *tempCatalogue in self.currentBibFeedURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            title = [tempCatalogue objectAtIndex:0];
         }
     }
     return title;
