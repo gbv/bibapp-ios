@@ -13,15 +13,13 @@
 - (void)initConfiguration
 {
    self.currentBibSearchMaximumRecords = @"20";
-   self.currentBibLocalSearchURL = @"opac-de-hil2";
-   [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil2";
-   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
-   //self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
-   self.currentBibPAIAURL = @"https://paia.gbv.de/DE-Hil2/";
-   //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
-   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil2", @"Standard-Katalog", nil]];
-   self.currentBibFeedURL = @"https://www.uni-hildesheim.de/index.php?id=8920&type=100";
+   self.currentBibLocalSearchURL = @"opac-de-j59";
+   [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-j59", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
+   self.currentBibDetailURL = @"http://daia.gbv.de/isil/de-j59";
+   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-j59", @"Standard-Katalog", nil]];
+   self.currentBibPAIAURL = @"https://jenopc5.thulb.uni-jena.de:7242/DE-J59";
+   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-J59", @"Standard-Katalog", nil]];
+   self.currentBibFeedURL = @"";
    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.0 green:0.89 blue:0.85 alpha:1];
    self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
    [self.currentBibImprint setObject:@"Ernst Abbe Hochschule Jena (EAH Jena)\n\nCarl Zeiss Promenade 2\n07745 Jena\n\nE-Mail: Bibliothek@fh-jena.de\n\nTelefon: +49 (0) 3641- 205 270\nTelefax: +49 (0) 3641- 205 271" forKey:@"Anbieter"];
@@ -30,9 +28,9 @@
    [self.currentBibImprint setObject:@"Diese App wurde von der EAH Jena mit großer Sorgfalt erstellt und geprüft, dennoch können wir aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte geben. Eine Haftung der EAH Jena  für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt. Die Hochschulbibliothek der EAH Jena behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\n\nDiese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
    [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nL. Löbnitz (EAH Jena),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Anschrift\nEAH Jena\nCarl Zeiss Promenade 2\n07745 Jena\nwww.fh-jena.de/bib\n\nTelefon: (03641) 205-270\nE-Mail: bibliothek@fh-jena.de\n\nAusleihe\nTelefon: (03641) 205-280  oder …290\nE-Mail: ausleihe@fh-jena.de\n\nFernleihe\nTelefon: (03641) 205-283\nE-Mail: Fernleihe@fh-jena.de\n\nPatentinformationszentrum (PIZ)\nTelefon: (03641) 205-2275 oder …273\nE-Mail: PIZ@fh-jena.de";
-   self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil2";
-   [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil2", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=3";
+   self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/de-j59";
+   [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/de-j59", @"Standard-Katalog", nil]];
+   //self.currentBibSearchCountURL = @"";
 }
 
 @end

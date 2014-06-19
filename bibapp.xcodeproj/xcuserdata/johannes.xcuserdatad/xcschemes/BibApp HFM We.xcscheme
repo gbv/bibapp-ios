@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FA8F58F19502224006CD05A"
-               BuildableName = "BibApp HFMW.app"
+               BuildableName = "BibApp HFM We.app"
                BlueprintName = "BibApp HFM We"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F58F19502224006CD05A"
-            BuildableName = "BibApp HFMW.app"
+            BuildableName = "BibApp HFM We.app"
             BlueprintName = "BibApp HFM We"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F58F19502224006CD05A"
-            BuildableName = "BibApp HFMW.app"
+            BuildableName = "BibApp HFM We.app"
             BlueprintName = "BibApp HFM We"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F58F19502224006CD05A"
-            BuildableName = "BibApp HFMW.app"
+            BuildableName = "BibApp HFM We.app"
             BlueprintName = "BibApp HFM We"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>

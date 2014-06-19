@@ -42,6 +42,7 @@
 @synthesize currentBibSearchCountURL;
 @synthesize currentBibStandardCatalogue;
 @synthesize currentBibHideDepartment;
+@synthesize currentBibFeedURLIsWebsite;
 
 - (id)init {
     self = [super init];
@@ -59,6 +60,7 @@
         self.currentBibStandardCatalogue = @"Standard-Katalog";
         
         self.currentBibHideDepartment = NO;
+        self.currentBibFeedURLIsWebsite = NO;
     }
     return self;
 }
@@ -69,7 +71,7 @@
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *bundleName = [NSString stringWithFormat:@"%@", [info objectForKey:@"CFBundleDisplayName"]];
-   
+    
     if([bundleName isEqualToString:@"BibApp LG"]){
         currentConfiguration = [[BAConfigurationLG alloc] init];
     } else if([bundleName isEqualToString:@"BibApp HI"]){
@@ -82,21 +84,21 @@
         currentConfiguration = [[BAConfigurationHAWK alloc] init];
     } else if([bundleName isEqualToString:@"BibApp ThULB"]){
        currentConfiguration = [[BAConfigurationThULB alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp EAHJ"]){
+    } else if([bundleName isEqualToString:@"BibApp EAH Jena"]){
        currentConfiguration = [[BAConfigurationEAHJ alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp BUW"]){
+    } else if([bundleName isEqualToString:@"BibApp UB We"]){
        currentConfiguration = [[BAConfigurationUBWe alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp BAT"]){
+    } else if([bundleName isEqualToString:@"BibApp BA Thueringen"]){
         currentConfiguration = [[BAConfigurationBAT alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp HFMW"]){
+    } else if([bundleName isEqualToString:@"BibApp HFM We"]){
         currentConfiguration = [[BAConfigurationHFMWe alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp FHN"]){
+    } else if([bundleName isEqualToString:@"BibApp NDH"]){
         currentConfiguration = [[BAConfigurationNDH alloc] init];
     } else if([bundleName isEqualToString:@"BibApp FHE"]){
         currentConfiguration = [[BAConfigurationFHE alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp FHS"]){
+    } else if([bundleName isEqualToString:@"BibApp SM"]){
         currentConfiguration = [[BAConfigurationSM alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp UBE"]){
+    } else if([bundleName isEqualToString:@"BibApp UFB"]){
         currentConfiguration = [[BAConfigurationUFB alloc] init];
     }
     [currentConfiguration initConfiguration];

@@ -2401,7 +2401,7 @@
 		8F965382166E93B100CA5D50 /* BAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptions.m; sourceTree = "<group>"; };
 		8F965387166E97A900CA5D50 /* BAOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsViewController.h; sourceTree = "<group>"; };
 		8F965388166E97A900CA5D50 /* BAOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsViewController.m; sourceTree = "<group>"; };
-		8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp BA Thüringen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8F58D19501E6B006CD05A /* BibApp BA Thueringen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp BA Thueringen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-BA-Thüringen-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-BA-Thüringen-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F62F19502224006CD05A /* BibApp HFM We.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HFM We.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HFM-We-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-HFM-We-Info.plist"; sourceTree = "<absolute>"; };
@@ -3173,7 +3173,7 @@
 				8FD6110B190916EA009E2358 /* BibApp ThULB.app */,
 				8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */,
 				8F1D83DF192A2E7000A9898D /* BibApp UB We.app */,
-				8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */,
+				8FA8F58D19501E6B006CD05A /* BibApp BA Thueringen.app */,
 				8FA8F62F19502224006CD05A /* BibApp HFM We.app */,
 				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
@@ -3419,9 +3419,9 @@
 			productReference = 8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */ = {
+		8FA8F4ED19501E6B006CD05A /* BibApp BA Thueringen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thüringen" */;
+			buildConfigurationList = 8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thueringen" */;
 			buildPhases = (
 				8FA8F4EE19501E6B006CD05A /* Sources */,
 				8FA8F53C19501E6B006CD05A /* Frameworks */,
@@ -3431,9 +3431,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp BA Thüringen";
+			name = "BibApp BA Thueringen";
 			productName = bibapp;
-			productReference = 8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */;
+			productReference = 8FA8F58D19501E6B006CD05A /* BibApp BA Thueringen.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FA8F58F19502224006CD05A /* BibApp HFM We */ = {
@@ -3622,7 +3622,7 @@
 				8FD61071190916EA009E2358 /* BibApp ThULB */,
 				8FD6110D190916EF009E2358 /* BibApp EAH Jena */,
 				8F1D8343192A2E7000A9898D /* BibApp UB We */,
-				8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */,
+				8FA8F4ED19501E6B006CD05A /* BibApp BA Thueringen */,
 				8FA8F58F19502224006CD05A /* BibApp HFM We */,
 				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
@@ -6243,7 +6243,7 @@
 				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp BA Thüringen";
+				PRODUCT_NAME = "BibApp BA Thueringen";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6266,7 +6266,7 @@
 				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp BA Thüringen";
+				PRODUCT_NAME = "BibApp BA Thueringen";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6779,7 +6779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thüringen" */ = {
+		8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thueringen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F58B19501E6B006CD05A /* Debug */,

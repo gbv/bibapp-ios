@@ -38,18 +38,20 @@
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
    
-    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
-    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
-       if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
-           self.infoFeed = [[NSMutableArray alloc] init];
-       
-           UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-           [spinner startAnimating];
-           spinner.frame = CGRectMake(0, 0, 320, 44);
-           self.infoTableView.tableFooterView = spinner;
-       
-           BAConnector *connector = [BAConnector generateConnector];
-           [connector getInfoFeedWithDelegate:self];
+    if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+       BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+       if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+          if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
+             self.infoFeed = [[NSMutableArray alloc] init];
+           
+             UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+             [spinner startAnimating];
+             spinner.frame = CGRectMake(0, 0, 320, 44);
+             self.infoTableView.tableFooterView = spinner;
+           
+             BAConnector *connector = [BAConnector generateConnector];
+             [connector getInfoFeedWithDelegate:self];
+          }
        }
     }
 }
@@ -78,7 +80,11 @@
     if (section != 3) {
         return 1;
     } else {
-        return [self.infoFeed count];
+        if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+           return [self.infoFeed count];
+        } else {
+            return 1;
+        }
     }
 }
 
@@ -96,19 +102,25 @@
         }
         return cell;
     } else {
-        BAInfoCell *cell;
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-        [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
-        [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
-        if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
-            [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
+        if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+           BAInfoCell *cell;
+           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCell" owner:self options:nil];
+           cell = [nib objectAtIndex:0];
+           [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
+           [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
+           if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
+              [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
+           } else {
+              [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
+           }
+           [cell.contentLabel sizeToFit];
+           [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+           return cell;
         } else {
-            [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
+           UITableViewCell *cell = [[UITableViewCell alloc] init];
+           [cell.textLabel setText:self.appDelegate.configuration.currentBibFeedURL];
+           return cell;
         }
-        [cell.contentLabel sizeToFit];
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-        return cell;
     }
 }
 
@@ -121,7 +133,12 @@
     } else if (indexPath.section == 2) {
         [self performSegueWithIdentifier:@"BAImpressumSegue" sender:self];
     } else if (indexPath.section == 3) {
-        NSURL *url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
+        NSURL *url;
+        if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+            url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
+        } else {
+            url = [NSURL URLWithString:self.appDelegate.configuration.currentBibFeedURL];
+        }
         if (![[UIApplication sharedApplication] openURL:url]) {
             NSLog(@"%@%@",@"Failed to open url:",[url description]);
         }
@@ -195,7 +212,11 @@
     {
         return @"";
     } else {
-        return @"News";
+        if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+            return @"News";
+        } else {
+            return @"Website";
+        }
     }
 }
 

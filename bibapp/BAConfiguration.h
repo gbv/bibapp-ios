@@ -29,6 +29,7 @@
 @property (strong, nonatomic) NSString *currentBibSearchCountURL;
 @property (strong, nonatomic) NSString *currentBibStandardCatalogue;
 @property BOOL *currentBibHideDepartment;
+@property BOOL *currentBibFeedURLIsWebsite;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
