@@ -56,15 +56,17 @@
     }
     
     if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
-        self.infoFeed = [[NSMutableArray alloc] init];
+       if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+          self.infoFeed = [[NSMutableArray alloc] init];
     
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [spinner startAnimating];
-        spinner.frame = CGRectMake(0, 0, 320, 44);
-        self.contentTableView.tableFooterView = spinner;
+          UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+          [spinner startAnimating];
+          spinner.frame = CGRectMake(0, 0, 320, 44);
+          self.contentTableView.tableFooterView = spinner;
     
-        BAConnector *connector = [BAConnector generateConnector];
-        [connector getInfoFeedWithDelegate:self];
+          BAConnector *connector = [BAConnector generateConnector];
+          [connector getInfoFeedWithDelegate:self];
+       }
     }
     
     self.locationList = [[NSMutableArray alloc] init];
@@ -126,17 +128,31 @@
         return 1;
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
-            if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-                return [self.infoFeed count];
-            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-                return 1;
-            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-                return [self.locationList count];
-            } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
-                return [self.appDelegate.configuration.currentBibImprint count];
-            } else {
-                return 0;
-            }
+           if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+              if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                 return [self.infoFeed count];
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                 return 1;
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                 return [self.locationList count];
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                 return [self.appDelegate.configuration.currentBibImprint count];
+              } else {
+                 return 0;
+              }
+           } else {
+              if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
+                 return 1;
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
+                 return 1;
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
+                 return [self.locationList count];
+              } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
+                 return [self.appDelegate.configuration.currentBibImprint count];
+              } else {
+                 return 0;
+              }
+           }
         } else {
             if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
                 return 1;
@@ -160,15 +176,27 @@
         [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
-            if (indexPath.section == 0) {
-                [cell.textLabel setText:@"News"];
-            } else if (indexPath.section == 1) {
-                [cell.textLabel setText:@"Kontakt"];
-            } else if (indexPath.section == 2) {
-                [cell.textLabel setText:@"Standorte"];
-            } else if (indexPath.section == 3) {
-                [cell.textLabel setText:@"Impressum"];
-            }
+           if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+              if (indexPath.section == 0) {
+                 [cell.textLabel setText:@"News"];
+              } else if (indexPath.section == 1) {
+                 [cell.textLabel setText:@"Kontakt"];
+              } else if (indexPath.section == 2) {
+                 [cell.textLabel setText:@"Standorte"];
+              } else if (indexPath.section == 3) {
+                 [cell.textLabel setText:@"Impressum"];
+              }
+           } else {
+              if (indexPath.section == 0) {
+                 [cell.textLabel setText:@"Website"];
+              } else if (indexPath.section == 1) {
+                 [cell.textLabel setText:@"Kontakt"];
+              } else if (indexPath.section == 2) {
+                 [cell.textLabel setText:@"Standorte"];
+              } else if (indexPath.section == 3) {
+                 [cell.textLabel setText:@"Impressum"];
+              }
+           }
         } else {
             if (indexPath.section == 0) {
                 [cell.textLabel setText:@"Kontakt"];
@@ -182,19 +210,25 @@
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
             if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-                BAInfoCell *cell;
-                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
-                cell = [nib objectAtIndex:0];
-                [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
-                [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
-                if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
-                    [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
-                } else {
-                    [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
-                }
-                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-                [cell.contentLabel sizeToFit];
-                return cell;
+               if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+                  BAInfoCell *cell;
+                  NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
+                  cell = [nib objectAtIndex:0];
+                  [cell.titleLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] title]];
+                  [cell.dateLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] date]];
+                  if (![[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content] isEqualToString:@""]) {
+                     [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] content]];
+                  } else {
+                     [cell.contentLabel setText:[(BAInfoItem *)[self.infoFeed objectAtIndex:indexPath.row] description]];
+                  }
+                  [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                  [cell.contentLabel sizeToFit];
+                  return cell;
+               } else {
+                  UITableViewCell *cell = [[UITableViewCell alloc] init];
+                  [cell.textLabel setText:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
+                  return cell;
+               }
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
                 BAInfoCell *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
@@ -263,7 +297,12 @@
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
             if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-                NSURL *url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
+                NSURL *url;
+                if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
+                   url = [NSURL URLWithString:[(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] link]];
+                } else {
+                   url = [NSURL URLWithString:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
+                }
                 if (![[UIApplication sharedApplication] openURL:url]) {
                 }
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {

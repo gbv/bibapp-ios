@@ -3601,6 +3601,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Johannes Schultze";
 				TargetAttributes = {
+					8F8A757E1781BF4700CCF7DB = {
+						DevelopmentTeam = DG2S2C98D2;
+					};
 					8FA8F4ED19501E6B006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
@@ -3609,6 +3612,9 @@
 					};
 					8FD6110D190916EF009E2358 = {
 						DevelopmentTeam = DG2S2C98D2;
+					};
+					8FF26FF416393BF100099665 = {
+						DevelopmentTeam = J62XE98Y9H;
 					};
 				};
 			};
@@ -6113,7 +6119,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -6122,7 +6129,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp BLS";
-				PROVISIONING_PROFILE = "49A195AF-EF07-4428-8551-96464B661965";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
@@ -6134,8 +6141,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -6144,7 +6151,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_NAME = "BibApp BLS";
-				PROVISIONING_PROFILE = "49A195AF-EF07-4428-8551-96464B661965";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -6663,8 +6670,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -6686,8 +6693,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leuphana Universitaet Lueneburg";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leuphana Universitaet Lueneburg";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
