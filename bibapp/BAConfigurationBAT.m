@@ -15,7 +15,7 @@
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibLocalSearchURL = @"DE-Wim2";
     self.currentBibStandardCatalogue = @"BA Gera";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ga-20", @"BA Gera", @"BA Gera", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ga20", @"BA Gera", @"BA Gera", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ei6", @"BA Eisenach", @"BA Eisenach", @"Lokale Suche", nil]];
     self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Wim2";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ga20", @"BA Gera", nil]];
