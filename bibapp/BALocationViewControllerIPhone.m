@@ -15,12 +15,13 @@
 @implementation BALocationViewControllerIPhone
 
 - (void)initSize{
-    self.spacing = 0;
-    self.spacingSplit = 185;
+    [super initSize];
     self.width = 320;
-    self.splitHeightTop = 175;
-    self.splitHeightBottom = 177;
-    self.completeHeight = 367;
+    self.mapViewHeight = 175;
+    self.textViewHeight = 177;
+    if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
+        self.top = 64;
+    }
 }
 
 @end

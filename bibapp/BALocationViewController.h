@@ -17,12 +17,10 @@
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) UITextView *textView;
 @property(strong, nonatomic) BALocation *currentLocation;
-@property float spacing;
-@property float spacingSplit;
 @property float width;
-@property float completeHeight;
-@property float splitHeightTop;
-@property float splitHeightBottom;
+@property float mapViewHeight;
+@property float textViewHeight;
+@property float top;
 
 - (void)initSize;
 

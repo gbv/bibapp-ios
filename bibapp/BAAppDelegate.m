@@ -21,10 +21,22 @@
 @synthesize options;
 @synthesize locations;
 @synthesize configuration;
+@synthesize isIOS7;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.isIOS7 = NO;
+    NSString *reqSysVer = @"7.0";
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending) {
+        self.isIOS7 = YES;
+    }
+    
     self.configuration = [BAConfiguration createConfiguration];
+    
+    if (self.isIOS7) {
+        [self.window setTintColor:self.configuration.currentBibTintColor];
+    }
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAOptions" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -78,7 +90,6 @@
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         self.locationManager.delegate = self;
-        self.locationManager.purpose = @"Die App verwendet Ihren Standort, um den Abstand zur nächstgelegenen Bibliothek zu ermitteln, die einen von Ihnen gesuchten Titel besitzt. Die Information wird nicht an die Bibliothek oder Andere übermittelt.";
     }
     [self.locationManager startUpdatingLocation];
     

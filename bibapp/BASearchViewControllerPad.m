@@ -55,6 +55,7 @@
 @synthesize tocTableViewController;
 @synthesize initialSearchLocal;
 @synthesize initialSearch;
+@synthesize statusBarTintUIView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,8 +70,12 @@
 {
     [super viewDidLoad];
 
-	// Do any additional setup after loading the view.
-    
+    // http://stackoverflow.com/a/19106407
+    self.view.autoresizesSubviews = YES;
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+   
+	 // Do any additional setup after loading the view.
+   
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCatalogue:) name:@"changeCatalogue" object:nil];
@@ -78,9 +83,21 @@
     [self.navigationBarSearch setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.navigationBarDetail setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.navigationBarSearch setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.navigationBarDetail setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.searchSegmentedController setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
+        //[self.optionsButton setEnabled:YES];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+        [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    }
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
@@ -90,15 +107,19 @@
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
     
-    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 75, 704, 75)];
+    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(320, 139, 704, 75)];
     [self.defaultTextView setFont:[UIFont systemFontOfSize:20]];
-    [self.defaultTextView setTextAlignment:UITextAlignmentCenter];
-    [self.scrollView addSubview:self.defaultTextView];
+    [self.defaultTextView setTextAlignment:NSTextAlignmentCenter];
+    [self.defaultTextView setEditable:NO];
+    [self.defaultTextView setUserInteractionEnabled:NO];
+    [self.defaultTextView setOpaque:YES];
+    [self.defaultTextView setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:self.defaultTextView];
     
-    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(227, 150, 250, 150)];
+    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(547, 214, 250, 150)];
     [self.defaultImageView setContentMode:UIViewContentModeScaleAspectFill];
     [self.defaultImageView setImage:[UIImage imageNamed:@"Buch_250_gradient.png"]];
-    [self.scrollView addSubview:self.defaultImageView];
+    [self.view addSubview:self.defaultImageView];
     
     [self.searchTableView setTag:0];
     [self.detailTableView setTag:1];
@@ -110,12 +131,6 @@
     [self.coverView addGestureRecognizer:tap];
     
     [self initDetailView];
-    
-    CALayer *leftBorder = [CALayer layer];
-    leftBorder.borderColor = [UIColor lightGrayColor].CGColor;
-    leftBorder.borderWidth = 1;
-    leftBorder.frame = CGRectMake(-1, 0, 1, self.scrollView.frame.size.height+2);
-    [self.scrollView.layer addSublayer:leftBorder];
     
     self.tocTableViewController = [[BATocTableViewControllerPad alloc] init];
     [self.tocTableViewController setSearchController:self];
@@ -209,10 +224,12 @@
 {
     UITableViewCell *cell;
     if (tableView.tag == 0) {
-        BAItemCell *tempCell;
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
-        tempCell = [nib objectAtIndex:0];
-        
+        BAItemCell *tempCell = (BAItemCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemCell"];
+        if (tempCell == nil) {
+           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
+           tempCell = [nib objectAtIndex:0];
+        }
+       
         // Configure the cell...
         BAEntryWork *entry;
         
@@ -246,10 +263,12 @@
         cell = tempCell;
     } else if (tableView.tag == 1) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            BADocumentItemElementCellPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCellPad *cell = (BADocumentItemElementCellPad *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellPad"];
+            if (cell == nil) {
+               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellPad" owner:self options:nil];
+               cell = [nib objectAtIndex:0];
+            }
+           
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             if (self.currentEntryLocal.onlineLocation == nil) {
@@ -289,7 +308,8 @@
                     loan = element;
                 }
             }
-            
+           
+            [cell.status setTextColor:[[UIColor alloc] initWithRed:0.474510F green:0.474510F blue:0.474510F alpha:1.0F]];
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
                 [status appendString:@"ausleihbar"];
@@ -353,30 +373,42 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.subtitle.backgroundColor = [UIColor whiteColor];
+                cell.status.backgroundColor = [UIColor whiteColor];
+                cell.statusInfo.backgroundColor = [UIColor whiteColor];
             } else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
         } else {
-            BADocumentItemElementCellNonLocalPad *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocalPad" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCellNonLocalPad *cell = (BADocumentItemElementCellNonLocalPad *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellNonLocalPad"];
+            if (cell == nil) {
+               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocalPad" owner:self options:nil];
+               cell = [nib objectAtIndex:0];
+            }
+           
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
-            
             [cell.title setText:tempDocumentItem.department];
             [cell.labels setText:tempDocumentItem.label];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            [cell loadLocationWithUri:tempDocumentItem.uri];
             [self activateActionButton:cell.actionButton];
-            
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.labels.backgroundColor = [UIColor whiteColor];
             } else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
             return cell;
         }
     }
@@ -447,12 +479,12 @@
         }*/
         if ([command isEqualToString:@"searchLocal"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
             }
             self.searchedLocal = YES;
         } else if ([command isEqualToString:@"searchCentral"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
             }
             self.searched = YES;
         }
@@ -624,17 +656,19 @@
             }
             
             // Get link for online location
-            GDataXMLElement *onlineLocation = (GDataXMLElement *)[[shortTitleNew elementsForName:@"location"] objectAtIndex:0];
-            if (onlineLocation != nil) {
-                GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                if (onlineLocationUrl != nil) {
-                    NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                    if (rangeValueType.length > 0) {
+            NSArray *onlineLocations = [shortTitleNew elementsForName:@"location"];
+            for (GDataXMLElement *onlineLocation in onlineLocations) {
+               if (onlineLocation != nil) {
+                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                  if (onlineLocationUrl != nil) {
+                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                     if (rangeValueType.length > 0) {
                         [tempEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                    }
-                }
-            }
-            
+                     }
+                  }
+               }
+           }
+           
             // Get Link table of contents
             GDataXMLElement *relatedItemToc = (GDataXMLElement *)[[shortTitleNew elementsForName:@"relatedItem"] objectAtIndex:0];
             if (relatedItemToc != nil) {
@@ -825,7 +859,7 @@
             [self.currentDocument setInstitution:[tempInstitution stringValue]];
         }
         
-        BAConnector *locationConnector = [BAConnector generateConnector];
+        //BAConnector *locationConnector = [BAConnector generateConnector];
         NSArray *items = [parser nodesForXPath:@"_def_ns:daia/_def_ns:document/_def_ns:item" error:nil];
         for (GDataXMLElement *item in items) {
             BADocumentItem *tempDocumentItem = [[BADocumentItem alloc] init];
@@ -841,12 +875,12 @@
             NSArray *department = [item elementsForName:@"department"];
             if ([department count] == 1) {
                 [tempDocumentItem setUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]];
-                [tempDocumentItem setLocation:[locationConnector loadLocationForUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]]];
+                /*[tempDocumentItem setLocation:[locationConnector loadLocationForUri:[[[department objectAtIndex:0] attributeForName:@"id"] stringValue]]];
                 if (![tempDocumentItem.location.shortname isEqualToString:@""]) {
                     [tempDocumentItem setDepartment:tempDocumentItem.location.shortname];
                 } else {
                     [tempDocumentItem setDepartment:tempDocumentItem.location.name];
-                }
+                }*/
             }
             
             NSArray *storage = [item elementsForName:@"storage"];
@@ -902,13 +936,13 @@
             BADocumentItem *workingItem;
             BOOL foundItem = NO;
             
-            if (item.department == nil) {
-                [item setDepartment:@"Zusätzliche Exemplare anderer Bibliotheken"];
+            if (item.uri == nil) {
+                [item setUri:@"Zusätzliche Exemplare anderer Bibliotheken"];
             }
             
             for (BADocumentItem *tempWorkingItem in tempItems) {
-                if (item.department != nil && tempWorkingItem.department != nil) {
-                    if ([item.department isEqualToString:tempWorkingItem.department]) {
+                if (item.uri != nil && tempWorkingItem.uri != nil) {
+                    if ([item.uri isEqualToString:tempWorkingItem.uri]) {
                         foundItem = YES;
                         workingItem = tempWorkingItem;
                     }
@@ -916,15 +950,20 @@
             }
             if (!foundItem) {
                 workingItem = [[BADocumentItem alloc] init];
-                NSString *tempDepartment;
-                if (item.department != nil) {
-                    tempDepartment = item.department;
+                NSString *tempUri;
+                if (item.uri != nil) {
+                    tempUri = item.uri;
                 } else {
-                    tempDepartment = @"Zusätzliche Exemplare anderer Bibliotheken";
+                    tempUri = @"Zusätzliche Exemplare anderer Bibliotheken";
                 }
-                [workingItem setDepartment:tempDepartment];
+                if ([tempUri isEqualToString:@"Zusätzliche Exemplare anderer Bibliotheken"]) {
+                   [workingItem setDepartment:tempUri];
+                } else {
+                   [workingItem setDepartment:@"..."];
+                }
                 [workingItem setLabel:item.label];
                 [workingItem setLocation:item.location];
+                [workingItem setUri:tempUri];
                 [tempItems addObject:workingItem];
             } else {
                 NSMutableString *tempLabelString = [workingItem.label mutableCopy];
@@ -939,8 +978,8 @@
         
         if (myLocation == nil) {
             sortedArray = [tempItems sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-                NSString *first = [(BADocumentItem*)a department];
-                NSString *second = [(BADocumentItem*)b department];
+                NSString *first = [(BADocumentItem*)a uri];
+                NSString *second = [(BADocumentItem*)b uri];
                 return [first compare:second];
             }];
         } else {
@@ -985,7 +1024,7 @@
         int currentLine = 0;
         
         if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\](?=\\n)" options:NSRegularExpressionCaseInsensitive error:nil];
             NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
             if ([resultsLine count] > 0) {
                 currentLine++;
@@ -1004,14 +1043,32 @@
             if ([resultsLine count] > 0) {
                 NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
                 if ([resultPartsBracket count] > 0) {
-                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
+                    NSMutableString *tempBracketString = [[NSMutableString alloc] init];
+                    BOOL firstPart = YES;
+                    for (int i = 1; i < [resultPartsBracket count]; i++) {
+                       if (!firstPart) {
+                          [tempBracketString appendString:@"]"];
+                       } else {
+                          firstPart = NO;
+                       }
+                       [tempBracketString appendString:[resultPartsBracket objectAtIndex:i]];
+                    }
+                    [newStringArray setObject:tempBracketString atIndexedSubscript:currentLine];
                 } else {
                     [newStringArray setObject:@"" atIndexedSubscript:currentLine];
                 }
             }
             NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
             if ([resultPartsSlash count] > 1) {
-                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
+                BOOL firstPart = YES;
+                for (int i = 1; i < [resultPartsSlash count]; i++) {
+                   if (!firstPart) {
+                      [displayString appendString:@" / "];
+                   } else {
+                      firstPart = NO;
+                   }
+                   [displayString appendString:[resultPartsSlash objectAtIndex:i]];
+                }
             } else {
                 NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
                 if ([resultPartsDash count] > 1) {
@@ -1062,17 +1119,21 @@
                     }
                 }
             }
-            GDataXMLElement *onlineLocation = (GDataXMLElement *)[[mods elementsForName:@"location"] objectAtIndex:0];
+           
             [self.currentEntry setOnlineLocation:nil];
-            if (onlineLocation != nil) {
-                GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                if (onlineLocationUrl != nil) {
-                    NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                    if (rangeValueType.length > 0) {
+            NSArray *onlineLocations = [mods elementsForName:@"location"];
+            for (GDataXMLElement *onlineLocation in onlineLocations) {
+               if (onlineLocation != nil) {
+                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                  if (onlineLocationUrl != nil) {
+                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                     if (rangeValueType.length > 0) {
                         [self.currentEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                    }
-                }
+                     }
+                  }
+               }
             }
+           
             [self.currentEntry setIsbn:@""];
             GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
             if (tempISBNElement != nil) {
@@ -1097,18 +1158,22 @@
         }
         [self.detailTableView reloadData];
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
-        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
-        if ([json count] > 0) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bestellung / Vormerkung\nerfolgreich"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bestellung / Vormerkung\nleider nicht möglich"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        }
+       NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+       if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
+          NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
+          if ([doc objectForKey:@"error"] == nil) {
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+          } else {
+             NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]];
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+          }
+       } else {
+          NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]];
+          UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+          [alert show];
+       }
     }
 }
 
@@ -1125,7 +1190,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
         } else {
             //[self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
             [self.navigationBarSearch.topItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -1136,7 +1201,7 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
         } else {
             [self.navigationBarSearch.topItem setTitle:@"GVK Suche"];
         }
@@ -1187,15 +1252,12 @@
     [self.defaultImageView setHidden:YES];
     
     BAEntryWork *tempEntry;
-    NSInteger *tempPosition;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         tempEntry = self.currentEntryLocal;
-        tempPosition = self.positionLocal;
     } else {
         [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
         tempEntry = self.currentEntry;
-        tempPosition = self.position;
     }
     
     if (tempEntry != nil) {
@@ -1295,29 +1357,28 @@
             [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
             [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
         }
-        
-        [self loadCover];
-
-        
+       
+        if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
+           [self setCover:[self.currentEntry mediaIcon]];
+        } else {
+           [self setCover:[UIImage imageNamed:self.currentEntry.matcode]];
+        }
+       
+        [self.coverView setContentMode:UIViewContentModeCenter];
+        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+           [self.coverView setImage:self.currentEntryLocal.mediaIcon];
+        } else {
+           [self.coverView setImage:self.currentEntry.mediaIcon];
+        }
+       
+        [self.coverActivityIndicator startAnimating];
+        [self performSelectorInBackground:@selector(loadCover) withObject:nil];
     } else {
         [self initDetailView];
     }
 }
 
 - (void)loadCover{
-    if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
-        [self setCover:[self.currentEntry mediaIcon]];
-    } else {
-        [self setCover:[UIImage imageNamed:self.currentEntry.matcode]];
-    }
-    
-    [self.coverView setContentMode:UIViewContentModeCenter];
-    if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        [self.coverView setImage:self.currentEntryLocal.mediaIcon];
-    } else {
-        [self.coverView setImage:self.currentEntry.mediaIcon];
-    }
-    
     NSString *urlStringISBN;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         urlStringISBN = [[NSString alloc] initWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", [self.currentEntryLocal isbn]];
@@ -1353,6 +1414,7 @@
             self.foundCover = NO;
         }
     }
+    [self.coverActivityIndicator stopAnimating];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -1667,6 +1729,19 @@
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleDefault;
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   self.searchTableView.tableFooterView = nil;
+   self.detailTableView.tableFooterView = nil;
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

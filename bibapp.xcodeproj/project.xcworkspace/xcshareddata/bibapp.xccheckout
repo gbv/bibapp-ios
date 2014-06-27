@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BE4B2544-1D8B-4785-BF61-6ECD114B5400</string>
+	<key>IDESourceControlProjectName</key>
+	<string>bibapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF53CAF8-FBA1-43F7-B63A-030E088A8E6B</key>
+		<string>https://github.com/gbv/bibapp-ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>bibapp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF53CAF8-FBA1-43F7-B63A-030E088A8E6B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gbv/bibapp-ios</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF53CAF8-FBA1-43F7-B63A-030E088A8E6B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF53CAF8-FBA1-43F7-B63A-030E088A8E6B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bibapp-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

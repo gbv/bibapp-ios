@@ -20,10 +20,11 @@
 @property (strong, nonatomic) NSMutableArray *feesSum;
 @property (strong, nonatomic) NSMutableArray *fees;
 @property (strong, nonatomic) NSMutableArray *sendEntries;
-@property (strong, nonatomic) NSMutableArray *successfulEntries;
+@property (strong, nonatomic) NSMutableDictionary *successfulEntries;
 @property (strong, nonatomic) NSString *currentAccount;
 @property (strong, nonatomic) NSString *currentPassword;
 @property (strong, nonatomic) NSString *currentToken;
+@property (strong, nonatomic) NSArray *currentScope;
 @property BOOL isLoggingIn;
 @property BOOL loggedIn;
 @property (weak, nonatomic) IBOutlet UITableView *loanTableView;
@@ -38,6 +39,14 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *feeToolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loanBarButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reservationBarButton;
+@property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
+@property (strong, nonatomic) UIRefreshControl *loanRefreshControl;
+@property (strong, nonatomic) UIRefreshControl *reservationRefreshControl;
+@property (strong, nonatomic) UIRefreshControl *feeRefreshControl;
+@property (weak, nonatomic) IBOutlet UILabel *loanLoadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reservationLoadingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feeLoadingLabel;
 
 - (void)actionButtonClick:(id)sender;
 

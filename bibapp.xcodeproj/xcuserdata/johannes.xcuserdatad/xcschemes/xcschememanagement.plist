@@ -4,15 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BibApp BA Thüringen.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>BibApp BLS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BibApp EAH Jena.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>BibApp FHE.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>BibApp HFM We.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>BibApp HI.xcscheme</key>
 		<dict>
@@ -28,6 +48,31 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>BibApp NDH.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>BibApp SM.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+		<key>BibApp ThULB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>BibApp UB We.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>BibApp UFB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>BibAppUnitTests.xcscheme</key>
 		<dict>
@@ -48,6 +93,11 @@
 			<true/>
 		</dict>
 		<key>8F114037167F217000E033F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F1D8343192A2E7000A9898D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +123,46 @@
 			<true/>
 		</dict>
 		<key>8F8A76A81781C0D800CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F4ED19501E6B006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F58F19502224006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F6311950228D006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F6D3195022BC006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F7751950230D006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FA8F8171950233A006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD61071190916EA009E2358</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD6110D190916EF009E2358</key>
 		<dict>
 			<key>primary</key>
 			<true/>

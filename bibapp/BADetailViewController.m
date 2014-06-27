@@ -387,74 +387,92 @@
         [((BAItemDetail *)self.view).detailTableView reloadData];
         ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
     } else if ([command isEqualToString:@"getUNAPIDetailsIsbd"]) {
-        NSString *resultString = [[NSString alloc] initWithData:(NSData *)result encoding:NSASCIIStringEncoding];
-        
-        const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
-        NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
-        NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
-        
-        NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
-        
-        int currentLine = 0;
-        
-        if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
-            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
-            if ([resultsLine count] > 0) {
-                currentLine++;
-            }
-        }
-        
-        if ([newStringArray count] > currentLine) {
-            if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
-                currentLine++;
-            }
-        }
-        
-        if ([newStringArray count] > currentLine) {
-            NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
-            NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
-            if ([resultsLine count] > 0) {
-                NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
-                if ([resultPartsBracket count] > 0) {
-                    [newStringArray setObject:[resultPartsBracket objectAtIndex:1] atIndexedSubscript:currentLine];
-                } else {
-                    [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+       NSString *resultString = [[NSString alloc] initWithData:(NSData *)result encoding:NSASCIIStringEncoding];
+       
+       const char *c = [resultString cStringUsingEncoding:NSISOLatin1StringEncoding];
+       NSString *newString = [[NSString alloc]initWithCString:c encoding:NSUTF8StringEncoding];
+       NSMutableArray *newStringArray = [[newString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
+       
+       NSMutableString *displayString = [[NSMutableString alloc] initWithFormat:@""];
+       
+       int currentLine = 0;
+       
+       if ([newStringArray count] > currentLine) {
+          NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\](?=\\n)" options:NSRegularExpressionCaseInsensitive error:nil];
+          NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+          if ([resultsLine count] > 0) {
+             currentLine++;
+          }
+       }
+       
+       if ([newStringArray count] > currentLine) {
+          if ([[newStringArray objectAtIndex:currentLine] hasSuffix:@":"]) {
+             currentLine++;
+          }
+       }
+       
+       if ([newStringArray count] > currentLine) {
+          NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"^\\[.*\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+          NSArray *resultsLine = [regexLine matchesInString:[newStringArray objectAtIndex:currentLine] options:0 range:NSMakeRange(0, [[newStringArray objectAtIndex:currentLine] length])];
+          if ([resultsLine count] > 0) {
+             NSArray *resultPartsBracket = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"]"];
+             if ([resultPartsBracket count] > 0) {
+                NSMutableString *tempBracketString = [[NSMutableString alloc] init];
+                BOOL firstPart = YES;
+                for (int i = 1; i < [resultPartsBracket count]; i++) {
+                   if (!firstPart) {
+                      [tempBracketString appendString:@"]"];
+                   } else {
+                      firstPart = NO;
+                   }
+                   [tempBracketString appendString:[resultPartsBracket objectAtIndex:i]];
                 }
-            }
-            NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
-            if ([resultPartsSlash count] > 1) {
-                [displayString appendString:[resultPartsSlash objectAtIndex:1]];
-            } else {
+                [newStringArray setObject:tempBracketString atIndexedSubscript:currentLine];
+             } else {
+                [newStringArray setObject:@"" atIndexedSubscript:currentLine];
+             }
+          }
+          NSArray *resultPartsSlash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" / "];
+          if ([resultPartsSlash count] > 1) {
+             BOOL firstPart = YES;
+             for (int i = 1; i < [resultPartsSlash count]; i++) {
+                if (!firstPart) {
+                   [displayString appendString:@" / "];
+                } else {
+                   firstPart = NO;
+                }
+                [displayString appendString:[resultPartsSlash objectAtIndex:i]];
+             }
+          } else {
+             NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
+             if ([resultPartsDash count] > 1) {
+                [displayString appendString:[resultPartsDash objectAtIndex:1]];
+             } else {
+                [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+             }
+          }
+       }
+       
+       currentLine++;
+       
+       if ([newStringArray count] > currentLine) {
+          NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
+          if ([resultPartsCongress count] > 1) {
+             [displayString appendString:[resultPartsCongress objectAtIndex:1]];
+          } else {
+             if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
                 NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
                 if ([resultPartsDash count] > 1) {
-                    [displayString appendString:[resultPartsDash objectAtIndex:1]];
-                } else {
-                    [displayString appendString:[newStringArray objectAtIndex:currentLine]];
+                   [displayString appendString:[resultPartsDash objectAtIndex:1]];
                 }
-            }
-        }
-        
-        currentLine++;
-        
-        if ([newStringArray count] > currentLine) {
-            NSArray *resultPartsCongress = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@"Congress: "];
-            if ([resultPartsCongress count] > 1) {
-                [displayString appendString:[resultPartsCongress objectAtIndex:1]];
-            } else {
-                if ((self.currentEntry.partName != nil) && (self.currentEntry.partNumber != nil)) {
-                    NSArray *resultPartsDash = [[newStringArray objectAtIndex:currentLine] componentsSeparatedByString:@" - "];
-                    if ([resultPartsDash count] > 1) {
-                        [displayString appendString:[resultPartsDash objectAtIndex:1]];
-                    }
-                }
-            }
-        }
-        
+             }
+          }
+       }
+       
         [self.currentEntry setInfoText:displayString];
         self.didLoadISBD = YES;
         [((BAItemDetail *)self.view).detailTableView reloadData];
-        
+       
         [((BAItemDetail *)self.view).detailTableView beginUpdates];
         [((BAItemDetail *)self.view).detailTableView reloadRowsAtIndexPaths:0 withRowAnimation:UITableViewRowAnimationNone];
         [((BAItemDetail *)self.view).detailTableView endUpdates];
@@ -477,17 +495,20 @@
                     }
                 }
             }
-            GDataXMLElement *onlineLocation = (GDataXMLElement *)[[mods elementsForName:@"location"] objectAtIndex:0];
             [self.currentEntry setOnlineLocation:nil];
-            if (onlineLocation != nil) {
-                GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                if (onlineLocationUrl != nil) {
-                    NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                    if (rangeValueType.length > 0) {
+            NSArray *onlineLocations = [mods elementsForName:@"location"];
+            for (GDataXMLElement *onlineLocation in onlineLocations) {
+               if (onlineLocation != nil) {
+                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                  if (onlineLocationUrl != nil) {
+                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                     if (rangeValueType.length > 0) {
                         [self.currentEntry setOnlineLocation:[onlineLocationUrl stringValue]];
                     }
-                }
+                  }
+               }
             }
+           
             [self.currentEntry setIsbn:@""];
             GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
             if (tempISBNElement != nil) {
@@ -563,10 +584,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        BAItemDetailTitleCell *cell;
+        BAItemDetailTitleCell *cell = (BAItemDetailTitleCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemDetailTitleCell"];
+        if (cell == nil) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        // Keep code for profiling
+        /*
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetailTitleCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-        
+        BAItemDetailTitleCell *cell = [nib objectAtIndex:0];
+        */
+       
         if (![self.currentEntry isKindOfClass:[BAEntryWork class]]) {
             BAEntryWork *tempEntry = [[BAEntryWork alloc] init];
             [tempEntry setPpn:[self.currentEntry ppn]];
@@ -596,7 +624,7 @@
         if (![self.currentEntry.subtitle isEqualToString:@""]) {
             top += cell.titleLabel.frame.size.height;
             [cell.subTitleLabel setText:self.currentEntry.subtitle];
-            [cell.subTitleLabel setLineBreakMode:UILineBreakModeTailTruncation];
+            [cell.subTitleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
             [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
             [cell.subTitleLabel sizeToFit];
             if (cell.subTitleLabel.frame.size.height > 15) {
@@ -695,10 +723,17 @@
         return cell;
     } else {
         if (self.currentEntry.local) {
-            BADocumentItemElementCell *cell;
+            BADocumentItemElementCell *cell = (BADocumentItemElementCell *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCell"];
+            if (cell == nil) {
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCell" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+            // Keep code for profiling
+            /*
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
+            BADocumentItemElementCell *cell = [nib objectAtIndex:0];
+            */
+             
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             if (self.currentEntry.onlineLocation == nil) {
@@ -799,15 +834,30 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.subtitle.backgroundColor = [UIColor whiteColor];
+                cell.status.backgroundColor = [UIColor whiteColor];
+                cell.statusInfo.backgroundColor = [UIColor whiteColor];
             }else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
         } else {
-            BADocumentItemElementCellNonLocal *cell;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
+            BADocumentItemElementCellNonLocal *cell = (BADocumentItemElementCellNonLocal *) [tableView dequeueReusableCellWithIdentifier:@"BADocumentItemElementCellNonLocal"];
+            if (cell == nil) {
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
+            }
+            // Keep code for profiling
+            /*
+             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BADocumentItemElementCellNonLocal" owner:self options:nil];
+             BADocumentItemElementCellNonLocal *cell = [nib objectAtIndex:0];
+             */
             
             BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
@@ -816,8 +866,12 @@
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
+                cell.title.backgroundColor = [UIColor whiteColor];
+                cell.labels.backgroundColor = [UIColor whiteColor];
             }else {
                 cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;
@@ -1118,6 +1172,15 @@
     }
     
     return foundPpn;
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
+   self.didLoadISBD = YES;
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

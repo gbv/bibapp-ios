@@ -16,11 +16,10 @@
 
 @implementation BALocationViewController
 
-@synthesize spacing;
-@synthesize spacingSplit;
 @synthesize width;
-@synthesize splitHeightTop;
-@synthesize splitHeightBottom;
+@synthesize mapViewHeight;
+@synthesize textViewHeight;
+@synthesize top;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +31,10 @@
 }
 
 - (void)initSize{
-    self.spacing = 0;
-    self.spacingSplit = 0;
     self.width = 0;
-    self.splitHeightTop = 0;
-    self.splitHeightBottom = 0;
-    self.completeHeight = 0;
+    self.mapViewHeight = 0;
+    self.textViewHeight = 0;
+    self.top = 0;
 }
 
 - (void)viewDidLoad
@@ -49,26 +46,77 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.splitHeightTop)];
+    //[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.mapViewHeight)];
     self.mapView.delegate=self;
+    [self.mapView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    MKMapView *tempMapView = self.mapView;
+    
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.textViewHeight)];
+    [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.textView setScrollEnabled:YES];
+    [self.textView setEditable:NO];
+    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
+    UITextView *tempTextView = self.textView;
+    [self.view addSubview:tempTextView];
     
     BOOL hasGeo = NO;
     if (self.currentLocation.geoLong != nil && self.currentLocation.geoLat != nil) {
         if (![self.currentLocation.geoLong isEqualToString:@""] && ![self.currentLocation.geoLat isEqualToString:@""]) {
             hasGeo = YES;
-            [self.view addSubview:self.mapView];
-            self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacingSplit, self.width, self.splitHeightBottom)];
-            [self.view addSubview:self.textView];
+            [self.view addSubview:tempMapView];
+            NSArray *constraintsVerticalMapView = [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:|-(%f)-[tempMapView(%f)]", self.top, self.mapViewHeight]
+                                                                                          options:0
+                                                                                          metrics:nil
+                                                                                            views:NSDictionaryOfVariableBindings(tempMapView)];
+            
+            [self.view addConstraints:constraintsVerticalMapView];
+            NSArray *constraintsHorizontalMapView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempMapView]|"
+                                                                                            options:0
+                                                                                            metrics:nil
+                                                                                              views:NSDictionaryOfVariableBindings(tempMapView)];
+            
+            [self.view addConstraints:constraintsHorizontalMapView];
+            
+            
+            NSArray *constraintsVerticalMapAndTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempMapView]-[tempTextView]"
+                                                                                          options:0
+                                                                                          metrics:nil
+                                                                                            views:NSDictionaryOfVariableBindings(tempMapView, tempTextView)];
+            
+            [self.view addConstraints:constraintsVerticalMapAndTextView];
+            
+            NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[tempTextView]|"
+                                                                                                 options:0
+                                                                                                 metrics:nil
+                                                                                                   views:NSDictionaryOfVariableBindings(tempTextView)];
+            
+            [self.view addConstraints:constraintsVerticalTextView];
+            
+            NSArray *constraintsHorizontalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempTextView]|"
+                                                                                            options:0
+                                                                                            metrics:nil
+                                                                                              views:NSDictionaryOfVariableBindings(tempTextView)];
+            
+            [self.view addConstraints:constraintsHorizontalTextView];
         }
     }
     if (!hasGeo) {
-        self.textView = [[UITextView alloc] initWithFrame:CGRectMake(self.spacing, self.spacing, self.width, self.completeHeight)];
-        [self.view addSubview:self.textView];
+        NSArray *constraintsVerticalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tempTextView]|"
+                                                                                       options:0
+                                                                                       metrics:nil
+                                                                                         views:NSDictionaryOfVariableBindings(tempTextView)];
+        
+        [self.view addConstraints:constraintsVerticalTextView];
+        
+        NSArray *constraintsHorizontalTextView = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tempTextView]|"
+                                                                                         options:0
+                                                                                         metrics:nil
+                                                                                           views:NSDictionaryOfVariableBindings(tempTextView)];
+        
+        [self.view addConstraints:constraintsHorizontalTextView];
     }
-    
-    [self.textView setScrollEnabled:YES];
-    [self.textView setEditable:NO];
-    [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -141,30 +189,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    //Code for dissmissing this viewController by clicking outside it
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)];
-    [recognizer setNumberOfTapsRequired:1];
-    recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
-    [self.view.window addGestureRecognizer:recognizer];
-    
-}
-
-- (void)handleTapBehind:(UITapGestureRecognizer *)sender
-{
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        CGPoint location = [sender locationInView:nil]; //Passing nil gives us coordinates in the window
-        //Then we convert the tap's location into the local view's coordinate system, and test to see if it's in or outside. If outside, dismiss the view.
-        if (![self.view pointInside:[self.view convertPoint:location fromView:self.view.window] withEvent:nil]) {
-            // Remove the recognizer first so it's view.window is valid.
-            [self.view.window removeGestureRecognizer:sender];
-            [self dismissModalViewControllerAnimated:YES];
-        }
-    }
 }
 
 @end

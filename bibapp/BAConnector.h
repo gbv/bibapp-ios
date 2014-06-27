@@ -10,8 +10,12 @@
 #import "BAAppDelegate.h"
 #import "BAConnectorDelegate.h"
 #import "BALocation.h"
+#import "Reachability.h"
 
 @interface BAConnector : NSObject <NSURLConnectionDelegate>
+
+FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_SCOPE;
+FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 
 @property (strong, nonatomic) BAAppDelegate *appDelegate;
 @property (nonatomic, retain) BAConnector *instance;
@@ -20,6 +24,8 @@
 @property (nonatomic, retain) NSMutableData *webData;
 @property (nonatomic, retain) NSMutableString *result;
 @property (nonatomic, retain) NSData *webDataSynchronous;
+@property (nonatomic, retain) NSURLConnection *currentConnection;
+@property (nonatomic, retain) NSString *baseURL;
 
 + (id)sharedConnector;
 + (id)generateConnector;
@@ -43,5 +49,11 @@
 - (void)getLocationInfoForUri:(NSString *)uri WithDelegate:(id)delegate;
 - (void)getLocationsForLibraryByUri:(NSString *)uri WithDelegate:(id)delegate;
 - (BALocation *)loadLocationForUri:(NSString *)uri;
+- (void)loadLocationForUri:(NSString *)uri WithDelegate:(id)delegate;
+- (BALocation *)parseLocation:(NSData *)locationData ForUri:(NSString *)uri;
+- (BALocation *)loadLocationFromCacheForUri:(NSString *)uri;
+- (BOOL)checkScope:(NSString *)scope;
+- (void)displayError;
+- (BOOL)checkNetworkReachability;
 
 @end

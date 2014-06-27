@@ -87,7 +87,7 @@
     [self.searchTableView reloadData];
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
             [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -97,7 +97,7 @@
         }
     } else {
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
         } else {
             [self.navigationItem setTitle:@"GVK Suche"];
         }
@@ -109,10 +109,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BAItemCell *cell;
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
-
+    BAItemCell *cell = (BAItemCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemCell"];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
     // Configure the cell...
     BAEntryWork *entry;
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
@@ -214,12 +216,12 @@
     }*/
     if ([command isEqualToString:@"searchLocal"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
         }
         self.searchedLocal = YES;
     } else if ([command isEqualToString:@"searchCentral"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
         }
         self.searched = YES;
     }
@@ -391,15 +393,17 @@
         }
         
         // Get link for online location
-        GDataXMLElement *onlineLocation = (GDataXMLElement *)[[shortTitleNew elementsForName:@"location"] objectAtIndex:0];
-        if (onlineLocation != nil) {
-            GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-            if (onlineLocationUrl != nil) {
-                NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                if (rangeValueType.length > 0) {
+        NSArray *onlineLocations = [shortTitleNew elementsForName:@"location"];
+        for (GDataXMLElement *onlineLocation in onlineLocations) {
+           if (onlineLocation != nil) {
+              GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+              if (onlineLocationUrl != nil) {
+                 NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                 if (rangeValueType.length > 0) {
                     [tempEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                }
-            }
+                 }
+              }
+           }
         }
         
         [tempArray addObject:tempEntry];
@@ -433,7 +437,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%d Treffer)", self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
             [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -444,7 +448,7 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
         } else {
             [self.navigationItem setTitle:@"GVK Suche"];
         }
@@ -532,6 +536,14 @@
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   self.searchTableView.tableFooterView = nil;
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

@@ -20,15 +20,17 @@
 @property (strong, nonatomic) NSMutableArray *feesSum;
 @property (strong, nonatomic) NSMutableArray *fees;
 @property (strong, nonatomic) NSMutableArray *sendEntries;
-@property (strong, nonatomic) NSMutableArray *successfulEntries;
+@property (strong, nonatomic) NSMutableDictionary *successfulEntries;
 @property (strong, nonatomic) NSString *currentAccount;
 @property (strong, nonatomic) NSString *currentPassword;
 @property (strong, nonatomic) NSString *currentToken;
+@property (strong, nonatomic) NSArray *currentScope;
 @property BOOL isLoggingIn;
 @property BOOL loggedIn;
 @property (strong, nonatomic) IBOutlet UITableView *accountTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *accountSegmentedController;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 - (IBAction)actionButtonAction:(id)sender;
 

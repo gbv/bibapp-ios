@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BAItemDetail : UIView <UITableViewDataSource, UITableViewDelegate>
+@interface BAItemDetail : UIView
 
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 

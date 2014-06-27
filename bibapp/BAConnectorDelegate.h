@@ -11,5 +11,7 @@
 @protocol BAConnectorDelegate <NSObject>
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result;
+- (void)commandIsNotInScope:(NSString *)command;
+- (void)networkIsNotReachable:(NSString *)command;
 
 @end

@@ -34,10 +34,18 @@
 @synthesize currentAccount;
 @synthesize currentPassword;
 @synthesize currentToken;
+@synthesize currentScope;
 @synthesize loggedIn;
 @synthesize loanHeader;
 @synthesize reservationHeader;
 @synthesize feeHeader;
+@synthesize statusBarTintUIView;
+@synthesize loanRefreshControl;
+@synthesize reservationRefreshControl;
+@synthesize feeRefreshControl;
+@synthesize loanLoadingLabel;
+@synthesize reservationLoadingLabel;
+@synthesize feeLoadingLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +67,20 @@
     [self.loanToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.reservationToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.feeToolbar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.accountNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.loanToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.reservationToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.feeToolbar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.loanBarButton setTintColor:[UIColor whiteColor]];
+        //[self.reservationBarButton setTintColor:[UIColor whiteColor]];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+    }
     
     self.loan = [[NSMutableArray alloc] init];
     self.reservation = [[NSMutableArray alloc] init];
@@ -93,32 +115,40 @@
     self.feeHeader = [nibFee objectAtIndex:0];
     [self.feeHeader.subTitleLabel setText:@""];
     self.feeTableView.tableHeaderView = self.feeHeader;
-    
+   
     [self setLoggedIn:NO];
+   
+    [self setLoanRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.loanRefreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
+    [self.loanTableView addSubview:self.loanRefreshControl];
+   
+    [self setReservationRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.reservationRefreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
+    [self.reservationTableView addSubview:self.reservationRefreshControl];
+   
+    [self setFeeRefreshControl:[[UIRefreshControl alloc] init]];
+    [self.feeRefreshControl addTarget:self action:@selector(refreshFee:) forControlEvents:UIControlEventValueChanged];
+    [self.feeTableView addSubview:self.feeRefreshControl];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (!self.loggedIn) {
-        [self loginActionWithMessage:@""];
-    } else {
-        [self.successfulEntries removeAllObjects];
-        [self.sendEntries removeAllObjects];
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [spinner startAnimating];
-        spinner.frame = CGRectMake(0, 0, 320, 44);
-        self.loanTableView.tableHeaderView = self.loanHeader;
-        [self.loanHeader.spinner setHidden:NO];
-        [self.loanHeader.spinner startAnimating];
-        self.reservationTableView.tableHeaderView = self.reservationHeader;
-        [self.reservationHeader.spinner setHidden:NO];
-        [self.reservationHeader.spinner startAnimating];
-        BAConnector *accountLoanConnector = [BAConnector generateConnector];
-        [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        BAConnector *accountFeesConnector = [BAConnector generateConnector];
-        [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        self.feeTableView.tableHeaderView = self.feeHeader;
+    BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
+    if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
+       if (!self.loggedIn) {
+              [self loginActionWithMessage:@""];
+       } else {
+           [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+           [self.sendEntries removeAllObjects];
+           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+           BAConnector *accountLoanConnector = [BAConnector generateConnector];
+           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+           BAConnector *accountFeesConnector = [BAConnector generateConnector];
+           [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+       }
     }
 }
 
@@ -164,7 +194,8 @@
 {
     NSError* error;
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
-    
+    //NSLog(@"%@", command);
+    //NSLog(@"%@", json);
     if ([json count] > 0) {
         BOOL foundError = NO;
         if (![json isKindOfClass:[NSMutableArray class]]) {
@@ -177,10 +208,18 @@
             }
         }
         if (foundError) {
-            // more detailed when real error codes are implemented
             if (![command isEqualToString:@"login"]) {
-                if ([[json objectForKey:@"code"] isEqualToString:@"401"]) {
+                NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+                if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
+                    NSLog(@"error: %@ -> auto login ...", errorCode);
                     [self loginActionWithMessage:@""];
+                } else {
+                   NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
+                   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:errorDisplay
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                   [alert setTag:20];
+                   [alert show];
                 }
             } else {
                 self.isLoggingIn = NO;
@@ -202,7 +241,9 @@
                 [self.appDelegate setCurrentAccount:self.currentAccount];
                 [self.appDelegate setCurrentPassword:self.currentPassword];
                 [self.appDelegate setCurrentToken:self.currentToken];
-                
+                [self setCurrentScope:[[json objectForKey:@"scope"] componentsSeparatedByString:@" "]];
+                [self.appDelegate setCurrentScope: self.currentScope];
+               
                 BAConnector *accountPatronConnector = [BAConnector generateConnector];
                 [accountPatronConnector accountLoadPatronWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
                 BAConnector *accountLoanConnector = [BAConnector generateConnector];
@@ -223,11 +264,16 @@
                 [tempEntryWork setQueue:[document objectForKey:@"queue"]];
                 [tempEntryWork setRenewal:[document objectForKey:@"renewals"]];
                 [tempEntryWork setStorage:[document objectForKey:@"storage"]];
-                
-                NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
-                NSArray* matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
-                NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
-                NSArray* matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                [tempEntryWork setStatus:[document objectForKey:@"status"]];
+               
+                NSArray *matchesDayFirst;
+                NSArray *matchesYearFirst;
+                if ([document objectForKey:@"duedate"] != nil) {
+                   NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
+                   matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                   NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
+                   matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                }
                 if([matchesDayFirst count] > 0){
                     [tempEntryWork setDate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
                 } else if ([matchesYearFirst count] > 0){
@@ -236,22 +282,25 @@
                     NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
                     [tempEntryWork setDate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
                 }
-                
-                if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([[document objectForKey:@"cancancel"] integerValue] == 1)) {
-                    [tempEntryWork setCanRenewCancel:YES];
-                } else {
-                    [tempEntryWork setCanRenewCancel:NO];
-                }
+               
                 if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
                     [self.loan addObject:tempEntryWork];
+                    if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([document objectForKey:@"canrenew"] == nil)) {
+                       [tempEntryWork setCanRenewCancel:YES];
+                    } else {
+                       [tempEntryWork setCanRenewCancel:NO];
+                    }
                 } else if ([[document objectForKey:@"status"] integerValue] == 1) {
                     [self.reservation addObject:tempEntryWork];
+                    if ([[document objectForKey:@"cancancel"] integerValue] == 1) {
+                       [tempEntryWork setCanRenewCancel:YES];
+                    } else {
+                       [tempEntryWork setCanRenewCancel:NO];
+                    }
                 }
             }
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
                 if ([self.loan count] == 0) {
                     [self.loanHeader.subTitleLabel setText:@"Keine Medien entliehen"];
                     [self.loanBarButton setEnabled:NO];
@@ -266,6 +315,10 @@
                     [self.reservationTableView setTableHeaderView:nil];
                     [self.reservationBarButton setEnabled:YES];
                 }
+           [self.loanRefreshControl endRefreshing];
+           [self.reservationRefreshControl endRefreshing];
+           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
+           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
         } else if ([command isEqualToString:@"accountLoadFees"]) {
             [self.feesSum removeAllObjects];
             [self.fees removeAllObjects];
@@ -287,7 +340,6 @@
                 [self.fees addObject:tempAmount];
             }
             [self.feeTableView reloadData];
-            [self.feeHeader.spinner stopAnimating];
                 if ([self.fees count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
                     [header setText:@"Keine Gebühren"];
@@ -297,6 +349,8 @@
                 } else {
                     [self.feeTableView setTableHeaderView:nil];
                 }
+           [self.feeRefreshControl endRefreshing];
+           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
         } else if ([command isEqualToString:@"accountLoadInterloanList"]) {
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
@@ -309,7 +363,11 @@
             [self setSuccessfulEntries:[json mutableCopy]];
             [self showRenewCancelDialogFor:@"cancel"];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
-            [self.accountNavigationBar.topItem setTitle:[json objectForKey:@"name"]];
+            NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
+            if ([[json objectForKey:@"status"] integerValue] == 3) {
+               [displayName appendString:@" (Konto gesperrt)"];
+            }
+            [self.accountNavigationBar.topItem setTitle:displayName];
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
@@ -317,8 +375,6 @@
             [self.reservation removeAllObjects];
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
                 UITextView *header = [[UITextView alloc] init];
                 [header setText:@"Keine Medien entliehen"];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
@@ -338,23 +394,20 @@
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 [self.feeHeader.subTitleLabel setText:@"Keine Gebühren"];
-                [self.feeHeader.spinner stopAnimating];
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
-            [self.loanHeader.spinner stopAnimating];
             [self.loanTableView reloadData];
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
             [self showRenewCancelDialogFor:@"renew"];
         } else if ([command isEqualToString:@"accountCancelDocs"]) {
-            [self.reservationHeader.spinner stopAnimating];
             [self.reservationTableView reloadData];
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
             [self showRenewCancelDialogFor:@"cancel"];
         } else if ([command isEqualToString:@"accountLoadReservedList"]) {
-            BAAccountTableHeaderTextView *header;
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAAccountTableHeaderTextView" owner:self options:nil];
-            header = [nib objectAtIndex:0];
+            //BAAccountTableHeaderTextView *header;
+            //NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAAccountTableHeaderTextView" owner:self options:nil];
+            //header = [nib objectAtIndex:0];
         }
     }
 }
@@ -371,8 +424,16 @@
     } else {
         if (!self.isLoggingIn) {
             self.isLoggingIn = YES;
+           
+            NSMutableString *displayString = [message mutableCopy];
+            if (message != nil) {
+               if (![message isEqualToString:@""]) {
+                  [displayString appendString:@"\n\n"];
+               }
+            }
+            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren."];
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
-                                                            message:message
+                                                            message:displayString
                                                            delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];
             [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
             [alert setTag:0];
@@ -392,9 +453,6 @@
     if (alertView.tag == 0) {
         if (buttonIndex == 0) {
             self.isLoggingIn = NO;
-            [self.loanHeader.spinner stopAnimating];
-            [self.reservationHeader.spinner stopAnimating];
-            [self.feeHeader.spinner stopAnimating];
         } else if(buttonIndex == 1) {
             [self setCurrentAccount:[[alertView textFieldAtIndex:0] text]];
             [self setCurrentPassword:[[alertView textFieldAtIndex:1] text]];
@@ -420,30 +478,26 @@
     if (actionSheet.tag == 10) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.loan) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
                 }
             }
             self.loanTableView.tableHeaderView = self.loanHeader;
-            [self.loanHeader.spinner setHidden:NO];
-            [self.loanHeader.spinner startAnimating];
             BAConnector *renewConnector = [BAConnector generateConnector];
             [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
         }
     } else if(actionSheet.tag == 11) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.reservation) {
                 if (tempEmtry.selected) {
                     [self.sendEntries addObject:tempEmtry];
                 }
             }
             self.reservationTableView.tableHeaderView = self.reservationHeader;
-            [self.reservationHeader.spinner setHidden:NO];
-            [self.reservationHeader.spinner startAnimating];
             BAConnector *cancelConnector = [BAConnector generateConnector];
             [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
         }
@@ -464,21 +518,42 @@
 - (void)showRenewCancelDialogFor:(NSString *)action
 {
    NSMutableString *statusString = [[NSMutableString alloc] initWithString:@""];
-    
+   
+   int renewalsCounter = 0;
    if ([action isEqualToString:@"renew"]) {
-     [statusString appendFormat:@"%d Titel verlängert.\n\n", [self.successfulEntries count]];
+      for (BAEntryWork *tempSendEntry in self.sendEntries) {
+         for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+            if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
+               if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
+                  renewalsCounter++;
+               }
+            }
+         }
+      }
+      if (renewalsCounter > 0) {
+         [statusString appendFormat:@"%d von %d Titel(n) verlängert.\n\n", renewalsCounter, [self.sendEntries count]];
+      } else {
+         [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
+      }
+      for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+         if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
+            //if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
+            //   [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
+            //}
+            [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
+         }
+      }
    } else if ([action isEqualToString:@"cancel"]) {
      NSMutableString *requestString = [[NSMutableString alloc] init];
-     if ([self.successfulEntries count] > 1) {
+     if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
          [requestString appendString:@"Vormerkungen"];
      } else {
          [requestString appendString:@"Vormerkung"];
      }
-     [statusString appendFormat:@"%d %@ storniert.\n\n", [self.successfulEntries count], requestString];
+     [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
    }
-   
     if ([self.sendEntries count] > 0) {
-        if ([self.sendEntries count] > [self.successfulEntries count]) {
+        if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
             if ([action isEqualToString:@"renew"]) {
                 [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
             } else if ([action isEqualToString:@"cancel"]){
@@ -486,7 +561,7 @@
             }
             for (BAEntryWork *tempSendEntry in self.sendEntries) {
                 BOOL wasSuccessful = NO;
-                for (NSDictionary *tempSuccessfulEntry in self.successfulEntries) {
+                for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
                     if ([tempSendEntry.label isEqualToString:[tempSuccessfulEntry valueForKey:@"signature"]]) {
                         wasSuccessful = YES;
                     }
@@ -511,7 +586,7 @@
         BAItemAccountCell *cell;
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemAccountCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        
+       
         // Configure the cell...
         BAEntryWork *item;
         if (tableView.tag == 0) {
@@ -538,9 +613,14 @@
             [cell.queueLabel setText:queueString];
             NSString *renewalString = [NSString stringWithFormat:@"%@", item.renewal];
             [cell.renewalLabel setText:renewalString];
-            NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
-            [cell.storageLabel setText:storageString];
-            [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
+            //NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
+            //[cell.storageLabel setText:storageString];
+            [cell.storageLabel setText:[item statusDisplay]];
+            if (self.appDelegate.isIOS7) {
+               [cell.checkbox setFrame:CGRectMake(307, 64, 23, 23)];
+            } else {
+               [cell.checkbox setFrame:CGRectMake(313, 63, 23, 23)];
+            }
         } else if(tableView.tag == 1) {
             [cell.queueTitleLabel setText:@""];
             [cell.queueLabel setText:@""];
@@ -548,7 +628,11 @@
             [cell.renewalLabel setText:@""];
             [cell.storageTitleLabel setText:@""];
             [cell.storageLabel setText:@""];
-            [cell.checkbox setFrame:CGRectMake(313, 37, 23, 23)];
+            if (self.appDelegate.isIOS7) {
+               [cell.checkbox setFrame:CGRectMake(306, 38, 23, 23)];
+            } else {
+               [cell.checkbox setFrame:CGRectMake(313, 37, 23, 23)];
+            }
         }
         
         [cell.dateLabel setText:item.date];
@@ -724,6 +808,19 @@
     }
 }
 
+- (void)refreshLoanAndReservation:(UIRefreshControl *)refreshControl {
+   [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   BAConnector *accountLoanConnector = [BAConnector generateConnector];
+   [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+}
+
+- (void)refreshFee:(UIRefreshControl *)refreshControl {
+   [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+   BAConnector *accountFeesConnector = [BAConnector generateConnector];
+   [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
@@ -743,6 +840,35 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleDefault;
+}
+
+- (void)viewDidLayoutSubviews
+{
+   [self.loanRefreshControl.superview sendSubviewToBack:self.loanRefreshControl];
+   [self.reservationRefreshControl.superview sendSubviewToBack:self.reservationRefreshControl];
+   [self.feeRefreshControl.superview sendSubviewToBack:self.feeRefreshControl];
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   if ([command isEqualToString:@"accountRenewDocs"]) {
+      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountLoanConnector = [BAConnector generateConnector];
+      [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   } else if ([command isEqualToString:@"accountCancelDocs"]) {
+      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountLoanConnector = [BAConnector generateConnector];
+      [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   }
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   [self commandIsNotInScope:command];
 }
 
 @end

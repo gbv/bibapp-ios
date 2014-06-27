@@ -45,6 +45,8 @@
 @synthesize currentLocation;
 @synthesize tocPopoverController;
 @synthesize tocTableViewController;
+@synthesize statusBarTintUIView;
+@synthesize optionsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,21 +63,34 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [self.listNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    [self.detailNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    if (self.appDelegate.isIOS7) {
+        [self setNeedsStatusBarAppearanceUpdate];
+        //[self.statusBarTintUIView setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.listNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.detailNavigationBar setBarTintColor:self.appDelegate.configuration.currentBibTintColor];
+        //[self.optionsButton setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.statusBarTintUIView setHidden:YES];
+        [self.listNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+        [self.detailNavigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    }
     
     [self setCurrentItem: [[BAEntryWork alloc] init]];
     [self setCurrentEntry: [[BAEntryWork alloc] init]];
     
-    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 75, 704, 75)];
+    self.defaultTextView = [[UITextView alloc] initWithFrame:CGRectMake(320, 139, 704, 75)];
     [self.defaultTextView setFont:[UIFont systemFontOfSize:20]];
-    [self.defaultTextView setTextAlignment:UITextAlignmentCenter];
-    [self.scrollView addSubview:self.defaultTextView];
+    [self.defaultTextView setTextAlignment:NSTextAlignmentCenter];
+    [self.defaultTextView setEditable:NO];
+    [self.defaultTextView setUserInteractionEnabled:NO];
+    [self.defaultTextView setOpaque:YES];
+    [self.defaultTextView setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:self.defaultTextView];
     
-    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(227, 150, 250, 150)];
+    self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(547, 214, 250, 150)];
     [self.defaultImageView setContentMode:UIViewContentModeScaleAspectFill];
     [self.defaultImageView setImage:[UIImage imageNamed:@"Buch_250_gradient.png"]];
-    [self.scrollView addSubview:self.defaultImageView];
+    [self.view addSubview:self.defaultImageView];
     
     [self initDetailView];
     
@@ -241,13 +256,21 @@
             [cell.statusInfo setText:statusInfo];
             [cell.actionButton setTag:indexPath.row];
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-            
+           
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor whiteColor];
-            }else {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.contentView.backgroundColor = [UIColor whiteColor];
+               cell.title.backgroundColor = [UIColor whiteColor];
+               cell.subtitle.backgroundColor = [UIColor whiteColor];
+               cell.status.backgroundColor = [UIColor whiteColor];
+               cell.statusInfo.backgroundColor = [UIColor whiteColor];
+            } else {
+               cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.subtitle.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.status.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.statusInfo.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
+           
             return cell;
         } else {
             BADocumentItemElementCellNonLocalPad *cell;
@@ -262,11 +285,15 @@
             [cell.actionButton addTarget:self action:@selector(actionButtonClick:) forControlEvents:UIControlEventTouchUpInside];
             
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor whiteColor];
-            }else {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.contentView.backgroundColor = [UIColor whiteColor];
+               cell.title.backgroundColor = [UIColor whiteColor];
+               cell.labels.backgroundColor = [UIColor whiteColor];
+            } else {
+               cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+               cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
-            
+           
             return cell;
         }
     }
@@ -746,17 +773,20 @@
                     }
                 }
             }
-            GDataXMLElement *onlineLocation = (GDataXMLElement *)[[mods elementsForName:@"location"] objectAtIndex:0];
             [self.currentEntry setOnlineLocation:nil];
-            if (onlineLocation != nil) {
-                GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                if (onlineLocationUrl != nil) {
-                    NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                    if (rangeValueType.length > 0) {
+            NSArray *onlineLocations = [mods elementsForName:@"location"];
+            for (GDataXMLElement *onlineLocation in onlineLocations) {
+               if (onlineLocation != nil) {
+                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                  if (onlineLocationUrl != nil) {
+                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                     if (rangeValueType.length > 0) {
                         [self.currentEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                    }
-                }
+                     }
+                  }
+               }
             }
+           
             [self.currentEntry setIsbn:@""];
             GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
             if (tempISBNElement != nil) {
@@ -1051,6 +1081,18 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle{
+    return UIStatusBarStyleDefault;
+}
+
+- (void)commandIsNotInScope:(NSString *)command {
+   // ToDo: reset state if necessary
+}
+
+- (void)networkIsNotReachable:(NSString *)command {
+   // ToDo: reset state if necessary
 }
 
 @end
