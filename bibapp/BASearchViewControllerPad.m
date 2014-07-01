@@ -1094,6 +1094,16 @@
                 }
             }
         }
+       
+        for (int i = currentLine; i < [newStringArray count]-1; i++) {
+           NSString *tempString = [newStringArray objectAtIndex:i];
+           if ([tempString hasPrefix:@"In: "]) {
+              if (![displayString isEqualToString:@""]) {
+                 [displayString appendString:@"\n"];
+              }
+              [displayString appendString:tempString];
+           }
+        }
 
         [self.isbdLabel setText:displayString];
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
