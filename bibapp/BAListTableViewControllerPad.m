@@ -850,7 +850,8 @@
         [self loadEntries];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
         [self.listTableView reloadData];
-        
+        [self initDetailView];
+      
         if ([self.dummyBooksMerkliste count] == 0) {
             [self.trashIcon setEnabled:NO];
         }
