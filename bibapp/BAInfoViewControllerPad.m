@@ -29,6 +29,7 @@
 @synthesize locationList;
 @synthesize currentLocation;
 @synthesize statusBarTintUIView;
+@synthesize didLoadLocations;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +44,8 @@
 {
     [super viewDidLoad];
 
+    self.didLoadLocations = NO;
+   
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
 
     if (self.appDelegate.isIOS7) {
@@ -70,14 +73,18 @@
     }
     
     self.locationList = [[NSMutableArray alloc] init];
-    
-    BAConnector *locationConnector = [BAConnector generateConnector];
-    [locationConnector getLocationsForLibraryByUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue] WithDelegate:self];
+   
+    [self performSelectorInBackground:@selector(loadLocations) withObject:nil];
     
     [self.infoTableView setTag:0];
     [self.contentTableView setTag:1];
     
     [self.infoTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+}
+
+- (void)loadLocations {
+   BAConnector *locationConnector = [BAConnector generateConnector];
+   [locationConnector getLocationsForLibraryByUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue] WithDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -134,7 +141,11 @@
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
                  return 1;
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-                 return [self.locationList count];
+                 if (self.didLoadLocations) {
+                    return [self.locationList count];
+                 } else {
+                    return 1;
+                 }
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
                  return [self.appDelegate.configuration.currentBibImprint count];
               } else {
@@ -146,7 +157,11 @@
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
                  return 1;
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
-                 return [self.locationList count];
+                 if (self.didLoadLocations) {
+                    return [self.locationList count];
+                 } else {
+                    return 1;
+                 }
               } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
                  return [self.appDelegate.configuration.currentBibImprint count];
               } else {
@@ -157,7 +172,11 @@
             if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
                 return 1;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-                return [self.locationList count];
+               if (self.didLoadLocations) {
+                  return [self.locationList count];
+               } else {
+                  return 1;
+               }
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
                 return [self.appDelegate.configuration.currentBibImprint count];
             } else {
@@ -242,9 +261,13 @@
                 BALocationCellPad *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BALocationCellPad" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-                [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
-                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-                return cell;
+                if (self.didLoadLocations) {
+                   [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
+                   [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                } else {
+                   [cell.locationLabel setText:@"Standorte werden geladen ..."];
+                }
+               return cell;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
                 BAImpressumCellPad *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCellPad" owner:self options:nil];
@@ -361,6 +384,7 @@
         self.contentTableView.tableFooterView = nil;
         [self.contentTableView reloadData];
     } else if ([command isEqualToString:@"getLocationsForLibraryByUri"]) {
+       self.didLoadLocations = YES;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
         BAConnector *locationConnector = [BAConnector generateConnector];
         BALocation *tempLocationMain = [locationConnector loadLocationForUri:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]];

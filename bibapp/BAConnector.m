@@ -442,7 +442,9 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self startImmediately:NO];
+      [theConnection setDelegateQueue:[NSOperationQueue mainQueue]];
+      [theConnection start];
       if (theConnection) {
       }
    }

@@ -22,5 +22,6 @@
 @property (strong, nonatomic) BALocation *currentLocation;
 @property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
+@property BOOL didLoadLocations;
 
 @end
