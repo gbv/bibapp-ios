@@ -29,7 +29,7 @@
    self.currentBibContact = @"Fragen an die Bibliothek:\nTelefon: 03643/582801\nE-Mail: info@ub.uni-weimar.de";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=2";
+   self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20";
 }
 
 @end

@@ -49,7 +49,7 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Ressourcenmanagement", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Naturwissenschaften", nil]];
-    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=3";
+    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=20";
 }
 
 @end
