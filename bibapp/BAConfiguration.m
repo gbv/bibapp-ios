@@ -70,37 +70,35 @@
 + (id)createConfiguration
 {
     BAConfiguration *currentConfiguration;
-    
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-    NSString *bundleName = [NSString stringWithFormat:@"%@", [info objectForKey:@"CFBundleDisplayName"]];
-    
-    if([bundleName isEqualToString:@"BibApp LG"]){
+    NSString *bundleIdentifier = [NSString stringWithFormat:@"%@", [info objectForKey:@"CFBundleIdentifier"]];
+    if([bundleIdentifier isEqualToString:@"de.leuphana.bibliothek.bibapp"]){
         currentConfiguration = [[BAConfigurationLG alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp HI"]){
+    } else if([bundleIdentifier isEqualToString:@"de.uni-hildesheim.bib.bibapp"]){
         currentConfiguration = [[BAConfigurationHI alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp BLS"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.bls"]){
         currentConfiguration = [[BAConfigurationBLS alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp IL"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.il"]){
         currentConfiguration = [[BAConfigurationIL alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp HAWK"]){
+    } else if([bundleIdentifier isEqualToString:@"de.hawk-hhg.zimt.bibapp"]){
         currentConfiguration = [[BAConfigurationHAWK alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp ThULB"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.thulb"]){
        currentConfiguration = [[BAConfigurationThULB alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp EAH Jena"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.eahj"]){
        currentConfiguration = [[BAConfigurationEAHJ alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp UB We"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ubwe"]){
        currentConfiguration = [[BAConfigurationUBWe alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp BA Thueringen"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.bat"]){
         currentConfiguration = [[BAConfigurationBAT alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp HFM We"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.hfmw"]){
         currentConfiguration = [[BAConfigurationHFMWe alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp NDH"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ndh"]){
         currentConfiguration = [[BAConfigurationNDH alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp FHE"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.fhe"]){
         currentConfiguration = [[BAConfigurationFHE alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp SM"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.sm"]){
         currentConfiguration = [[BAConfigurationSM alloc] init];
-    } else if([bundleName isEqualToString:@"BibApp UFB"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ube"]){
         currentConfiguration = [[BAConfigurationUFB alloc] init];
     }
     [currentConfiguration initConfiguration];
