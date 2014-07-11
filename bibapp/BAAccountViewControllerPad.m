@@ -211,7 +211,6 @@
             if (![command isEqualToString:@"login"]) {
                 NSString *errorCode = [[json objectForKey:@"code"] stringValue];
                 if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
-                    NSLog(@"error: %@ -> auto login ...", errorCode);
                     [self loginActionWithMessage:@""];
                 } else {
                    NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
