@@ -393,16 +393,18 @@
             for (NSString *key in [json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]]) {
                 if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
                     for (NSDictionary *tempUri in [[json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]] objectForKey:key]) {
-                        BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
-                        [self.locationList addObject:tempLocation];
+                        BAConnector *tempLocationConnector = [BAConnector generateConnector];
+                        [tempLocationConnector loadLocationForUri:[tempUri objectForKey:@"value"] WithDelegate:self];
                     }
                 }
             }
         }
         [self.contentTableView reloadData];
         self.contentTableView.tableFooterView = nil;
+    } else if ([command isEqualToString:@"loadLocationForUri"]) {
+        [self.locationList addObject:(BALocation *)result];
+        [self.contentTableView reloadData];
     }
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -21,6 +21,7 @@
 @synthesize currentLocation;
 @synthesize didReturnFromSegue;
 @synthesize foundLocations;
+@synthesize numberOfLocations;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -74,15 +75,21 @@
             self.foundLocations = YES;
             for (NSString *key in [json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]]) {
                 if ([key isEqualToString:@"http://www.w3.org/ns/org#hasSite"]) {
+                    self.numberOfLocations = [[[json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]] objectForKey:key] count];
                     for (NSDictionary *tempUri in [[json objectForKey:[self.appDelegate.configuration getLocationURIForCatalog:self.appDelegate.options.selectedCatalogue]] objectForKey:key]) {
-                        BALocation *tempLocation = [locationConnector loadLocationForUri:[tempUri objectForKey:@"value"]];
-                        [self.locationList addObject:tempLocation];
+                        BAConnector *tempLocationConnector = [BAConnector generateConnector];
+                        [tempLocationConnector loadLocationForUri:[tempUri objectForKey:@"value"] WithDelegate:self];
                     }
                 }
             }
         }
         [self.tableView reloadData];
-        self.tableView.tableFooterView = nil;
+    } else if ([command isEqualToString:@"loadLocationForUri"]) {
+       [self.locationList addObject:(BALocation *)result];
+       if ([self.locationList count] == self.numberOfLocations) {
+          self.tableView.tableFooterView = nil;
+       }
+       [self.tableView reloadData];
     }
 }
 
