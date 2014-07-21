@@ -37,7 +37,11 @@
     if (self.isIOS7) {
         [self.window setTintColor:self.configuration.currentBibTintColor];
     }
-    
+   
+    NSString *userAgent = [[NSString alloc] initWithFormat:@"BibApp/%@ (iOS)", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+   
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAOptions" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];

@@ -80,6 +80,8 @@
                         BAConnector *tempLocationConnector = [BAConnector generateConnector];
                         [tempLocationConnector loadLocationForUri:[tempUri objectForKey:@"value"] WithDelegate:self];
                     }
+                } else {
+                   self.tableView.tableFooterView = nil;
                 }
             }
         }
