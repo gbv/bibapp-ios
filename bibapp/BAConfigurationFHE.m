@@ -13,25 +13,19 @@
 - (void)initConfiguration
 {
     self.currentBibSearchMaximumRecords = @"20";
-    self.currentBibLocalSearchURL = @"DE-Wim2";
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-wim2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Wim2";
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Wim2", @"Standard-Katalog", nil]];
-    //self.currentBibPAIAURL = @"https://paia.gbv.de/isil/DE-Hil2";
-    self.currentBibPAIAURL = @"https://paia.gbv.de/DE-Hil2/";
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil2", @"Standard-Katalog", nil]];
-    self.currentBibFeedURL = @"http://www.uni-weimar.de/de/universitaet/aktuell/pinnwaende/rss/bereich/bibliothek/";
+    self.currentBibLocalSearchURL = @"DE-546";
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-546", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
+    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-546";
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-546", @"Standard-Katalog", nil]];
+    self.currentBibPAIAURL = @"https://paia.gbv.de/DE-546/";
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-546", @"Standard-Katalog", nil]];
+    self.currentBibFeedURL = @"http://www.fh-erfurt.de/fhe/?id=663&type=100&tx_ttnews[cat]=2";
     self.currentBibTintColor = [UIColor colorWithRed:0.000000F green:0.200000F blue:0.400000F alpha:1.0F];
-    self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
-    [self.currentBibImprint setObject:@"" forKey:@"Anbieter"];
-    [self.currentBibImprint setObject:@"" forKey:@"Vertreter"];
-    [self.currentBibImprint setObject:@"" forKey:@"Angaben zum Datenschutz"];
-    [self.currentBibImprint setObject:@"" forKey:@"Rechtliche Hinweise zur Haftung"];
-    [self.currentBibImprint setObject:@"" forKey:@"Gestaltung und Umsetzung"];
-    self.currentBibContact = @"";
-    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"Standard-Katalog", nil]];
+    self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", nil];
+    [self.currentBibImprint setObject:@"Fachhochschule Erfurt\nBibliothek\nAltonaer Straße 25\n99085 Erfurt\n\nTel.: 0361 6700-519\nFax: 0361 6700-518\n\nDie Fachhochschule Erfurt ist eine Körperschaft des öffentlichen Rechts.\nSie wird durch den Leiter der Hochschule Prof. Dr.-Ing. Volker Zerbe gesetzlich vertreten.\nUSt-Id-Nr: DE 241 446 583\n\nZuständige Aufsichtsbehörde:\nThüringer Ministerium für Bildung, Wissenschaft und Kultur\nWerner-Seelenbinder Straße 7\n99096 Erfurt\n\nTechnische Betreuung:\nHochschulbibliothek der FHE\nAltonaer Straße 25\n99085 Erfurt" forKey:@"Anbieter"];
+    self.currentBibContact = @"Altonaer Straße 25\n99085 Erfurt\n\nAusleihtheke:\nTel.: 0361 6700-519\nFax: 0361 6700-518\n\nE-Mail: bibliothek@fh-erfurt.de ";
+    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-546";
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-546", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"";
 }
 
