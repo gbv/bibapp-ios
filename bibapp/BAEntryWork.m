@@ -22,7 +22,9 @@
 @synthesize edition;
 @synthesize bar;
 @synthesize label;
-@synthesize date;
+@synthesize duedate;
+@synthesize starttime;
+@synthesize endtime;
 @synthesize queue;
 @synthesize renewal;
 @synthesize storage;

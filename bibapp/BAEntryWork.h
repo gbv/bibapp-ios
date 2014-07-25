@@ -22,7 +22,9 @@
 @property (strong, nonatomic) NSString *edition;
 @property (strong, nonatomic) NSString *bar;
 @property (strong, nonatomic) NSString *label;
-@property (strong, nonatomic) NSString *date;
+@property (strong, nonatomic) NSString *duedate;
+@property (strong, nonatomic) NSString *starttime;
+@property (strong, nonatomic) NSString *endtime;
 @property (strong, nonatomic) NSString *queue;
 @property (strong, nonatomic) NSString *renewal;
 @property (strong, nonatomic) NSString *storage;

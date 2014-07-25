@@ -199,19 +199,33 @@
                 [tempEntryWork setRenewal:[document objectForKey:@"renewals"]];
                 [tempEntryWork setStorage:[document objectForKey:@"storage"]];
                 [tempEntryWork setStatus:[document objectForKey:@"status"]];
-                
-                NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
-                NSArray* matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
-                NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
-                NSArray* matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
-                if([matchesDayFirst count] > 0){
-                    [tempEntryWork setDate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
-                } else if ([matchesYearFirst count] > 0){
-                    NSString *year = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (0, 4)];
-                    NSString *month = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (5, 2)];
-                    NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
-                    [tempEntryWork setDate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+               
+                NSArray *matchesDayFirst;
+                NSArray *matchesYearFirst;
+                if ([document objectForKey:@"duedate"] != nil) {
+                   NSRegularExpression* regexDayFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d-\\d\\d-\\d\\d\\d\\d" options:0 error:&error];
+                   matchesDayFirst = [regexDayFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
+                   NSRegularExpression* regexYearFirst = [NSRegularExpression regularExpressionWithPattern:@"\\d\\d\\d\\d-\\d\\d-\\d\\d" options:0 error:&error];
+                   matchesYearFirst = [regexYearFirst matchesInString:[document objectForKey:@"duedate"] options:0 range:NSMakeRange(0, [[document objectForKey:@"duedate"] length])];
                 }
+                if([matchesDayFirst count] > 0){
+                   [tempEntryWork setDuedate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                } else if ([matchesYearFirst count] > 0){
+                   NSString *year = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (0, 4)];
+                   NSString *month = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (5, 2)];
+                   NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
+                   [tempEntryWork setDuedate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                }
+               
+                NSString *yearStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
+                NSString *monthStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
+                NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
+                [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
+               
+                NSString *yearEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
+                NSString *monthEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
+                NSString *dayEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
+                [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
                
                if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
                   [self.loan addObject:tempEntryWork];
@@ -449,10 +463,12 @@
         
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
             [cell.dateTitleLabel setText:@"Leihfristende:"];
+            [cell.dateLabel setText:item.endtime];
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             [cell.dateTitleLabel setText:@"Vormerkdatum:"];
+            [cell.dateLabel setText:item.starttime];
         }
-        
+       
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
             NSString *queueString = [NSString stringWithFormat:@"%@", item.queue];
             [cell.queueLabel setText:queueString];
@@ -480,7 +496,6 @@
             }
         }
         
-        [cell.dateLabel setText:item.date];
         if ([item.matstring isEqualToString:@"book"]) {
             [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"book.png"]]];
         } else if ([item.matstring isEqualToString:@"document"]) {
