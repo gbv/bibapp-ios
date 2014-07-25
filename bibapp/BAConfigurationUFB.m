@@ -22,10 +22,10 @@
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-1867", @"UFB Erfurt/Gotha", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UB Erfurt/Gotha", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-39", @"FB Gotha", nil]];
-    self.currentBibPAIAURL = @"https://paia.gbv.de/DE-1867/";
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-1867", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-547", @"UB Erfurt/Gotha", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-39", @"FB Gotha", nil]];
+    self.currentBibPAIAURL = @"https://opac.uni-erfurt.de/DE-547/";
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UFB Erfurt/Gotha", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UB Erfurt/Gotha", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"FB Gotha", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [UIColor colorWithRed:0.050980F green:0.188235F blue:0.274510F alpha:1.0F];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", nil];
