@@ -287,9 +287,9 @@
                 NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
                 [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
                
-                NSString *yearEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
-                NSString *monthEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
-                NSString *dayEndtime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
+                NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
+                NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
+                NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
                 [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
                
                 if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
