@@ -1051,7 +1051,7 @@
     } else if (actionSheet.tag > 0) {
         NSInteger itemIndex = actionSheet.tag-1;
         if (buttonIndex == 0) {
-            if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Bestellen"] || [[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Vormerken"]) {
+            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Vormerken"]) {
                 if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                     [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
@@ -1063,16 +1063,16 @@
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [alert show];
                 }
-            } else if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Standortinfo"]) {
+            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
-            } else if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Im Browser öffnen"]) {
+            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
                 NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
                 if (![[UIApplication sharedApplication] openURL:url]) {
                 }
             }
         } else if (buttonIndex == 1) {
-            if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:1] currentTitle] isEqualToString:@"Standortinfo"]) {
+            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             }

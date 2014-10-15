@@ -957,7 +957,7 @@
     
     NSInteger itemIndex = actionSheet.tag;
     if (buttonIndex == 0) {
-        if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Bestellen"] || [[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Vormerken"]) {
+        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Vormerken"]) {
             if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                 [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
@@ -969,16 +969,16 @@
                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             }
-        } else if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Standortinfo"]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
             [self showLocation];
-        } else if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:0] currentTitle] isEqualToString:@"Im Browser öffnen"]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
             if (![[UIApplication sharedApplication] openURL:url]) {
                 NSLog(@"%@%@",@"Failed to open url:",[url description]);
             }
         }
     } else if (buttonIndex == 1) {
-        if ([[(UIButton *)[[actionSheet valueForKey:@"_buttons"] objectAtIndex:1] currentTitle] isEqualToString:@"Standortinfo"]) {
+        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
             [self showLocation];
         }
     }
