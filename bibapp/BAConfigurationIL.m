@@ -31,6 +31,7 @@
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EL039&amp;page=20";
+    self.currentBibUsePAIAWrapper = YES;
 }
 
 @end

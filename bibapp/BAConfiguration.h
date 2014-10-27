@@ -31,6 +31,7 @@
 @property (strong, nonatomic) NSString *currentBibStandardCatalogue;
 @property BOOL *currentBibHideDepartment;
 @property BOOL *currentBibFeedURLIsWebsite;
+@property BOOL *currentBibUsePAIAWrapper;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
@@ -42,5 +43,6 @@
 - (NSString *)getLocationURIForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchTitleForCatalog:(NSString *)catalogue;
 - (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
+- (BOOL)usePAIAWrapper;
 
 @end

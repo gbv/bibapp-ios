@@ -63,6 +63,7 @@
         
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
+        self.currentBibUsePAIAWrapper = NO;
     }
     return self;
 }
@@ -192,6 +193,10 @@
         }
     }
     return title;
+}
+
+- (BOOL)usePAIAWrapper {
+   return self.currentBibUsePAIAWrapper;
 }
 
 @end
