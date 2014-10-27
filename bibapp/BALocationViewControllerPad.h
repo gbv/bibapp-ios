@@ -8,6 +8,6 @@
 
 #import "BALocationViewController.h"
 
-@interface BALocationViewControllerPad : BALocationViewController
+@interface BALocationViewControllerPad : BALocationViewController <UIGestureRecognizerDelegate>
 
 @end

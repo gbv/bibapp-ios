@@ -8,6 +8,6 @@
 
 #import "BACoverViewController.h"
 
-@interface BACoverViewControllerPad : BACoverViewController
+@interface BACoverViewControllerPad : BACoverViewController <UIGestureRecognizerDelegate>
 
 @end

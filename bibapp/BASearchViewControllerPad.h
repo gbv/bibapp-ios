@@ -65,5 +65,6 @@
 - (IBAction)listAction:(id)sender;
 
 - (void) continueSearchFor:(NSString *)catalog;
+- (void) displayToc;
 
 @end

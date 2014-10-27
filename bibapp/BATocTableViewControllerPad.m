@@ -67,7 +67,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self setCurrentToc:[self.tocArray objectAtIndex:indexPath.row]];
-    [self.searchController performSegueWithIdentifier:@"tocSegue" sender:self];
+    //[self.searchController performSegueWithIdentifier:@"tocSegue" sender:self];
+    [self.searchController performSelector: @selector(displayToc) withObject: nil afterDelay: 0];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

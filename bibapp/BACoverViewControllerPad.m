@@ -20,6 +20,7 @@
     //Code for dissmissing this viewController by clicking outside it
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)];
     [recognizer setNumberOfTapsRequired:1];
+    recognizer.delegate = self;
     recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
     [self.view.window addGestureRecognizer:recognizer];
 }
@@ -56,6 +57,10 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+   return YES;
 }
 
 @end

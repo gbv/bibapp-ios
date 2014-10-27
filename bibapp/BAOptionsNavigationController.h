@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BAOptionsNavigationController : UINavigationController
+@interface BAOptionsNavigationController : UINavigationController <UIGestureRecognizerDelegate>
 
 @end

@@ -435,12 +435,14 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         self.lastSearchLocal = self.searchBar.text;
         self.searchCountLocal = 0;
+        self.initialSearchLocal = YES;
         self.booksLocal = [[NSMutableArray alloc] init];
         BAConnector *connector = [BAConnector generateConnector];
         [connector searchLocalFor:self.searchBar.text WithFirst:1 WithDelegate:self];
     } else {
         self.lastSearch = self.searchBar.text;
         self.searchCount = 0;
+        self.initialSearch = YES;
         self.booksGVK = [[NSMutableArray alloc] init];
         BAConnector *connector = [BAConnector generateConnector];
         [connector searchCentralFor:self.searchBar.text WithFirst:1 WithDelegate:self];
@@ -1600,7 +1602,8 @@
                 [alert show];
             }
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
-            [self showLocation];
+            //[self showLocation];
+            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
             if (![[UIApplication sharedApplication] openURL:url]) {
@@ -1609,13 +1612,23 @@
         }
     } else if (buttonIndex == 1) {
         if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
-            [self showLocation];
+            //[self showLocation];
+            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         }
     }
 }
 
 - (void)showLocation{
     [self performSegueWithIdentifier:@"locationSegue" sender:self];
+}
+
+- (void)displayToc {
+    [self.tocPopoverController dismissPopoverAnimated:NO];
+    [self performSelector: @selector(showToc) withObject: nil afterDelay: 0];
+}
+
+- (void)showToc{
+    [self performSegueWithIdentifier:@"tocSegue" sender:self];
 }
 
 - (void)coverTap {
@@ -1646,7 +1659,7 @@
         [locationViewController setCurrentLocation:self.currentLocation];
     } else if ([[segue identifier] isEqualToString:@"tocSegue"]) {
         BATocViewControllerPad *tocViewController = (BATocViewControllerPad *)[segue destinationViewController];
-        [tocViewController setUrl:[(BATocTableViewControllerPad *)sender currentToc]];
+        [tocViewController setUrl:[self.tocTableViewController currentToc]];
     }
 }
 

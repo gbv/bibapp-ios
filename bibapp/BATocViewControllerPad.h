@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuickLook/QuickLook.h>
 
-@interface BATocViewControllerPad : UIViewController <UIWebViewDelegate>
+@interface BATocViewControllerPad : UIViewController <UIWebViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSString *url;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
