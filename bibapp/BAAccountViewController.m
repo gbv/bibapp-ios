@@ -671,7 +671,7 @@
     NSMutableString *statusString = [[NSMutableString alloc] initWithString:@""];
     
     if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-        [statusString appendFormat:@"%d Titel verlängert.\n\n", [self.successfulEntries count]];
+        [statusString appendFormat:@"%ld Titel verlängert.\n\n", [self.successfulEntries count]];
     } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
         NSMutableString *requestString = [[NSMutableString alloc] init];
         if ([self.successfulEntries count] > 1) {
@@ -679,7 +679,7 @@
         } else {
             [requestString appendString:@"Vormerkung"];
         }
-        [statusString appendFormat:@"%d %@ storniert.\n\n", [self.successfulEntries count], requestString];
+        [statusString appendFormat:@"%ld %@ storniert.\n\n", [self.successfulEntries count], requestString];
     }
     
     if ([self.sendEntries count] > 0) {
