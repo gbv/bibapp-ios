@@ -197,8 +197,8 @@
 {
     NSError* error;
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
-    //NSLog(@"%@", command);
-    //NSLog(@"%@", json);
+    NSLog(@"%@", command);
+    NSLog(@"%@", json);
     if ([json count] > 0) {
         BOOL foundError = NO;
         if (![json isKindOfClass:[NSMutableArray class]]) {
@@ -278,30 +278,32 @@
                 }
                 if([matchesDayFirst count] > 0){
                     [tempEntryWork setDuedate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                    if ([self.appDelegate.configuration usePAIAWrapper]) {
+                       [tempEntryWork setStarttime:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                       [tempEntryWork setEndtime:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                    }
                 } else if ([matchesYearFirst count] > 0){
                     NSString *year = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (0, 4)];
                     NSString *month = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (5, 2)];
                     NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
                     [tempEntryWork setDuedate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                    if ([self.appDelegate.configuration usePAIAWrapper]) {
+                       [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                       [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                    }
                 }
                
-                NSString *yearStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
-                NSString *monthStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
-                NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
-                [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
+                if (![self.appDelegate.configuration usePAIAWrapper]) {
+                   NSString *yearStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
+                   NSString *monthStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
+                   NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
+                   [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
                
-                NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
-                NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
-                NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
-                [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
-               
-                if ([self.appDelegate.configuration usePAIAWrapper]) {
-                   if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([[document objectForKey:@"cancancel"] integerValue] == 1)) {
-                      [tempEntryWork setCanRenewCancel:YES];
-                   } else {
-                      [tempEntryWork setCanRenewCancel:NO];
-                   }
-                } else {
+                   NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
+                   NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
+                   NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
+                   [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
+                }
                   if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
                      [self.loan addObject:tempEntryWork];
                      if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([document objectForKey:@"canrenew"] == nil)) {
@@ -325,7 +327,6 @@
                         }
                      }
                   }
-               }
             }
             [self.loanTableView reloadData];
             [self.reservationTableView reloadData];
@@ -383,7 +384,11 @@
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-            [self setSuccessfulEntries:[json mutableCopy]];
+            if ([self.appDelegate.configuration usePAIAWrapper]) {
+               [self setSuccessfulEntriesWrapper:[json mutableCopy]];
+            } else {
+               [self setSuccessfulEntries:[json mutableCopy]];
+            }
             [self showRenewCancelDialogFor:@"renew"];
         } else if ([command isEqualToString:@"accountCancelDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
