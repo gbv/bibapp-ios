@@ -1626,7 +1626,7 @@
             }
         }
     } else if (buttonIndex == 1) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
+        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         }

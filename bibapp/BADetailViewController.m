@@ -1072,7 +1072,7 @@
                 }
             }
         } else if (buttonIndex == 1) {
-            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
+            if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             }
