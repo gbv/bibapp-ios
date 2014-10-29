@@ -3587,7 +3587,7 @@
 			name = BibAppUnitTests;
 			productName = BibAppUnitTests;
 			productReference = 8FFF22C51786B8580077FC8B /* BibAppUnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 

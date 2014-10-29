@@ -314,7 +314,7 @@
                   } else if ([[document objectForKey:@"status"] integerValue] == 1) {
                      [self.reservation addObject:tempEntryWork];
                      if ([self.appDelegate.configuration usePAIAWrapper]) {
-                        if ([[document objectForKey:@"canrenew"] integerValue] == 1) {
+                        if ([[document objectForKey:@"canrenew"] integerValue] == 1 || [[document objectForKey:@"cancancel"] integerValue] == 1) {
                            [tempEntryWork setCanRenewCancel:YES];
                         } else {
                            [tempEntryWork setCanRenewCancel:NO];
@@ -393,7 +393,11 @@
         } else if ([command isEqualToString:@"accountCancelDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-            [self setSuccessfulEntries:[json mutableCopy]];
+            if ([self.appDelegate.configuration usePAIAWrapper]) {
+               [self setSuccessfulEntriesWrapper:[json mutableCopy]];
+            } else {
+               [self setSuccessfulEntries:[json mutableCopy]];
+            }
             [self showRenewCancelDialogFor:@"cancel"];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
             NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
@@ -560,7 +564,7 @@
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
                NSDictionary *tempSuccessfulEntry = [self.successfulEntriesWrapper objectAtIndex:i];
-               if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
+               if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"itemURI"]]) {
                   if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
                      renewalsCounter++;
                   }
