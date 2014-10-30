@@ -68,7 +68,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", self.scrollPosition+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%ld / %ld)", self.scrollPosition+1, self.maximumPosition]];
     [self loadScrollViewWithPage:self.startPosition];
     [self loadScrollViewWithPage:self.startPosition-1];
     [self loadScrollViewWithPage:self.startPosition+1];
@@ -92,7 +92,7 @@
 {
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     if (pageControlUsed)
     {
         return;
@@ -115,7 +115,7 @@
     pageControlUsed = NO;
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     for (int i = 1; i < 5; i++) {
@@ -129,7 +129,7 @@
     }
 }
 
-- (void)loadScrollViewWithPage:(int)page
+- (void)loadScrollViewWithPage:(NSInteger)page
 {
     if (page < 0) {
         return;
@@ -137,11 +137,11 @@
     if (page < self.maximumPosition) {
         if (page >= [self.bookList count]) {
             if (page == [self.bookList count]) {
-                int newCount = [self.bookList count] + [self.appDelegate.configuration.currentBibSearchMaximumRecords integerValue];
+                NSInteger newCount = [self.bookList count] + [self.appDelegate.configuration.currentBibSearchMaximumRecords integerValue];
                 if (newCount > self.maximumPosition) {
                     newCount = self.maximumPosition;
                 }
-                for (unsigned i = page; i < (newCount); i++)
+                for (NSInteger i = page; i < (newCount); i++)
                 {
                     [self.views addObject:[NSNull null]];
                 }

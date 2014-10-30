@@ -192,7 +192,7 @@
     // no need to implement
 }
 
-- (void)updatePosition:(int)updatePosition
+- (void)updatePosition:(NSInteger)updatePosition
 {
     [self setPosition:updatePosition];
 }
