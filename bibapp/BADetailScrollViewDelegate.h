@@ -11,6 +11,6 @@
 @protocol BADetailScrollViewDelegate <NSObject>
 
 - (void)continueSearch;
-- (void)updatePosition:(int)updatePosition;
+- (void)updatePosition:(NSInteger)updatePosition;
 
 @end
