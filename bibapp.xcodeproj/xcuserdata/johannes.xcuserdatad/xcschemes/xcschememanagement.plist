@@ -64,6 +64,11 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>BibApp TUBS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -158,6 +163,11 @@
 			<true/>
 		</dict>
 		<key>8FA8F8171950233A006CD05A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FAD97691A0CFD3600C3A5D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
