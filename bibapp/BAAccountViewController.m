@@ -141,7 +141,8 @@
         }
         if (foundError) {
            if (![command isEqualToString:@"login"]) {
-              NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+              //NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+              NSString *errorCode = [json objectForKey:@"code"];
               if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
                  [self loginActionWithMessage:@""];
               } else {

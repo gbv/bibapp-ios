@@ -361,22 +361,22 @@ static BAConnector *sharedConnector = nil;
             [jsonString appendString:@"{\"doc\":["];
          }
          for (BAEntryWork *tempEntry in docs) {
-            if (![self.appDelegate.configuration usePAIAWrapper]) {
+            //if (![self.appDelegate.configuration usePAIAWrapper]) {
                NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
                NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
                NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
                [jsonString appendString:tempString];
-            }
+            //}
             if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
             {
                [jsonString appendString:@","];
             }
-            if ([self.appDelegate.configuration usePAIAWrapper]) {
+            /*if ([self.appDelegate.configuration usePAIAWrapper]) {
                NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
                NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
                NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
                [jsonString appendString:tempString];
-            }
+            }*/
          }
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             [jsonString appendString:@"]"];
@@ -409,22 +409,22 @@ static BAConnector *sharedConnector = nil;
             [jsonString appendString:@"{\"doc\":["];
          }
          for (BAEntryWork *tempEntry in docs) {
-            if (![self.appDelegate.configuration usePAIAWrapper]) {
+            //if (![self.appDelegate.configuration usePAIAWrapper]) {
                NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
                NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
                NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
                [jsonString appendString:tempString];
-            }
+            //}
             if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
             {
                [jsonString appendString:@","];
             }
-            if ([self.appDelegate.configuration usePAIAWrapper]) {
+            /*if ([self.appDelegate.configuration usePAIAWrapper]) {
                NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
                NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
                NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
                [jsonString appendString:tempString];
-            }
+            }*/
          }
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             [jsonString appendString:@"]"];
