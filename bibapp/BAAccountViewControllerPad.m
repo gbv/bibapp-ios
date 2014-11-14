@@ -722,11 +722,17 @@
             }
         } else if(tableView.tag == 1) {
             [cell.queueTitleLabel setText:@""];
+            [cell.queueTitleLabel setHidden:YES];
             [cell.queueLabel setText:@""];
+            [cell.queueLabel setHidden:YES];
             [cell.renewalTitleLabel setText:@""];
+            [cell.renewalTitleLabel setHidden:YES];
             [cell.renewalLabel setText:@""];
+            [cell.renewalLabel setHidden:YES];
             [cell.storageTitleLabel setText:@""];
+            [cell.storageTitleLabel setHidden:YES];
             [cell.storageLabel setText:@""];
+            [cell.storageLabel setHidden:YES];
             if (self.appDelegate.isIOS7) {
                [cell.checkbox setFrame:CGRectMake(306, 38, 23, 23)];
             } else {

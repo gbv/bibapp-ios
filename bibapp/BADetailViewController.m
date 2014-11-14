@@ -1041,6 +1041,10 @@
                     // Handle the error.
                 }
                 [self.scrollViewController.listButton setEnabled:NO];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:@"Der Eintrag wurde Ihrer Merkliste hinzugefügt"
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
