@@ -305,23 +305,35 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-         
          NSMutableString*jsonString = [[NSMutableString alloc] init];
-         [jsonString appendString:@"{\"doc\":["];
-          
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"["];
+         } else {
+            [jsonString appendString:@"{\"doc\":["];
+         }
          for (BADocumentItem *tempDocumentItem in docs) {
-            NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
-            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
-            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-            [jsonString appendString:tempString];
-            
+            if (![self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            }
             if (![tempDocumentItem isEqual:[docs lastObject]] && docs.count != 1)
             {
                [jsonString appendString:@","];
             }
+            if ([self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempDocumentDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempDocumentItem.itemID, @"item", tempDocumentItem.edition, @"edition", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempDocumentDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            }
          }
-         [jsonString appendString:@"]}"];
-         
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"]"];
+         } else {
+            [jsonString appendString:@"]}"];
+         }
          NSUInteger contentLength = [jsonString length];
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
@@ -342,27 +354,38 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-         
          NSMutableString*jsonString = [[NSMutableString alloc] init];
-         [jsonString appendString:@"{\"doc\":["];
-
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"["];
+         } else {
+            [jsonString appendString:@"{\"doc\":["];
+         }
          for (BAEntryWork *tempEntry in docs) {
-            NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-            [jsonString appendString:tempString];
-            
+            //if (![self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            //}
             if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
             {
                [jsonString appendString:@","];
             }
+            /*if ([self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            }*/
          }
-         [jsonString appendString:@"]}"];
-         
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"]"];
+         } else {
+            [jsonString appendString:@"]}"];
+         }
          NSUInteger contentLength = [jsonString length];
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-         
          NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
          if (theConnection) {
          }
@@ -379,23 +402,35 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
-         
          NSMutableString*jsonString = [[NSMutableString alloc] init];
-         [jsonString appendString:@"{\"doc\":["];
-
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"["];
+         } else {
+            [jsonString appendString:@"{\"doc\":["];
+         }
          for (BAEntryWork *tempEntry in docs) {
-            NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
-            NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
-            NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
-            [jsonString appendString:tempString];
-            
+            //if (![self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            //}
             if (![tempEntry isEqual:[docs lastObject]] && docs.count != 1)
             {
                [jsonString appendString:@","];
             }
+            /*if ([self.appDelegate.configuration usePAIAWrapper]) {
+               NSDictionary *tempEntryDict = [[NSDictionary alloc] initWithObjectsAndKeys: tempEntry.item, @"item", tempEntry.edition, @"edition", tempEntry.bar, @"barcode", nil];
+               NSData *tempJsonData = [NSJSONSerialization dataWithJSONObject:tempEntryDict options:NSJSONWritingPrettyPrinted error:nil];
+               NSString *tempString = [[NSString alloc] initWithData:tempJsonData encoding:NSStringEncodingConversionAllowLossy];
+               [jsonString appendString:tempString];
+            }*/
          }
-         [jsonString appendString:@"]}"];
-         
+         if ([self.appDelegate.configuration usePAIAWrapper]) {
+            [jsonString appendString:@"]"];
+         } else {
+            [jsonString appendString:@"]}"];
+         }
          NSUInteger contentLength = [jsonString length];
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];

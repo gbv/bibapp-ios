@@ -21,6 +21,7 @@
 #import "BAConfigurationFHE.h"
 #import "BAConfigurationSM.h"
 #import "BAConfigurationUFB.h"
+#import "BAConfigurationTUBS.h"
 
 @implementation BAConfiguration
 
@@ -63,6 +64,7 @@
         
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
+        self.currentBibUsePAIAWrapper = NO;
     }
     return self;
 }
@@ -100,6 +102,8 @@
         currentConfiguration = [[BAConfigurationSM alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ube"]){
         currentConfiguration = [[BAConfigurationUFB alloc] init];
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.tubs"]){
+       currentConfiguration = [[BAConfigurationTUBS alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;
@@ -192,6 +196,10 @@
         }
     }
     return title;
+}
+
+- (BOOL)usePAIAWrapper {
+   return self.currentBibUsePAIAWrapper;
 }
 
 @end

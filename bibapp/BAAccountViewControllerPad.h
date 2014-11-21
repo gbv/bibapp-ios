@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *feesSum;
 @property (strong, nonatomic) NSMutableArray *fees;
 @property (strong, nonatomic) NSMutableArray *sendEntries;
+@property (strong, nonatomic) NSMutableArray *successfulEntriesWrapper;
 @property (strong, nonatomic) NSMutableDictionary *successfulEntries;
 @property (strong, nonatomic) NSString *currentAccount;
 @property (strong, nonatomic) NSString *currentPassword;

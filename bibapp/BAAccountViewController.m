@@ -29,6 +29,7 @@
 @synthesize feesSum;
 @synthesize fees;
 @synthesize sendEntries;
+@synthesize successfulEntriesWrapper;
 @synthesize successfulEntries;
 @synthesize currentAccount;
 @synthesize currentPassword;
@@ -81,6 +82,9 @@
        if (!self.loggedIn) {
            [self loginActionWithMessage:@""];
        } else {
+           [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
+           [self.successfulEntriesWrapper removeAllObjects];
+           [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
            [self.successfulEntries removeAllObjects];
            [self.sendEntries removeAllObjects];
            [self.actionButton setEnabled:YES];
@@ -137,7 +141,8 @@
         }
         if (foundError) {
            if (![command isEqualToString:@"login"]) {
-              NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+              //NSString *errorCode = [[json objectForKey:@"code"] stringValue];
+              NSString *errorCode = [json objectForKey:@"code"];
               if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
                  [self loginActionWithMessage:@""];
               } else {
@@ -210,23 +215,33 @@
                 }
                 if([matchesDayFirst count] > 0){
                    [tempEntryWork setDuedate:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                   if ([self.appDelegate.configuration usePAIAWrapper]) {
+                      [tempEntryWork setStarttime:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                      [tempEntryWork setEndtime:[[document objectForKey:@"duedate"] stringByReplacingOccurrencesOfString:@"-" withString:@"."]];
+                   }
                 } else if ([matchesYearFirst count] > 0){
                    NSString *year = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (0, 4)];
                    NSString *month = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (5, 2)];
                    NSString *day = [[document objectForKey:@"duedate"] substringWithRange: NSMakeRange (8, 2)];
                    [tempEntryWork setDuedate:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                   if ([self.appDelegate.configuration usePAIAWrapper]) {
+                      [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                      [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", day, month, year]];
+                   }
                 }
                
-                NSString *yearStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
-                NSString *monthStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
-                NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
-                [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
+                if (![self.appDelegate.configuration usePAIAWrapper]) {
+                   NSString *yearStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (0, 4)];
+                   NSString *monthStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (5, 2)];
+                   NSString *dayStarttime = [[document objectForKey:@"starttime"] substringWithRange: NSMakeRange (8, 2)];
+                   [tempEntryWork setStarttime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayStarttime, monthStarttime, yearStarttime]];
                
-                NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
-                NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
-                NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
-                [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
-               
+                   NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
+                   NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
+                   NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
+                   [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
+                }
+                   
                if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
                   [self.loan addObject:tempEntryWork];
                   if (([[document objectForKey:@"canrenew"] integerValue] == 1) || ([document objectForKey:@"canrenew"] == nil)) {
@@ -236,10 +251,18 @@
                   }
                } else if ([[document objectForKey:@"status"] integerValue] == 1) {
                   [self.reservation addObject:tempEntryWork];
-                  if ([[document objectForKey:@"cancancel"] integerValue] == 1) {
-                     [tempEntryWork setCanRenewCancel:YES];
+                  if ([self.appDelegate.configuration usePAIAWrapper]) {
+                     if ([[document objectForKey:@"canrenew"] integerValue] == 1 || [[document objectForKey:@"cancancel"] integerValue] == 1) {
+                        [tempEntryWork setCanRenewCancel:YES];
+                     } else {
+                        [tempEntryWork setCanRenewCancel:NO];
+                     }
                   } else {
-                     [tempEntryWork setCanRenewCancel:NO];
+                     if ([[document objectForKey:@"cancancel"] integerValue] == 1) {
+                        [tempEntryWork setCanRenewCancel:YES];
+                     } else {
+                        [tempEntryWork setCanRenewCancel:NO];
+                     }
                   }
                }
             }
@@ -298,12 +321,20 @@
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-            [self setSuccessfulEntries:[json mutableCopy]];
+            if ([self.appDelegate.configuration usePAIAWrapper]) {
+               [self setSuccessfulEntriesWrapper:[json mutableCopy]];
+            } else {
+               [self setSuccessfulEntries:[json mutableCopy]];
+            }
             [self showRenewCancelDialog];
         } else if ([command isEqualToString:@"accountCancelDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-            [self setSuccessfulEntries:[json mutableCopy]];
+            if ([self.appDelegate.configuration usePAIAWrapper]) {
+               [self setSuccessfulEntriesWrapper:[json mutableCopy]];
+            } else {
+               [self setSuccessfulEntries:[json mutableCopy]];
+            }
             [self showRenewCancelDialog];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
             NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
@@ -484,11 +515,17 @@
             }
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             [cell.queueTitleLabel setText:@""];
+            [cell.queueTitleLabel setHidden:YES];
             [cell.queueLabel setText:@""];
+            [cell.queueLabel setHidden:YES];
             [cell.renewalTitleLabel setText:@""];
+            [cell.renewalTitleLabel setHidden:YES];
             [cell.renewalLabel setText:@""];
+            [cell.renewalLabel setHidden:YES];
             [cell.storageTitleLabel setText:@""];
+            [cell.storageTitleLabel setHidden:YES];
             [cell.storageLabel setText:@""];
+            [cell.storageLabel setHidden:YES];
             if (self.appDelegate.isIOS7) {
                [cell.checkbox setFrame:CGRectMake(287, 38, 23, 23)];
             } else {
@@ -701,6 +738,7 @@
     if (actionSheet.tag == 10) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
             [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.loan) {
                 if (tempEmtry.selected) {
@@ -719,6 +757,7 @@
     } else if (actionSheet.tag == 11) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
+            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
             [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
             for (BAEntryWork *tempEmtry in self.reservation) {
                 if (tempEmtry.selected) {
@@ -744,10 +783,21 @@
     int renewalsCounter = 0;
     if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
        for (BAEntryWork *tempSendEntry in self.sendEntries) {
-          for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
-             if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
-                if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
-                   renewalsCounter++;
+          if ([self.appDelegate.configuration usePAIAWrapper]) {
+             for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
+                NSDictionary *tempSuccessfulEntry = [self.successfulEntriesWrapper objectAtIndex:i];
+                if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"itemURI"]]) {
+                   if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
+                      renewalsCounter++;
+                   }
+                }
+             }
+          } else {
+             for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+                if ([tempSendEntry.item isEqualToString:[tempSuccessfulEntry objectForKey:@"item"]]) {
+                   if ([tempSendEntry.renewal integerValue] < [[tempSuccessfulEntry objectForKey:@"renewals"] integerValue]) {
+                      renewalsCounter++;
+                   }
                 }
              }
           }
@@ -757,40 +807,85 @@
        } else {
           [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
        }
-       for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
-          if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
-             //if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
-             //   [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
-             //}
-             [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
+       if ([self.appDelegate.configuration usePAIAWrapper]) {
+          for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
+             NSDictionary *tempSuccessfulEntry = [self.successfulEntriesWrapper objectAtIndex:i];
+             if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
+                //if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
+                //   [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
+                //}
+                [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
+             }
+          }
+       } else {
+          for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+             if ([tempSuccessfulEntry objectForKey:@"error"] != nil) {
+                //if ([tempSuccessfulEntry objectForKey:@"item"] != nil) {
+                //   [statusString appendFormat:@"%@:\n", [tempSuccessfulEntry objectForKey:@"item"]];
+                //}
+                [statusString appendFormat:@"%@\n\n", [tempSuccessfulEntry objectForKey:@"error"]];
+             }
           }
        }
     } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
        NSMutableString *requestString = [[NSMutableString alloc] init];
-       if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
-          [requestString appendString:@"Vormerkungen"];
+       if ([self.appDelegate.configuration usePAIAWrapper]) {
+          if ([self.successfulEntriesWrapper count] > 1) {
+             [requestString appendString:@"Vormerkungen"];
+          } else {
+             [requestString appendString:@"Vormerkung"];
+          }
        } else {
-          [requestString appendString:@"Vormerkung"];
+          if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
+             [requestString appendString:@"Vormerkungen"];
+          } else {
+             [requestString appendString:@"Vormerkung"];
+          }
        }
-       [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
+       if ([self.appDelegate.configuration usePAIAWrapper]) {
+          [statusString appendFormat:@"%d %@ storniert.\n\n", [self.successfulEntriesWrapper count], requestString];
+       } else {
+          [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
+       }
     }
     
    if ([self.sendEntries count] > 0) {
-      if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
-         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-            [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
-         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
-            [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"];
-         }
-         for (BAEntryWork *tempSendEntry in self.sendEntries) {
-            BOOL wasSuccessful = NO;
-            for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
-               if ([tempSendEntry.label isEqualToString:[tempSuccessfulEntry valueForKey:@"signature"]]) {
-                  wasSuccessful = YES;
+      if ([self.appDelegate.configuration usePAIAWrapper]) {
+         if ([self.sendEntries count] > [self.successfulEntriesWrapper count]) {
+            if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
+            } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
+               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"];
+            }
+            for (BAEntryWork *tempSendEntry in self.sendEntries) {
+               BOOL wasSuccessful = NO;
+               for (NSDictionary *tempSuccessfulEntry in self.successfulEntriesWrapper) {
+                  if ([tempSendEntry.label isEqualToString:[tempSuccessfulEntry valueForKey:@"signature"]]) {
+                     wasSuccessful = YES;
+                  }
+               }
+               if (!wasSuccessful) {
+                  [statusString appendString:[[NSString alloc] initWithFormat:@"• %@\n\n", tempSendEntry.title]];
                }
             }
-            if (!wasSuccessful) {
-               [statusString appendString:[[NSString alloc] initWithFormat:@"• %@\n\n", tempSendEntry.title]];
+         }
+      } else {
+         if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
+            if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
+            } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
+               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"];
+            }
+            for (BAEntryWork *tempSendEntry in self.sendEntries) {
+               BOOL wasSuccessful = NO;
+               for (NSDictionary *tempSuccessfulEntry in [self.successfulEntries objectForKey:@"doc"]) {
+                  if ([tempSendEntry.label isEqualToString:[tempSuccessfulEntry valueForKey:@"signature"]]) {
+                     wasSuccessful = YES;
+                  }
+               }
+               if (!wasSuccessful) {
+                  [statusString appendString:[[NSString alloc] initWithFormat:@"• %@\n\n", tempSendEntry.title]];
+               }
             }
          }
       }

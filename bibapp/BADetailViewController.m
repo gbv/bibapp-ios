@@ -1041,6 +1041,10 @@
                     // Handle the error.
                 }
                 [self.scrollViewController.listButton setEnabled:NO];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                                message:@"Der Eintrag wurde Ihrer Merkliste hinzugefügt"
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                 message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
@@ -1072,7 +1076,7 @@
                 }
             }
         } else if (buttonIndex == 1) {
-            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
+            if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             }
