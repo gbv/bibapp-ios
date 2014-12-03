@@ -931,6 +931,15 @@
     [self performSegueWithIdentifier:@"locationSegue" sender:self];
 }
 
+- (void)displayToc {
+   [self.tocPopoverController dismissPopoverAnimated:NO];
+   [self performSelector: @selector(showToc) withObject: nil afterDelay: 0];
+}
+
+- (void)showToc{
+   [self performSegueWithIdentifier:@"tocSegue" sender:self];
+}
+
 - (void)coverTap
 {
     [self performSegueWithIdentifier:@"coverSegue" sender:self];
@@ -946,7 +955,7 @@
         [locationViewController setCurrentLocation:self.currentLocation];
     } else if ([[segue identifier] isEqualToString:@"tocSegue"]) {
         BATocViewControllerPad *tocViewController = (BATocViewControllerPad *)[segue destinationViewController];
-        [tocViewController setUrl:[(BATocTableViewControllerPad *)sender currentToc]];
+        [tocViewController setUrl:[self.tocTableViewController currentToc]];
     }
 }
 
@@ -954,7 +963,7 @@
 {
     BAEntryWork *tempEntry;
     tempEntry = self.currentEntry;
-    
+   
     NSInteger itemIndex = actionSheet.tag;
     if (buttonIndex == 0) {
         if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Vormerken"]) {
@@ -970,7 +979,8 @@
                 [alert show];
             }
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
-            [self showLocation];
+            //[self showLocation];
+            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
             if (![[UIApplication sharedApplication] openURL:url]) {
@@ -978,8 +988,9 @@
             }
         }
     } else if (buttonIndex == 1) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
-            [self showLocation];
+        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
+            //[self showLocation];
+            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         }
     }
 }
@@ -1022,11 +1033,19 @@
         }
         UIActionSheet *action;
         if (tempDocumentItem.order) {
-            action = [[UIActionSheet alloc] initWithTitle:nil
-                                                 delegate:self
-                                        cancelButtonTitle:@"Abbrechen"
-                                   destructiveButtonTitle:nil
-                                        otherButtonTitles:orderString, @"Standortinfo", nil];
+            if (tempDocumentItem.location != nil) {
+               action = [[UIActionSheet alloc] initWithTitle:nil
+                                                    delegate:self
+                                           cancelButtonTitle:@"Abbrechen"
+                                      destructiveButtonTitle:nil
+                                           otherButtonTitles:orderString, @"Standortinfo", nil];
+            } else {
+               action = [[UIActionSheet alloc] initWithTitle:nil
+                                                    delegate:self
+                                           cancelButtonTitle:@"Abbrechen"
+                                      destructiveButtonTitle:nil
+                                           otherButtonTitles:orderString, nil];
+            }
         } else {
             action = [[UIActionSheet alloc] initWithTitle:nil
                                                  delegate:self

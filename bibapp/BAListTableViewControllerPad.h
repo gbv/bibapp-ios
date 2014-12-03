@@ -50,5 +50,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 
 - (IBAction)trashAction:(id)sender;
+- (void) displayToc;
 
 @end

@@ -239,7 +239,11 @@
                    NSString *yearEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (0, 4)];
                    NSString *monthEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (5, 2)];
                    NSString *dayEndtime = [[document objectForKey:@"endtime"] substringWithRange: NSMakeRange (8, 2)];
-                   [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
+                   if (dayEndtime != nil && monthEndtime != nil && yearEndtime != nil) {
+                      [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@"%@.%@.%@", dayEndtime, monthEndtime, yearEndtime]];
+                   } else {
+                      [tempEntryWork setEndtime:[[NSString alloc] initWithFormat:@""]];
+                   }
                 }
                    
                if ([[document objectForKey:@"status"] integerValue] == 2 || [[document objectForKey:@"status"] integerValue] == 3 || [[document objectForKey:@"status"] integerValue] == 4) {
