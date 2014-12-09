@@ -2599,8 +2599,8 @@
 		8FA8F8FA19502720006CD05A /* BAConfigurationSM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationSM.m; sourceTree = "<group>"; };
 		8FA8F9091950272E006CD05A /* BAConfigurationUFB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationUFB.h; sourceTree = "<group>"; };
 		8FA8F90A1950272E006CD05A /* BAConfigurationUFB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationUFB.m; sourceTree = "<group>"; };
-		8FAD98101A0CFD3600C3A5D1 /* BibApp TUBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp TUBS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FAD98111A0CFD3700C3A5D1 /* BibApp TUBS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp TUBS-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp TUBS-Info.plist"; sourceTree = "<absolute>"; };
+		8FAD98101A0CFD3600C3A5D1 /* BibApp TU BS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp TU BS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-TU-BS-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-TU-BS-Info.plist"; sourceTree = "<absolute>"; };
 		8FAD98121A0CFEC200C3A5D1 /* BAConfigurationTUBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationTUBS.h; sourceTree = "<group>"; };
 		8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationTUBS.m; sourceTree = "<group>"; };
 		8FB2FDF616CA4575007382EE /* mediaIconA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconA.png; sourceTree = "<group>"; };
@@ -3377,7 +3377,7 @@
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
 				8FA8F8151950230D006CD05A /* BibApp SM.app */,
 				8FA8F8B71950233A006CD05A /* BibApp UFB.app */,
-				8FAD98101A0CFD3600C3A5D1 /* BibApp TUBS.app */,
+				8FAD98101A0CFD3600C3A5D1 /* BibApp TU BS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3438,7 +3438,7 @@
 				8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */,
 				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
 				8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */,
-				8FAD98111A0CFD3700C3A5D1 /* BibApp TUBS-Info.plist */,
+				8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
 				8FF2700416393BF200099665 /* InfoPlist.strings */,
 				8FF2700716393BF200099665 /* main.m */,
@@ -3721,9 +3721,9 @@
 			productReference = 8FA8F8B71950233A006CD05A /* BibApp UFB.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FAD97691A0CFD3600C3A5D1 /* BibApp TUBS */ = {
+		8FAD97691A0CFD3600C3A5D1 /* BibApp TU BS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FAD980D1A0CFD3600C3A5D1 /* Build configuration list for PBXNativeTarget "BibApp TUBS" */;
+			buildConfigurationList = 8FAD980D1A0CFD3600C3A5D1 /* Build configuration list for PBXNativeTarget "BibApp TU BS" */;
 			buildPhases = (
 				8FAD976A1A0CFD3600C3A5D1 /* Sources */,
 				8FAD97BE1A0CFD3600C3A5D1 /* Frameworks */,
@@ -3733,9 +3733,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp TUBS";
+			name = "BibApp TU BS";
 			productName = bibapp;
-			productReference = 8FAD98101A0CFD3600C3A5D1 /* BibApp TUBS.app */;
+			productReference = 8FAD98101A0CFD3600C3A5D1 /* BibApp TU BS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FD61071190916EA009E2358 /* BibApp ThULB */ = {
@@ -3863,7 +3863,7 @@
 				8FA8F7751950230D006CD05A /* BibApp SM */,
 				8FA8F8171950233A006CD05A /* BibApp UFB */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
-				8FAD97691A0CFD3600C3A5D1 /* BibApp TUBS */,
+				8FAD97691A0CFD3600C3A5D1 /* BibApp TU BS */,
 			);
 		};
 /* End PBXProject section */
@@ -6923,18 +6923,18 @@
 		8FAD980E1A0CFD3600C3A5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "TUBS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TUBS LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp TUBS-Info.plist";
+				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp TUBS";
+				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6946,18 +6946,18 @@
 		8FAD980F1A0CFD3600C3A5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "TUBS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TUBS LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp TUBS-Info.plist";
+				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp TUBS";
+				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7294,7 +7294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FAD980D1A0CFD3600C3A5D1 /* Build configuration list for PBXNativeTarget "BibApp TUBS" */ = {
+		8FAD980D1A0CFD3600C3A5D1 /* Build configuration list for PBXNativeTarget "BibApp TU BS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FAD980E1A0CFD3600C3A5D1 /* Debug */,
