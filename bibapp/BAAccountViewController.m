@@ -873,7 +873,8 @@
                }
             }
          }
-      } else {
+      }
+      /* else {
          if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
                [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
@@ -892,7 +893,7 @@
                }
             }
          }
-      }
+      } */
    }
    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil

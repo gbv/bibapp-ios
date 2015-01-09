@@ -652,7 +652,8 @@
                 }
              }
           }
-       } else {
+       }
+       /* else {
           if ([self.sendEntries count] > [[self.successfulEntries objectForKey:@"doc"] count]) {
              if ([action isEqualToString:@"renew"]) {
                 [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
@@ -671,7 +672,7 @@
                 }
              }
           }
-       }
+       } */
     }
     
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
