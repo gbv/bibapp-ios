@@ -540,18 +540,49 @@
         }
         [((BAItemDetail *)self.view).detailTableView reloadData];
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
-        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
-        if ([json count] > 0) {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bestellung / Vormerkung\nerfolgreich"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bestellung / Vormerkung\nleider nicht möglich"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        }
+       /* NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+       if ([json count] > 0) {
+           UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                           message:@"Bestellung / Vormerkung\nerfolgreich"
+                                                          delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+           [alert show];
+       } else {
+           UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                           message:@"Bestellung / Vormerkung\nleider nicht möglich"
+                                                          delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+           [alert show];
+       } */
+       if ([self.appDelegate.configuration usePAIAWrapper]) {
+          NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+          if ([json count] > 0) {
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                             message:@"Bestellung / Vormerkung\nerfolgreich"
+                                                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+          } else {
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                             message:@"Bestellung / Vormerkung\nleider nicht möglich"
+                                                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+          }
+       } else {
+          NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+          if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
+             NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
+             if ([doc objectForKey:@"error"] == nil) {
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+             } else {
+                NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+             }
+          } else {
+             NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]];
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             [alert show];
+          }
+       }
     } else if ([command isEqualToString:@"getLocationInfoForUri"]) {
     } else if ([command isEqualToString:@"getCover"]) {
         self.searchedForCover = YES;
