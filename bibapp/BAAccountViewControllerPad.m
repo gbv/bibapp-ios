@@ -197,8 +197,6 @@
 {
     NSError* error;
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
-    NSLog(@"%@", command);
-    NSLog(@"%@", json);
     if ([json count] > 0) {
         BOOL foundError = NO;
         if (![json isKindOfClass:[NSMutableArray class]]) {
@@ -408,6 +406,16 @@
             NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
                [displayName appendString:@" (Konto gesperrt)"];
+            } else {
+               BOOL writeItemsScope = NO;
+               for (NSString *tempScope in self.currentScope) {
+                  if ([tempScope isEqualToString:@"write_items"]) {
+                     writeItemsScope = YES;
+                  }
+               }
+               if (!writeItemsScope) {
+                  [displayName appendString:@" (Konto gesperrt)"];
+               }
             }
             [self.accountNavigationBar.topItem setTitle:displayName];
         }

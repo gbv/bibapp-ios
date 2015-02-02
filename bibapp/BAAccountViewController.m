@@ -344,6 +344,16 @@
             NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
                [displayName appendString:@" (gesperrt)"];
+            } else {
+               BOOL writeItemsScope = NO;
+               for (NSString *tempScope in self.currentScope) {
+                  if ([tempScope isEqualToString:@"write_items"]) {
+                     writeItemsScope = YES;
+                  }
+               }
+               if (!writeItemsScope) {
+                  [displayName appendString:@" (Konto gesperrt)"];
+               }
             }
             [self.navigationController.navigationBar.topItem setTitle:displayName];
         }
