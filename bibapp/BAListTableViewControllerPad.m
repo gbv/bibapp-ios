@@ -241,15 +241,24 @@
                     if (loan.href == nil) {
                         [statusInfo appendString:@"..."];
                     } else {
-                        if ([loan.expected isEqualToString:@""]) {
-                            [statusInfo appendString:@"ausgeliehen, Vormerken möglich"];
-                        } else {
-                            NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
-                            NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
-                            NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                            [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]];
+                        NSRange match = [loan.href rangeOfString: @"loan/RES"];
+                        if (match.length > 0) {
+                           if ([loan.expected isEqualToString:@""] || [loan.expected isEqualToString:@"unknown"]) {
+                              [statusInfo appendString:@"ausgeliehen, Vormerken möglich"];
+                           } else {
+                              NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
+                              NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
+                              NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
+                              [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]];
+                           }
                         }
                     }
+                } else {
+                   if (loan.href == nil) {
+                      [statusInfo appendString:@"Bitte am Standort entnehmen"];
+                   } else {
+                      [statusInfo appendString:@"Bitte bestellen"];
+                   }
                 }
             }
             [cell.status setText:status];
