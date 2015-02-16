@@ -68,7 +68,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", self.scrollPosition+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%ld / %ld)", self.scrollPosition+1, self.maximumPosition]];
     [self loadScrollViewWithPage:self.startPosition];
     [self loadScrollViewWithPage:self.startPosition-1];
     [self loadScrollViewWithPage:self.startPosition+1];
@@ -129,7 +129,7 @@
     }
 }
 
-- (void)loadScrollViewWithPage:(int)page
+- (void)loadScrollViewWithPage:(long)page
 {
     if (page < 0) {
         return;

@@ -18,10 +18,10 @@
 @property BOOL pageControlUsed;
 @property (strong, nonatomic) NSMutableArray *bookList;
 @property (strong, nonatomic) NSMutableArray *views;
-@property int scrollPosition;
-@property int startPosition;
+@property long scrollPosition;
+@property long startPosition;
 @property (strong, nonatomic) id <BADetailScrollViewDelegate> scrollViewDelegate;
-@property int maximumPosition;
+@property long maximumPosition;
 @property (strong, nonatomic) UIImage *tempCover;
 @property (strong, nonatomic) NSMutableArray *tempTocArray;
 @property (strong, nonatomic) BALocation *tempLocation;

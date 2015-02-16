@@ -18,6 +18,6 @@
 @property (strong, nonatomic) BALocation *currentLocation;
 @property BOOL didReturnFromSegue;
 @property BOOL foundLocations;
-@property int numberOfLocations;
+@property long numberOfLocations;
 
 @end

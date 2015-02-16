@@ -594,7 +594,7 @@
          }
       }
       if (renewalsCounter > 0) {
-         [statusString appendFormat:@"%d von %d Titel(n) verlängert.\n\n", renewalsCounter, [self.sendEntries count]];
+         [statusString appendFormat:@"%d von %lu Titel(n) verlängert.\n\n", renewalsCounter, (unsigned long)[self.sendEntries count]];
       } else {
          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
       }
@@ -634,9 +634,9 @@
          }
       }
       if ([self.appDelegate.configuration usePAIAWrapper]) {
-         [statusString appendFormat:@"%d %@ storniert.\n\n", [self.successfulEntriesWrapper count], requestString];
+         [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[self.successfulEntriesWrapper count], requestString];
       } else {
-         [statusString appendFormat:@"%d %@ storniert.\n\n", [[self.successfulEntries objectForKey:@"doc"] count], requestString];
+         [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString];
       }
    }
    

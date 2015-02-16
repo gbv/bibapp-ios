@@ -29,9 +29,9 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 
 + (id)sharedConnector;
 + (id)generateConnector;
-- (void)searchLocalFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate;
+- (void)searchLocalFor:(NSString *)term WithFirst:(long)first WithDelegate:(id)delegate;
 - (void)searchCountWithDelegate:(id)delegate;
-- (void)searchCentralFor:(NSString *)term WithFirst:(int)first WithDelegate:(id)delegate;
+- (void)searchCentralFor:(NSString *)term WithFirst:(long)first WithDelegate:(id)delegate;
 - (void)getUNAPIDetailsFor:(NSString *)ppn WithFormat:(NSString *)format WithDelegate:(id)delegate;
 - (void)getDetailsForLocal:(NSString *)ppn WithDelegate:(id)delegate;
 - (void)getDetailsFor:(NSString *)ppn WithDelegate:(id)delegate;
