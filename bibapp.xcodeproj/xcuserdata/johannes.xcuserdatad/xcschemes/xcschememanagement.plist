@@ -84,6 +84,11 @@
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
+		<key>BibApp ÄZB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>BibAppUnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -133,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>8F8A76A81781C0D800CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8EB5A41A93689000548F24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
