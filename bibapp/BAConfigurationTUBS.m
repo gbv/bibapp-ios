@@ -33,5 +33,4 @@
    self.currentBibSearchCountURL = @"";
 }
 
-
 @end
