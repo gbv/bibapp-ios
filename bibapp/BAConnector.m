@@ -95,6 +95,7 @@ static BAConnector *sharedConnector = nil;
    [trustedHosts addObject:@"paia-hawk-3.effective-webwork.de"];
    [trustedHosts addObject:@"paia-hawk-2.effective-webwork.de"];
    [trustedHosts addObject:@"paia-hawk-1.effective-webwork.de"];
+   [trustedHosts addObject:@"aezb.api.effective-webwork.de"];
     
    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
        [trustedHosts containsObject:challenge.protectionSpace.host])

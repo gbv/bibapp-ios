@@ -22,6 +22,7 @@
 #import "BAConfigurationSM.h"
 #import "BAConfigurationUFB.h"
 #import "BAConfigurationTUBS.h"
+#import "BAConfigurationAEZB.h"
 
 @implementation BAConfiguration
 
@@ -104,6 +105,8 @@
         currentConfiguration = [[BAConfigurationUFB alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.tubs"]){
        currentConfiguration = [[BAConfigurationTUBS alloc] init];
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.aezb"]){
+       currentConfiguration = [[BAConfigurationAEZB alloc] init];
     }
     [currentConfiguration initConfiguration];
     return currentConfiguration;
