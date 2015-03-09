@@ -86,7 +86,7 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
-    // Add trusted hosts to this array in order to handle authentication challenges
+   // Add trusted hosts to this array in order to handle authentication challenges
    NSMutableArray* trustedHosts = [NSMutableArray array];
 
    [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];

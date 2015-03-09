@@ -321,6 +321,7 @@
                     self.accountTableView.tableHeaderView = header;
                 }
             }
+           [self.refreshControl endRefreshing];
         } else if ([command isEqualToString:@"accountLoadInterloanList"]) {
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
@@ -376,6 +377,7 @@
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
             }
+            [self.refreshControl endRefreshing];
         } else if ([command isEqualToString:@"accountLoadFees"]) {
             [self.feesSum removeAllObjects];
             [self.fees removeAllObjects];
@@ -387,6 +389,7 @@
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
             }
+            [self.refreshControl endRefreshing];
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             self.accountTableView.tableHeaderView = nil;
             BAConnector *accountLoanConnector = [BAConnector generateConnector];

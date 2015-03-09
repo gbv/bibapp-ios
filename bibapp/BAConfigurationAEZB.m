@@ -17,8 +17,8 @@
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-18-64", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-18-64";
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18-64", @"Standard-Katalog", nil]];
-   self.currentBibPAIAURL = @"http://aezb.api.dev";
-   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://aezb.api.dev", @"Standard-Katalog", nil]];
+   self.currentBibPAIAURL = @"https://aezb.api.effective-webwork.de";
+   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://aezb.api.effective-webwork.de", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"";
    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.74 green:0.11 blue:0.23 alpha:1.0];
    self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
@@ -31,7 +31,7 @@
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-18-64";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-18-64", @"Standard-Katalog", nil]];
    self.currentBibSearchCountURL = @"";
-   self.currentBibUsePAIAWrapper = YES;
+   //self.currentBibUsePAIAWrapper = YES;
 }
 
 @end
