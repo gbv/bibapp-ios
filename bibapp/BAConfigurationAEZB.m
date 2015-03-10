@@ -15,8 +15,8 @@
    self.currentBibSearchMaximumRecords = @"20";
    self.currentBibLocalSearchURL = @"opac-de-18-64";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-18-64", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-18-64";
-   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18-64", @"Standard-Katalog", nil]];
+   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-18";
+   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18", @"Standard-Katalog", nil]];
    self.currentBibPAIAURL = @"https://aezb.api.effective-webwork.de";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://aezb.api.effective-webwork.de", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"";
@@ -26,7 +26,7 @@
    [self.currentBibImprint setObject:@"" forKey:@"Vertreter"];
    [self.currentBibImprint setObject:@"" forKey:@"Angaben zum Datenschutz"];
    [self.currentBibImprint setObject:@"" forKey:@"Rechtliche Hinweise zur Haftung"];
-   [self.currentBibImprint setObject:@"Ursprünglicher Entwurf und Konzeption: UB Lüneburg, UB Hildesheim, VZG Göttingen\n\nAnpassung: UB Braunschweig\n\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
+   [self.currentBibImprint setObject:@"Ursprünglicher Entwurf und Konzeption: UB Lüneburg, UB Hildesheim, VZG Göttingen\n\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
    self.currentBibContact = @"";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-18-64";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-18-64", @"Standard-Katalog", nil]];
