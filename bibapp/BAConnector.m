@@ -563,35 +563,35 @@ static BAConnector *sharedConnector = nil;
       
       for (NSString *key in [json objectForKey:uri]) {
          if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/name"]) {
-            [newLocation setName:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setName:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundName = YES;
          }
          if ([key isEqualToString:@"http://dbpedia.org/property/shortName"]) {
-            [newLocation setShortname:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setShortname:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundShortname = YES;
          }
          if ([key isEqualToString:@"http://purl.org/ontology/gbv/address"]) {
-            [newLocation setAddress:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setAddress:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundAddress = YES;
          }
          if ([key isEqualToString:@"http://purl.org/ontology/gbv/openinghours"]) {
-            [newLocation setOpeninghours:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setOpeninghours:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundOpeningHours = YES;
          }
          if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#email"]) {
-            [newLocation setEmail:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setEmail:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundEmail = YES;
          }
          if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#url"]) {
-            [newLocation setUrl:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setUrl:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundUrl = YES;
          }
          if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/phone"]) {
-            [newLocation setPhone:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setPhone:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundPhone = YES;
          }
          if ([key isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#location"]) {
-            NSString *tempKey = [[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0] objectForKey:@"value"];
+            NSString *tempKey = [[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)] objectForKey:@"value"];
             for (NSString *keyGeo in [json objectForKey:tempKey]) {
                if ([keyGeo isEqualToString:@"http://www.w3.org/2003/01/geo/wgs84_pos#long"]) {
                   [newLocation setGeoLong:[[[[json objectForKey:tempKey] objectForKey:keyGeo] objectAtIndex:0]objectForKey:@"value"]];
@@ -604,7 +604,7 @@ static BAConnector *sharedConnector = nil;
             }
          }
          if ([key isEqualToString:@"http://purl.org/dc/elements/1.1/description"]) {
-            [newLocation setDesc:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:0]objectForKey:@"value"]];
+            [newLocation setDesc:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundDesc = YES;
          }
       }
