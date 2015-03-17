@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
     self.currentBibSearchMaximumRecords = @"20";
-    self.currentBibLocalSearchURL = @"DE-564";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-564", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-564";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-564", @"Standard-Katalog", nil]];
-    self.currentBibPAIAURL = @"https://opac.uni-erfurt.de/DE-564/";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-564", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [UIColor colorWithRed:0.000000F green:0.349020F blue:0.619608F alpha:1.0F];

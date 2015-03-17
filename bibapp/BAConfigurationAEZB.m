@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
    self.currentBibSearchMaximumRecords = @"20";
-   self.currentBibLocalSearchURL = @"opac-de-18-64";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-18-64", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-18";
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18", @"Standard-Katalog", nil]];
-   self.currentBibPAIAURL = @"https://aezb.api.effective-webwork.de";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://aezb.api.effective-webwork.de", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"";
    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.74 green:0.11 blue:0.23 alpha:1.0];

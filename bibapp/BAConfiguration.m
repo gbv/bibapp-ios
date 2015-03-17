@@ -28,11 +28,8 @@
 
 @synthesize searchTitle;
 @synthesize currentBibSearchMaximumRecords;
-@synthesize currentBibLocalSearchURL;
 @synthesize currentBibLocalSearchURLs;
-@synthesize currentBibDetailURL;
 @synthesize currentBibDetailURLs;
-@synthesize currentBibPAIAURL;
 @synthesize currentBibPAIAURLs;
 @synthesize currentBibFeedURL;
 @synthesize currentBibFeedURLs;

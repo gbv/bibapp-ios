@@ -13,11 +13,8 @@
 @property (strong, nonatomic) NSString *searchTitle;
 @property BOOL *hasLocalDetailURL;
 @property (strong, nonatomic) NSString *currentBibSearchMaximumRecords;
-@property (strong, nonatomic) NSString *currentBibLocalSearchURL;
 @property (strong, nonatomic) NSMutableArray *currentBibLocalSearchURLs;
-@property (strong, nonatomic) NSString *currentBibDetailURL;
 @property (strong, nonatomic) NSMutableArray *currentBibDetailURLs;
-@property (strong, nonatomic) NSString *currentBibPAIAURL;
 @property (strong, nonatomic) NSMutableArray *currentBibPAIAURLs;
 @property (strong, nonatomic) NSString *currentBibFeedURL;
 @property (strong, nonatomic) NSMutableArray *currentBibFeedURLs;

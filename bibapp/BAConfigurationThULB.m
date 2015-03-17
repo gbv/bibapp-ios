@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
    self.currentBibSearchMaximumRecords = @"20";
-   self.currentBibLocalSearchURL = @"opac-de-27";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-27", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-27";
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-27", @"Standard-Katalog", nil]];
-   self.currentBibPAIAURL = @"https://jenopc5.thulb.uni-jena.de:7242/DE-27";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-27", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.thulb.uni-jena.de";
    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.thulb.uni-jena.de", @"Standard-Katalog", nil]];

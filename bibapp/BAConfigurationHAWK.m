@@ -20,14 +20,12 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden, Management, Soziale Arbeit, Bauen", @"Lokale Suche MSB", @"Lokale Suche MSB", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Ressourcenmanagement", @"Lokale Suche R", @"Lokale Suche R", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Naturwissenschaften", @"Lokale Suche N", @"Lokale Suche N", nil]];
-    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Hil3";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-4", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-3", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-2", @"Göttingen, Ressourcenmanagement", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-1", @"Göttingen, Naturwissenschaften", nil]];
-    self.currentBibPAIAURL = @"http://paia-hawk.effective-webwork.de/"; //@"https://paia.gbv.de/isil/DE-Hil3";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-9.effective-webwork.de/", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-4.effective-webwork.de/", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];

@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
    self.currentBibSearchMaximumRecords = @"20";
-   self.currentBibLocalSearchURL = @"opac-de-j59";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-j59", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/de-j59";
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-j59", @"Standard-Katalog", nil]];
-   self.currentBibPAIAURL = @"https://jenopc5.thulb.uni-jena.de:7242/DE-J59";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-J59", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.fh-jena.de/fhj/bib/_layouts/listfeed.aspx?List=%7B3B9D0D4E%2D3239%2D4D61%2D8548%2D5868B08954AA%7D&Source=http%3A%2F%2Fwww%2Efh%2Djena%2Ede%2Ffhj%2Fbib%2FLists%2FAnkuendigungen%2FAllItems%2Easpx";
    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.0 green:0.89 blue:0.85 alpha:1];

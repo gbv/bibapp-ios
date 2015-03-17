@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
     self.currentBibSearchMaximumRecords = @"20";
-    self.currentBibLocalSearchURL = @"DE-Wim8";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-wim8", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Wim8";
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Wim8", @"Standard-Katalog", nil]];
-    self.currentBibPAIAURL = @"https://paia.gbv.de/DE-Wim8/";
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Wim8", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [UIColor colorWithRed:0.200000F green:0.403922F blue:0.701961F alpha:1.0F];

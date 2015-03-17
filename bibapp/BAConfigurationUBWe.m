@@ -13,11 +13,8 @@
 - (void)initConfiguration
 {
    self.currentBibSearchMaximumRecords = @"20";
-   self.currentBibLocalSearchURL = @"DE-Wim2";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-wim2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   self.currentBibDetailURL = @"http://daia.gbv.de/isil/DE-Wim2";
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Wim2", @"Standard-Katalog", nil]];
-   self.currentBibPAIAURL = @"https://paia.gbv.de/DE-Wim2/";
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Wim2", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.uni-weimar.de/de/universitaet/aktuell/pinnwaende/rss/bereich/bibliothek/";
    self.currentBibTintColor = [[UIColor alloc] initWithRed:0.77 green:0.18 blue:0.36 alpha:1.0];
