@@ -43,6 +43,7 @@
 @synthesize currentBibStandardCatalogue;
 @synthesize currentBibHideDepartment;
 @synthesize currentBibFeedURLIsWebsite;
+@synthesize currentBibRequestTitle;
 
 - (id)init {
     self = [super init];
@@ -63,6 +64,8 @@
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
         self.currentBibUsePAIAWrapper = NO;
+       
+        self.currentBibRequestTitle = @"Vormerken";
     }
     return self;
 }

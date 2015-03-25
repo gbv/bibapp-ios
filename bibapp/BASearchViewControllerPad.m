@@ -1549,7 +1549,7 @@
         } else {
             if (!presentation.available) {
                 if (loan.href != nil) {
-                    [orderString appendString:@"Vormerken"];
+                    [orderString appendString:self.appDelegate.configuration.currentBibRequestTitle];
                 }
             }
         }
@@ -1610,7 +1610,7 @@
 
     NSInteger itemIndex = actionSheet.tag;
     if (buttonIndex == 0) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Vormerken"]) {
+        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
             if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                 [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];

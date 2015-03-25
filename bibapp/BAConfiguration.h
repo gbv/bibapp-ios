@@ -29,6 +29,7 @@
 @property BOOL *currentBibHideDepartment;
 @property BOOL *currentBibFeedURLIsWebsite;
 @property BOOL *currentBibUsePAIAWrapper;
+@property (strong, nonatomic) NSString *currentBibRequestTitle;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

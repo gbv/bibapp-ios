@@ -28,6 +28,7 @@
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-18-64";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-18-64", @"Standard-Katalog", nil]];
    self.currentBibSearchCountURL = @"";
+   self.currentBibRequestTitle = @"kostenpflichtig (0,80€) vormerken";
 }
 
 @end
