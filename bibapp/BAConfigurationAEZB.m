@@ -14,7 +14,7 @@
 {
    self.currentBibSearchMaximumRecords = @"20";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-18-64", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18", @"Standard-Katalog", nil]];
+   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-18-64", @"Standard-Katalog", nil]];
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://aezb.api.effective-webwork.de", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.uke.de/aerztliche-zentralbibliothek";
    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.uke.de/aerztliche-zentralbibliothek", @"Standard-Katalog", nil]];
