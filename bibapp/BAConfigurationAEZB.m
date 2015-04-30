@@ -25,7 +25,7 @@
    [self.currentBibImprint setObject:@"" forKey:@"Angaben zum Datenschutz"];
    [self.currentBibImprint setObject:@"" forKey:@"Rechtliche Hinweise zur Haftung"];
    [self.currentBibImprint setObject:@"Ursprünglicher Entwurf und Konzeption: UB Lüneburg, UB Hildesheim, VZG Göttingen\n\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
-   self.currentBibContact = @"Ärztliche Zentralbibliothek\n\nTäglich geöffnet von 08.00-22.00 Uhr\nService Mo.-Fr. von 09.00-17.00 Uhr";
+   self.currentBibContact = @"Ärztliche Zentralbibliothek\n\nLeihstelle: 040/7410-59552\nAuskunft: 040/7410-53012\n\nE-Mail: aezb@aezb.uke.de\n\nTäglich geöffnet von 08.00-22.00 Uhr\nService Mo.-Fr. von 09.00 - 17.00 Uhr";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-18-64";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-18-64", @"Standard-Katalog", nil]];
    self.currentBibSearchCountURL = @"";
