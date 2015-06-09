@@ -1442,9 +1442,50 @@
             [self setCover:image];
             self.foundCover = YES;
         } else {
-            [self.coverView setUserInteractionEnabled:NO];
-            [self setCover:nil];
-            self.foundCover = NO;
+           NSString *urlStringGoogle;
+           if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+              urlStringGoogle = [[NSString alloc] initWithFormat:@"http://books.google.com/books?jscmd=viewapi&bibkeys=ISBN:%@", [self.currentEntryLocal isbn]];
+           } else {
+              urlStringGoogle = [[NSString alloc] initWithFormat:@"http://books.google.com/books?jscmd=viewapi&bibkeys=ISBN:%@", [self.currentEntry isbn]];
+           }
+           NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlStringGoogle]];
+           
+           NSLog(@"%@", url);
+           
+           UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+           
+           NSError* error;
+           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:kNilOptions error:&error];
+           
+           NSLog(@"%@", json);
+           
+           if (image.size.height > 1 && image.size.width > 1) {
+              [self.coverView setContentMode:UIViewContentModeScaleAspectFit];
+              [self.coverView setImage:image];
+              [self.coverView setUserInteractionEnabled:YES];
+              [self setCover:image];
+              self.foundCover = YES;
+           } else {
+              NSString *urlStringOpenLibrary;
+              if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                 urlStringOpenLibrary = [[NSString alloc] initWithFormat:@"http://covers.openlibrary.org/b/isbn/%@-S.jpg", [self.currentEntryLocal ppn]];
+              } else {
+                 urlStringOpenLibrary = [[NSString alloc] initWithFormat:@"http://covers.openlibrary.org/b/isbn/%@-S.jpg", [self.currentEntry ppn]];
+              }
+              NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlStringOpenLibrary]];
+              UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+              if (image.size.height > 1 && image.size.width > 1) {
+                 [self.coverView setContentMode:UIViewContentModeScaleAspectFit];
+                 [self.coverView setImage:image];
+                 [self.coverView setUserInteractionEnabled:YES];
+                 [self setCover:image];
+                 self.foundCover = YES;
+              } else {
+                 [self.coverView setUserInteractionEnabled:NO];
+                 [self setCover:nil];
+                 self.foundCover = NO;
+              }
+           }
         }
     }
     [self.coverActivityIndicator stopAnimating];
