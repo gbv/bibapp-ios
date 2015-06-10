@@ -1448,17 +1448,29 @@
            } else {
               urlStringGoogle = [[NSString alloc] initWithFormat:@"http://books.google.com/books?jscmd=viewapi&bibkeys=ISBN:%@", [self.currentEntry isbn]];
            }
-           NSURL *url = [NSURL URLWithString: [[NSString alloc] initWithString:urlStringGoogle]];
+           NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithString:urlStringGoogle]];
            
-           NSLog(@"%@", url);
-           
-           UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
-           
-           NSError* error;
-           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:url] options:kNilOptions error:&error];
-           
-           NSLog(@"%@", json);
-           
+           NSString *googleResponse = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:url] encoding:NSStringEncodingConversionAllowLossy];
+           googleResponse = [googleResponse stringByReplacingOccurrencesOfString:@"var _GBSBookInfo = " withString:@""];
+           googleResponse = [googleResponse stringByReplacingOccurrencesOfString:@";" withString:@""];
+           NSData *googleData = [googleResponse dataUsingEncoding:NSUTF8StringEncoding];
+           NSDictionary *googleJson = [NSJSONSerialization JSONObjectWithData:googleData options:kNilOptions error:nil];
+           NSString *isbKey;
+           NSArray *isbnKeys = [googleJson allKeys];
+           if ([isbnKeys count] > 0) {
+              isbKey = [isbnKeys objectAtIndex:0];
+           }
+           UIImage *image;
+           if (![isbKey isEqualToString:@""]) {
+              NSDictionary *googleJsonData = [googleJson objectForKey:isbKey];
+              NSString *thumbnailUrlString = [googleJsonData objectForKey:@"thumbnail_url"];
+              if (thumbnailUrlString != nil) {
+                 if (![thumbnailUrlString isEqualToString:@""]) {
+                    NSURL *thumbnailUrl = [NSURL URLWithString:[[NSString alloc] initWithString:thumbnailUrlString]];
+                    image = [UIImage imageWithData: [NSData dataWithContentsOfURL:thumbnailUrl]];
+                 }
+              }
+           }
            if (image.size.height > 1 && image.size.width > 1) {
               [self.coverView setContentMode:UIViewContentModeScaleAspectFit];
               [self.coverView setImage:image];
