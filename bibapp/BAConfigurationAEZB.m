@@ -31,6 +31,7 @@
    self.currentBibSearchCountURL = @"";
    self.currentBibRequestTitle = @"kostenpflichtig (0,80€) vormerken";
    self.currentBibFeedURLIsWebsite = YES;
+   self.currentBibHideDepartment = YES;
 }
 
 @end
