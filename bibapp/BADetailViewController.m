@@ -644,6 +644,7 @@
             [tempEntry setMatstring:[self.currentEntry matstring]];
             [tempEntry setMatcode:[self.currentEntry matcode]];
             [tempEntry setLocal:[self.currentEntry local]];
+            [tempEntry setYear:[self.currentEntry year]];
             [self setCurrentEntry:tempEntry];
         }
         
