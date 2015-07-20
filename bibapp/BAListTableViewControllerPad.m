@@ -965,6 +965,33 @@
    [self performSelector: @selector(showToc) withObject: nil afterDelay: 0];
 }
 
+- (IBAction)actionAction:(id)sender {
+   NSMutableString *messageBody = [[NSMutableString alloc] init];
+   BAConnector *isbdConnector = [BAConnector generateConnector];
+   int counter = 1;
+   for (BAEntry *tempEntry in self.dummyBooksMerkliste) {
+      if (counter > 1) {
+         [messageBody appendFormat:@"\n\n"];
+      }
+      [messageBody appendFormat:@"%d) %@", counter, [isbdConnector loadISBDWithPPN:tempEntry.ppn]];
+      counter++;
+   }
+   if ([MFMailComposeViewController canSendMail]) {
+      MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
+      [composeViewController setMailComposeDelegate:self];
+      [composeViewController setToRecipients:@[@""]];
+      [composeViewController setSubject:@"BibApp Merkliste"];
+      [composeViewController setMessageBody:messageBody isHTML:NO];
+      [self presentViewController:composeViewController animated:YES completion:NULL];
+   }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+   //Add an alert in case of failure
+   [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)showToc{
    [self performSegueWithIdentifier:@"tocSegue" sender:self];
 }

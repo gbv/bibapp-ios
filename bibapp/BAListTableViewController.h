@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "BAAppDelegate.h"
 #import "BAEntryWork.h"
 #import "BADetailScrollViewDelegate.h"
 
-@interface BAListTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, BADetailScrollViewDelegate>
+@interface BAListTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate, BADetailScrollViewDelegate>
 
 @property(strong, nonatomic) BAAppDelegate *appDelegate;
 @property (strong, nonatomic) NSMutableArray *dummyBooksMerkliste;
@@ -20,7 +21,9 @@
 @property (strong, nonatomic) IBOutlet UITableView *listTableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *trashIcon;
 @property BOOL didReturnFromDetail;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionIcon;
 
 - (IBAction)trashAction:(id)sender;
+- (IBAction)actionAction:(id)sender;
 
 @end

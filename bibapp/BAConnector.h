@@ -55,5 +55,6 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 - (BOOL)checkScope:(NSString *)scope;
 - (void)displayError;
 - (BOOL)checkNetworkReachability;
+- (NSString *)loadISBDWithPPN:(NSString *)ppn;
 
 @end

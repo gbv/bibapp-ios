@@ -707,4 +707,11 @@ static BAConnector *sharedConnector = nil;
    return isNetworkReachable;
 }
 
+- (NSString *)loadISBDWithPPN:(NSString *)ppn
+{
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=isbd", ppn]];
+   NSData *isbdData = [NSData dataWithContentsOfURL:url];
+   return [[NSString alloc] initWithData:isbdData encoding:NSUTF8StringEncoding];
+}
+
 @end

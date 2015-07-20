@@ -849,6 +849,11 @@
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Merkliste" id="9VR-vk-r3D">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="NEd-wI-w6b">
+                                            <connections>
+                                                <action selector="actionAction:" destination="F8u-o1-2ap" id="n1g-YW-ILL"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="YKa-F5-8W7">
                                             <connections>
                                                 <action selector="trashAction:" destination="F8u-o1-2ap" id="YuJ-Ro-7hx"/>
@@ -1018,6 +1023,7 @@
                     <tabBarItem key="tabBarItem" title="Merkliste" image="menuIconList.png" id="uC2-t0-bto"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="actionIcon" destination="NEd-wI-w6b" id="jpI-22-75Z"/>
                         <outlet property="coverView" destination="JdZ-re-PGz" id="5Oe-3F-Rie"/>
                         <outlet property="detailNavigationBar" destination="oJY-rn-bnb" id="VEV-eH-sp5"/>
                         <outlet property="detailTableView" destination="eeV-2d-fgH" id="jAF-dh-gCI"/>
@@ -1304,9 +1310,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Mij-Xb-KOy"/>
-        <segue reference="Sjv-hh-bWp"/>
-        <segue reference="IQa-mr-9vz"/>
-        <segue reference="Uv5-wX-sJh"/>
+        <segue reference="WjN-WC-96R"/>
+        <segue reference="nvZ-Ec-xVW"/>
+        <segue reference="f6G-SO-Bgw"/>
+        <segue reference="0y8-4D-qGn"/>
     </inferredMetricsTieBreakers>
 </document>

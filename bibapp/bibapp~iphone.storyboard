@@ -254,6 +254,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Merkliste" id="JCv-NW-rJS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="lqi-af-Qtl">
+                            <connections>
+                                <action selector="actionAction:" destination="vZ2-Al-R4S" id="tWu-aL-Ym7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="luR-Jz-M50">
                             <connections>
                                 <action selector="trashAction:" destination="vZ2-Al-R4S" id="g6M-KA-TFc"/>
@@ -261,6 +266,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionIcon" destination="lqi-af-Qtl" id="tkX-f9-YrI"/>
                         <outlet property="listTableView" destination="VKH-Yv-WQX" id="Esv-eM-6mh"/>
                         <outlet property="trashIcon" destination="luR-Jz-M50" id="8Lr-vV-Rot"/>
                         <segue destination="rmh-MV-fVc" kind="push" identifier="ItemDetailSegue" id="NMk-sz-0Om"/>

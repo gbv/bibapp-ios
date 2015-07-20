@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "BAAppDelegate.h"
 #import "BAEntryWork.h"
 #import "BADocument.h"
@@ -14,7 +15,7 @@
 #import "BALocation.h"
 #import "BATocTableViewControllerPad.h"
 
-@interface BAListTableViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UIPopoverControllerDelegate, BAConnectorDelegate>
+@interface BAListTableViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UIPopoverControllerDelegate, MFMailComposeViewControllerDelegate, BAConnectorDelegate>
 
 @property(strong, nonatomic) BAAppDelegate *appDelegate;
 @property (strong, nonatomic) NSArray *dummyBooksMerkliste;
@@ -48,8 +49,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *loanTitleButton;
 @property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionIcon;
 
 - (IBAction)trashAction:(id)sender;
 - (void) displayToc;
+- (IBAction)actionAction:(id)sender;
 
 @end

@@ -304,6 +304,22 @@
 		8F4482AC1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */; };
 		8F4482AD1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */; };
 		8F4482AE1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */; };
+		8F4482B01B5D1BAA00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B11B5D1BB700EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B21B5D1BBF00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B31B5D1BC700EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B41B5D1BCE00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B51B5D1BD500EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B61B5D1BDD00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B71B5D1BE400EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B81B5D1BEC00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482B91B5D1BF300EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BA1B5D1BFB00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BB1B5D1C0400EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BC1B5D1C0D00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BD1B5D1C1500EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BE1B5D1C1E00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4482BF1B5D1C2500EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
 		8F4FC4CF1670C97300CFA4C5 /* BATocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */; };
 		8F4FC4D21670CD4F00CFA4C5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */; };
 		8F5319271951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
@@ -2699,6 +2715,7 @@
 		8F4482781B5D080F00EE6DA9 /* bibapp 2.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "bibapp 2.1.xcdatamodel"; sourceTree = "<group>"; };
 		8F44829D1B5D0B5B00EE6DA9 /* BAEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAEntry.h; sourceTree = "<group>"; };
 		8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAEntry.m; sourceTree = "<group>"; };
+		8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8F4FC4CD1670C97300CFA4C5 /* BATocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewController.h; sourceTree = "<group>"; };
 		8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewController.m; sourceTree = "<group>"; };
 		8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -2939,6 +2956,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B11B5D1BB700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42F192C86D400A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2416CA663A007382EE /* libxml2.dylib in Frameworks */,
 				8F0DD15116BAA59B005DEB43 /* CoreLocation.framework in Frameworks */,
@@ -2956,6 +2974,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B71B5D1BE400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */,
 				8F1D8392192A2E7000A9898D /* CoreLocation.framework in Frameworks */,
@@ -2973,6 +2992,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B21B5D1BBF00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF430192C86F200A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A75C31781BF4700CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A75C41781BF4700CCF7DB /* CoreLocation.framework in Frameworks */,
@@ -2990,6 +3010,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B31B5D1BC700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF431192C86F800A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76581781C05400CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A76591781C05400CCF7DB /* CoreLocation.framework in Frameworks */,
@@ -3007,6 +3028,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B41B5D1BCE00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF432192C86FE00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76ED1781C0D800CCF7DB /* libxml2.dylib in Frameworks */,
 				8F8A76EE1781C0D800CCF7DB /* CoreLocation.framework in Frameworks */,
@@ -3024,6 +3046,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BF1B5D1C2500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8F8EB5FB1A93689000548F24 /* SystemConfiguration.framework in Frameworks */,
 				8F8EB5FC1A93689000548F24 /* libxml2.dylib in Frameworks */,
 				8F8EB5FD1A93689000548F24 /* CoreLocation.framework in Frameworks */,
@@ -3041,6 +3064,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B81B5D1BEC00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F53D19501E6B006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F53E19501E6B006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F53F19501E6B006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3058,6 +3082,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B91B5D1BF300EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F5DF19502224006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F5E019502224006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F5E119502224006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3075,6 +3100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BA1B5D1BFB00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F6811950228D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F6821950228D006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F6831950228D006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3092,6 +3118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BB1B5D1C0400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F723195022BC006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F724195022BC006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F725195022BC006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3109,6 +3136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BC1B5D1C0D00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F7C51950230D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F7C61950230D006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F7C71950230D006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3126,6 +3154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BD1B5D1C1500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F8671950233A006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F8681950233A006CD05A /* libxml2.dylib in Frameworks */,
 				8FA8F8691950233A006CD05A /* CoreLocation.framework in Frameworks */,
@@ -3143,6 +3172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482BE1B5D1C1E00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FAD97BF1A0CFD3600C3A5D1 /* SystemConfiguration.framework in Frameworks */,
 				8FAD97C01A0CFD3600C3A5D1 /* libxml2.dylib in Frameworks */,
 				8FAD97C11A0CFD3600C3A5D1 /* CoreLocation.framework in Frameworks */,
@@ -3160,6 +3190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B51B5D1BD500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD610BD190916EA009E2358 /* libxml2.dylib in Frameworks */,
 				8FD610BE190916EA009E2358 /* CoreLocation.framework in Frameworks */,
@@ -3177,6 +3208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B61B5D1BDD00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD61159190916EF009E2358 /* libxml2.dylib in Frameworks */,
 				8FD6115A190916EF009E2358 /* CoreLocation.framework in Frameworks */,
@@ -3194,6 +3226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4482B01B5D1BAA00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42E192C813100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2316CA6631007382EE /* libxml2.dylib in Frameworks */,
 				8F0DD15016BAA591005DEB43 /* CoreLocation.framework in Frameworks */,
@@ -3586,6 +3619,7 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */,
 				8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */,
 				8F0DD14F16BAA590005DEB43 /* CoreLocation.framework */,
 				8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */,
