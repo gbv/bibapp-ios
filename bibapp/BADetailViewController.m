@@ -728,7 +728,7 @@
                     top = 120;
                 }
                 [cell.tocInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.toc setFrame: CGRectMake(36,top+1,122,18)];
+                [cell.toc setFrame: CGRectMake(36,top+1,113,18)];
                 [cell.tocInfo setHidden:NO];
                 [cell.toc setHidden:NO];
                 top += 20;
@@ -748,7 +748,7 @@
                     top = 120;
                 }
                 [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.loan setFrame: CGRectMake(36,top+1,122,18)];
+                [cell.loan setFrame: CGRectMake(36,top+1,113,18)];
                 [cell.loanInfo setHidden:NO];
                 [cell.loan setHidden:NO];
                 top += 20;
