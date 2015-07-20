@@ -473,7 +473,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 - (void)viewDidUnload

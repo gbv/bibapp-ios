@@ -105,7 +105,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {

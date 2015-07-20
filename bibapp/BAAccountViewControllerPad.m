@@ -956,7 +956,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle{
