@@ -167,6 +167,7 @@
         [cell.subtitleLabel setText:entry.subtitle];
         [cell.image setImage:[UIImage imageNamed:entry.matcode]];
         [cell.authorLabel setText:entry.author];
+        [cell.yearLabel setText:entry.year];
         return cell;
     } else if (tableView.tag == 1) {
         if(self.currentEntry.local){

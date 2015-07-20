@@ -2,20 +2,22 @@
 //  BAEntry.m
 //  bibapp
 //
-//  Created by Johannes Schultze on 01.12.12.
-//  Copyright (c) 2012 Johannes Schultze. All rights reserved.
+//  Created by Johannes Schultze on 20.07.15.
+//  Copyright (c) 2015 Johannes Schultze. All rights reserved.
 //
 
 #import "BAEntry.h"
 
+
 @implementation BAEntry
 
-@dynamic ppn;
-@dynamic title;
-@dynamic subtitle;
-@dynamic matstring;
-@dynamic matcode;
-@dynamic local;
 @dynamic author;
+@dynamic local;
+@dynamic matcode;
+@dynamic matstring;
+@dynamic ppn;
+@dynamic subtitle;
+@dynamic title;
+@dynamic year;
 
 @end

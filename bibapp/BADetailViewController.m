@@ -1073,6 +1073,7 @@
                 [newEntry setMatcode:self.currentEntry.matcode];
                 [newEntry setLocal:self.currentEntry.local];
                 [newEntry setAuthor:self.currentEntry.author];
+                [newEntry setYear:self.currentEntry.year];
                 NSError *error = nil;
                 if (![[self.appDelegate managedObjectContext] save:&error]) {
                     // Handle the error.

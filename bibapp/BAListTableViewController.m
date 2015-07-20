@@ -95,10 +95,11 @@
     // Configure the cell...
     BAEntry *entry;
     entry = [self.dummyBooksMerkliste objectAtIndex:indexPath.row];
-	[cell.titleLabel setText:entry.title];
+	 [cell.titleLabel setText:entry.title];
     [cell.subtitleLabel setText:entry.subtitle];
     [cell.image setImage:[UIImage imageNamed:entry.matcode]];
     [cell.authorLabel setText:entry.author];
+    [cell.yearLabel setText:entry.year];
     return cell;
 }
 

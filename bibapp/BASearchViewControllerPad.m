@@ -1734,6 +1734,7 @@
             [newEntry setMatcode:self.currentEntryLocal.matcode];
             [newEntry setLocal:self.currentEntryLocal.local];
             [newEntry setAuthor:self.currentEntryLocal.author];
+            [newEntry setYear:self.currentEntryLocal.year];
         } else {
             [newEntry setTitle:self.currentEntry.title];
             [newEntry setSubtitle:self.currentEntry.subtitle];
@@ -1742,6 +1743,7 @@
             [newEntry setMatcode:self.currentEntry.matcode];
             [newEntry setLocal:self.currentEntry.local];
             [newEntry setAuthor:self.currentEntry.author];
+            [newEntry setYear:self.currentEntry.year];
         }
         
         NSError *error = nil;
