@@ -68,6 +68,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%ld / %ld)", self.scrollPosition+1, self.maximumPosition]];
     [self loadScrollViewWithPage:self.startPosition];
     [self loadScrollViewWithPage:self.startPosition-1];
@@ -76,6 +77,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     for (int i = 1; i < 2; i++) {
         [self loadScrollViewWithPage:self.scrollPosition + i];
         [self loadScrollViewWithPage:self.scrollPosition - i];
@@ -92,7 +94,7 @@
 {
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     if (pageControlUsed)
     {
         return;
@@ -115,7 +117,7 @@
     pageControlUsed = NO;
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %d)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     for (int i = 1; i < 5; i++) {
@@ -181,6 +183,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     [self.scrollViewDelegate updatePosition:self.scrollPosition];
 }
 

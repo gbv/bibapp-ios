@@ -44,6 +44,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     if (!self.didReturnFromSegue) {
         [self.locationList removeAllObjects];
         [self.tableView reloadData];

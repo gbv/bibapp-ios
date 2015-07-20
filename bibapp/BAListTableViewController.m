@@ -50,6 +50,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self loadEntries];
     [self.listTableView reloadData];
     if ([self.dummyBooksMerkliste count] > 0 && self.didReturnFromDetail) {

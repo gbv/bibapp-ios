@@ -161,7 +161,7 @@ static BAConnector *sharedConnector = nil;
       term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
       term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
       term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
       
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];

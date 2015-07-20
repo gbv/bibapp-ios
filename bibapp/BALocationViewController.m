@@ -121,6 +121,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = [self.currentLocation.geoLat floatValue];
     zoomLocation.longitude = [self.currentLocation.geoLong floatValue];

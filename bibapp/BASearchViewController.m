@@ -84,6 +84,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self.searchTableView reloadData];
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         if (self.searchedLocal) {

@@ -51,6 +51,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
 }
 
