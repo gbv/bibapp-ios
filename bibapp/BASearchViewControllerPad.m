@@ -260,6 +260,7 @@
         [tempCell.subtitleLabel setText:entry.subtitle];
         [tempCell.image setImage:[entry mediaIcon]];
         [tempCell.authorLabel setText:entry.author];
+        [tempCell.yearLabel setText:entry.year];
         cell = tempCell;
     } else if (tableView.tag == 1) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
@@ -660,6 +661,10 @@
                 GDataXMLElement *issuance = (GDataXMLElement *)[[originInfo elementsForName:@"issuance"] objectAtIndex:0];
                 if (issuance != nil) {
                     [tempEntry setMediaIconOriginInfoIssuance:[issuance stringValue]];
+                }
+                GDataXMLElement *dateIssued = (GDataXMLElement *)[[originInfo elementsForName:@"dateIssued"] objectAtIndex:0];
+                if (dateIssued != nil) {
+                   [tempEntry setYear:[dateIssued stringValue]];
                 }
             }
             
@@ -1248,7 +1253,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 0) {
-        return 63.0;
+        return 73.0;
     } else {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             return 87;

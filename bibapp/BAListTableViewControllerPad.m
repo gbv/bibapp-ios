@@ -944,7 +944,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 0) {
-        return 63.0;
+        return 73.0;
     } else {
         if (self.currentEntry.local) {
             return 87;

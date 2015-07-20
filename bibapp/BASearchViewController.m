@@ -140,10 +140,11 @@
             }
         }
     }
-	[cell.titleLabel setText:entry.title];
+	 [cell.titleLabel setText:entry.title];
     [cell.subtitleLabel setText:entry.subtitle];
     [cell.image setImage:[entry mediaIcon]];
     [cell.authorLabel setText:entry.author];
+    [cell.yearLabel setText:entry.year];
     return cell;
 }
 
@@ -390,6 +391,10 @@
             if (issuance != nil) {
                 [tempEntry setMediaIconOriginInfoIssuance:[issuance stringValue]];
             }
+            GDataXMLElement *dateIssued = (GDataXMLElement *)[[originInfo elementsForName:@"dateIssued"] objectAtIndex:0];
+            if (dateIssued != nil) {
+               [tempEntry setYear:[dateIssued stringValue]];
+            }
         }
         
         // Get link for online location
@@ -477,7 +482,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 63.0;
+    return 73.0;
 }
 
 - (void)continueSearch

@@ -43,6 +43,7 @@
 @property (strong, nonatomic) NSString *partName;
 @property (strong, nonatomic) NSString *partNumber;
 @property (strong, nonatomic) NSString *isbn;
+@property (strong, nonatomic) NSString *year;
 
 - (UIImage *)mediaIcon;
 - (NSString *)statusDisplay;

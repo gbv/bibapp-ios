@@ -42,6 +42,7 @@
 @synthesize mediaIconOriginInfoIssuance;
 @synthesize partName;
 @synthesize partNumber;
+@synthesize year;
 
 - (UIImage *)mediaIcon
 {
