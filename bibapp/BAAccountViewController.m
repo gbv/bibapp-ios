@@ -35,7 +35,6 @@
 @synthesize currentPassword;
 @synthesize currentToken;
 @synthesize currentScope;
-//@synthesize loggedIn;
 @synthesize accountTableView;
 @synthesize accountSegmentedController;
 @synthesize refreshControl;
@@ -66,8 +65,6 @@
     
     [self.accountSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.accountSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    
-    //[self setLoggedIn:NO];
    
     [self setRefreshControl:[[UIRefreshControl alloc] init]];
     [self.refreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];

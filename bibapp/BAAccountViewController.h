@@ -27,7 +27,6 @@
 @property (strong, nonatomic) NSString *currentToken;
 @property (strong, nonatomic) NSArray *currentScope;
 @property BOOL isLoggingIn;
-//@property BOOL loggedIn;
 @property (strong, nonatomic) IBOutlet UITableView *accountTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *accountSegmentedController;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
