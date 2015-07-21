@@ -139,11 +139,11 @@
     if (page < self.maximumPosition) {
         if (page >= [self.bookList count]) {
             if (page == [self.bookList count]) {
-                int newCount = [self.bookList count] + [self.appDelegate.configuration.currentBibSearchMaximumRecords integerValue];
+                long newCount = [self.bookList count] + [self.appDelegate.configuration.currentBibSearchMaximumRecords integerValue];
                 if (newCount > self.maximumPosition) {
                     newCount = self.maximumPosition;
                 }
-                for (unsigned i = page; i < (newCount); i++)
+                for (long i = page; i < (newCount); i++)
                 {
                     [self.views addObject:[NSNull null]];
                 }

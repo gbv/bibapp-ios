@@ -222,7 +222,7 @@
     // no need to implement
 }
 
-- (void)updatePosition:(int)updatePosition
+- (void)updatePosition:(long)updatePosition
 {
     [self setPosition:updatePosition];
 }

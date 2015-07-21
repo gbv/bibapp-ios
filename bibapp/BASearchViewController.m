@@ -578,7 +578,7 @@
     }
 }
 
-- (void)updatePosition:(int)updatePosition
+- (void)updatePosition:(long)updatePosition
 {
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self setPositionLocal:updatePosition];

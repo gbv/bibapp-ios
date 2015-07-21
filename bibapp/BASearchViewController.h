@@ -36,6 +36,6 @@
 
 - (void) continueSearchFor:(NSString *)catalog;
 - (void) continueSearch;
-- (void) updatePosition:(int)updatePosition;
+- (void) updatePosition:(long)updatePosition;
 
 @end
