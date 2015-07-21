@@ -19,6 +19,7 @@
 #import "BACoverViewControllerPad.h"
 #import "BAEntry.h"
 #import "BATocViewControllerPad.h"
+#import "BANoSearchResultsCell.h"
 
 #import "GDataXMLNode.h"
 
@@ -56,6 +57,8 @@
 @synthesize initialSearchLocal;
 @synthesize initialSearch;
 @synthesize statusBarTintUIView;
+@synthesize lastSearchNoResultsLocal;
+@synthesize lastSearchNoResults;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -156,9 +159,21 @@
     // Return the number of rows in the section.
     if (tableView.tag == 0) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            return [self.booksLocal count];
+           if ([self.booksLocal count] > 0) {
+              return [self.booksLocal count];
+           } else if (self.searchedLocal) {
+              return 1;
+           } else {
+              return 0;
+           }
         } else {
-            return [self.booksGVK count];
+           if ([self.booksGVK count] > 0) {
+              return [self.booksGVK count];
+           } else if (self.searched) {
+              return 1;
+           } else {
+              return 0;
+           }
         }
     } else if (tableView.tag == 1) {
         return [self.currentDocument.items count];
@@ -226,6 +241,30 @@
 {
     UITableViewCell *cell;
     if (tableView.tag == 0) {
+        if ([self.searchSegmentedController selectedSegmentIndex] == 0 && [self.booksLocal count] == 0 && self.searchedLocal) {
+           self.lastSearchNoResultsLocal = YES;
+           BANoSearchResultsCell *cell = (BANoSearchResultsCell *) [tableView dequeueReusableCellWithIdentifier:@"BANoSearchResultsCell"];
+           if (cell == nil) {
+              NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
+              cell = [nib objectAtIndex:0];
+           }
+           [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearchLocal]];
+           [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
+           return cell;
+        }
+       
+        if ([self.searchSegmentedController selectedSegmentIndex] == 1 && [self.booksGVK count] == 0 && self.searched) {
+           self.lastSearchNoResults = YES;
+           BANoSearchResultsCell *cell = (BANoSearchResultsCell *) [tableView dequeueReusableCellWithIdentifier:@"BANoSearchResultsCell"];
+           if (cell == nil) {
+              NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
+              cell = [nib objectAtIndex:0];
+           }
+           [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearch]];
+           [cell.searchGBVButton setHidden:YES];
+           return cell;
+        }
+       
         BAItemCell *tempCell = (BAItemCell *) [tableView dequeueReusableCellWithIdentifier:@"BAItemCell"];
         if (tempCell == nil) {
            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAItemCell" owner:self options:nil];
@@ -1255,7 +1294,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 0) {
-        return 73.0;
+       if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+          if ([self.booksLocal count] > 0) {
+             return 73.0;
+          } else if (self.searchedLocal) {
+             return 600.0;
+          } else {
+             return 73.0;
+          }
+       } else {
+          if ([self.booksGVK count] > 0) {
+             return 73.0;
+          } else if (self.searched) {
+             return 600.0;
+          } else {
+             return 73.0;
+          }
+       }
     } else {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
             return 87;
@@ -1795,6 +1850,14 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    [self commandIsNotInScope:command];
+}
+
+- (void)searchGBV {
+   self.lastSearch = self.lastSearchLocal;
+   self.searched = NO;
+   [self.searchSegmentedController setSelectedSegmentIndex:1];
+   [self segmentAction:nil];
+   [self searchBarSearchButtonClicked:nil];
 }
 
 @end

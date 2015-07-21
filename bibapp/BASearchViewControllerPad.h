@@ -41,6 +41,8 @@
 @property (strong, nonatomic) NSString *lastSearch;
 @property BOOL searchedLocal;
 @property BOOL searched;
+@property BOOL lastSearchNoResultsLocal;
+@property BOOL lastSearchNoResults;
 @property NSInteger searchCountLocal;
 @property NSInteger searchCount;
 @property (strong, nonatomic) UITextView *defaultTextView;
