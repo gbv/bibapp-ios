@@ -405,12 +405,6 @@
                             }
                         }
                     }
-                } else {
-                   if (loan.href == nil) {
-                      [statusInfo appendString:@"Bitte am Standort entnehmen"];
-                   } else {
-                      [statusInfo appendString:@"Bitte bestellen"];
-                   }
                 }
             }
             [cell.status setText:status];
