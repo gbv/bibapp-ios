@@ -430,30 +430,30 @@
        if (!self.appDelegate.isLoggedIn) {
               [self loginActionWithMessage:@""];
        } else {
-           [self.accountTableView setEditing:NO animated:NO];
-           [self.accountTableView reloadData];
-       }
-       if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-           [self.actionButton setEnabled:YES];
-           [self.refreshControl beginRefreshing];
-           [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-           BAConnector *accountLoanConnector = [BAConnector generateConnector];
-           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-       } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
-           [self.refreshControl beginRefreshing];
-           [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-           BAConnector *accountLoanConnector = [BAConnector generateConnector];
-           [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-           [self.actionButton setEnabled:YES];
-       } else if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
-           self.accountTableView.tableHeaderView = nil;
-           BAConnector *accountFeesConnector = [BAConnector generateConnector];
-           [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-           [self.actionButton setEnabled:NO];
-       } else if ([self.accountSegmentedController selectedSegmentIndex] == 3) {
-           [self.actionButton setEnabled:NO];
-       } else {
-           [self.actionButton setEnabled:NO];
+          [self.accountTableView setEditing:NO animated:NO];
+          [self.accountTableView reloadData];
+          if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+             [self.actionButton setEnabled:YES];
+             [self.refreshControl beginRefreshing];
+             [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+             BAConnector *accountLoanConnector = [BAConnector generateConnector];
+             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+          } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
+             [self.refreshControl beginRefreshing];
+             [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+             BAConnector *accountLoanConnector = [BAConnector generateConnector];
+             [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+             [self.actionButton setEnabled:YES];
+          } else if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
+             self.accountTableView.tableHeaderView = nil;
+             BAConnector *accountFeesConnector = [BAConnector generateConnector];
+             [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+             [self.actionButton setEnabled:NO];
+          } else if ([self.accountSegmentedController selectedSegmentIndex] == 3) {
+             [self.actionButton setEnabled:NO];
+          } else {
+             [self.actionButton setEnabled:NO];
+          }
        }
     }
 }
@@ -664,6 +664,7 @@
 
 - (void)loginActionWithMessage:(NSString*) message
 {
+    self.accountTableView.tableHeaderView = nil;
     if (self.appDelegate.account.account != nil && appDelegate.account.password != nil) {
         [self setCurrentAccount:self.appDelegate.account.account];
         BAConnector *accountConnector = [BAConnector generateConnector];
