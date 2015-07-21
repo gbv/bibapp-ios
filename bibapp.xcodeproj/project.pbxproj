@@ -2562,6 +2562,38 @@
 		8FE6259016CBC9BA00F0D213 /* IconLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6258F16CBC9BA00F0D213 /* IconLG.png */; };
 		8FE6259216CBC9C100F0D213 /* IconLG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259116CBC9C100F0D213 /* IconLG@2x.png */; };
 		8FE6259416CBCADE00F0D213 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
+		8FE6DA601B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA611B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA621B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA631B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA641B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA651B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA661B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA671B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA681B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA691B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6A1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6B1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6C1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6D1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6E1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA6F1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */; };
+		8FE6DA721B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA731B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA741B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA751B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA761B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA771B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA781B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA791B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7A1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7B1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7C1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7D1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7E1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA7F1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA801B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
+		8FE6DA811B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */; };
 		8FE94A7016DCAE1F004D33B7 /* Buch_250_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A6D16DCAE1F004D33B7 /* Buch_250_gradient.png */; };
 		8FE94A7116DCAE1F004D33B7 /* Buch_250_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A6D16DCAE1F004D33B7 /* Buch_250_gradient.png */; };
 		8FE94A7316DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE94A7216DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib */; };
@@ -2877,6 +2909,9 @@
 		8FE6258F16CBC9BA00F0D213 /* IconLG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconLG.png; path = ../IconLG.png; sourceTree = "<group>"; };
 		8FE6259116CBC9C100F0D213 /* IconLG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IconLG@2x.png"; path = "../IconLG@2x.png"; sourceTree = "<group>"; };
 		8FE6259316CBCADE00F0D213 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BANoSearchResultsCell.xib; sourceTree = "<group>"; };
+		8FE6DA701B5E564400FF0B28 /* BANoSearchResultsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BANoSearchResultsCell.h; sourceTree = "<group>"; };
+		8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BANoSearchResultsCell.m; sourceTree = "<group>"; };
 		8FE94A6D16DCAE1F004D33B7 /* Buch_250_gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buch_250_gradient.png; sourceTree = "<group>"; };
 		8FE94A7216DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADocumentItemElementCellPad.xib; sourceTree = "<group>"; };
 		8FE94A7516DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADocumentItemElementCellNonLocalPad.xib; sourceTree = "<group>"; };
@@ -3521,6 +3556,9 @@
 				8F6A7C2D1701CFDD00C4E580 /* BATocListCell.h */,
 				8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */,
 				8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */,
+				8FE6DA701B5E564400FF0B28 /* BANoSearchResultsCell.h */,
+				8FE6DA711B5E564400FF0B28 /* BANoSearchResultsCell.m */,
+				8FE6DA5F1B5E561600FF0B28 /* BANoSearchResultsCell.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -4164,6 +4202,7 @@
 				8FB2FE0816CA4575007382EE /* mediaIconB.png in Resources */,
 				8FB2FE0A16CA4575007382EE /* mediaIconE.png in Resources */,
 				8FB2FE0C16CA4575007382EE /* mediaIconG.png in Resources */,
+				8FE6DA611B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FB2FE0E16CA4575007382EE /* mediaIconH.png in Resources */,
 				8FB2FE1016CA4575007382EE /* mediaIconI.png in Resources */,
 				8FB2FE1216CA4575007382EE /* mediaIconK.png in Resources */,
@@ -4238,6 +4277,7 @@
 				8F1D83B9192A2E7000A9898D /* mediaIconB.png in Resources */,
 				8F1D83BA192A2E7000A9898D /* mediaIconE.png in Resources */,
 				8F1D83BB192A2E7000A9898D /* mediaIconG.png in Resources */,
+				8FE6DA671B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F1D83BC192A2E7000A9898D /* mediaIconH.png in Resources */,
 				8F1D83BD192A2E7000A9898D /* mediaIconI.png in Resources */,
 				8F1D83BE192A2E7000A9898D /* mediaIconK.png in Resources */,
@@ -4300,6 +4340,7 @@
 				8F8A75DF1781BF4700CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A75E01781BF4700CCF7DB /* menuIconAccount.png in Resources */,
 				8F8A75E11781BF4700CCF7DB /* menuIconList.png in Resources */,
+				8FE6DA621B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8A75E21781BF4700CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A75E31781BF4700CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A75E41781BF4700CCF7DB /* menuIconAccount@2x.png in Resources */,
@@ -4379,6 +4420,7 @@
 				8F8A76741781C05400CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A76751781C05400CCF7DB /* menuIconAccount.png in Resources */,
 				8F8A76761781C05400CCF7DB /* menuIconList.png in Resources */,
+				8FE6DA631B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8A76771781C05400CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A76781781C05400CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A76791781C05400CCF7DB /* menuIconAccount@2x.png in Resources */,
@@ -4465,6 +4507,7 @@
 				8F8A77111781C0D800CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A77121781C0D800CCF7DB /* menuIconSearch@2x.png in Resources */,
 				8F8A77131781C0D800CCF7DB /* menuIconInfo.png in Resources */,
+				8FE6DA641B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8A77141781C0D800CCF7DB /* mediaIconA.png in Resources */,
 				8F8A77151781C0D800CCF7DB /* mediaIconB.png in Resources */,
 				8F8A77161781C0D800CCF7DB /* mediaIconE.png in Resources */,
@@ -4546,6 +4589,7 @@
 				8F8EB61E1A93689000548F24 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F8EB61F1A93689000548F24 /* menuIconAccount@2x.png in Resources */,
 				8F8EB6201A93689000548F24 /* menuIconInfo@2x.png in Resources */,
+				8FE6DA6F1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8EB6211A93689000548F24 /* menuIconList@2x.png in Resources */,
 				8F8EB6221A93689000548F24 /* menuIconOptions@2x.png in Resources */,
 				8F8EB6231A93689000548F24 /* menuIconSearch@2x.png in Resources */,
@@ -4626,6 +4670,7 @@
 				8FA8F56719501E6B006CD05A /* mediaIconB.png in Resources */,
 				8FA8F56819501E6B006CD05A /* mediaIconE.png in Resources */,
 				8FA8F56919501E6B006CD05A /* mediaIconG.png in Resources */,
+				8FE6DA681B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F56A19501E6B006CD05A /* mediaIconH.png in Resources */,
 				8FA8F56B19501E6B006CD05A /* mediaIconI.png in Resources */,
 				8FA8F56C19501E6B006CD05A /* mediaIconK.png in Resources */,
@@ -4700,6 +4745,7 @@
 				8FA8F60919502224006CD05A /* mediaIconB.png in Resources */,
 				8FA8F60A19502224006CD05A /* mediaIconE.png in Resources */,
 				8FA8F60B19502224006CD05A /* mediaIconG.png in Resources */,
+				8FE6DA691B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F60C19502224006CD05A /* mediaIconH.png in Resources */,
 				8FA8F60D19502224006CD05A /* mediaIconI.png in Resources */,
 				8FA8F60E19502224006CD05A /* mediaIconK.png in Resources */,
@@ -4774,6 +4820,7 @@
 				8FA8F6AB1950228D006CD05A /* mediaIconB.png in Resources */,
 				8FA8F6AC1950228D006CD05A /* mediaIconE.png in Resources */,
 				8FA8F6AD1950228D006CD05A /* mediaIconG.png in Resources */,
+				8FE6DA6A1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F6AE1950228D006CD05A /* mediaIconH.png in Resources */,
 				8FA8F6AF1950228D006CD05A /* mediaIconI.png in Resources */,
 				8FA8F6B01950228D006CD05A /* mediaIconK.png in Resources */,
@@ -4848,6 +4895,7 @@
 				8FA8F74D195022BC006CD05A /* mediaIconB.png in Resources */,
 				8FA8F74E195022BC006CD05A /* mediaIconE.png in Resources */,
 				8FA8F74F195022BC006CD05A /* mediaIconG.png in Resources */,
+				8FE6DA6B1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F750195022BC006CD05A /* mediaIconH.png in Resources */,
 				8FA8F751195022BC006CD05A /* mediaIconI.png in Resources */,
 				8FA8F752195022BC006CD05A /* mediaIconK.png in Resources */,
@@ -4915,6 +4963,7 @@
 				8FA8F7E81950230D006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F7E91950230D006CD05A /* menuIconInfo@2x.png in Resources */,
 				8FA8F7EA1950230D006CD05A /* menuIconList@2x.png in Resources */,
+				8FE6DA6C1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F7EB1950230D006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F7EC1950230D006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F7ED1950230D006CD05A /* menuIconInfo.png in Resources */,
@@ -4995,6 +5044,7 @@
 				8FA8F8911950233A006CD05A /* mediaIconB.png in Resources */,
 				8FA8F8921950233A006CD05A /* mediaIconE.png in Resources */,
 				8FA8F8931950233A006CD05A /* mediaIconG.png in Resources */,
+				8FE6DA6D1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F8941950233A006CD05A /* mediaIconH.png in Resources */,
 				8FA8F8951950233A006CD05A /* mediaIconI.png in Resources */,
 				8FA8F8961950233A006CD05A /* mediaIconK.png in Resources */,
@@ -5069,6 +5119,7 @@
 				8FAD97E91A0CFD3600C3A5D1 /* mediaIconB.png in Resources */,
 				8FAD97EA1A0CFD3600C3A5D1 /* mediaIconE.png in Resources */,
 				8FAD97EB1A0CFD3600C3A5D1 /* mediaIconG.png in Resources */,
+				8FE6DA6E1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FAD97EC1A0CFD3600C3A5D1 /* mediaIconH.png in Resources */,
 				8FAD97ED1A0CFD3600C3A5D1 /* mediaIconI.png in Resources */,
 				8FAD97EE1A0CFD3600C3A5D1 /* mediaIconK.png in Resources */,
@@ -5143,6 +5194,7 @@
 				8FD610E5190916EA009E2358 /* mediaIconB.png in Resources */,
 				8FD610E6190916EA009E2358 /* mediaIconE.png in Resources */,
 				8FD610E7190916EA009E2358 /* mediaIconG.png in Resources */,
+				8FE6DA651B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FD610E8190916EA009E2358 /* mediaIconH.png in Resources */,
 				8FD610E9190916EA009E2358 /* mediaIconI.png in Resources */,
 				8FD610EA190916EA009E2358 /* mediaIconK.png in Resources */,
@@ -5217,6 +5269,7 @@
 				8FD61181190916EF009E2358 /* mediaIconB.png in Resources */,
 				8FD61182190916EF009E2358 /* mediaIconE.png in Resources */,
 				8FD61183190916EF009E2358 /* mediaIconG.png in Resources */,
+				8FE6DA661B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FD61184190916EF009E2358 /* mediaIconH.png in Resources */,
 				8FD61185190916EF009E2358 /* mediaIconI.png in Resources */,
 				8FD61186190916EF009E2358 /* mediaIconK.png in Resources */,
@@ -5284,6 +5337,7 @@
 				8F2190B516B2AFA100512C85 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F0D9F7A16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */,
 				8F0D9F7C16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */,
+				8FE6DA601B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F0D9F7E16B68AD8000CED81 /* menuIconList@2x.png in Resources */,
 				8F0D9F8016B68AD8000CED81 /* menuIconOptions@2x.png in Resources */,
 				8F0D9F8216B68AD8000CED81 /* menuIconSearch@2x.png in Resources */,
@@ -5423,6 +5477,7 @@
 				8FE9813916F74A6400328531 /* BAImpressumCellPad.m in Sources */,
 				8FE9814016F7589F00328531 /* BALocationCellPad.m in Sources */,
 				8FD4F8EE16F89C9F00193F33 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA731B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FDAEC8816F9D64A00E28666 /* BAConfiguration.m in Sources */,
 				8FDAEC8C16F9D69600E28666 /* BAConfigurationLG.m in Sources */,
 				8FDAEC9016F9D71C00E28666 /* BAConfigurationHI.m in Sources */,
@@ -5515,6 +5570,7 @@
 				8F1D837E192A2E7000A9898D /* BAImpressumCellPad.m in Sources */,
 				8F1D837F192A2E7000A9898D /* BALocationCellPad.m in Sources */,
 				8F1D8380192A2E7000A9898D /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA791B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8F1D8381192A2E7000A9898D /* BAConfiguration.m in Sources */,
 				8F1D8382192A2E7000A9898D /* BAConfigurationLG.m in Sources */,
 				8F1D8383192A2E7000A9898D /* BAConfigurationHI.m in Sources */,
@@ -5607,6 +5663,7 @@
 				8F8A75B71781BF4700CCF7DB /* BAImpressumCellPad.m in Sources */,
 				8F8A75B81781BF4700CCF7DB /* BALocationCellPad.m in Sources */,
 				8F8A75B91781BF4700CCF7DB /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA741B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8F8A75BA1781BF4700CCF7DB /* BAConfiguration.m in Sources */,
 				8F8A75BB1781BF4700CCF7DB /* BAConfigurationLG.m in Sources */,
 				8F8A75BC1781BF4700CCF7DB /* BAConfigurationHI.m in Sources */,
@@ -5699,6 +5756,7 @@
 				8F8A764C1781C05400CCF7DB /* BAImpressumCellPad.m in Sources */,
 				8F8A764D1781C05400CCF7DB /* BALocationCellPad.m in Sources */,
 				8F8A764E1781C05400CCF7DB /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA751B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8F8A764F1781C05400CCF7DB /* BAConfiguration.m in Sources */,
 				8F8A76501781C05400CCF7DB /* BAConfigurationLG.m in Sources */,
 				8F8A76511781C05400CCF7DB /* BAConfigurationHI.m in Sources */,
@@ -5791,6 +5849,7 @@
 				8F8A76E11781C0D800CCF7DB /* BAImpressumCellPad.m in Sources */,
 				8F8A76E21781C0D800CCF7DB /* BALocationCellPad.m in Sources */,
 				8F8A76E31781C0D800CCF7DB /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA761B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8F8A76E41781C0D800CCF7DB /* BAConfiguration.m in Sources */,
 				8F8A76E51781C0D800CCF7DB /* BAConfigurationLG.m in Sources */,
 				8F8A76E61781C0D800CCF7DB /* BAConfigurationHI.m in Sources */,
@@ -5883,6 +5942,7 @@
 				8F8EB5E51A93689000548F24 /* BAImpressumCellPad.m in Sources */,
 				8F8EB5E61A93689000548F24 /* BALocationCellPad.m in Sources */,
 				8F8EB5E71A93689000548F24 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA811B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8F8EB5E81A93689000548F24 /* BAConfiguration.m in Sources */,
 				8F8EB5E91A93689000548F24 /* BAConfigurationLG.m in Sources */,
 				8F8EB5EA1A93689000548F24 /* BAConfigurationHI.m in Sources */,
@@ -5975,6 +6035,7 @@
 				8FA8F52A19501E6B006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F52B19501E6B006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F52C19501E6B006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7A1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F52D19501E6B006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F52E19501E6B006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F52F19501E6B006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6067,6 +6128,7 @@
 				8FA8F5CC19502224006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F5CD19502224006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F5CE19502224006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7B1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F5CF19502224006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F5D019502224006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F5D119502224006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6159,6 +6221,7 @@
 				8FA8F66E1950228D006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F66F1950228D006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F6701950228D006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7C1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F6711950228D006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F6721950228D006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F6731950228D006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6251,6 +6314,7 @@
 				8FA8F710195022BC006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F711195022BC006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F712195022BC006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7D1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F713195022BC006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F714195022BC006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F715195022BC006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6343,6 +6407,7 @@
 				8FA8F7B21950230D006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F7B31950230D006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F7B41950230D006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7E1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F7B51950230D006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F7B61950230D006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F7B71950230D006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6435,6 +6500,7 @@
 				8FA8F8541950233A006CD05A /* BAImpressumCellPad.m in Sources */,
 				8FA8F8551950233A006CD05A /* BALocationCellPad.m in Sources */,
 				8FA8F8561950233A006CD05A /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA7F1B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FA8F8571950233A006CD05A /* BAConfiguration.m in Sources */,
 				8FA8F8581950233A006CD05A /* BAConfigurationLG.m in Sources */,
 				8FA8F8591950233A006CD05A /* BAConfigurationHI.m in Sources */,
@@ -6527,6 +6593,7 @@
 				8FAD97A91A0CFD3600C3A5D1 /* BAImpressumCellPad.m in Sources */,
 				8FAD97AA1A0CFD3600C3A5D1 /* BALocationCellPad.m in Sources */,
 				8FAD97AB1A0CFD3600C3A5D1 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA801B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FAD97AC1A0CFD3600C3A5D1 /* BAConfiguration.m in Sources */,
 				8FAD97AD1A0CFD3600C3A5D1 /* BAConfigurationLG.m in Sources */,
 				8FAD97AE1A0CFD3600C3A5D1 /* BAConfigurationHI.m in Sources */,
@@ -6619,6 +6686,7 @@
 				8FD610AA190916EA009E2358 /* BAImpressumCellPad.m in Sources */,
 				8FD610AB190916EA009E2358 /* BALocationCellPad.m in Sources */,
 				8FD610AC190916EA009E2358 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA771B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FD610AD190916EA009E2358 /* BAConfiguration.m in Sources */,
 				8FD610AE190916EA009E2358 /* BAConfigurationLG.m in Sources */,
 				8FD610AF190916EA009E2358 /* BAConfigurationHI.m in Sources */,
@@ -6711,6 +6779,7 @@
 				8FD61146190916EF009E2358 /* BAImpressumCellPad.m in Sources */,
 				8FD61147190916EF009E2358 /* BALocationCellPad.m in Sources */,
 				8FD61148190916EF009E2358 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA781B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FD61149190916EF009E2358 /* BAConfiguration.m in Sources */,
 				8FD6114A190916EF009E2358 /* BAConfigurationLG.m in Sources */,
 				8FD6114B190916EF009E2358 /* BAConfigurationHI.m in Sources */,
@@ -6803,6 +6872,7 @@
 				8FE9813816F74A6400328531 /* BAImpressumCellPad.m in Sources */,
 				8FE9813F16F7589F00328531 /* BALocationCellPad.m in Sources */,
 				8FD4F8ED16F89C9F00193F33 /* BATocTableViewControllerPad.m in Sources */,
+				8FE6DA721B5E564400FF0B28 /* BANoSearchResultsCell.m in Sources */,
 				8FDAEC8716F9D64A00E28666 /* BAConfiguration.m in Sources */,
 				8FDAEC8B16F9D69600E28666 /* BAConfigurationLG.m in Sources */,
 				8FDAEC8F16F9D71C00E28666 /* BAConfigurationHI.m in Sources */,

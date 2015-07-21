@@ -29,6 +29,8 @@
 @property BOOL searchedLocal;
 @property BOOL searched;
 @property BOOL isSearching;
+@property BOOL lastSearchNoResultsLocal;
+@property BOOL lastSearchNoResults;
 @property NSInteger searchCountLocal;
 @property NSInteger searchCount;
 
