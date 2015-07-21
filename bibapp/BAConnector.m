@@ -239,6 +239,19 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
+-(void)logoutWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate {
+   [self setConnectorDelegate:delegate];
+   [self setCommand:@"logout"];
+   if ([self checkNetworkReachability]) {
+      NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/logout?patron=%@&access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, token]];
+      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+      if (theConnection) {
+      }
+   }
+}
+
 - (void)accountLoadLoanListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate
 {
    [self setConnectorDelegate:delegate];

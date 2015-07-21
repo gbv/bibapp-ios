@@ -28,6 +28,7 @@
 @property (strong, nonatomic) NSMutableArray *locations;
 @property (strong, nonatomic) BAConfiguration *configuration;
 @property BOOL isIOS7;
+@property BOOL isLoggedIn;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

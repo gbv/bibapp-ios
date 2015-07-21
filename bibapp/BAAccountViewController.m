@@ -35,7 +35,7 @@
 @synthesize currentPassword;
 @synthesize currentToken;
 @synthesize currentScope;
-@synthesize loggedIn;
+//@synthesize loggedIn;
 @synthesize accountTableView;
 @synthesize accountSegmentedController;
 @synthesize refreshControl;
@@ -67,7 +67,7 @@
     [self.accountSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.accountSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
-    [self setLoggedIn:NO];
+    //[self setLoggedIn:NO];
    
     [self setRefreshControl:[[UIRefreshControl alloc] init]];
     [self.refreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
@@ -79,7 +79,12 @@
     [super viewDidAppear:animated];
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
-       if (!self.loggedIn) {
+       if (!self.appDelegate.isLoggedIn) {
+           [self.navigationController.navigationBar.topItem setTitle:@"Konto"];
+           [self setCurrentAccount:nil];
+           [self setCurrentPassword:nil];
+           [self setCurrentScope:nil];
+           [self setCurrentToken:nil];
            [self loginActionWithMessage:@""];
        } else {
            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
@@ -169,7 +174,7 @@
                 [alert setTag:1];
                 [alert show];
             } else {
-                [self setLoggedIn:YES];
+                [self.appDelegate setIsLoggedIn:YES];
                 [self setCurrentToken:[json objectForKey:@"access_token"]];
                 [self.appDelegate setCurrentAccount:self.currentAccount];
                 [self.appDelegate setCurrentPassword:self.currentPassword];
@@ -422,10 +427,8 @@
    
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
-       if (!self.loggedIn) {
-          
+       if (!self.appDelegate.isLoggedIn) {
               [self loginActionWithMessage:@""];
-          
        } else {
            [self.accountTableView setEditing:NO animated:NO];
            [self.accountTableView reloadData];
@@ -678,7 +681,7 @@
                   [displayString appendString:@"\n\n"];
                }
             }
-            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren."];
+            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden."];
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
                                                             message:displayString
                                                            delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];

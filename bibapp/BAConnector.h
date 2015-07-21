@@ -37,6 +37,7 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 - (void)getDetailsFor:(NSString *)ppn WithDelegate:(id)delegate;
 - (void)getCoverFor:(NSString *)number WithDelegate:(id)delegate;
 - (void)loginWithAccount:(NSString *)account WithPassword:(NSString *)password WithDelegate:(id)delegate;
+- (void)logoutWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadLoanListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadReservedListWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;
 - (void)accountLoadFeesWithAccount:(NSString *)account WithToken:(NSString *)token WithDelegate:(id)delegate;

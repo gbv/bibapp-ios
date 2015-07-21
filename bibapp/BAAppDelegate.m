@@ -22,6 +22,7 @@
 @synthesize locations;
 @synthesize configuration;
 @synthesize isIOS7;
+@synthesize isLoggedIn;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -82,7 +83,8 @@
     } else {
         self.account = [tempAccountArray objectAtIndex:0];
     }
-    
+    self.isLoggedIn = NO;
+   
     // Load cached locations
     NSEntityDescription *entityDescriptionLocations = [NSEntityDescription entityForName:@"BALocation" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *requestLocation = [[NSFetchRequest alloc] init];
