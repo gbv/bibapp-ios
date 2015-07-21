@@ -1153,7 +1153,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Zugangsdaten speichern" id="ioB-8Q-TS0">
+                            <tableViewSection headerTitle="Konto" id="ioB-8Q-TS0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PTk-OX-XLh">
                                         <rect key="frame" x="0.0" y="191" width="540" height="44"/>
@@ -1162,7 +1162,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Konto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-S0-BFZ">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Zugangsdaten speichern" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-S0-BFZ">
                                                     <rect key="frame" x="20" y="11" width="553" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1174,6 +1174,31 @@
                                                         <action selector="saveLocalSwitchAction:" destination="Kv4-KD-ect" eventType="valueChanged" id="Ems-rf-JjC"/>
                                                     </connections>
                                                 </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HkH-JD-SyE">
+                                        <rect key="frame" x="0.0" y="191" width="540" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HkH-JD-SyE" id="FEe-9O-V93">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Nicht angemeldet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0U-fg-ssL">
+                                                    <rect key="frame" x="20" y="11" width="553" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTs-6d-x1h">
+                                                    <rect key="frame" x="374" y="7" width="70" height="30"/>
+                                                    <state key="normal" title="Abmelden">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logoutAction:" destination="Kv4-KD-ect" eventType="touchUpInside" id="mIW-51-2dJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1242,7 +1267,9 @@
                     <connections>
                         <outlet property="catalogueLabel" destination="auh-iz-Np8" id="2F1-Cz-1N0"/>
                         <outlet property="countPixelSwitch" destination="UmO-9O-CJv" id="Itp-87-6E4"/>
+                        <outlet property="logoutButton" destination="LTs-6d-x1h" id="JDv-QW-QnX"/>
                         <outlet property="saveLocalSwitch" destination="Zr2-Kz-m1d" id="BHA-8h-aiH"/>
+                        <outlet property="userLabel" destination="m0U-fg-ssL" id="tEt-70-bDE"/>
                         <outlet property="versionLabel" destination="ac0-K0-VSI" id="qHa-dp-3jh"/>
                     </connections>
                 </tableViewController>
@@ -1310,9 +1337,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WjN-WC-96R"/>
-        <segue reference="nvZ-Ec-xVW"/>
-        <segue reference="f6G-SO-Bgw"/>
         <segue reference="0y8-4D-qGn"/>
+        <segue reference="nvZ-Ec-xVW"/>
+        <segue reference="WjN-WC-96R"/>
+        <segue reference="f6G-SO-Bgw"/>
     </inferredMetricsTieBreakers>
 </document>

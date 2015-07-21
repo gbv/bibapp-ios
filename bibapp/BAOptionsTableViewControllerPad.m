@@ -7,6 +7,8 @@
 //
 
 #import "BAOptionsTableViewControllerPad.h"
+#import "BAConnector.h"
+#import "BAOptionsNavigationController.h"
 
 @interface BAOptionsTableViewControllerPad ()
 
@@ -53,6 +55,17 @@
 {
     [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+   [super viewWillAppear:animated];
+   if (self.appDelegate.currentAccount != nil) {
+      [self.userLabel setText:self.appDelegate.currentAccount];
+      [self.logoutButton setEnabled:YES];
+   } else {
+      [self.userLabel setText:@"Nicht angemeldet"];
+      [self.logoutButton setEnabled:NO];
+   }
 }
 
 - (void)didReceiveMemoryWarning
@@ -176,4 +189,38 @@
         // Handle the error.
     }
 }
+
+- (IBAction)logoutAction:(id)sender {
+   BAConnector *logoutConnector = [BAConnector generateConnector];
+   [logoutConnector logoutWithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
+}
+
+- (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {
+   NSError* error;
+   NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
+   if ([json count] > 0) {
+      if ([command isEqualToString:@"logout"]) {
+         if ([json objectForKey:@"error"] || json == nil) {
+            [self.appDelegate setCurrentPassword:nil];
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bei der Abmeldung ist ein Fehler aufgetreten"
+                                                            message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
+                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert setTag:1];
+            [alert show];
+         } else {
+            [self.appDelegate setCurrentAccount:nil];
+            [self.appDelegate setCurrentPassword:nil];
+            [self.appDelegate setCurrentToken:nil];
+            [self.appDelegate setCurrentScope:nil];
+            [self.appDelegate setIsLoggedIn:NO];
+            [self.userLabel setText:@"Nicht angemeldet"];
+            [self.logoutButton setEnabled:NO];
+            if (((BAOptionsNavigationController *)self.navigationController).accountViewController != nil) {
+               [((BAOptionsNavigationController *)self.navigationController).accountViewController reset];
+            }
+         }
+      }
+   }
+}
+
 @end

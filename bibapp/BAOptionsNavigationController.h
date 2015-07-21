@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BAAccountViewControllerPad.h"
 
 @interface BAOptionsNavigationController : UINavigationController <UIGestureRecognizerDelegate>
+
+@property(strong, nonatomic) BAAppDelegate *appDelegate;
+@property (weak, nonatomic) BAAccountViewControllerPad *accountViewController;
 
 @end

@@ -27,7 +27,6 @@
 @property (strong, nonatomic) NSString *currentToken;
 @property (strong, nonatomic) NSArray *currentScope;
 @property BOOL isLoggingIn;
-@property BOOL loggedIn;
 @property (weak, nonatomic) IBOutlet UITableView *loanTableView;
 @property (weak, nonatomic) IBOutlet UITableView *reservationTableView;
 @property (weak, nonatomic) IBOutlet UITableView *feeTableView;
@@ -50,5 +49,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *feeLoadingLabel;
 
 - (void)actionButtonClick:(id)sender;
+- (void)loginActionWithMessage:(NSString*) message;
+- (void)reset;
 
 @end

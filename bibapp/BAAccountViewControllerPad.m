@@ -13,6 +13,7 @@
 #import "BAAccountTableHeaderTextView.h"
 #import "BAItemAccountCell.h"
 #import "BAFeeCell.h"
+#import "BAOptionsNavigationController.h"
 
 @interface BAAccountViewControllerPad ()
 
@@ -36,7 +37,6 @@
 @synthesize currentPassword;
 @synthesize currentToken;
 @synthesize currentScope;
-@synthesize loggedIn;
 @synthesize loanHeader;
 @synthesize reservationHeader;
 @synthesize feeHeader;
@@ -117,8 +117,6 @@
     [self.feeHeader.subTitleLabel setText:@""];
     self.feeTableView.tableHeaderView = self.feeHeader;
    
-    [self setLoggedIn:NO];
-   
     [self setLoanRefreshControl:[[UIRefreshControl alloc] init]];
     [self.loanRefreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
     [self.loanTableView addSubview:self.loanRefreshControl];
@@ -137,7 +135,8 @@
     [super viewDidAppear:animated];
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
-       if (!self.loggedIn) {
+       if (!self.appDelegate.isLoggedIn) {
+              [self reset];
               [self loginActionWithMessage:@""];
        } else {
            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
@@ -237,7 +236,7 @@
                 [alert setTag:1];
                 [alert show];
             } else {
-                [self setLoggedIn:YES];
+                [self.appDelegate setIsLoggedIn:YES];
                 [self setCurrentToken:[json objectForKey:@"access_token"]];
                 [self.appDelegate setCurrentAccount:self.currentAccount];
                 [self.appDelegate setCurrentPassword:self.currentPassword];
@@ -464,6 +463,9 @@
 
 - (void)loginActionWithMessage:(NSString*) message
 {
+    [self.loanHeader.subTitleLabel setText:@""];
+    [self.reservationHeader.subTitleLabel setText:@""];
+    [self.feeHeader.subTitleLabel setText:@""];
     if (self.appDelegate.account.account != nil && appDelegate.account.password != nil) {
         [self setCurrentAccount:self.appDelegate.account.account];
         BAConnector *accountConnector = [BAConnector generateConnector];
@@ -481,7 +483,7 @@
                   [displayString appendString:@"\n\n"];
                }
             }
-            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren."];
+            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden."];
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
                                                             message:displayString
                                                            delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];
@@ -926,16 +928,26 @@
 }
 
 - (void)refreshLoanAndReservation:(UIRefreshControl *)refreshControl {
-   [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-   [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-   BAConnector *accountLoanConnector = [BAConnector generateConnector];
-   [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   if (!self.appDelegate.isLoggedIn) {
+      [self reset];
+      [self loginActionWithMessage:@""];
+   } else {
+      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountLoanConnector = [BAConnector generateConnector];
+      [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   }
 }
 
 - (void)refreshFee:(UIRefreshControl *)refreshControl {
-   [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
-   BAConnector *accountFeesConnector = [BAConnector generateConnector];
-   [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   if (!self.appDelegate.isLoggedIn) {
+      [self reset];
+      [self loginActionWithMessage:@""];
+   } else {
+      [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@"wird geladen ..."];
+      BAConnector *accountFeesConnector = [BAConnector generateConnector];
+      [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+   }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -986,6 +998,30 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    [self commandIsNotInScope:command];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+   if ([[segue identifier] isEqualToString:@"optionsSegue"]) {
+      BAOptionsNavigationController *optionsNavigationController = (BAOptionsNavigationController *)[segue destinationViewController];
+      [optionsNavigationController setAccountViewController:self];
+   }
+}
+
+-(void)reset {
+   [self setCurrentAccount:nil];
+   [self setCurrentPassword:nil];
+   [self setCurrentScope:nil];
+   [self setCurrentToken:nil];
+   [self.accountNavigationBar.topItem setTitle:@"Konto"];
+   [self.loanHeader.subTitleLabel setText:@""];
+   [self.reservationHeader.subTitleLabel setText:@""];
+   [self.feeHeader.subTitleLabel setText:@""];
+   [self.loan removeAllObjects];
+   [self.reservation removeAllObjects];
+   [self.fees removeAllObjects];
+   [self.loanTableView reloadData];
+   [self.reservationTableView reloadData];
+   [self.feeTableView reloadData];
 }
 
 @end

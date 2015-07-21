@@ -14,11 +14,14 @@
 
 @implementation BAOptionsNavigationController
 
+@synthesize accountViewController;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     }
     return self;
 }
@@ -82,6 +85,14 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
    return YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+   if (self.accountViewController != nil) {
+      if (!self.appDelegate.isLoggedIn) {
+         [self.accountViewController loginActionWithMessage:@""];
+      }
+   }
 }
 
 @end
