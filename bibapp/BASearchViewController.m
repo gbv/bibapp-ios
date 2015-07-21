@@ -222,6 +222,7 @@
     self.searchTableView.tableFooterView = spinner;
     [self.searchTableView setContentOffset:CGPointMake(0, 0) animated:NO];
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+        self.searchedLocal = NO;
         self.lastSearchLocal = self.searchBar.text;
         self.searchCountLocal = 0;
         self.booksLocal = [[NSMutableArray alloc] init];
@@ -231,6 +232,7 @@
            [self.searchTableView reloadData];
         }
     } else {
+        self.searched = NO;
         self.lastSearch = self.searchBar.text;
         self.searchCount = 0;
         self.booksGVK = [[NSMutableArray alloc] init];
@@ -635,6 +637,7 @@
 
 - (void)searchGBV {
    self.lastSearch = self.lastSearchLocal;
+   self.searched = NO;
    [self.searchSegmentedController setSelectedSegmentIndex:1];
    [self segmentAction:nil];
    [self searchBarSearchButtonClicked:nil];
