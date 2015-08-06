@@ -591,8 +591,13 @@ static BAConnector *sharedConnector = nil;
             [newLocation setOpeninghours:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
             foundOpeningHours = YES;
          }
-         if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#email"]) {
+         /* if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#email"]) {
             [newLocation setEmail:[[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"]];
+            foundEmail = YES;
+         } */
+         if ([key isEqualToString:@"http://xmlns.com/foaf/0.1/mbox"]) {
+            NSString *tempEmail = [[[[json objectForKey:uri] objectForKey:key] objectAtIndex:([[[json objectForKey:uri] objectForKey:key] count] - 1)]objectForKey:@"value"];
+            [newLocation setEmail:[tempEmail stringByReplacingOccurrencesOfString:@"mailto:" withString:@""]];
             foundEmail = YES;
          }
          if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#url"]) {
