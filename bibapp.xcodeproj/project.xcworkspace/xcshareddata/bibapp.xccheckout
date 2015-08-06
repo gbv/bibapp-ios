@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>15172BC4-74CD-45D3-B1A9-7BB3FFAA89BD</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>bibapp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>17BD449DC0B6D68651167031BF5B192B6EAC22D1</key>
 		<string>https://github.com/gbv/bibapp-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>bibapp.xcodeproj/project.xcworkspace</string>
+	<string>bibapp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>17BD449DC0B6D68651167031BF5B192B6EAC22D1</key>
