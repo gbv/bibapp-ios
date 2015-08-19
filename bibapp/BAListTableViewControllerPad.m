@@ -240,7 +240,7 @@
                 
                 if (!presentation.available) {
                     if (loan.href == nil) {
-                        [statusInfo appendString:@"..."];
+                        //[statusInfo appendString:@"..."];
                     } else {
                         NSRange match = [loan.href rangeOfString: @"loan/RES"];
                         if (match.length > 0) {
@@ -256,6 +256,11 @@
                     }
                 }
             }
+           
+            if (tempDocumentItem.daiaInfoFromOpac) {
+               status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
+            }
+           
             [cell.status setText:status];
             [cell.statusInfo setText:statusInfo];
             [cell.actionButton setTag:indexPath.row];
@@ -524,6 +529,11 @@
                 [tempDocumentItemElement setQueue:[[unavailableItem attributeForName:@"queue"] stringValue]];
                 [tempDocumentItem.services addObject:tempDocumentItemElement];
             }
+           
+            if ([availableItems count] == 0 && [unavailableItems count] == 0) {
+               tempDocumentItem.daiaInfoFromOpac = YES;
+            }
+           
             [self.currentDocument.items addObject:tempDocumentItem];
         }
         [self.detailTableView reloadData];
@@ -613,6 +623,11 @@
                 [tempDocumentItemElement setQueue:[[unavailableItem attributeForName:@"queue"] stringValue]];
                 [tempDocumentItem.services addObject:tempDocumentItemElement];
             }
+           
+            if ([availableItems count] == 0 && [unavailableItems count] == 0) {
+               tempDocumentItem.daiaInfoFromOpac = YES;
+            }
+           
             [self.currentDocument.items addObject:tempDocumentItem];
         }
         

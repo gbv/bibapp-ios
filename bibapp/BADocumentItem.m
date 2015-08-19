@@ -38,6 +38,7 @@
 @synthesize openaccess;
 @synthesize openaccessHref;
 @synthesize openaccessExpected;
+@synthesize daiaInfoFromOpac;
 
 - (BOOL)order
 {

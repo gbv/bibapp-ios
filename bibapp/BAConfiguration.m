@@ -44,6 +44,7 @@
 @synthesize currentBibHideDepartment;
 @synthesize currentBibFeedURLIsWebsite;
 @synthesize currentBibRequestTitle;
+@synthesize currentBibDaiaInfoFromOpacDisplay;
 
 - (id)init {
     self = [super init];
@@ -66,6 +67,8 @@
         self.currentBibUsePAIAWrapper = NO;
        
         self.currentBibRequestTitle = @"Vormerken";
+       
+        self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
     }
     return self;
 }

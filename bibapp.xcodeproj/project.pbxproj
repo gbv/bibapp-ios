@@ -4118,6 +4118,9 @@
 					8FA8F4ED19501E6B006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
+					8FAD97691A0CFD3600C3A5D1 = {
+						DevelopmentTeam = DG2S2C98D2;
+					};
 					8FD61071190916EA009E2358 = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
@@ -7479,8 +7482,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -7502,8 +7505,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";

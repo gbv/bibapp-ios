@@ -30,6 +30,7 @@
 @property BOOL *currentBibFeedURLIsWebsite;
 @property BOOL *currentBibUsePAIAWrapper;
 @property (strong, nonatomic) NSString *currentBibRequestTitle;
+@property (strong, nonatomic) NSString *currentBibDaiaInfoFromOpacDisplay;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

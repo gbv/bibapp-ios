@@ -38,6 +38,7 @@
 @property BOOL openaccess;
 @property (strong, nonatomic) NSString *openaccessHref;
 @property (strong, nonatomic) NSString *openaccessExpected;
+@property BOOL daiaInfoFromOpac;
 
 - (BOOL)order;
 
