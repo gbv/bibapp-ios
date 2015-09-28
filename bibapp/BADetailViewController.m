@@ -758,7 +758,7 @@
                     top = 120;
                 }
                 [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.loan setFrame: CGRectMake(36,top+1,113,18)];
+                [cell.loan setFrame: CGRectMake(36,top+1,114,18)];
                 [cell.loanInfo setHidden:NO];
                 [cell.loan setHidden:NO];
                 top += 20;
