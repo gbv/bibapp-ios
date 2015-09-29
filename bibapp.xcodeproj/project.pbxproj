@@ -7264,6 +7264,7 @@
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7287,6 +7288,7 @@
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

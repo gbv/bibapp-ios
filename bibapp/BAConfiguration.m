@@ -96,7 +96,7 @@
        currentConfiguration = [[BAConfigurationUBWe alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.bat"]){
         currentConfiguration = [[BAConfigurationBAT alloc] init];
-    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.hfmw"]){
+    } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.hfmwe"]){
         currentConfiguration = [[BAConfigurationHFMWe alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ndh"]){
         currentConfiguration = [[BAConfigurationNDH alloc] init];
