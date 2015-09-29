@@ -25,8 +25,8 @@
    [self.currentBibImprint setObject:@"Diese App wurde von der EAH Jena mit großer Sorgfalt erstellt und geprüft, dennoch können wir aufgrund der technischen Rahmenbedingungen keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der App und der angezeigten Inhalte geben. Eine Haftung der EAH Jena  für Schäden, die durch die Nutzung der App, der angebotenen Informationen oder durch Fehlfunktion der App entstehen ist grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden unsererseits vorliegt. Die Hochschulbibliothek der EAH Jena behält sich vor, Teile der App ohne gesonderte Ankündigung zu ändern, zu ergänzen, zu löschen oder die Veröffentlichung der App zeitweise oder endgültig einzustellen.\n\nDiese App bietet Links auf Internetangebote anderer Betreiber. Für den Inhalt dieser externen Seiten sind ausschließlich deren Betreiber verantwortlich." forKey:@"Rechtliche Hinweise zur Haftung"];
    [self.currentBibImprint setObject:@"Entwurf und Konzeption\nA. Christensen (UB Lüneburg),\nL. Löbnitz (EAH Jena),\nJ. Voss (VZG Göttingen)\n\nUmsetzung\neffective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Anschrift\nEAH Jena\nCarl Zeiss Promenade 2\n07745 Jena\nwww.fh-jena.de/bib\n\nTelefon: (03641) 205-270\nE-Mail: bibliothek@fh-jena.de\n\nAusleihe\nTelefon: (03641) 205-280  oder …290\nE-Mail: ausleihe@fh-jena.de\n\nFernleihe\nTelefon: (03641) 205-283\nE-Mail: Fernleihe@fh-jena.de\n\nPatentinformationszentrum (PIZ)\nTelefon: (03641) 205-2275 oder …273\nE-Mail: PIZ@fh-jena.de";
-   self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/de-j59";
-   [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/de-j59", @"Standard-Katalog", nil]];
+   self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-J59";
+   [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-J59", @"Standard-Katalog", nil]];
    //self.currentBibSearchCountURL = @"";
 }
 
