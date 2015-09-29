@@ -88,6 +88,8 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+   [super viewWillDisappear:animated];
+   
    if (self.accountViewController != nil) {
       if (!self.appDelegate.isLoggedIn) {
          [self.accountViewController loginActionWithMessage:@""];
