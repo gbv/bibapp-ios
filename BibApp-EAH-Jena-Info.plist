@@ -28,6 +28,11 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>Die App verwendet Ihren Standort, um den Abstand zur nächstgelegenen Bibliothek zu ermitteln, die einen von Ihnen gesuchten Titel besitzt. Die Information wird nicht an die Bibliothek oder Andere übermittelt.</string>
 	<key>UIMainStoryboardFile</key>
@@ -38,6 +43,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -57,10 +64,5 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
-   <key>NSAppTransportSecurity</key>
-   <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
-   </dict>
 </dict>
 </plist>
