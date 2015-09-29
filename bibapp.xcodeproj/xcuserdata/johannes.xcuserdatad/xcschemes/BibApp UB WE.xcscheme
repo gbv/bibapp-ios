@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F1D8343192A2E7000A9898D"
-               BuildableName = "BibApp UB Weimar.app"
+               BuildableName = "BibApp UB WE.app"
                BlueprintName = "BibApp UB WE"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F1D8343192A2E7000A9898D"
-            BuildableName = "BibApp UB Weimar.app"
+            BuildableName = "BibApp UB WE.app"
             BlueprintName = "BibApp UB WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F1D8343192A2E7000A9898D"
-            BuildableName = "BibApp UB Weimar.app"
+            BuildableName = "BibApp UB WE.app"
             BlueprintName = "BibApp UB WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F1D8343192A2E7000A9898D"
-            BuildableName = "BibApp UB Weimar.app"
+            BuildableName = "BibApp UB WE.app"
             BlueprintName = "BibApp UB WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>

@@ -2810,8 +2810,8 @@
 		8F965388166E97A900CA5D50 /* BAOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsViewController.m; sourceTree = "<group>"; };
 		8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp BA Thüringen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-BA-Thüringen-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-BA-Thüringen-Info.plist"; sourceTree = "<absolute>"; };
-		8FA8F62F19502224006CD05A /* BibApp HFM We.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HFM We.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HFM-We-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-HFM-We-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F62F19502224006CD05A /* BibApp HfM WE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HfM WE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8F63019502224006CD05A /* BibApp-HfM-WE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HfM-WE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-HfM-WE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F6D11950228D006CD05A /* BibApp NDH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp NDH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-NDH-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-NDH-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F773195022BC006CD05A /* BibApp FHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp FHE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3643,7 +3643,7 @@
 				8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */,
 				8F1D83DF192A2E7000A9898D /* BibApp UB WE.app */,
 				8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */,
-				8FA8F62F19502224006CD05A /* BibApp HFM We.app */,
+				8FA8F62F19502224006CD05A /* BibApp HfM WE.app */,
 				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
 				8FA8F8151950230D006CD05A /* BibApp SM.app */,
@@ -3706,7 +3706,7 @@
 				8FD611A8190916F0009E2358 /* BibApp-EAH-Jena-Info.plist */,
 				8F1D83E0192A2E7200A9898D /* BibApp-UB-WE-Info.plist */,
 				8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */,
-				8FA8F63019502224006CD05A /* BibApp-HFM-We-Info.plist */,
+				8FA8F63019502224006CD05A /* BibApp-HfM-WE-Info.plist */,
 				8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */,
 				8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */,
 				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
@@ -3927,9 +3927,9 @@
 			productReference = 8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F58F19502224006CD05A /* BibApp HFM We */ = {
+		8FA8F58F19502224006CD05A /* BibApp HfM WE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F62C19502224006CD05A /* Build configuration list for PBXNativeTarget "BibApp HFM We" */;
+			buildConfigurationList = 8FA8F62C19502224006CD05A /* Build configuration list for PBXNativeTarget "BibApp HfM WE" */;
 			buildPhases = (
 				8FA8F59019502224006CD05A /* Sources */,
 				8FA8F5DE19502224006CD05A /* Frameworks */,
@@ -3939,9 +3939,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp HFM We";
+			name = "BibApp HfM WE";
 			productName = bibapp;
-			productReference = 8FA8F62F19502224006CD05A /* BibApp HFM We.app */;
+			productReference = 8FA8F62F19502224006CD05A /* BibApp HfM WE.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FA8F6311950228D006CD05A /* BibApp NDH */ = {
@@ -4157,7 +4157,7 @@
 				8FD6110D190916EF009E2358 /* BibApp EAH Jena */,
 				8F1D8343192A2E7000A9898D /* BibApp UB WE */,
 				8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */,
-				8FA8F58F19502224006CD05A /* BibApp HFM We */,
+				8FA8F58F19502224006CD05A /* BibApp HfM WE */,
 				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
 				8FA8F7751950230D006CD05A /* BibApp SM */,
@@ -7253,18 +7253,18 @@
 		8FA8F62D19502224006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-HFM-We-Info.plist";
+				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp HFM We";
+				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7276,18 +7276,18 @@
 		8FA8F62E19502224006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-HFM-We-Info.plist";
+				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_NAME = "BibApp HFM We";
+				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7818,7 +7818,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F62C19502224006CD05A /* Build configuration list for PBXNativeTarget "BibApp HFM We" */ = {
+		8FA8F62C19502224006CD05A /* Build configuration list for PBXNativeTarget "BibApp HfM WE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F62D19502224006CD05A /* Debug */,
