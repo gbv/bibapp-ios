@@ -4106,7 +4106,7 @@
 			attributes = {
 				CLASSPREFIX = BA;
 				LastTestingUpgradeCheck = 0700;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Johannes Schultze";
 				TargetAttributes = {
 					8F8A757E1781BF4700CCF7DB = {
@@ -6946,6 +6946,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -6969,6 +6970,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -6992,6 +6994,7 @@
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7015,6 +7018,7 @@
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7038,6 +7042,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7060,6 +7065,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7082,6 +7088,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "6180CDF5-D9EA-4864-90FE-2CD6CB525351";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7104,6 +7111,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "6180CDF5-D9EA-4864-90FE-2CD6CB525351";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7127,6 +7135,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7149,6 +7158,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7172,6 +7182,7 @@
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7195,6 +7206,7 @@
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7218,6 +7230,7 @@
 				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp BA Thüringen";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7241,6 +7254,7 @@
 				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp BA Thüringen";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7312,6 +7326,7 @@
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7335,6 +7350,7 @@
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7358,6 +7374,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7381,6 +7398,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7404,6 +7422,7 @@
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7427,6 +7446,7 @@
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7450,6 +7470,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ube";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7473,6 +7494,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ube";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7496,6 +7518,7 @@
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7519,6 +7542,7 @@
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7542,6 +7566,7 @@
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7565,6 +7590,7 @@
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7588,6 +7614,7 @@
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7611,6 +7638,7 @@
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7631,6 +7659,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -7684,6 +7713,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7707,6 +7737,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7730,6 +7761,7 @@
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "eww.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -7749,6 +7781,7 @@
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "eww.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
