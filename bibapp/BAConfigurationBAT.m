@@ -31,8 +31,8 @@
     [self.currentBibImprint setObject:@"Ursprünglich: UB Lüneburg, UB Hildesheim, VZG\nAnpassung: Staatliche Studienakademie Thüringen\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
     self.currentBibContact = @"Gera\nBibliothek der Berufsakademie Gera\nWeg der Freundschaft 4A\n07546 Gera\nTel.: +49 365 / 4341-118 und -119\nFax: +49 365 / 4341-105\nE-Mail: bibliothek@ba-gera.de\nInternet: http://bibliothek.ba-gera.de\n\nEisenach\nBibliothek der Berufsakademie Eisenach\nAm Wartenberg 2\n99817 Eisenach\nTel.: +49 3691 / 6294-72 und -12\nFax: +49 3691 / 6294-59\nE-Mail: bibliothek@ba-eisenach.de\nInternet: http://bibliothek.ba-eisenach.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"BA Gera", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"BA Eisenach", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ga20", @"BA Gera", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ei6", @"BA Eisenach", nil]];
     self.currentBibSearchCountURL = @"";
     self.currentBibFeedURLIsWebsite = YES;
 }
