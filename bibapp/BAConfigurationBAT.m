@@ -18,8 +18,8 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ei6", @"BA Eisenach", @"BA Eisenach", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ga20", @"BA Gera", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ei6", @"BA Eisenach", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-Ga20", @"BA Gera", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenopc5.thulb.uni-jena.de:7242/DE-Ei6", @"BA Eisenach", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenlbs6.thulb.uni-jena.de:7242/DE-Ga20", @"BA Gera", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenlbs6.thulb.uni-jena.de:7242/DE-Ei6", @"BA Eisenach", nil]];
     self.currentBibFeedURL = @"http://www.ba-gera.de";
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.ba-gera.de", @"BA Gera", nil]];
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.ba-eisenach.de", @"BA Eisenach", nil]];
