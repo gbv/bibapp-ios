@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BibApp ÄZB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>BibApp BA Thüringen.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>BibApp BA Thüringen.xcscheme</key>
 		<dict>
@@ -19,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BibApp Commerzbibliothek.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>BibApp EAH Jena.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,7 +37,7 @@
 		<key>BibApp FHE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>9</integer>
 		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
@@ -57,17 +67,17 @@
 		<key>BibApp NDH.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>8</integer>
 		</dict>
 		<key>BibApp SM.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>10</integer>
 		</dict>
 		<key>BibApp TU BS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>14</integer>
 		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
@@ -77,12 +87,12 @@
 		<key>BibApp UB WE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>13</integer>
 		</dict>
 		<key>BibApp UFB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>11</integer>
 		</dict>
 		<key>BibApp ÄZB.xcscheme</key>
 		<dict>
@@ -97,6 +107,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8F07B12C1BFB72DB0012C325</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F113F90167F20C000E033F6</key>
 		<dict>
 			<key>primary</key>
