@@ -26,7 +26,8 @@
     //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-3", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
     //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-2", @"Göttingen, Ressourcenmanagement", nil]];
     //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-1", @"Göttingen, Naturwissenschaften", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-neu.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-neu.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
     //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-9.effective-webwork.de/", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
     //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-4.effective-webwork.de/", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];
     //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-3.effective-webwork.de/", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
@@ -48,7 +49,7 @@
     //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Ressourcenmanagement", nil]];
     //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Naturwissenschaften", nil]];
     self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=20";
-    self.currentBibUsePAIAWrapper = YES;
+    //self.currentBibUsePAIAWrapper = YES;
 }
 
 @end
