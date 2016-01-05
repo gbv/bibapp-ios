@@ -4337,7 +4337,7 @@
 						DevelopmentTeam = DG2S2C98D2;
 					};
 					8F8A76A81781C0D800CCF7DB = {
-						DevelopmentTeam = DG2S2C98D2;
+						DevelopmentTeam = YVAA23J962;
 					};
 					8FA8F4ED19501E6B006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
