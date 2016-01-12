@@ -6,9 +6,9 @@
 //  Copyright © 2015 Johannes Schultze. All rights reserved.
 //
 
-#import "BAConfigurationCB.h"
+#import "BAConfigurationCobi.h"
 
-@implementation BAConfigurationCB
+@implementation BAConfigurationCobi
 
 - (void)initConfiguration
 {

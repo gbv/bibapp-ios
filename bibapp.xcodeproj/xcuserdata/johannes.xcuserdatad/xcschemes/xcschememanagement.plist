@@ -24,10 +24,10 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BibApp Commerzbibliothek.xcscheme</key>
+		<key>BibApp Cobi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>BibApp EAH Jena.xcscheme</key>
 		<dict>
@@ -52,7 +52,7 @@
 		<key>BibApp HfM WE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>16</integer>
 		</dict>
 		<key>BibApp IL.xcscheme</key>
 		<dict>

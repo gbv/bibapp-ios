@@ -174,23 +174,23 @@
 		8F07B1D11BFB72DB0012C325 /* iPadIconLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F95B170466C8002EA336 /* iPadIconLG.png */; };
 		8F07B1D21BFB72DB0012C325 /* iPadIconLG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F95D170466D4002EA336 /* iPadIconLG@2x.png */; };
 		8F07B1D31BFB72DB0012C325 /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
-		8F07B1DB1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1DC1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1DD1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1DE1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1DF1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E01BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E11BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E21BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E31BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E41BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E51BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E61BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E71BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E81BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1E91BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1EA1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
-		8F07B1EB1BFB73700012C325 /* BAConfigurationCB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */; };
+		8F07B1DB1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1DC1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1DD1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1DE1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1DF1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E01BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E11BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E21BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E31BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E41BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E51BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E61BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E71BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E81BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1E91BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1EA1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
+		8F07B1EB1BFB73700012C325 /* BAConfigurationCobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */; };
 		8F0D9F7A16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */; };
 		8F0D9F7B16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */; };
 		8F0D9F7C16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7616B68AD8000CED81 /* menuIconInfo@2x.png */; };
@@ -2858,10 +2858,10 @@
 		8F0336201702F38B001E933F /* BADetailScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADetailScrollViewDelegate.h; sourceTree = "<group>"; };
 		8F052300166C96D600AB6D63 /* BAAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccount.h; sourceTree = "<group>"; };
 		8F052301166C96D600AB6D63 /* BAAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccount.m; sourceTree = "<group>"; };
-		8F07B1D71BFB72DB0012C325 /* BibApp Commerzbibliothek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp Commerzbibliothek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F07B1D81BFB72DC0012C325 /* BibApp CB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp CB.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp CB.plist"; sourceTree = "<absolute>"; };
-		8F07B1D91BFB73700012C325 /* BAConfigurationCB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationCB.h; sourceTree = "<group>"; };
-		8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationCB.m; sourceTree = "<group>"; };
+		8F07B1D71BFB72DB0012C325 /* BibApp Cobi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp Cobi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F07B1D81BFB72DC0012C325 /* BibApp Cobi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp Cobi-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp Cobi-Info.plist"; sourceTree = "<absolute>"; };
+		8F07B1D91BFB73700012C325 /* BAConfigurationCobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationCobi.h; sourceTree = "<group>"; };
+		8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationCobi.m; sourceTree = "<group>"; };
 		8F0D9F7516B68AD8000CED81 /* menuIconAccount@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIconAccount@2x.png"; sourceTree = "<group>"; };
 		8F0D9F7616B68AD8000CED81 /* menuIconInfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIconInfo@2x.png"; sourceTree = "<group>"; };
 		8F0D9F7716B68AD8000CED81 /* menuIconList@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIconList@2x.png"; sourceTree = "<group>"; };
@@ -3660,8 +3660,8 @@
 				8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */,
 				8F8EB64D1A9369C500548F24 /* BAConfigurationAEZB.h */,
 				8F8EB64E1A9369C500548F24 /* BAConfigurationAEZB.m */,
-				8F07B1D91BFB73700012C325 /* BAConfigurationCB.h */,
-				8F07B1DA1BFB73700012C325 /* BAConfigurationCB.m */,
+				8F07B1D91BFB73700012C325 /* BAConfigurationCobi.h */,
+				8F07B1DA1BFB73700012C325 /* BAConfigurationCobi.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -3855,7 +3855,7 @@
 				8FA8F8B71950233A006CD05A /* BibApp UFB.app */,
 				8FAD98101A0CFD3600C3A5D1 /* BibApp TU BS.app */,
 				8F8EB64B1A93689000548F24 /* BibApp ÄZB.app */,
-				8F07B1D71BFB72DB0012C325 /* BibApp Commerzbibliothek.app */,
+				8F07B1D71BFB72DB0012C325 /* BibApp Cobi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3919,7 +3919,7 @@
 				8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */,
 				8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */,
 				8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */,
-				8F07B1D81BFB72DC0012C325 /* BibApp CB.plist */,
+				8F07B1D81BFB72DC0012C325 /* BibApp Cobi-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
 				8FF2700416393BF200099665 /* InfoPlist.strings */,
 				8FF2700716393BF200099665 /* main.m */,
@@ -4015,9 +4015,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F07B12C1BFB72DB0012C325 /* BibApp Commerzbibliothek */ = {
+		8F07B12C1BFB72DB0012C325 /* BibApp Cobi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F07B1D41BFB72DB0012C325 /* Build configuration list for PBXNativeTarget "BibApp Commerzbibliothek" */;
+			buildConfigurationList = 8F07B1D41BFB72DB0012C325 /* Build configuration list for PBXNativeTarget "BibApp Cobi" */;
 			buildPhases = (
 				8F07B12D1BFB72DB0012C325 /* Sources */,
 				8F07B1841BFB72DB0012C325 /* Frameworks */,
@@ -4027,9 +4027,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp Commerzbibliothek";
+			name = "BibApp Cobi";
 			productName = bibapp;
-			productReference = 8F07B1D71BFB72DB0012C325 /* BibApp Commerzbibliothek.app */;
+			productReference = 8F07B1D71BFB72DB0012C325 /* BibApp Cobi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8F114037167F217000E033F6 /* BibApp HI */ = {
@@ -4389,7 +4389,7 @@
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 				8FAD97691A0CFD3600C3A5D1 /* BibApp TU BS */,
 				8F8EB5A41A93689000548F24 /* BibApp ÄZB */,
-				8F07B12C1BFB72DB0012C325 /* BibApp Commerzbibliothek */,
+				8F07B12C1BFB72DB0012C325 /* BibApp Cobi */,
 			);
 		};
 /* End PBXProject section */
@@ -5796,7 +5796,7 @@
 				8F07B17B1BFB72DB0012C325 /* BAURLRequestService.m in Sources */,
 				8F07B17C1BFB72DB0012C325 /* BAConfigurationBLS.m in Sources */,
 				8F07B17D1BFB72DB0012C325 /* BAConfigurationIL.m in Sources */,
-				8F07B1EB1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1EB1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F07B17E1BFB72DB0012C325 /* BAEntry.m in Sources */,
 				8F07B17F1BFB72DB0012C325 /* BAConfigurationHAWK.m in Sources */,
 				8F07B1801BFB72DB0012C325 /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -5890,7 +5890,7 @@
 				3B034321174944140076CA8B /* BAURLRequestService.m in Sources */,
 				8F8A77491781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774D1781C2A000CCF7DB /* BAConfigurationIL.m in Sources */,
-				8F07B1DC1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1DC1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A01B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8A77511781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94D91782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -5984,7 +5984,7 @@
 				8F1D8388192A2E7000A9898D /* BAURLRequestService.m in Sources */,
 				8F1D8389192A2E7000A9898D /* BAConfigurationBLS.m in Sources */,
 				8F1D838A192A2E7000A9898D /* BAConfigurationIL.m in Sources */,
-				8F07B1E21BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E21BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A61B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F1D838B192A2E7000A9898D /* BAConfigurationHAWK.m in Sources */,
 				8F1D838C192A2E7000A9898D /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6078,7 +6078,7 @@
 				8F8A75C11781BF4700CCF7DB /* BAURLRequestService.m in Sources */,
 				8F8A77461781C28500CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774E1781C2A100CCF7DB /* BAConfigurationIL.m in Sources */,
-				8F07B1DD1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1DD1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A11B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8A77521781C2A600CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6172,7 +6172,7 @@
 				8F8A76561781C05400CCF7DB /* BAURLRequestService.m in Sources */,
 				8F8A77471781C28B00CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F8A774A1781C29B00CCF7DB /* BAConfigurationBLS.m in Sources */,
-				8F07B1DE1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1DE1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A21B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8A77531781C2A700CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6266,7 +6266,7 @@
 				8F8A76EB1781C0D800CCF7DB /* BAURLRequestService.m in Sources */,
 				8F8A77451781C26B00CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F8A774B1781C29C00CCF7DB /* BAConfigurationBLS.m in Sources */,
-				8F07B1DF1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1DF1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A31B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8A774F1781C2A200CCF7DB /* BAConfigurationIL.m in Sources */,
 				8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6360,7 +6360,7 @@
 				8F8EB5F21A93689000548F24 /* BAURLRequestService.m in Sources */,
 				8F8EB5F31A93689000548F24 /* BAConfigurationBLS.m in Sources */,
 				8F8EB5F41A93689000548F24 /* BAConfigurationIL.m in Sources */,
-				8F07B1EA1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1EA1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482AE1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8EB5F51A93689000548F24 /* BAConfigurationHAWK.m in Sources */,
 				8F8EB5F61A93689000548F24 /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6454,7 +6454,7 @@
 				8FA8F53419501E6B006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F53519501E6B006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F53619501E6B006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E31BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E31BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A71B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F53719501E6B006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F53819501E6B006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6548,7 +6548,7 @@
 				8FA8F5D619502224006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F5D719502224006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F5D819502224006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E41BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E41BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A81B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F5D919502224006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F5DA19502224006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6642,7 +6642,7 @@
 				8FA8F6781950228D006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F6791950228D006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F67A1950228D006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E51BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E51BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A91B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F67B1950228D006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F67C1950228D006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6736,7 +6736,7 @@
 				8FA8F71A195022BC006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F71B195022BC006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F71C195022BC006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E61BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E61BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482AA1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F71D195022BC006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F71E195022BC006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6830,7 +6830,7 @@
 				8FA8F7BC1950230D006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F7BD1950230D006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F7BE1950230D006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E71BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E71BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482AB1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F7BF1950230D006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F7C01950230D006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -6924,7 +6924,7 @@
 				8FA8F85E1950233A006CD05A /* BAURLRequestService.m in Sources */,
 				8FA8F85F1950233A006CD05A /* BAConfigurationBLS.m in Sources */,
 				8FA8F8601950233A006CD05A /* BAConfigurationIL.m in Sources */,
-				8F07B1E81BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E81BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482AC1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FA8F8611950233A006CD05A /* BAConfigurationHAWK.m in Sources */,
 				8FA8F8621950233A006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -7018,7 +7018,7 @@
 				8FAD97B61A0CFD3600C3A5D1 /* BAURLRequestService.m in Sources */,
 				8FAD97B71A0CFD3600C3A5D1 /* BAConfigurationBLS.m in Sources */,
 				8FAD97B81A0CFD3600C3A5D1 /* BAConfigurationIL.m in Sources */,
-				8F07B1E91BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E91BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482AD1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FAD97B91A0CFD3600C3A5D1 /* BAConfigurationHAWK.m in Sources */,
 				8FAD97BA1A0CFD3600C3A5D1 /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -7112,7 +7112,7 @@
 				8FD610B4190916EA009E2358 /* BAURLRequestService.m in Sources */,
 				8FD610B5190916EA009E2358 /* BAConfigurationBLS.m in Sources */,
 				8FD610B6190916EA009E2358 /* BAConfigurationIL.m in Sources */,
-				8F07B1E01BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E01BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A41B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FD610B7190916EA009E2358 /* BAConfigurationHAWK.m in Sources */,
 				8FD610B8190916EA009E2358 /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -7206,7 +7206,7 @@
 				8FD61150190916EF009E2358 /* BAURLRequestService.m in Sources */,
 				8FD61151190916EF009E2358 /* BAConfigurationBLS.m in Sources */,
 				8FD61152190916EF009E2358 /* BAConfigurationIL.m in Sources */,
-				8F07B1E11BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1E11BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F4482A51B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8FD61153190916EF009E2358 /* BAConfigurationHAWK.m in Sources */,
 				8FD61154190916EF009E2358 /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -7300,7 +7300,7 @@
 				3B034320174944140076CA8B /* BAURLRequestService.m in Sources */,
 				8F8A77481781C29A00CCF7DB /* BAConfigurationBLS.m in Sources */,
 				8F8A774C1781C29F00CCF7DB /* BAConfigurationIL.m in Sources */,
-				8F07B1DB1BFB73700012C325 /* BAConfigurationCB.m in Sources */,
+				8F07B1DB1BFB73700012C325 /* BAConfigurationCobi.m in Sources */,
 				8F44829F1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */,
 				8F8A77501781C2A500CCF7DB /* BAConfigurationHAWK.m in Sources */,
 				8F2F94D81782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
@@ -7344,18 +7344,18 @@
 		8F07B1D51BFB72DB0012C325 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "CB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "CB LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp CB.plist";
+				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cb";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7368,18 +7368,18 @@
 		8F07B1D61BFB72DB0012C325 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "CB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "CB LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp CB.plist";
+				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cb";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -8247,7 +8247,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F07B1D41BFB72DB0012C325 /* Build configuration list for PBXNativeTarget "BibApp Commerzbibliothek" */ = {
+		8F07B1D41BFB72DB0012C325 /* Build configuration list for PBXNativeTarget "BibApp Cobi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F07B1D51BFB72DB0012C325 /* Debug */,

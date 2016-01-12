@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F07B12C1BFB72DB0012C325"
-               BuildableName = "BibApp Commerzbibliothek.app"
-               BlueprintName = "BibApp Commerzbibliothek"
+               BlueprintIdentifier = "8FA8F58F19502224006CD05A"
+               BuildableName = "BibApp HfM WE.app"
+               BlueprintName = "BibApp HfM WE"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F07B12C1BFB72DB0012C325"
-            BuildableName = "BibApp Commerzbibliothek.app"
-            BlueprintName = "BibApp Commerzbibliothek"
+            BlueprintIdentifier = "8FA8F58F19502224006CD05A"
+            BuildableName = "BibApp HfM WE.app"
+            BlueprintName = "BibApp HfM WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F07B12C1BFB72DB0012C325"
-            BuildableName = "BibApp Commerzbibliothek.app"
-            BlueprintName = "BibApp Commerzbibliothek"
+            BlueprintIdentifier = "8FA8F58F19502224006CD05A"
+            BuildableName = "BibApp HfM WE.app"
+            BlueprintName = "BibApp HfM WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F07B12C1BFB72DB0012C325"
-            BuildableName = "BibApp Commerzbibliothek.app"
-            BlueprintName = "BibApp Commerzbibliothek"
+            BlueprintIdentifier = "8FA8F58F19502224006CD05A"
+            BuildableName = "BibApp HfM WE.app"
+            BlueprintName = "BibApp HfM WE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
