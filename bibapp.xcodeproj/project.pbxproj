@@ -4329,7 +4329,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BA;
-				LastTestingUpgradeCheck = 0700;
+				LastTestingUpgradeCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Johannes Schultze";
 				TargetAttributes = {

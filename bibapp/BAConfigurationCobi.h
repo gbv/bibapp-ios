@@ -1,5 +1,5 @@
 //
-//  BAConfigurationCB.h
+//  BAConfigurationCobi.h
 //  bibapp
 //
 //  Created by Johannes Schultze on 17.11.15.
