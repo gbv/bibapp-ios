@@ -136,11 +136,11 @@ static BAConnector *sharedConnector = nil;
 
 - (void)searchCountWithDelegate:(id)delegate
 {
-    if (![self.appDelegate.configuration.currentBibSearchCountURL isEqualToString:@""]) {
+    if (![[self.appDelegate.configuration getSearchCountURLForCatalog:self.appDelegate.options.selectedCatalogue] isEqualToString:@""]) {
         [self setConnectorDelegate:delegate];
         [self setCommand:@"searchCount"];
         if ([self checkNetworkReachability]) {
-           NSURL *url = [NSURL URLWithString:self.appDelegate.configuration.currentBibSearchCountURL];
+           NSURL *url = [NSURL URLWithString:[self.appDelegate.configuration getSearchCountURLForCatalog:self.appDelegate.options.selectedCatalogue]];
            NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
            [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
            [theRequest setHTTPMethod:@"GET"];

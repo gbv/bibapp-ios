@@ -28,7 +28,8 @@
     self.currentBibContact = @"Universitätsbibliothek Lüneburg\nScharnhorststraße 1\n21335 Lüneburg\n\nTelefon: (04131) 677-1100\nTelefax: (04131) 677-1111\n\nE-mail: unibib@uni-lueneburg.de\nWWW: www.leuphana.de/ub";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Luen4";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Luen4", @"Standard-Katalog", nil]];
-    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20";
+    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20";
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20", @"Standard-Katalog", nil]];
 }
 
 @end

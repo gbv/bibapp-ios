@@ -27,7 +27,6 @@
    self.currentBibContact = @"Universitätsbibliothek Braunschweig\n\nAnschrift\nUniversitätsbibliothek Braunschweig\nPockelsstraße 13\n38106 Braunschweig\n\nwww.biblio.tu-braunschweig.de\n\nAusleihe\nTelefon: (0531)391-5017\nE-Mail: ub-leihstelle@tu-braunschweig.de\n\n\nInformation\nTelefon: (0531)391-5018\nE-Mail: ub@tu-braunschweig.de\n\nGeschäftszimmer:\nTelefon: (0531)391-5011\nE-Mail: ub@tu-braunschweig.de";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-84";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-84", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"";
 }
 
 @end

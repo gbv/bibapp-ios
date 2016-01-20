@@ -29,7 +29,8 @@
    self.currentBibContact = @"Anschrift\nThüringer Universitäts- und Landesbibliothek Jena Postfach\n07743 Jena\nhttp://www.thulb.uni-jena.de\n\nAuskunft\nTelefon: +49 3641 9-40100\nE-Mail: info@thulb.uni-jena.de\n\nAusleihe\nTelefon: +49 3641 9-40110\nE-Mail: thulb_ausleihe@thulb.uni-jena.de";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-27";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-27", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"http://www4.thulb.uni-jena.de/pwk/piwik.php?idsite=1&rec=1";
+   //self.currentBibSearchCountURL = @"http://www4.thulb.uni-jena.de/pwk/piwik.php?idsite=1&rec=1";
+   [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://www4.thulb.uni-jena.de/pwk/piwik.php?idsite=1&rec=1", @"Standard-Katalog", nil]];
    self.currentBibFeedURLIsWebsite = YES;
 }
 

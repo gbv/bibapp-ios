@@ -25,7 +25,6 @@
    self.currentBibContact = @"Ärztliche Zentralbibliothek\n\nLeihstelle: 040/7410-59552\nAuskunft: 040/7410-53012\n\nE-Mail: aezb@uke.de\n\nTäglich geöffnet von 08:00 - 22:00 Uhr\nService Mo.-Fr. von 08:00 - 17:00 Uhr";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-18-64";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-18-64", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"";
    self.currentBibRequestTitle = @"kostenpflichtig (0,80€) vormerken";
    self.currentBibFeedURLIsWebsite = YES;
    self.currentBibHideDepartment = YES;

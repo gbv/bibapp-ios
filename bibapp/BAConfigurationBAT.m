@@ -33,8 +33,9 @@
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ga20", @"BA Gera", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ei6", @"BA Eisenach", nil]];
-    self.currentBibSearchCountURL = @"";
     self.currentBibFeedURLIsWebsite = YES;
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://pwk.thulb.uni-jena.de/piwik.php?idsite=4&rec=1", @"BA Gera", nil]];
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://pwk.thulb.uni-jena.de/piwik.php?idsite=5&rec=1", @"BA Eisenach", nil]];
 }
 
 @end

@@ -26,7 +26,6 @@
     self.currentBibContact = @"Hochschule für Musik FRANZ LISZT Weimar\nHochschulbibliothek\nPlatz der Demokratie 2/3\n99423 Weimar\n\nTel. +49 (0) 3643 | 555 124\nFax +49 (0) 3643 | 555 160\nE-Mail: bibliothek@hfm-weimar.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim8";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim8", @"Standard-Katalog", nil]];
-    self.currentBibSearchCountURL = @"";
 }
 
 @end

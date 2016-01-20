@@ -27,7 +27,6 @@
     self.currentBibContact = @"Anschrift\nEAH Jena\nCarl Zeiss Promenade 2\n07745 Jena\nwww.fh-jena.de/bib\n\nTelefon: (03641) 205-270\nE-Mail: bibliothek@fh-jena.de\n\nAusleihe\nTelefon: (03641) 205-280  oder …290\nE-Mail: ausleihe@fh-jena.de\n\nFernleihe\nTelefon: (03641) 205-283\nE-Mail: Fernleihe@fh-jena.de\n\nPatentinformationszentrum (PIZ)\nTelefon: (03641) 205-2275 oder …273\nE-Mail: PIZ@fh-jena.de";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-J59";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-J59", @"Standard-Katalog", nil]];
-   //self.currentBibSearchCountURL = @"";
 }
 
 @end

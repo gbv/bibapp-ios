@@ -24,7 +24,7 @@
 @property (strong, nonatomic) NSString *currentBibContact;
 @property (strong, nonatomic) NSString *currentBibLocationURI;
 @property (strong, nonatomic) NSMutableArray *currentBibLocationURIs;
-@property (strong, nonatomic) NSString *currentBibSearchCountURL;
+@property (strong, nonatomic) NSMutableArray *currentBibSearchCountURLs;
 @property (strong, nonatomic) NSString *currentBibStandardCatalogue;
 @property BOOL *currentBibHideDepartment;
 @property BOOL *currentBibFeedURLIsWebsite;
@@ -42,6 +42,7 @@
 - (NSString *)getLocationURIForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchTitleForCatalog:(NSString *)catalogue;
 - (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
+- (NSString *)getSearchCountURLForCatalog:(NSString *)catalogue;
 - (BOOL)usePAIAWrapper;
 
 @end

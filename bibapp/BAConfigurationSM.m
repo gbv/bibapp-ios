@@ -27,7 +27,8 @@
     self.currentBibContact = @"Hochschule Schmalkalden\nCellarius Bibliothek\nBlechhammer, Haus I\n98574 Schmalkalden\nhttp://www.hs-schmalkalden.de/bibliothek\nTel.: 03683 6881785\nFax: 03683 6881923\nE-Mail: bibliothek@hs-schmalkalden.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Shm2";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Shm2", @"Standard-Katalog", nil]];
-    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20";
+    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20";
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20", @"Standard-Katalog", nil]];
 }
 
 @end

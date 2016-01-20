@@ -28,7 +28,6 @@
     self.currentBibContact = @"Bibliothek der Bucerius Law School\n\nJungiusstrasse 6\n\n20355 Hamburg\n\nPHONE: 040 30706 134\n\nMOBIL: 0176 7066 3447\n\nMAIL: martin.vorberg@law-school.de\n\nURL: www.law-school.de/bibliothek.html";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-H360";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-H360", @"Standard-Katalog", nil]];
-    self.currentBibSearchCountURL = @"";
     self.currentBibHideDepartment = YES;
 }
 

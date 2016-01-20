@@ -29,7 +29,8 @@
     self.currentBibContact = @"Anschrift\nUniversitätsbibliothek Hildesheim\nMarienburger Platz 22\n31141 Hildesheim\n\nwww.uni-hildesheim.de/bibliothek\n\nAuskunft\nTelefon: (05121) 883-93010\nE-Mail: auskunft@uni-hildesheim.de\n\nAusleihe\nTelefon: (05121) 883-93020\nE-Mail: ausleihe@uni-hildesheim.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil2";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil2", @"Standard-Katalog", nil]];
-    self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20";
+    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20";
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20", @"Standard-Katalog", nil]];
 }
 
 @end

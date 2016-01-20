@@ -30,7 +30,6 @@
    self.currentBibContact = @"Commerzbibliothek\nHandelskammer Hamburg\nAdolphsplatz 1\n20457 Hamburg\n\nBibliothekarische Auskunft\nTelefon 040-36138-377\nFax 040-36138-437\nE-Mail info@commerzbibliothek.de\n\nAusleihe\nTelefon 040-36138-374\nFax 040-36138-437\nE-Mail ausleihe@commerzbibliothek.de";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-205";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-205", @"Standard-Katalog", nil]];
-   //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20";
 }
 
 @end

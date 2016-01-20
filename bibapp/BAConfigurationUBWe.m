@@ -25,7 +25,8 @@
    self.currentBibContact = @"Kontakt\nDirektor der Bibliothek, Dr. Frank Simon-Ritz,\nTelefon: 0 36 43 / 58 28 00\nE-Mail: sekretariat@ub.uni-weimar.de\n\nAusleihe:\nTel.: 0 36 43 / 58 28 10\nausleihe@ub.uni-weimar.de\n\nInformation\nTel.: 0 36 43 / 58 28 20\nE-Mail: info@ub.uni-weimar.de\n\nFernleihe:\nTel.: 0 36 43 / 58 28 12 oder 0 36 43 / 58 28 09\nfernleihe@ub.uni-weimar.de\n\nBibliothek Baustoffe und Naturwissenschaften:\nTel.: 0 36 43 / 58 28 90";
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"Standard-Katalog", nil]];
-   self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20";
+   //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20";
+   [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20", @"Standard-Katalog", nil]];
 }
 
 @end
