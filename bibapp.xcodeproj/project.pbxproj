@@ -7927,7 +7927,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ube";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -7951,7 +7951,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
-				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ube";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
