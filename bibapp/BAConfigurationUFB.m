@@ -15,13 +15,13 @@
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibStandardCatalogue = @"UFB Erfurt/Gotha";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-1867", @"UFB Erfurt/Gotha", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-547", @"UB Erfurt/Gotha", @"Lokale Suche", @"Lokale Suche", nil]];
+    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-547", @"UB Erfurt", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-39", @"FB Gotha", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UB Erfurt/Gotha", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UB Erfurt", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"FB Gotha", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UB Erfurt/Gotha", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UB Erfurt", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"FB Gotha", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [UIColor colorWithRed:0.050980F green:0.188235F blue:0.274510F alpha:1.0F];
@@ -30,11 +30,11 @@
     self.currentBibContact = @"UB Erfurt\nE-Mail: information.ub@uni-erfurt.de\nTelefon: 0361/737-5800\n\nFB Gotha\nE-Mail: bibliothek.gotha@uni-erfurt.de\n\nTelefon: 0361/737-5540";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-1867";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-1867", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-547", @"UB Erfurt/Gotha", nil]];
+    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-547", @"UB Erfurt", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-39", @"FB Gotha", nil]];
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"UB Erfurt/Gotha", nil]];
+    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"UB Erfurt", nil]];
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"FB Gotha", nil]];
 }
 
