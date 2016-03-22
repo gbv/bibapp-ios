@@ -26,7 +26,7 @@
    self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Wim2";
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Wim2", @"Standard-Katalog", nil]];
    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20";
-   [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=EM482&amp;page=20", @"Standard-Katalog", nil]];
+   [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"https://piwik.uni-weimar.de/piwik.php?idsite=25&rec=1", @"Standard-Katalog", nil]];
 }
 
 @end
