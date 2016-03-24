@@ -4333,6 +4333,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Johannes Schultze";
 				TargetAttributes = {
+					8F1D8343192A2E7000A9898D = {
+						DevelopmentTeam = DG2S2C98D2;
+					};
 					8F8A757E1781BF4700CCF7DB = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
