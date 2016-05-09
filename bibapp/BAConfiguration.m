@@ -57,7 +57,7 @@
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
-       self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
+        self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
        
         self.searchTitle = @"Suche";
         self.hasLocalDetailURL = NO;
