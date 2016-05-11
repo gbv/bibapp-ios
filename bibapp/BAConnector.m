@@ -189,8 +189,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetailsLocal"];
    if ([self checkNetworkReachability]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=xml", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
-    
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=json", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
@@ -203,7 +202,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"getDetails"];
    if ([self checkNetworkReachability]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=xml", ppn]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=json", ppn]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {

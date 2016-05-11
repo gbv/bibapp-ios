@@ -71,6 +71,8 @@
         self.currentBibRequestTitle = @"Vormerken";
        
         self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
+       
+        self.useDAIAParser = YES;
     }
     return self;
 }

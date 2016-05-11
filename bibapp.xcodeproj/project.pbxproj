@@ -501,6 +501,24 @@
 		8F4482BD1B5D1C1500EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
 		8F4482BE1B5D1C1E00EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
 		8F4482BF1B5D1C2500EE6DA9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */; };
+		8F4486A81CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486A91CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AA1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AB1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AC1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AD1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AE1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486AF1CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B01CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B11CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B21CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B31CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B41CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B51CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B61CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B71CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B81CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
+		8F4486B91CB67E32003C7853 /* DAIAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4486A71CB67E32003C7853 /* DAIAParser.m */; };
 		8F4FC4CF1670C97300CFA4C5 /* BATocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */; };
 		8F4FC4D21670CD4F00CFA4C5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */; };
 		8F5319271951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */; };
@@ -2933,6 +2951,8 @@
 		8F44829D1B5D0B5B00EE6DA9 /* BAEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAEntry.h; sourceTree = "<group>"; };
 		8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAEntry.m; sourceTree = "<group>"; };
 		8F4482AF1B5D1BAA00EE6DA9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8F4486A61CB67E32003C7853 /* DAIAParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAIAParser.h; sourceTree = "<group>"; };
+		8F4486A71CB67E32003C7853 /* DAIAParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAIAParser.m; sourceTree = "<group>"; };
 		8F4FC4CD1670C97300CFA4C5 /* BATocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewController.h; sourceTree = "<group>"; };
 		8F4FC4CE1670C97300CFA4C5 /* BATocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewController.m; sourceTree = "<group>"; };
 		8F4FC4D11670CD4F00CFA4C5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -3564,6 +3584,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8F4486A51CB67DE5003C7853 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				8F4486A61CB67E32003C7853 /* DAIAParser.h */,
+				8F4486A71CB67E32003C7853 /* DAIAParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		8F84BE15163C60F400614B36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -3889,6 +3918,7 @@
 				8F84BE18163C610D00614B36 /* Model */,
 				8F84BE15163C60F400614B36 /* Controller */,
 				8F3A132A1640074200D0B6F1 /* View */,
+				8F4486A51CB67DE5003C7853 /* Parser */,
 				8FF2701316393BF200099665 /* bibapp.xcdatamodeld */,
 				8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */,
 				8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */,
@@ -5770,6 +5800,7 @@
 				8F07B15E1BFB72DB0012C325 /* BASearchViewControllerPad.m in Sources */,
 				8F07B15F1BFB72DB0012C325 /* BAAccountViewControllerPad.m in Sources */,
 				8F07B1601BFB72DB0012C325 /* BAAccountTableHeaderViewPad.m in Sources */,
+				8F4486B91CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F07B1611BFB72DB0012C325 /* BADocumentItemElementCellPad.m in Sources */,
 				8F07B1621BFB72DB0012C325 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F07B1631BFB72DB0012C325 /* BAConfigurationHFMWe.m in Sources */,
@@ -5864,6 +5895,7 @@
 				8F7B9DD116C3BEE50014A653 /* BALocationTableViewController.m in Sources */,
 				8FED45F716D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */,
 				8F57757016D5129A009E143E /* BAAccountViewControllerPad.m in Sources */,
+				8F4486A91CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F7E1ED616D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FE94A7B16DCBF9C004D33B7 /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8CC195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -5958,6 +5990,7 @@
 				8F1D8370192A2E7000A9898D /* BALocationTableViewController.m in Sources */,
 				8F1D8371192A2E7000A9898D /* BASearchViewControllerPad.m in Sources */,
 				8F1D8372192A2E7000A9898D /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AF1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F1D8373192A2E7000A9898D /* BAAccountTableHeaderViewPad.m in Sources */,
 				8F1D8374192A2E7000A9898D /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D2195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6052,6 +6085,7 @@
 				8F8A75A91781BF4700CCF7DB /* BALocationTableViewController.m in Sources */,
 				8F8A75AA1781BF4700CCF7DB /* BASearchViewControllerPad.m in Sources */,
 				8F8A75AB1781BF4700CCF7DB /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AA1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F8A75AC1781BF4700CCF7DB /* BAAccountTableHeaderViewPad.m in Sources */,
 				8F8A75AD1781BF4700CCF7DB /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8CD195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6146,6 +6180,7 @@
 				8F8A763E1781C05400CCF7DB /* BALocationTableViewController.m in Sources */,
 				8F8A763F1781C05400CCF7DB /* BASearchViewControllerPad.m in Sources */,
 				8F8A76401781C05400CCF7DB /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AB1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F8A76411781C05400CCF7DB /* BAAccountTableHeaderViewPad.m in Sources */,
 				8F8A76421781C05400CCF7DB /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8CE195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6240,6 +6275,7 @@
 				8F8A76D31781C0D800CCF7DB /* BALocationTableViewController.m in Sources */,
 				8F8A76D41781C0D800CCF7DB /* BASearchViewControllerPad.m in Sources */,
 				8F8A76D51781C0D800CCF7DB /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AC1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F8A76D61781C0D800CCF7DB /* BAAccountTableHeaderViewPad.m in Sources */,
 				8F8A76D71781C0D800CCF7DB /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8CF195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6334,6 +6370,7 @@
 				8F8EB5D61A93689000548F24 /* BASearchViewControllerPad.m in Sources */,
 				8F8EB5D71A93689000548F24 /* BAAccountViewControllerPad.m in Sources */,
 				8F8EB5D81A93689000548F24 /* BAAccountTableHeaderViewPad.m in Sources */,
+				8F4486B81CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8F8EB5D91A93689000548F24 /* BADocumentItemElementCellPad.m in Sources */,
 				8F8EB5DA1A93689000548F24 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8EB5DB1A93689000548F24 /* BAConfigurationHFMWe.m in Sources */,
@@ -6428,6 +6465,7 @@
 				8FA8F51C19501E6B006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F51D19501E6B006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F51E19501E6B006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B01CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F51F19501E6B006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F52019501E6B006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D3195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6522,6 +6560,7 @@
 				8FA8F5BE19502224006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F5BF19502224006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F5C019502224006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B11CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F5C119502224006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F5C219502224006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D4195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6616,6 +6655,7 @@
 				8FA8F6601950228D006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F6611950228D006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F6621950228D006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B21CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F6631950228D006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F6641950228D006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D5195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6710,6 +6750,7 @@
 				8FA8F702195022BC006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F703195022BC006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F704195022BC006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B31CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F705195022BC006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F706195022BC006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D6195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6804,6 +6845,7 @@
 				8FA8F7A41950230D006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F7A51950230D006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F7A61950230D006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B41CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F7A71950230D006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F7A81950230D006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D7195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6898,6 +6940,7 @@
 				8FA8F8461950233A006CD05A /* BALocationTableViewController.m in Sources */,
 				8FA8F8471950233A006CD05A /* BASearchViewControllerPad.m in Sources */,
 				8FA8F8481950233A006CD05A /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B51CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FA8F8491950233A006CD05A /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FA8F84A1950233A006CD05A /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D8195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -6992,6 +7035,7 @@
 				8FAD979A1A0CFD3600C3A5D1 /* BALocationTableViewController.m in Sources */,
 				8FAD979B1A0CFD3600C3A5D1 /* BASearchViewControllerPad.m in Sources */,
 				8FAD979C1A0CFD3600C3A5D1 /* BAAccountViewControllerPad.m in Sources */,
+				8F4486B71CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FAD979D1A0CFD3600C3A5D1 /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FAD979E1A0CFD3600C3A5D1 /* BADocumentItemElementCellPad.m in Sources */,
 				8FAD979F1A0CFD3600C3A5D1 /* BAConfigurationHFMWe.m in Sources */,
@@ -7086,6 +7130,7 @@
 				8FD6109C190916EA009E2358 /* BALocationTableViewController.m in Sources */,
 				8FD6109D190916EA009E2358 /* BASearchViewControllerPad.m in Sources */,
 				8FD6109E190916EA009E2358 /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AD1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FD6109F190916EA009E2358 /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FD610A0190916EA009E2358 /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D0195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -7180,6 +7225,7 @@
 				8FD61138190916EF009E2358 /* BALocationTableViewController.m in Sources */,
 				8FD61139190916EF009E2358 /* BASearchViewControllerPad.m in Sources */,
 				8FD6113A190916EF009E2358 /* BAAccountViewControllerPad.m in Sources */,
+				8F4486AE1CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FD6113B190916EF009E2358 /* BAAccountTableHeaderViewPad.m in Sources */,
 				8FD6113C190916EF009E2358 /* BADocumentItemElementCellPad.m in Sources */,
 				8FA8F8D1195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -7274,6 +7320,7 @@
 				8FED45F616D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */,
 				8F57756F16D5129A009E143E /* BAAccountViewControllerPad.m in Sources */,
 				8F7E1ED516D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m in Sources */,
+				8F4486A81CB67E32003C7853 /* DAIAParser.m in Sources */,
 				8FE94A7A16DCBF9C004D33B7 /* BADocumentItemElementCellPad.m in Sources */,
 				8FE94A7E16DCBFB5004D33B7 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F8CB195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
@@ -7319,6 +7366,7 @@
 			files = (
 				8FFF22D11786B8580077FC8B /* BibAppUnitTests.m in Sources */,
 				8FAD98221A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
+				8F4486B61CB67E32003C7853 /* DAIAParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
