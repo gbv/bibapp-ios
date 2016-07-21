@@ -29,6 +29,7 @@
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-H360";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-H360", @"Standard-Katalog", nil]];
     self.currentBibHideDepartment = YES;
+    self.currentBibUsePAIAWrapper = YES;
 }
 
 @end
