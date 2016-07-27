@@ -14,6 +14,14 @@
 
 @implementation DAIAParser
 
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    }
+    return self;
+}
+
 -(void)parseDAIAForDocument:(BADocument *)baDocument WithResult:(NSObject *)result {
    [baDocument setItems:[[NSMutableArray alloc] init]];
    
@@ -186,6 +194,111 @@
       
       [baDocument.items addObject:tempDocumentItem];
    }
+}
+
+-(BADocumentItemElementCell *)prepareDAIAForCell:(BADocumentItemElementCell *)cell withItem:(BADocumentItem *)item withEntry:(BAEntryWork *)entry {
+    if (entry.onlineLocation == nil) {
+        NSMutableString *titleString = [[NSMutableString alloc] init];
+        if (item.department != nil && !self.appDelegate.configuration.currentBibHideDepartment) {
+            [titleString appendString:item.department];
+        }
+        if (item.storage != nil) {
+            if (![item.storage isEqualToString:@""]) {
+                if (!self.appDelegate.configuration.currentBibHideDepartment) {
+                    [titleString appendFormat:@", %@", item.storage];
+                } else {
+                    [titleString appendFormat:@"%@", item.storage];
+                }
+            }
+        } else {
+            if (item.department != nil && [titleString isEqualToString:@""]) {
+                [titleString appendString:item.department];
+            }
+        }
+        [cell.title setText:titleString];
+    } else {
+        [cell.title setText:entry.onlineLocation];
+    }
+    [cell.subtitle setText:item.label];
+    
+    NSMutableString *status = [[NSMutableString alloc] init];
+    NSMutableString *statusInfo = [[NSMutableString alloc] init];
+    
+    BADocumentItemElement *presentation;
+    BADocumentItemElement *loan;
+    
+    for (BADocumentItemElement *element in item.services) {
+        if ([element.service isEqualToString:@"presentation"]) {
+            presentation = element;
+        } else if ([element.service isEqualToString:@"loan"]) {
+            loan = element;
+        }
+    }
+    
+    if (loan.available) {
+        [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
+        [status appendString:@"ausleihbar"];
+        
+        if (presentation.limitation != nil) {
+            [status appendString:[[NSString alloc] initWithFormat:@"; %@", presentation.limitation]];
+        }
+        
+        if (presentation.available) {
+            if (loan.href == nil) {
+                [statusInfo appendString:@"Bitte am Standort entnehmen"];
+            } else {
+                [statusInfo appendString:@"Bitte bestellen"];
+            }
+        }
+    } else {
+        if (loan.href != nil) {
+            NSRange match = [loan.href rangeOfString: @"loan/RES"];
+            if (match.length > 0) {
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.5 blue:0.0 alpha:1.0]];
+                [status appendString:@"ausleihbar"];
+            } else {
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                [status appendString:@"nicht ausleihbar"];
+            }
+        } else {
+            if (entry.onlineLocation == nil) {
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                [status appendString:@"nicht ausleihbar"];
+            } else {
+                [status appendString:@"Online-Ressource im Browser öffnen"];
+            }
+        }
+        if (presentation.limitation != nil) {
+            [status appendString:[[NSString alloc] initWithFormat:@"; %@", presentation.limitation]];
+        }
+        
+        if (!presentation.available) {
+            if (loan.href == nil) {
+                //[statusInfo appendString:@"..."];
+            } else {
+                NSRange match = [loan.href rangeOfString: @"loan/RES"];
+                if (match.length > 0) {
+                    if ([loan.expected isEqualToString:@""] || [loan.expected isEqualToString:@"unknown"]) {
+                        [statusInfo appendString:@"ausgeliehen, Vormerken möglich"];
+                    } else {
+                        NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
+                        NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
+                        NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
+                        [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]];
+                    }
+                }
+            }
+        }
+    }
+    
+    if (item.daiaInfoFromOpac) {
+        status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
+    }
+    
+    [cell.status setText:status];
+    [cell.statusInfo setText:statusInfo];
+    
+    return cell;
 }
 
 @end

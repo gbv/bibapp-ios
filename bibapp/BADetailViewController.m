@@ -798,7 +798,7 @@
             BADocumentItemElementCell *cell = [nib objectAtIndex:0];
             */
              
-            BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
+            /* BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:[indexPath row]];
             
             if (self.currentEntry.onlineLocation == nil) {
                 NSMutableString *titleString = [[NSMutableString alloc] init];
@@ -899,7 +899,10 @@
             }
            
             [cell.status setText:status];
-            [cell.statusInfo setText:statusInfo];
+            [cell.statusInfo setText:statusInfo]; */
+            
+            DAIAParser *daiaParser = [[DAIAParser alloc] init];
+            cell = [daiaParser prepareDAIAForCell:cell withItem:[self.currentDocument.items objectAtIndex:[indexPath row]] withEntry:self.currentEntry];
             
             if (indexPath.row % 2) {
                 cell.contentView.backgroundColor = [UIColor whiteColor];
