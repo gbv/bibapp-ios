@@ -7,12 +7,7 @@
 		<key>BibApp ÄZB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
-		</dict>
-		<key>BibApp BA Thüringen.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>14</integer>
 		</dict>
 		<key>BibApp BA Thüringen.xcscheme</key>
 		<dict>
@@ -25,6 +20,11 @@
 			<integer>2</integer>
 		</dict>
 		<key>BibApp Cobi.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>BibApp DHGE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>17</integer>
@@ -52,7 +52,7 @@
 		<key>BibApp HfM WE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>15</integer>
 		</dict>
 		<key>BibApp IL.xcscheme</key>
 		<dict>
@@ -77,7 +77,7 @@
 		<key>BibApp TU BS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>13</integer>
 		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
@@ -87,7 +87,7 @@
 		<key>BibApp UB WE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>BibApp UFB.xcscheme</key>
 		<dict>

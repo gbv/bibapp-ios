@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
                BuildableName = "BibApp BA Thu&#x308;ringen.app"
-               BlueprintName = "BibApp BA Th&#xfc;ringen"
+               BlueprintName = "BibApp DHGE"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BA Thu&#x308;ringen.app"
-            BlueprintName = "BibApp BA Th&#xfc;ringen"
+            BlueprintName = "BibApp DHGE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BA Thu&#x308;ringen.app"
-            BlueprintName = "BibApp BA Th&#xfc;ringen"
+            BlueprintName = "BibApp DHGE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,7 +76,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA8F4ED19501E6B006CD05A"
             BuildableName = "BibApp BA Thu&#x308;ringen.app"
-            BlueprintName = "BibApp BA Th&#xfc;ringen"
+            BlueprintName = "BibApp DHGE"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

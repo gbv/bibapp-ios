@@ -83,7 +83,7 @@
 		8F07B1741BFB72DB0012C325 /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
 		8F07B1751BFB72DB0012C325 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8F07B1761BFB72DB0012C325 /* BAConfigurationUFB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F90A1950272E006CD05A /* BAConfigurationUFB.m */; };
-		8F07B1771BFB72DB0012C325 /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
+		8F07B1771BFB72DB0012C325 /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
 		8F07B1781BFB72DB0012C325 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F07B1791BFB72DB0012C325 /* BAConfigurationNDH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8DA19502706006CD05A /* BAConfigurationNDH.m */; };
 		8F07B17A1BFB72DB0012C325 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
@@ -1076,7 +1076,7 @@
 		8F8EB5EB1A93689000548F24 /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
 		8F8EB5EC1A93689000548F24 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8F8EB5ED1A93689000548F24 /* BAConfigurationUFB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F90A1950272E006CD05A /* BAConfigurationUFB.m */; };
-		8F8EB5EE1A93689000548F24 /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
+		8F8EB5EE1A93689000548F24 /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
 		8F8EB5EF1A93689000548F24 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8F8EB5F01A93689000548F24 /* BAConfigurationNDH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8DA19502706006CD05A /* BAConfigurationNDH.m */; };
 		8F8EB5F11A93689000548F24 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
@@ -2098,20 +2098,20 @@
 		8FA8F8B11950233A006CD05A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD873172695C800D66DE6 /* Icon-72.png */; };
 		8FA8F8B21950233A006CD05A /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */; };
 		8FA8F8B31950233A006CD05A /* BACatalogueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F36FC351784611900C99951 /* BACatalogueTableViewCell.xib */; };
-		8FA8F8BB1950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8BC1950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8BD1950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8BE1950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8BF1950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C01950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C11950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C21950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C31950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C41950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C51950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C61950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C71950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
-		8FA8F8C81950268E006CD05A /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
+		8FA8F8BB1950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8BC1950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8BD1950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8BE1950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8BF1950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C01950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C11950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C21950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C31950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C41950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C51950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C61950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C71950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
+		8FA8F8C81950268E006CD05A /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
 		8FA8F8CB195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8CA195026F5006CD05A /* BAConfigurationHFMWe.m */; };
 		8FA8F8CC195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8CA195026F5006CD05A /* BAConfigurationHFMWe.m */; };
 		8FA8F8CD195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8CA195026F5006CD05A /* BAConfigurationHFMWe.m */; };
@@ -2252,7 +2252,7 @@
 		8FAD97AF1A0CFD3600C3A5D1 /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
 		8FAD97B01A0CFD3600C3A5D1 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8FAD97B11A0CFD3600C3A5D1 /* BAConfigurationUFB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F90A1950272E006CD05A /* BAConfigurationUFB.m */; };
-		8FAD97B21A0CFD3600C3A5D1 /* BAConfigurationBAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */; };
+		8FAD97B21A0CFD3600C3A5D1 /* BAConfigurationDHGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */; };
 		8FAD97B31A0CFD3600C3A5D1 /* BATocListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C271701C40200C4E580 /* BATocListTableViewController.m */; };
 		8FAD97B41A0CFD3600C3A5D1 /* BAConfigurationNDH.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8F8DA19502706006CD05A /* BAConfigurationNDH.m */; };
 		8FAD97B51A0CFD3600C3A5D1 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
@@ -3013,8 +3013,8 @@
 		8F965382166E93B100CA5D50 /* BAOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptions.m; sourceTree = "<group>"; };
 		8F965387166E97A900CA5D50 /* BAOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsViewController.h; sourceTree = "<group>"; };
 		8F965388166E97A900CA5D50 /* BAOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAOptionsViewController.m; sourceTree = "<group>"; };
-		8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp BA Thüringen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-BA-Thüringen-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-BA-Thüringen-Info.plist"; sourceTree = "<absolute>"; };
+		8FA8F58D19501E6B006CD05A /* BibApp DHGE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp DHGE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA8F58E19501E6D006CD05A /* BibApp-DHGE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-DHGE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-DHGE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F62F19502224006CD05A /* BibApp HfM WE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp HfM WE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F63019502224006CD05A /* BibApp-HfM-WE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-HfM-WE-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-HfM-WE-Info.plist"; sourceTree = "<absolute>"; };
 		8FA8F6D11950228D006CD05A /* BibApp NDH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp NDH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3024,8 +3024,8 @@
 		8FA8F8151950230D006CD05A /* BibApp SM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp SM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F8B71950233A006CD05A /* BibApp UFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp UFB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-UFB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-UFB-Info.plist"; sourceTree = "<absolute>"; };
-		8FA8F8B91950268E006CD05A /* BAConfigurationBAT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationBAT.h; sourceTree = "<group>"; };
-		8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationBAT.m; sourceTree = "<group>"; };
+		8FA8F8B91950268E006CD05A /* BAConfigurationDHGE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationDHGE.h; sourceTree = "<group>"; };
+		8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationDHGE.m; sourceTree = "<group>"; };
 		8FA8F8C9195026F5006CD05A /* BAConfigurationHFMWe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHFMWe.h; sourceTree = "<group>"; };
 		8FA8F8CA195026F5006CD05A /* BAConfigurationHFMWe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationHFMWe.m; sourceTree = "<group>"; };
 		8FA8F8D919502706006CD05A /* BAConfigurationNDH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationNDH.h; sourceTree = "<group>"; };
@@ -3673,8 +3673,8 @@
 				8FD611AD1909183E009E2358 /* BAConfigurationEAHJ.m */,
 				8F1D83E1192A2F8700A9898D /* BAConfigurationUBWe.h */,
 				8F1D83E2192A2F8700A9898D /* BAConfigurationUBWe.m */,
-				8FA8F8B91950268E006CD05A /* BAConfigurationBAT.h */,
-				8FA8F8BA1950268E006CD05A /* BAConfigurationBAT.m */,
+				8FA8F8B91950268E006CD05A /* BAConfigurationDHGE.h */,
+				8FA8F8BA1950268E006CD05A /* BAConfigurationDHGE.m */,
 				8FA8F8C9195026F5006CD05A /* BAConfigurationHFMWe.h */,
 				8FA8F8CA195026F5006CD05A /* BAConfigurationHFMWe.m */,
 				8FA8F8D919502706006CD05A /* BAConfigurationNDH.h */,
@@ -3876,7 +3876,7 @@
 				8FD6110B190916EA009E2358 /* BibApp ThULB.app */,
 				8FD611A7190916EF009E2358 /* BibApp EAH Jena.app */,
 				8F1D83DF192A2E7000A9898D /* BibApp UB WE.app */,
-				8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */,
+				8FA8F58D19501E6B006CD05A /* BibApp DHGE.app */,
 				8FA8F62F19502224006CD05A /* BibApp HfM WE.app */,
 				8FA8F6D11950228D006CD05A /* BibApp NDH.app */,
 				8FA8F773195022BC006CD05A /* BibApp FHE.app */,
@@ -3941,7 +3941,7 @@
 				8FD6110C190916EB009E2358 /* BibApp-ThULB-Info.plist */,
 				8FD611A8190916F0009E2358 /* BibApp-EAH-Jena-Info.plist */,
 				8F1D83E0192A2E7200A9898D /* BibApp-UB-WE-Info.plist */,
-				8FA8F58E19501E6D006CD05A /* BibApp-BA-Thüringen-Info.plist */,
+				8FA8F58E19501E6D006CD05A /* BibApp-DHGE-Info.plist */,
 				8FA8F63019502224006CD05A /* BibApp-HfM-WE-Info.plist */,
 				8FA8F6D21950228D006CD05A /* BibApp-NDH-Info.plist */,
 				8FA8F774195022BC006CD05A /* BibApp-FHE-Info.plist */,
@@ -4164,9 +4164,9 @@
 			productReference = 8F8EB64B1A93689000548F24 /* BibApp ÄZB.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */ = {
+		8FA8F4ED19501E6B006CD05A /* BibApp DHGE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thüringen" */;
+			buildConfigurationList = 8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp DHGE" */;
 			buildPhases = (
 				8FA8F4EE19501E6B006CD05A /* Sources */,
 				8FA8F53C19501E6B006CD05A /* Frameworks */,
@@ -4176,9 +4176,9 @@
 			);
 			dependencies = (
 			);
-			name = "BibApp BA Thüringen";
+			name = "BibApp DHGE";
 			productName = bibapp;
-			productReference = 8FA8F58D19501E6B006CD05A /* BibApp BA Thüringen.app */;
+			productReference = 8FA8F58D19501E6B006CD05A /* BibApp DHGE.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FA8F58F19502224006CD05A /* BibApp HfM WE */ = {
@@ -4413,7 +4413,7 @@
 				8FD61071190916EA009E2358 /* BibApp ThULB */,
 				8FD6110D190916EF009E2358 /* BibApp EAH Jena */,
 				8F1D8343192A2E7000A9898D /* BibApp UB WE */,
-				8FA8F4ED19501E6B006CD05A /* BibApp BA Thüringen */,
+				8FA8F4ED19501E6B006CD05A /* BibApp DHGE */,
 				8FA8F58F19502224006CD05A /* BibApp HfM WE */,
 				8FA8F6311950228D006CD05A /* BibApp NDH */,
 				8FA8F6D3195022BC006CD05A /* BibApp FHE */,
@@ -5823,7 +5823,7 @@
 				8F07B1741BFB72DB0012C325 /* BATocCellPad.m in Sources */,
 				8F07B1751BFB72DB0012C325 /* BADetailScrollViewController.m in Sources */,
 				8F07B1761BFB72DB0012C325 /* BAConfigurationUFB.m in Sources */,
-				8F07B1771BFB72DB0012C325 /* BAConfigurationBAT.m in Sources */,
+				8F07B1771BFB72DB0012C325 /* BAConfigurationDHGE.m in Sources */,
 				8F07B1781BFB72DB0012C325 /* BATocListTableViewController.m in Sources */,
 				8F07B1791BFB72DB0012C325 /* BAConfigurationNDH.m in Sources */,
 				8F07B17A1BFB72DB0012C325 /* BATocListCell.m in Sources */,
@@ -5918,7 +5918,7 @@
 				8FD463AA16F9F41600E935EC /* BATocCellPad.m in Sources */,
 				8F71F19116FB309900AD46D0 /* BADetailScrollViewController.m in Sources */,
 				8FA8F90C1950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8BC1950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8BC1950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F6A7C291701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8FA8F8DC19502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F6A7C301701CFDD00C4E580 /* BATocListCell.m in Sources */,
@@ -6013,7 +6013,7 @@
 				8F1D8384192A2E7000A9898D /* BATocCellPad.m in Sources */,
 				8F1D8385192A2E7000A9898D /* BADetailScrollViewController.m in Sources */,
 				8FA8F9121950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C21950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C21950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F1D8386192A2E7000A9898D /* BATocListTableViewController.m in Sources */,
 				8FA8F8E219502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F1D8387192A2E7000A9898D /* BATocListCell.m in Sources */,
@@ -6108,7 +6108,7 @@
 				8F8A75BD1781BF4700CCF7DB /* BATocCellPad.m in Sources */,
 				8F8A75BE1781BF4700CCF7DB /* BADetailScrollViewController.m in Sources */,
 				8FA8F90D1950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8BD1950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8BD1950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F8A75BF1781BF4700CCF7DB /* BATocListTableViewController.m in Sources */,
 				8FA8F8DD19502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F8A75C01781BF4700CCF7DB /* BATocListCell.m in Sources */,
@@ -6203,7 +6203,7 @@
 				8F8A76521781C05400CCF7DB /* BATocCellPad.m in Sources */,
 				8F8A76531781C05400CCF7DB /* BADetailScrollViewController.m in Sources */,
 				8FA8F90E1950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8BE1950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8BE1950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F8A76541781C05400CCF7DB /* BATocListTableViewController.m in Sources */,
 				8FA8F8DE19502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F8A76551781C05400CCF7DB /* BATocListCell.m in Sources */,
@@ -6298,7 +6298,7 @@
 				8F8A76E71781C0D800CCF7DB /* BATocCellPad.m in Sources */,
 				8F8A76E81781C0D800CCF7DB /* BADetailScrollViewController.m in Sources */,
 				8FA8F90F1950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8BF1950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8BF1950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F8A76E91781C0D800CCF7DB /* BATocListTableViewController.m in Sources */,
 				8FA8F8DF19502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F8A76EA1781C0D800CCF7DB /* BATocListCell.m in Sources */,
@@ -6393,7 +6393,7 @@
 				8F8EB5EB1A93689000548F24 /* BATocCellPad.m in Sources */,
 				8F8EB5EC1A93689000548F24 /* BADetailScrollViewController.m in Sources */,
 				8F8EB5ED1A93689000548F24 /* BAConfigurationUFB.m in Sources */,
-				8F8EB5EE1A93689000548F24 /* BAConfigurationBAT.m in Sources */,
+				8F8EB5EE1A93689000548F24 /* BAConfigurationDHGE.m in Sources */,
 				8F8EB5EF1A93689000548F24 /* BATocListTableViewController.m in Sources */,
 				8F8EB5F01A93689000548F24 /* BAConfigurationNDH.m in Sources */,
 				8F8EB5F11A93689000548F24 /* BATocListCell.m in Sources */,
@@ -6488,7 +6488,7 @@
 				8FA8F53019501E6B006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F53119501E6B006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9131950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C31950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C31950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F53219501E6B006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E319502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F53319501E6B006CD05A /* BATocListCell.m in Sources */,
@@ -6583,7 +6583,7 @@
 				8FA8F5D219502224006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F5D319502224006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9141950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C41950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C41950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F5D419502224006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E419502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F5D519502224006CD05A /* BATocListCell.m in Sources */,
@@ -6678,7 +6678,7 @@
 				8FA8F6741950228D006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F6751950228D006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9151950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C51950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C51950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F6761950228D006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E519502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F6771950228D006CD05A /* BATocListCell.m in Sources */,
@@ -6773,7 +6773,7 @@
 				8FA8F716195022BC006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F717195022BC006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9161950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C61950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C61950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F718195022BC006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E619502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F719195022BC006CD05A /* BATocListCell.m in Sources */,
@@ -6868,7 +6868,7 @@
 				8FA8F7B81950230D006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F7B91950230D006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9171950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C71950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C71950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F7BA1950230D006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E719502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F7BB1950230D006CD05A /* BATocListCell.m in Sources */,
@@ -6963,7 +6963,7 @@
 				8FA8F85A1950233A006CD05A /* BATocCellPad.m in Sources */,
 				8FA8F85B1950233A006CD05A /* BADetailScrollViewController.m in Sources */,
 				8FA8F9181950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C81950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C81950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FA8F85C1950233A006CD05A /* BATocListTableViewController.m in Sources */,
 				8FA8F8E819502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FA8F85D1950233A006CD05A /* BATocListCell.m in Sources */,
@@ -7058,7 +7058,7 @@
 				8FAD97AF1A0CFD3600C3A5D1 /* BATocCellPad.m in Sources */,
 				8FAD97B01A0CFD3600C3A5D1 /* BADetailScrollViewController.m in Sources */,
 				8FAD97B11A0CFD3600C3A5D1 /* BAConfigurationUFB.m in Sources */,
-				8FAD97B21A0CFD3600C3A5D1 /* BAConfigurationBAT.m in Sources */,
+				8FAD97B21A0CFD3600C3A5D1 /* BAConfigurationDHGE.m in Sources */,
 				8FAD97B31A0CFD3600C3A5D1 /* BATocListTableViewController.m in Sources */,
 				8FAD97B41A0CFD3600C3A5D1 /* BAConfigurationNDH.m in Sources */,
 				8FAD97B51A0CFD3600C3A5D1 /* BATocListCell.m in Sources */,
@@ -7153,7 +7153,7 @@
 				8FD610B0190916EA009E2358 /* BATocCellPad.m in Sources */,
 				8FD610B1190916EA009E2358 /* BADetailScrollViewController.m in Sources */,
 				8FA8F9101950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C01950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C01950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FD610B2190916EA009E2358 /* BATocListTableViewController.m in Sources */,
 				8FA8F8E019502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FD610B3190916EA009E2358 /* BATocListCell.m in Sources */,
@@ -7248,7 +7248,7 @@
 				8FD6114C190916EF009E2358 /* BATocCellPad.m in Sources */,
 				8FD6114D190916EF009E2358 /* BADetailScrollViewController.m in Sources */,
 				8FA8F9111950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8C11950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8C11950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8FD6114E190916EF009E2358 /* BATocListTableViewController.m in Sources */,
 				8FA8F8E119502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8FD6114F190916EF009E2358 /* BATocListCell.m in Sources */,
@@ -7343,7 +7343,7 @@
 				8FD463A916F9F41600E935EC /* BATocCellPad.m in Sources */,
 				8F71F19016FB309900AD46D0 /* BADetailScrollViewController.m in Sources */,
 				8FA8F90B1950272E006CD05A /* BAConfigurationUFB.m in Sources */,
-				8FA8F8BB1950268E006CD05A /* BAConfigurationBAT.m in Sources */,
+				8FA8F8BB1950268E006CD05A /* BAConfigurationDHGE.m in Sources */,
 				8F6A7C281701C40200C4E580 /* BATocListTableViewController.m in Sources */,
 				8FA8F8DB19502706006CD05A /* BAConfigurationNDH.m in Sources */,
 				8F6A7C2F1701CFDD00C4E580 /* BATocListCell.m in Sources */,
@@ -7727,19 +7727,19 @@
 		8FA8F58B19501E6B006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "BA Thüringen AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BA Thüringen LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
+				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
-				PRODUCT_NAME = "BibApp BA Thüringen";
+				PRODUCT_NAME = "BibApp DHGE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7751,19 +7751,19 @@
 		8FA8F58C19501E6B006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "BA Thüringen AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BA Thüringen LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "BibApp-BA-Thüringen-Info.plist";
+				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
-				PRODUCT_NAME = "BibApp BA Thüringen";
+				PRODUCT_NAME = "BibApp DHGE";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -8361,7 +8361,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp BA Thüringen" */ = {
+		8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp DHGE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA8F58B19501E6B006CD05A /* Debug */,

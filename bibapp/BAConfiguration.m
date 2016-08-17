@@ -15,7 +15,7 @@
 #import "BAConfigurationThULB.h"
 #import "BAConfigurationEAHJ.h"
 #import "BAConfigurationUBWe.h"
-#import "BAConfigurationBAT.h"
+#import "BAConfigurationDHGE.h"
 #import "BAConfigurationHFMWe.h"
 #import "BAConfigurationNDH.h"
 #import "BAConfigurationFHE.h"
@@ -99,7 +99,7 @@
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ubwe"]){
        currentConfiguration = [[BAConfigurationUBWe alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.bat"]){
-        currentConfiguration = [[BAConfigurationBAT alloc] init];
+        currentConfiguration = [[BAConfigurationDHGE alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.hfmwe"]){
         currentConfiguration = [[BAConfigurationHFMWe alloc] init];
     } else if([bundleIdentifier isEqualToString:@"de.effective-webwork.bibapp.ndh"]){

@@ -1,5 +1,5 @@
 //
-//  BAConfigurationBAT.h
+//  BAConfigurationDHGE.h
 //  bibapp
 //
 //  Created by Johannes Schultze on 17.06.14.
@@ -8,6 +8,6 @@
 
 #import "BAConfiguration.h"
 
-@interface BAConfigurationBAT : BAConfiguration
+@interface BAConfigurationDHGE : BAConfiguration
 
 @end
