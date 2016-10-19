@@ -275,6 +275,24 @@
                   }
                }
             }
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"dd.mm.yyyy"];
+
+            NSArray *sortedLoan = [self.loan sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                NSDate *first =  [dateFormatter dateFromString:[(BAEntryWork*)a endtime]];
+                NSDate *second = [dateFormatter dateFromString:[(BAEntryWork*)b endtime]];
+                return [first compare:second];
+            }];
+            self.loan = [sortedLoan mutableCopy];
+            
+            NSArray *sortedReservation = [self.reservation sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                NSDate *first =  [dateFormatter dateFromString:[(BAEntryWork*)a endtime]];
+                NSDate *second = [dateFormatter dateFromString:[(BAEntryWork*)b endtime]];
+                return [first compare:second];
+            }];
+            self.reservation = [sortedReservation mutableCopy];
+            
             [self.accountTableView reloadData];
             self.accountTableView.tableHeaderView = nil;
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
@@ -316,6 +334,17 @@
                 [tempAmount setSum:NO];
                 [self.fees addObject:tempAmount];
             }
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+            
+            NSArray *sortedFees = [self.fees sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+                NSDate *first =  [dateFormatter dateFromString:[(BAFee*)a date]];
+                NSDate *second = [dateFormatter dateFromString:[(BAFee*)b date]];
+                return [first compare:second];
+            }];
+            self.fees = [sortedFees mutableCopy];
+            
             [self.accountTableView reloadData];
             if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
                 if ([self.fees count] == 0) {
