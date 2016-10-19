@@ -349,7 +349,7 @@
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
             NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
-               [displayName appendString:@" (gesperrt)"];
+               displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];
             } else {
                BOOL writeItemsScope = NO;
                for (NSString *tempScope in self.currentScope) {
@@ -358,7 +358,7 @@
                   }
                }
                if (!writeItemsScope) {
-                  [displayName appendString:@" (Konto gesperrt)"];
+                  displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];;
                }
             }
             [self.navigationController.navigationBar.topItem setTitle:displayName];
