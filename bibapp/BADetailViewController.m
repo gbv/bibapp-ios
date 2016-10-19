@@ -86,7 +86,9 @@
     [((BAItemDetail *)self.view) setFrame:self.frame];
     [((BAItemDetail *)self.view).detailTableView setDelegate:self];
     [((BAItemDetail *)self.view).detailTableView setDataSource:self];
-
+    ((BAItemDetail *)self.view).detailTableView.rowHeight = UITableViewAutomaticDimension;
+    ((BAItemDetail *)self.view).detailTableView.estimatedRowHeight = 44.0;
+    
     [self initDetailView];
 }
 
@@ -670,54 +672,21 @@
             [self setCurrentEntry:tempEntry];
         }
         
-        float top = 10;
-        
         [cell.titleLabel setText:self.currentEntry.title];
-        [cell.titleLabel setFrame: CGRectMake(102,top,208,50)];
-        [cell.titleLabel sizeToFit];
-        if (cell.titleLabel.frame.size.height > 50) {
-            [cell.titleLabel setFrame: CGRectMake(102,top,208,50)];
-        } else {
-            if ((50 - cell.titleLabel.frame.size.height) > 5) {
-                top += 5;
-            } else {
-                top += (50 - cell.titleLabel.frame.size.height);
-            }
-        }
         
         if (![self.currentEntry.subtitle isEqualToString:@""]) {
-            top += cell.titleLabel.frame.size.height;
             [cell.subTitleLabel setText:self.currentEntry.subtitle];
             [cell.subTitleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
-            [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
-            [cell.subTitleLabel sizeToFit];
-            if (cell.subTitleLabel.frame.size.height > 15) {
-                [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
-            } else {
-                if ((50 - cell.subTitleLabel.frame.size.height) > 5) {
-                    top += 5;
-                } else {
-                    top += (50 - cell.subTitleLabel.frame.size.height);
-                }
-            }
         } else {
             [cell.subTitleLabel setText:@""];
         }
-        top += cell.subTitleLabel.frame.size.height;
         
         if (self.didLoadISBD) {
             [cell.isbdIndicator stopAnimating];
             [cell.infoLabel setText:self.currentEntry.infoText];
-            [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
-            [cell.infoLabel sizeToFit];
-            if (cell.infoLabel.frame.size.height > 75) {
-                [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
-            }
         } else {
             [cell.infoLabel setText:@""];
-            [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
         }
-        top += cell.infoLabel.frame.size.height + 5;
         
         if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
             [cell.coverView setImage:[self.currentEntry mediaIcon]];
@@ -744,45 +713,8 @@
         [cell.tocInfo addTarget:self action:@selector(tocAction) forControlEvents:UIControlEventTouchUpInside];
         [cell.toc addTarget:self action:@selector(tocAction) forControlEvents:UIControlEventTouchUpInside];
         
-        if ([self.currentEntry.tocArray count] > 0) {
-            if (self.didLoadISBD) {
-                if (top < 120) {
-                    top = 120;
-                }
-                [cell.tocInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.toc setFrame: CGRectMake(36,top+1,113,18)];
-                [cell.tocInfo setHidden:NO];
-                [cell.toc setHidden:NO];
-                top += 20;
-            }
-        }
-        
-        if (top < 120) {
-            top = 120;
-        }
-        
         [cell.loanInfo addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
         [cell.loan addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
-        
-        if (!self.currentEntry.local) {
-            if (self.didLoadISBD) {
-                if (top < 120) {
-                    top = 120;
-                }
-                [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.loan setFrame: CGRectMake(36,top+1,114,18)];
-                [cell.loanInfo setHidden:NO];
-                [cell.loan setHidden:NO];
-                top += 20;
-            }
-        }
-        
-        if (top < 120) {
-            top = 120;
-        }
-        
-        [cell setFrame: CGRectMake(0,0,320,top+10)];
-        self.computedSizeOfTitleCell = top+10;
         
         return cell;
     } else {
@@ -1035,7 +967,7 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/* - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0)
     {
@@ -1051,7 +983,7 @@
             return 43;
         }
     }
-}
+} */
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
