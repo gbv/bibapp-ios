@@ -376,7 +376,7 @@
             }
             [self showRenewCancelDialog];
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
-            NSMutableString *displayName = [[NSMutableString alloc] initWithString:[json objectForKey:@"name"]];
+            NSMutableString *displayName = [self.appDelegate.currentAccount mutableCopy];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
                displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];
             } else {
