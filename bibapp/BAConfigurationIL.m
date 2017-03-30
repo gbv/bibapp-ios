@@ -16,8 +16,8 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Ilm1", @"Standard-Katalog", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Ilm1", @"Standard-Katalog", nil]];
-    self.currentBibFeedURL = @"http://www2.tu-ilmenau.de/ub/weblog/?feed=rss2";
+    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.tu-ilmenau.de/ub/nachrichtenarchiv/", @"Standard-Katalog", nil]];
+    self.currentBibFeedURLIsWebsite = YES;
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.0 green:0.45 blue:0.47 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Angaben zum Datenschutz", @"Statistik", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Universitätsbibliothek Ilmenau\nDer Direktor\nLangewiesener Str.37\n98693 Ilmenau\nhttp://www.tu-ilmenau.de/ub/\nTel.: 03677 69-4701\nFax: 03677 69-4700\nE-Mail: direktion.ub@tu-ilmenau.de\nImpressum der TU Ilmenau:\nhttp://www.tu-ilmenau.de/impressum/" forKey:@"Anbieter"];
@@ -28,7 +28,6 @@
     self.currentBibContact = @"Universitätsbibliothek Ilmenau\nLangewiesener Str.37\n98693 Ilmenau\n\nhttp://www.tu-ilmenau.de/ub/\n\nAuskunft:\nTel.: 03677 69-4531\nE-Mail: auskunft.ub@tu-ilmenau.de\n\nDirektion:\nTel.: 03677 69-4701\nE-Mail: direktion.ub@tu-ilmenau.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Ilm1";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ilm1", @"Standard-Katalog", nil]];
-    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EL039&amp;page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"https://pw.bibliothek.tu-ilmenau.de/piwik.php?idsite=3&rec=1", @"Standard-Katalog", nil]];
 }
 
