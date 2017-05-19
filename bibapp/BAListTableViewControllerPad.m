@@ -323,6 +323,8 @@
         [self.currentEntry setLocal:[tempEntry local]];
         
         [self showDetailView];
+    } else if (tableView.tag == 1) {
+        [self actionButtonClick:[tableView cellForRowAtIndexPath:indexPath]];
     }
 }
 
@@ -1074,7 +1076,8 @@
 
 - (void)actionButtonClick:(id)sender
 {
-    UIButton *clicked = (UIButton *) sender;
+    //UIButton *clicked = (UIButton *) sender;
+    UITableViewCell *clicked = (UITableViewCell *) sender;
     
     BADocumentItem *tempDocumentItem = [self.currentDocument.items objectAtIndex:clicked.tag];
     BADocumentItemElement *presentation;
@@ -1115,7 +1118,7 @@
                                                     delegate:self
                                            cancelButtonTitle:@"Abbrechen"
                                       destructiveButtonTitle:nil
-                                           otherButtonTitles:orderString, @"Standortinfo", nil];
+                                           otherButtonTitles:orderString, @"Standortinfo", @"Abbrechen", nil];
             } else {
                action = [[UIActionSheet alloc] initWithTitle:nil
                                                     delegate:self
@@ -1128,27 +1131,31 @@
                                                  delegate:self
                                         cancelButtonTitle:@"Abbrechen"
                                    destructiveButtonTitle:nil
-                                        otherButtonTitles:@"Standortinfo", nil];
+                                        otherButtonTitles:@"Standortinfo", @"Abbrechen", nil];
         }
         [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
         if (self.currentEntry.local) {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
+            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         } else {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         }
     } else {
         UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                             delegate:self
                                                    cancelButtonTitle:@"Abbrechen"
                                               destructiveButtonTitle:nil
-                                                   otherButtonTitles:@"Im Browser öffnen", nil];
+                                                   otherButtonTitles:@"Im Browser öffnen", @"Abbrechen", nil];
         [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
         if (self.currentEntry.local) {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
+            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         } else {
-            [action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
+            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         }
     }
     
