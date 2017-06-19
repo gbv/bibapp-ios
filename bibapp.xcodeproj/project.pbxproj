@@ -4363,6 +4363,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Johannes Schultze";
 				TargetAttributes = {
+					8F07B12C1BFB72DB0012C325 = {
+						DevelopmentTeam = DG2S2C98D2;
+					};
 					8F1D8343192A2E7000A9898D = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
@@ -7405,6 +7408,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = DG2S2C98D2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -7429,6 +7433,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = DG2S2C98D2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
