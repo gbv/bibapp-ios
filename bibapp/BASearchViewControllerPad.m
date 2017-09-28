@@ -475,7 +475,7 @@
     }
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)searchBarSearchButtonClicked
 {
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
@@ -1786,7 +1786,7 @@
     return YES;
 }
 
-- (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView {
+- (void)searchDisplayController:(UISearchController *)controller didShowSearchResultsTableView:(UITableView *)tableView {
     [tableView setFrame:CGRectMake(0, 117, 320, 582)];
     [tableView setHidden:YES];
 }
@@ -1887,7 +1887,7 @@
    self.searched = NO;
    [self.searchSegmentedController setSelectedSegmentIndex:1];
    [self segmentAction:nil];
-   [self searchBarSearchButtonClicked:nil];
+   [self searchBarSearchButtonClicked];
 }
 
 @end

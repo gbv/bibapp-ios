@@ -44,6 +44,7 @@
 }
 
 - (void)prepareForReuse {
+   [super prepareForReuse];
    [self.locationConnector.currentConnection cancel];
 }
 

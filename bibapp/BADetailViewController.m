@@ -506,7 +506,7 @@
         [((BAItemDetail *)self.view).detailTableView reloadData];
        
         [((BAItemDetail *)self.view).detailTableView beginUpdates];
-        [((BAItemDetail *)self.view).detailTableView reloadRowsAtIndexPaths:0 withRowAnimation:UITableViewRowAnimationNone];
+        [((BAItemDetail *)self.view).detailTableView reloadRowsAtIndexPaths:[[NSArray alloc] initWithObjects:[NSIndexPath indexPathForRow:0 inSection:0], nil] withRowAnimation:UITableViewRowAnimationNone];
         [((BAItemDetail *)self.view).detailTableView endUpdates];
         
     } else if ([command isEqualToString:@"getUNAPIDetailsMods"]) {

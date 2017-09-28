@@ -214,7 +214,7 @@
     }
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)searchBarSearchButtonClicked
 {
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
@@ -640,7 +640,7 @@
    self.searched = NO;
    [self.searchSegmentedController setSelectedSegmentIndex:1];
    [self segmentAction:nil];
-   [self searchBarSearchButtonClicked:nil];
+   [self searchBarSearchButtonClicked];
 }
 
 @end
