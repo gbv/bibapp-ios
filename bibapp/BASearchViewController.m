@@ -49,6 +49,7 @@
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    self.searchBar.delegate = self;
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -244,6 +245,10 @@
     }
    
     [self.searchBar resignFirstResponder];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self searchBarSearchButtonClicked];
 }
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result

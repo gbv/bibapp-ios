@@ -105,6 +105,7 @@
     [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
     [self.searchBar setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+    self.searchBar.delegate = self;
     
     [self.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
     
@@ -499,6 +500,10 @@
     }
     [self.searchTableView reloadData];
     [self.searchBar resignFirstResponder];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self searchBarSearchButtonClicked];
 }
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
