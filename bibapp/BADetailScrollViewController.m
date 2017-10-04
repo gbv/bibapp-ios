@@ -57,8 +57,8 @@
     
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [self.bookList count], 200);
-    self.scrollView.contentOffset = CGPointMake(self.scrollView.frame.size.width * self.startPosition, 0);
+    self.scrollView.contentSize = CGSizeMake(320 * [self.bookList count], 200);
+    self.scrollView.contentOffset = CGPointMake(320 * self.startPosition, 0);
     
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -92,7 +92,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
-    CGFloat pageWidth = self.scrollView.frame.size.width;
+    CGFloat pageWidth = 320;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     if (pageControlUsed)
@@ -115,7 +115,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     pageControlUsed = NO;
-    CGFloat pageWidth = self.scrollView.frame.size.width;
+    CGFloat pageWidth = 320;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
@@ -147,15 +147,16 @@
                 {
                     [self.views addObject:[NSNull null]];
                 }
-                self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * newCount, 200);
+                self.scrollView.contentSize = CGSizeMake(320 * newCount, 200);
                 [self.scrollViewDelegate continueSearch];
             }
             return;
         }
         if ((NSNull *)[[self views] objectAtIndex:page] == [NSNull null]) {
             CGRect frame = self.scrollView.frame;
-            frame.origin.x = frame.size.width * page;
+            frame.origin.x = 320 * page;
             frame.origin.y = 0;
+            frame.size.width = 320;
             BADetailViewController *subViewController = [[BADetailViewController alloc] initWithFrame:frame];
             [subViewController setBookList:self.bookList];
             [subViewController setCurrentEntry:[self.bookList objectAtIndex:page]];
