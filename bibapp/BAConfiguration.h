@@ -11,7 +11,7 @@
 @interface BAConfiguration : NSObject
 
 @property (strong, nonatomic) NSString *searchTitle;
-@property BOOL *hasLocalDetailURL;
+@property BOOL hasLocalDetailURL;
 @property (strong, nonatomic) NSString *currentBibSearchMaximumRecords;
 @property (strong, nonatomic) NSMutableArray *currentBibLocalSearchURLs;
 @property (strong, nonatomic) NSMutableArray *currentBibDetailURLs;
@@ -26,12 +26,12 @@
 @property (strong, nonatomic) NSMutableArray *currentBibLocationURIs;
 @property (strong, nonatomic) NSMutableArray *currentBibSearchCountURLs;
 @property (strong, nonatomic) NSString *currentBibStandardCatalogue;
-@property BOOL *currentBibHideDepartment;
-@property BOOL *currentBibFeedURLIsWebsite;
-@property BOOL *currentBibUsePAIAWrapper;
+@property BOOL currentBibHideDepartment;
+@property BOOL currentBibFeedURLIsWebsite;
+@property BOOL currentBibUsePAIAWrapper;
 @property (strong, nonatomic) NSString *currentBibRequestTitle;
 @property (strong, nonatomic) NSString *currentBibDaiaInfoFromOpacDisplay;
-@property BOOL *useDAIAParser;
+@property BOOL useDAIAParser;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
