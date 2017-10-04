@@ -79,7 +79,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5fJ-8x-iSE"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
