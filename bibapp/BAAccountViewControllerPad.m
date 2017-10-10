@@ -555,10 +555,14 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self.loanTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
-    [self.loanTableView setContentOffset:CGPointZero animated:NO];
-    [self.reservationTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
-    [self.reservationTableView setContentOffset:CGPointZero animated:NO];
+    if ([self.loan count] > 0) {
+        [self.loanTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+        [self.loanTableView setContentOffset:CGPointZero animated:NO];
+    }
+    if ([self.reservation count] > 0) {
+        [self.reservationTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+        [self.reservationTableView setContentOffset:CGPointZero animated:NO];
+    }
     if (actionSheet.tag == 10) {
         if (buttonIndex == 0) {
             [self setSendEntries:[[NSMutableArray alloc] init]];
