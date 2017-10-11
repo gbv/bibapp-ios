@@ -1,20 +1,25 @@
 PODS:
-  - Firebase/Core (4.3.0):
-    - FirebaseAnalytics (= 4.0.4)
-    - FirebaseCore (= 4.0.8)
-  - Firebase/Messaging (4.3.0):
+  - Firebase/Core (4.0.4):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.4)
+  - Firebase/Database (4.0.4):
     - Firebase/Core
-    - FirebaseMessaging (= 2.0.4)
-  - FirebaseAnalytics (4.0.4):
+    - FirebaseDatabase (= 4.0.0)
+  - Firebase/Messaging (4.0.4):
+    - Firebase/Core
+    - FirebaseMessaging (= 2.0.0)
+  - FirebaseAnalytics (4.0.2):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-    - nanopb (~> 0.3)
-  - FirebaseCore (4.0.8):
+  - FirebaseCore (4.0.4):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseInstanceID (2.0.4)
-  - FirebaseMessaging (2.0.4):
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - FirebaseMessaging (2.0.0):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -33,18 +38,22 @@ PODS:
   - Protobuf (3.4.0)
 
 DEPENDENCIES:
-  - Firebase/Messaging
+  - Firebase/Core (= 4.0.4)
+  - Firebase/Database (= 4.0.4)
+  - Firebase/Messaging (= 4.0.4)
+  - FirebaseInstanceID (= 2.0.0)
 
 SPEC CHECKSUMS:
-  Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
-  FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
-  FirebaseCore: 69b1a5ac5f857ba6d5fd9d5fe794f4786dd5e579
-  FirebaseInstanceID: 70c2b877e9338971b2429ea5a4293df6961aa44e
-  FirebaseMessaging: 3dd86bfda2acb680b05c97f3f8ac566e9bb87b2a
+  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  FirebaseMessaging: 227406c05b0dc9290702d2e9f18ab5528f0c2cf2
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
 
-PODFILE CHECKSUM: 5bc47aecdaee3f3fea745f6e699e5a1693bb5083
+PODFILE CHECKSUM: bc2a4d34bf5b7c434d5dc97190b43bdb7673ccd6
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0.beta.1

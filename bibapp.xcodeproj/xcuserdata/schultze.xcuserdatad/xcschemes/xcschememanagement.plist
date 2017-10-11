@@ -7,7 +7,7 @@
 		<key>BibApp BLS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>36</integer>
 		</dict>
 		<key>BibApp Cobi.xcscheme</key>
 		<dict>
@@ -32,12 +32,12 @@
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>37</integer>
 		</dict>
 		<key>BibApp HI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>34</integer>
 		</dict>
 		<key>BibApp HfM WE.xcscheme</key>
 		<dict>
@@ -47,12 +47,12 @@
 		<key>BibApp IL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>12</integer>
 		</dict>
 		<key>BibApp LG.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>35</integer>
 		</dict>
 		<key>BibApp NDH.xcscheme</key>
 		<dict>
@@ -92,7 +92,15 @@
 		<key>BibAppUnitTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>38</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8F8A76131781C05400CCF7DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

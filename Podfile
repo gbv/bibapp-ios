@@ -1,7 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '8.0'
 
-pod 'Firebase/Messaging'
+pod 'Firebase/Core', '4.0.4'
+pod 'Firebase/Database', '4.0.4'
+pod 'Firebase/Messaging', '4.0.4'
+pod 'FirebaseInstanceID', '2.0.0'
 
 target 'BibApp BLS' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
