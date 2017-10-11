@@ -9,6 +9,8 @@
 #import "BAAppDelegate.h"
 #import "BAOptions.h"
 
+#import <Firebase/Firebase.h>
+
 @implementation BAAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -98,6 +100,8 @@
         self.locationManager.delegate = self;
     }
     [self.locationManager startUpdatingLocation];
+    
+    [FIRApp configure];
     
     return YES;
 }

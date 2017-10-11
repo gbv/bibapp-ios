@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20488775D72CCFFE045ED7DD /* libPods-BibApp Cobi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 573925CD167789B70878E26E /* libPods-BibApp Cobi.a */; };
+		237E05205FD7616C96D65567 /* libPods-BibApp HfM WE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCA9B57887E897F7C07BDD4 /* libPods-BibApp HfM WE.a */; };
+		243D343B026FF311A3592E60 /* libPods-BibApp DHGE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0877901A22C029ABFAD40BA /* libPods-BibApp DHGE.a */; };
+		32429F2D60935E0C34787D6C /* libPods-BibApp FHE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B44AC17BCD0695ECCACB60C2 /* libPods-BibApp FHE.a */; };
 		3B034320174944140076CA8B /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
 		3B034321174944140076CA8B /* BAURLRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B03431F174944140076CA8B /* BAURLRequestService.m */; };
+		49BDCC77DBC675B2AC9DF78A /* libPods-BibApp UFB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5A720FD2A602B84D784EC /* libPods-BibApp UFB.a */; };
+		4C9A3206AB23879FB80A3828 /* libPods-BibApp HI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022685FF58480AD5C68AD5C8 /* libPods-BibApp HI.a */; };
+		5459F23B9A2315FDCB45D922 /* libPods-BibAppUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2967148AF97F309464F6AB4 /* libPods-BibAppUnitTests.a */; };
+		5FCC1E0C4290849D41B70374 /* libPods-BibApp EAH Jena.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE03D020F05B9AEADFEB04B7 /* libPods-BibApp EAH Jena.a */; };
 		8F052302166C96D600AB6D63 /* BAAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F052301166C96D600AB6D63 /* BAAccount.m */; };
 		8F07B12E1BFB72DB0012C325 /* BAConfigurationThULB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD611AA1909182D009E2358 /* BAConfigurationThULB.m */; };
 		8F07B12F1BFB72DB0012C325 /* BAConfigurationEAHJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD611AD1909183E009E2358 /* BAConfigurationEAHJ.m */; };
@@ -2399,6 +2407,24 @@
 		8FBEB651184C9CBB00B6ED41 /* hawk_app_icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */; };
 		8FBEB653184C9CC700B6ED41 /* hawk_app_icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */; };
 		8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */; };
+		8FBFA9991F8E04F90028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99A1F8E04F90028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99B1F8E04FA0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99C1F8E04FB0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99D1F8E04FC0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99E1F8E04FD0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA99F1F8E04FE0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A01F8E04FE0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A11F8E04FF0028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A21F8E05000028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A31F8E05000028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A41F8E05010028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A51F8E05010028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A61F8E05020028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A71F8E05030028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A81F8E05030028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9A91F8E05040028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
+		8FBFA9AA1F8E05050028C113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */; };
 		8FC5465616F62CE4005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FC5465716F62E19005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FCFF425192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
@@ -2868,11 +2894,55 @@
 		8FFFCFCD1667860700326BE9 /* BADocumentItemElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFCC1667860700326BE9 /* BADocumentItemElementCell.m */; };
 		8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
 		8FFFCFE01667B23700326BE9 /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
+		9A067799AD73C16780649463 /* libPods-BibApp HAWK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26173324F4E2C7E694A79F94 /* libPods-BibApp HAWK.a */; };
+		9A7CB337DAD4572920AE3774 /* libPods-BibApp UB WE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EE323999BE953277049851 /* libPods-BibApp UB WE.a */; };
+		AAF4E9E5C65DA1C5F44C060E /* libPods-BibApp ThULB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A11E7020A3393FB1B243B005 /* libPods-BibApp ThULB.a */; };
+		C2ECE15F5E59AD86B8F9C14A /* libPods-BibApp TU BS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D169F58EE3DBBFBF6B04A4E /* libPods-BibApp TU BS.a */; };
+		C93886AD3B36EC6A14760C36 /* libPods-BibApp IL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 834DCE5FB5AF8F49F9CD0C6E /* libPods-BibApp IL.a */; };
+		D913945D7322CC779F68B62A /* libPods-BibApp SM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38870293F456698625A9DD /* libPods-BibApp SM.a */; };
+		D9BF0E2444C9F1AFF248806D /* libPods-BibApp BLS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7791F5F042D409ED999F9042 /* libPods-BibApp BLS.a */; };
+		DEB44CF75D7E23589EB697F6 /* libPods-BibApp ÄZB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D168C3D3A2C81B2D3507B8 /* libPods-BibApp ÄZB.a */; };
+		E8FC09F7CD0A981FD6BE7C8F /* libPods-BibApp LG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A006E16F325AB162BEAED /* libPods-BibApp LG.a */; };
+		F52DD3427D3B399AFB05240E /* libPods-BibApp NDH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796AC8A0593AC2635ED6C760 /* libPods-BibApp NDH.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A8CEB275F957D8CF3A5524 /* Pods-BibApp IL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IL.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL.release.xcconfig"; sourceTree = "<group>"; };
+		022685FF58480AD5C68AD5C8 /* libPods-BibApp HI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EA4A9FAC59852CCF83FB9C /* Pods-BibApp FHE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp FHE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE.debug.xcconfig"; sourceTree = "<group>"; };
+		0974070341C347C4E3FDED90 /* Pods-BibApp HI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI.release.xcconfig"; sourceTree = "<group>"; };
+		1C72E75FF9FBE1A42E893140 /* Pods-BibApp BLS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp BLS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS.release.xcconfig"; sourceTree = "<group>"; };
+		1FCA9B57887E897F7C07BDD4 /* libPods-BibApp HfM WE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HfM WE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		204D5ED0C1F9D22CB1744C52 /* Pods-BibApp IL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL.debug.xcconfig"; sourceTree = "<group>"; };
+		26173324F4E2C7E694A79F94 /* libPods-BibApp HAWK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HAWK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		273638A807E0ACEEFD432B00 /* Pods-BibAppUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibAppUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibAppUnitTests/Pods-BibAppUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37F9712E2BB5A949EFEA984A /* Pods-BibApp HfM WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.release.xcconfig"; sourceTree = "<group>"; };
 		3B03431E174944140076CA8B /* BAURLRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAURLRequestService.h; path = Connector/Requests/BAURLRequestService.h; sourceTree = "<group>"; };
 		3B03431F174944140076CA8B /* BAURLRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAURLRequestService.m; path = Connector/Requests/BAURLRequestService.m; sourceTree = "<group>"; };
+		425A006E16F325AB162BEAED /* libPods-BibApp LG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp LG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E52E9067DE8DEB8ACD5861 /* Pods-BibApp DHGE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp DHGE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp DHGE/Pods-BibApp DHGE.debug.xcconfig"; sourceTree = "<group>"; };
+		4A0D600FD5F7CF2ECA4D7C0B /* Pods-BibApp LG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp LG.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp LG/Pods-BibApp LG.release.xcconfig"; sourceTree = "<group>"; };
+		4D169F58EE3DBBFBF6B04A4E /* libPods-BibApp TU BS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp TU BS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D168C3D3A2C81B2D3507B8 /* libPods-BibApp ÄZB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ÄZB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		573925CD167789B70878E26E /* libPods-BibApp Cobi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp Cobi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A439D174723E5ACF8C15289 /* Pods-BibApp NDH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp NDH.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH.release.xcconfig"; sourceTree = "<group>"; };
+		5AA9EBA75F0E4D387463ACA0 /* Pods-BibApp HAWK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HAWK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB167D3D5E8CADD992FEE6A /* Pods-BibApp TU BS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.release.xcconfig"; sourceTree = "<group>"; };
+		6294E7D4A0731950BD206040 /* Pods-BibApp HAWK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HAWK.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK.release.xcconfig"; sourceTree = "<group>"; };
+		6730CE95FEC4693CF430A36C /* Pods-BibApp SM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp SM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp SM/Pods-BibApp SM.debug.xcconfig"; sourceTree = "<group>"; };
+		67C7B3420937E5CD15BAF599 /* Pods-BibApp EAH Jena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.debug.xcconfig"; sourceTree = "<group>"; };
+		67CCC1A22A7BB812AC16BC79 /* Pods-BibApp DHGE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp DHGE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp DHGE/Pods-BibApp DHGE.release.xcconfig"; sourceTree = "<group>"; };
+		696AE15EA59CEF909431FBC1 /* Pods-BibApp ÄZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.debug.xcconfig"; sourceTree = "<group>"; };
+		69BADBFC7D039FC68ED8B745 /* Pods-BibApp ÄZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.release.xcconfig"; sourceTree = "<group>"; };
+		6CDD8CC0F551AD54DAC02684 /* Pods-BibApp ThULB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ThULB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ThULB/Pods-BibApp ThULB.release.xcconfig"; sourceTree = "<group>"; };
+		757735876818193FF01FC5B9 /* Pods-BibApp ThULB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ThULB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ThULB/Pods-BibApp ThULB.debug.xcconfig"; sourceTree = "<group>"; };
+		7791F5F042D409ED999F9042 /* libPods-BibApp BLS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp BLS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		796AC8A0593AC2635ED6C760 /* libPods-BibApp NDH.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp NDH.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9DD58B174D86E8489F5716 /* Pods-BibAppUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibAppUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibAppUnitTests/Pods-BibAppUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		81123685A0B17EB77A8D764A /* Pods-BibApp Cobi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp Cobi.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp Cobi/Pods-BibApp Cobi.release.xcconfig"; sourceTree = "<group>"; };
+		834DCE5FB5AF8F49F9CD0C6E /* libPods-BibApp IL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp IL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F9892ADE2EA6CD45424037 /* Pods-BibApp EAH Jena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.release.xcconfig"; sourceTree = "<group>"; };
+		89EE323999BE953277049851 /* libPods-BibApp UB WE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp UB WE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0336201702F38B001E933F /* BADetailScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADetailScrollViewDelegate.h; sourceTree = "<group>"; };
 		8F052300166C96D600AB6D63 /* BAAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccount.h; sourceTree = "<group>"; };
 		8F052301166C96D600AB6D63 /* BAAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccount.m; sourceTree = "<group>"; };
@@ -3065,6 +3135,7 @@
 		8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_114x114.png; path = ../hawk_app_icon_114x114.png; sourceTree = "<group>"; };
 		8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_72x72.png; path = ../hawk_app_icon_72x72.png; sourceTree = "<group>"; };
 		8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hawk_app_icon_144x144.png; path = ../hawk_app_icon_144x144.png; sourceTree = "<group>"; };
+		8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FC5465416F62CDA005A4F6A /* BATocViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocViewControllerPad.h; sourceTree = "<group>"; };
 		8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocViewControllerPad.m; sourceTree = "<group>"; };
 		8FCFF423192C80D700A3E93F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -3189,6 +3260,26 @@
 		8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADocumentItemCell.xib; sourceTree = "<group>"; };
 		8FFFCFDE1667B23700326BE9 /* BADocumentItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADocumentItemCell.h; sourceTree = "<group>"; };
 		8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADocumentItemCell.m; sourceTree = "<group>"; };
+		923AD3F3F87414F314181B3C /* Pods-BibApp NDH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp NDH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH.debug.xcconfig"; sourceTree = "<group>"; };
+		92BA2D0EAB473BF3302C6B13 /* Pods-BibApp TU BS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.debug.xcconfig"; sourceTree = "<group>"; };
+		9456018D56CE7ACF787956DC /* Pods-BibApp FHE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp FHE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE.release.xcconfig"; sourceTree = "<group>"; };
+		9994141AFEE0DEC8355B9CD2 /* Pods-BibApp UB WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UB WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE.release.xcconfig"; sourceTree = "<group>"; };
+		A11E7020A3393FB1B243B005 /* libPods-BibApp ThULB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ThULB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A831F3BC887EE681AA895BEF /* Pods-BibApp Cobi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp Cobi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp Cobi/Pods-BibApp Cobi.debug.xcconfig"; sourceTree = "<group>"; };
+		AA38870293F456698625A9DD /* libPods-BibApp SM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp SM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCB911E756E4391E972960A /* Pods-BibApp HfM WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.debug.xcconfig"; sourceTree = "<group>"; };
+		B0EF2D0A7DEBC941499AF63A /* Pods-BibApp SM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp SM.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp SM/Pods-BibApp SM.release.xcconfig"; sourceTree = "<group>"; };
+		B44AC17BCD0695ECCACB60C2 /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B524C2C621236F6A7D35C74C /* Pods-BibApp LG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp LG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp LG/Pods-BibApp LG.debug.xcconfig"; sourceTree = "<group>"; };
+		BF50A0A3F8FA36EC054D3536 /* Pods-BibApp UB WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UB WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE.debug.xcconfig"; sourceTree = "<group>"; };
+		C612CEC7124A50FAB7098A02 /* Pods-BibApp HI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI.debug.xcconfig"; sourceTree = "<group>"; };
+		DCE827E42B94386F6F5AB1EC /* Pods-BibApp UFB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UFB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UFB/Pods-BibApp UFB.release.xcconfig"; sourceTree = "<group>"; };
+		DE03D020F05B9AEADFEB04B7 /* libPods-BibApp EAH Jena.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp EAH Jena.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2967148AF97F309464F6AB4 /* libPods-BibAppUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibAppUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0877901A22C029ABFAD40BA /* libPods-BibApp DHGE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp DHGE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08E052528D712C4F69C88C0 /* Pods-BibApp UFB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UFB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UFB/Pods-BibApp UFB.debug.xcconfig"; sourceTree = "<group>"; };
+		F81F453F5A8806D9AD750A9A /* Pods-BibApp BLS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp BLS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS.debug.xcconfig"; sourceTree = "<group>"; };
+		F9D5A720FD2A602B84D784EC /* libPods-BibApp UFB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp UFB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3207,6 +3298,7 @@
 				8F07B18D1BFB72DB0012C325 /* Foundation.framework in Frameworks */,
 				8F07B18E1BFB72DB0012C325 /* CoreGraphics.framework in Frameworks */,
 				8F07B18F1BFB72DB0012C325 /* CoreData.framework in Frameworks */,
+				20488775D72CCFFE045ED7DD /* libPods-BibApp Cobi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3225,6 +3317,7 @@
 				8F11405F167F217000E033F6 /* Foundation.framework in Frameworks */,
 				8F114060167F217000E033F6 /* CoreGraphics.framework in Frameworks */,
 				8F114061167F217000E033F6 /* CoreData.framework in Frameworks */,
+				4C9A3206AB23879FB80A3828 /* libPods-BibApp HI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3243,6 +3336,7 @@
 				8F1D8397192A2E7000A9898D /* Foundation.framework in Frameworks */,
 				8F1D8398192A2E7000A9898D /* CoreGraphics.framework in Frameworks */,
 				8F1D8399192A2E7000A9898D /* CoreData.framework in Frameworks */,
+				9A7CB337DAD4572920AE3774 /* libPods-BibApp UB WE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3261,6 +3355,7 @@
 				8F8A75C91781BF4700CCF7DB /* Foundation.framework in Frameworks */,
 				8F8A75CA1781BF4700CCF7DB /* CoreGraphics.framework in Frameworks */,
 				8F8A75CB1781BF4700CCF7DB /* CoreData.framework in Frameworks */,
+				D9BF0E2444C9F1AFF248806D /* libPods-BibApp BLS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3279,6 +3374,7 @@
 				8F8A765E1781C05400CCF7DB /* Foundation.framework in Frameworks */,
 				8F8A765F1781C05400CCF7DB /* CoreGraphics.framework in Frameworks */,
 				8F8A76601781C05400CCF7DB /* CoreData.framework in Frameworks */,
+				C93886AD3B36EC6A14760C36 /* libPods-BibApp IL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3297,6 +3393,7 @@
 				8F8A76F31781C0D800CCF7DB /* Foundation.framework in Frameworks */,
 				8F8A76F41781C0D800CCF7DB /* CoreGraphics.framework in Frameworks */,
 				8F8A76F51781C0D800CCF7DB /* CoreData.framework in Frameworks */,
+				9A067799AD73C16780649463 /* libPods-BibApp HAWK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3315,6 +3412,7 @@
 				8F8EB6021A93689000548F24 /* Foundation.framework in Frameworks */,
 				8F8EB6031A93689000548F24 /* CoreGraphics.framework in Frameworks */,
 				8F8EB6041A93689000548F24 /* CoreData.framework in Frameworks */,
+				DEB44CF75D7E23589EB697F6 /* libPods-BibApp ÄZB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3333,6 +3431,7 @@
 				8FA8F54419501E6B006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F54519501E6B006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F54619501E6B006CD05A /* CoreData.framework in Frameworks */,
+				243D343B026FF311A3592E60 /* libPods-BibApp DHGE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3351,6 +3450,7 @@
 				8FA8F5E619502224006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F5E719502224006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F5E819502224006CD05A /* CoreData.framework in Frameworks */,
+				237E05205FD7616C96D65567 /* libPods-BibApp HfM WE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3369,6 +3469,7 @@
 				8FA8F6881950228D006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F6891950228D006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F68A1950228D006CD05A /* CoreData.framework in Frameworks */,
+				F52DD3427D3B399AFB05240E /* libPods-BibApp NDH.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3387,6 +3488,7 @@
 				8FA8F72A195022BC006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F72B195022BC006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F72C195022BC006CD05A /* CoreData.framework in Frameworks */,
+				32429F2D60935E0C34787D6C /* libPods-BibApp FHE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3405,6 +3507,7 @@
 				8FA8F7CC1950230D006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F7CD1950230D006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F7CE1950230D006CD05A /* CoreData.framework in Frameworks */,
+				D913945D7322CC779F68B62A /* libPods-BibApp SM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3423,6 +3526,7 @@
 				8FA8F86E1950233A006CD05A /* Foundation.framework in Frameworks */,
 				8FA8F86F1950233A006CD05A /* CoreGraphics.framework in Frameworks */,
 				8FA8F8701950233A006CD05A /* CoreData.framework in Frameworks */,
+				49BDCC77DBC675B2AC9DF78A /* libPods-BibApp UFB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3441,6 +3545,7 @@
 				8FAD97C61A0CFD3600C3A5D1 /* Foundation.framework in Frameworks */,
 				8FAD97C71A0CFD3600C3A5D1 /* CoreGraphics.framework in Frameworks */,
 				8FAD97C81A0CFD3600C3A5D1 /* CoreData.framework in Frameworks */,
+				C2ECE15F5E59AD86B8F9C14A /* libPods-BibApp TU BS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3459,6 +3564,7 @@
 				8FD610C3190916EA009E2358 /* Foundation.framework in Frameworks */,
 				8FD610C4190916EA009E2358 /* CoreGraphics.framework in Frameworks */,
 				8FD610C5190916EA009E2358 /* CoreData.framework in Frameworks */,
+				AAF4E9E5C65DA1C5F44C060E /* libPods-BibApp ThULB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3477,6 +3583,7 @@
 				8FD6115F190916EF009E2358 /* Foundation.framework in Frameworks */,
 				8FD61160190916EF009E2358 /* CoreGraphics.framework in Frameworks */,
 				8FD61161190916EF009E2358 /* CoreData.framework in Frameworks */,
+				5FCC1E0C4290849D41B70374 /* libPods-BibApp EAH Jena.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3495,6 +3602,7 @@
 				8FF26FFC16393BF100099665 /* Foundation.framework in Frameworks */,
 				8FF26FFE16393BF100099665 /* CoreGraphics.framework in Frameworks */,
 				8FF2700016393BF100099665 /* CoreData.framework in Frameworks */,
+				E8FC09F7CD0A981FD6BE7C8F /* libPods-BibApp LG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3505,12 +3613,56 @@
 				8FFF22C61786B8580077FC8B /* SenTestingKit.framework in Frameworks */,
 				8FFF22C71786B8580077FC8B /* UIKit.framework in Frameworks */,
 				8FFF22C81786B8580077FC8B /* Foundation.framework in Frameworks */,
+				5459F23B9A2315FDCB45D922 /* libPods-BibAppUnitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DAB225B0484768A09E5746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F81F453F5A8806D9AD750A9A /* Pods-BibApp BLS.debug.xcconfig */,
+				1C72E75FF9FBE1A42E893140 /* Pods-BibApp BLS.release.xcconfig */,
+				A831F3BC887EE681AA895BEF /* Pods-BibApp Cobi.debug.xcconfig */,
+				81123685A0B17EB77A8D764A /* Pods-BibApp Cobi.release.xcconfig */,
+				43E52E9067DE8DEB8ACD5861 /* Pods-BibApp DHGE.debug.xcconfig */,
+				67CCC1A22A7BB812AC16BC79 /* Pods-BibApp DHGE.release.xcconfig */,
+				67C7B3420937E5CD15BAF599 /* Pods-BibApp EAH Jena.debug.xcconfig */,
+				87F9892ADE2EA6CD45424037 /* Pods-BibApp EAH Jena.release.xcconfig */,
+				04EA4A9FAC59852CCF83FB9C /* Pods-BibApp FHE.debug.xcconfig */,
+				9456018D56CE7ACF787956DC /* Pods-BibApp FHE.release.xcconfig */,
+				5AA9EBA75F0E4D387463ACA0 /* Pods-BibApp HAWK.debug.xcconfig */,
+				6294E7D4A0731950BD206040 /* Pods-BibApp HAWK.release.xcconfig */,
+				C612CEC7124A50FAB7098A02 /* Pods-BibApp HI.debug.xcconfig */,
+				0974070341C347C4E3FDED90 /* Pods-BibApp HI.release.xcconfig */,
+				ADCB911E756E4391E972960A /* Pods-BibApp HfM WE.debug.xcconfig */,
+				37F9712E2BB5A949EFEA984A /* Pods-BibApp HfM WE.release.xcconfig */,
+				204D5ED0C1F9D22CB1744C52 /* Pods-BibApp IL.debug.xcconfig */,
+				00A8CEB275F957D8CF3A5524 /* Pods-BibApp IL.release.xcconfig */,
+				B524C2C621236F6A7D35C74C /* Pods-BibApp LG.debug.xcconfig */,
+				4A0D600FD5F7CF2ECA4D7C0B /* Pods-BibApp LG.release.xcconfig */,
+				923AD3F3F87414F314181B3C /* Pods-BibApp NDH.debug.xcconfig */,
+				5A439D174723E5ACF8C15289 /* Pods-BibApp NDH.release.xcconfig */,
+				6730CE95FEC4693CF430A36C /* Pods-BibApp SM.debug.xcconfig */,
+				B0EF2D0A7DEBC941499AF63A /* Pods-BibApp SM.release.xcconfig */,
+				92BA2D0EAB473BF3302C6B13 /* Pods-BibApp TU BS.debug.xcconfig */,
+				5CB167D3D5E8CADD992FEE6A /* Pods-BibApp TU BS.release.xcconfig */,
+				757735876818193FF01FC5B9 /* Pods-BibApp ThULB.debug.xcconfig */,
+				6CDD8CC0F551AD54DAC02684 /* Pods-BibApp ThULB.release.xcconfig */,
+				BF50A0A3F8FA36EC054D3536 /* Pods-BibApp UB WE.debug.xcconfig */,
+				9994141AFEE0DEC8355B9CD2 /* Pods-BibApp UB WE.release.xcconfig */,
+				F08E052528D712C4F69C88C0 /* Pods-BibApp UFB.debug.xcconfig */,
+				DCE827E42B94386F6F5AB1EC /* Pods-BibApp UFB.release.xcconfig */,
+				696AE15EA59CEF909431FBC1 /* Pods-BibApp ÄZB.debug.xcconfig */,
+				69BADBFC7D039FC68ED8B745 /* Pods-BibApp ÄZB.release.xcconfig */,
+				273638A807E0ACEEFD432B00 /* Pods-BibAppUnitTests.debug.xcconfig */,
+				7F9DD58B174D86E8489F5716 /* Pods-BibAppUnitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3B03431D174943C50076CA8B /* URLRequests */ = {
 			isa = PBXGroup;
 			children = (
@@ -3861,6 +4013,7 @@
 				8FFF22C91786B8580077FC8B /* BibAppUnitTests */,
 				8FF26FF816393BF100099665 /* Frameworks */,
 				8FF26FF616393BF100099665 /* Products */,
+				21DAB225B0484768A09E5746 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3904,6 +4057,24 @@
 				8FF26FFD16393BF100099665 /* CoreGraphics.framework */,
 				8FF26FFF16393BF100099665 /* CoreData.framework */,
 				8FF2701C16393BF200099665 /* SenTestingKit.framework */,
+				7791F5F042D409ED999F9042 /* libPods-BibApp BLS.a */,
+				573925CD167789B70878E26E /* libPods-BibApp Cobi.a */,
+				F0877901A22C029ABFAD40BA /* libPods-BibApp DHGE.a */,
+				DE03D020F05B9AEADFEB04B7 /* libPods-BibApp EAH Jena.a */,
+				B44AC17BCD0695ECCACB60C2 /* libPods-BibApp FHE.a */,
+				26173324F4E2C7E694A79F94 /* libPods-BibApp HAWK.a */,
+				022685FF58480AD5C68AD5C8 /* libPods-BibApp HI.a */,
+				1FCA9B57887E897F7C07BDD4 /* libPods-BibApp HfM WE.a */,
+				834DCE5FB5AF8F49F9CD0C6E /* libPods-BibApp IL.a */,
+				425A006E16F325AB162BEAED /* libPods-BibApp LG.a */,
+				796AC8A0593AC2635ED6C760 /* libPods-BibApp NDH.a */,
+				AA38870293F456698625A9DD /* libPods-BibApp SM.a */,
+				4D169F58EE3DBBFBF6B04A4E /* libPods-BibApp TU BS.a */,
+				A11E7020A3393FB1B243B005 /* libPods-BibApp ThULB.a */,
+				89EE323999BE953277049851 /* libPods-BibApp UB WE.a */,
+				F9D5A720FD2A602B84D784EC /* libPods-BibApp UFB.a */,
+				52D168C3D3A2C81B2D3507B8 /* libPods-BibApp ÄZB.a */,
+				E2967148AF97F309464F6AB4 /* libPods-BibAppUnitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3932,6 +4103,7 @@
 		8FF2700216393BF200099665 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8FBFA9981F8E04F60028C113 /* GoogleService-Info.plist */,
 				8F3A1315163FD1C200D0B6F1 /* Images */,
 				8F8A757A1781BAA600CCF7DB /* BibApp-LG-Info.plist */,
 				8F8A757C1781BB1500CCF7DB /* BibApp-HI-Info.plist */,
@@ -4049,9 +4221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F07B1D41BFB72DB0012C325 /* Build configuration list for PBXNativeTarget "BibApp Cobi" */;
 			buildPhases = (
+				E5C0B0DF9A29E80B277B6339 /* [CP] Check Pods Manifest.lock */,
 				8F07B12D1BFB72DB0012C325 /* Sources */,
 				8F07B1841BFB72DB0012C325 /* Frameworks */,
 				8F07B1901BFB72DB0012C325 /* Resources */,
+				23DDDF8E812262E0C9D8C617 /* [CP] Embed Pods Frameworks */,
+				BE03EA77E6BE92CC07647B9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4066,9 +4241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F114084167F217000E033F6 /* Build configuration list for PBXNativeTarget "BibApp HI" */;
 			buildPhases = (
+				B1BD985F7A4B4932C0747522 /* [CP] Check Pods Manifest.lock */,
 				8F114038167F217000E033F6 /* Sources */,
 				8F11405A167F217000E033F6 /* Frameworks */,
 				8F114062167F217000E033F6 /* Resources */,
+				3E9165905EC213EC6F319C94 /* [CP] Embed Pods Frameworks */,
+				544977394725559DFCFBE996 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4083,9 +4261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F1D83DC192A2E7000A9898D /* Build configuration list for PBXNativeTarget "BibApp UB WE" */;
 			buildPhases = (
+				CC205F27581AD428E664E198 /* [CP] Check Pods Manifest.lock */,
 				8F1D8344192A2E7000A9898D /* Sources */,
 				8F1D8390192A2E7000A9898D /* Frameworks */,
 				8F1D839A192A2E7000A9898D /* Resources */,
+				EDD69BAA58391C4A9548EB66 /* [CP] Embed Pods Frameworks */,
+				732232183127EE3DC85100E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4100,9 +4281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8A760E1781BF4700CCF7DB /* Build configuration list for PBXNativeTarget "BibApp BLS" */;
 			buildPhases = (
+				5C22D6FF12580B64B476D211 /* [CP] Check Pods Manifest.lock */,
 				8F8A757F1781BF4700CCF7DB /* Sources */,
 				8F8A75C21781BF4700CCF7DB /* Frameworks */,
 				8F8A75CC1781BF4700CCF7DB /* Resources */,
+				AB4C70365895456FD429EC8D /* [CP] Embed Pods Frameworks */,
+				36EBC62A283DAC69FD2A3071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4117,9 +4301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8A76A31781C05400CCF7DB /* Build configuration list for PBXNativeTarget "BibApp IL" */;
 			buildPhases = (
+				4FEDA3D82DD30B6576F6AE44 /* [CP] Check Pods Manifest.lock */,
 				8F8A76141781C05400CCF7DB /* Sources */,
 				8F8A76571781C05400CCF7DB /* Frameworks */,
 				8F8A76611781C05400CCF7DB /* Resources */,
+				EE3FA62B91EB0DD28C725845 /* [CP] Embed Pods Frameworks */,
+				361CA673D4186398DF466A8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4134,9 +4321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8A77381781C0D800CCF7DB /* Build configuration list for PBXNativeTarget "BibApp HAWK" */;
 			buildPhases = (
+				B2B87C6E5B5ED1DC79A86D32 /* [CP] Check Pods Manifest.lock */,
 				8F8A76A91781C0D800CCF7DB /* Sources */,
 				8F8A76EC1781C0D800CCF7DB /* Frameworks */,
 				8F8A76F61781C0D800CCF7DB /* Resources */,
+				AC5FB887EB5097446EF0D5B8 /* [CP] Embed Pods Frameworks */,
+				EFC57B81E42B5CECA7B68FF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4151,9 +4341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */;
 			buildPhases = (
+				2A5373C13E0B17FE1DF99153 /* [CP] Check Pods Manifest.lock */,
 				8F8EB5A51A93689000548F24 /* Sources */,
 				8F8EB5FA1A93689000548F24 /* Frameworks */,
 				8F8EB6051A93689000548F24 /* Resources */,
+				58178F02412207007F34DAF7 /* [CP] Embed Pods Frameworks */,
+				C4BAA029F30129F60D3158CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4168,9 +4361,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F58A19501E6B006CD05A /* Build configuration list for PBXNativeTarget "BibApp DHGE" */;
 			buildPhases = (
+				9189370F4A5B62891639966D /* [CP] Check Pods Manifest.lock */,
 				8FA8F4EE19501E6B006CD05A /* Sources */,
 				8FA8F53C19501E6B006CD05A /* Frameworks */,
 				8FA8F54719501E6B006CD05A /* Resources */,
+				2DF1085E074D0EEDCCB8A59B /* [CP] Embed Pods Frameworks */,
+				9EB9BE7BC8B2703CEE66A8CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4185,9 +4381,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F62C19502224006CD05A /* Build configuration list for PBXNativeTarget "BibApp HfM WE" */;
 			buildPhases = (
+				504A66D7B5F4A5268C6C3466 /* [CP] Check Pods Manifest.lock */,
 				8FA8F59019502224006CD05A /* Sources */,
 				8FA8F5DE19502224006CD05A /* Frameworks */,
 				8FA8F5E919502224006CD05A /* Resources */,
+				E9F82D3335097E73A75A7EAE /* [CP] Embed Pods Frameworks */,
+				15495EA924B6A37A373AAAB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4202,9 +4401,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F6CE1950228D006CD05A /* Build configuration list for PBXNativeTarget "BibApp NDH" */;
 			buildPhases = (
+				0173F335AAA6469B23FF949B /* [CP] Check Pods Manifest.lock */,
 				8FA8F6321950228D006CD05A /* Sources */,
 				8FA8F6801950228D006CD05A /* Frameworks */,
 				8FA8F68B1950228D006CD05A /* Resources */,
+				F7C7AA8348F9AB859C496E60 /* [CP] Embed Pods Frameworks */,
+				DFCFAE48DC9C06586A6C24C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4219,9 +4421,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F770195022BC006CD05A /* Build configuration list for PBXNativeTarget "BibApp FHE" */;
 			buildPhases = (
+				0343F367186DF53192616C47 /* [CP] Check Pods Manifest.lock */,
 				8FA8F6D4195022BC006CD05A /* Sources */,
 				8FA8F722195022BC006CD05A /* Frameworks */,
 				8FA8F72D195022BC006CD05A /* Resources */,
+				6546AC50E5B67FB2FF10D752 /* [CP] Embed Pods Frameworks */,
+				0A736F3DD516D1E86D69A895 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4236,9 +4441,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F8121950230D006CD05A /* Build configuration list for PBXNativeTarget "BibApp SM" */;
 			buildPhases = (
+				1A5A6987FC8BF17A0B860A8A /* [CP] Check Pods Manifest.lock */,
 				8FA8F7761950230D006CD05A /* Sources */,
 				8FA8F7C41950230D006CD05A /* Frameworks */,
 				8FA8F7CF1950230D006CD05A /* Resources */,
+				E2E6ED8340F370A7CA89A7C2 /* [CP] Embed Pods Frameworks */,
+				3ED8839198C9C2B260ABCD2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4253,9 +4461,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FA8F8B41950233A006CD05A /* Build configuration list for PBXNativeTarget "BibApp UFB" */;
 			buildPhases = (
+				73DE8262EC2325C114EA5739 /* [CP] Check Pods Manifest.lock */,
 				8FA8F8181950233A006CD05A /* Sources */,
 				8FA8F8661950233A006CD05A /* Frameworks */,
 				8FA8F8711950233A006CD05A /* Resources */,
+				0746317364AEB62147ABC8FF /* [CP] Embed Pods Frameworks */,
+				7332FF13FB89737F1900E074 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4270,9 +4481,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FAD980D1A0CFD3600C3A5D1 /* Build configuration list for PBXNativeTarget "BibApp TU BS" */;
 			buildPhases = (
+				809BEA09F5ABCC51FCF3A985 /* [CP] Check Pods Manifest.lock */,
 				8FAD976A1A0CFD3600C3A5D1 /* Sources */,
 				8FAD97BE1A0CFD3600C3A5D1 /* Frameworks */,
 				8FAD97C91A0CFD3600C3A5D1 /* Resources */,
+				AA7B2EEAC0436798AB53A56B /* [CP] Embed Pods Frameworks */,
+				FF8BCD6BC0ADD18996351BE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4287,9 +4501,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD61108190916EA009E2358 /* Build configuration list for PBXNativeTarget "BibApp ThULB" */;
 			buildPhases = (
+				6E83FC6BAC4F5F6871E672CD /* [CP] Check Pods Manifest.lock */,
 				8FD61072190916EA009E2358 /* Sources */,
 				8FD610BC190916EA009E2358 /* Frameworks */,
 				8FD610C6190916EA009E2358 /* Resources */,
+				0CCCF8BAEAFDC8BDF3EAA13D /* [CP] Embed Pods Frameworks */,
+				1427D3D9ABF133630C296CE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4304,9 +4521,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD611A4190916EF009E2358 /* Build configuration list for PBXNativeTarget "BibApp EAH Jena" */;
 			buildPhases = (
+				407F3CD540D4DEA85C41B499 /* [CP] Check Pods Manifest.lock */,
 				8FD6110E190916EF009E2358 /* Sources */,
 				8FD61158190916EF009E2358 /* Frameworks */,
 				8FD61162190916EF009E2358 /* Resources */,
+				F5C4AF72931AC090154CA77B /* [CP] Embed Pods Frameworks */,
+				B40AFA412D71AD5EDDCF6CC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4321,9 +4541,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FF2702E16393BF200099665 /* Build configuration list for PBXNativeTarget "BibApp LG" */;
 			buildPhases = (
+				718DC0DB6D71EB537F87CAF0 /* [CP] Check Pods Manifest.lock */,
 				8FF26FF116393BF100099665 /* Sources */,
 				8FF26FF216393BF100099665 /* Frameworks */,
 				8FF26FF316393BF100099665 /* Resources */,
+				392DE861264DC8C9D7760D1B /* [CP] Embed Pods Frameworks */,
+				564C9C369DC1BC036B8E8B01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4338,10 +4561,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FFF22D31786B8580077FC8B /* Build configuration list for PBXNativeTarget "BibAppUnitTests" */;
 			buildPhases = (
+				5EC681E8C2C3EB192EA5ED44 /* [CP] Check Pods Manifest.lock */,
 				8FFF22C01786B8580077FC8B /* Sources */,
 				8FFF22C11786B8580077FC8B /* Frameworks */,
 				8FFF22C21786B8580077FC8B /* Resources */,
 				8FFF22C31786B8580077FC8B /* ShellScript */,
+				384F3BC9AEB0E69337259762 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4471,6 +4696,7 @@
 				8F07B1AB1BFB72DB0012C325 /* menuIconInfo@2x.png in Resources */,
 				8F07B1AC1BFB72DB0012C325 /* BANoSearchResultsCell.xib in Resources */,
 				8F07B1AD1BFB72DB0012C325 /* menuIconList@2x.png in Resources */,
+				8FBFA9AA1F8E05050028C113 /* GoogleService-Info.plist in Resources */,
 				8F07B1AE1BFB72DB0012C325 /* menuIconOptions@2x.png in Resources */,
 				8F07B1AF1BFB72DB0012C325 /* menuIconSearch@2x.png in Resources */,
 				8F07B1B01BFB72DB0012C325 /* menuIconInfo.png in Resources */,
@@ -4581,6 +4807,7 @@
 				8F5319281951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FE5F960170466EA002EA336 /* iPadIcon.png in Resources */,
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
+				8FBFA99A1F8E04F90028C113 /* GoogleService-Info.plist in Resources */,
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
 				8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
@@ -4656,6 +4883,7 @@
 				8F53192E1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F1D83D7192A2E7000A9898D /* iPadIcon.png in Resources */,
 				8F1D83D8192A2E7000A9898D /* iPadIcon@2x.png in Resources */,
+				8FBFA9A01F8E04FE0028C113 /* GoogleService-Info.plist in Resources */,
 				8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */,
 				8F1D83DA192A2E7000A9898D /* Icon-72@2x.png in Resources */,
 				8F1D83DB192A2E7000A9898D /* BACatalogueTableViewCell.xib in Resources */,
@@ -4709,6 +4937,7 @@
 				8F8A75F21781BF4700CCF7DB /* mediaIconM.png in Resources */,
 				8F8A75F31781BF4700CCF7DB /* mediaIconO.png in Resources */,
 				8F8A75F41781BF4700CCF7DB /* mediaIconP.png in Resources */,
+				8FBFA99B1F8E04FA0028C113 /* GoogleService-Info.plist in Resources */,
 				8F8A75F51781BF4700CCF7DB /* mediaIconS.png in Resources */,
 				8F8A75F61781BF4700CCF7DB /* mediaIconT.png in Resources */,
 				8F8A75F71781BF4700CCF7DB /* mediaIconV.png in Resources */,
@@ -4789,6 +5018,7 @@
 				8F8A76871781C05400CCF7DB /* mediaIconM.png in Resources */,
 				8F8A76881781C05400CCF7DB /* mediaIconO.png in Resources */,
 				8F8A76891781C05400CCF7DB /* mediaIconP.png in Resources */,
+				8FBFA99C1F8E04FB0028C113 /* GoogleService-Info.plist in Resources */,
 				8F8A768A1781C05400CCF7DB /* mediaIconS.png in Resources */,
 				8F8A768B1781C05400CCF7DB /* mediaIconT.png in Resources */,
 				8F8A768C1781C05400CCF7DB /* mediaIconV.png in Resources */,
@@ -4891,6 +5121,7 @@
 				8F8A77321781C0D800CCF7DB /* BATocListCell.xib in Resources */,
 				8F8A77331781C0D800CCF7DB /* iPadIcon.png in Resources */,
 				8F8A77341781C0D800CCF7DB /* iPadIcon@2x.png in Resources */,
+				8FBFA99D1F8E04FC0028C113 /* GoogleService-Info.plist in Resources */,
 				8F8A77351781C0D800CCF7DB /* Icon-72.png in Resources */,
 				8F8A77361781C0D800CCF7DB /* Icon-72@2x.png in Resources */,
 				8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */,
@@ -4939,6 +5170,7 @@
 				8F8EB6201A93689000548F24 /* menuIconInfo@2x.png in Resources */,
 				8FE6DA6F1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8EB6211A93689000548F24 /* menuIconList@2x.png in Resources */,
+				8FBFA9A91F8E05040028C113 /* GoogleService-Info.plist in Resources */,
 				8F8EB6221A93689000548F24 /* menuIconOptions@2x.png in Resources */,
 				8F8EB6231A93689000548F24 /* menuIconSearch@2x.png in Resources */,
 				8F8EB6241A93689000548F24 /* menuIconInfo.png in Resources */,
@@ -5049,6 +5281,7 @@
 				8F53192F1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F58519501E6B006CD05A /* iPadIcon.png in Resources */,
 				8FA8F58619501E6B006CD05A /* iPadIcon@2x.png in Resources */,
+				8FBFA9A11F8E04FF0028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F58719501E6B006CD05A /* Icon-72.png in Resources */,
 				8FA8F58819501E6B006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F58919501E6B006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5124,6 +5357,7 @@
 				8F5319301951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F62719502224006CD05A /* iPadIcon.png in Resources */,
 				8FA8F62819502224006CD05A /* iPadIcon@2x.png in Resources */,
+				8FBFA9A21F8E05000028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F62919502224006CD05A /* Icon-72.png in Resources */,
 				8FA8F62A19502224006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F62B19502224006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5199,6 +5433,7 @@
 				8F5319311951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F6C91950228D006CD05A /* iPadIcon.png in Resources */,
 				8FA8F6CA1950228D006CD05A /* iPadIcon@2x.png in Resources */,
+				8FBFA9A31F8E05000028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F6CB1950228D006CD05A /* Icon-72.png in Resources */,
 				8FA8F6CC1950228D006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F6CD1950228D006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5274,6 +5509,7 @@
 				8F5319321951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F76B195022BC006CD05A /* iPadIcon.png in Resources */,
 				8FA8F76C195022BC006CD05A /* iPadIcon@2x.png in Resources */,
+				8FBFA9A41F8E05010028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F76D195022BC006CD05A /* Icon-72.png in Resources */,
 				8FA8F76E195022BC006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F76F195022BC006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5313,6 +5549,7 @@
 				8FA8F7EA1950230D006CD05A /* menuIconList@2x.png in Resources */,
 				8FE6DA6C1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FA8F7EB1950230D006CD05A /* menuIconOptions@2x.png in Resources */,
+				8FBFA9A51F8E05010028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F7EC1950230D006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F7ED1950230D006CD05A /* menuIconInfo.png in Resources */,
 				8FA8F7EE1950230D006CD05A /* mediaIconA.png in Resources */,
@@ -5423,6 +5660,7 @@
 				8F5319341951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F8AF1950233A006CD05A /* iPadIcon.png in Resources */,
 				8FA8F8B01950233A006CD05A /* iPadIcon@2x.png in Resources */,
+				8FBFA9A61F8E05020028C113 /* GoogleService-Info.plist in Resources */,
 				8FA8F8B11950233A006CD05A /* Icon-72.png in Resources */,
 				8FA8F8B21950233A006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F8B31950233A006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5498,6 +5736,7 @@
 				8FAD98071A0CFD3600C3A5D1 /* BibApp-SM-Info.plist in Resources */,
 				8FAD98081A0CFD3600C3A5D1 /* iPadIcon.png in Resources */,
 				8FAD98091A0CFD3600C3A5D1 /* iPadIcon@2x.png in Resources */,
+				8FBFA9A81F8E05030028C113 /* GoogleService-Info.plist in Resources */,
 				8FAD980A1A0CFD3600C3A5D1 /* Icon-72.png in Resources */,
 				8FAD980B1A0CFD3600C3A5D1 /* Icon-72@2x.png in Resources */,
 				8FAD980C1A0CFD3600C3A5D1 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5573,6 +5812,7 @@
 				8F53192C1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD61103190916EA009E2358 /* iPadIcon.png in Resources */,
 				8FD61104190916EA009E2358 /* iPadIcon@2x.png in Resources */,
+				8FBFA99E1F8E04FD0028C113 /* GoogleService-Info.plist in Resources */,
 				8FD61105190916EA009E2358 /* Icon-72.png in Resources */,
 				8FD61106190916EA009E2358 /* Icon-72@2x.png in Resources */,
 				8FD61107190916EA009E2358 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5648,6 +5888,7 @@
 				8F53192D1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD6119F190916EF009E2358 /* iPadIcon.png in Resources */,
 				8FD611A0190916EF009E2358 /* iPadIcon@2x.png in Resources */,
+				8FBFA99F1F8E04FE0028C113 /* GoogleService-Info.plist in Resources */,
 				8FD611A1190916EF009E2358 /* Icon-72.png in Resources */,
 				8FD611A2190916EF009E2358 /* Icon-72@2x.png in Resources */,
 				8FD611A3190916EF009E2358 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5687,6 +5928,7 @@
 				8F0D9F7C16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */,
 				8FE6DA601B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F0D9F7E16B68AD8000CED81 /* menuIconList@2x.png in Resources */,
+				8FBFA9991F8E04F90028C113 /* GoogleService-Info.plist in Resources */,
 				8F0D9F8016B68AD8000CED81 /* menuIconOptions@2x.png in Resources */,
 				8F0D9F8216B68AD8000CED81 /* menuIconSearch@2x.png in Resources */,
 				8F0D9F8516B69949000CED81 /* menuIconInfo.png in Resources */,
@@ -5733,12 +5975,493 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FFF22CE1786B8580077FC8B /* InfoPlist.strings in Resources */,
+				8FBFA9A71F8E05030028C113 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0173F335AAA6469B23FF949B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0343F367186DF53192616C47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0746317364AEB62147ABC8FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp UFB/Pods-BibApp UFB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A736F3DD516D1E86D69A895 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CCCF8BAEAFDC8BDF3EAA13D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp ThULB/Pods-BibApp ThULB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1427D3D9ABF133630C296CE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp ThULB/Pods-BibApp ThULB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15495EA924B6A37A373AAAB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A5A6987FC8BF17A0B860A8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23DDDF8E812262E0C9D8C617 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp Cobi/Pods-BibApp Cobi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A5373C13E0B17FE1DF99153 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DF1085E074D0EEDCCB8A59B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp DHGE/Pods-BibApp DHGE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		361CA673D4186398DF466A8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36EBC62A283DAC69FD2A3071 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		384F3BC9AEB0E69337259762 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibAppUnitTests/Pods-BibAppUnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		392DE861264DC8C9D7760D1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp LG/Pods-BibApp LG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E9165905EC213EC6F319C94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ED8839198C9C2B260ABCD2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp SM/Pods-BibApp SM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		407F3CD540D4DEA85C41B499 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FEDA3D82DD30B6576F6AE44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		504A66D7B5F4A5268C6C3466 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		544977394725559DFCFBE996 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564C9C369DC1BC036B8E8B01 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp LG/Pods-BibApp LG-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58178F02412207007F34DAF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C22D6FF12580B64B476D211 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EC681E8C2C3EB192EA5ED44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6546AC50E5B67FB2FF10D752 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E83FC6BAC4F5F6871E672CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		718DC0DB6D71EB537F87CAF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		732232183127EE3DC85100E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7332FF13FB89737F1900E074 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp UFB/Pods-BibApp UFB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73DE8262EC2325C114EA5739 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		809BEA09F5ABCC51FCF3A985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8FFF22C31786B8580077FC8B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5751,6 +6474,321 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		9189370F4A5B62891639966D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EB9BE7BC8B2703CEE66A8CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp DHGE/Pods-BibApp DHGE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7B2EEAC0436798AB53A56B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB4C70365895456FD429EC8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC5FB887EB5097446EF0D5B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1BD985F7A4B4932C0747522 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B87C6E5B5ED1DC79A86D32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B40AFA412D71AD5EDDCF6CC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE03EA77E6BE92CC07647B9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp Cobi/Pods-BibApp Cobi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4BAA029F30129F60D3158CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC205F27581AD428E664E198 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFCFAE48DC9C06586A6C24C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E6ED8340F370A7CA89A7C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp SM/Pods-BibApp SM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5C0B0DF9A29E80B277B6339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9F82D3335097E73A75A7EAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDD69BAA58391C4A9548EB66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3FA62B91EB0DD28C725845 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC57B81E42B5CECA7B68FF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C4AF72931AC090154CA77B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C7AA8348F9AB859C496E60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF8BCD6BC0ADD18996351BE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -7404,6 +8442,7 @@
 /* Begin XCBuildConfiguration section */
 		8F07B1D51BFB72DB0012C325 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A831F3BC887EE681AA895BEF /* Pods-BibApp Cobi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
@@ -7429,6 +8468,7 @@
 		};
 		8F07B1D61BFB72DB0012C325 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81123685A0B17EB77A8D764A /* Pods-BibApp Cobi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
@@ -7454,6 +8494,7 @@
 		};
 		8F114085167F217000E033F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C612CEC7124A50FAB7098A02 /* Pods-BibApp HI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
@@ -7478,6 +8519,7 @@
 		};
 		8F114086167F217000E033F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0974070341C347C4E3FDED90 /* Pods-BibApp HI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
@@ -7502,6 +8544,7 @@
 		};
 		8F1D83DD192A2E7000A9898D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF50A0A3F8FA36EC054D3536 /* Pods-BibApp UB WE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UB WE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UB WE LaunchImage";
@@ -7526,6 +8569,7 @@
 		};
 		8F1D83DE192A2E7000A9898D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9994141AFEE0DEC8355B9CD2 /* Pods-BibApp UB WE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UB WE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UB WE LaunchImage";
@@ -7550,6 +8594,7 @@
 		};
 		8F8A760F1781BF4700CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81F453F5A8806D9AD750A9A /* Pods-BibApp BLS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
@@ -7573,6 +8618,7 @@
 		};
 		8F8A76101781BF4700CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C72E75FF9FBE1A42E893140 /* Pods-BibApp BLS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
@@ -7597,6 +8643,7 @@
 		};
 		8F8A76A41781C05400CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204D5ED0C1F9D22CB1744C52 /* Pods-BibApp IL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
@@ -7604,13 +8651,26 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lxml2",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
@@ -7623,6 +8683,7 @@
 		};
 		8F8A76A51781C05400CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A8CEB275F957D8CF3A5524 /* Pods-BibApp IL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
@@ -7630,13 +8691,26 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lxml2",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
@@ -7650,6 +8724,7 @@
 		};
 		8F8A77391781C0D800CCF7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA9EBA75F0E4D387463ACA0 /* Pods-BibApp HAWK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
@@ -7673,6 +8748,7 @@
 		};
 		8F8A773A1781C0D800CCF7DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6294E7D4A0731950BD206040 /* Pods-BibApp HAWK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
@@ -7697,6 +8773,7 @@
 		};
 		8F8EB6491A93689000548F24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696AE15EA59CEF909431FBC1 /* Pods-BibApp ÄZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -7721,6 +8798,7 @@
 		};
 		8F8EB64A1A93689000548F24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69BADBFC7D039FC68ED8B745 /* Pods-BibApp ÄZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -7745,6 +8823,7 @@
 		};
 		8FA8F58B19501E6B006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E52E9067DE8DEB8ACD5861 /* Pods-BibApp DHGE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
@@ -7769,6 +8848,7 @@
 		};
 		8FA8F58C19501E6B006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67CCC1A22A7BB812AC16BC79 /* Pods-BibApp DHGE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
@@ -7793,6 +8873,7 @@
 		};
 		8FA8F62D19502224006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCB911E756E4391E972960A /* Pods-BibApp HfM WE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
@@ -7817,6 +8898,7 @@
 		};
 		8FA8F62E19502224006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F9712E2BB5A949EFEA984A /* Pods-BibApp HfM WE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
@@ -7841,6 +8923,7 @@
 		};
 		8FA8F6CF1950228D006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923AD3F3F87414F314181B3C /* Pods-BibApp NDH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
@@ -7866,6 +8949,7 @@
 		};
 		8FA8F6D01950228D006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A439D174723E5ACF8C15289 /* Pods-BibApp NDH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
@@ -7891,6 +8975,7 @@
 		};
 		8FA8F771195022BC006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04EA4A9FAC59852CCF83FB9C /* Pods-BibApp FHE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
@@ -7915,6 +9000,7 @@
 		};
 		8FA8F772195022BC006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9456018D56CE7ACF787956DC /* Pods-BibApp FHE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
@@ -7939,6 +9025,7 @@
 		};
 		8FA8F8131950230D006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6730CE95FEC4693CF430A36C /* Pods-BibApp SM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "SM AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
@@ -7963,6 +9050,7 @@
 		};
 		8FA8F8141950230D006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0EF2D0A7DEBC941499AF63A /* Pods-BibApp SM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "SM AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
@@ -7987,6 +9075,7 @@
 		};
 		8FA8F8B51950233A006CD05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F08E052528D712C4F69C88C0 /* Pods-BibApp UFB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UFB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UFB LaunchImage";
@@ -8011,6 +9100,7 @@
 		};
 		8FA8F8B61950233A006CD05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE827E42B94386F6F5AB1EC /* Pods-BibApp UFB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UFB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UFB LaunchImage";
@@ -8035,6 +9125,7 @@
 		};
 		8FAD980E1A0CFD3600C3A5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92BA2D0EAB473BF3302C6B13 /* Pods-BibApp TU BS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
@@ -8059,6 +9150,7 @@
 		};
 		8FAD980F1A0CFD3600C3A5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB167D3D5E8CADD992FEE6A /* Pods-BibApp TU BS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
@@ -8083,6 +9175,7 @@
 		};
 		8FD61109190916EA009E2358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757735876818193FF01FC5B9 /* Pods-BibApp ThULB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
@@ -8107,6 +9200,7 @@
 		};
 		8FD6110A190916EA009E2358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CDD8CC0F551AD54DAC02684 /* Pods-BibApp ThULB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
@@ -8131,6 +9225,7 @@
 		};
 		8FD611A5190916EF009E2358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C7B3420937E5CD15BAF599 /* Pods-BibApp EAH Jena.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
@@ -8155,6 +9250,7 @@
 		};
 		8FD611A6190916EF009E2358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F9892ADE2EA6CD45424037 /* Pods-BibApp EAH Jena.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
@@ -8184,6 +9280,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -8204,6 +9301,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "${PODS_ROOT}";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -8221,6 +9319,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -8232,6 +9331,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -8251,6 +9351,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "${PODS_ROOT}";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -8261,6 +9362,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -8268,9 +9370,11 @@
 		};
 		8FF2702F16393BF200099665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B524C2C621236F6A7D35C74C /* Pods-BibApp LG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -8292,9 +9396,11 @@
 		};
 		8FF2703016393BF200099665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A0D600FD5F7CF2ECA4D7C0B /* Pods-BibApp LG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -8316,14 +9422,13 @@
 		};
 		8FFF22D41786B8580077FC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273638A807E0ACEEFD432B00 /* Pods-BibAppUnitTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
@@ -8336,14 +9441,13 @@
 		};
 		8FFF22D51786B8580077FC8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F9DD58B174D86E8489F5716 /* Pods-BibAppUnitTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
