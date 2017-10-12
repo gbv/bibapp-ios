@@ -7,6 +7,7 @@
 //
 
 #import "BAPushService.h"
+#import "BAConnector.h"
 
 #import <Firebase/Firebase.h>
 
@@ -27,6 +28,15 @@
 #endif
 
 @implementation BAPushService
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    }
+    return self;
+}
 
 -(void)enablePush {
     NSLog(@"enable push");
@@ -55,16 +65,48 @@
     
     NSString *fcmToken = [FIRMessaging messaging].FCMToken;
     NSLog(@"FCM registration token: %@", fcmToken);
+    
+    BAConnector *connector = [BAConnector generateConnector];
+    [connector pushServiceRegisterWithUsername:self.appDelegate.currentAccount password:self.appDelegate.currentPassword deviceId:fcmToken delegate:self];
 }
 
 -(void)disablePush {
     NSLog(@"disable push");
     
     [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+    
+    BAConnector *connector = [BAConnector generateConnector];
+    [connector pushServiceRemoveWithdelegate:self];
 }
 
 -(void)updatePush {
     NSLog(@"update push");
+    
+    NSString *fcmToken = [FIRMessaging messaging].FCMToken;
+    NSLog(@"FCM registration token: %@", fcmToken);
+    
+    BAConnector *connector = [BAConnector generateConnector];
+    [connector pushServiceUpdateWithUsername:self.appDelegate.currentAccount password:self.appDelegate.currentPassword deviceId:fcmToken delegate:self];
+}
+
+-(void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {
+    if ([command isEqualToString:@"pushServiceRegister"]) {
+        
+    } else if ([command isEqualToString:@"pushServiceUpdate"]) {
+        
+    } else if ([command isEqualToString:@"pushServiceUpdateDeviceId"]) {
+        
+    } else if ([command isEqualToString:@"pushServiceRemove"]) {
+        
+    }
+}
+
+-(void)commandIsNotInScope:(NSString *)command {
+    
+}
+
+-(void)networkIsNotReachable:(NSString *)command {
+    
 }
 
 @end

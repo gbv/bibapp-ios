@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BAConnectorDelegate.h"
 
-@interface BAPushService : NSObject
+@class BAAppDelegate;
+
+@interface BAPushService : NSObject <BAConnectorDelegate>
+
+@property (strong, nonatomic) BAAppDelegate *appDelegate;
 
 -(void)enablePush;
 -(void)disablePush;
