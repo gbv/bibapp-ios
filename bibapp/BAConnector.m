@@ -638,7 +638,33 @@ static BAConnector *sharedConnector = nil;
          [newLocation setGeoLat:@""];
       }
       if (!foundAddress) {
-         [newLocation setAddress:@""];
+          if ([[json allKeys] containsObject:@"_:b2"]) {
+              NSString *street = @"";
+              NSString *postal = @"";
+              NSString *locality = @"";
+              
+              for (NSString *key in [json objectForKey:@"_:b2"]) {
+                  if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#street-address"]) {
+                      street = [[[[json objectForKey:@"_:b2"] objectForKey:key] objectAtIndex:([[[json objectForKey:@"_:b2"] objectForKey:key] count] - 1)]objectForKey:@"value"];
+                  }
+              }
+              
+              for (NSString *key in [json objectForKey:@"_:b2"]) {
+                  if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#postal-code"]) {
+                      postal = [[[[json objectForKey:@"_:b2"] objectForKey:key] objectAtIndex:([[[json objectForKey:@"_:b2"] objectForKey:key] count] - 1)]objectForKey:@"value"];
+                  }
+              }
+              
+              for (NSString *key in [json objectForKey:@"_:b2"]) {
+                  if ([key isEqualToString:@"http://www.w3.org/2006/vcard/ns#locality"]) {
+                      locality = [[[[json objectForKey:@"_:b2"] objectForKey:key] objectAtIndex:([[[json objectForKey:@"_:b2"] objectForKey:key] count] - 1)]objectForKey:@"value"];
+                  }
+              }
+              
+              [newLocation setAddress:[[NSString alloc] initWithFormat:@"%@\n%@ %@", street, postal, locality]];
+          } else {
+              [newLocation setAddress:@""];
+          }
       }
       if (!foundOpeningHours) {
          [newLocation setOpeninghours:@""];
