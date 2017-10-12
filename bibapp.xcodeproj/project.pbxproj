@@ -2897,6 +2897,24 @@
 		9A067799AD73C16780649463 /* libPods-BibApp HAWK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26173324F4E2C7E694A79F94 /* libPods-BibApp HAWK.a */; };
 		9A7CB337DAD4572920AE3774 /* libPods-BibApp UB WE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EE323999BE953277049851 /* libPods-BibApp UB WE.a */; };
 		AAF4E9E5C65DA1C5F44C060E /* libPods-BibApp ThULB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A11E7020A3393FB1B243B005 /* libPods-BibApp ThULB.a */; };
+		B449285C1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449285D1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449285E1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449285F1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928601F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928611F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928621F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928631F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928641F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928651F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928661F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928671F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928681F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B44928691F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449286A1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449286B1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449286C1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
+		B449286D1F8FEFD10016E554 /* BAPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = B449285B1F8FEFD10016E554 /* BAPushService.m */; };
 		C2ECE15F5E59AD86B8F9C14A /* libPods-BibApp TU BS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D169F58EE3DBBFBF6B04A4E /* libPods-BibApp TU BS.a */; };
 		C93886AD3B36EC6A14760C36 /* libPods-BibApp IL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 834DCE5FB5AF8F49F9CD0C6E /* libPods-BibApp IL.a */; };
 		D913945D7322CC779F68B62A /* libPods-BibApp SM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA38870293F456698625A9DD /* libPods-BibApp SM.a */; };
@@ -3270,6 +3288,8 @@
 		ADCB911E756E4391E972960A /* Pods-BibApp HfM WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.debug.xcconfig"; sourceTree = "<group>"; };
 		B0EF2D0A7DEBC941499AF63A /* Pods-BibApp SM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp SM.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp SM/Pods-BibApp SM.release.xcconfig"; sourceTree = "<group>"; };
 		B43262B51F8E32DD00E7F5A8 /* BibApp IL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp IL.entitlements"; sourceTree = "<group>"; };
+		B449285A1F8FEFD10016E554 /* BAPushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAPushService.h; sourceTree = "<group>"; };
+		B449285B1F8FEFD10016E554 /* BAPushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAPushService.m; sourceTree = "<group>"; };
 		B44AC17BCD0695ECCACB60C2 /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B524C2C621236F6A7D35C74C /* Pods-BibApp LG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp LG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp LG/Pods-BibApp LG.debug.xcconfig"; sourceTree = "<group>"; };
 		BF50A0A3F8FA36EC054D3536 /* Pods-BibApp UB WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UB WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE.debug.xcconfig"; sourceTree = "<group>"; };
@@ -4092,6 +4112,7 @@
 				8F84BE15163C60F400614B36 /* Controller */,
 				8F3A132A1640074200D0B6F1 /* View */,
 				8F4486A51CB67DE5003C7853 /* Parser */,
+				B44928591F8FEF8B0016E554 /* Service */,
 				8FF2701316393BF200099665 /* bibapp.xcdatamodeld */,
 				8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */,
 				8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */,
@@ -4214,6 +4235,15 @@
 				8FFF22D21786B8580077FC8B /* BibAppUnitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B44928591F8FEF8B0016E554 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B449285A1F8FEFD10016E554 /* BAPushService.h */,
+				B449285B1F8FEFD10016E554 /* BAPushService.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -6007,7 +6037,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0343F367186DF53192616C47 /* [CP] Check Pods Manifest.lock */ = {
@@ -6025,7 +6055,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0746317364AEB62147ABC8FF /* [CP] Embed Pods Frameworks */ = {
@@ -6118,7 +6148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		23DDDF8E812262E0C9D8C617 /* [CP] Embed Pods Frameworks */ = {
@@ -6151,7 +6181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2DF1085E074D0EEDCCB8A59B /* [CP] Embed Pods Frameworks */ = {
@@ -6274,7 +6304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4FEDA3D82DD30B6576F6AE44 /* [CP] Check Pods Manifest.lock */ = {
@@ -6292,7 +6322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		504A66D7B5F4A5268C6C3466 /* [CP] Check Pods Manifest.lock */ = {
@@ -6310,7 +6340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		544977394725559DFCFBE996 /* [CP] Copy Pods Resources */ = {
@@ -6373,7 +6403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5EC681E8C2C3EB192EA5ED44 /* [CP] Check Pods Manifest.lock */ = {
@@ -6391,7 +6421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6546AC50E5B67FB2FF10D752 /* [CP] Embed Pods Frameworks */ = {
@@ -6424,7 +6454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		718DC0DB6D71EB537F87CAF0 /* [CP] Check Pods Manifest.lock */ = {
@@ -6442,7 +6472,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		732232183127EE3DC85100E4 /* [CP] Copy Pods Resources */ = {
@@ -6490,7 +6520,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		809BEA09F5ABCC51FCF3A985 /* [CP] Check Pods Manifest.lock */ = {
@@ -6508,7 +6538,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8FFF22C31786B8580077FC8B /* ShellScript */ = {
@@ -6539,7 +6569,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EB9BE7BC8B2703CEE66A8CD /* [CP] Copy Pods Resources */ = {
@@ -6617,7 +6647,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B2B87C6E5B5ED1DC79A86D32 /* [CP] Check Pods Manifest.lock */ = {
@@ -6635,7 +6665,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B40AFA412D71AD5EDDCF6CC2 /* [CP] Copy Pods Resources */ = {
@@ -6698,7 +6728,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DFCFAE48DC9C06586A6C24C1 /* [CP] Copy Pods Resources */ = {
@@ -6746,7 +6776,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9F82D3335097E73A75A7EAE /* [CP] Embed Pods Frameworks */ = {
@@ -6919,6 +6949,7 @@
 				8F07B1641BFB72DB0012C325 /* BALocationViewControllerPad.m in Sources */,
 				8F07B1651BFB72DB0012C325 /* BALocationViewController.m in Sources */,
 				8F07B1661BFB72DB0012C325 /* BACoverViewControllerPad.m in Sources */,
+				B449286D1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F07B1671BFB72DB0012C325 /* BACoverViewController.m in Sources */,
 				8F07B1681BFB72DB0012C325 /* BAListTableViewControllerPad.m in Sources */,
 				8F07B1691BFB72DB0012C325 /* BATocViewControllerPad.m in Sources */,
@@ -7014,6 +7045,7 @@
 				8FE94A7F16DCBFB5004D33B7 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FE94A8316DCF4C0004D33B7 /* BALocationViewControllerPad.m in Sources */,
 				8FE94A8816DCF992004D33B7 /* BALocationViewController.m in Sources */,
+				B449285D1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FE94A8C16DD06FF004D33B7 /* BACoverViewControllerPad.m in Sources */,
 				8FE94A9016DD086E004D33B7 /* BACoverViewController.m in Sources */,
 				8FD7C10216F365030073D037 /* BAListTableViewControllerPad.m in Sources */,
@@ -7109,6 +7141,7 @@
 				8F1D8375192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F1D8376192A2E7000A9898D /* BALocationViewControllerPad.m in Sources */,
 				8F1D8377192A2E7000A9898D /* BALocationViewController.m in Sources */,
+				B44928631F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F1D8378192A2E7000A9898D /* BACoverViewControllerPad.m in Sources */,
 				8F1D8379192A2E7000A9898D /* BACoverViewController.m in Sources */,
 				8F1D837A192A2E7000A9898D /* BAListTableViewControllerPad.m in Sources */,
@@ -7204,6 +7237,7 @@
 				8F8A75AE1781BF4700CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A75AF1781BF4700CCF7DB /* BALocationViewControllerPad.m in Sources */,
 				8F8A75B01781BF4700CCF7DB /* BALocationViewController.m in Sources */,
+				B449285E1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F8A75B11781BF4700CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F8A75B21781BF4700CCF7DB /* BACoverViewController.m in Sources */,
 				8F8A75B31781BF4700CCF7DB /* BAListTableViewControllerPad.m in Sources */,
@@ -7299,6 +7333,7 @@
 				8F8A76431781C05400CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A76441781C05400CCF7DB /* BALocationViewControllerPad.m in Sources */,
 				8F8A76451781C05400CCF7DB /* BALocationViewController.m in Sources */,
+				B449285F1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F8A76461781C05400CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F8A76471781C05400CCF7DB /* BACoverViewController.m in Sources */,
 				8F8A76481781C05400CCF7DB /* BAListTableViewControllerPad.m in Sources */,
@@ -7394,6 +7429,7 @@
 				8F8A76D81781C0D800CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A76D91781C0D800CCF7DB /* BALocationViewControllerPad.m in Sources */,
 				8F8A76DA1781C0D800CCF7DB /* BALocationViewController.m in Sources */,
+				B44928601F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F8A76DB1781C0D800CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F8A76DC1781C0D800CCF7DB /* BACoverViewController.m in Sources */,
 				8F8A76DD1781C0D800CCF7DB /* BAListTableViewControllerPad.m in Sources */,
@@ -7489,6 +7525,7 @@
 				8F8EB5DC1A93689000548F24 /* BALocationViewControllerPad.m in Sources */,
 				8F8EB5DD1A93689000548F24 /* BALocationViewController.m in Sources */,
 				8F8EB5DE1A93689000548F24 /* BACoverViewControllerPad.m in Sources */,
+				B449286C1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F8EB5DF1A93689000548F24 /* BACoverViewController.m in Sources */,
 				8F8EB5E01A93689000548F24 /* BAListTableViewControllerPad.m in Sources */,
 				8F8EB5E11A93689000548F24 /* BATocViewControllerPad.m in Sources */,
@@ -7584,6 +7621,7 @@
 				8FA8F52119501E6B006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F52219501E6B006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F52319501E6B006CD05A /* BALocationViewController.m in Sources */,
+				B44928641F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F52419501E6B006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F52519501E6B006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F52619501E6B006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -7679,6 +7717,7 @@
 				8FA8F5C319502224006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F5C419502224006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F5C519502224006CD05A /* BALocationViewController.m in Sources */,
+				B44928651F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F5C619502224006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F5C719502224006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F5C819502224006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -7774,6 +7813,7 @@
 				8FA8F6651950228D006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F6661950228D006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F6671950228D006CD05A /* BALocationViewController.m in Sources */,
+				B44928661F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F6681950228D006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F6691950228D006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F66A1950228D006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -7869,6 +7909,7 @@
 				8FA8F707195022BC006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F708195022BC006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F709195022BC006CD05A /* BALocationViewController.m in Sources */,
+				B44928671F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F70A195022BC006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F70B195022BC006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F70C195022BC006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -7964,6 +8005,7 @@
 				8FA8F7A91950230D006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F7AA1950230D006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F7AB1950230D006CD05A /* BALocationViewController.m in Sources */,
+				B44928681F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F7AC1950230D006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F7AD1950230D006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F7AE1950230D006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -8059,6 +8101,7 @@
 				8FA8F84B1950233A006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F84C1950233A006CD05A /* BALocationViewControllerPad.m in Sources */,
 				8FA8F84D1950233A006CD05A /* BALocationViewController.m in Sources */,
+				B44928691F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FA8F84E1950233A006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8FA8F84F1950233A006CD05A /* BACoverViewController.m in Sources */,
 				8FA8F8501950233A006CD05A /* BAListTableViewControllerPad.m in Sources */,
@@ -8154,6 +8197,7 @@
 				8FAD97A01A0CFD3600C3A5D1 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FAD97A11A0CFD3600C3A5D1 /* BALocationViewControllerPad.m in Sources */,
 				8FAD97A21A0CFD3600C3A5D1 /* BALocationViewController.m in Sources */,
+				B449286B1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FAD97A31A0CFD3600C3A5D1 /* BACoverViewControllerPad.m in Sources */,
 				8FAD97A41A0CFD3600C3A5D1 /* BACoverViewController.m in Sources */,
 				8FAD97A51A0CFD3600C3A5D1 /* BAListTableViewControllerPad.m in Sources */,
@@ -8249,6 +8293,7 @@
 				8FD610A1190916EA009E2358 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FD610A2190916EA009E2358 /* BALocationViewControllerPad.m in Sources */,
 				8FD610A3190916EA009E2358 /* BALocationViewController.m in Sources */,
+				B44928611F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FD610A4190916EA009E2358 /* BACoverViewControllerPad.m in Sources */,
 				8FD610A5190916EA009E2358 /* BACoverViewController.m in Sources */,
 				8FD610A6190916EA009E2358 /* BAListTableViewControllerPad.m in Sources */,
@@ -8344,6 +8389,7 @@
 				8FD6113D190916EF009E2358 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FD6113E190916EF009E2358 /* BALocationViewControllerPad.m in Sources */,
 				8FD6113F190916EF009E2358 /* BALocationViewController.m in Sources */,
+				B44928621F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FD61140190916EF009E2358 /* BACoverViewControllerPad.m in Sources */,
 				8FD61141190916EF009E2358 /* BACoverViewController.m in Sources */,
 				8FD61142190916EF009E2358 /* BAListTableViewControllerPad.m in Sources */,
@@ -8439,6 +8485,7 @@
 				8FE94A8216DCF4C0004D33B7 /* BALocationViewControllerPad.m in Sources */,
 				8FE94A8716DCF992004D33B7 /* BALocationViewController.m in Sources */,
 				8FE94A8B16DD06FF004D33B7 /* BACoverViewControllerPad.m in Sources */,
+				B449285C1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8FE94A8F16DD086E004D33B7 /* BACoverViewController.m in Sources */,
 				8FD7C10116F365030073D037 /* BAListTableViewControllerPad.m in Sources */,
 				8FC5465616F62CE4005A4F6A /* BATocViewControllerPad.m in Sources */,
@@ -8478,6 +8525,7 @@
 			files = (
 				8FFF22D11786B8580077FC8B /* BibAppUnitTests.m in Sources */,
 				8FAD98221A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
+				B449286A1F8FEFD10016E554 /* BAPushService.m in Sources */,
 				8F4486B61CB67E32003C7853 /* DAIAParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
