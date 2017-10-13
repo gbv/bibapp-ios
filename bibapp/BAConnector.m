@@ -757,4 +757,40 @@ static BAConnector *sharedConnector = nil;
    return [[NSString alloc] initWithData:isbdData encoding:NSUTF8StringEncoding];
 }
 
+-(void)pushServiceRegisterWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate {
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"pushServiceRegister"];
+    
+    if ([self checkNetworkReachability]) {
+        
+    }
+}
+
+-(void)pushServiceUpdateWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate {
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"pushServiceUpdate"];
+    
+    if ([self checkNetworkReachability]) {
+        
+    }
+}
+
+-(void)pushServiceUpdateWithDeviceId:(NSString *)deviceId delegate:(id)delegate {
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"pushServiceUpdateDeviceId"];
+    
+    if ([self checkNetworkReachability]) {
+        
+    }
+}
+
+-(void)pushServiceRemoveWithdelegate:(id)delegate {
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"pushServiceRemove"];
+    
+    if ([self checkNetworkReachability]) {
+        
+    }
+}
+
 @end

@@ -9,6 +9,7 @@
 #import "BAOptionsTableViewControllerPad.h"
 #import "BAConnector.h"
 #import "BAOptionsNavigationController.h"
+#import "BAPushService.h"
 
 @interface BAOptionsTableViewControllerPad ()
 
@@ -193,6 +194,14 @@
 - (IBAction)logoutAction:(id)sender {
    BAConnector *logoutConnector = [BAConnector generateConnector];
    [logoutConnector logoutWithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
+}
+
+- (IBAction)pushAction:(id)sender {
+    if ([sender isOn]) {
+        [self.appDelegate.pushService enablePush];
+    } else {
+        [self.appDelegate.pushService disablePush];
+    }
 }
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {

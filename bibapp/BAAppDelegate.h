@@ -11,6 +11,7 @@
 #import "BAAccount.h"
 #import "BAOptions.h"
 #import "BAConfiguration.h"
+#import "BAPushService.h"
 
 @interface BAAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) BAConfiguration *configuration;
 @property BOOL isIOS7;
 @property BOOL isLoggedIn;
+@property BAPushService *pushService;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

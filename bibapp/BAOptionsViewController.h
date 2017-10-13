@@ -19,9 +19,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UISwitch *pushButton;
 
 - (IBAction)saveLocalSwithAction:(id)sender;
 - (IBAction)countPixelSwitchAction:(id)sender;
 - (IBAction)logoutAction:(id)sender;
+- (IBAction)pushAction:(id)sender;
 
 @end

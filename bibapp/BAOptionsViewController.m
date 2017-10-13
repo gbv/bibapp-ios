@@ -84,6 +84,14 @@
    [logoutConnector logoutWithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
 }
 
+- (IBAction)pushAction:(id)sender {
+    if ([sender isOn]) {
+        [self.appDelegate.pushService enablePush];
+    } else {
+        [self.appDelegate.pushService disablePush];
+    }
+}
+
 - (IBAction)saveLocalSwithAction:(id)sender
 {
     BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];

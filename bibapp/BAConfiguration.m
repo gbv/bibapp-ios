@@ -46,6 +46,8 @@
 @synthesize currentBibFeedURLIsWebsite;
 @synthesize currentBibRequestTitle;
 @synthesize currentBibDaiaInfoFromOpacDisplay;
+@synthesize pushServiceUrl;
+@synthesize pushServiceApiKey;
 
 - (id)init {
     self = [super init];
@@ -73,6 +75,9 @@
         self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
        
         self.useDAIAParser = YES;
+        
+        self.pushServiceUrl = @"172.20.10.2";
+        self.pushServiceApiKey = @"123";
     }
     return self;
 }
