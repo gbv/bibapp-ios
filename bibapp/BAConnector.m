@@ -802,7 +802,14 @@ static BAConnector *sharedConnector = nil;
     [self setCommand:@"pushServiceRemove"];
     
     if ([self checkNetworkReachability]) {
+        NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@/api/bibapp/remove/3?apikey=%@", self.appDelegate.configuration.pushServiceUrl, self.appDelegate.configuration.pushServiceApiKey]];
         
+        NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
+        [theRequest setHTTPMethod:@"DELETE"];
+        
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+        if (theConnection) {
+        }
     }
 }
 
