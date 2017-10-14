@@ -42,7 +42,7 @@
         [self.countPixelSwitch setOn:NO];
     }
     if (appDelegate.account.pushServerId) {
-        [self.pushButton setOn:YES];
+        [self.pushSwitch setOn:YES];
     }
     
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
