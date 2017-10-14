@@ -78,7 +78,7 @@
     [[UIApplication sharedApplication] unregisterForRemoteNotifications];
     
     BAConnector *connector = [BAConnector generateConnector];
-    [connector pushServiceRemoveWithdelegate:self];
+    [connector pushServiceRemoveWithPushServerId:self.appDelegate.account.pushServerId delegate:self];
 }
 
 -(void)updatePush {
@@ -93,17 +93,24 @@
 
 -(void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {
     if ([command isEqualToString:@"pushServiceRegister"]) {
-        
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
-        
-        NSLog(@"%@", json);
+        if ([[json allKeys] containsObject:@"pushServerId"]) {
+            self.appDelegate.account.pushServerId = [[json objectForKey:@"pushServerId"] stringValue];
+            if (![[self.appDelegate managedObjectContext] save:&error]) {
+                // Handle the error.
+            }
+        }
     } else if ([command isEqualToString:@"pushServiceUpdate"]) {
         
     } else if ([command isEqualToString:@"pushServiceUpdateDeviceId"]) {
         
     } else if ([command isEqualToString:@"pushServiceRemove"]) {
-        
+        NSError* error;
+        self.appDelegate.account.pushServerId = nil;
+        if (![[self.appDelegate managedObjectContext] save:&error]) {
+            // Handle the error.
+        }
     }
 }
 

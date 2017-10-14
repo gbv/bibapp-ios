@@ -13,5 +13,6 @@
 @dynamic account;
 @dynamic password;
 @dynamic token;
+@dynamic pushServerId;
 
 @end

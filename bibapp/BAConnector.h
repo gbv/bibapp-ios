@@ -61,6 +61,6 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 - (void)pushServiceRegisterWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate;
 - (void)pushServiceUpdateWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate;
 - (void)pushServiceUpdateWithDeviceId:(NSString *)deviceId delegate:(id)delegate;
-- (void)pushServiceRemoveWithdelegate:(id)delegate;
+- (void)pushServiceRemoveWithPushServerId:(NSString *)pushServerId delegate:(id)delegate;
 
 @end

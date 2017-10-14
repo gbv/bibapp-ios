@@ -797,12 +797,12 @@ static BAConnector *sharedConnector = nil;
     }
 }
 
--(void)pushServiceRemoveWithdelegate:(id)delegate {
+-(void)pushServiceRemoveWithPushServerId:(NSString *)pushServerId delegate:(id)delegate {
     [self setConnectorDelegate:delegate];
     [self setCommand:@"pushServiceRemove"];
     
     if ([self checkNetworkReachability]) {
-        NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@/api/bibapp/remove/3?apikey=%@", self.appDelegate.configuration.pushServiceUrl, self.appDelegate.configuration.pushServiceApiKey]];
+        NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@/api/bibapp/remove/%@?apikey=%@", self.appDelegate.configuration.pushServiceUrl, pushServerId, self.appDelegate.configuration.pushServiceApiKey]];
         
         NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
         [theRequest setHTTPMethod:@"DELETE"];

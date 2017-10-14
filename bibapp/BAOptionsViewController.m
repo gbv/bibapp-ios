@@ -41,6 +41,9 @@
     if (!appDelegate.options.allowCountPixel) {
         [self.countPixelSwitch setOn:NO];
     }
+    if (appDelegate.account.pushServerId) {
+        [self.pushButton setOn:YES];
+    }
     
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
     [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]];

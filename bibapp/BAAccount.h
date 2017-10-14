@@ -13,5 +13,6 @@
 @property (nonatomic, retain) NSString *account;
 @property (nonatomic, retain) NSString *password;
 @property (nonatomic, retain) NSString *token;
+@property (nonatomic, retain) NSString *pushServerId;
 
 @end
