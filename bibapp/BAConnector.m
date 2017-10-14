@@ -68,6 +68,7 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    NSLog(@"%@", error);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -762,7 +763,19 @@ static BAConnector *sharedConnector = nil;
     [self setCommand:@"pushServiceRegister"];
     
     if ([self checkNetworkReachability]) {
+        NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@/api/bibapp/register?apikey=%@", self.appDelegate.configuration.pushServiceUrl, self.appDelegate.configuration.pushServiceApiKey]];
         
+        NSString *post = [NSString stringWithFormat:@"username=%@&password=%@&device_id=%@", username, password, deviceId];
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+
+        NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
+        [theRequest setHTTPMethod:@"POST"];
+        [theRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[postData length]] forHTTPHeaderField:@"Content-Length"];
+        [theRequest setHTTPBody:postData];
+        
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+        if (theConnection) {
+        }
     }
 }
 

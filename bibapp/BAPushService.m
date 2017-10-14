@@ -67,7 +67,9 @@
     NSLog(@"FCM registration token: %@", fcmToken);
     
     BAConnector *connector = [BAConnector generateConnector];
-    [connector pushServiceRegisterWithUsername:self.appDelegate.currentAccount password:self.appDelegate.currentPassword deviceId:fcmToken delegate:self];
+    //[connector pushServiceRegisterWithUsername:self.appDelegate.currentAccount password:self.appDelegate.currentPassword deviceId:fcmToken delegate:self];
+    
+    [connector pushServiceRegisterWithUsername:@"BibApp" password:@"Password" deviceId:fcmToken delegate:self];
 }
 
 -(void)disablePush {
@@ -92,6 +94,10 @@
 -(void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result {
     if ([command isEqualToString:@"pushServiceRegister"]) {
         
+        NSError* error;
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:&error];
+        
+        NSLog(@"%@", json);
     } else if ([command isEqualToString:@"pushServiceUpdate"]) {
         
     } else if ([command isEqualToString:@"pushServiceUpdateDeviceId"]) {
