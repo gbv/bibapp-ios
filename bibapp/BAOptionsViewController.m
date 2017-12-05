@@ -37,6 +37,9 @@
     BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (appDelegate.options.saveLocalData) {
         [self.saveLocalSwitch setOn:YES];
+        self.pushSwitch.enabled = YES;
+    } else {
+        self.pushSwitch.enabled = NO;
     }
     if (!appDelegate.options.allowCountPixel) {
         [self.countPixelSwitch setOn:NO];
@@ -54,6 +57,12 @@
     [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
    
+    BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.saveLocalSwitch.enabled = NO;
+    if (appDelegate.currentAccount && appDelegate.currentPassword) {
+        self.saveLocalSwitch.enabled = YES;
+    }
+    
     if (self.appDelegate.currentAccount != nil) {
        [self.userLabel setText:self.appDelegate.currentAccount];
        [self.logoutButton setEnabled:YES];
@@ -102,10 +111,14 @@
         [appDelegate.options setSaveLocalData:YES];
         [appDelegate.account setAccount:appDelegate.currentAccount];
         [appDelegate.account setPassword:appDelegate.currentPassword];
+        self.pushSwitch.enabled = YES;
     } else {
         [appDelegate.options setSaveLocalData:NO];
         [appDelegate.account setAccount:nil];
         [appDelegate.account setPassword:nil];
+        [self.pushSwitch setOn:NO];
+        self.pushSwitch.enabled = NO;
+        [self.appDelegate.pushService disablePush];
     }
     NSError *error = nil;
     if (![[appDelegate managedObjectContext] save:&error]) {
