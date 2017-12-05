@@ -34,6 +34,7 @@
 @property BOOL useDAIAParser;
 @property (strong, nonatomic) NSString *pushServiceUrl;
 @property (strong, nonatomic) NSString *pushServiceApiKey;
+@property (strong, nonatomic) NSString *pushServiceGoogleServiceFile;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

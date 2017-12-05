@@ -31,6 +31,10 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil2", @"Standard-Katalog", nil]];
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20", @"Standard-Katalog", nil]];
+    
+    self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
+    self.pushServiceApiKey = @"456";
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info-HI";
 }
 
 @end

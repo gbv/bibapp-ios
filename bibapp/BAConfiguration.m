@@ -48,6 +48,7 @@
 @synthesize currentBibDaiaInfoFromOpacDisplay;
 @synthesize pushServiceUrl;
 @synthesize pushServiceApiKey;
+@synthesize pushServiceGoogleServiceFile;
 
 - (id)init {
     self = [super init];
@@ -78,6 +79,7 @@
         
         self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
         self.pushServiceApiKey = @"123";
+        self.pushServiceGoogleServiceFile = @"GoogleService-Info-IL";
     }
     return self;
 }

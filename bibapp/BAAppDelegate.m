@@ -103,7 +103,10 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     }
     [self.locationManager startUpdatingLocation];
     
-    [FIRApp configure];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:self.configuration.pushServiceGoogleServiceFile ofType:@"plist"];
+    FIROptions *options = [[FIROptions alloc] initWithContentsOfFile:filePath];
+    [FIRApp configureWithOptions:options];
+    //[FIRApp configure];
     
     self.pushService = [[BAPushService alloc] init];
     
