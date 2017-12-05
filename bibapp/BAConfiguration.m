@@ -76,7 +76,7 @@
        
         self.useDAIAParser = YES;
         
-        self.pushServiceUrl = @"http://10.0.1.3:8080/app_dev.php";
+        self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
         self.pushServiceApiKey = @"123";
     }
     return self;
