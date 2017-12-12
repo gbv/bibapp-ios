@@ -32,6 +32,7 @@
 @property (strong, nonatomic) NSString *currentBibRequestTitle;
 @property (strong, nonatomic) NSString *currentBibDaiaInfoFromOpacDisplay;
 @property BOOL useDAIAParser;
+@property BOOL usePushService;
 @property (strong, nonatomic) NSString *pushServiceUrl;
 @property (strong, nonatomic) NSString *pushServiceApiKey;
 @property (strong, nonatomic) NSString *pushServiceGoogleServiceFile;

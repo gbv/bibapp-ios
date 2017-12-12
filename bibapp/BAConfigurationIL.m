@@ -30,6 +30,10 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Ilm1", @"Standard-Katalog", nil]];
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"https://pw.bibliothek.tu-ilmenau.de/piwik.php?idsite=3&rec=1", @"Standard-Katalog", nil]];
     self.currentBibDaiaInfoFromOpacDisplay = @"nicht ausleihbar";
+    self.usePushService = YES;
+    self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
+    self.pushServiceApiKey = @"123";
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info-IL";
 }
 
 @end

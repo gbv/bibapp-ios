@@ -56,12 +56,6 @@
 {
     [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
-   
-    BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.saveLocalSwitch.enabled = NO;
-    if (appDelegate.currentAccount && appDelegate.currentPassword) {
-        self.saveLocalSwitch.enabled = YES;
-    }
     
     if (self.appDelegate.currentAccount != nil) {
        [self.userLabel setText:self.appDelegate.currentAccount];
@@ -164,6 +158,18 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    // ToDo: reset state if necessary
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 1) {
+        if (self.appDelegate.configuration.usePushService) {
+            return 3;
+        } else {
+            return 2;
+        }
+    } else {
+        return 1;
+    }
 }
 
 @end
