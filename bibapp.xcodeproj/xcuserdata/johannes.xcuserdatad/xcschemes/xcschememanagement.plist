@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BibApp Cobi copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 		<key>BibApp Cobi.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -53,6 +58,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>15</integer>
+		</dict>
+		<key>BibApp IAI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
 		</dict>
 		<key>BibApp IL.xcscheme</key>
 		<dict>
@@ -128,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>8F1D8343192A2E7000A9898D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F4A7EC12029B78400CA6C0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
