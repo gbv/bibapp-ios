@@ -4618,6 +4618,9 @@
 					8FA8F6D3195022BC006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
+					8FA8F7751950230D006CD05A = {
+						DevelopmentTeam = DG2S2C98D2;
+					};
 					8FAD97691A0CFD3600C3A5D1 = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
@@ -8412,6 +8415,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = DG2S2C98D2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -8436,6 +8440,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = DG2S2C98D2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
