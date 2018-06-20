@@ -47,6 +47,8 @@
 @synthesize currentBibFeedURLIsWebsite;
 @synthesize currentBibRequestTitle;
 @synthesize currentBibDaiaInfoFromOpacDisplay;
+@synthesize useDAIAParser;
+@synthesize useDAIASubRequests;
 
 - (id)init {
     self = [super init];
@@ -74,6 +76,8 @@
         self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
        
         self.useDAIAParser = YES;
+        
+        self.useDAIASubRequests = NO;
     }
     return self;
 }

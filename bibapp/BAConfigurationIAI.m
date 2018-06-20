@@ -28,6 +28,7 @@
     self.currentBibContact = @"Referat Benutzung - Leitung Dr. Ulrike Mühlschlegel\nE-Mail: muehlschlegel@iai.spk-berlin.de\n\nInformation / Auskunft\nTel.: +49 30 266 45 2210\nE-Mail: info@iai.spk-berlin.de\n\nAusleihe\nTel.: +49 30 266 45 2220";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-204", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
+    self.useDAIASubRequests = YES;
 }
 
 @end
