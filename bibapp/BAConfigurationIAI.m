@@ -55,6 +55,8 @@
     [self.currentBibImprintLocalized setObject:imprintContentEN forKey:@"en"];
     
     [self.currentBibBlockOrderTypes setObject:[[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:1], @"b", nil] forKey:@"002@"];
+
+    self.useDAIASubRequests = YES;
 }
 
 @end

@@ -50,6 +50,8 @@
 @synthesize currentBibDaiaInfoFromOpacDisplay;
 @synthesize currentBibStandardLanguage;
 @synthesize currentBibBlockOrderTypes;
+@synthesize useDAIAParser;
+@synthesize useDAIASubRequests;
 
 - (id)init {
     self = [super init];
@@ -84,6 +86,9 @@
         self.currentBibStandardLanguage = @"de";
         
         self.currentBibBlockOrderTypes = [[NSMutableDictionary alloc] init];
+
+        self.useDAIASubRequests = NO;
+
     }
     return self;
 }

@@ -37,6 +37,7 @@
 @property (strong, nonatomic) NSMutableDictionary *currentBibLanguages;
 @property (strong, nonatomic) NSString *currentBibStandardLanguage;
 @property (strong, nonatomic) NSMutableDictionary *currentBibBlockOrderTypes;
+@property BOOL useDAIASubRequests;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
