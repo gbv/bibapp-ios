@@ -40,6 +40,7 @@
 @property BOOL searchedCoverByISBN;
 @property BOOL didCheckBlockOrderTypes;
 @property BOOL blockOrderByTypes;
+@property long currentDaiaFamIndex;
 
 - (void)actionButton;
 - (void)initDetailView;

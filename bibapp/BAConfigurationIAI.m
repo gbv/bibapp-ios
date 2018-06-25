@@ -57,6 +57,7 @@
     [self.currentBibBlockOrderTypes setObject:[[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:1], @"b", nil] forKey:@"002@"];
 
     self.useDAIASubRequests = YES;
+    [self.currentBibFamURLs addObject:[[NSArray alloc] initWithObjects:@"https://lhiai.gbv.de/DB=1/SET=1/TTL=1/FAM", @"Standard-Katalog", nil]];
 }
 
 @end

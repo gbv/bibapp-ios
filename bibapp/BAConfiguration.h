@@ -38,6 +38,7 @@
 @property (strong, nonatomic) NSString *currentBibStandardLanguage;
 @property (strong, nonatomic) NSMutableDictionary *currentBibBlockOrderTypes;
 @property BOOL useDAIASubRequests;
+@property (strong, nonatomic) NSMutableArray *currentBibFamURLs;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
@@ -51,5 +52,6 @@
 - (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchCountURLForCatalog:(NSString *)catalogue;
 - (BOOL)usePAIAWrapper;
+- (NSString *)getDetailFamURLForCatalog:(NSString *)catalogue;
 
 @end

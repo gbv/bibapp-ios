@@ -15,8 +15,10 @@
 @implementation DAIAParser
 
 -(void)parseDAIAForDocument:(BADocument *)baDocument WithResult:(NSObject *)result {
-   [baDocument setItems:[[NSMutableArray alloc] init]];
-   
+   if (baDocument.items == nil) {
+       [baDocument setItems:[[NSMutableArray alloc] init]];
+   }
+        
    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
    
    NSArray *document = [json objectForKey:@"document"];

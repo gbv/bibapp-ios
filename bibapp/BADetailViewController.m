@@ -54,6 +54,7 @@
 @synthesize searchedCoverByISBN;
 @synthesize didCheckBlockOrderTypes;
 @synthesize blockOrderByTypes;
+@synthesize currentDaiaFamIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,6 +93,8 @@
     [((BAItemDetail *)self.view).detailTableView setDelegate:self];
     [((BAItemDetail *)self.view).detailTableView setDataSource:self];
 
+    self.currentDaiaFamIndex = 1;
+    
     [self initDetailView];
 }
 
@@ -134,6 +137,13 @@
     BAConnector *unapiConnectorMods = [BAConnector generateConnector];
     [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
 
+    if (self.appDelegate.configuration.useDAIASubRequests) {
+        BAConnector *famConnector = [BAConnector generateConnector];
+        [famConnector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+    }
+    
+    NSLog(@"%@", [self.currentEntry ppn]);
+    
     [self.view setNeedsDisplay];
 }
 
@@ -241,7 +251,7 @@
           DAIAParser *daiaParser = [[DAIAParser alloc] init];
           [daiaParser parseDAIAForDocument:self.currentDocument WithResult:result];
        }
-       
+        
         [((BAItemDetail *)self.view).detailTableView reloadData];
         ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
     } else if ([command isEqualToString:@"getDetails"]) {
@@ -670,6 +680,24 @@
             self.foundCover = NO;
         }
         
+    } else if ([command isEqualToString:@"getDetailsLocalFam"]) {
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        
+        NSArray *items = [parser nodesForXPath:@"RESULT/SET/SHORTTITLE" error:nil];
+        for (GDataXMLElement *item in items) {
+            NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
+            BAConnector *connector = [BAConnector generateConnector];
+            [connector getDetailsForLocal:ppn WithDelegate:self];
+        }
+        
+        NSArray *sets = [parser nodesForXPath:@"RESULT/SET" error:nil];
+        for (GDataXMLElement *set in sets) {
+            if ([[[set attributeForName:@"hits"] stringValue] longLongValue] > (self.currentDaiaFamIndex + 10) ) {
+                self.currentDaiaFamIndex += 10;
+                BAConnector *famConnector = [BAConnector generateConnector];
+                [famConnector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
+        }
     }
 }
 
