@@ -49,6 +49,7 @@
 @synthesize currentBibDaiaInfoFromOpacDisplay;
 @synthesize useDAIAParser;
 @synthesize useDAIASubRequests;
+@synthesize currentBibFamURLs;
 
 - (id)init {
     self = [super init];
@@ -78,6 +79,7 @@
         self.useDAIAParser = YES;
         
         self.useDAIASubRequests = NO;
+        self.currentBibFamURLs = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -230,6 +232,17 @@
 
 - (BOOL)usePAIAWrapper {
    return self.currentBibUsePAIAWrapper;
+}
+
+- (NSString *)getDetailFamURLForCatalog:(NSString *)catalogue
+{
+    NSString *url;
+    for (NSArray *tempCatalogue in self.currentBibFamURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            url = [tempCatalogue objectAtIndex:0];
+        }
+    }
+    return url;
 }
 
 @end

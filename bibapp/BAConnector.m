@@ -757,4 +757,17 @@ static BAConnector *sharedConnector = nil;
    return [[NSString alloc] initWithData:isbdData encoding:NSUTF8StringEncoding];
 }
 
+- (void)getDetailsForLocalFam:(NSString *)ppn WithStart:(long)start WithDelegate:(id)delegate
+{
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"getDetailsLocalFam"];
+    if ([self checkNetworkReachability]) {
+        NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?FRST=%d&PPN=%@&XML=YES", [self.appDelegate.configuration getDetailFamURLForCatalog:self.appDelegate.options.selectedCatalogue], start, ppn]];
+        NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+        if (theConnection) {
+        }
+    }
+}
+
 @end

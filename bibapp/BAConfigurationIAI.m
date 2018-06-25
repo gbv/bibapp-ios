@@ -29,6 +29,7 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-204", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     self.useDAIASubRequests = YES;
+    [self.currentBibFamURLs addObject:[[NSArray alloc] initWithObjects:@"https://lhiai.gbv.de/DB=1/SET=1/TTL=1/FAM", @"Standard-Katalog", nil]];
 }
 
 @end

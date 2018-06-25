@@ -33,6 +33,7 @@
 @property (strong, nonatomic) NSString *currentBibDaiaInfoFromOpacDisplay;
 @property BOOL useDAIAParser;
 @property BOOL useDAIASubRequests;
+@property (strong, nonatomic) NSMutableArray *currentBibFamURLs;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
@@ -46,5 +47,6 @@
 - (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchCountURLForCatalog:(NSString *)catalogue;
 - (BOOL)usePAIAWrapper;
+- (NSString *)getDetailFamURLForCatalog:(NSString *)catalogue;
 
 @end
