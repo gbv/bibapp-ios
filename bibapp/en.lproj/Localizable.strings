@@ -1,2 +1,69 @@
 /* Localized versions of Info.plist keys */
 
+/* Localized versions of Info.plist keys */
+
+
+"Abbrechen" = "";
+"abgelehnt" = "";
+"abholbereit" = "";
+"Anmelden" = "";
+"Anmeldung" = "";
+"ausgeliehen" = "";
+"ausgeliehen, Vormerken möglich" = "";
+"ausleihbar" = "";
+"Bei der Anmeldung ist ein Fehler aufgetreten" = "";
+"Benutzernummer" = "";
+"Bereits auf der Merkliste" = "";
+"Bestellen" = "";
+"bestellt" = "";
+"BibApp Merkliste" = "";
+"Bitte am Standort entnehmen" = "";
+"Bitte bestellen" = "";
+"Bitte Nummer und Passwort prüfen" = "";
+"Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "";
+"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "";
+"Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "";
+"Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "";
+"Detail" = "";
+"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "";
+"Einzelposten" = "";
+"gesperrt" = "";
+"GVK Suche" = "";
+"Im Browser öffnen" = "";
+"Impressum" = "";
+"Keine Gebühren" = "";
+"Keine Medien entliehen" = "";
+"Keine Standortinformationen vorhanden" = "";
+"Keine Vormerkungen" = "";
+"Kontakt" = "";
+"Konto" = "";
+"Leihfristende:" = "";
+"OK" = "";
+"Online-Ressource im Browser öffnen" = "";
+"Merkliste" = "";
+"News" = "";
+"Nicht angemeldet" = "";
+"nicht ausleihbar" = "";
+"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "";
+"Signatur:" = "";
+"Standard-Katalog" = "";
+"Standorte" = "";
+"Standorte werden geladen ..." = "";
+"Standortinfo" = "";
+"Suche" = "";
+"Summe" = "";
+"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "";
+"verfügbar" = "";
+"Verfügbarkeit im OPAC prüfen" = "";
+"Verlängern" = "";
+"vorgemerkt" = "";
+"Vormerkdatum:" = "";
+"Vormerken" = "";
+"Vormerkung" = "";
+"Vormerkungen" = "";
+"Vormerkungen stornieren" = "";
+"Website" = "";
+"wird geladen ..." = "";
+"Zur Merkliste hinzufügen" = "";
+"Zusätzliche Exemplare anderer Bibliotheken" = "";
+

@@ -1,87 +1,66 @@
 /* Localized versions of Info.plist keys */
 
-"Suche" = "";
-"Standard-Katalog" = "";
-"Vormerken" = "";
-"Verfügbarkeit im OPAC prüfen" = "";
+"Abbrechen" = "Abbrechen";
+"abgelehnt" = "abgelehnt";
+"abholbereit" = "abholbereit";
+"Anmelden" = "Anmelden";
+"Anmeldung" = "Anmeldung";
+"ausgeliehen" = "ausgeliehen";
+"ausgeliehen, Vormerken möglich" = "ausgeliehen, Vormerken möglich";
+"ausleihbar" = "ausleihbar";
+"Bei der Anmeldung ist ein Fehler aufgetreten" = "Bei der Anmeldung ist ein Fehler aufgetreten";
+"Benutzernummer" = "Benutzernummer";
+"Bereits auf der Merkliste" = "Bereits auf der Merkliste";
+"Bestellen" = "Bestellen";
+"bestellt" = "bestellt";
+"BibApp Merkliste" = "BibApp Merkliste";
+"Bitte am Standort entnehmen" = "Bitte am Standort entnehmen";
+"Bitte bestellen" = "Bitte bestellen";
+"Bitte Nummer und Passwort prüfen" = "Bitte Nummer und Passwort prüfen";
+"Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "Bitte wählen Sie die Einträge aus, die verlängert werden sollen";
+"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen";
+"Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "Der Eintrag befindet sich bereits auf Ihrer Merkliste";
+"Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "Der Eintrag wurde Ihrer Merkliste hinzugefügt";
+"Detail" = "Detail";
+"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@";
+"Einzelposten" = "Einzelposten";
+"gesperrt" = "gesperrt";
+"GVK Suche" = "GVK Suche";
+"Im Browser öffnen" = "Im Browser öffnen";
+"Impressum" = "Impressum";
+"Keine Gebühren" = "Keine Gebühren";
+"Keine Medien entliehen" = "Keine Medien entliehen";
+"Keine Standortinformationen vorhanden" = "Keine Standortinformationen vorhanden";
+"Keine Vormerkungen" = "Keine Vormerkungen";
+"Kontakt" = "Kontakt";
+"Konto" = "Konto";
+"Leihfristende:" = "Leihfristende:";
+"OK" = "OK";
+"Online-Ressource im Browser öffnen" = "Online-Ressource im Browser öffnen";
+"Merkliste" = "Merkliste";
+"News" = "News";
+"Nicht angemeldet" = "Nicht angemeldet";
+"nicht ausleihbar" = "nicht ausleihbar";
+"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto";
+"Signatur:" = "Signatur:";
+"Standard-Katalog" = "Standard-Katalog";
+"Standorte" = "Standorte";
+"Standorte werden geladen ..." = "Standorte werden geladen ...";
+"Standortinfo" = "Standortinfo";
+"Suche" = "Suche";
+"Summe" = "Summe";
+"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden.";
+"verfügbar" = "verfügbar";
+"Verfügbarkeit im OPAC prüfen" = "Verfügbarkeit im OPAC prüfen";
+"Verlängern" = "Verlängern";
+"vorgemerkt" = "vorgemerkt";
+"Vormerkdatum:" = "Vormerkdatum:";
+"Vormerken" = "Vormerken";
+"Vormerkung" = "Vormerkung";
+"Vormerkungen" = "Vormerkungen";
+"Vormerkungen stornieren" = "Vormerkungen stornieren";
+"Website" = "Website";
+"wird geladen ..." = "wird geladen ...";
+"Zur Merkliste hinzufügen" = "Zur Merkliste hinzufügen";
+"Zusätzliche Exemplare anderer Bibliotheken" = "Zusätzliche Exemplare anderer Bibliotheken";
 
-"verfügbar" = "";
-"vorgemerkt" = "";
-"bestellt" = "";
-"ausgeliehen" = "";
-"abholbereit" = "";
-"abgelehnt" = "";
-
-"wird geladen ..." = "";
-"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "";
-"OK" = "";
-"Bitte Nummer und Passwort prüfen" = "";
-"Bei der Anmeldung ist ein Fehler aufgetreten" = "";
-"Keine Medien entliehen" = "";
-"Keine Vormerkungen" = "";
-"Keine Gebühren" = "";
-"gesperrt" = "";
-"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "";
-"Anmeldung" = "";
-"Abbrechen" = "";
-"Anmelden" = "";
-"Benutzernummer" = "";
-
-"Vormerkungen" = "";
-"Vormerkung" = "";
-
-"Signatur:" = "";
-"Leihfristende:" = "";
-"Vormerkdatum:" = "";
-
-"Verlängern" = "";
-"Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "";
-"Vormerkungen stornieren" = "";
-"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "";
-
-"Summe" = "";
-"Einzelposten" = "";
-
-"wird geladen ..." = "";
-"Konto" = "";
-
-"News" = "";
-"Kontakt" = "";
-"Standorte" = "";
-"Impressum" = "";
-"Website" = "";
-"Standorte werden geladen ..." = "";
-
-"ausleihbar" = "";
-"Bitte am Standort entnehmen" = "";
-"Bitte bestellen" = "";
-"nicht ausleihbar" = "";
-"Online-Ressource im Browser öffnen" = "";
-"ausgeliehen, Vormerken möglich" = "";
-"Zusätzliche Exemplare anderer Bibliotheken" = "";
-"Merkliste" = "";
-"BibApp Merkliste" = "";
-"Bestellen" = "";
-"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "";
-"Standortinfo" = "";
-"Im Browser öffnen" = "";
-
-"Nicht angemeldet" = "";
-"Bei der Abmeldung ist ein Fehler aufgetreten" = "";
-
-"GVK Suche" = "";
-
-"Zur Merkliste hinzufügen" = "";
-"Bereits auf der Merkliste" = "";
-"Abbrechen" = "";
-
-"Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "";
-"Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "";
-"Bereits auf der Merkliste" = "";
-"Konto" = "";
-
-"Bitte Nummer und Passwort prüfen" = "";
-
-"Detail" = "";
-
-"Keine Standortinformationen vorhanden" = "";
