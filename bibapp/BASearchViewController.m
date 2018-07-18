@@ -107,7 +107,7 @@
     [self.searchTableView reloadData];
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
             [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -117,7 +117,7 @@
         }
     } else {
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
         } else {
             [self.navigationItem setTitle:NSLocalizedString(@"GVK Suche", nil)];
         }
@@ -136,7 +136,7 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
-       [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearchLocal]]; //NSLocalizedString
+       [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearchLocal]];
        [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
        return cell;
     }
@@ -148,7 +148,7 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
-       [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearch]]; //NSLocalizedString
+       [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearch]];
        [cell.searchGBVButton setHidden:YES];
        return cell;
     }
@@ -284,12 +284,12 @@
     }*/
     if ([command isEqualToString:@"searchLocal"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
         }
         self.searchedLocal = YES;
     } else if ([command isEqualToString:@"searchCentral"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
         }
         self.searched = YES;
     }
@@ -515,7 +515,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
             [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -526,7 +526,7 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]]; //NSLocalizedString
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
         } else {
             [self.navigationItem setTitle:NSLocalizedString(@"GVK Suche", nil)];
         }

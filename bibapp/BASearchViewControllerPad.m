@@ -250,7 +250,7 @@
               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
               cell = [nib objectAtIndex:0];
            }
-           [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearchLocal]]; //NSLocalizedString
+           [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearchLocal]];
            [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
            return cell;
         }
@@ -262,7 +262,7 @@
               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
               cell = [nib objectAtIndex:0];
            }
-           [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearch]]; //NSLocalizedString
+           [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearch]];
            [cell.searchGBVButton setHidden:YES];
            return cell;
         }
@@ -403,7 +403,7 @@
                                 NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
                                 NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
                                 NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                                [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]]; //NSLocalizedString
+                                [statusInfo appendString:[[NSString alloc] initWithFormat:NSLocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich", nil), day, month, year]];
                             }
                         }
                     }
@@ -536,12 +536,12 @@
         }*/
         if ([command isEqualToString:@"searchLocal"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]]; //NSLocalizedString
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
             }
             self.searchedLocal = YES;
         } else if ([command isEqualToString:@"searchCentral"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]]; //NSLocalizedString
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
             }
             self.searched = YES;
         }
@@ -1254,12 +1254,12 @@
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
           if ([json count] > 0) {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:@"Bestellung / Vormerkung\nerfolgreich" //NSLocalizedString
+                                                             message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil)
                                                             delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
              [alert show];
           } else {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:@"Bestellung / Vormerkung\nleider nicht möglich" //NSLocalizedString
+                                                             message:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich", nil)
                                                             delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
              [alert show];
           }
@@ -1268,15 +1268,15 @@
           if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
              NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
              if ([doc objectForKey:@"error"] == nil) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]; //NSLocalizedString
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                 [alert show];
              } else {
-                NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]]; //NSLocalizedString
+                NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [doc objectForKey:@"error"]];
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                 [alert show];
              }
           } else {
-             NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]]; //NSLocalizedString
+             NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [json objectForKey:@"error_description"]];
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
              [alert show];
           }
@@ -1297,7 +1297,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]]; //NSLocalizedString
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
         } else {
             //[self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
             [self.navigationBarSearch.topItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -1308,7 +1308,7 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]]; //NSLocalizedString
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
         } else {
             [self.navigationBarSearch.topItem setTitle:NSLocalizedString(@"GVK Suche", nil)];
         }
@@ -1364,9 +1364,9 @@
     [self.defaultImageView setHidden:NO];
     
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        [self.defaultTextView setText:@"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein."]; //NSLocalizedString
+        [self.defaultTextView setText:NSLocalizedString(@"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein.", nil)];
     } else {
-        [self.defaultTextView setText:@"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein."]; //NSLocalizedString
+        [self.defaultTextView setText:NSLocalizedString(@"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein.", nil)];
     }
 }
 

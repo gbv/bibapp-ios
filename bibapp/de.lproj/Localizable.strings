@@ -1,5 +1,7 @@
 /* Localized versions of Info.plist keys */
 
+"%d von %lu Titel(n) verlängert.\n\n" = "%d von %lu Titel(n) verlängert.\n\n";
+"%lu %@ storniert.\n\n" = "%lu %@ storniert.\n\n";
 "Abbrechen" = "Abbrechen";
 "abgelehnt" = "abgelehnt";
 "abholbereit" = "abholbereit";
@@ -7,12 +9,16 @@
 "Anmeldung" = "Anmeldung";
 "ausgeliehen" = "ausgeliehen";
 "ausgeliehen, Vormerken möglich" = "ausgeliehen, Vormerken möglich";
+"ausgeliehen bis %@.%@.%@, Vormerken möglich" = "ausgeliehen bis %@.%@.%@, Vormerken möglich";
 "ausleihbar" = "ausleihbar";
 "Bei der Anmeldung ist ein Fehler aufgetreten" = "Bei der Anmeldung ist ein Fehler aufgetreten";
 "Benutzernummer" = "Benutzernummer";
 "Bereits auf der Merkliste" = "Bereits auf der Merkliste";
 "Bestellen" = "Bestellen";
 "bestellt" = "bestellt";
+"Bestellung / Vormerkung\nerfolgreich" = "Bestellung / Vormerkung\nerfolgreich";
+"Bestellung / Vormerkung\nleider nicht möglich" = "Bestellung / Vormerkung\nleider nicht möglich";
+"Bestellung / Vormerkung\nleider nicht möglich:\n%@" = "Bestellung / Vormerkung\nleider nicht möglich:\n%@";
 "BibApp Merkliste" = "BibApp Merkliste";
 "Bitte am Standort entnehmen" = "Bitte am Standort entnehmen";
 "Bitte bestellen" = "Bitte bestellen";
@@ -22,10 +28,16 @@
 "Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "Der Eintrag befindet sich bereits auf Ihrer Merkliste";
 "Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "Der Eintrag wurde Ihrer Merkliste hinzugefügt";
 "Detail" = "Detail";
+"Detail (%ld / %ld)" = "Detail (%ld / %ld)";
+"Die folgenden Titel konnten nicht verlängert werden:\n\n" = "Die folgenden Titel konnten nicht verlängert werden:\n\n";
+"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n" = "Die folgenden Vormerkungen konnten nicht storniert werden:\n\n";
 "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@";
 "Einzelposten" = "Einzelposten";
+"Es konnte kein Titel verlängert werden" = "Es konnte kein Titel verlängert werden";
 "gesperrt" = "gesperrt";
 "GVK Suche" = "GVK Suche";
+"GVK Suche (%ld Treffer)" = "GVK Suche (%ld Treffer)";
+"Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "Ihre Suche nach \"%@\" hat keine Treffer ergeben.";
 "Im Browser öffnen" = "Im Browser öffnen";
 "Impressum" = "Impressum";
 "Keine Gebühren" = "Keine Gebühren";
@@ -35,6 +47,7 @@
 "Kontakt" = "Kontakt";
 "Konto" = "Konto";
 "Leihfristende:" = "Leihfristende:";
+"Lokale Suche (%ld Treffer)" = "Lokale Suche (%ld Treffer)";
 "OK" = "OK";
 "Online-Ressource im Browser öffnen" = "Online-Ressource im Browser öffnen";
 "Merkliste" = "Merkliste";
@@ -48,6 +61,8 @@
 "Standorte werden geladen ..." = "Standorte werden geladen ...";
 "Standortinfo" = "Standortinfo";
 "Suche" = "Suche";
+"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein." = "Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein.";
+"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein." = "Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein.";
 "Summe" = "Summe";
 "Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden.";
 "verfügbar" = "verfügbar";
@@ -63,4 +78,3 @@
 "wird geladen ..." = "wird geladen ...";
 "Zur Merkliste hinzufügen" = "Zur Merkliste hinzufügen";
 "Zusätzliche Exemplare anderer Bibliotheken" = "Zusätzliche Exemplare anderer Bibliotheken";
-

@@ -853,9 +853,9 @@
           }
        }
        if (renewalsCounter > 0) {
-          [statusString appendFormat:@"%d von %lu Titel(n) verlängert.\n\n", renewalsCounter, (unsigned long)[self.sendEntries count]]; //NSLocalizedString
+          [statusString appendFormat:NSLocalizedString(@"%d von %lu Titel(n) verlängert.\n\n", nil), renewalsCounter, (unsigned long)[self.sendEntries count]];
        } else {
-          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"]; //NSLocalizedString
+          [statusString appendFormat:NSLocalizedString(@"Es konnte kein Titel verlängert werden\n\n", nil)];
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
@@ -893,9 +893,9 @@
           }
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[self.successfulEntriesWrapper count], requestString]; //NSLocalizedString
+          [statusString appendFormat:NSLocalizedString(@"%lu %@ storniert.\n\n", nil), (unsigned long)[self.successfulEntriesWrapper count], requestString];
        } else {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString]; //NSLocalizedString
+          [statusString appendFormat:NSLocalizedString(@"%lu %@ storniert.\n\n", nil), (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString];
        }
     }
     
@@ -903,9 +903,9 @@
       if ([self.appDelegate.configuration usePAIAWrapper]) {
          if ([self.sendEntries count] > [self.successfulEntriesWrapper count]) {
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"]; //NSLocalizedString
+               [statusString appendString:NSLocalizedString(@"Die folgenden Titel konnten nicht verlängert werden:\n\n", nil)];
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
-               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"]; //NSLocalizedString
+               [statusString appendString:NSLocalizedString(@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n", nil)];
             }
             for (BAEntryWork *tempSendEntry in self.sendEntries) {
                BOOL wasSuccessful = NO;

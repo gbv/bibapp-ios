@@ -2,7 +2,8 @@
 
 /* Localized versions of Info.plist keys */
 
-
+"%d von %lu Titel(n) verlängert.\n\n" = "";
+"%lu %@ storniert.\n\n" = "";
 "Abbrechen" = "";
 "abgelehnt" = "";
 "abholbereit" = "";
@@ -10,12 +11,16 @@
 "Anmeldung" = "";
 "ausgeliehen" = "";
 "ausgeliehen, Vormerken möglich" = "";
+"ausgeliehen bis %@.%@.%@, Vormerken möglich" = "";
 "ausleihbar" = "";
 "Bei der Anmeldung ist ein Fehler aufgetreten" = "";
 "Benutzernummer" = "";
 "Bereits auf der Merkliste" = "";
 "Bestellen" = "";
 "bestellt" = "";
+"Bestellung / Vormerkung\nerfolgreich" = "";
+"Bestellung / Vormerkung\nleider nicht möglich" = "";
+"Bestellung / Vormerkung\nleider nicht möglich:\n%@" = "";
 "BibApp Merkliste" = "";
 "Bitte am Standort entnehmen" = "";
 "Bitte bestellen" = "";
@@ -25,10 +30,16 @@
 "Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "";
 "Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "";
 "Detail" = "";
+"Detail (%ld / %ld)" = "";
+"Die folgenden Titel konnten nicht verlängert werden:\n\n" = "";
+"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n" = "";
 "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "";
 "Einzelposten" = "";
+"Es konnte kein Titel verlängert werden" = "";
 "gesperrt" = "";
 "GVK Suche" = "";
+"GVK Suche (%ld Treffer)" = "";
+"Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "";
 "Im Browser öffnen" = "";
 "Impressum" = "";
 "Keine Gebühren" = "";
@@ -38,6 +49,7 @@
 "Kontakt" = "";
 "Konto" = "";
 "Leihfristende:" = "";
+"Lokale Suche (%ld Treffer)" = "";
 "OK" = "";
 "Online-Ressource im Browser öffnen" = "";
 "Merkliste" = "";
@@ -51,6 +63,8 @@
 "Standorte werden geladen ..." = "";
 "Standortinfo" = "";
 "Suche" = "";
+"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein." = "";
+"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein." = "";
 "Summe" = "";
 "Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "";
 "verfügbar" = "";

@@ -251,7 +251,7 @@
                               NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
                               NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
                               NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                              [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]]; //NSLocalizedString
+                              [statusInfo appendString:[[NSString alloc] initWithFormat:NSLocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich", nil), day, month, year]];
                            }
                         }
                     }
@@ -859,12 +859,12 @@
            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
            if ([json count] > 0) {
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                              message:@"Bestellung / Vormerkung\nerfolgreich" //NSLocalizedString
+                                                              message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil)
                                                              delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
               [alert show];
            } else {
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                              message:@"Bestellung / Vormerkung\nleider nicht möglich" //NSLocalizedString
+                                                              message:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich", nil)
                                                              delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
               [alert show];
            }
@@ -873,15 +873,15 @@
            if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
               NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
               if ([doc objectForKey:@"error"] == nil) {
-                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil]; //NSLocalizedString
+                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                  [alert show];
               } else {
-                 NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]]; //NSLocalizedString
+                 NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [doc objectForKey:@"error"]];
                  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                  [alert show];
               }
            } else {
-              NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]]; //NSLocalizedString
+              NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [json objectForKey:@"error_description"]];
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
               [alert show];
            }
