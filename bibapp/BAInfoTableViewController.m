@@ -94,11 +94,11 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         if (indexPath.section == 0) {
-            [cell.textLabel setText:@"Kontakt"];
+            [cell.textLabel setText:NSLocalizedString(@"Kontakt", nil)];
         } else if (indexPath.section == 1) {
-            [cell.textLabel setText:@"Standorte"];
+            [cell.textLabel setText:NSLocalizedString(@"Standorte", nil)];
         } else if (indexPath.section == 2) {
-            [cell.textLabel setText:@"Impressum"];
+            [cell.textLabel setText:NSLocalizedString(@"Impressum", nil)];
         }
         return cell;
     } else {
@@ -213,9 +213,9 @@
         return @"";
     } else {
         if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
-            return @"News";
+            return NSLocalizedString(@"News", nil);
         } else {
-            return @"Website";
+            return NSLocalizedString(@"Website", nil);
         }
     }
 }

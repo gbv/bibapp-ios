@@ -197,32 +197,32 @@
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
            if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
               if (indexPath.section == 0) {
-                 [cell.textLabel setText:@"News"];
+                 [cell.textLabel setText:NSLocalizedString(@"News", nil)];
               } else if (indexPath.section == 1) {
-                 [cell.textLabel setText:@"Kontakt"];
+                 [cell.textLabel setText:NSLocalizedString(@"Kontakt", nil)];
               } else if (indexPath.section == 2) {
-                 [cell.textLabel setText:@"Standorte"];
+                 [cell.textLabel setText:NSLocalizedString(@"Standorte", nil)];
               } else if (indexPath.section == 3) {
-                 [cell.textLabel setText:@"Impressum"];
+                 [cell.textLabel setText:NSLocalizedString(@"Impressum", nil)];
               }
            } else {
               if (indexPath.section == 0) {
-                 [cell.textLabel setText:@"Website"];
+                 [cell.textLabel setText:NSLocalizedString(@"Website", nil)];
               } else if (indexPath.section == 1) {
-                 [cell.textLabel setText:@"Kontakt"];
+                 [cell.textLabel setText:NSLocalizedString(@"Kontakt", nil)];
               } else if (indexPath.section == 2) {
-                 [cell.textLabel setText:@"Standorte"];
+                 [cell.textLabel setText:NSLocalizedString(@"Standorte", nil)];
               } else if (indexPath.section == 3) {
-                 [cell.textLabel setText:@"Impressum"];
+                 [cell.textLabel setText:NSLocalizedString(@"Impressum", nil)];
               }
            }
         } else {
             if (indexPath.section == 0) {
-                [cell.textLabel setText:@"Kontakt"];
+                [cell.textLabel setText:NSLocalizedString(@"Kontakt", nil)];
             } else if (indexPath.section == 1) {
-                [cell.textLabel setText:@"Standorte"];
+                [cell.textLabel setText:NSLocalizedString(@"Standorte", nil)];
             } else if (indexPath.section == 2) {
-                [cell.textLabel setText:@"Impressum"];
+                [cell.textLabel setText:NSLocalizedString(@"Impressum", nil)];
             }
         }
         return cell;
@@ -252,7 +252,7 @@
                 BAInfoCell *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-                [cell.titleLabel setText:@"Kontakt"];
+                [cell.titleLabel setText:NSLocalizedString(@"Kontakt", nil)];
                 [cell.dateLabel setText:@""];
                 [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
                 [cell.contentLabel sizeToFit];
@@ -265,7 +265,7 @@
                    [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
                    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
                 } else {
-                   [cell.locationLabel setText:@"Standorte werden geladen ..."];
+                   [cell.locationLabel setText:NSLocalizedString(@"Standorte werden geladen ...", nil)];
                 }
                return cell;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
@@ -284,7 +284,7 @@
                 BAInfoCell *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-                [cell.titleLabel setText:@"Kontakt"];
+                [cell.titleLabel setText:NSLocalizedString(@"Kontakt", nil)];
                 [cell.dateLabel setText:@""];
                 [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
                 [cell.contentLabel sizeToFit];

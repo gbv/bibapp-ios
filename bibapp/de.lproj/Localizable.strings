@@ -1,0 +1,87 @@
+/* Localized versions of Info.plist keys */
+
+"Suche" = "";
+"Standard-Katalog" = "";
+"Vormerken" = "";
+"Verfügbarkeit im OPAC prüfen" = "";
+
+"verfügbar" = "";
+"vorgemerkt" = "";
+"bestellt" = "";
+"ausgeliehen" = "";
+"abholbereit" = "";
+"abgelehnt" = "";
+
+"wird geladen ..." = "";
+"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "";
+"OK" = "";
+"Bitte Nummer und Passwort prüfen" = "";
+"Bei der Anmeldung ist ein Fehler aufgetreten" = "";
+"Keine Medien entliehen" = "";
+"Keine Vormerkungen" = "";
+"Keine Gebühren" = "";
+"gesperrt" = "";
+"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "";
+"Anmeldung" = "";
+"Abbrechen" = "";
+"Anmelden" = "";
+"Benutzernummer" = "";
+
+"Vormerkungen" = "";
+"Vormerkung" = "";
+
+"Signatur:" = "";
+"Leihfristende:" = "";
+"Vormerkdatum:" = "";
+
+"Verlängern" = "";
+"Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "";
+"Vormerkungen stornieren" = "";
+"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "";
+
+"Summe" = "";
+"Einzelposten" = "";
+
+"wird geladen ..." = "";
+"Konto" = "";
+
+"News" = "";
+"Kontakt" = "";
+"Standorte" = "";
+"Impressum" = "";
+"Website" = "";
+"Standorte werden geladen ..." = "";
+
+"ausleihbar" = "";
+"Bitte am Standort entnehmen" = "";
+"Bitte bestellen" = "";
+"nicht ausleihbar" = "";
+"Online-Ressource im Browser öffnen" = "";
+"ausgeliehen, Vormerken möglich" = "";
+"Zusätzliche Exemplare anderer Bibliotheken" = "";
+"Merkliste" = "";
+"BibApp Merkliste" = "";
+"Bestellen" = "";
+"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "";
+"Standortinfo" = "";
+"Im Browser öffnen" = "";
+
+"Nicht angemeldet" = "";
+"Bei der Abmeldung ist ein Fehler aufgetreten" = "";
+
+"GVK Suche" = "";
+
+"Zur Merkliste hinzufügen" = "";
+"Bereits auf der Merkliste" = "";
+"Abbrechen" = "";
+
+"Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "";
+"Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "";
+"Bereits auf der Merkliste" = "";
+"Konto" = "";
+
+"Bitte Nummer und Passwort prüfen" = "";
+
+"Detail" = "";
+
+"Keine Standortinformationen vorhanden" = "";

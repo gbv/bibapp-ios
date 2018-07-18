@@ -107,7 +107,6 @@
 		8F07B18D1BFB72DB0012C325 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8F07B18E1BFB72DB0012C325 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
 		8F07B18F1BFB72DB0012C325 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
-		8F07B1911BFB72DB0012C325 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F07B1921BFB72DB0012C325 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F07B1931BFB72DB0012C325 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F07B1941BFB72DB0012C325 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -246,7 +245,6 @@
 		8F11405F167F217000E033F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8F114060167F217000E033F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
 		8F114061167F217000E033F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
-		8F114063167F217000E033F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F114064167F217000E033F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F114065167F217000E033F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F114066167F217000E033F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -360,7 +358,6 @@
 		8F1D839B192A2E7000A9898D /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8F1D839C192A2E7000A9898D /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8F1D839D192A2E7000A9898D /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8F1D839E192A2E7000A9898D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F1D839F192A2E7000A9898D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -619,7 +616,6 @@
 		8F4A7F242029B78400CA6C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8F4A7F252029B78400CA6C0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
 		8F4A7F262029B78400CA6C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
-		8F4A7F282029B78400CA6C0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F4A7F292029B78400CA6C0F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F4A7F2A2029B78400CA6C0F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F4A7F2B2029B78400CA6C0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -818,7 +814,6 @@
 		8F8A75CD1781BF4700CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8F8A75CE1781BF4700CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8F8A75CF1781BF4700CCF7DB /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8F8A75D01781BF4700CCF7DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F8A75D11781BF4700CCF7DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F8A75D21781BF4700CCF7DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F8A75D31781BF4700CCF7DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -957,7 +952,6 @@
 		8F8A76621781C05400CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8F8A76631781C05400CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8F8A76641781C05400CCF7DB /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8F8A76651781C05400CCF7DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F8A76661781C05400CCF7DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F8A76671781C05400CCF7DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F8A76681781C05400CCF7DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1096,7 +1090,6 @@
 		8F8A76F71781C0D800CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8F8A76F81781C0D800CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8F8A76F91781C0D800CCF7DB /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8F8A76FA1781C0D800CCF7DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F8A76FB1781C0D800CCF7DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F8A76FC1781C0D800CCF7DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F8A76FD1781C0D800CCF7DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1266,7 +1259,6 @@
 		8F8EB6021A93689000548F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8F8EB6031A93689000548F24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
 		8F8EB6041A93689000548F24 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
-		8F8EB6061A93689000548F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8F8EB6071A93689000548F24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8F8EB6081A93689000548F24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8F8EB6091A93689000548F24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1443,7 +1435,6 @@
 		8FA8F54819501E6B006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F54919501E6B006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F54A19501E6B006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F54B19501E6B006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F54C19501E6B006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F54D19501E6B006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F54E19501E6B006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1595,7 +1586,6 @@
 		8FA8F5EA19502224006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F5EB19502224006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F5EC19502224006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F5ED19502224006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F5EE19502224006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F5EF19502224006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F5F019502224006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1747,7 +1737,6 @@
 		8FA8F68C1950228D006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F68D1950228D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F68E1950228D006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F68F1950228D006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F6901950228D006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F6911950228D006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F6921950228D006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -1899,7 +1888,6 @@
 		8FA8F72E195022BC006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F72F195022BC006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F730195022BC006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F731195022BC006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F732195022BC006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F733195022BC006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F734195022BC006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -2051,7 +2039,6 @@
 		8FA8F7D01950230D006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F7D11950230D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F7D21950230D006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F7D31950230D006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F7D41950230D006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F7D51950230D006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F7D61950230D006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -2203,7 +2190,6 @@
 		8FA8F8721950233A006CD05A /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FA8F8731950233A006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FA8F8741950233A006CD05A /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FA8F8751950233A006CD05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FA8F8761950233A006CD05A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FA8F8771950233A006CD05A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FA8F8781950233A006CD05A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -2445,7 +2431,6 @@
 		8FAD97CA1A0CFD3600C3A5D1 /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FAD97CB1A0CFD3600C3A5D1 /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FAD97CC1A0CFD3600C3A5D1 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FAD97CD1A0CFD3600C3A5D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FAD97CE1A0CFD3600C3A5D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FAD97CF1A0CFD3600C3A5D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FAD97D01A0CFD3600C3A5D1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -2681,7 +2666,6 @@
 		8FD610C7190916EA009E2358 /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FD610C8190916EA009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FD610C9190916EA009E2358 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FD610CA190916EA009E2358 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FD610CB190916EA009E2358 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FD610CC190916EA009E2358 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FD610CD190916EA009E2358 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -2827,7 +2811,6 @@
 		8FD61163190916EF009E2358 /* BAAccountTableHeaderTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F2190B416B2AFA100512C85 /* BAAccountTableHeaderTextView.xib */; };
 		8FD61164190916EF009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5D0BE16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib */; };
 		8FD61165190916EF009E2358 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
-		8FD61166190916EF009E2358 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FD61167190916EF009E2358 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
 		8FD61168190916EF009E2358 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FD61169190916EF009E2358 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
@@ -3007,7 +2990,6 @@
 		8FF26FFC16393BF100099665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
 		8FF26FFE16393BF100099665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFD16393BF100099665 /* CoreGraphics.framework */; };
 		8FF2700016393BF100099665 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFF16393BF100099665 /* CoreData.framework */; };
-		8FF2700616393BF200099665 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700416393BF200099665 /* InfoPlist.strings */; };
 		8FF2700816393BF200099665 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2700716393BF200099665 /* main.m */; };
 		8FF2700C16393BF200099665 /* BAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2700B16393BF200099665 /* BAAppDelegate.m */; };
 		8FF2700E16393BF200099665 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700D16393BF200099665 /* Default.png */; };
@@ -3028,7 +3010,6 @@
 		8FFF22C61786B8580077FC8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF2701C16393BF200099665 /* SenTestingKit.framework */; };
 		8FFF22C71786B8580077FC8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FF916393BF100099665 /* UIKit.framework */; };
 		8FFF22C81786B8580077FC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FFB16393BF100099665 /* Foundation.framework */; };
-		8FFF22CE1786B8580077FC8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFF22CC1786B8580077FC8B /* InfoPlist.strings */; };
 		8FFF22D11786B8580077FC8B /* BibAppUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFF22D01786B8580077FC8B /* BibAppUnitTests.m */; };
 		8FFFCFC41667593800326BE9 /* BADocumentItemElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFC31667593800326BE9 /* BADocumentItemElement.m */; };
 		8FFFCFC81667673600326BE9 /* BADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFC71667673600326BE9 /* BADocument.m */; };
@@ -3036,6 +3017,24 @@
 		8FFFCFCD1667860700326BE9 /* BADocumentItemElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFCC1667860700326BE9 /* BADocumentItemElementCell.m */; };
 		8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
 		8FFFCFE01667B23700326BE9 /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
+		B43CE0A020FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A120FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A220FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A320FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A420FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A520FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A620FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A720FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A820FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0A920FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AA20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AB20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AC20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AD20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AE20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0AF20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0B020FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B43CE0B120FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
 		B4D8B2CD2099E85A0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		B4D8B2CE2099E85D0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		B4D8B2CF2099E85E0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
@@ -3243,7 +3242,6 @@
 		8FB2FE0216CA4575007382EE /* mediaIconT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconT.png; sourceTree = "<group>"; };
 		8FB2FE0316CA4575007382EE /* mediaIconV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconV.png; sourceTree = "<group>"; };
 		8FB2FE0416CA4575007382EE /* mediaIconX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconX.png; sourceTree = "<group>"; };
-		8FBA87661681E2A7005A9962 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FBA87671681FF49005A9962 /* BAImpressumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAImpressumTableViewController.h; sourceTree = "<group>"; };
 		8FBA87681681FF49005A9962 /* BAImpressumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAImpressumTableViewController.m; sourceTree = "<group>"; };
 		8FBA876B16820535005A9962 /* BAImpressumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAImpressumCell.xib; sourceTree = "<group>"; };
@@ -3363,7 +3361,6 @@
 		8FFE76B316B1448300844658 /* menuIconSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIconSearch.png; sourceTree = "<group>"; };
 		8FFF22C51786B8580077FC8B /* BibAppUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibAppUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFF22CB1786B8580077FC8B /* BibAppUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BibAppUnitTests-Info.plist"; sourceTree = "<group>"; };
-		8FFF22CD1786B8580077FC8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FFF22CF1786B8580077FC8B /* BibAppUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BibAppUnitTests.h; sourceTree = "<group>"; };
 		8FFF22D01786B8580077FC8B /* BibAppUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BibAppUnitTests.m; sourceTree = "<group>"; };
 		8FFF22D21786B8580077FC8B /* BibAppUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BibAppUnitTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -3377,6 +3374,8 @@
 		8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADocumentItemCell.xib; sourceTree = "<group>"; };
 		8FFFCFDE1667B23700326BE9 /* BADocumentItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADocumentItemCell.h; sourceTree = "<group>"; };
 		8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADocumentItemCell.m; sourceTree = "<group>"; };
+		B43CE09F20FF3F6600AFBC78 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = bibapp/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B43CE0B220FF3F7500AFBC78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = bibapp/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4065,6 +4064,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				B43CE09E20FF3F6600AFBC78 /* Localizable.strings */,
 				8FF2700116393BF100099665 /* BibApp */,
 				8FFF22C91786B8580077FC8B /* BibAppUnitTests */,
 				8FF26FF816393BF100099665 /* Frameworks */,
@@ -4161,7 +4161,6 @@
 				8F07B1D81BFB72DC0012C325 /* BibApp Cobi-Info.plist */,
 				8F4A7F6F2029B78500CA6C0F /* BibApp-IAI-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
-				8FF2700416393BF200099665 /* InfoPlist.strings */,
 				8FF2700716393BF200099665 /* main.m */,
 				8FF2700916393BF200099665 /* bibapp-Prefix.pch */,
 				8FF2700D16393BF200099665 /* Default.png */,
@@ -4246,7 +4245,6 @@
 			isa = PBXGroup;
 			children = (
 				8FFF22CB1786B8580077FC8B /* BibAppUnitTests-Info.plist */,
-				8FFF22CC1786B8580077FC8B /* InfoPlist.strings */,
 				8FFF22D21786B8580077FC8B /* BibAppUnitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -4640,8 +4638,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				de,
+				en,
 			);
 			mainGroup = 8FF26FEA16393BF100099665;
 			productRefGroup = 8FF26FF616393BF100099665 /* Products */;
@@ -4676,7 +4674,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F07B1911BFB72DB0012C325 /* InfoPlist.strings in Resources */,
 				8F07B1921BFB72DB0012C325 /* Default.png in Resources */,
 				8F07B1931BFB72DB0012C325 /* Default@2x.png in Resources */,
 				8F07B1941BFB72DB0012C325 /* Default-568h@2x.png in Resources */,
@@ -4732,6 +4729,7 @@
 				8F07B1C61BFB72DB0012C325 /* Buch_250_gradient.png in Resources */,
 				8F07B1C71BFB72DB0012C325 /* BADocumentItemElementCellPad.xib in Resources */,
 				8F07B1C81BFB72DB0012C325 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B43CE0B020FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F07B1C91BFB72DB0012C325 /* BAListTableViewControllerPad.h in Resources */,
 				8F07B1CA1BFB72DB0012C325 /* gear.png in Resources */,
 				8F07B1CB1BFB72DB0012C325 /* gear2.png in Resources */,
@@ -4753,7 +4751,6 @@
 				8F2190BB16B2B22300512C85 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FE5D0C516AFDE700024027C /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FBA8771168207D1005A9962 /* BAImpressumCell.xib in Resources */,
-				8F114063167F217000E033F6 /* InfoPlist.strings in Resources */,
 				8F114064167F217000E033F6 /* Default.png in Resources */,
 				8F114065167F217000E033F6 /* Default@2x.png in Resources */,
 				8F114066167F217000E033F6 /* Default-568h@2x.png in Resources */,
@@ -4768,6 +4765,7 @@
 				8F180737192B3A7B0099F579 /* Images.xcassets in Resources */,
 				8F11407D167F217000E033F6 /* Icon@2x.png in Resources */,
 				8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */,
+				B43CE0A120FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F114080167F217000E033F6 /* checkbox.png in Resources */,
 				8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */,
 				8FFE76B516B1448300844658 /* menuIconAccount.png in Resources */,
@@ -4828,7 +4826,6 @@
 				8F1D839B192A2E7000A9898D /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F1D839C192A2E7000A9898D /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F1D839D192A2E7000A9898D /* BAImpressumCell.xib in Resources */,
-				8F1D839E192A2E7000A9898D /* InfoPlist.strings in Resources */,
 				8F1D839F192A2E7000A9898D /* Default.png in Resources */,
 				8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */,
 				8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */,
@@ -4843,6 +4840,7 @@
 				8F1D83EC192A301F00A9898D /* Images.xcassets in Resources */,
 				8F1D83AA192A2E7000A9898D /* Icon@2x.png in Resources */,
 				8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */,
+				B43CE0A720FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */,
 				8F1D83AD192A2E7000A9898D /* BAItemDetailTitleCell.xib in Resources */,
 				8F1D83AE192A2E7000A9898D /* menuIconAccount.png in Resources */,
@@ -4900,7 +4898,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F4A7F282029B78400CA6C0F /* InfoPlist.strings in Resources */,
 				8F4A7F292029B78400CA6C0F /* Default.png in Resources */,
 				8F4A7F2A2029B78400CA6C0F /* Default@2x.png in Resources */,
 				8F4A7F2B2029B78400CA6C0F /* Default-568h@2x.png in Resources */,
@@ -4956,6 +4953,7 @@
 				8F4A7F5D2029B78400CA6C0F /* Buch_250_gradient.png in Resources */,
 				8F4A7F5E2029B78400CA6C0F /* BADocumentItemElementCellPad.xib in Resources */,
 				8F4A7F5F2029B78400CA6C0F /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B43CE0B120FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F4A7F602029B78400CA6C0F /* BAListTableViewControllerPad.h in Resources */,
 				8F4A7F612029B78400CA6C0F /* gear.png in Resources */,
 				8F4A7F622029B78400CA6C0F /* gear2.png in Resources */,
@@ -4977,7 +4975,6 @@
 				8F8A75CD1781BF4700CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F8A75CE1781BF4700CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F8A75CF1781BF4700CCF7DB /* BAImpressumCell.xib in Resources */,
-				8F8A75D01781BF4700CCF7DB /* InfoPlist.strings in Resources */,
 				8F8A75D11781BF4700CCF7DB /* Default.png in Resources */,
 				8F8A75D21781BF4700CCF7DB /* Default@2x.png in Resources */,
 				8F8A75D31781BF4700CCF7DB /* Default-568h@2x.png in Resources */,
@@ -5044,6 +5041,7 @@
 				8F8A760D1781BF4700CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC381784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 				8F5E21851785AA6C00EDD948 /* IconBLS.png in Resources */,
+				B43CE0A220FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F5E21871785AA7500EDD948 /* IconBLS@2x.png in Resources */,
 				8F5E21891785AA8900EDD948 /* iPadIconBLS.png in Resources */,
 				8F5E218B1785AA9B00EDD948 /* iPadIconBLS@2x.png in Resources */,
@@ -5057,7 +5055,6 @@
 				8F8A76621781C05400CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F8A76631781C05400CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F8A76641781C05400CCF7DB /* BAImpressumCell.xib in Resources */,
-				8F8A76651781C05400CCF7DB /* InfoPlist.strings in Resources */,
 				8F8A76661781C05400CCF7DB /* Default.png in Resources */,
 				8F8A76671781C05400CCF7DB /* Default@2x.png in Resources */,
 				8F8A76681781C05400CCF7DB /* Default-568h@2x.png in Resources */,
@@ -5124,6 +5121,7 @@
 				8F8A76A21781C05400CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F91495D17830DA400FE7924 /* IconIL.png in Resources */,
 				8F91495F17830DC700FE7924 /* IconIL@2x.png in Resources */,
+				B43CE0A320FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F91496117830E0B00FE7924 /* iPadIconIL.png in Resources */,
 				8F91496317830E1000FE7924 /* iPadIconIL@2x.png in Resources */,
 				8F36FC391784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5137,7 +5135,6 @@
 				8F8A76F71781C0D800CCF7DB /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F8A76F81781C0D800CCF7DB /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F8A76F91781C0D800CCF7DB /* BAImpressumCell.xib in Resources */,
-				8F8A76FA1781C0D800CCF7DB /* InfoPlist.strings in Resources */,
 				8F8A76FB1781C0D800CCF7DB /* Default.png in Resources */,
 				8F8A76FC1781C0D800CCF7DB /* Default@2x.png in Resources */,
 				8F8A76FD1781C0D800CCF7DB /* Default-568h@2x.png in Resources */,
@@ -5159,6 +5156,7 @@
 				8F8A770D1781C0D800CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A770E1781C0D800CCF7DB /* menuIconAccount@2x.png in Resources */,
 				8F8A770F1781C0D800CCF7DB /* menuIconInfo@2x.png in Resources */,
+				B43CE0A420FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F8A77101781C0D800CCF7DB /* menuIconList@2x.png in Resources */,
 				8F8A77111781C0D800CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A77121781C0D800CCF7DB /* menuIconSearch@2x.png in Resources */,
@@ -5218,7 +5216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8EB6061A93689000548F24 /* InfoPlist.strings in Resources */,
 				8F8EB6071A93689000548F24 /* Default.png in Resources */,
 				8F8EB6081A93689000548F24 /* Default@2x.png in Resources */,
 				8F8EB6091A93689000548F24 /* Default-568h@2x.png in Resources */,
@@ -5274,6 +5271,7 @@
 				8F8EB63A1A93689000548F24 /* Buch_250_gradient.png in Resources */,
 				8F8EB63B1A93689000548F24 /* BADocumentItemElementCellPad.xib in Resources */,
 				8F8EB63C1A93689000548F24 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B43CE0AF20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F8EB63D1A93689000548F24 /* BAListTableViewControllerPad.h in Resources */,
 				8F8EB63E1A93689000548F24 /* gear.png in Resources */,
 				8F8EB63F1A93689000548F24 /* gear2.png in Resources */,
@@ -5295,7 +5293,6 @@
 				8FA8F54819501E6B006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F54919501E6B006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F54A19501E6B006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F54B19501E6B006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F54C19501E6B006CD05A /* Default.png in Resources */,
 				8FA8F54D19501E6B006CD05A /* Default@2x.png in Resources */,
 				8FA8F54E19501E6B006CD05A /* Default-568h@2x.png in Resources */,
@@ -5310,6 +5307,7 @@
 				8FA8F55719501E6B006CD05A /* Images.xcassets in Resources */,
 				8FA8F55819501E6B006CD05A /* Icon@2x.png in Resources */,
 				8FA8F55919501E6B006CD05A /* BAFeeCell.xib in Resources */,
+				B43CE0A820FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F55A19501E6B006CD05A /* checkbox.png in Resources */,
 				8FA8F55B19501E6B006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F55C19501E6B006CD05A /* menuIconAccount.png in Resources */,
@@ -5370,7 +5368,6 @@
 				8FA8F5EA19502224006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F5EB19502224006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F5EC19502224006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F5ED19502224006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F5EE19502224006CD05A /* Default.png in Resources */,
 				8FA8F5EF19502224006CD05A /* Default@2x.png in Resources */,
 				8FA8F5F019502224006CD05A /* Default-568h@2x.png in Resources */,
@@ -5385,6 +5382,7 @@
 				8FA8F5F919502224006CD05A /* Images.xcassets in Resources */,
 				8FA8F5FA19502224006CD05A /* Icon@2x.png in Resources */,
 				8FA8F5FB19502224006CD05A /* BAFeeCell.xib in Resources */,
+				B43CE0A920FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F5FC19502224006CD05A /* checkbox.png in Resources */,
 				8FA8F5FD19502224006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F5FE19502224006CD05A /* menuIconAccount.png in Resources */,
@@ -5445,7 +5443,6 @@
 				8FA8F68C1950228D006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F68D1950228D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F68E1950228D006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F68F1950228D006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F6901950228D006CD05A /* Default.png in Resources */,
 				8FA8F6911950228D006CD05A /* Default@2x.png in Resources */,
 				8FA8F6921950228D006CD05A /* Default-568h@2x.png in Resources */,
@@ -5460,6 +5457,7 @@
 				8FA8F69B1950228D006CD05A /* Images.xcassets in Resources */,
 				8FA8F69C1950228D006CD05A /* Icon@2x.png in Resources */,
 				8FA8F69D1950228D006CD05A /* BAFeeCell.xib in Resources */,
+				B43CE0AA20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F69E1950228D006CD05A /* checkbox.png in Resources */,
 				8FA8F69F1950228D006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F6A01950228D006CD05A /* menuIconAccount.png in Resources */,
@@ -5520,7 +5518,6 @@
 				8FA8F72E195022BC006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F72F195022BC006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F730195022BC006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F731195022BC006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F732195022BC006CD05A /* Default.png in Resources */,
 				8FA8F733195022BC006CD05A /* Default@2x.png in Resources */,
 				8FA8F734195022BC006CD05A /* Default-568h@2x.png in Resources */,
@@ -5535,6 +5532,7 @@
 				8FA8F73D195022BC006CD05A /* Images.xcassets in Resources */,
 				8FA8F73E195022BC006CD05A /* Icon@2x.png in Resources */,
 				8FA8F73F195022BC006CD05A /* BAFeeCell.xib in Resources */,
+				B43CE0AB20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F740195022BC006CD05A /* checkbox.png in Resources */,
 				8FA8F741195022BC006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F742195022BC006CD05A /* menuIconAccount.png in Resources */,
@@ -5595,7 +5593,6 @@
 				8FA8F7D01950230D006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F7D11950230D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F7D21950230D006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F7D31950230D006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F7D41950230D006CD05A /* Default.png in Resources */,
 				8FA8F7D51950230D006CD05A /* Default@2x.png in Resources */,
 				8FA8F7D61950230D006CD05A /* Default-568h@2x.png in Resources */,
@@ -5648,6 +5645,7 @@
 				8FA8F8041950230D006CD05A /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8FA8F8051950230D006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F8061950230D006CD05A /* gear.png in Resources */,
+				B43CE0AC20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F8071950230D006CD05A /* gear2.png in Resources */,
 				8FA8F8081950230D006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F8091950230D006CD05A /* BAImpressumCellPad.xib in Resources */,
@@ -5669,7 +5667,6 @@
 				8FA8F8721950233A006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FA8F8731950233A006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F8741950233A006CD05A /* BAImpressumCell.xib in Resources */,
-				8FA8F8751950233A006CD05A /* InfoPlist.strings in Resources */,
 				8FA8F8761950233A006CD05A /* Default.png in Resources */,
 				8FA8F8771950233A006CD05A /* Default@2x.png in Resources */,
 				8FA8F8781950233A006CD05A /* Default-568h@2x.png in Resources */,
@@ -5684,6 +5681,7 @@
 				8FA8F8811950233A006CD05A /* Images.xcassets in Resources */,
 				8FA8F8821950233A006CD05A /* Icon@2x.png in Resources */,
 				8FA8F8831950233A006CD05A /* BAFeeCell.xib in Resources */,
+				B43CE0AD20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F8841950233A006CD05A /* checkbox.png in Resources */,
 				8FA8F8851950233A006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F8861950233A006CD05A /* menuIconAccount.png in Resources */,
@@ -5744,7 +5742,6 @@
 				8FAD97CA1A0CFD3600C3A5D1 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FAD97CB1A0CFD3600C3A5D1 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FAD97CC1A0CFD3600C3A5D1 /* BAImpressumCell.xib in Resources */,
-				8FAD97CD1A0CFD3600C3A5D1 /* InfoPlist.strings in Resources */,
 				8FAD97CE1A0CFD3600C3A5D1 /* Default.png in Resources */,
 				8FAD97CF1A0CFD3600C3A5D1 /* Default@2x.png in Resources */,
 				8FAD97D01A0CFD3600C3A5D1 /* Default-568h@2x.png in Resources */,
@@ -5759,6 +5756,7 @@
 				8FAD97D91A0CFD3600C3A5D1 /* Images.xcassets in Resources */,
 				8FAD97DA1A0CFD3600C3A5D1 /* Icon@2x.png in Resources */,
 				8FAD97DB1A0CFD3600C3A5D1 /* BAFeeCell.xib in Resources */,
+				B43CE0AE20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FAD97DC1A0CFD3600C3A5D1 /* checkbox.png in Resources */,
 				8FAD97DD1A0CFD3600C3A5D1 /* BAItemDetailTitleCell.xib in Resources */,
 				8FAD97DE1A0CFD3600C3A5D1 /* menuIconAccount.png in Resources */,
@@ -5819,7 +5817,6 @@
 				8FD610C7190916EA009E2358 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FD610C8190916EA009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FD610C9190916EA009E2358 /* BAImpressumCell.xib in Resources */,
-				8FD610CA190916EA009E2358 /* InfoPlist.strings in Resources */,
 				8FD610CB190916EA009E2358 /* Default.png in Resources */,
 				8FD610CC190916EA009E2358 /* Default@2x.png in Resources */,
 				8FD610CD190916EA009E2358 /* Default-568h@2x.png in Resources */,
@@ -5834,6 +5831,7 @@
 				8F18073B192B3A7F0099F579 /* Images.xcassets in Resources */,
 				8FD610D6190916EA009E2358 /* Icon@2x.png in Resources */,
 				8FD610D7190916EA009E2358 /* BAFeeCell.xib in Resources */,
+				B43CE0A520FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FD610D8190916EA009E2358 /* checkbox.png in Resources */,
 				8FD610D9190916EA009E2358 /* BAItemDetailTitleCell.xib in Resources */,
 				8FD610DA190916EA009E2358 /* menuIconAccount.png in Resources */,
@@ -5894,7 +5892,6 @@
 				8FD61163190916EF009E2358 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8FD61164190916EF009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FD61165190916EF009E2358 /* BAImpressumCell.xib in Resources */,
-				8FD61166190916EF009E2358 /* InfoPlist.strings in Resources */,
 				8FD61167190916EF009E2358 /* Default.png in Resources */,
 				8FD61168190916EF009E2358 /* Default@2x.png in Resources */,
 				8FD61169190916EF009E2358 /* Default-568h@2x.png in Resources */,
@@ -5909,6 +5906,7 @@
 				8F18073C192B3A7F0099F579 /* Images.xcassets in Resources */,
 				8FD61172190916EF009E2358 /* Icon@2x.png in Resources */,
 				8FD61173190916EF009E2358 /* BAFeeCell.xib in Resources */,
+				B43CE0A620FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FD61174190916EF009E2358 /* checkbox.png in Resources */,
 				8FD61175190916EF009E2358 /* BAItemDetailTitleCell.xib in Resources */,
 				8FD61176190916EF009E2358 /* menuIconAccount.png in Resources */,
@@ -5966,7 +5964,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF2700616393BF200099665 /* InfoPlist.strings in Resources */,
 				8FF2700E16393BF200099665 /* Default.png in Resources */,
 				8FF2701016393BF200099665 /* Default@2x.png in Resources */,
 				8FF2701216393BF200099665 /* Default-568h@2x.png in Resources */,
@@ -6022,6 +6019,7 @@
 				8FE94A7016DCAE1F004D33B7 /* Buch_250_gradient.png in Resources */,
 				8FE94A7316DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib in Resources */,
 				8FE94A7616DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B43CE0A020FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FD7C0FE16F364F20073D037 /* BAListTableViewControllerPad.h in Resources */,
 				8FD7C10516F37EC00073D037 /* gear.png in Resources */,
 				8FD7C10716F37EC00073D037 /* gear2.png in Resources */,
@@ -6040,7 +6038,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FFF22CE1786B8580077FC8B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7804,20 +7801,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8FF2700416393BF200099665 /* InfoPlist.strings */ = {
+		B43CE09E20FF3F6600AFBC78 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8FBA87661681E2A7005A9962 /* de */,
+				B43CE09F20FF3F6600AFBC78 /* de */,
+				B43CE0B220FF3F7500AFBC78 /* en */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8FFF22CC1786B8580077FC8B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FFF22CD1786B8580077FC8B /* en */,
-			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

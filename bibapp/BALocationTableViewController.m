@@ -125,7 +125,7 @@
             [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
         }
     } else {
-        [cell.textLabel setText:@"Keine Standortinformationen vorhanden"];
+        [cell.textLabel setText:NSLocalizedString(@"Keine Standortinformationen vorhanden", nil)];
     }
         
     return cell;

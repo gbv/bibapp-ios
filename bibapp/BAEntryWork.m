@@ -162,17 +162,17 @@
     */
    NSString *result;
    if ([self.status integerValue] == 0) {
-      result = @"verfügbar";
+      result = NSLocalizedString(@"verfügbar", nil);
    } else if ([self.status integerValue] == 1) {
-      result = @"vorgemerkt";
+      result = NSLocalizedString(@"vorgemerkt", nil);
    } else if ([self.status integerValue] == 2) {
-      result = @"bestellt";
+      result = NSLocalizedString(@"bestellt", nil);
    } else if ([self.status integerValue] == 3) {
-      result = @"ausgeliehen";
+      result = NSLocalizedString(@"ausgeliehen", nil);
    } else if ([self.status integerValue] == 4) {
-      result = @"abholbereit";
+      result = NSLocalizedString(@"abholbereit", nil);
    } else if ([self.status integerValue] == 5) {
-      result = @"abgelehnt";
+      result = NSLocalizedString(@"abgelehnt", nil);
    }
    return result;
 }

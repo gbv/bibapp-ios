@@ -205,7 +205,7 @@
       MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
       [composeViewController setMailComposeDelegate:self];
       [composeViewController setToRecipients:@[@""]];
-      [composeViewController setSubject:@"BibApp Merkliste"];
+      [composeViewController setSubject:NSLocalizedString(@"BibApp Merkliste", nil)];
       [composeViewController setMessageBody:messageBody isHTML:NO];
       [self presentViewController:composeViewController animated:YES completion:NULL];
    }

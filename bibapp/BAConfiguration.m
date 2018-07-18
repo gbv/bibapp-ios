@@ -60,18 +60,18 @@
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
         self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
        
-        self.searchTitle = @"Suche";
+        self.searchTitle = NSLocalizedString(@"Suche", nil);
         self.hasLocalDetailURL = NO;
         
-        self.currentBibStandardCatalogue = @"Standard-Katalog";
+        self.currentBibStandardCatalogue = NSLocalizedString(@"Standard-Katalog", nil);
         
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
         self.currentBibUsePAIAWrapper = NO;
        
-        self.currentBibRequestTitle = @"Vormerken";
+        self.currentBibRequestTitle = NSLocalizedString(@"Vormerken", nil);
        
-        self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
+        self.currentBibDaiaInfoFromOpacDisplay = NSLocalizedString(@"Verfügbarkeit im OPAC prüfen", nil);
        
         self.useDAIAParser = YES;
     }

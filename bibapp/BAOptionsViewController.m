@@ -55,7 +55,7 @@
        [self.userLabel setText:self.appDelegate.currentAccount];
        [self.logoutButton setEnabled:YES];
     } else {
-       [self.userLabel setText:@"Nicht angemeldet"];
+       [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
        [self.logoutButton setEnabled:NO];
     }
 }
@@ -109,9 +109,9 @@
       if ([command isEqualToString:@"logout"]) {
          if ([json objectForKey:@"error"] || json == nil) {
             [self.appDelegate setCurrentPassword:nil];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bei der Abmeldung ist ein Fehler aufgetreten"
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten", nil)
                                                             message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [alert setTag:1];
             [alert show];
          } else {
@@ -120,7 +120,7 @@
             [self.appDelegate setCurrentToken:nil];
             [self.appDelegate setCurrentScope:nil];
             [self.appDelegate setIsLoggedIn:NO];
-            [self.userLabel setText:@"Nicht angemeldet"];
+            [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
             [self.logoutButton setEnabled:NO];
          }
       }

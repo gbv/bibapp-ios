@@ -77,7 +77,7 @@
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
        if (!self.appDelegate.isLoggedIn) {
-           [self.navigationController.navigationBar.topItem setTitle:@"Konto"];
+           [self.navigationController.navigationBar.topItem setTitle:NSLocalizedString(@"Konto", nil)];
            [self setCurrentAccount:nil];
            [self setCurrentPassword:nil];
            [self setCurrentScope:nil];
@@ -151,26 +151,26 @@
               if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
                  [self loginActionWithMessage:@""];
               } else {
-                 NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
+                 NSString *errorDisplay = [[NSString alloc] initWithFormat:NSLocalizedString(@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", nil), errorCode];
                  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                  message:errorDisplay
-                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                  [alert setTag:20];
                  [alert show];
               }
            } else {
               self.isLoggingIn = NO;
               [self setCurrentPassword:nil];
-              [self loginActionWithMessage:@"Bitte Nummer und Passwort prüfen"];
+              [self loginActionWithMessage:NSLocalizedString(@"Bitte Nummer und Passwort prüfen", nil)];
            }
         }
         else if ([command isEqualToString:@"login"]) {
             self.isLoggingIn = NO;
             if ([json objectForKey:@"error"] || json == nil) {
                 [self.appDelegate setCurrentPassword:nil];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bei der Anmeldung ist ein Fehler aufgetreten"
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Bei der Anmeldung ist ein Fehler aufgetreten", nil)
                                                                 message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
                 [alert setTag:1];
                 [alert show];
             } else {
@@ -298,7 +298,7 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
                 if ([self.loan count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Medien entliehen"];
+                    [header setText:NSLocalizedString(@"Keine Medien entliehen", nil)];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -306,7 +306,7 @@
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
                 if ([self.reservation count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Vormerkungen"];
+                    [header setText:NSLocalizedString(@"Keine Vormerkungen", nil)];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -349,7 +349,7 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
                 if ([self.fees count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Gebühren"];
+                    [header setText:NSLocalizedString(@"Keine Gebühren", nil)];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -378,7 +378,7 @@
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
             NSMutableString *displayName = [self.appDelegate.currentAccount mutableCopy];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
-               displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];
+               displayName = [[NSMutableString alloc] initWithString:NSLocalizedString(@"gesperrt", nil)];
             } else {
                BOOL writeItemsScope = NO;
                for (NSString *tempScope in self.currentScope) {
@@ -387,7 +387,7 @@
                   }
                }
                if (!writeItemsScope) {
-                  displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];;
+                  displayName = [[NSMutableString alloc] initWithString:NSLocalizedString(@"gesperrt", nil)];
                }
             }
             [self.navigationController.navigationBar.topItem setTitle:displayName];
@@ -400,13 +400,13 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
                 // Refactor: Reuse header-object when switching tabs.
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Medien entliehen"];
+                [header setText:NSLocalizedString(@"Keine Medien entliehen", nil)];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Vormerkungen"];
+                [header setText:NSLocalizedString(@"Keine Vormerkungen", nil)];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
@@ -418,7 +418,7 @@
             [self.accountTableView reloadData];
             if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Gebühren"];
+                [header setText:NSLocalizedString(@"Keine Gebühren", nil)];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
@@ -538,14 +538,14 @@
         
         [cell.titleLabel setText:item.title];
         
-        [cell.labelTitleLabel setText:@"Signatur:"];
+        [cell.labelTitleLabel setText:NSLocalizedString(@"Signatur:", nil)];
         [cell.labelLabel setText:item.label];
         
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-            [cell.dateTitleLabel setText:@"Leihfristende:"];
+            [cell.dateTitleLabel setText:NSLocalizedString(@"Leihfristende:", nil)];
             [cell.dateLabel setText:item.endtime];
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
-            [cell.dateTitleLabel setText:@"Vormerkdatum:"];
+            [cell.dateTitleLabel setText:NSLocalizedString(@"Vormerkdatum:", nil)];
             [cell.dateLabel setText:item.starttime];
         }
        
@@ -653,9 +653,9 @@
         if ([self.fees count] > 0) {
             if (section == 0)
             {
-                return @"Summe";
+                return NSLocalizedString(@"Summe", nil);
             } else {
-                return @"Einzelposten";
+                return NSLocalizedString(@"Einzelposten", nil);
             }
         } else {
             return nil;
@@ -711,17 +711,17 @@
                   [displayString appendString:@"\n\n"];
                }
             }
-            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden."];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
+            [displayString appendString:NSLocalizedString(@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden.", nil)];
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Anmeldung", nil)
                                                             message:displayString
-                                                           delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];
+                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil) otherButtonTitles:NSLocalizedString(@"Anmelden", nil), nil];
             [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
             [alert setTag:0];
             if (self.currentAccount != nil) {
                 [[alert textFieldAtIndex:0] setText:self.currentAccount];
             }
             [[alert textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-            [[alert textFieldAtIndex:0] setPlaceholder:@"Benutzernummer"];
+            [[alert textFieldAtIndex:0] setPlaceholder:NSLocalizedString(@"Benutzernummer", nil)];
             [[alert textFieldAtIndex:1] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
             
             [alert show];
@@ -741,17 +741,17 @@
         if (foundSelected) {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                                 delegate:self
-                                                       cancelButtonTitle:@"Abbrechen"
+                                                       cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
                                                   destructiveButtonTitle:nil
-                                                       otherButtonTitles:@"Verlängern", nil];
+                                                       otherButtonTitles:NSLocalizedString(@"Verlängern", nil), nil];
         
             // Show the sheet
             [action setTag:10];
             [action showInView:self.parentViewController.parentViewController.view];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                            message:NSLocalizedString(@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen", nil)
+                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [alert setTag:21];
             [alert show];
         }
@@ -765,17 +765,17 @@
         if (foundSelected) {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                                 delegate:self
-                                                       cancelButtonTitle:@"Abbrechen"
+                                                       cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
                                                   destructiveButtonTitle:nil
-                                                       otherButtonTitles:@"Vormerkungen stornieren", nil];
+                                                       otherButtonTitles:NSLocalizedString(@"Vormerkungen stornieren", nil), nil];
         
             // Show the sheet
             [action setTag:11];
             [action showInView:self.parentViewController.parentViewController.view];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                            message:NSLocalizedString(@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen", nil)
+                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [alert setTag:22];
             [alert show];
         }
@@ -853,9 +853,9 @@
           }
        }
        if (renewalsCounter > 0) {
-          [statusString appendFormat:@"%d von %lu Titel(n) verlängert.\n\n", renewalsCounter, (unsigned long)[self.sendEntries count]];
+          [statusString appendFormat:@"%d von %lu Titel(n) verlängert.\n\n", renewalsCounter, (unsigned long)[self.sendEntries count]]; //NSLocalizedString
        } else {
-          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
+          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"]; //NSLocalizedString
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
@@ -881,21 +881,21 @@
        NSMutableString *requestString = [[NSMutableString alloc] init];
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           if ([self.successfulEntriesWrapper count] > 1) {
-             [requestString appendString:@"Vormerkungen"];
+             [requestString appendString:NSLocalizedString(@"Vormerkungen", nil)];
           } else {
-             [requestString appendString:@"Vormerkung"];
+             [requestString appendString:NSLocalizedString(@"Vormerkung", nil)];
           }
        } else {
           if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
-             [requestString appendString:@"Vormerkungen"];
+             [requestString appendString:NSLocalizedString(@"Vormerkungen", nil)];
           } else {
-             [requestString appendString:@"Vormerkung"];
+             [requestString appendString:NSLocalizedString(@"Vormerkung", nil)];
           }
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[self.successfulEntriesWrapper count], requestString];
+          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[self.successfulEntriesWrapper count], requestString]; //NSLocalizedString
        } else {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString];
+          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString]; //NSLocalizedString
        }
     }
     
@@ -903,9 +903,9 @@
       if ([self.appDelegate.configuration usePAIAWrapper]) {
          if ([self.sendEntries count] > [self.successfulEntriesWrapper count]) {
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
+               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"]; //NSLocalizedString
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
-               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"];
+               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"]; //NSLocalizedString
             }
             for (BAEntryWork *tempSendEntry in self.sendEntries) {
                BOOL wasSuccessful = NO;
@@ -944,7 +944,7 @@
    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:statusString
-                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [alert setTag:20];
     [alert show];
 }
