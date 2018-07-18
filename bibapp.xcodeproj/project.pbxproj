@@ -3017,6 +3017,24 @@
 		8FFFCFCD1667860700326BE9 /* BADocumentItemElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFCC1667860700326BE9 /* BADocumentItemElementCell.m */; };
 		8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
 		8FFFCFE01667B23700326BE9 /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
+		B4213C0320FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0420FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0520FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0620FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0720FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0820FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0920FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0A20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0B20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0C20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0D20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0E20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C0F20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C1020FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C1120FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C1220FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C1320FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
+		B4213C1420FF7434006ABD32 /* BALanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */; };
 		B43CE0A020FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
 		B43CE0A120FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
 		B43CE0A220FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
@@ -3374,6 +3392,8 @@
 		8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADocumentItemCell.xib; sourceTree = "<group>"; };
 		8FFFCFDE1667B23700326BE9 /* BADocumentItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADocumentItemCell.h; sourceTree = "<group>"; };
 		8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADocumentItemCell.m; sourceTree = "<group>"; };
+		B4213C0120FF7433006ABD32 /* BALanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BALanguageTableViewController.h; sourceTree = "<group>"; };
+		B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BALanguageTableViewController.m; sourceTree = "<group>"; };
 		B43CE09F20FF3F6600AFBC78 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = bibapp/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B43CE0B220FF3F7500AFBC78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = bibapp/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3907,6 +3927,8 @@
 			children = (
 				8FE94A8D16DD086E004D33B7 /* BACoverViewController.h */,
 				8FE94A8E16DD086E004D33B7 /* BACoverViewController.m */,
+				B4213C0120FF7433006ABD32 /* BALanguageTableViewController.h */,
+				B4213C0220FF7433006ABD32 /* BALanguageTableViewController.m */,
 				8FE94A8516DCF980004D33B7 /* BALocationViewController.h */,
 				8FE94A8616DCF992004D33B7 /* BALocationViewController.m */,
 				8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */,
@@ -6104,6 +6126,7 @@
 				8F07B1531BFB72DB0012C325 /* BAImpressumTableViewController.m in Sources */,
 				8F07B1541BFB72DB0012C325 /* BAConfigurationUBWe.m in Sources */,
 				8F07B1551BFB72DB0012C325 /* BAImpressumCell.m in Sources */,
+				B4213C1320FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F07B1561BFB72DB0012C325 /* BAPDFViewController.m in Sources */,
 				8F07B1571BFB72DB0012C325 /* BAConfigurationTUBS.m in Sources */,
 				8F07B1581BFB72DB0012C325 /* BADocumentItemElementCellNonLocal.m in Sources */,
@@ -6200,6 +6223,7 @@
 				8F114055167F217000E033F6 /* BAOptions.m in Sources */,
 				8F1D83E4192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8F114056167F217000E033F6 /* BAOptionsViewController.m in Sources */,
+				B4213C0420FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F114057167F217000E033F6 /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98151A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F114058167F217000E033F6 /* BACoverViewControllerIPhone.m in Sources */,
@@ -6296,6 +6320,7 @@
 				8F1D8368192A2E7000A9898D /* BAOptions.m in Sources */,
 				8F1D83EA192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8F1D8369192A2E7000A9898D /* BAOptionsViewController.m in Sources */,
+				B4213C0A20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F1D836A192A2E7000A9898D /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981B1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F1D836B192A2E7000A9898D /* BACoverViewControllerIPhone.m in Sources */,
@@ -6392,6 +6417,7 @@
 				8F4A7EE82029B78400CA6C0F /* BAImpressumTableViewController.m in Sources */,
 				8F4A7EE92029B78400CA6C0F /* BAConfigurationUBWe.m in Sources */,
 				8F4A7EEA2029B78400CA6C0F /* BAImpressumCell.m in Sources */,
+				B4213C1420FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F4A7EEB2029B78400CA6C0F /* BAPDFViewController.m in Sources */,
 				8F4A7EEC2029B78400CA6C0F /* BAConfigurationTUBS.m in Sources */,
 				8F4A7EED2029B78400CA6C0F /* BADocumentItemElementCellNonLocal.m in Sources */,
@@ -6488,6 +6514,7 @@
 				8F8A75A11781BF4700CCF7DB /* BAOptions.m in Sources */,
 				8F1D83E5192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8F8A75A21781BF4700CCF7DB /* BAOptionsViewController.m in Sources */,
+				B4213C0520FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F8A75A31781BF4700CCF7DB /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98161A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A75A41781BF4700CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
@@ -6584,6 +6611,7 @@
 				8F8A76361781C05400CCF7DB /* BAOptions.m in Sources */,
 				8F1D83E6192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8F8A76371781C05400CCF7DB /* BAOptionsViewController.m in Sources */,
+				B4213C0620FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F8A76381781C05400CCF7DB /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98171A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A76391781C05400CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
@@ -6680,6 +6708,7 @@
 				8F8A76CB1781C0D800CCF7DB /* BAOptions.m in Sources */,
 				8F1D83E7192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8F8A76CC1781C0D800CCF7DB /* BAOptionsViewController.m in Sources */,
+				B4213C0720FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F8A76CD1781C0D800CCF7DB /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98181A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A76CE1781C0D800CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
@@ -6776,6 +6805,7 @@
 				8F8EB5CB1A93689000548F24 /* BAImpressumTableViewController.m in Sources */,
 				8F8EB5CC1A93689000548F24 /* BAConfigurationUBWe.m in Sources */,
 				8F8EB5CD1A93689000548F24 /* BAImpressumCell.m in Sources */,
+				B4213C1220FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8F8EB5CE1A93689000548F24 /* BAPDFViewController.m in Sources */,
 				8F8EB5CF1A93689000548F24 /* BAConfigurationTUBS.m in Sources */,
 				8F8EB5D01A93689000548F24 /* BADocumentItemElementCellNonLocal.m in Sources */,
@@ -6872,6 +6902,7 @@
 				8FA8F51319501E6B006CD05A /* BAOptions.m in Sources */,
 				8FA8F51419501E6B006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F51519501E6B006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C0B20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F51619501E6B006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981C1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F51719501E6B006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -6968,6 +6999,7 @@
 				8FA8F5B519502224006CD05A /* BAOptions.m in Sources */,
 				8FA8F5B619502224006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F5B719502224006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C0C20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F5B819502224006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981D1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F5B919502224006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -7064,6 +7096,7 @@
 				8FA8F6571950228D006CD05A /* BAOptions.m in Sources */,
 				8FA8F6581950228D006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F6591950228D006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C0D20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F65A1950228D006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981E1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F65B1950228D006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -7160,6 +7193,7 @@
 				8FA8F6F9195022BC006CD05A /* BAOptions.m in Sources */,
 				8FA8F6FA195022BC006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F6FB195022BC006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C0E20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F6FC195022BC006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981F1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F6FD195022BC006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -7256,6 +7290,7 @@
 				8FA8F79B1950230D006CD05A /* BAOptions.m in Sources */,
 				8FA8F79C1950230D006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F79D1950230D006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C0F20FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F79E1950230D006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98201A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F79F1950230D006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -7352,6 +7387,7 @@
 				8FA8F83D1950233A006CD05A /* BAOptions.m in Sources */,
 				8FA8F83E1950233A006CD05A /* BAConfigurationUBWe.m in Sources */,
 				8FA8F83F1950233A006CD05A /* BAOptionsViewController.m in Sources */,
+				B4213C1020FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FA8F8401950233A006CD05A /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98211A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F8411950233A006CD05A /* BACoverViewControllerIPhone.m in Sources */,
@@ -7448,6 +7484,7 @@
 				8FAD97901A0CFD3600C3A5D1 /* BAOptions.m in Sources */,
 				8FAD97911A0CFD3600C3A5D1 /* BAConfigurationUBWe.m in Sources */,
 				8FAD97921A0CFD3600C3A5D1 /* BAOptionsViewController.m in Sources */,
+				B4213C1120FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FAD97931A0CFD3600C3A5D1 /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98231A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FAD97941A0CFD3600C3A5D1 /* BACoverViewControllerIPhone.m in Sources */,
@@ -7544,6 +7581,7 @@
 				8FD61094190916EA009E2358 /* BAOptions.m in Sources */,
 				8F1D83E8192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8FD61095190916EA009E2358 /* BAOptionsViewController.m in Sources */,
+				B4213C0820FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FD61096190916EA009E2358 /* BAItemDetailTitleCell.m in Sources */,
 				8FAD98191A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FD61097190916EA009E2358 /* BACoverViewControllerIPhone.m in Sources */,
@@ -7640,6 +7678,7 @@
 				8FD61130190916EF009E2358 /* BAOptions.m in Sources */,
 				8F1D83E9192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8FD61131190916EF009E2358 /* BAOptionsViewController.m in Sources */,
+				B4213C0920FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FD61132190916EF009E2358 /* BAItemDetailTitleCell.m in Sources */,
 				8FAD981A1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FD61133190916EF009E2358 /* BACoverViewControllerIPhone.m in Sources */,
@@ -7736,6 +7775,7 @@
 				8FBA87691681FF49005A9962 /* BAImpressumTableViewController.m in Sources */,
 				8F1D83E3192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */,
 				8FBA876F1682054D005A9962 /* BAImpressumCell.m in Sources */,
+				B4213C0320FF7434006ABD32 /* BALanguageTableViewController.m in Sources */,
 				8FD499BB168310DA008FC33F /* BAPDFViewController.m in Sources */,
 				8FAD98141A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FE5D0C316AFDE230024027C /* BADocumentItemElementCellNonLocal.m in Sources */,
