@@ -99,6 +99,9 @@
     }
     [self.locationManager startUpdatingLocation];
     
+    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:self.configuration.currentBibStandardLanguage, nil] forKey:@"AppleLanguages"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     return YES;
 }
 

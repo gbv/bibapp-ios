@@ -74,6 +74,8 @@
     
     if (![self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [self.appDelegate.options setSelectedLanguage:languageKey];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:self.appDelegate.configuration.currentBibStandardLanguage, nil] forKey:@"AppleLanguages"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         NSError *error = nil;
         if (![[appDelegate managedObjectContext] save:&error]) {
