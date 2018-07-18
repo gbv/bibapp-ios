@@ -1,49 +1,32 @@
 //
-//  BAOptionsCatalogueTableViewController.m
+//  BALanguageTableViewController.m
 //  bibapp
 //
-//  Created by Johannes Schultze on 02.07.13.
-//  Copyright (c) 2013 Johannes Schultze. All rights reserved.
+//  Created by Johannes Schultze on 18.07.18.
+//  Copyright © 2018 Johannes Schultze. All rights reserved.
 //
 
-#import "BAOptionsCatalogueTableViewController.h"
+#import "BAOptionsLanguageTableViewController.h"
 #import "BACatalogueTableViewCell.h"
 
-@interface BAOptionsCatalogueTableViewController ()
+@interface BAOptionsLanguageTableViewController ()
 
 @end
 
-@implementation BAOptionsCatalogueTableViewController
+@implementation BAOptionsLanguageTableViewController
 
 @synthesize appDelegate;
 @synthesize selectedCellIndex;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [self setSelectedCellIndex:-1];
+    [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -59,7 +42,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.appDelegate.configuration.currentBibLocalSearchURLs count];
+    return [self.appDelegate.configuration.currentBibLanguages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,8 +51,11 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BACatalogueTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
     
-    [cell.catalogueLabel setText:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]];
-    if ([self.appDelegate.options.selectedCatalogue isEqualToString:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]]) {
+    NSArray *languageKeys = [self.appDelegate.configuration.currentBibLanguages allKeys];
+    id languageKey = [languageKeys objectAtIndex:indexPath.row];
+    
+    [cell.catalogueLabel setText: NSLocalizedString([self.appDelegate.configuration.currentBibLanguages objectForKey:languageKey], nil)];
+    if ([self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         if (self.selectedCellIndex == -1) {
             [self setSelectedCellIndex:indexPath.row];
@@ -83,8 +69,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (![self.appDelegate.options.selectedCatalogue isEqualToString:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]]) {
-        [self.appDelegate.options setSelectedCatalogue:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]];
+    NSArray *languageKeys = [self.appDelegate.configuration.currentBibLanguages allKeys];
+    id languageKey = [languageKeys objectAtIndex:indexPath.row];
+    
+    if (![self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
+        [self.appDelegate.options setSelectedLanguage:languageKey];
         
         NSError *error = nil;
         if (![[appDelegate managedObjectContext] save:&error]) {
@@ -98,7 +87,8 @@
         [selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];
         
         [self setSelectedCellIndex:indexPath.row];
-        //[[NSNotificationCenter defaultCenter] postNotificationName:@"changeCatalogue" object:nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"changeLanguage" object:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

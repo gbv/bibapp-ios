@@ -43,6 +43,7 @@
     }
     
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
+    [self.languageLabel setText:NSLocalizedString(self.appDelegate.options.selectedLanguage, nil)];
     [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]];
 }
 
@@ -50,7 +51,8 @@
 {
     [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
-   
+    [self.languageLabel setText:NSLocalizedString(self.appDelegate.options.selectedLanguage, nil)];
+    
     if (self.appDelegate.currentAccount != nil) {
        [self.userLabel setText:self.appDelegate.currentAccount];
        [self.logoutButton setEnabled:YES];

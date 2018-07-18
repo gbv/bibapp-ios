@@ -544,6 +544,7 @@
                     <connections>
                         <outlet property="catalogueLabel" destination="R9M-vD-YlS" id="Gx4-cP-HLZ"/>
                         <outlet property="countPixelSwitch" destination="TRi-tn-Ui3" id="64U-bj-lnQ"/>
+                        <outlet property="languageLabel" destination="drw-bb-1Up" id="O1H-mf-0dt"/>
                         <outlet property="logoutButton" destination="yvP-Ih-f9F" id="1vX-hh-IYm"/>
                         <outlet property="saveLocalSwitch" destination="VRs-uM-GCJ" id="3we-ZK-pdx"/>
                         <outlet property="userLabel" destination="y1k-Au-zP5" id="jhk-MJ-XSJ"/>
@@ -907,7 +908,7 @@
         <!--Sprache-->
         <scene sceneID="iy2-kO-T2E">
             <objects>
-                <tableViewController id="Efr-4z-EaQ" customClass="BALanguageTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Efr-4z-EaQ" customClass="BAOptionsLanguageTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ybf-gd-WKi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

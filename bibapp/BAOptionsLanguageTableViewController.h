@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BAAppDelegate.h"
 
-@interface BALanguageTableViewController : UITableViewController
+@interface BAOptionsLanguageTableViewController : UITableViewController
+
+@property(strong, nonatomic) BAAppDelegate *appDelegate;
+@property long selectedCellIndex;
 
 @end

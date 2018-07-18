@@ -32,6 +32,8 @@
 @property (strong, nonatomic) NSString *currentBibRequestTitle;
 @property (strong, nonatomic) NSString *currentBibDaiaInfoFromOpacDisplay;
 @property BOOL useDAIAParser;
+@property (strong, nonatomic) NSMutableDictionary *currentBibLanguages;
+@property (strong, nonatomic) NSString *currentBibStandardLanguage;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

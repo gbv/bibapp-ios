@@ -47,6 +47,7 @@
 @synthesize currentBibFeedURLIsWebsite;
 @synthesize currentBibRequestTitle;
 @synthesize currentBibDaiaInfoFromOpacDisplay;
+@synthesize currentBibStandardLanguage;
 
 - (id)init {
     self = [super init];
@@ -74,6 +75,9 @@
         self.currentBibDaiaInfoFromOpacDisplay = NSLocalizedString(@"Verfügbarkeit im OPAC prüfen", nil);
        
         self.useDAIAParser = YES;
+        
+        self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", @"Englisch", @"en", nil];
+        self.currentBibStandardLanguage = @"de";
     }
     return self;
 }

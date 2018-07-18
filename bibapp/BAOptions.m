@@ -13,5 +13,6 @@
 @dynamic allowCountPixel;
 @dynamic saveLocalData;
 @dynamic selectedCatalogue;
+@dynamic selectedLanguage;
 
 @end
