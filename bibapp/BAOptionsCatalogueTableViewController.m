@@ -98,7 +98,7 @@
         [selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];
         
         [self setSelectedCellIndex:indexPath.row];
-        //[[NSNotificationCenter defaultCenter] postNotificationName:@"changeCatalogue" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"changeCatalogue" object:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
