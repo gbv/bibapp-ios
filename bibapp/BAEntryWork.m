@@ -7,6 +7,7 @@
 //
 
 #import "BAEntryWork.h"
+#import "BALocalizeHelper.h"
 
 @implementation BAEntryWork
 
@@ -162,17 +163,17 @@
     */
    NSString *result;
    if ([self.status integerValue] == 0) {
-      result = NSLocalizedString(@"verfügbar", nil);
+      result = BALocalizedString(@"verfügbar");
    } else if ([self.status integerValue] == 1) {
-      result = NSLocalizedString(@"vorgemerkt", nil);
+      result = BALocalizedString(@"vorgemerkt");
    } else if ([self.status integerValue] == 2) {
-      result = NSLocalizedString(@"bestellt", nil);
+      result = BALocalizedString(@"bestellt");
    } else if ([self.status integerValue] == 3) {
-      result = NSLocalizedString(@"ausgeliehen", nil);
+      result = BALocalizedString(@"ausgeliehen");
    } else if ([self.status integerValue] == 4) {
-      result = NSLocalizedString(@"abholbereit", nil);
+      result = BALocalizedString(@"abholbereit");
    } else if ([self.status integerValue] == 5) {
-      result = NSLocalizedString(@"abgelehnt", nil);
+      result = BALocalizedString(@"abgelehnt");
    }
    return result;
 }

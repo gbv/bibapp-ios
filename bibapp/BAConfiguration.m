@@ -25,6 +25,7 @@
 #import "BAConfigurationAEZB.h"
 #import "BAConfigurationCobi.h"
 #import "BAConfigurationIAI.h"
+#import "BALocalizeHelper.h"
 
 @implementation BAConfiguration
 
@@ -61,18 +62,18 @@
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
         self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
        
-        self.searchTitle = NSLocalizedString(@"Suche", nil);
+        self.searchTitle = BALocalizedString(@"Suche");
         self.hasLocalDetailURL = NO;
         
-        self.currentBibStandardCatalogue = NSLocalizedString(@"Standard-Katalog", nil);
+        self.currentBibStandardCatalogue = BALocalizedString(@"Standard-Katalog");
         
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
         self.currentBibUsePAIAWrapper = NO;
        
-        self.currentBibRequestTitle = NSLocalizedString(@"Vormerken", nil);
+        self.currentBibRequestTitle = BALocalizedString(@"Vormerken");
        
-        self.currentBibDaiaInfoFromOpacDisplay = NSLocalizedString(@"Verfügbarkeit im OPAC prüfen", nil);
+        self.currentBibDaiaInfoFromOpacDisplay = BALocalizedString(@"Verfügbarkeit im OPAC prüfen");
        
         self.useDAIAParser = YES;
         

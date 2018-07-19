@@ -9,6 +9,7 @@
 #import "BAOptionsTableViewControllerPad.h"
 #import "BAConnector.h"
 #import "BAOptionsNavigationController.h"
+#import "BALocalizeHelper.h"
 
 @interface BAOptionsTableViewControllerPad ()
 
@@ -63,7 +64,7 @@
       [self.userLabel setText:self.appDelegate.currentAccount];
       [self.logoutButton setEnabled:YES];
    } else {
-      [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
+      [self.userLabel setText:BALocalizedString(@"Nicht angemeldet")];
       [self.logoutButton setEnabled:NO];
    }
 }
@@ -202,9 +203,9 @@
       if ([command isEqualToString:@"logout"]) {
          if ([json objectForKey:@"error"] || json == nil) {
             [self.appDelegate setCurrentPassword:nil];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten", nil)
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten")
                                                             message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
             [alert setTag:1];
             [alert show];
          } else {
@@ -213,7 +214,7 @@
             [self.appDelegate setCurrentToken:nil];
             [self.appDelegate setCurrentScope:nil];
             [self.appDelegate setIsLoggedIn:NO];
-            [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
+            [self.userLabel setText:BALocalizedString(@"Nicht angemeldet")];
             [self.logoutButton setEnabled:NO];
             if (((BAOptionsNavigationController *)self.navigationController).accountViewController != nil) {
                [((BAOptionsNavigationController *)self.navigationController).accountViewController reset];

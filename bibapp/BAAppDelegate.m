@@ -8,6 +8,7 @@
 
 #import "BAAppDelegate.h"
 #import "BAOptions.h"
+#import "BALocalizeHelper.h"
 
 @implementation BAAppDelegate
 
@@ -99,8 +100,7 @@
     }
     [self.locationManager startUpdatingLocation];
     
-    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:self.configuration.currentBibStandardLanguage, nil] forKey:@"AppleLanguages"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    BALocalizationSetLanguage(self.configuration.currentBibStandardLanguage);
     
     return YES;
 }

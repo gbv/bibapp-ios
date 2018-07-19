@@ -13,6 +13,7 @@
 #import "BAEntry.h"
 #import "BADetailScrollViewController.h"
 #import "BAConnector.h"
+#import "BALocalizeHelper.h"
 
 @interface BAListTableViewController ()
 
@@ -205,7 +206,7 @@
       MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
       [composeViewController setMailComposeDelegate:self];
       [composeViewController setToRecipients:@[@""]];
-      [composeViewController setSubject:NSLocalizedString(@"BibApp Merkliste", nil)];
+      [composeViewController setSubject:BALocalizedString(@"BibApp Merkliste")];
       [composeViewController setMessageBody:messageBody isHTML:NO];
       [self presentViewController:composeViewController animated:YES completion:NULL];
    }

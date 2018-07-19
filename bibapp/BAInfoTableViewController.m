@@ -11,6 +11,7 @@
 #import "GDataXMLNode.h"
 #import "BAConnector.h"
 #import "BAInfoItem.h"
+#import "BALocalizeHelper.h"
 #include <UIKit/UIKit.h>
 
 @interface BAInfoTableViewController ()
@@ -94,11 +95,11 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         if (indexPath.section == 0) {
-            [cell.textLabel setText:NSLocalizedString(@"Kontakt", nil)];
+            [cell.textLabel setText:BALocalizedString(@"Kontakt")];
         } else if (indexPath.section == 1) {
-            [cell.textLabel setText:NSLocalizedString(@"Standorte", nil)];
+            [cell.textLabel setText:BALocalizedString(@"Standorte")];
         } else if (indexPath.section == 2) {
-            [cell.textLabel setText:NSLocalizedString(@"Impressum", nil)];
+            [cell.textLabel setText:BALocalizedString(@"Impressum")];
         }
         return cell;
     } else {
@@ -213,9 +214,9 @@
         return @"";
     } else {
         if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
-            return NSLocalizedString(@"News", nil);
+            return BALocalizedString(@"News");
         } else {
-            return NSLocalizedString(@"Website", nil);
+            return BALocalizedString(@"Website");
         }
     }
 }

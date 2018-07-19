@@ -9,6 +9,7 @@
 #import "BAOptionsViewController.h"
 #import "BAAppDelegate.h"
 #import "BAConnector.h"
+#import "BALocalizeHelper.h"
 
 @interface BAOptionsViewController ()
 
@@ -43,7 +44,7 @@
     }
     
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
-    [self.languageLabel setText:NSLocalizedString(self.appDelegate.options.selectedLanguage, nil)];
+    [self.languageLabel setText:BALocalizedString(self.appDelegate.options.selectedLanguage)];
     [self.versionLabel setText:[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]];
 }
 
@@ -51,13 +52,13 @@
 {
     [super viewDidAppear:animated];
     [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
-    [self.languageLabel setText:NSLocalizedString(self.appDelegate.options.selectedLanguage, nil)];
+    [self.languageLabel setText:BALocalizedString(self.appDelegate.options.selectedLanguage)];
     
     if (self.appDelegate.currentAccount != nil) {
        [self.userLabel setText:self.appDelegate.currentAccount];
        [self.logoutButton setEnabled:YES];
     } else {
-       [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
+       [self.userLabel setText:BALocalizedString(@"Nicht angemeldet")];
        [self.logoutButton setEnabled:NO];
     }
 }
@@ -111,9 +112,9 @@
       if ([command isEqualToString:@"logout"]) {
          if ([json objectForKey:@"error"] || json == nil) {
             [self.appDelegate setCurrentPassword:nil];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten", nil)
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten")
                                                             message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
             [alert setTag:1];
             [alert show];
          } else {
@@ -122,7 +123,7 @@
             [self.appDelegate setCurrentToken:nil];
             [self.appDelegate setCurrentScope:nil];
             [self.appDelegate setIsLoggedIn:NO];
-            [self.userLabel setText:NSLocalizedString(@"Nicht angemeldet", nil)];
+            [self.userLabel setText:BALocalizedString(@"Nicht angemeldet")];
             [self.logoutButton setEnabled:NO];
          }
       }

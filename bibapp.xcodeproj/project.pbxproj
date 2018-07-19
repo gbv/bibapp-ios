@@ -465,6 +465,24 @@
 		8F3A717E163D859B00FF0A57 /* BADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A717D163D859B00FF0A57 /* BADetailViewController.m */; };
 		8F3A7181163D93A300FF0A57 /* BAAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7180163D93A300FF0A57 /* BAAccountViewController.m */; };
 		8F3A7184163DA13100FF0A57 /* BAListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7183163DA13100FF0A57 /* BAListTableViewController.m */; };
+		8F3B31E8210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31E9210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31EA210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31EB210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31EC210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31ED210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31EE210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31EF210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F0210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F1210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F2210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F3210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F4210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F5210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F6210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F7210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F8210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
+		8F3B31F9210062190019B19B /* BALocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B31E7210062190019B19B /* BALocalizeHelper.m */; };
 		8F40D3CC163A7FDD001386F9 /* bibapp~iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */; };
 		8F44829F1B5D0B5B00EE6DA9 /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */; };
 		8F4482A01B5D0B5B00EE6DA9 /* BAEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44829E1B5D0B5B00EE6DA9 /* BAEntry.m */; };
@@ -3147,6 +3165,8 @@
 		8F3A7180163D93A300FF0A57 /* BAAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccountViewController.m; sourceTree = "<group>"; };
 		8F3A7182163DA13100FF0A57 /* BAListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAListTableViewController.h; sourceTree = "<group>"; };
 		8F3A7183163DA13100FF0A57 /* BAListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAListTableViewController.m; sourceTree = "<group>"; };
+		8F3B31E6210062190019B19B /* BALocalizeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BALocalizeHelper.h; sourceTree = "<group>"; };
+		8F3B31E7210062190019B19B /* BALocalizeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BALocalizeHelper.m; sourceTree = "<group>"; };
 		8F40D3CB163A7FDD001386F9 /* bibapp~iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "bibapp~iphone.storyboard"; sourceTree = "<group>"; };
 		8F4482781B5D080F00EE6DA9 /* bibapp 2.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "bibapp 2.1.xcdatamodel"; sourceTree = "<group>"; };
 		8F44829D1B5D0B5B00EE6DA9 /* BAEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAEntry.h; sourceTree = "<group>"; };
@@ -4215,6 +4235,8 @@
 				8FBEB652184C9CC700B6ED41 /* hawk_app_icon_72x72.png */,
 				8FBEB650184C9CBB00B6ED41 /* hawk_app_icon_114x114.png */,
 				8FBEB64E184C9CA400B6ED41 /* hawk_app_icon_57x57.png */,
+				8F3B31E6210062190019B19B /* BALocalizeHelper.h */,
+				8F3B31E7210062190019B19B /* BALocalizeHelper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -6107,6 +6129,7 @@
 				8F07B1401BFB72DB0012C325 /* BAInfoTableViewController.m in Sources */,
 				8F07B1411BFB72DB0012C325 /* BAInfoCell.m in Sources */,
 				8F07B1421BFB72DB0012C325 /* BAInfoItem.m in Sources */,
+				8F3B31F8210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F07B1431BFB72DB0012C325 /* BADocumentItem.m in Sources */,
 				8F07B1441BFB72DB0012C325 /* BADocumentItemElement.m in Sources */,
 				8F07B1451BFB72DB0012C325 /* BADocument.m in Sources */,
@@ -6204,6 +6227,7 @@
 				8F114042167F217000E033F6 /* BAListTableViewController.m in Sources */,
 				8F114043167F217000E033F6 /* BAItemCell.m in Sources */,
 				8F114044167F217000E033F6 /* BAItemDetail.m in Sources */,
+				8F3B31E9210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F114045167F217000E033F6 /* BAItemDetailCell.m in Sources */,
 				8F114046167F217000E033F6 /* BALocationViewControllerIPhone.m in Sources */,
 				8F114047167F217000E033F6 /* BAInfoTableViewController.m in Sources */,
@@ -6301,6 +6325,7 @@
 				8F1D8355192A2E7000A9898D /* BAListTableViewController.m in Sources */,
 				8F1D8356192A2E7000A9898D /* BAItemCell.m in Sources */,
 				8F1D8357192A2E7000A9898D /* BAItemDetail.m in Sources */,
+				8F3B31EF210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F1D8358192A2E7000A9898D /* BAItemDetailCell.m in Sources */,
 				8F1D8359192A2E7000A9898D /* BALocationViewControllerIPhone.m in Sources */,
 				8F1D835A192A2E7000A9898D /* BAInfoTableViewController.m in Sources */,
@@ -6398,6 +6423,7 @@
 				8F4A7ED52029B78400CA6C0F /* BAInfoTableViewController.m in Sources */,
 				8F4A7ED62029B78400CA6C0F /* BAInfoCell.m in Sources */,
 				8F4A7ED72029B78400CA6C0F /* BAInfoItem.m in Sources */,
+				8F3B31F9210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F4A7ED82029B78400CA6C0F /* BADocumentItem.m in Sources */,
 				8F4A7ED92029B78400CA6C0F /* BADocumentItemElement.m in Sources */,
 				8F4A7EDA2029B78400CA6C0F /* BADocument.m in Sources */,
@@ -6495,6 +6521,7 @@
 				8F8A758E1781BF4700CCF7DB /* BAListTableViewController.m in Sources */,
 				8F8A758F1781BF4700CCF7DB /* BAItemCell.m in Sources */,
 				8F8A75901781BF4700CCF7DB /* BAItemDetail.m in Sources */,
+				8F3B31EA210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F8A75911781BF4700CCF7DB /* BAItemDetailCell.m in Sources */,
 				8F8A75921781BF4700CCF7DB /* BALocationViewControllerIPhone.m in Sources */,
 				8F8A75931781BF4700CCF7DB /* BAInfoTableViewController.m in Sources */,
@@ -6592,6 +6619,7 @@
 				8F8A76231781C05400CCF7DB /* BAListTableViewController.m in Sources */,
 				8F8A76241781C05400CCF7DB /* BAItemCell.m in Sources */,
 				8F8A76251781C05400CCF7DB /* BAItemDetail.m in Sources */,
+				8F3B31EB210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F8A76261781C05400CCF7DB /* BAItemDetailCell.m in Sources */,
 				8F8A76271781C05400CCF7DB /* BALocationViewControllerIPhone.m in Sources */,
 				8F8A76281781C05400CCF7DB /* BAInfoTableViewController.m in Sources */,
@@ -6689,6 +6717,7 @@
 				8F8A76B81781C0D800CCF7DB /* BAListTableViewController.m in Sources */,
 				8F8A76B91781C0D800CCF7DB /* BAItemCell.m in Sources */,
 				8F8A76BA1781C0D800CCF7DB /* BAItemDetail.m in Sources */,
+				8F3B31EC210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F8A76BB1781C0D800CCF7DB /* BAItemDetailCell.m in Sources */,
 				8F8A76BC1781C0D800CCF7DB /* BALocationViewControllerIPhone.m in Sources */,
 				8F8A76BD1781C0D800CCF7DB /* BAInfoTableViewController.m in Sources */,
@@ -6786,6 +6815,7 @@
 				8F8EB5B71A93689000548F24 /* BAInfoTableViewController.m in Sources */,
 				8F8EB5B81A93689000548F24 /* BAInfoCell.m in Sources */,
 				8F8EB5B91A93689000548F24 /* BAInfoItem.m in Sources */,
+				8F3B31F7210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F8EB5BA1A93689000548F24 /* BADocumentItem.m in Sources */,
 				8F8EB5BB1A93689000548F24 /* BADocumentItemElement.m in Sources */,
 				8F8EB5BC1A93689000548F24 /* BADocument.m in Sources */,
@@ -6883,6 +6913,7 @@
 				8FA8F50019501E6B006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F50119501E6B006CD05A /* BAItemCell.m in Sources */,
 				8FA8F50219501E6B006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F0210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F50319501E6B006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F50419501E6B006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F50519501E6B006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -6980,6 +7011,7 @@
 				8FA8F5A219502224006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F5A319502224006CD05A /* BAItemCell.m in Sources */,
 				8FA8F5A419502224006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F1210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F5A519502224006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F5A619502224006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F5A719502224006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -7077,6 +7109,7 @@
 				8FA8F6441950228D006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F6451950228D006CD05A /* BAItemCell.m in Sources */,
 				8FA8F6461950228D006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F2210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F6471950228D006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F6481950228D006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F6491950228D006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -7174,6 +7207,7 @@
 				8FA8F6E6195022BC006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F6E7195022BC006CD05A /* BAItemCell.m in Sources */,
 				8FA8F6E8195022BC006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F3210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F6E9195022BC006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F6EA195022BC006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F6EB195022BC006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -7271,6 +7305,7 @@
 				8FA8F7881950230D006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F7891950230D006CD05A /* BAItemCell.m in Sources */,
 				8FA8F78A1950230D006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F4210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F78B1950230D006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F78C1950230D006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F78D1950230D006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -7368,6 +7403,7 @@
 				8FA8F82A1950233A006CD05A /* BAListTableViewController.m in Sources */,
 				8FA8F82B1950233A006CD05A /* BAItemCell.m in Sources */,
 				8FA8F82C1950233A006CD05A /* BAItemDetail.m in Sources */,
+				8F3B31F5210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FA8F82D1950233A006CD05A /* BAItemDetailCell.m in Sources */,
 				8FA8F82E1950233A006CD05A /* BALocationViewControllerIPhone.m in Sources */,
 				8FA8F82F1950233A006CD05A /* BAInfoTableViewController.m in Sources */,
@@ -7465,6 +7501,7 @@
 				8FAD977C1A0CFD3600C3A5D1 /* BAListTableViewController.m in Sources */,
 				8FAD977D1A0CFD3600C3A5D1 /* BAItemCell.m in Sources */,
 				8FAD977E1A0CFD3600C3A5D1 /* BAItemDetail.m in Sources */,
+				8F3B31F6210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FAD977F1A0CFD3600C3A5D1 /* BAItemDetailCell.m in Sources */,
 				8FAD97801A0CFD3600C3A5D1 /* BALocationViewControllerIPhone.m in Sources */,
 				8FAD97811A0CFD3600C3A5D1 /* BAInfoTableViewController.m in Sources */,
@@ -7562,6 +7599,7 @@
 				8FD61081190916EA009E2358 /* BAListTableViewController.m in Sources */,
 				8FD61082190916EA009E2358 /* BAItemCell.m in Sources */,
 				8FD61083190916EA009E2358 /* BAItemDetail.m in Sources */,
+				8F3B31ED210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FD61084190916EA009E2358 /* BAItemDetailCell.m in Sources */,
 				8FD61085190916EA009E2358 /* BALocationViewControllerIPhone.m in Sources */,
 				8FD61086190916EA009E2358 /* BAInfoTableViewController.m in Sources */,
@@ -7659,6 +7697,7 @@
 				8FD6111D190916EF009E2358 /* BAListTableViewController.m in Sources */,
 				8FD6111E190916EF009E2358 /* BAItemCell.m in Sources */,
 				8FD6111F190916EF009E2358 /* BAItemDetail.m in Sources */,
+				8F3B31EE210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8FD61120190916EF009E2358 /* BAItemDetailCell.m in Sources */,
 				8FD61121190916EF009E2358 /* BALocationViewControllerIPhone.m in Sources */,
 				8FD61122190916EF009E2358 /* BAInfoTableViewController.m in Sources */,
@@ -7756,6 +7795,7 @@
 				8F24E6F31666075F0017AC81 /* BAInfoTableViewController.m in Sources */,
 				8F24E6F9166611DD0017AC81 /* BAInfoCell.m in Sources */,
 				8F24E6FC1666158A0017AC81 /* BAInfoItem.m in Sources */,
+				8F3B31E8210062190019B19B /* BALocalizeHelper.m in Sources */,
 				8F24E6FF166661590017AC81 /* BADocumentItem.m in Sources */,
 				8FFFCFC41667593800326BE9 /* BADocumentItemElement.m in Sources */,
 				8FFFCFC81667673600326BE9 /* BADocument.m in Sources */,

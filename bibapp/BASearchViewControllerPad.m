@@ -21,6 +21,7 @@
 #import "BATocViewControllerPad.h"
 #import "BANoSearchResultsCell.h"
 #import "DAIAParser.h"
+#import "BALocalizeHelper.h"
 
 #import "GDataXMLNode.h"
 
@@ -250,7 +251,7 @@
               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
               cell = [nib objectAtIndex:0];
            }
-           [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearchLocal]];
+           [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearchLocal]];
            [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
            return cell;
         }
@@ -262,7 +263,7 @@
               NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
               cell = [nib objectAtIndex:0];
            }
-           [cell.textView setText:[[NSString alloc] initWithFormat:NSLocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", nil), self.lastSearch]];
+           [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearch]];
            [cell.searchGBVButton setHidden:YES];
            return cell;
         }
@@ -356,7 +357,7 @@
             [cell.status setTextColor:[[UIColor alloc] initWithRed:0.474510F green:0.474510F blue:0.474510F alpha:1.0F]];
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
-                [status appendString:NSLocalizedString(@"ausleihbar", nil)];
+                [status appendString:BALocalizedString(@"ausleihbar")];
                 
                 if (presentation.limitation != nil) {
                     [status appendString:[[NSString alloc] initWithFormat:@"; %@", presentation.limitation]];
@@ -364,9 +365,9 @@
                 
                 if (presentation.available) {
                     if (loan.href == nil) {
-                        [statusInfo appendString:NSLocalizedString(@"Bitte am Standort entnehmen", nil)];
+                        [statusInfo appendString:BALocalizedString(@"Bitte am Standort entnehmen")];
                     } else {
-                        [statusInfo appendString:NSLocalizedString(@"Bitte bestellen", nil)];
+                        [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
                     }
                 }
             } else {
@@ -374,17 +375,17 @@
                     NSRange match = [loan.href rangeOfString: @"loan/RES"];
                     if (match.length > 0) {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.5 blue:0.0 alpha:1.0]];
-                        [status appendString:NSLocalizedString(@"ausleihbar", nil)];
+                        [status appendString:BALocalizedString(@"ausleihbar")];
                     } else {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
-                        [status appendString:NSLocalizedString(@"nicht ausleihbar", nil)];
+                        [status appendString:BALocalizedString(@"nicht ausleihbar")];
                     }
                 } else {
                     if (self.currentEntryLocal.onlineLocation == nil) {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
-                        [status appendString:NSLocalizedString(@"nicht ausleihbar", nil)];
+                        [status appendString:BALocalizedString(@"nicht ausleihbar")];
                     } else {
-                        [status appendString:NSLocalizedString(@"Online-Ressource im Browser öffnen", nil)];
+                        [status appendString:BALocalizedString(@"Online-Ressource im Browser öffnen")];
                     }
                 }
                 if (presentation.limitation != nil) {
@@ -398,12 +399,12 @@
                         NSRange match = [loan.href rangeOfString: @"loan/RES"];
                         if (match.length > 0) {
                             if ([loan.expected isEqualToString:@""] || [loan.expected isEqualToString:@"unknown"]) {
-                                [statusInfo appendString:NSLocalizedString(@"ausgeliehen, Vormerken möglich", nil)];
+                                [statusInfo appendString:BALocalizedString(@"ausgeliehen, Vormerken möglich")];
                             } else {
                                 NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
                                 NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
                                 NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                                [statusInfo appendString:[[NSString alloc] initWithFormat:NSLocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich", nil), day, month, year]];
+                                [statusInfo appendString:[[NSString alloc] initWithFormat:BALocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich"), day, month, year]];
                             }
                         }
                     }
@@ -536,12 +537,12 @@
         }*/
         if ([command isEqualToString:@"searchLocal"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
             }
             self.searchedLocal = YES;
         } else if ([command isEqualToString:@"searchCentral"]) {
             if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
+                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
             }
             self.searched = YES;
         }
@@ -1019,7 +1020,7 @@
             BOOL foundItem = NO;
             
             if (item.uri == nil) {
-                [item setUri:NSLocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken", nil)];
+                [item setUri:BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken")];
             }
             
             for (BADocumentItem *tempWorkingItem in tempItems) {
@@ -1036,9 +1037,9 @@
                 if (item.uri != nil) {
                     tempUri = item.uri;
                 } else {
-                    tempUri = NSLocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken", nil);
+                    tempUri = BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken");
                 }
-                if ([tempUri isEqualToString:NSLocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken", nil)]) {
+                if ([tempUri isEqualToString:BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken")]) {
                    [workingItem setDepartment:tempUri];
                 } else {
                    [workingItem setDepartment:@"..."];
@@ -1254,13 +1255,13 @@
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
           if ([json count] > 0) {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil)
-                                                            delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich")
+                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           } else {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich", nil)
-                                                            delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich")
+                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           }
        } else {
@@ -1268,16 +1269,16 @@
           if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
              NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
              if ([doc objectForKey:@"error"] == nil) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Bestellung / Vormerkung\nerfolgreich", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich") delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
              } else {
-                NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [doc objectForKey:@"error"]];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [doc objectForKey:@"error"]];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
              }
           } else {
-             NSString *errorString = [[NSString alloc] initWithFormat:NSLocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", nil), [json objectForKey:@"error_description"]];
-             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+             NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [json objectForKey:@"error_description"]];
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           }
        }
@@ -1297,7 +1298,7 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Lokale Suche (%ld Treffer)", nil), (long)self.searchCountLocal]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         } else {
             //[self.navigationBarSearch.topItem setTitle:@"Lokale Suche"];
             [self.navigationBarSearch.topItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
@@ -1308,9 +1309,9 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"GVK Suche (%ld Treffer)", nil), (long)self.searchCount]];
+            [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
         } else {
-            [self.navigationBarSearch.topItem setTitle:NSLocalizedString(@"GVK Suche", nil)];
+            [self.navigationBarSearch.topItem setTitle:BALocalizedString(@"GVK Suche")];
         }
         if (self.booksGVK != nil) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
@@ -1364,9 +1365,9 @@
     [self.defaultImageView setHidden:NO];
     
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-        [self.defaultTextView setText:NSLocalizedString(@"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein.", nil)];
+        [self.defaultTextView setText:BALocalizedString(@"Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein.")];
     } else {
-        [self.defaultTextView setText:NSLocalizedString(@"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein.", nil)];
+        [self.defaultTextView setText:BALocalizedString(@"Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein.")];
     }
 }
 
@@ -1410,10 +1411,10 @@
             }
         }
         if (!foundPpn) {
-            [self.listButton setTitle:NSLocalizedString(@"Zur Merkliste hinzufügen", nil) forState:UIControlStateNormal];
+            [self.listButton setTitle:BALocalizedString(@"Zur Merkliste hinzufügen") forState:UIControlStateNormal];
             [self.listButton setEnabled:YES];
         } else {
-            [self.listButton setTitle:NSLocalizedString(@"Bereits auf der Merkliste", nil) forState:UIControlStateNormal];
+            [self.listButton setTitle:BALocalizedString(@"Bereits auf der Merkliste") forState:UIControlStateNormal];
             [self.listButton setEnabled:NO];
         }
         
@@ -1636,7 +1637,7 @@
         if (loan.available) {
             if (presentation.available) {
                 if (loan.href != nil) {
-                    [orderString appendString:NSLocalizedString(@"Bestellen", nil)];
+                    [orderString appendString:BALocalizedString(@"Bestellen")];
                 }
             }
         } else {
@@ -1651,22 +1652,22 @@
             if (tempDocumentItem.location != nil) {
                 action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
-                                            cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
+                                            cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                        destructiveButtonTitle:nil
-                                            otherButtonTitles:orderString, NSLocalizedString(@"Standortinfo", nil), NSLocalizedString(@"Abbrechen", nil), nil];
+                                            otherButtonTitles:orderString, BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
             } else {
                 action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
-                                            cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
+                                            cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                        destructiveButtonTitle:nil
-                                            otherButtonTitles:orderString, NSLocalizedString(@"Abbrechen", nil), nil];
+                                            otherButtonTitles:orderString, BALocalizedString(@"Abbrechen"), nil];
             }
         } else {
             action = [[UIActionSheet alloc] initWithTitle:nil
                                                  delegate:self
-                                        cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
+                                        cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                    destructiveButtonTitle:nil
-                                        otherButtonTitles:NSLocalizedString(@"Standortinfo", nil), NSLocalizedString(@"Abbrechen", nil), nil];
+                                        otherButtonTitles:BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
         }
         [action setTag:clicked.tag];
         if (![orderString isEqualToString:@""] || (tempDocumentItem.location != nil)) {
@@ -1682,9 +1683,9 @@
     } else {
         UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                             delegate:self
-                                                   cancelButtonTitle:NSLocalizedString(@"Abbrechen", nil)
+                                                   cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                               destructiveButtonTitle:nil
-                                                   otherButtonTitles:NSLocalizedString(@"Im Browser öffnen", nil), NSLocalizedString(@"Abbrechen", nil), nil];
+                                                   otherButtonTitles:BALocalizedString(@"Im Browser öffnen"), BALocalizedString(@"Abbrechen"), nil];
         [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
@@ -1707,7 +1708,7 @@
 
     NSInteger itemIndex = actionSheet.tag;
     if (buttonIndex == 0) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:NSLocalizedString(@"Bestellen", nil)] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
+        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Bestellen")] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
             if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                 [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
@@ -1715,21 +1716,21 @@
                 [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:NSLocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto", nil)
-                                                               delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                                message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
             }
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:NSLocalizedString(@"Standortinfo", nil)]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Standortinfo")]) {
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:NSLocalizedString(@"Im Browser öffnen", nil)]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
             if (![[UIApplication sharedApplication] openURL:url]) {
                 NSLog(@"%@%@",@"Failed to open url:",[url description]);
             }
         }
     } else if (buttonIndex == 1) {
-        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:NSLocalizedString(@"Standortinfo", nil)]) {
+        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         }
@@ -1843,17 +1844,17 @@
             // Handle the error.
         }
         
-        [self.listButton setTitle:NSLocalizedString(@"Bereits auf der Merkliste", nil) forState:UIControlStateNormal];
+        [self.listButton setTitle:BALocalizedString(@"Bereits auf der Merkliste") forState:UIControlStateNormal];
         [self.listButton setEnabled:NO];
         
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:NSLocalizedString(@"Der Eintrag wurde Ihrer Merkliste hinzugefügt", nil)
-                                                       delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                        message:BALocalizedString(@"Der Eintrag wurde Ihrer Merkliste hinzugefügt")
+                                                       delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
         [alert show];
     } else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:NSLocalizedString(@"Der Eintrag befindet sich bereits auf Ihrer Merkliste", nil)
-                                                       delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                                                        message:BALocalizedString(@"Der Eintrag befindet sich bereits auf Ihrer Merkliste")
+                                                       delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
         [alert show];
     }
 }

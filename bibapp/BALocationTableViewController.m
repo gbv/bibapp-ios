@@ -9,6 +9,7 @@
 #import "BALocationTableViewController.h"
 #import "BAConnector.h"
 #import "BALocationViewControllerIPhone.h"
+#import "BALocalizeHelper.h"
 
 @interface BALocationTableViewController ()
 
@@ -125,7 +126,7 @@
             [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
         }
     } else {
-        [cell.textLabel setText:NSLocalizedString(@"Keine Standortinformationen vorhanden", nil)];
+        [cell.textLabel setText:BALocalizedString(@"Keine Standortinformationen vorhanden")];
     }
         
     return cell;

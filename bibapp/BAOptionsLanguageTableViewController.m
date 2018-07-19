@@ -8,6 +8,7 @@
 
 #import "BAOptionsLanguageTableViewController.h"
 #import "BACatalogueTableViewCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BAOptionsLanguageTableViewController ()
 
@@ -54,7 +55,7 @@
     NSArray *languageKeys = [self.appDelegate.configuration.currentBibLanguages allKeys];
     id languageKey = [languageKeys objectAtIndex:indexPath.row];
     
-    [cell.catalogueLabel setText: NSLocalizedString([self.appDelegate.configuration.currentBibLanguages objectForKey:languageKey], nil)];
+    [cell.catalogueLabel setText: BALocalizedString([self.appDelegate.configuration.currentBibLanguages objectForKey:languageKey])];
     if ([self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         if (self.selectedCellIndex == -1) {
@@ -74,8 +75,8 @@
     
     if (![self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [self.appDelegate.options setSelectedLanguage:languageKey];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:self.appDelegate.configuration.currentBibStandardLanguage, nil] forKey:@"AppleLanguages"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        BALocalizationSetLanguage(self.appDelegate.configuration.currentBibStandardLanguage);
         
         NSError *error = nil;
         if (![[appDelegate managedObjectContext] save:&error]) {

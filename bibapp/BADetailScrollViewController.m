@@ -11,6 +11,7 @@
 #import "BACoverViewControllerIPhone.h"
 #import "BATocListTableViewController.h"
 #import "BALocationViewControllerIPhone.h"
+#import "BALocalizeHelper.h"
 
 @interface BADetailScrollViewController ()
 
@@ -69,7 +70,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Detail (%ld / %ld)", nil), self.scrollPosition+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), self.scrollPosition+1, self.maximumPosition]];
     [self loadScrollViewWithPage:self.startPosition];
     [self loadScrollViewWithPage:self.startPosition-1];
     [self loadScrollViewWithPage:self.startPosition+1];
@@ -94,7 +95,7 @@
 {
     CGFloat pageWidth = 320;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Detail (%ld / %ld)", nil), page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), page+1, self.maximumPosition]];
     if (pageControlUsed)
     {
         return;
@@ -117,7 +118,7 @@
     pageControlUsed = NO;
     CGFloat pageWidth = 320;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:NSLocalizedString(@"Detail (%ld / %ld)", nil), page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     for (int i = 1; i < 5; i++) {
@@ -170,7 +171,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [self.navigationItem setTitle:NSLocalizedString(@"Detail", nil)];
+    [self.navigationItem setTitle:BALocalizedString(@"Detail")];
     if ([[segue identifier] isEqualToString:@"coverSegue"]) {
         BACoverViewControllerIPhone *coverViewController = (BACoverViewControllerIPhone *)[segue destinationViewController];
         [coverViewController setCoverImage:self.tempCover];
