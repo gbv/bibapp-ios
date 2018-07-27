@@ -25,6 +25,8 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    
+    [self setSelectedCellIndex:-1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +95,7 @@
         
         [self setSelectedCellIndex:indexPath.row];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"changeLanguage" object:nil];
+        //[[NSNotificationCenter defaultCenter] postNotificationName:@"changeLanguage" object:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

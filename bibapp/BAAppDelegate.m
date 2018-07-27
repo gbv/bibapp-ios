@@ -64,6 +64,7 @@
     if ([self.options.selectedCatalogue isEqualToString:@""] || self.options.selectedCatalogue == nil) {
         [self.options setSelectedCatalogue:self.configuration.currentBibStandardCatalogue];
         [self.options setAllowCountPixel:YES];
+        [self.options setSelectedLanguage:self.configuration.currentBibStandardLanguage];
         NSError *error = nil;
         if (![[self managedObjectContext] save:&error]) {
             // Handle the error.
