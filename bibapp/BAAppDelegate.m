@@ -101,7 +101,7 @@
     }
     [self.locationManager startUpdatingLocation];
     
-    BALocalizationSetLanguage(self.configuration.currentBibStandardLanguage);
+    BALocalizationSetLanguage(self.options.selectedLanguage);
     
     return YES;
 }
