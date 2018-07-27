@@ -58,4 +58,8 @@
     return textSize.height + 60;
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return BALocalizedString(@"Kontakt");
+}
+
 @end
