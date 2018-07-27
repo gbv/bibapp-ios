@@ -54,7 +54,8 @@
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.searchSegmentedController setTitle:BALocalizedString([self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue]) forSegmentAtIndex:0];
+    [self.searchSegmentedController setTitle:BALocalizedString(@"GVK") forSegmentAtIndex:1];
     
     //[self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
     [self.navigationItem setTitle:BALocalizedString(self.appDelegate.configuration.searchTitle)];
