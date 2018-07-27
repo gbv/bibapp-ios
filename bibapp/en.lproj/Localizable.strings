@@ -37,7 +37,7 @@
 "Einzelposten" = "";
 "Es konnte kein Titel verlängert werden" = "";
 "gesperrt" = "";
-"GVK Suche" = "";
+"GVK Suche" = "GVK search";
 "GVK Suche (%ld Treffer)" = "";
 "Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "";
 "Im Browser öffnen" = "";
@@ -49,6 +49,7 @@
 "Kontakt" = "";
 "Konto" = "";
 "Leihfristende:" = "";
+"Lokale Suche" = "Local search";
 "Lokale Suche (%ld Treffer)" = "";
 "OK" = "";
 "Online-Ressource im Browser öffnen" = "";
@@ -56,6 +57,7 @@
 "News" = "";
 "Nicht angemeldet" = "";
 "nicht ausleihbar" = "";
+"Recherche" = "Research";
 "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "";
 "Signatur:" = "";
 "Standard-Katalog" = "";

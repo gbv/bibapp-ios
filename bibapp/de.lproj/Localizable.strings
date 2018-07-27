@@ -49,6 +49,7 @@
 "Kontakt" = "Kontakt";
 "Konto" = "Konto";
 "Leihfristende:" = "Leihfristende:";
+"Lokale Suche" = "Lokale Suche";
 "Lokale Suche (%ld Treffer)" = "Lokale Suche (%ld Treffer)";
 "OK" = "OK";
 "Online-Ressource im Browser öffnen" = "Online-Ressource im Browser öffnen";
@@ -56,6 +57,7 @@
 "News" = "News";
 "Nicht angemeldet" = "Nicht angemeldet";
 "nicht ausleihbar" = "nicht ausleihbar";
+"Recherche" = "Recherche";
 "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto";
 "Signatur:" = "Signatur:";
 "Standard-Katalog" = "Standard-Katalog";

@@ -56,7 +56,8 @@
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
     [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
     
-    [self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    //[self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    [self.navigationItem setTitle:BALocalizedString(self.appDelegate.configuration.searchTitle)];
     
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
@@ -111,7 +112,7 @@
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
-            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+            [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -519,7 +520,7 @@
             [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
-            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+            [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -627,7 +628,7 @@
     self.lastSearchLocal = @"";
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         //[self.navigationItem setTitle:@"Lokale Suche"];
-        [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+        [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }
