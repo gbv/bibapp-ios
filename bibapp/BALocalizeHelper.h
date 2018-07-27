@@ -37,4 +37,6 @@
 //set a new language:
 - (NSString *) getLanguage;
 
+-(void)translateTabBar:(UITabBarController *) tabBarController;
+
 @end

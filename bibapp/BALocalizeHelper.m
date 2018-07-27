@@ -89,4 +89,12 @@ static NSBundle* myBundle = nil;
     return [myBundle localizedStringForKey:@"Language" value:@"" table:nil];
 }
 
+-(void)translateTabBar:(UITabBarController *) tabBarController {
+    [[tabBarController.tabBar.items objectAtIndex:0] setTitle:BALocalizedString(@"Suche")];
+    [[tabBarController.tabBar.items objectAtIndex:1] setTitle:BALocalizedString(@"Konto")];
+    [[tabBarController.tabBar.items objectAtIndex:2] setTitle:BALocalizedString(@"Merkliste")];
+    [[tabBarController.tabBar.items objectAtIndex:3] setTitle:BALocalizedString(@"Info")];
+    [[tabBarController.tabBar.items objectAtIndex:4] setTitle:BALocalizedString(@"Optionen")];
+}
+
 @end

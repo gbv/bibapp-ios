@@ -60,6 +60,8 @@
     //[self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
     [self.navigationItem setTitle:BALocalizedString(self.appDelegate.configuration.searchTitle)];
     
+    [[BALocalizeHelper sharedLocalSystem] translateTabBar:self.parentViewController.tabBarController];
+    
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
     
