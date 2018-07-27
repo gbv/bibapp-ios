@@ -50,6 +50,9 @@ static NSBundle* myBundle = nil;
     // this is almost exactly what is done when calling the macro NSLocalizedString(@"Text",@"comment")
     // the difference is: here we do not use the systems main bundle, but a bundle
     // we selected manually before (see "setLanguage")
+    
+    NSLog(@"%@", self.getLanguage);
+    
     return [myBundle localizedStringForKey:key value:@"" table:nil];
 }
 

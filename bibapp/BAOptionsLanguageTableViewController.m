@@ -76,7 +76,9 @@
     if (![self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [self.appDelegate.options setSelectedLanguage:languageKey];
         
-        BALocalizationSetLanguage(self.appDelegate.configuration.currentBibStandardLanguage);
+        NSLog(@"---> %@", self.appDelegate.options.selectedLanguage);
+        
+        BALocalizationSetLanguage(self.appDelegate.options.selectedLanguage);
         
         NSError *error = nil;
         if (![[appDelegate managedObjectContext] save:&error]) {

@@ -1,5 +1,7 @@
 /* Localized versions of Info.plist keys */
 
+"Language" = "English";
+
 "%d von %lu Titel(n) verlängert.\n\n" = "";
 "%lu %@ storniert.\n\n" = "";
 "Abbrechen" = "";
