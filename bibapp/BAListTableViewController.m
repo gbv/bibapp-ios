@@ -43,6 +43,7 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.navigationItem setTitle:BALocalizedString(@"Merkliste")];
     
     [self setCurrentItem: [[BAEntryWork alloc] init]];
     

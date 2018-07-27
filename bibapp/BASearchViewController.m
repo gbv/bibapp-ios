@@ -51,6 +51,7 @@
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     self.searchBar.delegate = self;
+    [self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -141,8 +142,10 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
+       [cell.titleLabel setText:BALocalizedString(@"Keine Treffer")];
        [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearchLocal]];
        [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
+       [cell.searchGBVButton setTitle:BALocalizedString(@"Suche im GVK wiederholen") forState:UIControlStateNormal];
        return cell;
     }
    
@@ -153,6 +156,7 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
+       [cell.titleLabel setText:BALocalizedString(@"Keine Treffer")];
        [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearch]];
        [cell.searchGBVButton setHidden:YES];
        return cell;

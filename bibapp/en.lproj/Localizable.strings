@@ -4,7 +4,7 @@
 
 "%d von %lu Titel(n) verlängert.\n\n" = "";
 "%lu %@ storniert.\n\n" = "";
-"Abbrechen" = "";
+"Abbrechen" = "Cancel";
 "abgelehnt" = "";
 "abholbereit" = "";
 "Anmelden" = "";
@@ -39,20 +39,21 @@
 "gesperrt" = "";
 "GVK Suche" = "GVK search";
 "GVK Suche (%ld Treffer)" = "";
-"Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "";
+"Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "Your search for \"%@\" has no results";
 "Im Browser öffnen" = "";
 "Impressum" = "";
 "Info" = "Info";
 "Keine Gebühren" = "";
 "Keine Medien entliehen" = "";
 "Keine Standortinformationen vorhanden" = "";
+"Keine Treffer" = "No results";
 "Keine Vormerkungen" = "";
 "Kontakt" = "";
 "Konto" = "Account";
 "Leihfristende:" = "";
 "Lokale Suche" = "Local search";
-"Lokale Suche (%ld Treffer)" = "";
-"OK" = "";
+"Lokale Suche (%ld Treffer)" = "Local search (%ld results)";
+"OK" = "OK";
 "Online-Ressource im Browser öffnen" = "";
 "Optionen" = "Options";
 "Merkliste" = "Bookmarks";
@@ -68,6 +69,7 @@
 "Standortinfo" = "";
 "Suche" = "Search";
 "Suche im Gesamtkatalog\nBitte geben Sie links einen Suchbegriff ein." = "";
+"Suche im GVK wiederholen" = "Search in GVK";
 "Suche im lokalen Katalog\nBitte geben Sie links einen Suchbegriff ein." = "";
 "Summe" = "";
 "Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden." = "";
@@ -82,7 +84,7 @@
 "Vormerkungen stornieren" = "";
 "Website" = "";
 "wird geladen ..." = "";
-"Zur Merkliste hinzufügen" = "";
+"Zur Merkliste hinzufügen" = "Add to bookmarks";
 "Zusätzliche Exemplare anderer Bibliotheken" = "";
 
 "de" = "German";

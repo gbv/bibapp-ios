@@ -11,5 +11,6 @@
 @interface BANoSearchResultsCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *searchGBVButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
