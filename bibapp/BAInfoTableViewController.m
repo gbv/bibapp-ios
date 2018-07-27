@@ -38,7 +38,8 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
-   
+    [self.navigationItem setTitle:BALocalizedString(@"Info")];
+    
     if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
        BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
        if ([checkNetworkReachabilityConnector checkNetworkReachability]) {

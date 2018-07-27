@@ -37,6 +37,8 @@
 {
     [super viewDidLoad];
 
+    [self.navigationItem setTitle:BALocalizedString(@"Standorte")];
+    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.locationList = [[NSMutableArray alloc] init];
     self.didReturnFromSegue = NO;

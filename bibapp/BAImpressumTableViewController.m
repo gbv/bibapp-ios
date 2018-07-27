@@ -8,6 +8,7 @@
 
 #import "BAImpressumTableViewController.h"
 #import "BAImpressumCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BAImpressumTableViewController ()
 
@@ -31,6 +32,8 @@
     [super viewDidLoad];
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [self.navigationItem setTitle:BALocalizedString(@"Impressum")];
 }
 
 - (void)didReceiveMemoryWarning

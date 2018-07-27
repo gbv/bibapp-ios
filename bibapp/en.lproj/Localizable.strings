@@ -41,14 +41,14 @@
 "GVK Suche (%ld Treffer)" = "";
 "Ihre Suche nach \"%@\" hat keine Treffer ergeben." = "Your search for \"%@\" has no results";
 "Im Browser öffnen" = "";
-"Impressum" = "";
+"Impressum" = "Imprint";
 "Info" = "Info";
 "Keine Gebühren" = "";
 "Keine Medien entliehen" = "";
 "Keine Standortinformationen vorhanden" = "";
 "Keine Treffer" = "No results";
 "Keine Vormerkungen" = "";
-"Kontakt" = "";
+"Kontakt" = "Contact";
 "Konto" = "Account";
 "Leihfristende:" = "";
 "Lokale Suche" = "Local search";
@@ -64,7 +64,7 @@
 "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "";
 "Signatur:" = "";
 "Standard-Katalog" = "";
-"Standorte" = "";
+"Standorte" = "Locations";
 "Standorte werden geladen ..." = "";
 "Standortinfo" = "";
 "Suche" = "Search";
