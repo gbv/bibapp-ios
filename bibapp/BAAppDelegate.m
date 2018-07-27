@@ -101,7 +101,6 @@
     }
     [self.locationManager startUpdatingLocation];
     
-    NSLog(@"%@", self.configuration.currentBibStandardLanguage);
     BALocalizationSetLanguage(self.configuration.currentBibStandardLanguage);
     
     return YES;

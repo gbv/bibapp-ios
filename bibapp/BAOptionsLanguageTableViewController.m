@@ -78,8 +78,6 @@
     if (![self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [self.appDelegate.options setSelectedLanguage:languageKey];
         
-        NSLog(@"---> %@", self.appDelegate.options.selectedLanguage);
-        
         BALocalizationSetLanguage(self.appDelegate.options.selectedLanguage);
         
         NSError *error = nil;
@@ -96,8 +94,17 @@
         [self setSelectedCellIndex:indexPath.row];
         
         //[[NSNotificationCenter defaultCenter] postNotificationName:@"changeLanguage" object:nil];
+        
+        [self reloadRootViewController];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)reloadRootViewController
+{
+    NSString *storyboardName = @"bibapp~iphone";
+    UIStoryboard *storybaord = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    self.appDelegate.window.rootViewController = [storybaord instantiateInitialViewController];
 }
 
 @end

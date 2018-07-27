@@ -51,8 +51,6 @@ static NSBundle* myBundle = nil;
     // the difference is: here we do not use the systems main bundle, but a bundle
     // we selected manually before (see "setLanguage")
     
-    NSLog(@"%@", self.getLanguage);
-    
     return [myBundle localizedStringForKey:key value:@"" table:nil];
 }
 
