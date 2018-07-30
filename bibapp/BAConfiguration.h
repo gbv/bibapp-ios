@@ -20,7 +20,9 @@
 @property (strong, nonatomic) NSMutableArray *currentBibFeedURLs;
 @property (strong, nonatomic) UIColor *currentBibTintColor;
 @property (strong, nonatomic) NSMutableArray *currentBibImprintTitles;
+@property (strong, nonatomic) NSMutableDictionary *currentBibImprintTitlesLocalized;
 @property (strong, nonatomic) NSMutableDictionary *currentBibImprint;
+@property (strong, nonatomic) NSMutableDictionary *currentBibImprintLocalized;
 @property (strong, nonatomic) NSString *currentBibContact;
 @property (strong, nonatomic) NSString *currentBibLocationURI;
 @property (strong, nonatomic) NSMutableArray *currentBibLocationURIs;

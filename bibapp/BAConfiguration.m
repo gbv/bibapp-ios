@@ -58,7 +58,9 @@
         self.currentBibPAIAURLs = [[NSMutableArray alloc] init];
         self.currentBibFeedURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
+        self.currentBibImprintTitlesLocalized = [[NSMutableDictionary alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
+        self.currentBibImprintLocalized = [[NSMutableDictionary alloc] init];
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
         self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
        
