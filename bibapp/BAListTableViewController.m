@@ -160,6 +160,10 @@
 	}
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return BALocalizedString(@"Löschen");
+}
+
 - (void)loadEntries
 {
     self.dummyBooksMerkliste = [[NSMutableArray alloc] init];
