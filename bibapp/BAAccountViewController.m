@@ -66,7 +66,10 @@
     
     [self.accountSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.accountSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
-   
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Ausgeliehen") forSegmentAtIndex:0];
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Vorgemerkt") forSegmentAtIndex:1];
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Gebühren") forSegmentAtIndex:2];
+    
     [self setRefreshControl:[[UIRefreshControl alloc] init]];
     [self.refreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
     [self.accountTableView addSubview:self.refreshControl];
@@ -551,8 +554,10 @@
         }
        
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+            [cell.queueTitleLabel setText:BALocalizedString(@"Vormerkungen:")];
             NSString *queueString = [NSString stringWithFormat:@"%@", item.queue];
             [cell.queueLabel setText:queueString];
+            [cell.renewalTitleLabel setText:BALocalizedString(@"Verlängerungen:")];
             NSString *renewalString = [NSString stringWithFormat:@"%@", item.renewal];
             [cell.renewalLabel setText:renewalString];
             //NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];

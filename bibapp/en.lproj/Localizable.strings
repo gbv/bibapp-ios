@@ -12,6 +12,7 @@
 "Anmeldung" = "Sign in";
 "Anonyme Daten speichern" = "Save anonymous usage data";
 "ausgeliehen" = "on loan";
+"Ausgeliehen" = "On loan";
 "ausgeliehen, Vormerken möglich" = "on loan, you may request this item";
 "ausgeliehen bis %@.%@.%@, Vormerken möglich" = "on loan until %@.%@.%@, you may request this item";
 "ausleihbar" = "lendable";
@@ -39,6 +40,7 @@
 "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "An internal error occurred. If this error occurs repeatedly, please contact your library stating the following error number:\nPAIA %@";
 "Einzelposten" = "Single item";
 "Es konnte kein Titel verlängert werden" = "Titles cannot be renewed";
+"Gebühren" = "Fees";
 "gesperrt" = "locked";
 "GVK Suche" = "Search GVK";
 "GVK Suche (%ld Treffer)" = "Search GVK (%ld Treffer)";
@@ -83,11 +85,14 @@
 "verfügbar" = "available";
 "Verfügbarkeit im OPAC prüfen" = "Check availability in OPAC";
 "Verlängern" = "Renew";
+"Verlängerungen:" = "Renewals:";
 "vorgemerkt" = "reserved";
+"Vorgemerkt" = "Reserved";
 "Vormerkdatum:" = "Reservation date";
 "Vormerken" = "Reserve";
 "Vormerkung" = "Reservation";
 "Vormerkungen" = "Reservations";
+"Vormerkungen:" = "Reservations:";
 "Vormerkungen stornieren" = "Cancel the reservations";
 "Website" = "Website";
 "Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum" = "If you deactivate this option, no anonymous usage data will be saved. See Information / Legal notice for details.";

@@ -12,6 +12,7 @@
 "Anmeldung" = "Anmeldung";
 "Anonyme Daten speichern" = "Anonyme Daten speichern";
 "ausgeliehen" = "ausgeliehen";
+"Ausgeliehen" = "Ausgeliehen";
 "ausgeliehen, Vormerken möglich" = "ausgeliehen, Vormerken möglich";
 "ausgeliehen bis %@.%@.%@, Vormerken möglich" = "ausgeliehen bis %@.%@.%@, Vormerken möglich";
 "ausleihbar" = "ausleihbar";
@@ -39,6 +40,7 @@
 "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@" = "Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@";
 "Einzelposten" = "Einzelposten";
 "Es konnte kein Titel verlängert werden" = "Es konnte kein Titel verlängert werden";
+"Gebühren" = "Gebühren";
 "gesperrt" = "gesperrt";
 "GVK Suche" = "GVK Suche";
 "GVK Suche (%ld Treffer)" = "GVK Suche (%ld Treffer)";
@@ -83,11 +85,14 @@
 "verfügbar" = "verfügbar";
 "Verfügbarkeit im OPAC prüfen" = "Verfügbarkeit im OPAC prüfen";
 "Verlängern" = "Verlängern";
+"Verlängerungen:" = "Verlängerungen:";
 "vorgemerkt" = "vorgemerkt";
+"Vorgemerkt" = "Vorgemerkt";
 "Vormerkdatum:" = "Vormerkdatum:";
 "Vormerken" = "Vormerken";
 "Vormerkung" = "Vormerkung";
 "Vormerkungen" = "Vormerkungen";
+"Vormerkungen:" = "Vormerkungen:";
 "Vormerkungen stornieren" = "Vormerkungen stornieren";
 "Website" = "Website";
 "Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum" = "Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum";
