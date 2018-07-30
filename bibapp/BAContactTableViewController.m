@@ -33,6 +33,10 @@
     
     [self.navigationItem setTitle:BALocalizedString(@"Kontakt")];
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     [self.contactText setText:appDelegate.configuration.currentBibContact];
     CGRect frame = self.contactText.frame;

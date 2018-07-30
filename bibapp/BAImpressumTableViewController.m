@@ -34,6 +34,10 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationItem setTitle:BALocalizedString(@"Impressum")];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 - (void)didReceiveMemoryWarning

@@ -39,6 +39,10 @@
 
     [self.navigationItem setTitle:BALocalizedString(@"Standorte")];
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.locationList = [[NSMutableArray alloc] init];
     self.didReturnFromSegue = NO;
