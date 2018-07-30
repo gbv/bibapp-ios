@@ -29,6 +29,8 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-204", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     
+    self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", @"Englisch", @"en", nil];
+    
     [self.currentBibImprintTitlesLocalized setObject:[[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Umsatzsteueridentifikationsnummer", @"Presserechtliche Verantwortlichkeit", @"Datenschutzerklärung", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil] forKey:@"de"];
     [self.currentBibImprintTitlesLocalized setObject:[[NSMutableArray alloc] initWithObjects:@"Provider", @"Representative", @"Sales tax identification number", @"Press accountability", @"Privacy policy", @"Liability", @"Design and implementation", nil] forKey:@"en"];
     

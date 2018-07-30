@@ -79,7 +79,7 @@
        
         self.useDAIAParser = YES;
         
-        self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", @"Englisch", @"en", nil];
+        self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", nil];
         self.currentBibStandardLanguage = @"de";
     }
     return self;

@@ -33,6 +33,10 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [self.navigationItem setTitle:BALocalizedString(@"Optionen")];
+    
+    self.tableView.delegate = self;
+    
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     
     BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -51,8 +55,12 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.catalogueLabel setText:self.appDelegate.options.selectedCatalogue];
+    [self.catalogueTitleLabel setText:BALocalizedString(@"Lokaler Katalog")];
+    [self.catalogueLabel setText:BALocalizedString(self.appDelegate.options.selectedCatalogue)];
     [self.languageLabel setText:BALocalizedString(self.appDelegate.options.selectedLanguage)];
+    [self.accountTitleLabel setText:BALocalizedString(@"Zugangsdaten speichern")];
+    [self.logoutButton setTitle:BALocalizedString(@"Abmelden") forState:UIControlStateNormal];
+    [self.privacyTitleLabel setText:BALocalizedString(@"Anonyme Daten speichern")];
     
     if (self.appDelegate.currentAccount != nil) {
        [self.userLabel setText:self.appDelegate.currentAccount];
@@ -143,6 +151,28 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    // ToDo: reset state if necessary
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return BALocalizedString(@"Suche");
+    } else if (section == 1) {
+        return BALocalizedString(@"Sprache");
+    } else if (section == 2) {
+        return BALocalizedString(@"Konto");
+    } else if (section == 3) {
+        return BALocalizedString(@"Datenschutz");
+    } else if (section == 4) {
+        return BALocalizedString(@"Info");
+    }
+    return nil;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (section == 3) {
+        return BALocalizedString(@"Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum");
+    }
+    return nil;
 }
 
 @end

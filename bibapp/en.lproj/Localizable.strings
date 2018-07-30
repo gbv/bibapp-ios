@@ -7,8 +7,10 @@
 "Abbrechen" = "Cancel";
 "abgelehnt" = "denied";
 "abholbereit" = "ready for collection";
+"Abmelden" = "Sign out";
 "Anmelden" = "Sign in";
 "Anmeldung" = "Sign in";
+"Anonyme Daten speichern" = "Save anonymous usage data";
 "ausgeliehen" = "on loan";
 "ausgeliehen, Vormerken möglich" = "on loan, you may request this item";
 "ausgeliehen bis %@.%@.%@, Vormerken möglich" = "on loan until %@.%@.%@, you may request this item";
@@ -27,6 +29,7 @@
 "Bitte Nummer und Passwort prüfen" = "Please verify number of your reader's card and password";
 "Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "Please select the items to be renewed";
 "Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "Please select the reservations you want to be cancelled";
+"Datenschutz" = "Privacy";
 "Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "This item is already on your list";
 "Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "The item has been added to your list";
 "Detail" = "Details";
@@ -53,6 +56,7 @@
 "Leihfristende:" = "End of loan period";
 "Lokale Suche" = "Local search";
 "Lokale Suche (%ld Treffer)" = "Local search (%ld results)";
+"Lokaler Katalog" = "Local catalogue";
 "Löschen" = "Delete";
 "OK" = "OK";
 "Online-Ressource im Browser öffnen" = "Open in browser";
@@ -64,6 +68,7 @@
 "Recherche" = "Research";
 "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "Please go to the account tab to sign in";
 "Signatur:" = "Shelf mark:";
+"Sprache" = "Language";
 "Standard-Katalog" = "Standard catalog";
 "Standort" = "Location";
 "Standorte" = "Locations";
@@ -85,9 +90,11 @@
 "Vormerkungen" = "Reservations";
 "Vormerkungen stornieren" = "Cancel the reservations";
 "Website" = "Website";
+"Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum" = "If you deactivate this option, no anonymous usage data will be saved. See Information / Legal notice for details.";
 "wird geladen ..." = "loading ...";
+"Zugangsdaten speichern" = "Save sign in data";
 "Zur Merkliste hinzufügen" = "Add to list";
 "Zusätzliche Exemplare anderer Bibliotheken" = "Additional copies in other libraries";
 
-"de" = "German";
+"de" = "Deutsch";
 "en" = "English";

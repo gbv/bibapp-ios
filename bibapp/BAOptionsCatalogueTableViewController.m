@@ -8,6 +8,7 @@
 
 #import "BAOptionsCatalogueTableViewController.h"
 #import "BACatalogueTableViewCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BAOptionsCatalogueTableViewController ()
 
@@ -39,6 +40,8 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    [self.navigationItem setTitle:BALocalizedString(@"Lokaler Katalog")];
+    
     [self setSelectedCellIndex:-1];
 }
 
@@ -68,7 +71,7 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BACatalogueTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
     
-    [cell.catalogueLabel setText:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]];
+    [cell.catalogueLabel setText:BALocalizedString([[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1])];
     if ([self.appDelegate.options.selectedCatalogue isEqualToString:[[self.appDelegate.configuration.currentBibLocalSearchURLs objectAtIndex:indexPath.row] objectAtIndex:1]]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         if (self.selectedCellIndex == -1) {

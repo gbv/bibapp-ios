@@ -542,10 +542,13 @@
                     <tabBarItem key="tabBarItem" title="Optionen" id="IxT-f3-082"/>
                     <navigationItem key="navigationItem" title="Optionen" id="bDa-FT-WRv"/>
                     <connections>
+                        <outlet property="accountTitleLabel" destination="HJQ-i6-vze" id="MqV-CC-IbD"/>
                         <outlet property="catalogueLabel" destination="R9M-vD-YlS" id="Gx4-cP-HLZ"/>
+                        <outlet property="catalogueTitleLabel" destination="PYV-aD-fwW" id="keM-kk-6CZ"/>
                         <outlet property="countPixelSwitch" destination="TRi-tn-Ui3" id="64U-bj-lnQ"/>
                         <outlet property="languageLabel" destination="drw-bb-1Up" id="O1H-mf-0dt"/>
                         <outlet property="logoutButton" destination="yvP-Ih-f9F" id="1vX-hh-IYm"/>
+                        <outlet property="privacyTitleLabel" destination="SjU-eg-oOk" id="PoY-eo-qY0"/>
                         <outlet property="saveLocalSwitch" destination="VRs-uM-GCJ" id="3we-ZK-pdx"/>
                         <outlet property="userLabel" destination="y1k-Au-zP5" id="jhk-MJ-XSJ"/>
                         <outlet property="versionLabel" destination="DgF-Wf-VFL" id="qBy-ox-ZIx"/>

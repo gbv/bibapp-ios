@@ -4635,6 +4635,9 @@
 					8F07B12C1BFB72DB0012C325 = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
+					8F114037167F217000E033F6 = {
+						DevelopmentTeam = VW9E5RXV2N;
+					};
 					8F1D8343192A2E7000A9898D = {
 						DevelopmentTeam = DG2S2C98D2;
 					};
@@ -7950,6 +7953,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				DEVELOPMENT_TEAM = VW9E5RXV2N;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -7959,8 +7963,9 @@
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "275103bd-efbe-4df5-b685-ab646fb72f09";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "BibApp HI";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;

@@ -7,8 +7,10 @@
 "Abbrechen" = "Abbrechen";
 "abgelehnt" = "abgelehnt";
 "abholbereit" = "abholbereit";
+"Abmelden" = "Abmelden";
 "Anmelden" = "Anmelden";
 "Anmeldung" = "Anmeldung";
+"Anonyme Daten speichern" = "Anonyme Daten speichern";
 "ausgeliehen" = "ausgeliehen";
 "ausgeliehen, Vormerken möglich" = "ausgeliehen, Vormerken möglich";
 "ausgeliehen bis %@.%@.%@, Vormerken möglich" = "ausgeliehen bis %@.%@.%@, Vormerken möglich";
@@ -27,6 +29,7 @@
 "Bitte Nummer und Passwort prüfen" = "Bitte Nummer und Passwort prüfen";
 "Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "Bitte wählen Sie die Einträge aus, die verlängert werden sollen";
 "Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen";
+"Datenschutz" = "Datenschutz";
 "Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "Der Eintrag befindet sich bereits auf Ihrer Merkliste";
 "Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "Der Eintrag wurde Ihrer Merkliste hinzugefügt";
 "Detail" = "Detail";
@@ -53,6 +56,7 @@
 "Leihfristende:" = "Leihfristende:";
 "Lokale Suche" = "Lokale Suche";
 "Lokale Suche (%ld Treffer)" = "Lokale Suche (%ld Treffer)";
+"Lokaler Katalog" = "Lokaler Katalog";
 "Löschen" = "Löschen";
 "OK" = "OK";
 "Online-Ressource im Browser öffnen" = "Online-Ressource im Browser öffnen";
@@ -64,6 +68,7 @@
 "Recherche" = "Recherche";
 "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto" = "Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto";
 "Signatur:" = "Signatur:";
+"Sprache" = "Sprache";
 "Standard-Katalog" = "Standard-Katalog";
 "Standort" = "Standort";
 "Standorte" = "Standorte";
@@ -85,9 +90,11 @@
 "Vormerkungen" = "Vormerkungen";
 "Vormerkungen stornieren" = "Vormerkungen stornieren";
 "Website" = "Website";
+"Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum" = "Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum";
 "wird geladen ..." = "wird geladen ...";
+"Zugangsdaten speichern" = "Zugangsdaten speichern";
 "Zur Merkliste hinzufügen" = "Zur Merkliste hinzufügen";
 "Zusätzliche Exemplare anderer Bibliotheken" = "Zusätzliche Exemplare anderer Bibliotheken";
 
 "de" = "Deutsch";
-"en" = "Englisch";
+"en" = "English";

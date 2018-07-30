@@ -24,7 +24,7 @@
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.navigationItem setTitle:BALocalizedString(@"Sprache")];
     
     [self setSelectedCellIndex:-1];
 }
@@ -57,7 +57,7 @@
     NSArray *languageKeys = [self.appDelegate.configuration.currentBibLanguages allKeys];
     id languageKey = [languageKeys objectAtIndex:indexPath.row];
     
-    [cell.catalogueLabel setText: BALocalizedString([self.appDelegate.configuration.currentBibLanguages objectForKey:languageKey])];
+    [cell.catalogueLabel setText: BALocalizedString(languageKey)];
     if ([self.appDelegate.options.selectedLanguage isEqualToString:languageKey]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         if (self.selectedCellIndex == -1) {
