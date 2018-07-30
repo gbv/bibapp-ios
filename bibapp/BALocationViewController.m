@@ -7,6 +7,7 @@
 //
 
 #import "BALocationViewController.h"
+#import "BALocalizeHelper.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -47,6 +48,8 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     //[self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.navigationItem setTitle:BALocalizedString(@"Standort")];
     
     self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.mapViewHeight)];
     self.mapView.delegate=self;
