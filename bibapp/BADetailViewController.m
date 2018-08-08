@@ -52,6 +52,8 @@
 @synthesize computedSizeOfTitleCell;
 @synthesize scrollViewController;
 @synthesize searchedCoverByISBN;
+@synthesize didCheckBlockOrderTypes;
+@synthesize blockOrderByTypes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,6 +80,8 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     self.itemsArray = [[NSMutableArray alloc] init];
+    
+    self.blockOrderByTypes = NO;
     
 	// Do any additional setup after loading the view.
     
@@ -114,11 +118,16 @@
     spinner.frame = CGRectMake(0, 0, 320, 44);
     ((BAItemDetail *)self.view).detailTableView.tableFooterView = spinner;
     
-    BAConnector *connector = [BAConnector generateConnector];
-    if (self.currentEntry.local) {
-        [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+    if ([self.appDelegate.configuration.currentBibBlockOrderTypes count] == 0) {
+        BAConnector *connector = [BAConnector generateConnector];
+        if (self.currentEntry.local) {
+            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        } else {
+            [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+        }
     } else {
-        [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+        BAConnector *unapiConnectorPica = [BAConnector generateConnector];
+        [unapiConnectorPica getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"picaxml" WithDelegate:self];
     }
     BAConnector *unapiConnector = [BAConnector generateConnector];
     [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
@@ -562,6 +571,30 @@
             [self setSearchedCoverByISBN:YES];
         }
         [((BAItemDetail *)self.view).detailTableView reloadData];
+    } else if ([command isEqualToString:@"getUNAPIDetailsPicaxml"]) {
+        NSEnumerator *picaXmlEnumerator = [self.appDelegate.configuration.currentBibBlockOrderTypes keyEnumerator];
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        NSArray *picaDatafieldsArray = [parser.rootElement elementsForName:@"datafield"];
+        for (id key in picaXmlEnumerator) {
+            for (GDataXMLElement *picaDatafield in picaDatafieldsArray) {
+                if ([[[picaDatafield attributeForName:@"tag"] stringValue] isEqualToString:key]) {
+                    NSArray *picaSubfieldsArray = [picaDatafield elementsForName:@"subfield"];
+                    for (GDataXMLElement *picaSubfield in picaSubfieldsArray) {
+                        for (NSString *orderType in [self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key]) {
+                            if ([[picaSubfield stringValue] isEqualToString:orderType]) {
+                                self.blockOrderByTypes = YES;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        BAConnector *connector = [BAConnector generateConnector];
+        if (self.currentEntry.local) {
+            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        } else {
+            [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+        }
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
        /* NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
        if ([json count] > 0) {

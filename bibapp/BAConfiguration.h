@@ -36,6 +36,7 @@
 @property BOOL useDAIAParser;
 @property (strong, nonatomic) NSMutableDictionary *currentBibLanguages;
 @property (strong, nonatomic) NSString *currentBibStandardLanguage;
+@property (strong, nonatomic) NSMutableDictionary *currentBibBlockOrderTypes;
 
 + (id)createConfiguration;
 - (void)initConfiguration;

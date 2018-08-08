@@ -49,6 +49,7 @@
 @synthesize currentBibRequestTitle;
 @synthesize currentBibDaiaInfoFromOpacDisplay;
 @synthesize currentBibStandardLanguage;
+@synthesize currentBibBlockOrderTypes;
 
 - (id)init {
     self = [super init];
@@ -81,6 +82,8 @@
         
         self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", nil];
         self.currentBibStandardLanguage = @"de";
+        
+        self.currentBibBlockOrderTypes = [[NSMutableDictionary alloc] init];
     }
     return self;
 }

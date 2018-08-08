@@ -38,6 +38,8 @@
 @property CGRect frame;
 @property (strong, nonatomic) BADetailScrollViewController *scrollViewController;
 @property BOOL searchedCoverByISBN;
+@property BOOL didCheckBlockOrderTypes;
+@property BOOL blockOrderByTypes;
 
 - (void)actionButton;
 - (void)initDetailView;
