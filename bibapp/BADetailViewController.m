@@ -580,8 +580,9 @@
                 if ([[[picaDatafield attributeForName:@"tag"] stringValue] isEqualToString:key]) {
                     NSArray *picaSubfieldsArray = [picaDatafield elementsForName:@"subfield"];
                     for (GDataXMLElement *picaSubfield in picaSubfieldsArray) {
-                        for (NSString *orderType in [self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key]) {
-                            if ([[picaSubfield stringValue] isEqualToString:orderType]) {
+                        NSEnumerator *blockOrderTypesEnumerator = [[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] keyEnumerator];
+                        for (id blockOrderTypeKey in blockOrderTypesEnumerator) {
+                            if ([[[picaSubfield stringValue] substringWithRange:NSMakeRange([[[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] objectForKey:blockOrderTypeKey] longValue], 1)] isEqualToString:blockOrderTypeKey]) {
                                 self.blockOrderByTypes = YES;
                             }
                         }

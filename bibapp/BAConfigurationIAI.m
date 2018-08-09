@@ -54,7 +54,7 @@
     [imprintContentEN setObject:@"..." forKey:@"Design and implementation"];
     [self.currentBibImprintLocalized setObject:imprintContentEN forKey:@"en"];
     
-    [self.currentBibBlockOrderTypes setObject:[[NSArray alloc] initWithObjects:@"Avu", @"Sbv", nil] forKey:@"002@"];
+    [self.currentBibBlockOrderTypes setObject:[[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:1], @"b", nil] forKey:@"002@"];
 }
 
 @end
