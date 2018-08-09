@@ -30,6 +30,8 @@
 "Bitte Nummer und Passwort prüfen" = "Please verify number of your reader's card and password";
 "Bitte wählen Sie die Einträge aus, die verlängert werden sollen" = "Please select the items to be renewed";
 "Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen" = "Please select the reservations you want to be cancelled";
+"Blockierte Bestellung" = "Volumes of this title may only be requested";
+"Blockierte Bestellung Info" = "via OPAC (www.iaicat.de)";
 "Datenschutz" = "Privacy";
 "Der Eintrag befindet sich bereits auf Ihrer Merkliste" = "This item is already on your list";
 "Der Eintrag wurde Ihrer Merkliste hinzugefügt" = "The item has been added to your list";

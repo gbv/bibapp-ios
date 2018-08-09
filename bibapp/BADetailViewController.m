@@ -933,6 +933,13 @@
                status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
             }
            
+            if (self.blockOrderByTypes) {
+                status = [BALocalizedString(@"Blockierte Bestellung") mutableCopy];
+                statusInfo = [BALocalizedString(@"Blockierte Bestellung Info") mutableCopy];
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                [cell.statusInfo setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+            }
+            
             [cell.status setText:status];
             [cell.statusInfo setText:statusInfo];
             
@@ -1017,7 +1024,7 @@
                 }
             }
             UIActionSheet *action;
-            if (tempDocumentItem.order) {
+            if (tempDocumentItem.order && !self.blockOrderByTypes) {
                 if (tempDocumentItem.location != nil) {
                     action = [[UIActionSheet alloc] initWithTitle:nil
                                                          delegate:self
