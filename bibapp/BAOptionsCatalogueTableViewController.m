@@ -78,7 +78,7 @@
             [self setSelectedCellIndex:indexPath.row];
         }
     } else {
-        [cell setAccessoryType:nil];
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
     
     return cell;
@@ -95,7 +95,7 @@
         }
         
         UITableViewCell *selectedCellOld = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedCellIndex inSection:indexPath.section]];
-        [selectedCellOld setAccessoryType:nil];
+        [selectedCellOld setAccessoryType:UITableViewCellAccessoryNone];
         
         UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
         [selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];

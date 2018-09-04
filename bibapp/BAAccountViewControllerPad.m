@@ -635,7 +635,7 @@
       if (renewalsCounter > 0) {
          [statusString appendFormat:BALocalizedString(@"%d von %lu Titel(n) verlängert.\n\n"), renewalsCounter, (unsigned long)[self.sendEntries count]];
       } else {
-         [statusString appendFormat:BALocalizedString(@"Es konnte kein Titel verlängert werden\n\n")];
+         [statusString appendString:BALocalizedString(@"Es konnte kein Titel verlängert werden\n\n")];
       }
       if ([self.appDelegate.configuration usePAIAWrapper]) {
          for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
