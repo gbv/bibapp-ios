@@ -7909,7 +7909,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7934,7 +7934,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -7959,7 +7959,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
@@ -7984,7 +7984,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
@@ -8008,7 +8008,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
@@ -8032,7 +8032,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
@@ -8057,7 +8057,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.iai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8082,7 +8082,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.iai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8106,7 +8106,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
@@ -8129,7 +8129,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
@@ -8155,7 +8155,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
@@ -8181,7 +8181,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
@@ -8206,7 +8206,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
@@ -8229,7 +8229,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
@@ -8253,7 +8253,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
@@ -8277,7 +8277,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
@@ -8301,7 +8301,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp DHGE";
@@ -8325,7 +8325,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp DHGE";
@@ -8349,7 +8349,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
@@ -8373,7 +8373,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
@@ -8398,7 +8398,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
@@ -8423,7 +8423,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
@@ -8447,7 +8447,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
@@ -8471,7 +8471,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
@@ -8496,7 +8496,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
@@ -8521,7 +8521,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
@@ -8545,7 +8545,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
@@ -8569,7 +8569,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
@@ -8593,7 +8593,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
@@ -8617,7 +8617,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
@@ -8641,7 +8641,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
@@ -8665,7 +8665,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
@@ -8689,7 +8689,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
@@ -8713,7 +8713,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
@@ -8767,7 +8767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -8807,7 +8807,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -8826,7 +8826,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8850,7 +8850,7 @@
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8875,7 +8875,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "eww.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -8895,7 +8895,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibAppUnitTests/BibAppUnitTests-Prefix.pch";
 				INFOPLIST_FILE = "BibAppUnitTests/BibAppUnitTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "eww.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
