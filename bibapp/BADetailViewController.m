@@ -904,6 +904,7 @@
                 }
             }
             
+            bool foundBarcode = YES;
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
                 [status appendString:BALocalizedString(@"ausleihbar")];
@@ -917,11 +918,15 @@
                         [statusInfo appendString:BALocalizedString(@"Bitte am Standort entnehmen")];
                     } else {
                         [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
+                        NSURL *loanHref = [[NSURL alloc] initWithString:loan.href];
+                        NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:loanHref resolvingAgainstBaseURL:NO];
+                        for (NSURLQueryItem *queryItem in urlComponents.queryItems) {
+                            if ([queryItem.name isEqualToString:@"bar"] && [queryItem.value isEqualToString:@""]) {
+                                foundBarcode = NO;
+                            }
+                        }
                     }
                 }
-                
-                // ToDo: add check for missing barcode in [load href]. Add text if that is the case:
-                // Set Flag here and overwrite cell content later.
             } else {
                 if (loan.href != nil) {
                     NSRange match = [loan.href rangeOfString: @"loan/RES"];
@@ -967,11 +972,12 @@
                status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
             }
            
-            if (self.blockOrderByTypes) {
+            if (!foundBarcode) {
                 status = [BALocalizedString(@"Blockierte Bestellung") mutableCopy];
                 statusInfo = [BALocalizedString(@"Blockierte Bestellung Info") mutableCopy];
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
                 [cell.statusInfo setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                tempDocumentItem.blockOrder = YES;
             }
             
             [cell.status setText:status];
@@ -1058,7 +1064,7 @@
                 }
             }
             UIActionSheet *action;
-            if (tempDocumentItem.order && !self.blockOrderByTypes) {
+            if (tempDocumentItem.order) {
                 if (tempDocumentItem.location != nil) {
                     action = [[UIActionSheet alloc] initWithTitle:nil
                                                          delegate:self
