@@ -138,21 +138,6 @@
 		8F07B1AE1BFB72DB0012C325 /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F07B1AF1BFB72DB0012C325 /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F07B1B01BFB72DB0012C325 /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F07B1B11BFB72DB0012C325 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F07B1B21BFB72DB0012C325 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F07B1B31BFB72DB0012C325 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F07B1B41BFB72DB0012C325 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F07B1B51BFB72DB0012C325 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F07B1B61BFB72DB0012C325 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F07B1B71BFB72DB0012C325 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F07B1B81BFB72DB0012C325 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F07B1B91BFB72DB0012C325 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F07B1BA1BFB72DB0012C325 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F07B1BB1BFB72DB0012C325 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F07B1BC1BFB72DB0012C325 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F07B1BD1BFB72DB0012C325 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F07B1BE1BFB72DB0012C325 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F07B1BF1BFB72DB0012C325 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F07B1C01BFB72DB0012C325 /* IconLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6258F16CBC9BA00F0D213 /* IconLG.png */; };
 		8F07B1C11BFB72DB0012C325 /* IconLG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259116CBC9C100F0D213 /* IconLG@2x.png */; };
 		8F07B1C21BFB72DB0012C325 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
@@ -383,21 +368,6 @@
 		8F1D83B5192A2E7000A9898D /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F1D83B6192A2E7000A9898D /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F1D83B7192A2E7000A9898D /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F1D83B8192A2E7000A9898D /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F1D83B9192A2E7000A9898D /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F1D83BA192A2E7000A9898D /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F1D83BB192A2E7000A9898D /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F1D83BC192A2E7000A9898D /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F1D83BD192A2E7000A9898D /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F1D83BE192A2E7000A9898D /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F1D83BF192A2E7000A9898D /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F1D83C0192A2E7000A9898D /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F1D83C1192A2E7000A9898D /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F1D83C2192A2E7000A9898D /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F1D83C3192A2E7000A9898D /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F1D83C4192A2E7000A9898D /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F1D83C5192A2E7000A9898D /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F1D83C6192A2E7000A9898D /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F1D83C7192A2E7000A9898D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8F1D83C8192A2E7000A9898D /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8F1D83C9192A2E7000A9898D /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -665,21 +635,6 @@
 		8F4A7F452029B78400CA6C0F /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F4A7F462029B78400CA6C0F /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F4A7F472029B78400CA6C0F /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F4A7F482029B78400CA6C0F /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F4A7F492029B78400CA6C0F /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F4A7F4A2029B78400CA6C0F /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F4A7F4B2029B78400CA6C0F /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F4A7F4C2029B78400CA6C0F /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F4A7F4D2029B78400CA6C0F /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F4A7F4E2029B78400CA6C0F /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F4A7F4F2029B78400CA6C0F /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F4A7F502029B78400CA6C0F /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F4A7F512029B78400CA6C0F /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F4A7F522029B78400CA6C0F /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F4A7F532029B78400CA6C0F /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F4A7F542029B78400CA6C0F /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F4A7F552029B78400CA6C0F /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F4A7F562029B78400CA6C0F /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F4A7F572029B78400CA6C0F /* IconLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6258F16CBC9BA00F0D213 /* IconLG.png */; };
 		8F4A7F582029B78400CA6C0F /* IconLG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259116CBC9C100F0D213 /* IconLG@2x.png */; };
 		8F4A7F592029B78400CA6C0F /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
@@ -857,21 +812,6 @@
 		8F8A75E71781BF4700CCF7DB /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F8A75E81781BF4700CCF7DB /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F8A75E91781BF4700CCF7DB /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F8A75EA1781BF4700CCF7DB /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F8A75EB1781BF4700CCF7DB /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F8A75EC1781BF4700CCF7DB /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F8A75ED1781BF4700CCF7DB /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F8A75EE1781BF4700CCF7DB /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F8A75EF1781BF4700CCF7DB /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F8A75F01781BF4700CCF7DB /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F8A75F11781BF4700CCF7DB /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F8A75F21781BF4700CCF7DB /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F8A75F31781BF4700CCF7DB /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F8A75F41781BF4700CCF7DB /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F8A75F51781BF4700CCF7DB /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F8A75F61781BF4700CCF7DB /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F8A75F71781BF4700CCF7DB /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F8A75F81781BF4700CCF7DB /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F8A75F91781BF4700CCF7DB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8F8A75FA1781BF4700CCF7DB /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8F8A75FB1781BF4700CCF7DB /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -995,21 +935,6 @@
 		8F8A767C1781C05400CCF7DB /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F8A767D1781C05400CCF7DB /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F8A767E1781C05400CCF7DB /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F8A767F1781C05400CCF7DB /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F8A76801781C05400CCF7DB /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F8A76811781C05400CCF7DB /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F8A76821781C05400CCF7DB /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F8A76831781C05400CCF7DB /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F8A76841781C05400CCF7DB /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F8A76851781C05400CCF7DB /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F8A76861781C05400CCF7DB /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F8A76871781C05400CCF7DB /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F8A76881781C05400CCF7DB /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F8A76891781C05400CCF7DB /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F8A768A1781C05400CCF7DB /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F8A768B1781C05400CCF7DB /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F8A768C1781C05400CCF7DB /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F8A768D1781C05400CCF7DB /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F8A768E1781C05400CCF7DB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8F8A768F1781C05400CCF7DB /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8F8A76901781C05400CCF7DB /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -1133,21 +1058,6 @@
 		8F8A77111781C0D800CCF7DB /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F8A77121781C0D800CCF7DB /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F8A77131781C0D800CCF7DB /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F8A77141781C0D800CCF7DB /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F8A77151781C0D800CCF7DB /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F8A77161781C0D800CCF7DB /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F8A77171781C0D800CCF7DB /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F8A77181781C0D800CCF7DB /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F8A77191781C0D800CCF7DB /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F8A771A1781C0D800CCF7DB /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F8A771B1781C0D800CCF7DB /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F8A771C1781C0D800CCF7DB /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F8A771D1781C0D800CCF7DB /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F8A771E1781C0D800CCF7DB /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F8A771F1781C0D800CCF7DB /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F8A77201781C0D800CCF7DB /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F8A77211781C0D800CCF7DB /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F8A77221781C0D800CCF7DB /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F8A77231781C0D800CCF7DB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8F8A77241781C0D800CCF7DB /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8F8A77251781C0D800CCF7DB /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -1307,21 +1217,6 @@
 		8F8EB6221A93689000548F24 /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8F8EB6231A93689000548F24 /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8F8EB6241A93689000548F24 /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8F8EB6251A93689000548F24 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8F8EB6261A93689000548F24 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8F8EB6271A93689000548F24 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8F8EB6281A93689000548F24 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8F8EB6291A93689000548F24 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8F8EB62A1A93689000548F24 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8F8EB62B1A93689000548F24 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8F8EB62C1A93689000548F24 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8F8EB62D1A93689000548F24 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8F8EB62E1A93689000548F24 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8F8EB62F1A93689000548F24 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8F8EB6301A93689000548F24 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8F8EB6311A93689000548F24 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8F8EB6321A93689000548F24 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8F8EB6331A93689000548F24 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8F8EB6341A93689000548F24 /* IconLG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6258F16CBC9BA00F0D213 /* IconLG.png */; };
 		8F8EB6351A93689000548F24 /* IconLG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259116CBC9C100F0D213 /* IconLG@2x.png */; };
 		8F8EB6361A93689000548F24 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
@@ -1479,21 +1374,6 @@
 		8FA8F56319501E6B006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F56419501E6B006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F56519501E6B006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F56619501E6B006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F56719501E6B006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F56819501E6B006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F56919501E6B006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F56A19501E6B006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F56B19501E6B006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F56C19501E6B006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F56D19501E6B006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F56E19501E6B006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F56F19501E6B006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F57019501E6B006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F57119501E6B006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F57219501E6B006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F57319501E6B006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F57419501E6B006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F57519501E6B006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F57619501E6B006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F57719501E6B006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -1630,21 +1510,6 @@
 		8FA8F60519502224006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F60619502224006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F60719502224006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F60819502224006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F60919502224006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F60A19502224006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F60B19502224006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F60C19502224006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F60D19502224006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F60E19502224006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F60F19502224006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F61019502224006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F61119502224006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F61219502224006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F61319502224006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F61419502224006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F61519502224006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F61619502224006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F61719502224006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F61819502224006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F61919502224006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -1781,21 +1646,6 @@
 		8FA8F6A71950228D006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F6A81950228D006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F6A91950228D006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F6AA1950228D006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F6AB1950228D006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F6AC1950228D006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F6AD1950228D006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F6AE1950228D006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F6AF1950228D006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F6B01950228D006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F6B11950228D006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F6B21950228D006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F6B31950228D006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F6B41950228D006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F6B51950228D006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F6B61950228D006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F6B71950228D006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F6B81950228D006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F6B91950228D006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F6BA1950228D006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F6BB1950228D006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -1932,21 +1782,6 @@
 		8FA8F749195022BC006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F74A195022BC006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F74B195022BC006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F74C195022BC006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F74D195022BC006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F74E195022BC006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F74F195022BC006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F750195022BC006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F751195022BC006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F752195022BC006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F753195022BC006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F754195022BC006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F755195022BC006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F756195022BC006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F757195022BC006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F758195022BC006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F759195022BC006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F75A195022BC006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F75B195022BC006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F75C195022BC006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F75D195022BC006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -2083,21 +1918,6 @@
 		8FA8F7EB1950230D006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F7EC1950230D006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F7ED1950230D006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F7EE1950230D006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F7EF1950230D006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F7F01950230D006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F7F11950230D006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F7F21950230D006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F7F31950230D006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F7F41950230D006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F7F51950230D006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F7F61950230D006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F7F71950230D006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F7F81950230D006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F7F91950230D006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F7FA1950230D006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F7FB1950230D006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F7FC1950230D006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F7FD1950230D006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F7FE1950230D006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F7FF1950230D006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -2234,21 +2054,6 @@
 		8FA8F88D1950233A006CD05A /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FA8F88E1950233A006CD05A /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FA8F88F1950233A006CD05A /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FA8F8901950233A006CD05A /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FA8F8911950233A006CD05A /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FA8F8921950233A006CD05A /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FA8F8931950233A006CD05A /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FA8F8941950233A006CD05A /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FA8F8951950233A006CD05A /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FA8F8961950233A006CD05A /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FA8F8971950233A006CD05A /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FA8F8981950233A006CD05A /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FA8F8991950233A006CD05A /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FA8F89A1950233A006CD05A /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FA8F89B1950233A006CD05A /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FA8F89C1950233A006CD05A /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FA8F89D1950233A006CD05A /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FA8F89E1950233A006CD05A /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FA8F89F1950233A006CD05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FA8F8A01950233A006CD05A /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FA8F8A11950233A006CD05A /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -2475,21 +2280,6 @@
 		8FAD97E51A0CFD3600C3A5D1 /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FAD97E61A0CFD3600C3A5D1 /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FAD97E71A0CFD3600C3A5D1 /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FAD97E81A0CFD3600C3A5D1 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FAD97E91A0CFD3600C3A5D1 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FAD97EA1A0CFD3600C3A5D1 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FAD97EB1A0CFD3600C3A5D1 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FAD97EC1A0CFD3600C3A5D1 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FAD97ED1A0CFD3600C3A5D1 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FAD97EE1A0CFD3600C3A5D1 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FAD97EF1A0CFD3600C3A5D1 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FAD97F01A0CFD3600C3A5D1 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FAD97F11A0CFD3600C3A5D1 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FAD97F21A0CFD3600C3A5D1 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FAD97F31A0CFD3600C3A5D1 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FAD97F41A0CFD3600C3A5D1 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FAD97F51A0CFD3600C3A5D1 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FAD97F61A0CFD3600C3A5D1 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FAD97F71A0CFD3600C3A5D1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FAD97F81A0CFD3600C3A5D1 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FAD97F91A0CFD3600C3A5D1 /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -2528,36 +2318,6 @@
 		8FAD98211A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */; };
 		8FAD98221A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */; };
 		8FAD98231A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */; };
-		8FB2FE0516CA4575007382EE /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FB2FE0616CA4575007382EE /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FB2FE0716CA4575007382EE /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FB2FE0816CA4575007382EE /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FB2FE0916CA4575007382EE /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FB2FE0A16CA4575007382EE /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FB2FE0B16CA4575007382EE /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FB2FE0C16CA4575007382EE /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FB2FE0D16CA4575007382EE /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FB2FE0E16CA4575007382EE /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FB2FE0F16CA4575007382EE /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FB2FE1016CA4575007382EE /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FB2FE1116CA4575007382EE /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FB2FE1216CA4575007382EE /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FB2FE1316CA4575007382EE /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FB2FE1416CA4575007382EE /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FB2FE1516CA4575007382EE /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FB2FE1616CA4575007382EE /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FB2FE1716CA4575007382EE /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FB2FE1816CA4575007382EE /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FB2FE1916CA4575007382EE /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FB2FE1A16CA4575007382EE /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FB2FE1B16CA4575007382EE /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FB2FE1C16CA4575007382EE /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FB2FE1D16CA4575007382EE /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FB2FE1E16CA4575007382EE /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FB2FE1F16CA4575007382EE /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FB2FE2016CA4575007382EE /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FB2FE2116CA4575007382EE /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
-		8FB2FE2216CA4575007382EE /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FB2FE2316CA6631007382EE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1101F6165CEFA2008A8A46 /* libxml2.dylib */; };
 		8FB2FE2416CA663A007382EE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1101F6165CEFA2008A8A46 /* libxml2.dylib */; };
 		8FBA87691681FF49005A9962 /* BAImpressumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA87681681FF49005A9962 /* BAImpressumTableViewController.m */; };
@@ -2709,21 +2469,6 @@
 		8FD610E1190916EA009E2358 /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FD610E2190916EA009E2358 /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FD610E3190916EA009E2358 /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FD610E4190916EA009E2358 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FD610E5190916EA009E2358 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FD610E6190916EA009E2358 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FD610E7190916EA009E2358 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FD610E8190916EA009E2358 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FD610E9190916EA009E2358 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FD610EA190916EA009E2358 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FD610EB190916EA009E2358 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FD610EC190916EA009E2358 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FD610ED190916EA009E2358 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FD610EE190916EA009E2358 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FD610EF190916EA009E2358 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FD610F0190916EA009E2358 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FD610F1190916EA009E2358 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FD610F2190916EA009E2358 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FD610F3190916EA009E2358 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FD610F4190916EA009E2358 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FD610F5190916EA009E2358 /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -2854,21 +2599,6 @@
 		8FD6117D190916EF009E2358 /* menuIconOptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7816B68AD8000CED81 /* menuIconOptions@2x.png */; };
 		8FD6117E190916EF009E2358 /* menuIconSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F7916B68AD8000CED81 /* menuIconSearch@2x.png */; };
 		8FD6117F190916EF009E2358 /* menuIconInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D9F8416B69949000CED81 /* menuIconInfo.png */; };
-		8FD61180190916EF009E2358 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF616CA4575007382EE /* mediaIconA.png */; };
-		8FD61181190916EF009E2358 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF716CA4575007382EE /* mediaIconB.png */; };
-		8FD61182190916EF009E2358 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF816CA4575007382EE /* mediaIconE.png */; };
-		8FD61183190916EF009E2358 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDF916CA4575007382EE /* mediaIconG.png */; };
-		8FD61184190916EF009E2358 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFA16CA4575007382EE /* mediaIconH.png */; };
-		8FD61185190916EF009E2358 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFB16CA4575007382EE /* mediaIconI.png */; };
-		8FD61186190916EF009E2358 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFC16CA4575007382EE /* mediaIconK.png */; };
-		8FD61187190916EF009E2358 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFD16CA4575007382EE /* mediaIconL.png */; };
-		8FD61188190916EF009E2358 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFE16CA4575007382EE /* mediaIconM.png */; };
-		8FD61189190916EF009E2358 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FDFF16CA4575007382EE /* mediaIconO.png */; };
-		8FD6118A190916EF009E2358 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0016CA4575007382EE /* mediaIconP.png */; };
-		8FD6118B190916EF009E2358 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0116CA4575007382EE /* mediaIconS.png */; };
-		8FD6118C190916EF009E2358 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0216CA4575007382EE /* mediaIconT.png */; };
-		8FD6118D190916EF009E2358 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0316CA4575007382EE /* mediaIconV.png */; };
-		8FD6118E190916EF009E2358 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2FE0416CA4575007382EE /* mediaIconX.png */; };
 		8FD6118F190916EF009E2358 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6259316CBCADE00F0D213 /* Icon.png */; };
 		8FD61190190916EF009E2358 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FD61191190916EF009E2358 /* transparentImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEACCAC16D38F8D00E0565E /* transparentImage.png */; };
@@ -3071,6 +2801,294 @@
 		B43CE0AF20FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
 		B43CE0B020FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
 		B43CE0B120FF3F6700AFBC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43CE09E20FF3F6600AFBC78 /* Localizable.strings */; };
+		B4CD1E6021481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6121481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6221481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6321481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6421481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6521481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6621481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6721481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6821481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6921481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6A21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6B21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6C21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6D21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6E21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E6F21481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E7021481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E7121481B09008F0A46 /* mediaIconI.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5021481B01008F0A46 /* mediaIconI.png */; };
+		B4CD1E7221481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7321481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7421481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7521481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7621481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7721481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7821481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7921481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7A21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7B21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7C21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7D21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7E21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E7F21481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E8021481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E8121481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E8221481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E8321481B09008F0A46 /* mediaIconP.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5121481B02008F0A46 /* mediaIconP.png */; };
+		B4CD1E8421481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8521481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8621481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8721481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8821481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8921481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8A21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8B21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8C21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8D21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8E21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E8F21481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9021481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9121481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9221481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9321481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9421481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9521481B09008F0A46 /* mediaIconB.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5221481B02008F0A46 /* mediaIconB.png */; };
+		B4CD1E9621481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9721481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9821481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9921481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9A21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9B21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9C21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9D21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9E21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1E9F21481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA021481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA121481B09008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA221481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA321481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA421481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA521481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA621481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA721481B0A008F0A46 /* mediaIconM.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5321481B03008F0A46 /* mediaIconM.png */; };
+		B4CD1EA821481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EA921481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAA21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAB21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAC21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAD21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAE21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EAF21481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB021481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB121481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB221481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB321481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB421481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB521481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB621481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB721481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB821481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EB921481B0A008F0A46 /* mediaIconBe.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5421481B03008F0A46 /* mediaIconBe.png */; };
+		B4CD1EBA21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EBB21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EBC21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EBD21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EBE21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EBF21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC021481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC121481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC221481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC321481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC421481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC521481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC621481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC721481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC821481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1EC921481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1ECA21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1ECB21481B0A008F0A46 /* mediaIconO.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5521481B03008F0A46 /* mediaIconO.png */; };
+		B4CD1ECC21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ECD21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ECE21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ECF21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED021481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED121481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED221481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED321481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED421481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED521481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED621481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED721481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED821481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1ED921481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1EDA21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1EDB21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1EDC21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1EDD21481B0A008F0A46 /* mediaIconG.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5621481B04008F0A46 /* mediaIconG.png */; };
+		B4CD1EDE21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EDF21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE021481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE121481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE221481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE321481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE421481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE521481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE621481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE721481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE821481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EE921481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EEA21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EEB21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EEC21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EED21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EEE21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EEF21481B0A008F0A46 /* mediaIconA.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5721481B04008F0A46 /* mediaIconA.png */; };
+		B4CD1EF021481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF121481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF221481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF321481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF421481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF521481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF621481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF721481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF821481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EF921481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFA21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFB21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFC21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFD21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFE21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1EFF21481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1F0021481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1F0121481B0A008F0A46 /* mediaIconV.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5821481B05008F0A46 /* mediaIconV.png */; };
+		B4CD1F0221481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0321481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0421481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0521481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0621481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0721481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0821481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0921481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0A21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0B21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0C21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0D21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0E21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F0F21481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F1021481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F1121481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F1221481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F1321481B0A008F0A46 /* mediaIconH.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5921481B06008F0A46 /* mediaIconH.png */; };
+		B4CD1F1421481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1521481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1621481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1721481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1821481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1921481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1A21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1B21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1C21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1D21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1E21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F1F21481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2021481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2121481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2221481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2321481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2421481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2521481B0A008F0A46 /* mediaIconK.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5A21481B06008F0A46 /* mediaIconK.png */; };
+		B4CD1F2621481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2721481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2821481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2921481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2A21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2B21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2C21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2D21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2E21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F2F21481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3021481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3121481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3221481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3321481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3421481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3521481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3621481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3721481B0A008F0A46 /* mediaIconX.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5B21481B07008F0A46 /* mediaIconX.png */; };
+		B4CD1F3821481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3921481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3A21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3B21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3C21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3D21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3E21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F3F21481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4021481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4121481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4221481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4321481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4421481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4521481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4621481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4721481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4821481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4921481B0A008F0A46 /* mediaIconL.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5C21481B07008F0A46 /* mediaIconL.png */; };
+		B4CD1F4A21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F4B21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F4C21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F4D21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F4E21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F4F21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5021481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5121481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5221481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5321481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5421481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5521481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5621481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5721481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5821481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5921481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5A21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5B21481B0A008F0A46 /* mediaIconE.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5D21481B08008F0A46 /* mediaIconE.png */; };
+		B4CD1F5C21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F5D21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F5E21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F5F21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6021481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6121481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6221481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6321481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6421481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6521481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6621481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6721481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6821481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6921481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6A21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6B21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6C21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6D21481B0A008F0A46 /* mediaIconS.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5E21481B08008F0A46 /* mediaIconS.png */; };
+		B4CD1F6E21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F6F21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7021481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7121481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7221481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7321481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7421481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7521481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7621481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7721481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7821481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7921481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7A21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7B21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7C21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7D21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7E21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
+		B4CD1F7F21481B0A008F0A46 /* mediaIconT.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CD1E5F21481B09008F0A46 /* mediaIconT.png */; };
 		B4D8B2CD2099E85A0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		B4D8B2CE2099E85D0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		B4D8B2CF2099E85E0042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
@@ -3265,21 +3283,6 @@
 		8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-TU-BS-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-TU-BS-Info.plist"; sourceTree = "<absolute>"; };
 		8FAD98121A0CFEC200C3A5D1 /* BAConfigurationTUBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationTUBS.h; sourceTree = "<group>"; };
 		8FAD98131A0CFEC200C3A5D1 /* BAConfigurationTUBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationTUBS.m; sourceTree = "<group>"; };
-		8FB2FDF616CA4575007382EE /* mediaIconA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconA.png; sourceTree = "<group>"; };
-		8FB2FDF716CA4575007382EE /* mediaIconB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconB.png; sourceTree = "<group>"; };
-		8FB2FDF816CA4575007382EE /* mediaIconE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconE.png; sourceTree = "<group>"; };
-		8FB2FDF916CA4575007382EE /* mediaIconG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconG.png; sourceTree = "<group>"; };
-		8FB2FDFA16CA4575007382EE /* mediaIconH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconH.png; sourceTree = "<group>"; };
-		8FB2FDFB16CA4575007382EE /* mediaIconI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconI.png; sourceTree = "<group>"; };
-		8FB2FDFC16CA4575007382EE /* mediaIconK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconK.png; sourceTree = "<group>"; };
-		8FB2FDFD16CA4575007382EE /* mediaIconL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconL.png; sourceTree = "<group>"; };
-		8FB2FDFE16CA4575007382EE /* mediaIconM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconM.png; sourceTree = "<group>"; };
-		8FB2FDFF16CA4575007382EE /* mediaIconO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconO.png; sourceTree = "<group>"; };
-		8FB2FE0016CA4575007382EE /* mediaIconP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconP.png; sourceTree = "<group>"; };
-		8FB2FE0116CA4575007382EE /* mediaIconS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconS.png; sourceTree = "<group>"; };
-		8FB2FE0216CA4575007382EE /* mediaIconT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconT.png; sourceTree = "<group>"; };
-		8FB2FE0316CA4575007382EE /* mediaIconV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconV.png; sourceTree = "<group>"; };
-		8FB2FE0416CA4575007382EE /* mediaIconX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconX.png; sourceTree = "<group>"; };
 		8FBA87671681FF49005A9962 /* BAImpressumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAImpressumTableViewController.h; sourceTree = "<group>"; };
 		8FBA87681681FF49005A9962 /* BAImpressumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAImpressumTableViewController.m; sourceTree = "<group>"; };
 		8FBA876B16820535005A9962 /* BAImpressumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAImpressumCell.xib; sourceTree = "<group>"; };
@@ -3416,6 +3419,22 @@
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
 		B43CE09F20FF3F6600AFBC78 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = bibapp/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B43CE0B220FF3F7500AFBC78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = bibapp/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B4CD1E5021481B01008F0A46 /* mediaIconI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconI.png; sourceTree = "<group>"; };
+		B4CD1E5121481B02008F0A46 /* mediaIconP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconP.png; sourceTree = "<group>"; };
+		B4CD1E5221481B02008F0A46 /* mediaIconB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconB.png; sourceTree = "<group>"; };
+		B4CD1E5321481B03008F0A46 /* mediaIconM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconM.png; sourceTree = "<group>"; };
+		B4CD1E5421481B03008F0A46 /* mediaIconBe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconBe.png; sourceTree = "<group>"; };
+		B4CD1E5521481B03008F0A46 /* mediaIconO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconO.png; sourceTree = "<group>"; };
+		B4CD1E5621481B04008F0A46 /* mediaIconG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconG.png; sourceTree = "<group>"; };
+		B4CD1E5721481B04008F0A46 /* mediaIconA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconA.png; sourceTree = "<group>"; };
+		B4CD1E5821481B05008F0A46 /* mediaIconV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconV.png; sourceTree = "<group>"; };
+		B4CD1E5921481B06008F0A46 /* mediaIconH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconH.png; sourceTree = "<group>"; };
+		B4CD1E5A21481B06008F0A46 /* mediaIconK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconK.png; sourceTree = "<group>"; };
+		B4CD1E5B21481B07008F0A46 /* mediaIconX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconX.png; sourceTree = "<group>"; };
+		B4CD1E5C21481B07008F0A46 /* mediaIconL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconL.png; sourceTree = "<group>"; };
+		B4CD1E5D21481B08008F0A46 /* mediaIconE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconE.png; sourceTree = "<group>"; };
+		B4CD1E5E21481B08008F0A46 /* mediaIconS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconS.png; sourceTree = "<group>"; };
+		B4CD1E5F21481B09008F0A46 /* mediaIconT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediaIconT.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4244,21 +4263,22 @@
 		8FFE768F16B142ED00844658 /* mediaIcons */ = {
 			isa = PBXGroup;
 			children = (
-				8FB2FDF616CA4575007382EE /* mediaIconA.png */,
-				8FB2FDF716CA4575007382EE /* mediaIconB.png */,
-				8FB2FDF816CA4575007382EE /* mediaIconE.png */,
-				8FB2FDF916CA4575007382EE /* mediaIconG.png */,
-				8FB2FDFA16CA4575007382EE /* mediaIconH.png */,
-				8FB2FDFB16CA4575007382EE /* mediaIconI.png */,
-				8FB2FDFC16CA4575007382EE /* mediaIconK.png */,
-				8FB2FDFD16CA4575007382EE /* mediaIconL.png */,
-				8FB2FDFE16CA4575007382EE /* mediaIconM.png */,
-				8FB2FDFF16CA4575007382EE /* mediaIconO.png */,
-				8FB2FE0016CA4575007382EE /* mediaIconP.png */,
-				8FB2FE0116CA4575007382EE /* mediaIconS.png */,
-				8FB2FE0216CA4575007382EE /* mediaIconT.png */,
-				8FB2FE0316CA4575007382EE /* mediaIconV.png */,
-				8FB2FE0416CA4575007382EE /* mediaIconX.png */,
+				B4CD1E5721481B04008F0A46 /* mediaIconA.png */,
+				B4CD1E5221481B02008F0A46 /* mediaIconB.png */,
+				B4CD1E5421481B03008F0A46 /* mediaIconBe.png */,
+				B4CD1E5D21481B08008F0A46 /* mediaIconE.png */,
+				B4CD1E5621481B04008F0A46 /* mediaIconG.png */,
+				B4CD1E5921481B06008F0A46 /* mediaIconH.png */,
+				B4CD1E5021481B01008F0A46 /* mediaIconI.png */,
+				B4CD1E5A21481B06008F0A46 /* mediaIconK.png */,
+				B4CD1E5C21481B07008F0A46 /* mediaIconL.png */,
+				B4CD1E5321481B03008F0A46 /* mediaIconM.png */,
+				B4CD1E5521481B03008F0A46 /* mediaIconO.png */,
+				B4CD1E5121481B02008F0A46 /* mediaIconP.png */,
+				B4CD1E5E21481B08008F0A46 /* mediaIconS.png */,
+				B4CD1E5F21481B09008F0A46 /* mediaIconT.png */,
+				B4CD1E5821481B05008F0A46 /* mediaIconV.png */,
+				B4CD1E5B21481B07008F0A46 /* mediaIconX.png */,
 			);
 			name = mediaIcons;
 			sourceTree = "<group>";
@@ -4722,13 +4742,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F07B1921BFB72DB0012C325 /* Default.png in Resources */,
+				B4CD1E7021481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F07B1931BFB72DB0012C325 /* Default@2x.png in Resources */,
 				8F07B1941BFB72DB0012C325 /* Default-568h@2x.png in Resources */,
 				8F07B1951BFB72DB0012C325 /* bibapp~iphone.storyboard in Resources */,
 				8F07B1961BFB72DB0012C325 /* BAItemCell.xib in Resources */,
+				B4CD1F0021481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F07B1971BFB72DB0012C325 /* BAItemDetail.xib in Resources */,
 				8F07B1981BFB72DB0012C325 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F5A21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				B4CD1F4821481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F07B1991BFB72DB0012C325 /* BAInfoCell.xib in Resources */,
+				B4CD1F1221481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F07B19A1BFB72DB0012C325 /* BADocumentItemElementCell.xib in Resources */,
 				8F07B19B1BFB72DB0012C325 /* BibApp-SM-Info.plist in Resources */,
 				8F07B19C1BFB72DB0012C325 /* BADocumentItemCell.xib in Resources */,
@@ -4739,34 +4764,26 @@
 				8F07B1A11BFB72DB0012C325 /* BAItemDetailTitleCell.xib in Resources */,
 				8F07B1A21BFB72DB0012C325 /* Images.xcassets in Resources */,
 				8F07B1A31BFB72DB0012C325 /* BAImpressumCell.xib in Resources */,
+				B4CD1EEE21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F07B1A41BFB72DB0012C325 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F07B1A51BFB72DB0012C325 /* menuIconAccount.png in Resources */,
+				B4CD1F2421481B0A008F0A46 /* mediaIconK.png in Resources */,
+				B4CD1EB821481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F07B1A61BFB72DB0012C325 /* menuIconList.png in Resources */,
 				8F07B1A71BFB72DB0012C325 /* menuIconOptions.png in Resources */,
+				B4CD1F7E21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1EA621481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8F07B1A81BFB72DB0012C325 /* menuIconSearch.png in Resources */,
 				8F07B1A91BFB72DB0012C325 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F07B1AA1BFB72DB0012C325 /* menuIconAccount@2x.png in Resources */,
 				8F07B1AB1BFB72DB0012C325 /* menuIconInfo@2x.png in Resources */,
 				8F07B1AC1BFB72DB0012C325 /* BANoSearchResultsCell.xib in Resources */,
+				B4CD1F3621481B0A008F0A46 /* mediaIconX.png in Resources */,
+				B4CD1EDC21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8F07B1AD1BFB72DB0012C325 /* menuIconList@2x.png in Resources */,
 				8F07B1AE1BFB72DB0012C325 /* menuIconOptions@2x.png in Resources */,
 				8F07B1AF1BFB72DB0012C325 /* menuIconSearch@2x.png in Resources */,
 				8F07B1B01BFB72DB0012C325 /* menuIconInfo.png in Resources */,
-				8F07B1B11BFB72DB0012C325 /* mediaIconA.png in Resources */,
-				8F07B1B21BFB72DB0012C325 /* mediaIconB.png in Resources */,
-				8F07B1B31BFB72DB0012C325 /* mediaIconE.png in Resources */,
-				8F07B1B41BFB72DB0012C325 /* mediaIconG.png in Resources */,
-				8F07B1B51BFB72DB0012C325 /* mediaIconH.png in Resources */,
-				8F07B1B61BFB72DB0012C325 /* mediaIconI.png in Resources */,
-				8F07B1B71BFB72DB0012C325 /* mediaIconK.png in Resources */,
-				8F07B1B81BFB72DB0012C325 /* mediaIconL.png in Resources */,
-				8F07B1B91BFB72DB0012C325 /* mediaIconM.png in Resources */,
-				8F07B1BA1BFB72DB0012C325 /* mediaIconO.png in Resources */,
-				8F07B1BB1BFB72DB0012C325 /* mediaIconP.png in Resources */,
-				8F07B1BC1BFB72DB0012C325 /* mediaIconS.png in Resources */,
-				8F07B1BD1BFB72DB0012C325 /* mediaIconT.png in Resources */,
-				8F07B1BE1BFB72DB0012C325 /* mediaIconV.png in Resources */,
-				8F07B1BF1BFB72DB0012C325 /* mediaIconX.png in Resources */,
 				8F07B1C01BFB72DB0012C325 /* IconLG.png in Resources */,
 				8F07B1C11BFB72DB0012C325 /* IconLG@2x.png in Resources */,
 				8F07B1C21BFB72DB0012C325 /* bibapp~ipad.storyboard in Resources */,
@@ -4774,6 +4791,7 @@
 				8F07B1C41BFB72DB0012C325 /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F07B1C51BFB72DB0012C325 /* actionButton.png in Resources */,
 				8F07B1C61BFB72DB0012C325 /* Buch_250_gradient.png in Resources */,
+				B4CD1F6C21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F07B1C71BFB72DB0012C325 /* BADocumentItemElementCellPad.xib in Resources */,
 				8F07B1C81BFB72DB0012C325 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				B43CE0B020FF3F6700AFBC78 /* Localizable.strings in Resources */,
@@ -4787,7 +4805,10 @@
 				8F07B1D01BFB72DB0012C325 /* BATocListCell.xib in Resources */,
 				8F07B1D11BFB72DB0012C325 /* iPadIconLG.png in Resources */,
 				8F07B1D21BFB72DB0012C325 /* iPadIconLG@2x.png in Resources */,
+				B4CD1E8221481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1ECA21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F07B1D31BFB72DB0012C325 /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1E9421481B09008F0A46 /* mediaIconB.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4799,18 +4820,26 @@
 				8FE5D0C516AFDE700024027C /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FBA8771168207D1005A9962 /* BAImpressumCell.xib in Resources */,
 				8F114064167F217000E033F6 /* Default.png in Resources */,
+				B4CD1E8521481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F114065167F217000E033F6 /* Default@2x.png in Resources */,
 				8F114066167F217000E033F6 /* Default-568h@2x.png in Resources */,
 				8F114067167F217000E033F6 /* bibapp~iphone.storyboard in Resources */,
 				8F114068167F217000E033F6 /* BAItemCell.xib in Resources */,
+				B4CD1F4B21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F11406E167F217000E033F6 /* BAItemDetail.xib in Resources */,
+				B4CD1E9721481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7321481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EA921481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F11406F167F217000E033F6 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F3921481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F114071167F217000E033F6 /* BAInfoCell.xib in Resources */,
 				8F114072167F217000E033F6 /* BADocumentItemElementCell.xib in Resources */,
 				8F11407A167F217000E033F6 /* BADocumentItemCell.xib in Resources */,
 				8F11407B167F217000E033F6 /* BAItemAccountCell.xib in Resources */,
 				8F180737192B3A7B0099F579 /* Images.xcassets in Resources */,
+				B4CD1EBB21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F11407D167F217000E033F6 /* Icon@2x.png in Resources */,
+				B4CD1F1521481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */,
 				B43CE0A120FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F114080167F217000E033F6 /* checkbox.png in Resources */,
@@ -4821,26 +4850,13 @@
 				8FFE76BD16B1448300844658 /* menuIconSearch.png in Resources */,
 				8F0D9F7B16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */,
 				8F0D9F7D16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */,
+				B4CD1EDF21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F0D9F7F16B68AD8000CED81 /* menuIconList@2x.png in Resources */,
 				8F0D9F8116B68AD8000CED81 /* menuIconOptions@2x.png in Resources */,
 				8F0D9F8316B68AD8000CED81 /* menuIconSearch@2x.png in Resources */,
 				8F0D9F8616B69949000CED81 /* menuIconInfo.png in Resources */,
-				8FB2FE0616CA4575007382EE /* mediaIconA.png in Resources */,
-				8FB2FE0816CA4575007382EE /* mediaIconB.png in Resources */,
-				8FB2FE0A16CA4575007382EE /* mediaIconE.png in Resources */,
-				8FB2FE0C16CA4575007382EE /* mediaIconG.png in Resources */,
+				B4CD1F0321481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA611B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FB2FE0E16CA4575007382EE /* mediaIconH.png in Resources */,
-				8FB2FE1016CA4575007382EE /* mediaIconI.png in Resources */,
-				8FB2FE1216CA4575007382EE /* mediaIconK.png in Resources */,
-				8FB2FE1416CA4575007382EE /* mediaIconL.png in Resources */,
-				8FB2FE1616CA4575007382EE /* mediaIconM.png in Resources */,
-				8FB2FE1816CA4575007382EE /* mediaIconO.png in Resources */,
-				8FB2FE1A16CA4575007382EE /* mediaIconP.png in Resources */,
-				8FB2FE1C16CA4575007382EE /* mediaIconS.png in Resources */,
-				8FB2FE1E16CA4575007382EE /* mediaIconT.png in Resources */,
-				8FB2FE2016CA4575007382EE /* mediaIconV.png in Resources */,
-				8FB2FE2216CA4575007382EE /* mediaIconX.png in Resources */,
 				8FE6259416CBCADE00F0D213 /* Icon.png in Resources */,
 				8FED45EC16D235A90056CD88 /* bibapp~ipad.storyboard in Resources */,
 				8FEACCAE16D38F8D00E0565E /* transparentImage.png in Resources */,
@@ -4854,12 +4870,18 @@
 				8FD7C10816F37EC00073D037 /* gear2.png in Resources */,
 				8FE9812E16F7393600328531 /* BAInfoCellPad.xib in Resources */,
 				8FE9813516F74A2800328531 /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F6F21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ECD21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FE9813C16F7588000328531 /* BALocationCellPad.xib in Resources */,
 				8FD463A616F9F3F700E935EC /* BATocCellPad.xib in Resources */,
 				8F6A7C2C1701CFB800C4E580 /* BATocListCell.xib in Resources */,
+				B4CD1E6121481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F5319281951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FE5F960170466EA002EA336 /* iPadIcon.png in Resources */,
+				B4CD1F5D21481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2721481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
+				B4CD1EF121481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
 				8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
@@ -4874,18 +4896,26 @@
 				8F1D839C192A2E7000A9898D /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F1D839D192A2E7000A9898D /* BAImpressumCell.xib in Resources */,
 				8F1D839F192A2E7000A9898D /* Default.png in Resources */,
+				B4CD1E8B21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */,
 				8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */,
 				8F1D83A2192A2E7000A9898D /* bibapp~iphone.storyboard in Resources */,
 				8F1D83A3192A2E7000A9898D /* BAItemCell.xib in Resources */,
+				B4CD1F5121481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F1D83A4192A2E7000A9898D /* BAItemDetail.xib in Resources */,
+				B4CD1E9D21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7921481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EAF21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F1D83A5192A2E7000A9898D /* BAItemDetailCell.xib in Resources */,
+				B4CD1F3F21481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F1D83A6192A2E7000A9898D /* BAInfoCell.xib in Resources */,
 				8F1D83A7192A2E7000A9898D /* BADocumentItemElementCell.xib in Resources */,
 				8F1D83A8192A2E7000A9898D /* BADocumentItemCell.xib in Resources */,
 				8F1D83A9192A2E7000A9898D /* BAItemAccountCell.xib in Resources */,
 				8F1D83EC192A301F00A9898D /* Images.xcassets in Resources */,
+				B4CD1EC121481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F1D83AA192A2E7000A9898D /* Icon@2x.png in Resources */,
+				B4CD1F1B21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */,
 				B43CE0A720FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */,
@@ -4896,26 +4926,13 @@
 				8F1D83B1192A2E7000A9898D /* menuIconSearch.png in Resources */,
 				8F1D83B2192A2E7000A9898D /* menuIconAccount@2x.png in Resources */,
 				8F1D83B3192A2E7000A9898D /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE521481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F1D83B4192A2E7000A9898D /* menuIconList@2x.png in Resources */,
 				8F1D83B5192A2E7000A9898D /* menuIconOptions@2x.png in Resources */,
 				8F1D83B6192A2E7000A9898D /* menuIconSearch@2x.png in Resources */,
 				8F1D83B7192A2E7000A9898D /* menuIconInfo.png in Resources */,
-				8F1D83B8192A2E7000A9898D /* mediaIconA.png in Resources */,
-				8F1D83B9192A2E7000A9898D /* mediaIconB.png in Resources */,
-				8F1D83BA192A2E7000A9898D /* mediaIconE.png in Resources */,
-				8F1D83BB192A2E7000A9898D /* mediaIconG.png in Resources */,
+				B4CD1F0921481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA671B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8F1D83BC192A2E7000A9898D /* mediaIconH.png in Resources */,
-				8F1D83BD192A2E7000A9898D /* mediaIconI.png in Resources */,
-				8F1D83BE192A2E7000A9898D /* mediaIconK.png in Resources */,
-				8F1D83BF192A2E7000A9898D /* mediaIconL.png in Resources */,
-				8F1D83C0192A2E7000A9898D /* mediaIconM.png in Resources */,
-				8F1D83C1192A2E7000A9898D /* mediaIconO.png in Resources */,
-				8F1D83C2192A2E7000A9898D /* mediaIconP.png in Resources */,
-				8F1D83C3192A2E7000A9898D /* mediaIconS.png in Resources */,
-				8F1D83C4192A2E7000A9898D /* mediaIconT.png in Resources */,
-				8F1D83C5192A2E7000A9898D /* mediaIconV.png in Resources */,
-				8F1D83C6192A2E7000A9898D /* mediaIconX.png in Resources */,
 				8F1D83C7192A2E7000A9898D /* Icon.png in Resources */,
 				8F1D83C8192A2E7000A9898D /* bibapp~ipad.storyboard in Resources */,
 				8F1D83C9192A2E7000A9898D /* transparentImage.png in Resources */,
@@ -4929,12 +4946,18 @@
 				8F1D83D1192A2E7000A9898D /* gear2.png in Resources */,
 				8F1D83D2192A2E7000A9898D /* BAInfoCellPad.xib in Resources */,
 				8F1D83D3192A2E7000A9898D /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7521481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED321481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8F1D83D4192A2E7000A9898D /* BALocationCellPad.xib in Resources */,
 				8F1D83D5192A2E7000A9898D /* BATocCellPad.xib in Resources */,
 				8F1D83D6192A2E7000A9898D /* BATocListCell.xib in Resources */,
+				B4CD1E6721481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F53192E1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8F1D83D7192A2E7000A9898D /* iPadIcon.png in Resources */,
+				B4CD1F6321481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2D21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8F1D83D8192A2E7000A9898D /* iPadIcon@2x.png in Resources */,
+				B4CD1EF721481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */,
 				8F1D83DA192A2E7000A9898D /* Icon-72@2x.png in Resources */,
 				8F1D83DB192A2E7000A9898D /* BACatalogueTableViewCell.xib in Resources */,
@@ -4946,13 +4969,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4A7F292029B78400CA6C0F /* Default.png in Resources */,
+				B4CD1E7121481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F4A7F2A2029B78400CA6C0F /* Default@2x.png in Resources */,
 				8F4A7F2B2029B78400CA6C0F /* Default-568h@2x.png in Resources */,
 				8F4A7F2C2029B78400CA6C0F /* bibapp~iphone.storyboard in Resources */,
 				8F4A7F2D2029B78400CA6C0F /* BAItemCell.xib in Resources */,
+				B4CD1F0121481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F4A7F2E2029B78400CA6C0F /* BAItemDetail.xib in Resources */,
 				8F4A7F2F2029B78400CA6C0F /* BAItemDetailCell.xib in Resources */,
+				B4CD1F5B21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				B4CD1F4921481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F4A7F302029B78400CA6C0F /* BAInfoCell.xib in Resources */,
+				B4CD1F1321481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F4A7F312029B78400CA6C0F /* BADocumentItemElementCell.xib in Resources */,
 				8F4A7F322029B78400CA6C0F /* BibApp-SM-Info.plist in Resources */,
 				8F4A7F332029B78400CA6C0F /* BADocumentItemCell.xib in Resources */,
@@ -4963,34 +4991,26 @@
 				8F4A7F382029B78400CA6C0F /* BAItemDetailTitleCell.xib in Resources */,
 				8F4A7F392029B78400CA6C0F /* Images.xcassets in Resources */,
 				8F4A7F3A2029B78400CA6C0F /* BAImpressumCell.xib in Resources */,
+				B4CD1EEF21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F4A7F3B2029B78400CA6C0F /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F4A7F3C2029B78400CA6C0F /* menuIconAccount.png in Resources */,
+				B4CD1F2521481B0A008F0A46 /* mediaIconK.png in Resources */,
+				B4CD1EB921481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F4A7F3D2029B78400CA6C0F /* menuIconList.png in Resources */,
 				8F4A7F3E2029B78400CA6C0F /* menuIconOptions.png in Resources */,
+				B4CD1F7F21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1EA721481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8F4A7F3F2029B78400CA6C0F /* menuIconSearch.png in Resources */,
 				8F4A7F402029B78400CA6C0F /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F4A7F412029B78400CA6C0F /* menuIconAccount@2x.png in Resources */,
 				8F4A7F422029B78400CA6C0F /* menuIconInfo@2x.png in Resources */,
 				8F4A7F432029B78400CA6C0F /* BANoSearchResultsCell.xib in Resources */,
+				B4CD1F3721481B0A008F0A46 /* mediaIconX.png in Resources */,
+				B4CD1EDD21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8F4A7F442029B78400CA6C0F /* menuIconList@2x.png in Resources */,
 				8F4A7F452029B78400CA6C0F /* menuIconOptions@2x.png in Resources */,
 				8F4A7F462029B78400CA6C0F /* menuIconSearch@2x.png in Resources */,
 				8F4A7F472029B78400CA6C0F /* menuIconInfo.png in Resources */,
-				8F4A7F482029B78400CA6C0F /* mediaIconA.png in Resources */,
-				8F4A7F492029B78400CA6C0F /* mediaIconB.png in Resources */,
-				8F4A7F4A2029B78400CA6C0F /* mediaIconE.png in Resources */,
-				8F4A7F4B2029B78400CA6C0F /* mediaIconG.png in Resources */,
-				8F4A7F4C2029B78400CA6C0F /* mediaIconH.png in Resources */,
-				8F4A7F4D2029B78400CA6C0F /* mediaIconI.png in Resources */,
-				8F4A7F4E2029B78400CA6C0F /* mediaIconK.png in Resources */,
-				8F4A7F4F2029B78400CA6C0F /* mediaIconL.png in Resources */,
-				8F4A7F502029B78400CA6C0F /* mediaIconM.png in Resources */,
-				8F4A7F512029B78400CA6C0F /* mediaIconO.png in Resources */,
-				8F4A7F522029B78400CA6C0F /* mediaIconP.png in Resources */,
-				8F4A7F532029B78400CA6C0F /* mediaIconS.png in Resources */,
-				8F4A7F542029B78400CA6C0F /* mediaIconT.png in Resources */,
-				8F4A7F552029B78400CA6C0F /* mediaIconV.png in Resources */,
-				8F4A7F562029B78400CA6C0F /* mediaIconX.png in Resources */,
 				8F4A7F572029B78400CA6C0F /* IconLG.png in Resources */,
 				8F4A7F582029B78400CA6C0F /* IconLG@2x.png in Resources */,
 				8F4A7F592029B78400CA6C0F /* bibapp~ipad.storyboard in Resources */,
@@ -4998,6 +5018,7 @@
 				8F4A7F5B2029B78400CA6C0F /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F4A7F5C2029B78400CA6C0F /* actionButton.png in Resources */,
 				8F4A7F5D2029B78400CA6C0F /* Buch_250_gradient.png in Resources */,
+				B4CD1F6D21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F4A7F5E2029B78400CA6C0F /* BADocumentItemElementCellPad.xib in Resources */,
 				8F4A7F5F2029B78400CA6C0F /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				B43CE0B120FF3F6700AFBC78 /* Localizable.strings in Resources */,
@@ -5011,7 +5032,10 @@
 				8F4A7F672029B78400CA6C0F /* BATocListCell.xib in Resources */,
 				8F4A7F682029B78400CA6C0F /* iPadIconLG.png in Resources */,
 				8F4A7F692029B78400CA6C0F /* iPadIconLG@2x.png in Resources */,
+				B4CD1E8321481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1ECB21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F4A7F6A2029B78400CA6C0F /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1E9521481B09008F0A46 /* mediaIconB.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5024,7 +5048,9 @@
 				8F8A75CF1781BF4700CCF7DB /* BAImpressumCell.xib in Resources */,
 				8F8A75D11781BF4700CCF7DB /* Default.png in Resources */,
 				8F8A75D21781BF4700CCF7DB /* Default@2x.png in Resources */,
+				B4CD1E9821481B09008F0A46 /* mediaIconM.png in Resources */,
 				8F8A75D31781BF4700CCF7DB /* Default-568h@2x.png in Resources */,
+				B4CD1F3A21481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F8A75D41781BF4700CCF7DB /* bibapp~iphone.storyboard in Resources */,
 				8F8A75D51781BF4700CCF7DB /* BAItemCell.xib in Resources */,
 				8F8A75D61781BF4700CCF7DB /* BAItemDetail.xib in Resources */,
@@ -5032,10 +5058,12 @@
 				8F8A75D71781BF4700CCF7DB /* BAItemDetailCell.xib in Resources */,
 				8F8A75D81781BF4700CCF7DB /* BAInfoCell.xib in Resources */,
 				8F8A75D91781BF4700CCF7DB /* BADocumentItemElementCell.xib in Resources */,
+				B4CD1F2821481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8F8A75DA1781BF4700CCF7DB /* BADocumentItemCell.xib in Resources */,
 				8F8A75DB1781BF4700CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A75DC1781BF4700CCF7DB /* Icon@2x.png in Resources */,
 				8F8A75DD1781BF4700CCF7DB /* BAFeeCell.xib in Resources */,
+				B4CD1F1621481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A75DE1781BF4700CCF7DB /* checkbox.png in Resources */,
 				8F8A75DF1781BF4700CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A75E01781BF4700CCF7DB /* menuIconAccount.png in Resources */,
@@ -5043,39 +5071,34 @@
 				8FE6DA621B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8A75E21781BF4700CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A75E31781BF4700CCF7DB /* menuIconSearch.png in Resources */,
+				B4CD1EE021481B0A008F0A46 /* mediaIconA.png in Resources */,
+				B4CD1EBC21481B0A008F0A46 /* mediaIconO.png in Resources */,
+				B4CD1E8621481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A75E41781BF4700CCF7DB /* menuIconAccount@2x.png in Resources */,
+				B4CD1EAA21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F180738192B3A7C0099F579 /* Images.xcassets in Resources */,
 				8F8A75E51781BF4700CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A75E61781BF4700CCF7DB /* menuIconList@2x.png in Resources */,
 				8F8A75E71781BF4700CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A75E81781BF4700CCF7DB /* menuIconSearch@2x.png in Resources */,
 				8F8A75E91781BF4700CCF7DB /* menuIconInfo.png in Resources */,
-				8F8A75EA1781BF4700CCF7DB /* mediaIconA.png in Resources */,
-				8F8A75EB1781BF4700CCF7DB /* mediaIconB.png in Resources */,
-				8F8A75EC1781BF4700CCF7DB /* mediaIconE.png in Resources */,
-				8F8A75ED1781BF4700CCF7DB /* mediaIconG.png in Resources */,
-				8F8A75EE1781BF4700CCF7DB /* mediaIconH.png in Resources */,
-				8F8A75EF1781BF4700CCF7DB /* mediaIconI.png in Resources */,
-				8F8A75F01781BF4700CCF7DB /* mediaIconK.png in Resources */,
-				8F8A75F11781BF4700CCF7DB /* mediaIconL.png in Resources */,
-				8F8A75F21781BF4700CCF7DB /* mediaIconM.png in Resources */,
-				8F8A75F31781BF4700CCF7DB /* mediaIconO.png in Resources */,
-				8F8A75F41781BF4700CCF7DB /* mediaIconP.png in Resources */,
-				8F8A75F51781BF4700CCF7DB /* mediaIconS.png in Resources */,
-				8F8A75F61781BF4700CCF7DB /* mediaIconT.png in Resources */,
-				8F8A75F71781BF4700CCF7DB /* mediaIconV.png in Resources */,
-				8F8A75F81781BF4700CCF7DB /* mediaIconX.png in Resources */,
+				B4CD1F4C21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F8A75F91781BF4700CCF7DB /* Icon.png in Resources */,
 				8F8A75FA1781BF4700CCF7DB /* bibapp~ipad.storyboard in Resources */,
 				8F8A75FB1781BF4700CCF7DB /* transparentImage.png in Resources */,
+				B4CD1E7421481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1F5E21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F8A75FC1781BF4700CCF7DB /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F8A75FD1781BF4700CCF7DB /* actionButton.png in Resources */,
 				8F8A75FE1781BF4700CCF7DB /* Buch_250_gradient.png in Resources */,
 				8F8A75FF1781BF4700CCF7DB /* BADocumentItemElementCellPad.xib in Resources */,
 				8F8A76001781BF4700CCF7DB /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B4CD1F7021481B0A008F0A46 /* mediaIconT.png in Resources */,
 				8F8A76011781BF4700CCF7DB /* BAListTableViewControllerPad.h in Resources */,
 				8F8A76021781BF4700CCF7DB /* gear.png in Resources */,
 				8F8A76031781BF4700CCF7DB /* gear2.png in Resources */,
+				B4CD1EF221481B0A008F0A46 /* mediaIconV.png in Resources */,
+				B4CD1E6221481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F8A76041781BF4700CCF7DB /* BAInfoCellPad.xib in Resources */,
 				8F8A76051781BF4700CCF7DB /* BAImpressumCellPad.xib in Resources */,
 				8F8A76061781BF4700CCF7DB /* BALocationCellPad.xib in Resources */,
@@ -5088,10 +5111,12 @@
 				8F8A760D1781BF4700CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC381784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 				8F5E21851785AA6C00EDD948 /* IconBLS.png in Resources */,
+				B4CD1F0421481B0A008F0A46 /* mediaIconH.png in Resources */,
 				B43CE0A220FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F5E21871785AA7500EDD948 /* IconBLS@2x.png in Resources */,
 				8F5E21891785AA8900EDD948 /* iPadIconBLS.png in Resources */,
 				8F5E218B1785AA9B00EDD948 /* iPadIconBLS@2x.png in Resources */,
+				B4CD1ECE21481B0A008F0A46 /* mediaIconG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5104,7 +5129,9 @@
 				8F8A76641781C05400CCF7DB /* BAImpressumCell.xib in Resources */,
 				8F8A76661781C05400CCF7DB /* Default.png in Resources */,
 				8F8A76671781C05400CCF7DB /* Default@2x.png in Resources */,
+				B4CD1E9921481B09008F0A46 /* mediaIconM.png in Resources */,
 				8F8A76681781C05400CCF7DB /* Default-568h@2x.png in Resources */,
+				B4CD1F3B21481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F8A76691781C05400CCF7DB /* bibapp~iphone.storyboard in Resources */,
 				8F8A766A1781C05400CCF7DB /* BAItemCell.xib in Resources */,
 				8F8A766B1781C05400CCF7DB /* BAItemDetail.xib in Resources */,
@@ -5112,10 +5139,12 @@
 				8F8A766C1781C05400CCF7DB /* BAItemDetailCell.xib in Resources */,
 				8F8A766D1781C05400CCF7DB /* BAInfoCell.xib in Resources */,
 				8F8A766E1781C05400CCF7DB /* BADocumentItemElementCell.xib in Resources */,
+				B4CD1F2921481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8F8A766F1781C05400CCF7DB /* BADocumentItemCell.xib in Resources */,
 				8F8A76701781C05400CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A76711781C05400CCF7DB /* Icon@2x.png in Resources */,
 				8F8A76721781C05400CCF7DB /* BAFeeCell.xib in Resources */,
+				B4CD1F1721481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A76731781C05400CCF7DB /* checkbox.png in Resources */,
 				8F8A76741781C05400CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A76751781C05400CCF7DB /* menuIconAccount.png in Resources */,
@@ -5123,39 +5152,34 @@
 				8FE6DA631B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8F8A76771781C05400CCF7DB /* menuIconOptions.png in Resources */,
 				8F8A76781781C05400CCF7DB /* menuIconSearch.png in Resources */,
+				B4CD1EE121481B0A008F0A46 /* mediaIconA.png in Resources */,
+				B4CD1EBD21481B0A008F0A46 /* mediaIconO.png in Resources */,
+				B4CD1E8721481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A76791781C05400CCF7DB /* menuIconAccount@2x.png in Resources */,
+				B4CD1EAB21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F180739192B3A7D0099F579 /* Images.xcassets in Resources */,
 				8F8A767A1781C05400CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A767B1781C05400CCF7DB /* menuIconList@2x.png in Resources */,
 				8F8A767C1781C05400CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A767D1781C05400CCF7DB /* menuIconSearch@2x.png in Resources */,
 				8F8A767E1781C05400CCF7DB /* menuIconInfo.png in Resources */,
-				8F8A767F1781C05400CCF7DB /* mediaIconA.png in Resources */,
-				8F8A76801781C05400CCF7DB /* mediaIconB.png in Resources */,
-				8F8A76811781C05400CCF7DB /* mediaIconE.png in Resources */,
-				8F8A76821781C05400CCF7DB /* mediaIconG.png in Resources */,
-				8F8A76831781C05400CCF7DB /* mediaIconH.png in Resources */,
-				8F8A76841781C05400CCF7DB /* mediaIconI.png in Resources */,
-				8F8A76851781C05400CCF7DB /* mediaIconK.png in Resources */,
-				8F8A76861781C05400CCF7DB /* mediaIconL.png in Resources */,
-				8F8A76871781C05400CCF7DB /* mediaIconM.png in Resources */,
-				8F8A76881781C05400CCF7DB /* mediaIconO.png in Resources */,
-				8F8A76891781C05400CCF7DB /* mediaIconP.png in Resources */,
-				8F8A768A1781C05400CCF7DB /* mediaIconS.png in Resources */,
-				8F8A768B1781C05400CCF7DB /* mediaIconT.png in Resources */,
-				8F8A768C1781C05400CCF7DB /* mediaIconV.png in Resources */,
-				8F8A768D1781C05400CCF7DB /* mediaIconX.png in Resources */,
+				B4CD1F4D21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F8A768E1781C05400CCF7DB /* Icon.png in Resources */,
 				8F8A768F1781C05400CCF7DB /* bibapp~ipad.storyboard in Resources */,
 				8F8A76901781C05400CCF7DB /* transparentImage.png in Resources */,
+				B4CD1E7521481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1F5F21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F8A76911781C05400CCF7DB /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F8A76921781C05400CCF7DB /* actionButton.png in Resources */,
 				8F8A76931781C05400CCF7DB /* Buch_250_gradient.png in Resources */,
 				8F8A76941781C05400CCF7DB /* BADocumentItemElementCellPad.xib in Resources */,
 				8F8A76951781C05400CCF7DB /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B4CD1F7121481B0A008F0A46 /* mediaIconT.png in Resources */,
 				8F8A76961781C05400CCF7DB /* BAListTableViewControllerPad.h in Resources */,
 				8F8A76971781C05400CCF7DB /* gear.png in Resources */,
 				8F8A76981781C05400CCF7DB /* gear2.png in Resources */,
+				B4CD1EF321481B0A008F0A46 /* mediaIconV.png in Resources */,
+				B4CD1E6321481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F8A76991781C05400CCF7DB /* BAInfoCellPad.xib in Resources */,
 				8F8A769A1781C05400CCF7DB /* BAImpressumCellPad.xib in Resources */,
 				8F8A769B1781C05400CCF7DB /* BALocationCellPad.xib in Resources */,
@@ -5168,10 +5192,12 @@
 				8F8A76A21781C05400CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F91495D17830DA400FE7924 /* IconIL.png in Resources */,
 				8F91495F17830DC700FE7924 /* IconIL@2x.png in Resources */,
+				B4CD1F0521481B0A008F0A46 /* mediaIconH.png in Resources */,
 				B43CE0A320FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8F91496117830E0B00FE7924 /* iPadIconIL.png in Resources */,
 				8F91496317830E1000FE7924 /* iPadIconIL@2x.png in Resources */,
 				8F36FC391784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1ECF21481B0A008F0A46 /* mediaIconG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5190,12 +5216,15 @@
 				8F8A77001781C0D800CCF7DB /* BAItemDetail.xib in Resources */,
 				8F8A77011781C0D800CCF7DB /* BAItemDetailCell.xib in Resources */,
 				8F8A77021781C0D800CCF7DB /* BAInfoCell.xib in Resources */,
+				B4CD1E6421481B09008F0A46 /* mediaIconI.png in Resources */,
+				B4CD1F7221481B0A008F0A46 /* mediaIconT.png in Resources */,
 				8F8A77031781C0D800CCF7DB /* BADocumentItemElementCell.xib in Resources */,
 				8F8A77041781C0D800CCF7DB /* BADocumentItemCell.xib in Resources */,
 				8F8A77051781C0D800CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A77061781C0D800CCF7DB /* Icon@2x.png in Resources */,
 				8F8A77071781C0D800CCF7DB /* BAFeeCell.xib in Resources */,
 				8F8A77081781C0D800CCF7DB /* checkbox.png in Resources */,
+				B4CD1F0621481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F8A77091781C0D800CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A770A1781C0D800CCF7DB /* menuIconAccount.png in Resources */,
 				8F8A770B1781C0D800CCF7DB /* menuIconList.png in Resources */,
@@ -5203,49 +5232,46 @@
 				8F8A770D1781C0D800CCF7DB /* menuIconSearch.png in Resources */,
 				8F8A770E1781C0D800CCF7DB /* menuIconAccount@2x.png in Resources */,
 				8F8A770F1781C0D800CCF7DB /* menuIconInfo@2x.png in Resources */,
+				B4CD1ED021481B0A008F0A46 /* mediaIconG.png in Resources */,
 				B43CE0A420FF3F6700AFBC78 /* Localizable.strings in Resources */,
+				B4CD1E7621481B09008F0A46 /* mediaIconP.png in Resources */,
 				8F8A77101781C0D800CCF7DB /* menuIconList@2x.png in Resources */,
+				B4CD1EE221481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F8A77111781C0D800CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A77121781C0D800CCF7DB /* menuIconSearch@2x.png in Resources */,
 				8F8A77131781C0D800CCF7DB /* menuIconInfo.png in Resources */,
 				8FE6DA641B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8F8A77141781C0D800CCF7DB /* mediaIconA.png in Resources */,
-				8F8A77151781C0D800CCF7DB /* mediaIconB.png in Resources */,
-				8F8A77161781C0D800CCF7DB /* mediaIconE.png in Resources */,
-				8F8A77171781C0D800CCF7DB /* mediaIconG.png in Resources */,
-				8F8A77181781C0D800CCF7DB /* mediaIconH.png in Resources */,
-				8F8A77191781C0D800CCF7DB /* mediaIconI.png in Resources */,
-				8F8A771A1781C0D800CCF7DB /* mediaIconK.png in Resources */,
-				8F8A771B1781C0D800CCF7DB /* mediaIconL.png in Resources */,
-				8F8A771C1781C0D800CCF7DB /* mediaIconM.png in Resources */,
-				8F8A771D1781C0D800CCF7DB /* mediaIconO.png in Resources */,
-				8F8A771E1781C0D800CCF7DB /* mediaIconP.png in Resources */,
-				8F8A771F1781C0D800CCF7DB /* mediaIconS.png in Resources */,
-				8F8A77201781C0D800CCF7DB /* mediaIconT.png in Resources */,
+				B4CD1F4E21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F53192B1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
-				8F8A77211781C0D800CCF7DB /* mediaIconV.png in Resources */,
-				8F8A77221781C0D800CCF7DB /* mediaIconX.png in Resources */,
+				B4CD1F2A21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8F8A77231781C0D800CCF7DB /* Icon.png in Resources */,
 				8F8A77241781C0D800CCF7DB /* bibapp~ipad.storyboard in Resources */,
 				8F8A77251781C0D800CCF7DB /* transparentImage.png in Resources */,
+				B4CD1F6021481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F8A77261781C0D800CCF7DB /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F8A77271781C0D800CCF7DB /* actionButton.png in Resources */,
 				8F8A77281781C0D800CCF7DB /* Buch_250_gradient.png in Resources */,
+				B4CD1EF421481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F8A77291781C0D800CCF7DB /* BADocumentItemElementCellPad.xib in Resources */,
 				8F18073A192B3A7E0099F579 /* Images.xcassets in Resources */,
 				8F8A772A1781C0D800CCF7DB /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8F8A772B1781C0D800CCF7DB /* BAListTableViewControllerPad.h in Resources */,
+				B4CD1E9A21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1EAC21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F8A772C1781C0D800CCF7DB /* gear.png in Resources */,
 				8F8A772D1781C0D800CCF7DB /* gear2.png in Resources */,
 				8F8A772E1781C0D800CCF7DB /* BAInfoCellPad.xib in Resources */,
 				8F8A772F1781C0D800CCF7DB /* BAImpressumCellPad.xib in Resources */,
+				B4CD1EBE21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F8A77301781C0D800CCF7DB /* BALocationCellPad.xib in Resources */,
 				8F8A77311781C0D800CCF7DB /* BATocCellPad.xib in Resources */,
 				8F8A77321781C0D800CCF7DB /* BATocListCell.xib in Resources */,
 				8F8A77331781C0D800CCF7DB /* iPadIcon.png in Resources */,
+				B4CD1F1821481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A77341781C0D800CCF7DB /* iPadIcon@2x.png in Resources */,
 				8F8A77351781C0D800CCF7DB /* Icon-72.png in Resources */,
 				8F8A77361781C0D800CCF7DB /* Icon-72@2x.png in Resources */,
+				B4CD1E8821481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC3A1784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
 				8F5E217D17858B7F00EDD948 /* IconHAWK.png in Resources */,
@@ -5256,6 +5282,7 @@
 				8FBEB651184C9CBB00B6ED41 /* hawk_app_icon_114x114.png in Resources */,
 				8FBEB653184C9CC700B6ED41 /* hawk_app_icon_72x72.png in Resources */,
 				8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */,
+				B4CD1F3C21481B0A008F0A46 /* mediaIconL.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5264,13 +5291,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8EB6071A93689000548F24 /* Default.png in Resources */,
+				B4CD1E6F21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F8EB6081A93689000548F24 /* Default@2x.png in Resources */,
 				8F8EB6091A93689000548F24 /* Default-568h@2x.png in Resources */,
 				8F8EB60A1A93689000548F24 /* bibapp~iphone.storyboard in Resources */,
 				8F8EB60B1A93689000548F24 /* BAItemCell.xib in Resources */,
+				B4CD1EFF21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F8EB60C1A93689000548F24 /* BAItemDetail.xib in Resources */,
 				8F8EB60D1A93689000548F24 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F5921481B0A008F0A46 /* mediaIconE.png in Resources */,
+				B4CD1F4721481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F8EB60E1A93689000548F24 /* BAInfoCell.xib in Resources */,
+				B4CD1F1121481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F8EB60F1A93689000548F24 /* BADocumentItemElementCell.xib in Resources */,
 				8F8EB6101A93689000548F24 /* BibApp-SM-Info.plist in Resources */,
 				8F8EB6111A93689000548F24 /* BADocumentItemCell.xib in Resources */,
@@ -5281,34 +5313,26 @@
 				8F8EB6161A93689000548F24 /* BAItemDetailTitleCell.xib in Resources */,
 				8F8EB6171A93689000548F24 /* Images.xcassets in Resources */,
 				8F8EB6181A93689000548F24 /* BAImpressumCell.xib in Resources */,
+				B4CD1EED21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F8EB6191A93689000548F24 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8F8EB61A1A93689000548F24 /* menuIconAccount.png in Resources */,
+				B4CD1F2321481B0A008F0A46 /* mediaIconK.png in Resources */,
+				B4CD1EB721481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8F8EB61B1A93689000548F24 /* menuIconList.png in Resources */,
 				8F8EB61C1A93689000548F24 /* menuIconOptions.png in Resources */,
+				B4CD1F7D21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1EA521481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8F8EB61D1A93689000548F24 /* menuIconSearch.png in Resources */,
 				8F8EB61E1A93689000548F24 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F8EB61F1A93689000548F24 /* menuIconAccount@2x.png in Resources */,
 				8F8EB6201A93689000548F24 /* menuIconInfo@2x.png in Resources */,
 				8FE6DA6F1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
+				B4CD1F3521481B0A008F0A46 /* mediaIconX.png in Resources */,
+				B4CD1EDB21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8F8EB6211A93689000548F24 /* menuIconList@2x.png in Resources */,
 				8F8EB6221A93689000548F24 /* menuIconOptions@2x.png in Resources */,
 				8F8EB6231A93689000548F24 /* menuIconSearch@2x.png in Resources */,
 				8F8EB6241A93689000548F24 /* menuIconInfo.png in Resources */,
-				8F8EB6251A93689000548F24 /* mediaIconA.png in Resources */,
-				8F8EB6261A93689000548F24 /* mediaIconB.png in Resources */,
-				8F8EB6271A93689000548F24 /* mediaIconE.png in Resources */,
-				8F8EB6281A93689000548F24 /* mediaIconG.png in Resources */,
-				8F8EB6291A93689000548F24 /* mediaIconH.png in Resources */,
-				8F8EB62A1A93689000548F24 /* mediaIconI.png in Resources */,
-				8F8EB62B1A93689000548F24 /* mediaIconK.png in Resources */,
-				8F8EB62C1A93689000548F24 /* mediaIconL.png in Resources */,
-				8F8EB62D1A93689000548F24 /* mediaIconM.png in Resources */,
-				8F8EB62E1A93689000548F24 /* mediaIconO.png in Resources */,
-				8F8EB62F1A93689000548F24 /* mediaIconP.png in Resources */,
-				8F8EB6301A93689000548F24 /* mediaIconS.png in Resources */,
-				8F8EB6311A93689000548F24 /* mediaIconT.png in Resources */,
-				8F8EB6321A93689000548F24 /* mediaIconV.png in Resources */,
-				8F8EB6331A93689000548F24 /* mediaIconX.png in Resources */,
 				8F8EB6341A93689000548F24 /* IconLG.png in Resources */,
 				8F8EB6351A93689000548F24 /* IconLG@2x.png in Resources */,
 				8F8EB6361A93689000548F24 /* bibapp~ipad.storyboard in Resources */,
@@ -5316,6 +5340,7 @@
 				8F8EB6381A93689000548F24 /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F8EB6391A93689000548F24 /* actionButton.png in Resources */,
 				8F8EB63A1A93689000548F24 /* Buch_250_gradient.png in Resources */,
+				B4CD1F6B21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8F8EB63B1A93689000548F24 /* BADocumentItemElementCellPad.xib in Resources */,
 				8F8EB63C1A93689000548F24 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				B43CE0AF20FF3F6700AFBC78 /* Localizable.strings in Resources */,
@@ -5329,7 +5354,10 @@
 				8F8EB6441A93689000548F24 /* BATocListCell.xib in Resources */,
 				8F8EB6451A93689000548F24 /* iPadIconLG.png in Resources */,
 				8F8EB6461A93689000548F24 /* iPadIconLG@2x.png in Resources */,
+				B4CD1E8121481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EC921481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F8EB6471A93689000548F24 /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1E9321481B09008F0A46 /* mediaIconB.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5341,18 +5369,26 @@
 				8FA8F54919501E6B006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F54A19501E6B006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F54C19501E6B006CD05A /* Default.png in Resources */,
+				B4CD1E8C21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F54D19501E6B006CD05A /* Default@2x.png in Resources */,
 				8FA8F54E19501E6B006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F54F19501E6B006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F55019501E6B006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F5221481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FA8F55119501E6B006CD05A /* BAItemDetail.xib in Resources */,
+				B4CD1E9E21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7A21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB021481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F55219501E6B006CD05A /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4021481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F55319501E6B006CD05A /* BAInfoCell.xib in Resources */,
 				8FA8F55419501E6B006CD05A /* BADocumentItemElementCell.xib in Resources */,
 				8FA8F55519501E6B006CD05A /* BADocumentItemCell.xib in Resources */,
 				8FA8F55619501E6B006CD05A /* BAItemAccountCell.xib in Resources */,
 				8FA8F55719501E6B006CD05A /* Images.xcassets in Resources */,
+				B4CD1EC221481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F55819501E6B006CD05A /* Icon@2x.png in Resources */,
+				B4CD1F1C21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F55919501E6B006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0A820FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F55A19501E6B006CD05A /* checkbox.png in Resources */,
@@ -5363,26 +5399,13 @@
 				8FA8F55F19501E6B006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F56019501E6B006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F56119501E6B006CD05A /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE621481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F56219501E6B006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F56319501E6B006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F56419501E6B006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F56519501E6B006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F56619501E6B006CD05A /* mediaIconA.png in Resources */,
-				8FA8F56719501E6B006CD05A /* mediaIconB.png in Resources */,
-				8FA8F56819501E6B006CD05A /* mediaIconE.png in Resources */,
-				8FA8F56919501E6B006CD05A /* mediaIconG.png in Resources */,
+				B4CD1F0A21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA681B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FA8F56A19501E6B006CD05A /* mediaIconH.png in Resources */,
-				8FA8F56B19501E6B006CD05A /* mediaIconI.png in Resources */,
-				8FA8F56C19501E6B006CD05A /* mediaIconK.png in Resources */,
-				8FA8F56D19501E6B006CD05A /* mediaIconL.png in Resources */,
-				8FA8F56E19501E6B006CD05A /* mediaIconM.png in Resources */,
-				8FA8F56F19501E6B006CD05A /* mediaIconO.png in Resources */,
-				8FA8F57019501E6B006CD05A /* mediaIconP.png in Resources */,
-				8FA8F57119501E6B006CD05A /* mediaIconS.png in Resources */,
-				8FA8F57219501E6B006CD05A /* mediaIconT.png in Resources */,
-				8FA8F57319501E6B006CD05A /* mediaIconV.png in Resources */,
-				8FA8F57419501E6B006CD05A /* mediaIconX.png in Resources */,
 				8FA8F57519501E6B006CD05A /* Icon.png in Resources */,
 				8FA8F57619501E6B006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F57719501E6B006CD05A /* transparentImage.png in Resources */,
@@ -5396,12 +5419,18 @@
 				8FA8F57F19501E6B006CD05A /* gear2.png in Resources */,
 				8FA8F58019501E6B006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F58119501E6B006CD05A /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7621481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED421481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F58219501E6B006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F58319501E6B006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F58419501E6B006CD05A /* BATocListCell.xib in Resources */,
+				B4CD1E6821481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F53192F1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F58519501E6B006CD05A /* iPadIcon.png in Resources */,
+				B4CD1F6421481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2E21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FA8F58619501E6B006CD05A /* iPadIcon@2x.png in Resources */,
+				B4CD1EF821481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F58719501E6B006CD05A /* Icon-72.png in Resources */,
 				8FA8F58819501E6B006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F58919501E6B006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5416,18 +5445,26 @@
 				8FA8F5EB19502224006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F5EC19502224006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F5EE19502224006CD05A /* Default.png in Resources */,
+				B4CD1E8D21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F5EF19502224006CD05A /* Default@2x.png in Resources */,
 				8FA8F5F019502224006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F5F119502224006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F5F219502224006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F5321481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FA8F5F319502224006CD05A /* BAItemDetail.xib in Resources */,
+				B4CD1E9F21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7B21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB121481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F5F419502224006CD05A /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4121481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F5F519502224006CD05A /* BAInfoCell.xib in Resources */,
 				8FA8F5F619502224006CD05A /* BADocumentItemElementCell.xib in Resources */,
 				8FA8F5F719502224006CD05A /* BADocumentItemCell.xib in Resources */,
 				8FA8F5F819502224006CD05A /* BAItemAccountCell.xib in Resources */,
 				8FA8F5F919502224006CD05A /* Images.xcassets in Resources */,
+				B4CD1EC321481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F5FA19502224006CD05A /* Icon@2x.png in Resources */,
+				B4CD1F1D21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F5FB19502224006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0A920FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F5FC19502224006CD05A /* checkbox.png in Resources */,
@@ -5438,26 +5475,13 @@
 				8FA8F60119502224006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F60219502224006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F60319502224006CD05A /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE721481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F60419502224006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F60519502224006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F60619502224006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F60719502224006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F60819502224006CD05A /* mediaIconA.png in Resources */,
-				8FA8F60919502224006CD05A /* mediaIconB.png in Resources */,
-				8FA8F60A19502224006CD05A /* mediaIconE.png in Resources */,
-				8FA8F60B19502224006CD05A /* mediaIconG.png in Resources */,
+				B4CD1F0B21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA691B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FA8F60C19502224006CD05A /* mediaIconH.png in Resources */,
-				8FA8F60D19502224006CD05A /* mediaIconI.png in Resources */,
-				8FA8F60E19502224006CD05A /* mediaIconK.png in Resources */,
-				8FA8F60F19502224006CD05A /* mediaIconL.png in Resources */,
-				8FA8F61019502224006CD05A /* mediaIconM.png in Resources */,
-				8FA8F61119502224006CD05A /* mediaIconO.png in Resources */,
-				8FA8F61219502224006CD05A /* mediaIconP.png in Resources */,
-				8FA8F61319502224006CD05A /* mediaIconS.png in Resources */,
-				8FA8F61419502224006CD05A /* mediaIconT.png in Resources */,
-				8FA8F61519502224006CD05A /* mediaIconV.png in Resources */,
-				8FA8F61619502224006CD05A /* mediaIconX.png in Resources */,
 				8FA8F61719502224006CD05A /* Icon.png in Resources */,
 				8FA8F61819502224006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F61919502224006CD05A /* transparentImage.png in Resources */,
@@ -5471,12 +5495,18 @@
 				8FA8F62119502224006CD05A /* gear2.png in Resources */,
 				8FA8F62219502224006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F62319502224006CD05A /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7721481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED521481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F62419502224006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F62519502224006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F62619502224006CD05A /* BATocListCell.xib in Resources */,
+				B4CD1E6921481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F5319301951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F62719502224006CD05A /* iPadIcon.png in Resources */,
+				B4CD1F6521481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2F21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FA8F62819502224006CD05A /* iPadIcon@2x.png in Resources */,
+				B4CD1EF921481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F62919502224006CD05A /* Icon-72.png in Resources */,
 				8FA8F62A19502224006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F62B19502224006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5491,18 +5521,26 @@
 				8FA8F68D1950228D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F68E1950228D006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F6901950228D006CD05A /* Default.png in Resources */,
+				B4CD1E8E21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F6911950228D006CD05A /* Default@2x.png in Resources */,
 				8FA8F6921950228D006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F6931950228D006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F6941950228D006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F5421481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FA8F6951950228D006CD05A /* BAItemDetail.xib in Resources */,
+				B4CD1EA021481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7C21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB221481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F6961950228D006CD05A /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4221481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F6971950228D006CD05A /* BAInfoCell.xib in Resources */,
 				8FA8F6981950228D006CD05A /* BADocumentItemElementCell.xib in Resources */,
 				8FA8F6991950228D006CD05A /* BADocumentItemCell.xib in Resources */,
 				8FA8F69A1950228D006CD05A /* BAItemAccountCell.xib in Resources */,
 				8FA8F69B1950228D006CD05A /* Images.xcassets in Resources */,
+				B4CD1EC421481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F69C1950228D006CD05A /* Icon@2x.png in Resources */,
+				B4CD1F1E21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F69D1950228D006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AA20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F69E1950228D006CD05A /* checkbox.png in Resources */,
@@ -5513,26 +5551,13 @@
 				8FA8F6A31950228D006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F6A41950228D006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F6A51950228D006CD05A /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE821481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F6A61950228D006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F6A71950228D006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F6A81950228D006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F6A91950228D006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F6AA1950228D006CD05A /* mediaIconA.png in Resources */,
-				8FA8F6AB1950228D006CD05A /* mediaIconB.png in Resources */,
-				8FA8F6AC1950228D006CD05A /* mediaIconE.png in Resources */,
-				8FA8F6AD1950228D006CD05A /* mediaIconG.png in Resources */,
+				B4CD1F0C21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA6A1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FA8F6AE1950228D006CD05A /* mediaIconH.png in Resources */,
-				8FA8F6AF1950228D006CD05A /* mediaIconI.png in Resources */,
-				8FA8F6B01950228D006CD05A /* mediaIconK.png in Resources */,
-				8FA8F6B11950228D006CD05A /* mediaIconL.png in Resources */,
-				8FA8F6B21950228D006CD05A /* mediaIconM.png in Resources */,
-				8FA8F6B31950228D006CD05A /* mediaIconO.png in Resources */,
-				8FA8F6B41950228D006CD05A /* mediaIconP.png in Resources */,
-				8FA8F6B51950228D006CD05A /* mediaIconS.png in Resources */,
-				8FA8F6B61950228D006CD05A /* mediaIconT.png in Resources */,
-				8FA8F6B71950228D006CD05A /* mediaIconV.png in Resources */,
-				8FA8F6B81950228D006CD05A /* mediaIconX.png in Resources */,
 				8FA8F6B91950228D006CD05A /* Icon.png in Resources */,
 				8FA8F6BA1950228D006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F6BB1950228D006CD05A /* transparentImage.png in Resources */,
@@ -5546,12 +5571,18 @@
 				8FA8F6C31950228D006CD05A /* gear2.png in Resources */,
 				8FA8F6C41950228D006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F6C51950228D006CD05A /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7821481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED621481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F6C61950228D006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F6C71950228D006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F6C81950228D006CD05A /* BATocListCell.xib in Resources */,
+				B4CD1E6A21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F5319311951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F6C91950228D006CD05A /* iPadIcon.png in Resources */,
+				B4CD1F6621481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F3021481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FA8F6CA1950228D006CD05A /* iPadIcon@2x.png in Resources */,
+				B4CD1EFA21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F6CB1950228D006CD05A /* Icon-72.png in Resources */,
 				8FA8F6CC1950228D006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F6CD1950228D006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5566,18 +5597,26 @@
 				8FA8F72F195022BC006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F730195022BC006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F732195022BC006CD05A /* Default.png in Resources */,
+				B4CD1E8F21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F733195022BC006CD05A /* Default@2x.png in Resources */,
 				8FA8F734195022BC006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F735195022BC006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F736195022BC006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F5521481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FA8F737195022BC006CD05A /* BAItemDetail.xib in Resources */,
+				B4CD1EA121481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7D21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB321481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F738195022BC006CD05A /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4321481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F739195022BC006CD05A /* BAInfoCell.xib in Resources */,
 				8FA8F73A195022BC006CD05A /* BADocumentItemElementCell.xib in Resources */,
 				8FA8F73B195022BC006CD05A /* BADocumentItemCell.xib in Resources */,
 				8FA8F73C195022BC006CD05A /* BAItemAccountCell.xib in Resources */,
 				8FA8F73D195022BC006CD05A /* Images.xcassets in Resources */,
+				B4CD1EC521481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F73E195022BC006CD05A /* Icon@2x.png in Resources */,
+				B4CD1F1F21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F73F195022BC006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AB20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F740195022BC006CD05A /* checkbox.png in Resources */,
@@ -5588,26 +5627,13 @@
 				8FA8F745195022BC006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F746195022BC006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F747195022BC006CD05A /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE921481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F748195022BC006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F749195022BC006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F74A195022BC006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F74B195022BC006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F74C195022BC006CD05A /* mediaIconA.png in Resources */,
-				8FA8F74D195022BC006CD05A /* mediaIconB.png in Resources */,
-				8FA8F74E195022BC006CD05A /* mediaIconE.png in Resources */,
-				8FA8F74F195022BC006CD05A /* mediaIconG.png in Resources */,
+				B4CD1F0D21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA6B1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FA8F750195022BC006CD05A /* mediaIconH.png in Resources */,
-				8FA8F751195022BC006CD05A /* mediaIconI.png in Resources */,
-				8FA8F752195022BC006CD05A /* mediaIconK.png in Resources */,
-				8FA8F753195022BC006CD05A /* mediaIconL.png in Resources */,
-				8FA8F754195022BC006CD05A /* mediaIconM.png in Resources */,
-				8FA8F755195022BC006CD05A /* mediaIconO.png in Resources */,
-				8FA8F756195022BC006CD05A /* mediaIconP.png in Resources */,
-				8FA8F757195022BC006CD05A /* mediaIconS.png in Resources */,
-				8FA8F758195022BC006CD05A /* mediaIconT.png in Resources */,
-				8FA8F759195022BC006CD05A /* mediaIconV.png in Resources */,
-				8FA8F75A195022BC006CD05A /* mediaIconX.png in Resources */,
 				8FA8F75B195022BC006CD05A /* Icon.png in Resources */,
 				8FA8F75C195022BC006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F75D195022BC006CD05A /* transparentImage.png in Resources */,
@@ -5621,12 +5647,18 @@
 				8FA8F765195022BC006CD05A /* gear2.png in Resources */,
 				8FA8F766195022BC006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F767195022BC006CD05A /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7921481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED721481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F768195022BC006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F769195022BC006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F76A195022BC006CD05A /* BATocListCell.xib in Resources */,
+				B4CD1E6B21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F5319321951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F76B195022BC006CD05A /* iPadIcon.png in Resources */,
+				B4CD1F6721481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F3121481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FA8F76C195022BC006CD05A /* iPadIcon@2x.png in Resources */,
+				B4CD1EFB21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F76D195022BC006CD05A /* Icon-72.png in Resources */,
 				8FA8F76E195022BC006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F76F195022BC006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5638,13 +5670,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA8F7D01950230D006CD05A /* BAAccountTableHeaderTextView.xib in Resources */,
+				B4CD1E6C21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8FA8F7D11950230D006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F7D21950230D006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F7D41950230D006CD05A /* Default.png in Resources */,
 				8FA8F7D51950230D006CD05A /* Default@2x.png in Resources */,
+				B4CD1EFC21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F7D61950230D006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F7D71950230D006CD05A /* bibapp~iphone.storyboard in Resources */,
+				B4CD1F5621481B0A008F0A46 /* mediaIconE.png in Resources */,
+				B4CD1F4421481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F7D81950230D006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F0E21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FA8F7D91950230D006CD05A /* BAItemDetail.xib in Resources */,
 				8FA8F7DA1950230D006CD05A /* BAItemDetailCell.xib in Resources */,
 				8FA8F7DB1950230D006CD05A /* BAInfoCell.xib in Resources */,
@@ -5655,33 +5692,25 @@
 				8FA8F7E01950230D006CD05A /* Icon@2x.png in Resources */,
 				8FA8F7E11950230D006CD05A /* BAFeeCell.xib in Resources */,
 				8FA8F7E21950230D006CD05A /* checkbox.png in Resources */,
+				B4CD1EEA21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F7E31950230D006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F7E41950230D006CD05A /* menuIconAccount.png in Resources */,
+				B4CD1F2021481B0A008F0A46 /* mediaIconK.png in Resources */,
+				B4CD1EB421481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F7E51950230D006CD05A /* menuIconList.png in Resources */,
 				8FA8F7E61950230D006CD05A /* menuIconOptions.png in Resources */,
+				B4CD1F7A21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1EA221481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8FA8F7E71950230D006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F7E81950230D006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F7E91950230D006CD05A /* menuIconInfo@2x.png in Resources */,
 				8FA8F7EA1950230D006CD05A /* menuIconList@2x.png in Resources */,
 				8FE6DA6C1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
+				B4CD1F3221481B0A008F0A46 /* mediaIconX.png in Resources */,
+				B4CD1ED821481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F7EB1950230D006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F7EC1950230D006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F7ED1950230D006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F7EE1950230D006CD05A /* mediaIconA.png in Resources */,
-				8FA8F7EF1950230D006CD05A /* mediaIconB.png in Resources */,
-				8FA8F7F01950230D006CD05A /* mediaIconE.png in Resources */,
-				8FA8F7F11950230D006CD05A /* mediaIconG.png in Resources */,
-				8FA8F7F21950230D006CD05A /* mediaIconH.png in Resources */,
-				8FA8F7F31950230D006CD05A /* mediaIconI.png in Resources */,
-				8FA8F7F41950230D006CD05A /* mediaIconK.png in Resources */,
-				8FA8F7F51950230D006CD05A /* mediaIconL.png in Resources */,
-				8FA8F7F61950230D006CD05A /* mediaIconM.png in Resources */,
-				8FA8F7F71950230D006CD05A /* mediaIconO.png in Resources */,
-				8FA8F7F81950230D006CD05A /* mediaIconP.png in Resources */,
-				8FA8F7F91950230D006CD05A /* mediaIconS.png in Resources */,
-				8FA8F7FA1950230D006CD05A /* mediaIconT.png in Resources */,
-				8FA8F7FB1950230D006CD05A /* mediaIconV.png in Resources */,
-				8FA8F7FC1950230D006CD05A /* mediaIconX.png in Resources */,
 				8FA8F7FD1950230D006CD05A /* Icon.png in Resources */,
 				8FA8F7FE1950230D006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F7FF1950230D006CD05A /* transparentImage.png in Resources */,
@@ -5690,6 +5719,7 @@
 				8FA8F8021950230D006CD05A /* Buch_250_gradient.png in Resources */,
 				8FA8F8031950230D006CD05A /* BADocumentItemElementCellPad.xib in Resources */,
 				8FA8F8041950230D006CD05A /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
+				B4CD1F6821481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8FA8F8051950230D006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F8061950230D006CD05A /* gear.png in Resources */,
 				B43CE0AC20FF3F6700AFBC78 /* Localizable.strings in Resources */,
@@ -5703,7 +5733,10 @@
 				8FA8F80E1950230D006CD05A /* iPadIcon@2x.png in Resources */,
 				8FA8F80F1950230D006CD05A /* Icon-72.png in Resources */,
 				8FA8F8101950230D006CD05A /* Icon-72@2x.png in Resources */,
+				B4CD1E7E21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EC621481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F8111950230D006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1E9021481B09008F0A46 /* mediaIconB.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5715,18 +5748,26 @@
 				8FA8F8731950233A006CD05A /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FA8F8741950233A006CD05A /* BAImpressumCell.xib in Resources */,
 				8FA8F8761950233A006CD05A /* Default.png in Resources */,
+				B4CD1E9121481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F8771950233A006CD05A /* Default@2x.png in Resources */,
 				8FA8F8781950233A006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F8791950233A006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F87A1950233A006CD05A /* BAItemCell.xib in Resources */,
+				B4CD1F5721481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FA8F87B1950233A006CD05A /* BAItemDetail.xib in Resources */,
+				B4CD1EA321481B0A008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7F21481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB521481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FA8F87C1950233A006CD05A /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4521481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F87D1950233A006CD05A /* BAInfoCell.xib in Resources */,
 				8FA8F87E1950233A006CD05A /* BADocumentItemElementCell.xib in Resources */,
 				8FA8F87F1950233A006CD05A /* BADocumentItemCell.xib in Resources */,
 				8FA8F8801950233A006CD05A /* BAItemAccountCell.xib in Resources */,
 				8FA8F8811950233A006CD05A /* Images.xcassets in Resources */,
+				B4CD1EC721481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FA8F8821950233A006CD05A /* Icon@2x.png in Resources */,
+				B4CD1F2121481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F8831950233A006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AD20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FA8F8841950233A006CD05A /* checkbox.png in Resources */,
@@ -5737,26 +5778,13 @@
 				8FA8F8891950233A006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F88A1950233A006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F88B1950233A006CD05A /* menuIconInfo@2x.png in Resources */,
+				B4CD1EEB21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F88C1950233A006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F88D1950233A006CD05A /* menuIconOptions@2x.png in Resources */,
 				8FA8F88E1950233A006CD05A /* menuIconSearch@2x.png in Resources */,
 				8FA8F88F1950233A006CD05A /* menuIconInfo.png in Resources */,
-				8FA8F8901950233A006CD05A /* mediaIconA.png in Resources */,
-				8FA8F8911950233A006CD05A /* mediaIconB.png in Resources */,
-				8FA8F8921950233A006CD05A /* mediaIconE.png in Resources */,
-				8FA8F8931950233A006CD05A /* mediaIconG.png in Resources */,
+				B4CD1F0F21481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA6D1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FA8F8941950233A006CD05A /* mediaIconH.png in Resources */,
-				8FA8F8951950233A006CD05A /* mediaIconI.png in Resources */,
-				8FA8F8961950233A006CD05A /* mediaIconK.png in Resources */,
-				8FA8F8971950233A006CD05A /* mediaIconL.png in Resources */,
-				8FA8F8981950233A006CD05A /* mediaIconM.png in Resources */,
-				8FA8F8991950233A006CD05A /* mediaIconO.png in Resources */,
-				8FA8F89A1950233A006CD05A /* mediaIconP.png in Resources */,
-				8FA8F89B1950233A006CD05A /* mediaIconS.png in Resources */,
-				8FA8F89C1950233A006CD05A /* mediaIconT.png in Resources */,
-				8FA8F89D1950233A006CD05A /* mediaIconV.png in Resources */,
-				8FA8F89E1950233A006CD05A /* mediaIconX.png in Resources */,
 				8FA8F89F1950233A006CD05A /* Icon.png in Resources */,
 				8FA8F8A01950233A006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F8A11950233A006CD05A /* transparentImage.png in Resources */,
@@ -5770,12 +5798,18 @@
 				8FA8F8A91950233A006CD05A /* gear2.png in Resources */,
 				8FA8F8AA1950233A006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F8AB1950233A006CD05A /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7B21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED921481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FA8F8AC1950233A006CD05A /* BALocationCellPad.xib in Resources */,
 				8FA8F8AD1950233A006CD05A /* BATocCellPad.xib in Resources */,
 				8FA8F8AE1950233A006CD05A /* BATocListCell.xib in Resources */,
+				B4CD1E6D21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F5319341951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FA8F8AF1950233A006CD05A /* iPadIcon.png in Resources */,
+				B4CD1F6921481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F3321481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FA8F8B01950233A006CD05A /* iPadIcon@2x.png in Resources */,
+				B4CD1EFD21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F8B11950233A006CD05A /* Icon-72.png in Resources */,
 				8FA8F8B21950233A006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F8B31950233A006CD05A /* BACatalogueTableViewCell.xib in Resources */,
@@ -5790,18 +5824,26 @@
 				8FAD97CB1A0CFD3600C3A5D1 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FAD97CC1A0CFD3600C3A5D1 /* BAImpressumCell.xib in Resources */,
 				8FAD97CE1A0CFD3600C3A5D1 /* Default.png in Resources */,
+				B4CD1E9221481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FAD97CF1A0CFD3600C3A5D1 /* Default@2x.png in Resources */,
 				8FAD97D01A0CFD3600C3A5D1 /* Default-568h@2x.png in Resources */,
 				8FAD97D11A0CFD3600C3A5D1 /* bibapp~iphone.storyboard in Resources */,
 				8FAD97D21A0CFD3600C3A5D1 /* BAItemCell.xib in Resources */,
+				B4CD1F5821481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FAD97D31A0CFD3600C3A5D1 /* BAItemDetail.xib in Resources */,
+				B4CD1EA421481B0A008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E8021481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EB621481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FAD97D41A0CFD3600C3A5D1 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4621481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FAD97D51A0CFD3600C3A5D1 /* BAInfoCell.xib in Resources */,
 				8FAD97D61A0CFD3600C3A5D1 /* BADocumentItemElementCell.xib in Resources */,
 				8FAD97D71A0CFD3600C3A5D1 /* BADocumentItemCell.xib in Resources */,
 				8FAD97D81A0CFD3600C3A5D1 /* BAItemAccountCell.xib in Resources */,
 				8FAD97D91A0CFD3600C3A5D1 /* Images.xcassets in Resources */,
+				B4CD1EC821481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FAD97DA1A0CFD3600C3A5D1 /* Icon@2x.png in Resources */,
+				B4CD1F2221481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FAD97DB1A0CFD3600C3A5D1 /* BAFeeCell.xib in Resources */,
 				B43CE0AE20FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FAD97DC1A0CFD3600C3A5D1 /* checkbox.png in Resources */,
@@ -5812,26 +5854,13 @@
 				8FAD97E11A0CFD3600C3A5D1 /* menuIconSearch.png in Resources */,
 				8FAD97E21A0CFD3600C3A5D1 /* menuIconAccount@2x.png in Resources */,
 				8FAD97E31A0CFD3600C3A5D1 /* menuIconInfo@2x.png in Resources */,
+				B4CD1EEC21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FAD97E41A0CFD3600C3A5D1 /* menuIconList@2x.png in Resources */,
 				8FAD97E51A0CFD3600C3A5D1 /* menuIconOptions@2x.png in Resources */,
 				8FAD97E61A0CFD3600C3A5D1 /* menuIconSearch@2x.png in Resources */,
 				8FAD97E71A0CFD3600C3A5D1 /* menuIconInfo.png in Resources */,
-				8FAD97E81A0CFD3600C3A5D1 /* mediaIconA.png in Resources */,
-				8FAD97E91A0CFD3600C3A5D1 /* mediaIconB.png in Resources */,
-				8FAD97EA1A0CFD3600C3A5D1 /* mediaIconE.png in Resources */,
-				8FAD97EB1A0CFD3600C3A5D1 /* mediaIconG.png in Resources */,
+				B4CD1F1021481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA6E1B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FAD97EC1A0CFD3600C3A5D1 /* mediaIconH.png in Resources */,
-				8FAD97ED1A0CFD3600C3A5D1 /* mediaIconI.png in Resources */,
-				8FAD97EE1A0CFD3600C3A5D1 /* mediaIconK.png in Resources */,
-				8FAD97EF1A0CFD3600C3A5D1 /* mediaIconL.png in Resources */,
-				8FAD97F01A0CFD3600C3A5D1 /* mediaIconM.png in Resources */,
-				8FAD97F11A0CFD3600C3A5D1 /* mediaIconO.png in Resources */,
-				8FAD97F21A0CFD3600C3A5D1 /* mediaIconP.png in Resources */,
-				8FAD97F31A0CFD3600C3A5D1 /* mediaIconS.png in Resources */,
-				8FAD97F41A0CFD3600C3A5D1 /* mediaIconT.png in Resources */,
-				8FAD97F51A0CFD3600C3A5D1 /* mediaIconV.png in Resources */,
-				8FAD97F61A0CFD3600C3A5D1 /* mediaIconX.png in Resources */,
 				8FAD97F71A0CFD3600C3A5D1 /* Icon.png in Resources */,
 				8FAD97F81A0CFD3600C3A5D1 /* bibapp~ipad.storyboard in Resources */,
 				8FAD97F91A0CFD3600C3A5D1 /* transparentImage.png in Resources */,
@@ -5845,12 +5874,18 @@
 				8FAD98011A0CFD3600C3A5D1 /* gear2.png in Resources */,
 				8FAD98021A0CFD3600C3A5D1 /* BAInfoCellPad.xib in Resources */,
 				8FAD98031A0CFD3600C3A5D1 /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7C21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1EDA21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FAD98041A0CFD3600C3A5D1 /* BALocationCellPad.xib in Resources */,
 				8FAD98051A0CFD3600C3A5D1 /* BATocCellPad.xib in Resources */,
 				8FAD98061A0CFD3600C3A5D1 /* BATocListCell.xib in Resources */,
+				B4CD1E6E21481B09008F0A46 /* mediaIconI.png in Resources */,
 				8FAD98071A0CFD3600C3A5D1 /* BibApp-SM-Info.plist in Resources */,
 				8FAD98081A0CFD3600C3A5D1 /* iPadIcon.png in Resources */,
+				B4CD1F6A21481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F3421481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FAD98091A0CFD3600C3A5D1 /* iPadIcon@2x.png in Resources */,
+				B4CD1EFE21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FAD980A1A0CFD3600C3A5D1 /* Icon-72.png in Resources */,
 				8FAD980B1A0CFD3600C3A5D1 /* Icon-72@2x.png in Resources */,
 				8FAD980C1A0CFD3600C3A5D1 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5865,18 +5900,26 @@
 				8FD610C8190916EA009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FD610C9190916EA009E2358 /* BAImpressumCell.xib in Resources */,
 				8FD610CB190916EA009E2358 /* Default.png in Resources */,
+				B4CD1E8921481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FD610CC190916EA009E2358 /* Default@2x.png in Resources */,
 				8FD610CD190916EA009E2358 /* Default-568h@2x.png in Resources */,
 				8FD610CE190916EA009E2358 /* bibapp~iphone.storyboard in Resources */,
 				8FD610CF190916EA009E2358 /* BAItemCell.xib in Resources */,
+				B4CD1F4F21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FD610D0190916EA009E2358 /* BAItemDetail.xib in Resources */,
+				B4CD1E9B21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7721481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EAD21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FD610D1190916EA009E2358 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F3D21481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FD610D2190916EA009E2358 /* BAInfoCell.xib in Resources */,
 				8FD610D3190916EA009E2358 /* BADocumentItemElementCell.xib in Resources */,
 				8FD610D4190916EA009E2358 /* BADocumentItemCell.xib in Resources */,
 				8FD610D5190916EA009E2358 /* BAItemAccountCell.xib in Resources */,
 				8F18073B192B3A7F0099F579 /* Images.xcassets in Resources */,
+				B4CD1EBF21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FD610D6190916EA009E2358 /* Icon@2x.png in Resources */,
+				B4CD1F1921481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FD610D7190916EA009E2358 /* BAFeeCell.xib in Resources */,
 				B43CE0A520FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FD610D8190916EA009E2358 /* checkbox.png in Resources */,
@@ -5887,26 +5930,13 @@
 				8FD610DD190916EA009E2358 /* menuIconSearch.png in Resources */,
 				8FD610DE190916EA009E2358 /* menuIconAccount@2x.png in Resources */,
 				8FD610DF190916EA009E2358 /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE321481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FD610E0190916EA009E2358 /* menuIconList@2x.png in Resources */,
 				8FD610E1190916EA009E2358 /* menuIconOptions@2x.png in Resources */,
 				8FD610E2190916EA009E2358 /* menuIconSearch@2x.png in Resources */,
 				8FD610E3190916EA009E2358 /* menuIconInfo.png in Resources */,
-				8FD610E4190916EA009E2358 /* mediaIconA.png in Resources */,
-				8FD610E5190916EA009E2358 /* mediaIconB.png in Resources */,
-				8FD610E6190916EA009E2358 /* mediaIconE.png in Resources */,
-				8FD610E7190916EA009E2358 /* mediaIconG.png in Resources */,
+				B4CD1F0721481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA651B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FD610E8190916EA009E2358 /* mediaIconH.png in Resources */,
-				8FD610E9190916EA009E2358 /* mediaIconI.png in Resources */,
-				8FD610EA190916EA009E2358 /* mediaIconK.png in Resources */,
-				8FD610EB190916EA009E2358 /* mediaIconL.png in Resources */,
-				8FD610EC190916EA009E2358 /* mediaIconM.png in Resources */,
-				8FD610ED190916EA009E2358 /* mediaIconO.png in Resources */,
-				8FD610EE190916EA009E2358 /* mediaIconP.png in Resources */,
-				8FD610EF190916EA009E2358 /* mediaIconS.png in Resources */,
-				8FD610F0190916EA009E2358 /* mediaIconT.png in Resources */,
-				8FD610F1190916EA009E2358 /* mediaIconV.png in Resources */,
-				8FD610F2190916EA009E2358 /* mediaIconX.png in Resources */,
 				8FD610F3190916EA009E2358 /* Icon.png in Resources */,
 				8FD610F4190916EA009E2358 /* bibapp~ipad.storyboard in Resources */,
 				8FD610F5190916EA009E2358 /* transparentImage.png in Resources */,
@@ -5920,12 +5950,18 @@
 				8FD610FD190916EA009E2358 /* gear2.png in Resources */,
 				8FD610FE190916EA009E2358 /* BAInfoCellPad.xib in Resources */,
 				8FD610FF190916EA009E2358 /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7321481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED121481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FD61100190916EA009E2358 /* BALocationCellPad.xib in Resources */,
 				8FD61101190916EA009E2358 /* BATocCellPad.xib in Resources */,
 				8FD61102190916EA009E2358 /* BATocListCell.xib in Resources */,
+				B4CD1E6521481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F53192C1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD61103190916EA009E2358 /* iPadIcon.png in Resources */,
+				B4CD1F6121481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2B21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FD61104190916EA009E2358 /* iPadIcon@2x.png in Resources */,
+				B4CD1EF521481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FD61105190916EA009E2358 /* Icon-72.png in Resources */,
 				8FD61106190916EA009E2358 /* Icon-72@2x.png in Resources */,
 				8FD61107190916EA009E2358 /* BACatalogueTableViewCell.xib in Resources */,
@@ -5940,18 +5976,26 @@
 				8FD61164190916EF009E2358 /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FD61165190916EF009E2358 /* BAImpressumCell.xib in Resources */,
 				8FD61167190916EF009E2358 /* Default.png in Resources */,
+				B4CD1E8A21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FD61168190916EF009E2358 /* Default@2x.png in Resources */,
 				8FD61169190916EF009E2358 /* Default-568h@2x.png in Resources */,
 				8FD6116A190916EF009E2358 /* bibapp~iphone.storyboard in Resources */,
 				8FD6116B190916EF009E2358 /* BAItemCell.xib in Resources */,
+				B4CD1F5021481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8FD6116C190916EF009E2358 /* BAItemDetail.xib in Resources */,
+				B4CD1E9C21481B09008F0A46 /* mediaIconM.png in Resources */,
+				B4CD1E7821481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EAE21481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FD6116D190916EF009E2358 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F3E21481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FD6116E190916EF009E2358 /* BAInfoCell.xib in Resources */,
 				8FD6116F190916EF009E2358 /* BADocumentItemElementCell.xib in Resources */,
 				8FD61170190916EF009E2358 /* BADocumentItemCell.xib in Resources */,
 				8FD61171190916EF009E2358 /* BAItemAccountCell.xib in Resources */,
 				8F18073C192B3A7F0099F579 /* Images.xcassets in Resources */,
+				B4CD1EC021481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8FD61172190916EF009E2358 /* Icon@2x.png in Resources */,
+				B4CD1F1A21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FD61173190916EF009E2358 /* BAFeeCell.xib in Resources */,
 				B43CE0A620FF3F6700AFBC78 /* Localizable.strings in Resources */,
 				8FD61174190916EF009E2358 /* checkbox.png in Resources */,
@@ -5962,26 +6006,13 @@
 				8FD61179190916EF009E2358 /* menuIconSearch.png in Resources */,
 				8FD6117A190916EF009E2358 /* menuIconAccount@2x.png in Resources */,
 				8FD6117B190916EF009E2358 /* menuIconInfo@2x.png in Resources */,
+				B4CD1EE421481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FD6117C190916EF009E2358 /* menuIconList@2x.png in Resources */,
 				8FD6117D190916EF009E2358 /* menuIconOptions@2x.png in Resources */,
 				8FD6117E190916EF009E2358 /* menuIconSearch@2x.png in Resources */,
 				8FD6117F190916EF009E2358 /* menuIconInfo.png in Resources */,
-				8FD61180190916EF009E2358 /* mediaIconA.png in Resources */,
-				8FD61181190916EF009E2358 /* mediaIconB.png in Resources */,
-				8FD61182190916EF009E2358 /* mediaIconE.png in Resources */,
-				8FD61183190916EF009E2358 /* mediaIconG.png in Resources */,
+				B4CD1F0821481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA661B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
-				8FD61184190916EF009E2358 /* mediaIconH.png in Resources */,
-				8FD61185190916EF009E2358 /* mediaIconI.png in Resources */,
-				8FD61186190916EF009E2358 /* mediaIconK.png in Resources */,
-				8FD61187190916EF009E2358 /* mediaIconL.png in Resources */,
-				8FD61188190916EF009E2358 /* mediaIconM.png in Resources */,
-				8FD61189190916EF009E2358 /* mediaIconO.png in Resources */,
-				8FD6118A190916EF009E2358 /* mediaIconP.png in Resources */,
-				8FD6118B190916EF009E2358 /* mediaIconS.png in Resources */,
-				8FD6118C190916EF009E2358 /* mediaIconT.png in Resources */,
-				8FD6118D190916EF009E2358 /* mediaIconV.png in Resources */,
-				8FD6118E190916EF009E2358 /* mediaIconX.png in Resources */,
 				8FD6118F190916EF009E2358 /* Icon.png in Resources */,
 				8FD61190190916EF009E2358 /* bibapp~ipad.storyboard in Resources */,
 				8FD61191190916EF009E2358 /* transparentImage.png in Resources */,
@@ -5995,12 +6026,18 @@
 				8FD61199190916EF009E2358 /* gear2.png in Resources */,
 				8FD6119A190916EF009E2358 /* BAInfoCellPad.xib in Resources */,
 				8FD6119B190916EF009E2358 /* BAImpressumCellPad.xib in Resources */,
+				B4CD1F7421481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1ED221481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8FD6119C190916EF009E2358 /* BALocationCellPad.xib in Resources */,
 				8FD6119D190916EF009E2358 /* BATocCellPad.xib in Resources */,
 				8FD6119E190916EF009E2358 /* BATocListCell.xib in Resources */,
+				B4CD1E6621481B09008F0A46 /* mediaIconI.png in Resources */,
 				8F53192D1951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FD6119F190916EF009E2358 /* iPadIcon.png in Resources */,
+				B4CD1F6221481B0A008F0A46 /* mediaIconS.png in Resources */,
+				B4CD1F2C21481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FD611A0190916EF009E2358 /* iPadIcon@2x.png in Resources */,
+				B4CD1EF621481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FD611A1190916EF009E2358 /* Icon-72.png in Resources */,
 				8FD611A2190916EF009E2358 /* Icon-72@2x.png in Resources */,
 				8FD611A3190916EF009E2358 /* BACatalogueTableViewCell.xib in Resources */,
@@ -6012,13 +6049,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF2700E16393BF200099665 /* Default.png in Resources */,
+				B4CD1E6021481B09008F0A46 /* mediaIconI.png in Resources */,
 				8FF2701016393BF200099665 /* Default@2x.png in Resources */,
 				8FF2701216393BF200099665 /* Default-568h@2x.png in Resources */,
 				8F40D3CC163A7FDD001386F9 /* bibapp~iphone.storyboard in Resources */,
 				8F3A1313163FD16E00D0B6F1 /* BAItemCell.xib in Resources */,
+				B4CD1EF021481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F3A1324163FE22E00D0B6F1 /* BAItemDetail.xib in Resources */,
 				8F3A13291640072F00D0B6F1 /* BAItemDetailCell.xib in Resources */,
+				B4CD1F4A21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				B4CD1F3821481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F24E6F6166611AB0017AC81 /* BAInfoCell.xib in Resources */,
+				B4CD1F0221481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FFFCFCA1667846300326BE9 /* BADocumentItemElementCell.xib in Resources */,
 				8F5319271951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */,
@@ -6029,34 +6071,26 @@
 				8FF5BFE9166F82520039AB6C /* BAItemDetailTitleCell.xib in Resources */,
 				8F180736192B3A7B0099F579 /* Images.xcassets in Resources */,
 				8FBA876C16820535005A9962 /* BAImpressumCell.xib in Resources */,
+				B4CD1EDE21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FE5D0BF16AFDDE50024027C /* BADocumentItemElementCellNonLocal.xib in Resources */,
 				8FFE76B416B1448300844658 /* menuIconAccount.png in Resources */,
+				B4CD1F1421481B0A008F0A46 /* mediaIconK.png in Resources */,
+				B4CD1EA821481B0A008F0A46 /* mediaIconBe.png in Resources */,
 				8FFE76B816B1448300844658 /* menuIconList.png in Resources */,
 				8FFE76BA16B1448300844658 /* menuIconOptions.png in Resources */,
+				B4CD1F6E21481B0A008F0A46 /* mediaIconT.png in Resources */,
+				B4CD1E9621481B09008F0A46 /* mediaIconM.png in Resources */,
 				8FFE76BC16B1448300844658 /* menuIconSearch.png in Resources */,
 				8F2190B516B2AFA100512C85 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F0D9F7A16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */,
 				8F0D9F7C16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */,
 				8FE6DA601B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
+				B4CD1F2621481B0A008F0A46 /* mediaIconX.png in Resources */,
+				B4CD1ECC21481B0A008F0A46 /* mediaIconG.png in Resources */,
 				8F0D9F7E16B68AD8000CED81 /* menuIconList@2x.png in Resources */,
 				8F0D9F8016B68AD8000CED81 /* menuIconOptions@2x.png in Resources */,
 				8F0D9F8216B68AD8000CED81 /* menuIconSearch@2x.png in Resources */,
 				8F0D9F8516B69949000CED81 /* menuIconInfo.png in Resources */,
-				8FB2FE0516CA4575007382EE /* mediaIconA.png in Resources */,
-				8FB2FE0716CA4575007382EE /* mediaIconB.png in Resources */,
-				8FB2FE0916CA4575007382EE /* mediaIconE.png in Resources */,
-				8FB2FE0B16CA4575007382EE /* mediaIconG.png in Resources */,
-				8FB2FE0D16CA4575007382EE /* mediaIconH.png in Resources */,
-				8FB2FE0F16CA4575007382EE /* mediaIconI.png in Resources */,
-				8FB2FE1116CA4575007382EE /* mediaIconK.png in Resources */,
-				8FB2FE1316CA4575007382EE /* mediaIconL.png in Resources */,
-				8FB2FE1516CA4575007382EE /* mediaIconM.png in Resources */,
-				8FB2FE1716CA4575007382EE /* mediaIconO.png in Resources */,
-				8FB2FE1916CA4575007382EE /* mediaIconP.png in Resources */,
-				8FB2FE1B16CA4575007382EE /* mediaIconS.png in Resources */,
-				8FB2FE1D16CA4575007382EE /* mediaIconT.png in Resources */,
-				8FB2FE1F16CA4575007382EE /* mediaIconV.png in Resources */,
-				8FB2FE2116CA4575007382EE /* mediaIconX.png in Resources */,
 				8FE6259016CBC9BA00F0D213 /* IconLG.png in Resources */,
 				8FE6259216CBC9C100F0D213 /* IconLG@2x.png in Resources */,
 				8FED45E716D234370056CD88 /* bibapp~ipad.storyboard in Resources */,
@@ -6064,6 +6098,7 @@
 				8F7E1ED116D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8F7E1ED816D6569100EE3BF9 /* actionButton.png in Resources */,
 				8FE94A7016DCAE1F004D33B7 /* Buch_250_gradient.png in Resources */,
+				B4CD1F5C21481B0A008F0A46 /* mediaIconS.png in Resources */,
 				8FE94A7316DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib in Resources */,
 				8FE94A7616DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				B43CE0A020FF3F6700AFBC78 /* Localizable.strings in Resources */,
@@ -6077,7 +6112,10 @@
 				8F6A7C2B1701CFB800C4E580 /* BATocListCell.xib in Resources */,
 				8FE5F95C170466CE002EA336 /* iPadIconLG.png in Resources */,
 				8FE5F95E170466D8002EA336 /* iPadIconLG@2x.png in Resources */,
+				B4CD1E7221481B09008F0A46 /* mediaIconP.png in Resources */,
+				B4CD1EBA21481B0A008F0A46 /* mediaIconO.png in Resources */,
 				8F36FC361784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				B4CD1E8421481B09008F0A46 /* mediaIconB.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
