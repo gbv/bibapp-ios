@@ -136,11 +136,6 @@
     [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
     BAConnector *unapiConnectorMods = [BAConnector generateConnector];
     [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
-
-    if (self.appDelegate.configuration.useDAIASubRequests) {
-        BAConnector *famConnector = [BAConnector generateConnector];
-        [famConnector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
-    }
     
     NSLog(@"%@", [self.currentEntry ppn]);
     
@@ -601,10 +596,16 @@
             }
         }
         BAConnector *connector = [BAConnector generateConnector];
-        if (self.currentEntry.local) {
-            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        if (!self.blockOrderByTypes) {
+            if (self.currentEntry.local) {
+                [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+            } else {
+                [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+            }
         } else {
-            [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+            if (self.appDelegate.configuration.useDAIASubRequests) {
+                [connector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
         }
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
        /* NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
@@ -686,8 +687,10 @@
         NSArray *items = [parser nodesForXPath:@"RESULT/SET/SHORTTITLE" error:nil];
         for (GDataXMLElement *item in items) {
             NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
-            BAConnector *connector = [BAConnector generateConnector];
-            [connector getDetailsForLocal:ppn WithDelegate:self];
+            if (![ppn isEqualToString:self.currentEntry.ppn]) {
+                BAConnector *connector = [BAConnector generateConnector];
+                [connector getDetailsForLocal:ppn WithDelegate:self];
+            }
         }
         
         NSArray *sets = [parser nodesForXPath:@"RESULT/SET" error:nil];
@@ -916,6 +919,9 @@
                         [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
                     }
                 }
+                
+                // ToDo: add check for missing barcode in [load href]. Add text if that is the case:
+                // Set Flag here and overwrite cell content later.
             } else {
                 if (loan.href != nil) {
                     NSRange match = [loan.href rangeOfString: @"loan/RES"];
