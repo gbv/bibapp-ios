@@ -540,6 +540,17 @@
             item = nil;
         }
         
+        UIColor *textColor = [UIColor darkTextColor];
+        if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"dd.mm.yyyy"];
+            NSDate *date = [dateFormat dateFromString:item.endtime];
+            NSDate *now = [NSDate date];
+            if ([now compare:date] == NSOrderedDescending) {
+                textColor = [UIColor redColor];
+            }
+        }
+        
         [cell.titleLabel setText:item.title];
         
         [cell.labelTitleLabel setText:BALocalizedString(@"Signatur:")];
@@ -548,6 +559,7 @@
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
             [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
             [cell.dateLabel setText:item.endtime];
+            [cell.dateLabel setTextColor:textColor];
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             [cell.dateTitleLabel setText:BALocalizedString(@"Vormerkdatum:")];
             [cell.dateLabel setText:item.starttime];
