@@ -71,7 +71,7 @@
         self.searchTitle = BALocalizedString(@"Suche");
         self.hasLocalDetailURL = NO;
         
-        self.currentBibStandardCatalogue = BALocalizedString(@"Standard-Katalog");
+        self.currentBibStandardCatalogue = @"Standard-Katalog";
         
         self.currentBibHideDepartment = NO;
         self.currentBibFeedURLIsWebsite = NO;
