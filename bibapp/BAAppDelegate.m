@@ -103,6 +103,8 @@
     
     BALocalizationSetLanguage(self.options.selectedLanguage);
     
+    //setenv("CFNETWORK_DIAGNOSTICS", "3", 1);
+    
     return YES;
 }
 

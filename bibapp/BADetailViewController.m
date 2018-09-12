@@ -118,7 +118,7 @@
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
-    spinner.frame = CGRectMake(0, 0, 320, 44);
+    spinner.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
     ((BAItemDetail *)self.view).detailTableView.tableFooterView = spinner;
     
     if ([self.appDelegate.configuration.currentBibBlockOrderTypes count] == 0) {
@@ -845,7 +845,7 @@
             top = 120;
         }
         
-        [cell setFrame: CGRectMake(0,0,320,top+10)];
+        [cell setFrame: CGRectMake(0,0,[[UIScreen mainScreen] bounds].size.width,top+10)];
         self.computedSizeOfTitleCell = top+10;
         
         return cell;

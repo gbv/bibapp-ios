@@ -949,9 +949,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menuIconAccount.png" width="29" height="29"/>
+        <image name="menuIconAccount.png" width="29" height="27"/>
         <image name="menuIconInfo.png" width="29" height="29"/>
-        <image name="menuIconList.png" width="29" height="29"/>
+        <image name="menuIconList.png" width="29" height="21"/>
         <image name="menuIconOptions.png" width="29" height="29"/>
         <image name="menuIconSearch.png" width="29" height="29"/>
     </resources>

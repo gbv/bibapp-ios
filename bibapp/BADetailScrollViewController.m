@@ -158,6 +158,13 @@
             frame.origin.x = [[UIScreen mainScreen] bounds].size.width * page;
             frame.origin.y = 0;
             frame.size.width = [[UIScreen mainScreen] bounds].size.width;
+            frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.tabBarController.tabBar.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame) - CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
+            
+            NSLog(@"%@", NSStringFromCGRect(self.scrollView.frame));
+            NSLog(@"%@", NSStringFromCGRect(self.scrollView.bounds));
+            NSLog(@"%@", NSStringFromCGRect(self.view.frame));
+            NSLog(@"%@", NSStringFromCGRect(self.view.bounds));
+            
             BADetailViewController *subViewController = [[BADetailViewController alloc] initWithFrame:frame];
             [subViewController setBookList:self.bookList];
             [subViewController setCurrentEntry:[self.bookList objectAtIndex:page]];

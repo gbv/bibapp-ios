@@ -763,6 +763,9 @@ static BAConnector *sharedConnector = nil;
     [self setCommand:@"getDetailsLocalFam"];
     if ([self checkNetworkReachability]) {
         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?FRST=%ld&PPN=%@&XML=YES", [self.appDelegate.configuration getDetailFamURLForCatalog:self.appDelegate.options.selectedCatalogue], start, ppn]];
+        
+        NSLog(@"%@", url);
+        
         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
         if (theConnection) {
