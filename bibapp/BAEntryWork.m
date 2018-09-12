@@ -44,6 +44,7 @@
 @synthesize partName;
 @synthesize partNumber;
 @synthesize year;
+@synthesize isElectronic;
 
 - (UIImage *)mediaIcon
 {
@@ -130,7 +131,11 @@
                 if([self.mediaIconOriginInfoIssuance isEqualToString:@"serial"] || [self.mediaIconOriginInfoIssuance isEqualToString:@"continuing"]) {
                     [self setMatcode:@"mediaIconT.png"];
                 } else {
-                    [self setMatcode:@"mediaIconB.png"];
+                    if (!self.isElectronic) {
+                        [self setMatcode:@"mediaIconB.png"];
+                    } else {
+                        [self setMatcode:@"mediaIconBe.png"];
+                    }
                 }
             } else if([self.mediaIconTypeOfResource isEqualToString:@"software, multimedia"]) {
                 if([self.mediaIconOriginInfoIssuance isEqualToString:@"serial"] || [self.mediaIconOriginInfoIssuance isEqualToString:@"continuing"]) {

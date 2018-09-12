@@ -430,6 +430,9 @@
                     } else if ([[physicalDescriptionForm stringValue] isEqualToString:@"remote"]) {
                         [tempEntry setMediaIconPhysicalDescriptionForm:@"remote"];
                     }
+                    if ([[physicalDescriptionForm stringValue] isEqualToString:@"electronic resource"]) {
+                        tempEntry.isElectronic = YES;
+                    }
                 } 
             }
             NSArray *physicalDescriptionExtents = [physicalDescription elementsForName:@"extent"];
