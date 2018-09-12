@@ -541,14 +541,12 @@
         }
         
         UIColor *textColor = [UIColor darkTextColor];
-        if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-            [dateFormat setDateFormat:@"dd.mm.yyyy"];
-            NSDate *date = [dateFormat dateFromString:item.endtime];
-            NSDate *now = [NSDate date];
-            if ([now compare:date] == NSOrderedDescending) {
-                textColor = [UIColor redColor];
-            }
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.mm.yyyy"];
+        NSDate *date = [dateFormat dateFromString:item.endtime];
+        NSDate *now = [NSDate date];
+        if ([now compare:date] == NSOrderedDescending) {
+            textColor = [UIColor redColor];
         }
         
         [cell.titleLabel setText:item.title];

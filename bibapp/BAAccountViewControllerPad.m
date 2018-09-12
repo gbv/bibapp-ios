@@ -746,14 +746,28 @@
             item = nil;
         }
         
+        UIColor *textColor = [UIColor darkTextColor];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.mm.yyyy"];
+        NSDate *date = [dateFormat dateFromString:item.endtime];
+        NSDate *now = [NSDate date];
+        if ([now compare:date] == NSOrderedDescending) {
+            textColor = [UIColor redColor];
+        }
+        
         [cell.titleLabel setText:item.title];
         
         [cell.labelTitleLabel setText:BALocalizedString(@"Signatur:")];
         [cell.labelLabel setText:item.label];
         
         if (tableView.tag == 0) {
+           [cell.dateTitleLabel setTextColor:textColor];
            [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
+           [cell.dateLabel setTextColor:textColor];
            [cell.dateLabel setText:item.endtime];
+           [cell.warningLabel setTextColor:textColor];
+           [cell.warningLabel setFont:[UIFont fontWithName:@"belugino" size:22]];
+           [cell.warningLabel setText:@"\uE915"];
         } else if(tableView.tag == 1) {
            [cell.dateTitleLabel setText:BALocalizedString(@"Vormerkdatum:")];
            [cell.dateLabel setText:item.starttime];
