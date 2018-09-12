@@ -541,12 +541,14 @@
         }
         
         UIColor *textColor = [UIColor darkTextColor];
+        BOOL isOverdue = NO;
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"dd.mm.yyyy"];
+        [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *date = [dateFormat dateFromString:item.endtime];
         NSDate *now = [NSDate date];
         if ([now compare:date] == NSOrderedDescending) {
             textColor = [UIColor redColor];
+            isOverdue = YES;
         }
         
         [cell.titleLabel setText:item.title];
@@ -561,7 +563,9 @@
             [cell.dateLabel setText:item.endtime];
             [cell.warningLabel setTextColor:textColor];
             [cell.warningLabel setFont:[UIFont fontWithName:@"belugino" size:22]];
-            [cell.warningLabel setText:@"\uE915"];
+            if (isOverdue) {
+                [cell.warningLabel setText:@"\uE915"];
+            }
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             [cell.dateTitleLabel setText:BALocalizedString(@"Vormerkdatum:")];
             [cell.dateLabel setText:item.starttime];
