@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="h9u-1k-Fpf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="h9u-1k-Fpf">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2064" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -261,7 +261,7 @@
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Detail" id="wRy-j2-esC">
-                                        <barButtonItem key="rightBarButtonItem" image="gear2.png" id="dX3-QP-kRP">
+                                        <barButtonItem key="rightBarButtonItem" image="menuIconOptions.png" id="dX3-QP-kRP">
                                             <connections>
                                                 <segue destination="7GO-lR-6oU" kind="modal" identifier="optionsSegue" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="Sjv-hh-bWp"/>
                                             </connections>
@@ -398,7 +398,7 @@
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Konto" id="OsS-ja-Ww7">
-                                        <barButtonItem key="rightBarButtonItem" image="gear2.png" id="Izu-eV-Zxs">
+                                        <barButtonItem key="rightBarButtonItem" image="menuIconOptions.png" id="Izu-eV-Zxs">
                                             <connections>
                                                 <segue destination="7GO-lR-6oU" kind="modal" identifier="optionsSegue" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="nEM-ay-oB3"/>
                                             </connections>
@@ -623,7 +623,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6Sb-3w-JFb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6nH-Ha-sIW">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -653,7 +653,7 @@
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Info" id="NmR-MO-HLH">
-                                        <barButtonItem key="rightBarButtonItem" image="gear2.png" id="IPX-Bi-HrN">
+                                        <barButtonItem key="rightBarButtonItem" image="menuIconOptions.png" id="IPX-Bi-HrN">
                                             <connections>
                                                 <segue destination="7GO-lR-6oU" kind="modal" identifier="optionsSegue" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="rQv-b2-BRp"/>
                                             </connections>
@@ -843,7 +843,7 @@
                                 <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Detail" id="D3U-tw-xnj">
-                                        <barButtonItem key="rightBarButtonItem" image="gear2.png" id="0uB-Vu-ACp">
+                                        <barButtonItem key="rightBarButtonItem" image="menuIconOptions.png" id="0uB-Vu-ACp">
                                             <connections>
                                                 <segue destination="7GO-lR-6oU" kind="modal" identifier="optionsSegue" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="0y8-4D-qGn"/>
                                             </connections>
@@ -1077,7 +1077,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uQ9-R5-L8d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="baF-qk-Alz">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rf-si-M7R">
@@ -1105,7 +1105,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kyb-dg-hpp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZW6-0x-JaH">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APj-1D-b2n">
@@ -1145,7 +1145,7 @@
                                         <rect key="frame" x="0.0" y="55.5" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B3s-8u-deM" id="SSm-OV-t0R">
-                                            <rect key="frame" x="0.0" y="0.0" width="507" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="502" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Lokaler Katalog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ue6-XD-tP4">
@@ -1350,11 +1350,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear2.png" width="20" height="22"/>
-        <image name="mediaIconB.png" width="32" height="32"/>
-        <image name="menuIconAccount.png" width="29" height="29"/>
+        <image name="mediaIconB.png" width="96" height="96"/>
+        <image name="menuIconAccount.png" width="29" height="27"/>
         <image name="menuIconInfo.png" width="29" height="29"/>
-        <image name="menuIconList.png" width="29" height="29"/>
+        <image name="menuIconList.png" width="29" height="21"/>
+        <image name="menuIconOptions.png" width="29" height="29"/>
         <image name="menuIconSearch.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
