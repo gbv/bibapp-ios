@@ -137,8 +137,6 @@
     BAConnector *unapiConnectorMods = [BAConnector generateConnector];
     [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
     
-    NSLog(@"%@", [self.currentEntry ppn]);
-    
     [self.view setNeedsDisplay];
 }
 
