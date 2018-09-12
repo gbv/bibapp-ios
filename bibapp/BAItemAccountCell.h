@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *renewalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *storageTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *storageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *warningLabel;
 
 @end

@@ -557,9 +557,13 @@
         [cell.labelLabel setText:item.label];
         
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+            [cell.dateTitleLabel setTextColor:textColor];
             [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
-            [cell.dateLabel setText:item.endtime];
             [cell.dateLabel setTextColor:textColor];
+            [cell.dateLabel setText:item.endtime];
+            [cell.warningLabel setTextColor:textColor];
+            [cell.warningLabel setFont:[UIFont fontWithName:@"belugino" size:22]];
+            [cell.warningLabel setText:@"\uE915"];
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             [cell.dateTitleLabel setText:BALocalizedString(@"Vormerkdatum:")];
             [cell.dateLabel setText:item.starttime];

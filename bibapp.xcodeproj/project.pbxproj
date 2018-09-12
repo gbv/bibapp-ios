@@ -695,6 +695,24 @@
 		8F6A7C2C1701CFB800C4E580 /* BATocListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */; };
 		8F6A7C2F1701CFDD00C4E580 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
 		8F6A7C301701CFDD00C4E580 /* BATocListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */; };
+		8F6CC95521494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95621494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95721494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95821494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95921494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95A21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95B21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95C21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95D21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95E21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC95F21494DFF0099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96021494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96121494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96221494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96321494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96421494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96521494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
+		8F6CC96621494E000099B0CF /* belugino.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CC95421494DFF0099B0CF /* belugino.ttf */; };
 		8F71F19016FB309900AD46D0 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8F71F19116FB309900AD46D0 /* BADetailScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */; };
 		8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F72EC0E1782FA6600E1169C /* BAOptionsNavigationController.m */; };
@@ -3219,6 +3237,7 @@
 		8F6A7C2A1701CFB800C4E580 /* BATocListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocListCell.xib; sourceTree = "<group>"; };
 		8F6A7C2D1701CFDD00C4E580 /* BATocListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocListCell.h; sourceTree = "<group>"; };
 		8F6A7C2E1701CFDD00C4E580 /* BATocListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocListCell.m; sourceTree = "<group>"; };
+		8F6CC95421494DFF0099B0CF /* belugino.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = belugino.ttf; sourceTree = "<group>"; };
 		8F71F18E16FB309900AD46D0 /* BADetailScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADetailScrollViewController.h; sourceTree = "<group>"; };
 		8F71F18F16FB309900AD46D0 /* BADetailScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADetailScrollViewController.m; sourceTree = "<group>"; };
 		8F72EC0D1782FA6600E1169C /* BAOptionsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAOptionsNavigationController.h; sourceTree = "<group>"; };
@@ -3857,6 +3876,14 @@
 			name = Parser;
 			sourceTree = "<group>";
 		};
+		8F6CC95321494DD40099B0CF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8F6CC95421494DFF0099B0CF /* belugino.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		8F84BE15163C60F400614B36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -4202,6 +4229,7 @@
 		8FF2700216393BF200099665 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F6CC95321494DD40099B0CF /* Fonts */,
 				8F3A1315163FD1C200D0B6F1 /* Images */,
 				8F8A757A1781BAA600CCF7DB /* BibApp-LG-Info.plist */,
 				8F8A757C1781BB1500CCF7DB /* BibApp-HI-Info.plist */,
@@ -4760,6 +4788,7 @@
 				8F07B1971BFB72DB0012C325 /* BAItemDetail.xib in Resources */,
 				8F07B1981BFB72DB0012C325 /* BAItemDetailCell.xib in Resources */,
 				B4CD1F5A21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				8F6CC96521494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4821481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F07B1991BFB72DB0012C325 /* BAInfoCell.xib in Resources */,
 				B4CD1F1221481B0A008F0A46 /* mediaIconH.png in Resources */,
@@ -4894,6 +4923,7 @@
 				8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */,
 				8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */,
 				8F36FC371784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95621494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4970,6 +5000,7 @@
 				8F1D83D9192A2E7000A9898D /* Icon-72.png in Resources */,
 				8F1D83DA192A2E7000A9898D /* Icon-72@2x.png in Resources */,
 				8F1D83DB192A2E7000A9898D /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95C21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4987,6 +5018,7 @@
 				8F4A7F2E2029B78400CA6C0F /* BAItemDetail.xib in Resources */,
 				8F4A7F2F2029B78400CA6C0F /* BAItemDetailCell.xib in Resources */,
 				B4CD1F5B21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				8F6CC96621494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4921481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F4A7F302029B78400CA6C0F /* BAInfoCell.xib in Resources */,
 				B4CD1F1321481B0A008F0A46 /* mediaIconH.png in Resources */,
@@ -5071,6 +5103,7 @@
 				8F8A75DA1781BF4700CCF7DB /* BADocumentItemCell.xib in Resources */,
 				8F8A75DB1781BF4700CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A75DC1781BF4700CCF7DB /* Icon@2x.png in Resources */,
+				8F6CC95721494DFF0099B0CF /* belugino.ttf in Resources */,
 				8F8A75DD1781BF4700CCF7DB /* BAFeeCell.xib in Resources */,
 				B4CD1F1621481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A75DE1781BF4700CCF7DB /* checkbox.png in Resources */,
@@ -5152,6 +5185,7 @@
 				8F8A766F1781C05400CCF7DB /* BADocumentItemCell.xib in Resources */,
 				8F8A76701781C05400CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A76711781C05400CCF7DB /* Icon@2x.png in Resources */,
+				8F6CC95821494DFF0099B0CF /* belugino.ttf in Resources */,
 				8F8A76721781C05400CCF7DB /* BAFeeCell.xib in Resources */,
 				B4CD1F1721481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A76731781C05400CCF7DB /* checkbox.png in Resources */,
@@ -5233,6 +5267,7 @@
 				8F8A77061781C0D800CCF7DB /* Icon@2x.png in Resources */,
 				8F8A77071781C0D800CCF7DB /* BAFeeCell.xib in Resources */,
 				8F8A77081781C0D800CCF7DB /* checkbox.png in Resources */,
+				8F6CC95921494DFF0099B0CF /* belugino.ttf in Resources */,
 				B4CD1F0621481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F8A77091781C0D800CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A770A1781C0D800CCF7DB /* menuIconAccount.png in Resources */,
@@ -5309,6 +5344,7 @@
 				8F8EB60C1A93689000548F24 /* BAItemDetail.xib in Resources */,
 				8F8EB60D1A93689000548F24 /* BAItemDetailCell.xib in Resources */,
 				B4CD1F5921481B0A008F0A46 /* mediaIconE.png in Resources */,
+				8F6CC96421494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4721481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F8EB60E1A93689000548F24 /* BAInfoCell.xib in Resources */,
 				B4CD1F1121481B0A008F0A46 /* mediaIconH.png in Resources */,
@@ -5443,6 +5479,7 @@
 				8FA8F58719501E6B006CD05A /* Icon-72.png in Resources */,
 				8FA8F58819501E6B006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F58919501E6B006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95D21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5519,6 +5556,7 @@
 				8FA8F62919502224006CD05A /* Icon-72.png in Resources */,
 				8FA8F62A19502224006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F62B19502224006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95E21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5595,6 +5633,7 @@
 				8FA8F6CB1950228D006CD05A /* Icon-72.png in Resources */,
 				8FA8F6CC1950228D006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F6CD1950228D006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95F21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5671,6 +5710,7 @@
 				8FA8F76D195022BC006CD05A /* Icon-72.png in Resources */,
 				8FA8F76E195022BC006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F76F195022BC006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC96021494E000099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5688,6 +5728,7 @@
 				8FA8F7D61950230D006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F7D71950230D006CD05A /* bibapp~iphone.storyboard in Resources */,
 				B4CD1F5621481B0A008F0A46 /* mediaIconE.png in Resources */,
+				8F6CC96121494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4421481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8FA8F7D81950230D006CD05A /* BAItemCell.xib in Resources */,
 				B4CD1F0E21481B0A008F0A46 /* mediaIconH.png in Resources */,
@@ -5822,6 +5863,7 @@
 				8FA8F8B11950233A006CD05A /* Icon-72.png in Resources */,
 				8FA8F8B21950233A006CD05A /* Icon-72@2x.png in Resources */,
 				8FA8F8B31950233A006CD05A /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC96221494E000099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5898,6 +5940,7 @@
 				8FAD980A1A0CFD3600C3A5D1 /* Icon-72.png in Resources */,
 				8FAD980B1A0CFD3600C3A5D1 /* Icon-72@2x.png in Resources */,
 				8FAD980C1A0CFD3600C3A5D1 /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC96321494E000099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5974,6 +6017,7 @@
 				8FD61105190916EA009E2358 /* Icon-72.png in Resources */,
 				8FD61106190916EA009E2358 /* Icon-72@2x.png in Resources */,
 				8FD61107190916EA009E2358 /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95A21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6050,6 +6094,7 @@
 				8FD611A1190916EF009E2358 /* Icon-72.png in Resources */,
 				8FD611A2190916EF009E2358 /* Icon-72@2x.png in Resources */,
 				8FD611A3190916EF009E2358 /* BACatalogueTableViewCell.xib in Resources */,
+				8F6CC95B21494DFF0099B0CF /* belugino.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6067,6 +6112,7 @@
 				8F3A1324163FE22E00D0B6F1 /* BAItemDetail.xib in Resources */,
 				8F3A13291640072F00D0B6F1 /* BAItemDetailCell.xib in Resources */,
 				B4CD1F4A21481B0A008F0A46 /* mediaIconE.png in Resources */,
+				8F6CC95521494DFF0099B0CF /* belugino.ttf in Resources */,
 				B4CD1F3821481B0A008F0A46 /* mediaIconL.png in Resources */,
 				8F24E6F6166611AB0017AC81 /* BAInfoCell.xib in Resources */,
 				B4CD1F0221481B0A008F0A46 /* mediaIconH.png in Resources */,
