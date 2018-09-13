@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *converIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *tocInfo;
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *isbdIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *loanInfo;
 @property (weak, nonatomic) IBOutlet UIButton *loan;
 
