@@ -52,8 +52,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="Ahv-7K-Vyj"/>
                             <constraint firstAttribute="width" constant="107" id="dmj-i6-i6A"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="dsR-z2-DNW"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="vUn-Ne-ldP"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                         <state key="normal" title="Mehr zum Inhalt">
@@ -69,9 +67,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="61" id="UU5-Pr-GgJ"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="WMl-7U-frP"/>
                             <constraint firstAttribute="height" constant="13" id="fee-LU-Gmr"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="13" id="k3J-9C-NoA"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <state key="normal" title="Abstract">
@@ -92,7 +88,6 @@
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="4cf-Dm-m69"/>
                             <constraint firstAttribute="width" constant="22" id="PpV-AP-wyt"/>
                             <constraint firstAttribute="height" constant="22" id="pGx-mk-L0z"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="uiL-d0-ax8"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                         <state key="normal">
@@ -116,8 +111,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="CxU-UT-KaS"/>
                             <constraint firstAttribute="width" constant="114" id="dwf-9V-fBM"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="p8Q-Ne-jjO"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="xs8-4Y-PAH"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                         <state key="normal" title="Fernleihoptionen">
@@ -132,8 +125,6 @@
                         <rect key="frame" x="10" y="216" width="22" height="22"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="LHo-kp-bGb"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="aeX-jv-iws"/>
                             <constraint firstAttribute="width" constant="22" id="ahr-Vf-tYV"/>
                             <constraint firstAttribute="height" constant="22" id="hsN-Hd-ZpS"/>
                         </constraints>
