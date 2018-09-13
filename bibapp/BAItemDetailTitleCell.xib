@@ -46,7 +46,7 @@
                         <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="135">
+                    <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="135">
                         <rect key="frame" x="36" y="191" width="107" height="18"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,7 +64,7 @@
                             <action selector="tocAction:" destination="102" eventType="touchUpInside" id="154"/>
                         </connections>
                     </button>
-                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="143">
+                    <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="143">
                         <rect key="frame" x="249" y="193" width="61" height="13"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,7 +85,7 @@
                             <action selector="abstractAction:" destination="102" eventType="touchUpInside" id="156"/>
                         </connections>
                     </button>
-                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="363">
+                    <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="363">
                         <rect key="frame" x="10" y="190" width="22" height="22"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -110,7 +110,7 @@
                         <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
-                    <button contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="370">
+                    <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="370">
                         <rect key="frame" x="36" y="217" width="114" height="18"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,7 +128,7 @@
                             <action selector="tocAction:" destination="102" eventType="touchUpInside" id="371"/>
                         </connections>
                     </button>
-                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="372">
+                    <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="372">
                         <rect key="frame" x="10" y="216" width="22" height="22"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -152,11 +152,12 @@
                     <constraint firstAttribute="trailing" secondItem="143" secondAttribute="trailing" constant="10" id="4ML-9L-MeA"/>
                     <constraint firstItem="12" firstAttribute="leading" secondItem="6c8-xP-fut" secondAttribute="leading" constant="10" id="5AJ-rs-HCr"/>
                     <constraint firstAttribute="trailing" secondItem="366" secondAttribute="trailing" constant="10" id="88g-h8-Thb"/>
-                    <constraint firstItem="143" firstAttribute="top" relation="greaterThanOrEqual" secondItem="19" secondAttribute="bottom" constant="50" id="9Pa-6r-IVN"/>
+                    <constraint firstItem="143" firstAttribute="top" relation="greaterThanOrEqual" secondItem="19" secondAttribute="bottom" constant="20" id="9Pa-6r-IVN"/>
                     <constraint firstItem="363" firstAttribute="leading" secondItem="6c8-xP-fut" secondAttribute="leading" constant="10" id="9sO-hn-Ug3"/>
                     <constraint firstItem="370" firstAttribute="top" secondItem="135" secondAttribute="bottom" constant="8" id="ACP-MX-Ecs"/>
                     <constraint firstItem="372" firstAttribute="top" secondItem="363" secondAttribute="bottom" constant="4" id="All-VK-QAg"/>
                     <constraint firstItem="135" firstAttribute="leading" secondItem="363" secondAttribute="trailing" constant="4" id="BPQ-qb-JvI"/>
+                    <constraint firstItem="143" firstAttribute="top" relation="greaterThanOrEqual" secondItem="12" secondAttribute="bottom" constant="20" id="E2p-WC-ACe"/>
                     <constraint firstItem="366" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" id="FmE-Dq-rbx"/>
                     <constraint firstAttribute="bottom" secondItem="370" secondAttribute="bottom" constant="8.5" id="NZi-bM-LBt"/>
                     <constraint firstItem="19" firstAttribute="top" secondItem="366" secondAttribute="bottom" constant="10" id="QLO-Rm-qgT"/>
