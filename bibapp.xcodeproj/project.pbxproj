@@ -728,6 +728,60 @@
 		8F7E1ED616D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED416D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m */; };
 		8F7E1ED816D6569100EE3BF9 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED716D6569100EE3BF9 /* actionButton.png */; };
 		8F7E1ED916D6569100EE3BF9 /* actionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E1ED716D6569100EE3BF9 /* actionButton.png */; };
+		8F85FD62215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD63215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD64215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD65215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD66215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD67215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD68215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD69215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6A215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6B215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6C215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6D215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6E215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD6F215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD70215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD71215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD72215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD73215CBFB10003029A /* Code39.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD61215CBFB10003029A /* Code39.m */; };
+		8F85FD88215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD89215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8A215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8B215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8C215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8D215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8E215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD8F215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD90215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD91215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD92215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD93215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD94215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD95215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD96215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD97215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD98215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD99215CCB670003029A /* idcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F85FD87215CCB670003029A /* idcard@2x.png */; };
+		8F85FD9C215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FD9D215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FD9E215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FD9F215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA0215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA1215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA2215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA3215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA4215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA5215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA6215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA7215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA8215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDA9215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDAA215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDAB215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDAC215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
+		8F85FDAD215CCE6B0003029A /* BAIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85FD9B215CCE6B0003029A /* BAIdViewController.m */; };
 		8F8A75801781BF4700CCF7DB /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8F8A75811781BF4700CCF7DB /* BAAccountTableHeaderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2190B816B2B05F00512C85 /* BAAccountTableHeaderTextView.m */; };
 		8F8A75821781BF4700CCF7DB /* BADocumentItemElementCellNonLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5D0C216AFDE230024027C /* BADocumentItemElementCellNonLocal.m */; };
@@ -3248,6 +3302,11 @@
 		8F7E1ED316D6435900EE3BF9 /* BAAccountTableHeaderViewPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAccountTableHeaderViewPad.h; sourceTree = "<group>"; };
 		8F7E1ED416D6435900EE3BF9 /* BAAccountTableHeaderViewPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAccountTableHeaderViewPad.m; sourceTree = "<group>"; };
 		8F7E1ED716D6569100EE3BF9 /* actionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionButton.png; sourceTree = "<group>"; };
+		8F85FD60215CBFB10003029A /* Code39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Code39.h; sourceTree = "<group>"; };
+		8F85FD61215CBFB10003029A /* Code39.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Code39.m; sourceTree = "<group>"; };
+		8F85FD87215CCB670003029A /* idcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idcard@2x.png"; sourceTree = "<group>"; };
+		8F85FD9A215CCE6B0003029A /* BAIdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIdViewController.h; sourceTree = "<group>"; };
+		8F85FD9B215CCE6B0003029A /* BAIdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIdViewController.m; sourceTree = "<group>"; };
 		8F8A757A1781BAA600CCF7DB /* BibApp-LG-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BibApp-LG-Info.plist"; sourceTree = "<group>"; };
 		8F8A757C1781BB1500CCF7DB /* BibApp-HI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BibApp-HI-Info.plist"; sourceTree = "<group>"; };
 		8F8A76111781BF4800CCF7DB /* BibApp BLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp BLS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3818,6 +3877,7 @@
 		8F1101EC165CEB39008A8A46 /* ExternalClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8F85FD5F215CBF570003029A /* Code39 */,
 				8FCFF422192C80A500A3E93F /* Reachability */,
 				8F1101F2165CEE98008A8A46 /* GDataXML */,
 			);
@@ -3853,6 +3913,7 @@
 				8FEACCAC16D38F8D00E0565E /* transparentImage.png */,
 				8FD7C10316F37EC00073D037 /* gear.png */,
 				8FD7C10416F37EC00073D037 /* gear2.png */,
+				8F85FD87215CCB670003029A /* idcard@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -3921,6 +3982,15 @@
 				8F965382166E93B100CA5D50 /* BAOptions.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8F85FD5F215CBF570003029A /* Code39 */ = {
+			isa = PBXGroup;
+			children = (
+				8F85FD60215CBFB10003029A /* Code39.h */,
+				8F85FD61215CBFB10003029A /* Code39.m */,
+			);
+			name = Code39;
 			sourceTree = "<group>";
 		};
 		8FCFF422192C80A500A3E93F /* Reachability */ = {
@@ -3993,6 +4063,8 @@
 			children = (
 				8FE94A8D16DD086E004D33B7 /* BACoverViewController.h */,
 				8FE94A8E16DD086E004D33B7 /* BACoverViewController.m */,
+				8F85FD9A215CCE6B0003029A /* BAIdViewController.h */,
+				8F85FD9B215CCE6B0003029A /* BAIdViewController.m */,
 				8FE94A8516DCF980004D33B7 /* BALocationViewController.h */,
 				8FE94A8616DCF992004D33B7 /* BALocationViewController.m */,
 				8F6057DA17843F45004D3088 /* BACatalogueTableViewCell.h */,
@@ -4685,6 +4757,7 @@
 					};
 					8F114037167F217000E033F6 = {
 						DevelopmentTeam = VW9E5RXV2N;
+						ProvisioningStyle = Automatic;
 					};
 					8F1D8343192A2E7000A9898D = {
 						DevelopmentTeam = DG2S2C98D2;
@@ -4787,6 +4860,7 @@
 				B4CD1F0021481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F07B1971BFB72DB0012C325 /* BAItemDetail.xib in Resources */,
 				8F07B1981BFB72DB0012C325 /* BAItemDetailCell.xib in Resources */,
+				8F85FD98215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F5A21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F6CC96521494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4821481B0A008F0A46 /* mediaIconL.png in Resources */,
@@ -4860,6 +4934,7 @@
 				8F114064167F217000E033F6 /* Default.png in Resources */,
 				B4CD1E8521481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F114065167F217000E033F6 /* Default@2x.png in Resources */,
+				8F85FD89215CCB670003029A /* idcard@2x.png in Resources */,
 				8F114066167F217000E033F6 /* Default-568h@2x.png in Resources */,
 				8F114067167F217000E033F6 /* bibapp~iphone.storyboard in Resources */,
 				8F114068167F217000E033F6 /* BAItemCell.xib in Resources */,
@@ -4937,6 +5012,7 @@
 				8F1D839F192A2E7000A9898D /* Default.png in Resources */,
 				B4CD1E8B21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F1D83A0192A2E7000A9898D /* Default@2x.png in Resources */,
+				8F85FD8F215CCB670003029A /* idcard@2x.png in Resources */,
 				8F1D83A1192A2E7000A9898D /* Default-568h@2x.png in Resources */,
 				8F1D83A2192A2E7000A9898D /* bibapp~iphone.storyboard in Resources */,
 				8F1D83A3192A2E7000A9898D /* BAItemCell.xib in Resources */,
@@ -5017,6 +5093,7 @@
 				B4CD1F0121481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F4A7F2E2029B78400CA6C0F /* BAItemDetail.xib in Resources */,
 				8F4A7F2F2029B78400CA6C0F /* BAItemDetailCell.xib in Resources */,
+				8F85FD99215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F5B21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F6CC96621494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4921481B0A008F0A46 /* mediaIconL.png in Resources */,
@@ -5105,6 +5182,7 @@
 				8F8A75DC1781BF4700CCF7DB /* Icon@2x.png in Resources */,
 				8F6CC95721494DFF0099B0CF /* belugino.ttf in Resources */,
 				8F8A75DD1781BF4700CCF7DB /* BAFeeCell.xib in Resources */,
+				8F85FD8A215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F1621481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A75DE1781BF4700CCF7DB /* checkbox.png in Resources */,
 				8F8A75DF1781BF4700CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
@@ -5187,6 +5265,7 @@
 				8F8A76711781C05400CCF7DB /* Icon@2x.png in Resources */,
 				8F6CC95821494DFF0099B0CF /* belugino.ttf in Resources */,
 				8F8A76721781C05400CCF7DB /* BAFeeCell.xib in Resources */,
+				8F85FD8B215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F1721481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F8A76731781C05400CCF7DB /* checkbox.png in Resources */,
 				8F8A76741781C05400CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
@@ -5297,6 +5376,7 @@
 				8F8A77281781C0D800CCF7DB /* Buch_250_gradient.png in Resources */,
 				B4CD1EF421481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F8A77291781C0D800CCF7DB /* BADocumentItemElementCellPad.xib in Resources */,
+				8F85FD8C215CCB670003029A /* idcard@2x.png in Resources */,
 				8F18073A192B3A7E0099F579 /* Images.xcassets in Resources */,
 				8F8A772A1781C0D800CCF7DB /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8F8A772B1781C0D800CCF7DB /* BAListTableViewControllerPad.h in Resources */,
@@ -5343,6 +5423,7 @@
 				B4CD1EFF21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F8EB60C1A93689000548F24 /* BAItemDetail.xib in Resources */,
 				8F8EB60D1A93689000548F24 /* BAItemDetailCell.xib in Resources */,
+				8F85FD97215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F5921481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F6CC96421494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4721481B0A008F0A46 /* mediaIconL.png in Resources */,
@@ -5416,6 +5497,7 @@
 				8FA8F54C19501E6B006CD05A /* Default.png in Resources */,
 				B4CD1E8C21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F54D19501E6B006CD05A /* Default@2x.png in Resources */,
+				8F85FD90215CCB670003029A /* idcard@2x.png in Resources */,
 				8FA8F54E19501E6B006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F54F19501E6B006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F55019501E6B006CD05A /* BAItemCell.xib in Resources */,
@@ -5493,6 +5575,7 @@
 				8FA8F5EE19502224006CD05A /* Default.png in Resources */,
 				B4CD1E8D21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F5EF19502224006CD05A /* Default@2x.png in Resources */,
+				8F85FD91215CCB670003029A /* idcard@2x.png in Resources */,
 				8FA8F5F019502224006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F5F119502224006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F5F219502224006CD05A /* BAItemCell.xib in Resources */,
@@ -5570,6 +5653,7 @@
 				8FA8F6901950228D006CD05A /* Default.png in Resources */,
 				B4CD1E8E21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F6911950228D006CD05A /* Default@2x.png in Resources */,
+				8F85FD92215CCB670003029A /* idcard@2x.png in Resources */,
 				8FA8F6921950228D006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F6931950228D006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F6941950228D006CD05A /* BAItemCell.xib in Resources */,
@@ -5647,6 +5731,7 @@
 				8FA8F732195022BC006CD05A /* Default.png in Resources */,
 				B4CD1E8F21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F733195022BC006CD05A /* Default@2x.png in Resources */,
+				8F85FD93215CCB670003029A /* idcard@2x.png in Resources */,
 				8FA8F734195022BC006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F735195022BC006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F736195022BC006CD05A /* BAItemCell.xib in Resources */,
@@ -5727,6 +5812,7 @@
 				B4CD1EFC21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F7D61950230D006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F7D71950230D006CD05A /* bibapp~iphone.storyboard in Resources */,
+				8F85FD94215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F5621481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F6CC96121494E000099B0CF /* belugino.ttf in Resources */,
 				B4CD1F4421481B0A008F0A46 /* mediaIconL.png in Resources */,
@@ -5800,6 +5886,7 @@
 				8FA8F8761950233A006CD05A /* Default.png in Resources */,
 				B4CD1E9121481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FA8F8771950233A006CD05A /* Default@2x.png in Resources */,
+				8F85FD95215CCB670003029A /* idcard@2x.png in Resources */,
 				8FA8F8781950233A006CD05A /* Default-568h@2x.png in Resources */,
 				8FA8F8791950233A006CD05A /* bibapp~iphone.storyboard in Resources */,
 				8FA8F87A1950233A006CD05A /* BAItemCell.xib in Resources */,
@@ -5877,6 +5964,7 @@
 				8FAD97CE1A0CFD3600C3A5D1 /* Default.png in Resources */,
 				B4CD1E9221481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FAD97CF1A0CFD3600C3A5D1 /* Default@2x.png in Resources */,
+				8F85FD96215CCB670003029A /* idcard@2x.png in Resources */,
 				8FAD97D01A0CFD3600C3A5D1 /* Default-568h@2x.png in Resources */,
 				8FAD97D11A0CFD3600C3A5D1 /* bibapp~iphone.storyboard in Resources */,
 				8FAD97D21A0CFD3600C3A5D1 /* BAItemCell.xib in Resources */,
@@ -5954,6 +6042,7 @@
 				8FD610CB190916EA009E2358 /* Default.png in Resources */,
 				B4CD1E8921481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FD610CC190916EA009E2358 /* Default@2x.png in Resources */,
+				8F85FD8D215CCB670003029A /* idcard@2x.png in Resources */,
 				8FD610CD190916EA009E2358 /* Default-568h@2x.png in Resources */,
 				8FD610CE190916EA009E2358 /* bibapp~iphone.storyboard in Resources */,
 				8FD610CF190916EA009E2358 /* BAItemCell.xib in Resources */,
@@ -6031,6 +6120,7 @@
 				8FD61167190916EF009E2358 /* Default.png in Resources */,
 				B4CD1E8A21481B09008F0A46 /* mediaIconB.png in Resources */,
 				8FD61168190916EF009E2358 /* Default@2x.png in Resources */,
+				8F85FD8E215CCB670003029A /* idcard@2x.png in Resources */,
 				8FD61169190916EF009E2358 /* Default-568h@2x.png in Resources */,
 				8FD6116A190916EF009E2358 /* bibapp~iphone.storyboard in Resources */,
 				8FD6116B190916EF009E2358 /* BAItemCell.xib in Resources */,
@@ -6111,6 +6201,7 @@
 				B4CD1EF021481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8F3A1324163FE22E00D0B6F1 /* BAItemDetail.xib in Resources */,
 				8F3A13291640072F00D0B6F1 /* BAItemDetailCell.xib in Resources */,
+				8F85FD88215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F4A21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F6CC95521494DFF0099B0CF /* belugino.ttf in Resources */,
 				B4CD1F3821481B0A008F0A46 /* mediaIconL.png in Resources */,
@@ -6250,6 +6341,7 @@
 				8F07B1571BFB72DB0012C325 /* BAConfigurationTUBS.m in Sources */,
 				8F07B1581BFB72DB0012C325 /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F07B1591BFB72DB0012C325 /* BAConfigurationFHE.m in Sources */,
+				8F85FD72215CBFB10003029A /* Code39.m in Sources */,
 				8F07B15A1BFB72DB0012C325 /* BAAccountTableHeaderTextView.m in Sources */,
 				8F07B15B1BFB72DB0012C325 /* BALocation.m in Sources */,
 				8F07B15C1BFB72DB0012C325 /* BAContactTableViewController.m in Sources */,
@@ -6294,6 +6386,7 @@
 				8F07B1801BFB72DB0012C325 /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F07B1811BFB72DB0012C325 /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F07B1821BFB72DB0012C325 /* BAOptionsNavigationController.m in Sources */,
+				8F85FDAC215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F07B1831BFB72DB0012C325 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6348,6 +6441,7 @@
 				8FAD98151A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F114058167F217000E033F6 /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8EC19502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD63215CBFB10003029A /* Code39.m in Sources */,
 				8F114059167F217000E033F6 /* BATocViewController.m in Sources */,
 				8FD499BC168310DA008FC33F /* BAPDFViewController.m in Sources */,
 				8F0D9F9216B6C2EA000CED81 /* BALocation.m in Sources */,
@@ -6392,6 +6486,7 @@
 				8F2F94D91782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1C6FA21782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC101782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F85FD9D215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F6057DD17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6446,6 +6541,7 @@
 				8FAD981B1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F1D836B192A2E7000A9898D /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F219502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD69215CBFB10003029A /* Code39.m in Sources */,
 				8F1D836C192A2E7000A9898D /* BATocViewController.m in Sources */,
 				8F1D836D192A2E7000A9898D /* BAPDFViewController.m in Sources */,
 				8F1D836E192A2E7000A9898D /* BALocation.m in Sources */,
@@ -6490,6 +6586,7 @@
 				8F1D838C192A2E7000A9898D /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1D838D192A2E7000A9898D /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F1D838E192A2E7000A9898D /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA3215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F1D838F192A2E7000A9898D /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6544,6 +6641,7 @@
 				8F4A7EEC2029B78400CA6C0F /* BAConfigurationTUBS.m in Sources */,
 				8F4A7EED2029B78400CA6C0F /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F4A7EEE2029B78400CA6C0F /* BAConfigurationFHE.m in Sources */,
+				8F85FD73215CBFB10003029A /* Code39.m in Sources */,
 				8F4A7EEF2029B78400CA6C0F /* BAAccountTableHeaderTextView.m in Sources */,
 				8F4A7EF02029B78400CA6C0F /* BALocation.m in Sources */,
 				8F4A7EF12029B78400CA6C0F /* BAContactTableViewController.m in Sources */,
@@ -6588,6 +6686,7 @@
 				8F4A7F172029B78400CA6C0F /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F4A7F182029B78400CA6C0F /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F4A7F192029B78400CA6C0F /* BAOptionsNavigationController.m in Sources */,
+				8F85FDAD215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F4A7F1A2029B78400CA6C0F /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6642,6 +6741,7 @@
 				8FAD98161A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A75A41781BF4700CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8ED19502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD64215CBFB10003029A /* Code39.m in Sources */,
 				8F8A75A51781BF4700CCF7DB /* BATocViewController.m in Sources */,
 				8F8A75A61781BF4700CCF7DB /* BAPDFViewController.m in Sources */,
 				8F8A75A71781BF4700CCF7DB /* BALocation.m in Sources */,
@@ -6686,6 +6786,7 @@
 				8F2F94DA1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1C6FA31782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC111782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F85FD9E215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F6057DE17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6740,6 +6841,7 @@
 				8FAD98171A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A76391781C05400CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8EE19502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD65215CBFB10003029A /* Code39.m in Sources */,
 				8F8A763A1781C05400CCF7DB /* BATocViewController.m in Sources */,
 				8F8A763B1781C05400CCF7DB /* BAPDFViewController.m in Sources */,
 				8F8A763C1781C05400CCF7DB /* BALocation.m in Sources */,
@@ -6784,6 +6886,7 @@
 				8F2F94DB1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1C6FA41782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC121782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F85FD9F215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F6057DF17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6838,6 +6941,7 @@
 				8FAD98181A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8F8A76CE1781C0D800CCF7DB /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8EF19502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD66215CBFB10003029A /* Code39.m in Sources */,
 				8F8A76CF1781C0D800CCF7DB /* BATocViewController.m in Sources */,
 				8F8A76D01781C0D800CCF7DB /* BAPDFViewController.m in Sources */,
 				8F8A76D11781C0D800CCF7DB /* BALocation.m in Sources */,
@@ -6882,6 +6986,7 @@
 				8F2F94DC1782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1C6FA51782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC131782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA0215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F6057E017843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6936,6 +7041,7 @@
 				8F8EB5CF1A93689000548F24 /* BAConfigurationTUBS.m in Sources */,
 				8F8EB5D01A93689000548F24 /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8F8EB5D11A93689000548F24 /* BAConfigurationFHE.m in Sources */,
+				8F85FD71215CBFB10003029A /* Code39.m in Sources */,
 				8F8EB5D21A93689000548F24 /* BAAccountTableHeaderTextView.m in Sources */,
 				8F8EB5D31A93689000548F24 /* BALocation.m in Sources */,
 				8F8EB5D41A93689000548F24 /* BAContactTableViewController.m in Sources */,
@@ -6980,6 +7086,7 @@
 				8F8EB5F61A93689000548F24 /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F8EB5F71A93689000548F24 /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F8EB5F81A93689000548F24 /* BAOptionsNavigationController.m in Sources */,
+				8F85FDAB215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F8EB5F91A93689000548F24 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7034,6 +7141,7 @@
 				8FAD981C1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F51719501E6B006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F319502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6A215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F51819501E6B006CD05A /* BATocViewController.m in Sources */,
 				8FA8F51919501E6B006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F51A19501E6B006CD05A /* BALocation.m in Sources */,
@@ -7078,6 +7186,7 @@
 				8FA8F53819501E6B006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F53919501E6B006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F53A19501E6B006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA4215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F53B19501E6B006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7132,6 +7241,7 @@
 				8FAD981D1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F5B919502224006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F419502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6B215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F5BA19502224006CD05A /* BATocViewController.m in Sources */,
 				8FA8F5BB19502224006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F5BC19502224006CD05A /* BALocation.m in Sources */,
@@ -7176,6 +7286,7 @@
 				8FA8F5DA19502224006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F5DB19502224006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F5DC19502224006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA5215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F5DD19502224006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7230,6 +7341,7 @@
 				8FAD981E1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F65B1950228D006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F519502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6C215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F65C1950228D006CD05A /* BATocViewController.m in Sources */,
 				8FA8F65D1950228D006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F65E1950228D006CD05A /* BALocation.m in Sources */,
@@ -7274,6 +7386,7 @@
 				8FA8F67C1950228D006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F67D1950228D006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F67E1950228D006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA6215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F67F1950228D006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7328,6 +7441,7 @@
 				8FAD981F1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F6FD195022BC006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F619502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6D215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F6FE195022BC006CD05A /* BATocViewController.m in Sources */,
 				8FA8F6FF195022BC006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F700195022BC006CD05A /* BALocation.m in Sources */,
@@ -7372,6 +7486,7 @@
 				8FA8F71E195022BC006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F71F195022BC006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F720195022BC006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA7215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F721195022BC006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7426,6 +7541,7 @@
 				8FAD98201A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F79F1950230D006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F719502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6E215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F7A01950230D006CD05A /* BATocViewController.m in Sources */,
 				8FA8F7A11950230D006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F7A21950230D006CD05A /* BALocation.m in Sources */,
@@ -7470,6 +7586,7 @@
 				8FA8F7C01950230D006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F7C11950230D006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F7C21950230D006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA8215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F7C31950230D006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7524,6 +7641,7 @@
 				8FAD98211A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FA8F8411950233A006CD05A /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F819502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD6F215CBFB10003029A /* Code39.m in Sources */,
 				8FA8F8421950233A006CD05A /* BATocViewController.m in Sources */,
 				8FA8F8431950233A006CD05A /* BAPDFViewController.m in Sources */,
 				8FA8F8441950233A006CD05A /* BALocation.m in Sources */,
@@ -7568,6 +7686,7 @@
 				8FA8F8621950233A006CD05A /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FA8F8631950233A006CD05A /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FA8F8641950233A006CD05A /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA9215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FA8F8651950233A006CD05A /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7622,6 +7741,7 @@
 				8FAD98231A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FAD97941A0CFD3600C3A5D1 /* BACoverViewControllerIPhone.m in Sources */,
 				8FAD97951A0CFD3600C3A5D1 /* BAConfigurationFHE.m in Sources */,
+				8F85FD70215CBFB10003029A /* Code39.m in Sources */,
 				8FAD97961A0CFD3600C3A5D1 /* BATocViewController.m in Sources */,
 				8FAD97971A0CFD3600C3A5D1 /* BAPDFViewController.m in Sources */,
 				8FAD97981A0CFD3600C3A5D1 /* BALocation.m in Sources */,
@@ -7666,6 +7786,7 @@
 				8FAD97BA1A0CFD3600C3A5D1 /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FAD97BB1A0CFD3600C3A5D1 /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FAD97BC1A0CFD3600C3A5D1 /* BAOptionsNavigationController.m in Sources */,
+				8F85FDAA215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FAD97BD1A0CFD3600C3A5D1 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7720,6 +7841,7 @@
 				8FAD98191A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FD61097190916EA009E2358 /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F019502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD67215CBFB10003029A /* Code39.m in Sources */,
 				8FD61098190916EA009E2358 /* BATocViewController.m in Sources */,
 				8FD61099190916EA009E2358 /* BAPDFViewController.m in Sources */,
 				8FD6109A190916EA009E2358 /* BALocation.m in Sources */,
@@ -7764,6 +7886,7 @@
 				8FD610B8190916EA009E2358 /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FD610B9190916EA009E2358 /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FD610BA190916EA009E2358 /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA1215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FD610BB190916EA009E2358 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7818,6 +7941,7 @@
 				8FAD981A1A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FD61133190916EF009E2358 /* BACoverViewControllerIPhone.m in Sources */,
 				8FA8F8F119502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD68215CBFB10003029A /* Code39.m in Sources */,
 				8FD61134190916EF009E2358 /* BATocViewController.m in Sources */,
 				8FD61135190916EF009E2358 /* BAPDFViewController.m in Sources */,
 				8FD61136190916EF009E2358 /* BALocation.m in Sources */,
@@ -7862,6 +7986,7 @@
 				8FD61154190916EF009E2358 /* BAOptionsTableViewControllerPad.m in Sources */,
 				8FD61155190916EF009E2358 /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8FD61156190916EF009E2358 /* BAOptionsNavigationController.m in Sources */,
+				8F85FDA2215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8FD61157190916EF009E2358 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7916,6 +8041,7 @@
 				8FAD98141A0CFEC200C3A5D1 /* BAConfigurationTUBS.m in Sources */,
 				8FE5D0C316AFDE230024027C /* BADocumentItemElementCellNonLocal.m in Sources */,
 				8FA8F8EB19502714006CD05A /* BAConfigurationFHE.m in Sources */,
+				8F85FD62215CBFB10003029A /* Code39.m in Sources */,
 				8F2190B916B2B05F00512C85 /* BAAccountTableHeaderTextView.m in Sources */,
 				8F0D9F9116B6C2EA000CED81 /* BALocation.m in Sources */,
 				8F56394816BFC2750092A9B5 /* BAContactTableViewController.m in Sources */,
@@ -7960,6 +8086,7 @@
 				8F2F94D81782EE6800723E1E /* BAOptionsTableViewControllerPad.m in Sources */,
 				8F1C6FA11782F55A00D169FC /* BAOptionsCatalogueTableViewController.m in Sources */,
 				8F72EC0F1782FA6600E1169C /* BAOptionsNavigationController.m in Sources */,
+				8F85FD9C215CCE6B0003029A /* BAIdViewController.m in Sources */,
 				8F6057DC17843F46004D3088 /* BACatalogueTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -8044,9 +8171,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
-				DEVELOPMENT_TEAM = VW9E5RXV2N;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -8058,7 +8186,7 @@
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "275103bd-efbe-4df5-b685-ab646fb72f09";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				PROVISIONING_PROFILE_SPECIFIER = "BibApp HI";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
@@ -8070,8 +8198,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Stiftung Universitat Hildesheim";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stiftung Universitat Hildesheim";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
@@ -8083,6 +8213,7 @@
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;

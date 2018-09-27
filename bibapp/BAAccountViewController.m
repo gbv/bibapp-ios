@@ -16,6 +16,7 @@
 #import "BAAccountTableHeaderTextView.h"
 #import "GDataXMLNode.h"
 #import "BALocalizeHelper.h"
+#import "BAIdViewController.h"
 
 @interface BAAccountViewController ()
 
@@ -73,6 +74,8 @@
     [self setRefreshControl:[[UIRefreshControl alloc] init]];
     [self.refreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
     [self.accountTableView addSubview:self.refreshControl];
+    
+    self.idButton.enabled = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -395,6 +398,9 @@
                }
             }
             [self.navigationController.navigationBar.topItem setTitle:displayName];
+            
+            self.patron = json;
+            self.idButton.enabled = YES;
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
@@ -806,6 +812,10 @@
     }
 }
 
+- (IBAction)idButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"idSegue" sender:self];
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self.accountTableView setContentOffset:CGPointZero animated:NO];
@@ -1006,6 +1016,14 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    [self commandIsNotInScope:command];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"idSegue"]) {
+        BAIdViewController *idController = (BAIdViewController *)[segue destinationViewController];
+        idController.account = self.currentAccount;
+        idController.patron = self.patron;
+    }
 }
 
 @end
