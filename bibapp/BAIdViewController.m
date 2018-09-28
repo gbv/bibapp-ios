@@ -27,7 +27,7 @@
     [self.navigationItem setTitle:BALocalizedString(@"ID")];
     [self.navigationController.navigationBar.topItem setTitle:BALocalizedString(@"Konto")];
     
-    [self.barcodeImage setImage:[Code39 code39ImageFromString:self.account Width:240 Height:70]];
+    [self.barcodeImage setImage:[Code39 code39ImageFromString:self.account Width:(self.barcodeImage.frame.size.width * 2) Height:(self.barcodeImage.frame.size.height * 2)]];
     [self.barcodeLabel setText:self.account];
     [self.nameLabel setText:[self.patron objectForKey:@"name"]];
     [self.emailLabel setText:[self.patron objectForKey:@"email"]];
