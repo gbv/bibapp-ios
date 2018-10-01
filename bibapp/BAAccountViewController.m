@@ -15,6 +15,8 @@
 #import "BAFeeCell.h"
 #import "BAAccountTableHeaderTextView.h"
 #import "GDataXMLNode.h"
+#import "BALocalizeHelper.h"
+#import "BAIdViewController.h"
 
 @interface BAAccountViewController ()
 
@@ -65,10 +67,15 @@
     
     [self.accountSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.accountSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
-   
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Ausgeliehen") forSegmentAtIndex:0];
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Vorgemerkt") forSegmentAtIndex:1];
+    [self.accountSegmentedController setTitle:BALocalizedString(@"Gebühren") forSegmentAtIndex:2];
+    
     [self setRefreshControl:[[UIRefreshControl alloc] init]];
     [self.refreshControl addTarget:self action:@selector(refreshLoanAndReservation:) forControlEvents:UIControlEventValueChanged];
     [self.accountTableView addSubview:self.refreshControl];
+    
+    self.idButton.enabled = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -77,7 +84,7 @@
     BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
     if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
        if (!self.appDelegate.isLoggedIn) {
-           [self.navigationController.navigationBar.topItem setTitle:@"Konto"];
+           [self.navigationController.navigationBar.topItem setTitle:BALocalizedString(@"Konto")];
            [self setCurrentAccount:nil];
            [self setCurrentPassword:nil];
            [self setCurrentScope:nil];
@@ -151,26 +158,26 @@
               if ([errorCode isEqualToString:@"401"] || [errorCode isEqualToString:@"504"]) {
                  [self loginActionWithMessage:@""];
               } else {
-                 NSString *errorDisplay = [[NSString alloc] initWithFormat:@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@", errorCode];
+                 NSString *errorDisplay = [[NSString alloc] initWithFormat:BALocalizedString(@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@"), errorCode];
                  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                                  message:errorDisplay
-                                                                delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                  [alert setTag:20];
                  [alert show];
               }
            } else {
               self.isLoggingIn = NO;
               [self setCurrentPassword:nil];
-              [self loginActionWithMessage:@"Bitte Nummer und Passwort prüfen"];
+              [self loginActionWithMessage:BALocalizedString(@"Bitte Nummer und Passwort prüfen")];
            }
         }
         else if ([command isEqualToString:@"login"]) {
             self.isLoggingIn = NO;
             if ([json objectForKey:@"error"] || json == nil) {
                 [self.appDelegate setCurrentPassword:nil];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Bei der Anmeldung ist ein Fehler aufgetreten"
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Bei der Anmeldung ist ein Fehler aufgetreten")
                                                                 message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert setTag:1];
                 [alert show];
             } else {
@@ -298,7 +305,7 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
                 if ([self.loan count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Medien entliehen"];
+                    [header setText:BALocalizedString(@"Keine Medien entliehen")];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -306,7 +313,7 @@
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
                 if ([self.reservation count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Vormerkungen"];
+                    [header setText:BALocalizedString(@"Keine Vormerkungen")];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -349,7 +356,7 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
                 if ([self.fees count] == 0) {
                     UITextView *header = [[UITextView alloc] init];
-                    [header setText:@"Keine Gebühren"];
+                    [header setText:BALocalizedString(@"Keine Gebühren")];
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
@@ -378,7 +385,7 @@
         } else if ([command isEqualToString:@"accountLoadPatron"]) {
             NSMutableString *displayName = [self.appDelegate.currentAccount mutableCopy];
             if ([[json objectForKey:@"status"] integerValue] == 3) {
-               displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];
+               displayName = [[NSMutableString alloc] initWithString:BALocalizedString(@"gesperrt")];
             } else {
                BOOL writeItemsScope = NO;
                for (NSString *tempScope in self.currentScope) {
@@ -387,10 +394,13 @@
                   }
                }
                if (!writeItemsScope) {
-                  displayName = [[NSMutableString alloc] initWithString:@"gesperrt"];;
+                  displayName = [[NSMutableString alloc] initWithString:BALocalizedString(@"gesperrt")];
                }
             }
             [self.navigationController.navigationBar.topItem setTitle:displayName];
+            
+            self.patron = json;
+            self.idButton.enabled = YES;
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
@@ -400,13 +410,13 @@
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
                 // Refactor: Reuse header-object when switching tabs.
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Medien entliehen"];
+                [header setText:BALocalizedString(@"Keine Medien entliehen")];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Vormerkungen"];
+                [header setText:BALocalizedString(@"Keine Vormerkungen")];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
@@ -418,7 +428,7 @@
             [self.accountTableView reloadData];
             if ([self.accountSegmentedController selectedSegmentIndex] == 2) {
                 UITextView *header = [[UITextView alloc] init];
-                [header setText:@"Keine Gebühren"];
+                [header setText:BALocalizedString(@"Keine Gebühren")];
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
@@ -536,22 +546,42 @@
             item = nil;
         }
         
+        UIColor *textColor = [UIColor darkTextColor];
+        BOOL isOverdue = NO;
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.MM.yyyy"];
+        NSDate *date = [dateFormat dateFromString:item.endtime];
+        NSDate *now = [NSDate date];
+        if ([now compare:date] == NSOrderedDescending) {
+            textColor = [UIColor redColor];
+            isOverdue = YES;
+        }
+        
         [cell.titleLabel setText:item.title];
         
-        [cell.labelTitleLabel setText:@"Signatur:"];
+        [cell.labelTitleLabel setText:BALocalizedString(@"Signatur:")];
         [cell.labelLabel setText:item.label];
         
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-            [cell.dateTitleLabel setText:@"Leihfristende:"];
+            [cell.dateTitleLabel setTextColor:textColor];
+            [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
+            [cell.dateLabel setTextColor:textColor];
             [cell.dateLabel setText:item.endtime];
+            [cell.warningLabel setTextColor:textColor];
+            [cell.warningLabel setFont:[UIFont fontWithName:@"belugino" size:22]];
+            if (isOverdue) {
+                [cell.warningLabel setText:@"\uE915"];
+            }
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
-            [cell.dateTitleLabel setText:@"Vormerkdatum:"];
+            [cell.dateTitleLabel setText:BALocalizedString(@"Vormerkdatum:")];
             [cell.dateLabel setText:item.starttime];
         }
        
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
+            [cell.queueTitleLabel setText:BALocalizedString(@"Vormerkungen:")];
             NSString *queueString = [NSString stringWithFormat:@"%@", item.queue];
             [cell.queueLabel setText:queueString];
+            [cell.renewalTitleLabel setText:BALocalizedString(@"Verlängerungen:")];
             NSString *renewalString = [NSString stringWithFormat:@"%@", item.renewal];
             [cell.renewalLabel setText:renewalString];
             //NSString *storageString = [NSString stringWithFormat:@"%@", item.storage];
@@ -653,9 +683,9 @@
         if ([self.fees count] > 0) {
             if (section == 0)
             {
-                return @"Summe";
+                return BALocalizedString(@"Summe");
             } else {
-                return @"Einzelposten";
+                return BALocalizedString(@"Einzelposten");
             }
         } else {
             return nil;
@@ -711,17 +741,17 @@
                   [displayString appendString:@"\n\n"];
                }
             }
-            [displayString appendString:@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden."];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung"
+            [displayString appendString:BALocalizedString(@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden.")];
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Anmeldung")
                                                             message:displayString
-                                                           delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Anmelden", nil];
+                                                           delegate:self cancelButtonTitle:BALocalizedString(@"Abbrechen") otherButtonTitles:BALocalizedString(@"Anmelden"), nil];
             [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
             [alert setTag:0];
             if (self.currentAccount != nil) {
                 [[alert textFieldAtIndex:0] setText:self.currentAccount];
             }
             [[alert textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-            [[alert textFieldAtIndex:0] setPlaceholder:@"Benutzernummer"];
+            [[alert textFieldAtIndex:0] setPlaceholder:BALocalizedString(@"Benutzernummer")];
             [[alert textFieldAtIndex:1] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
             
             [alert show];
@@ -741,17 +771,17 @@
         if (foundSelected) {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                                 delegate:self
-                                                       cancelButtonTitle:@"Abbrechen"
+                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                                   destructiveButtonTitle:nil
-                                                       otherButtonTitles:@"Verlängern", nil];
+                                                       otherButtonTitles:BALocalizedString(@"Verlängern"), nil];
         
             // Show the sheet
             [action setTag:10];
             [action showInView:self.parentViewController.parentViewController.view];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                            message:BALocalizedString(@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen")
+                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
             [alert setTag:21];
             [alert show];
         }
@@ -765,21 +795,25 @@
         if (foundSelected) {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                                 delegate:self
-                                                       cancelButtonTitle:@"Abbrechen"
+                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                                   destructiveButtonTitle:nil
-                                                       otherButtonTitles:@"Vormerkungen stornieren", nil];
+                                                       otherButtonTitles:BALocalizedString(@"Vormerkungen stornieren"), nil];
         
             // Show the sheet
             [action setTag:11];
             [action showInView:self.parentViewController.parentViewController.view];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen"
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                            message:BALocalizedString(@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen")
+                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
             [alert setTag:22];
             [alert show];
         }
     }
+}
+
+- (IBAction)idButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"idSegue" sender:self];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -853,9 +887,9 @@
           }
        }
        if (renewalsCounter > 0) {
-          [statusString appendFormat:@"%d von %lu Titel(n) verlängert.\n\n", renewalsCounter, (unsigned long)[self.sendEntries count]];
+          [statusString appendFormat:BALocalizedString(@"%d von %lu Titel(n) verlängert.\n\n"), renewalsCounter, (unsigned long)[self.sendEntries count]];
        } else {
-          [statusString appendFormat:@"Es konnte kein Titel verlängert werden\n\n"];
+          [statusString appendString:BALocalizedString(@"Es konnte kein Titel verlängert werden\n\n")];
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           for (int i = 0; i < [self.successfulEntriesWrapper count]; i++) {
@@ -881,21 +915,21 @@
        NSMutableString *requestString = [[NSMutableString alloc] init];
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           if ([self.successfulEntriesWrapper count] > 1) {
-             [requestString appendString:@"Vormerkungen"];
+             [requestString appendString:BALocalizedString(@"Vormerkungen")];
           } else {
-             [requestString appendString:@"Vormerkung"];
+             [requestString appendString:BALocalizedString(@"Vormerkung")];
           }
        } else {
           if ([[self.successfulEntries objectForKey:@"doc"] count] > 1) {
-             [requestString appendString:@"Vormerkungen"];
+             [requestString appendString:BALocalizedString(@"Vormerkungen")];
           } else {
-             [requestString appendString:@"Vormerkung"];
+             [requestString appendString:BALocalizedString(@"Vormerkung")];
           }
        }
        if ([self.appDelegate.configuration usePAIAWrapper]) {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[self.successfulEntriesWrapper count], requestString];
+          [statusString appendFormat:BALocalizedString(@"%lu %@ storniert.\n\n"), (unsigned long)[self.successfulEntriesWrapper count], requestString];
        } else {
-          [statusString appendFormat:@"%lu %@ storniert.\n\n", (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString];
+          [statusString appendFormat:BALocalizedString(@"%lu %@ storniert.\n\n"), (unsigned long)[[self.successfulEntries objectForKey:@"doc"] count], requestString];
        }
     }
     
@@ -903,9 +937,9 @@
       if ([self.appDelegate.configuration usePAIAWrapper]) {
          if ([self.sendEntries count] > [self.successfulEntriesWrapper count]) {
             if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-               [statusString appendString:@"Die folgenden Titel konnten nicht verlängert werden:\n\n"];
+               [statusString appendString:BALocalizedString(@"Die folgenden Titel konnten nicht verlängert werden:\n\n")];
             } else if ([self.accountSegmentedController selectedSegmentIndex] == 1){
-               [statusString appendString:@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n"];
+               [statusString appendString:BALocalizedString(@"Die folgenden Vormerkungen konnten nicht storniert werden:\n\n")];
             }
             for (BAEntryWork *tempSendEntry in self.sendEntries) {
                BOOL wasSuccessful = NO;
@@ -944,7 +978,7 @@
    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
                                                     message:statusString
-                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                   delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
     [alert setTag:20];
     [alert show];
 }
@@ -982,6 +1016,14 @@
 
 - (void)networkIsNotReachable:(NSString *)command {
    [self commandIsNotInScope:command];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"idSegue"]) {
+        BAIdViewController *idController = (BAIdViewController *)[segue destinationViewController];
+        idController.account = self.currentAccount;
+        idController.patron = self.patron;
+    }
 }
 
 @end

@@ -21,6 +21,7 @@
 #import "BALocationViewControllerPad.h"
 #import "BATocViewControllerPad.h"
 #import "DAIAParser.h"
+#import "BALocalizeHelper.h"
 
 #import "GDataXMLNode.h"
 
@@ -210,7 +211,7 @@
             
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
-                [status appendString:@"ausleihbar"];
+                [status appendString:BALocalizedString(@"ausleihbar")];
                 
                 if (presentation.limitation != nil) {
                     [status appendString:[[NSString alloc] initWithFormat:@"; %@", presentation.limitation]];
@@ -218,21 +219,21 @@
                 
                 if (presentation.available) {
                     if (loan.href == nil) {
-                        [statusInfo appendString:@"Bitte am Standort entnehmen"];
+                        [statusInfo appendString:BALocalizedString(@"Bitte am Standort entnehmen")];
                     } else {
-                        [statusInfo appendString:@"Bitte bestellen"];
+                        [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
                     }
                 }
             } else {
                 if (loan.href != nil) {
                     [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.5 blue:0.0 alpha:1.0]];
-                    [status appendString:@"ausleihbar"];
+                    [status appendString:BALocalizedString(@"ausleihbar")];
                 } else {
                     if (self.currentEntry.onlineLocation == nil) {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
-                        [status appendString:@"nicht ausleihbar"];
+                        [status appendString:BALocalizedString(@"nicht ausleihbar")];
                     } else {
-                        [status appendString:@"Online-Ressource im Browser öffnen"];
+                        [status appendString:BALocalizedString(@"Online-Ressource im Browser öffnen")];
                     }
                 }
                 if (presentation.limitation != nil) {
@@ -246,12 +247,12 @@
                         NSRange match = [loan.href rangeOfString: @"loan/RES"];
                         if (match.length > 0) {
                            if ([loan.expected isEqualToString:@""] || [loan.expected isEqualToString:@"unknown"]) {
-                              [statusInfo appendString:@"ausgeliehen, Vormerken möglich"];
+                              [statusInfo appendString:BALocalizedString(@"ausgeliehen, Vormerken möglich")];
                            } else {
                               NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
                               NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
                               NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                              [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]];
+                              [statusInfo appendString:[[NSString alloc] initWithFormat:BALocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich"), day, month, year]];
                            }
                         }
                     }
@@ -651,7 +652,7 @@
             BOOL foundItem = NO;
             
             if (item.department == nil) {
-                [item setDepartment:@"Zusätzliche Exemplare anderer Bibliotheken"];
+                [item setDepartment:BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken")];
             }
             
             for (BADocumentItem *tempWorkingItem in tempItems) {
@@ -668,7 +669,7 @@
                 if(item.department != nil){
                     tempDepartment = item.department;
                 } else {
-                    tempDepartment = @"Zusätzliche Exemplare anderer Bibliotheken";
+                    tempDepartment = BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken");
                 }
                 [workingItem setDepartment:tempDepartment];
                 [workingItem setLabel:item.label];
@@ -859,13 +860,13 @@
            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
            if ([json count] > 0) {
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                              message:@"Bestellung / Vormerkung\nerfolgreich"
-                                                             delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                              message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich")
+                                                             delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
               [alert show];
            } else {
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                              message:@"Bestellung / Vormerkung\nleider nicht möglich"
-                                                             delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                              message:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich")
+                                                             delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
               [alert show];
            }
         } else {
@@ -873,16 +874,16 @@
            if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
               NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
               if ([doc objectForKey:@"error"] == nil) {
-                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich") delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                  [alert show];
               } else {
-                 NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]];
-                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                 NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [doc objectForKey:@"error"]];
+                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                  [alert show];
               }
            } else {
-              NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]];
-              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+              NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [json objectForKey:@"error_description"]];
+              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
               [alert show];
            }
         }
@@ -962,7 +963,7 @@
     [self.defaultTextView setHidden:NO];
     [self.defaultImageView setHidden:NO];
 
-    [self.defaultTextView setText:@"Merkliste"];
+    [self.defaultTextView setText:BALocalizedString(@"Merkliste")];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -1003,7 +1004,7 @@
       MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
       [composeViewController setMailComposeDelegate:self];
       [composeViewController setToRecipients:@[@""]];
-      [composeViewController setSubject:@"BibApp Merkliste"];
+      [composeViewController setSubject:BALocalizedString(@"BibApp Merkliste")];
       [composeViewController setMessageBody:messageBody isHTML:NO];
       [self presentViewController:composeViewController animated:YES completion:NULL];
    }
@@ -1045,7 +1046,7 @@
    
     NSInteger itemIndex = actionSheet.tag;
     if (buttonIndex == 0) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
+        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Bestellen")] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
             if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                 NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                 [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
@@ -1053,21 +1054,21 @@
                 [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto"
-                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
             }
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Standortinfo")]) {
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
+        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
             if (![[UIApplication sharedApplication] openURL:url]) {
                 NSLog(@"%@%@",@"Failed to open url:",[url description]);
             }
         }
     } else if (buttonIndex == 1) {
-        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
+        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         }
@@ -1101,7 +1102,7 @@
         if (loan.available) {
             if (presentation.available) {
                 if (loan.href != nil) {
-                    [orderString appendString:@"Bestellen"];
+                    [orderString appendString:BALocalizedString(@"Bestellen")];
                 }
             }
         } else {
@@ -1116,22 +1117,22 @@
             if (tempDocumentItem.location != nil) {
                action = [[UIActionSheet alloc] initWithTitle:nil
                                                     delegate:self
-                                           cancelButtonTitle:@"Abbrechen"
+                                           cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                       destructiveButtonTitle:nil
-                                           otherButtonTitles:orderString, @"Standortinfo", @"Abbrechen", nil];
+                                           otherButtonTitles:orderString, BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
             } else {
                action = [[UIActionSheet alloc] initWithTitle:nil
                                                     delegate:self
-                                           cancelButtonTitle:@"Abbrechen"
+                                           cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                       destructiveButtonTitle:nil
                                            otherButtonTitles:orderString, nil];
             }
         } else {
             action = [[UIActionSheet alloc] initWithTitle:nil
                                                  delegate:self
-                                        cancelButtonTitle:@"Abbrechen"
+                                        cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                    destructiveButtonTitle:nil
-                                        otherButtonTitles:@"Standortinfo", @"Abbrechen", nil];
+                                        otherButtonTitles:BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
         }
         [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
@@ -1145,9 +1146,9 @@
     } else {
         UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                             delegate:self
-                                                   cancelButtonTitle:@"Abbrechen"
+                                                   cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                               destructiveButtonTitle:nil
-                                                   otherButtonTitles:@"Im Browser öffnen", @"Abbrechen", nil];
+                                                   otherButtonTitles:BALocalizedString(@"Im Browser öffnen"), BALocalizedString(@"Abbrechen"), nil];
         [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
         if (self.currentEntry.local) {

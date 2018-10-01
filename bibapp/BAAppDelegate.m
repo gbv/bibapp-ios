@@ -8,6 +8,7 @@
 
 #import "BAAppDelegate.h"
 #import "BAOptions.h"
+#import "BALocalizeHelper.h"
 
 #import <Firebase/Firebase.h>
 
@@ -67,6 +68,7 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     if ([self.options.selectedCatalogue isEqualToString:@""] || self.options.selectedCatalogue == nil) {
         [self.options setSelectedCatalogue:self.configuration.currentBibStandardCatalogue];
         [self.options setAllowCountPixel:YES];
+        [self.options setSelectedLanguage:self.configuration.currentBibStandardLanguage];
         NSError *error = nil;
         if (![[self managedObjectContext] save:&error]) {
             // Handle the error.
@@ -111,6 +113,10 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     self.pushService = [[BAPushService alloc] init];
     
     application.applicationIconBadgeNumber = 0;
+
+    BALocalizationSetLanguage(self.options.selectedLanguage);
+    
+    //setenv("CFNETWORK_DIAGNOSTICS", "3", 1);
     
     return YES;
 }

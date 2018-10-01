@@ -13,6 +13,7 @@
 #import "BAEntry.h"
 #import "BADetailScrollViewController.h"
 #import "BAConnector.h"
+#import "BALocalizeHelper.h"
 
 @interface BAListTableViewController ()
 
@@ -42,6 +43,7 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
+    [self.navigationItem setTitle:BALocalizedString(@"Merkliste")];
     
     [self setCurrentItem: [[BAEntryWork alloc] init]];
     
@@ -158,6 +160,10 @@
 	}
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return BALocalizedString(@"Löschen");
+}
+
 - (void)loadEntries
 {
     self.dummyBooksMerkliste = [[NSMutableArray alloc] init];
@@ -205,7 +211,7 @@
       MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
       [composeViewController setMailComposeDelegate:self];
       [composeViewController setToRecipients:@[@""]];
-      [composeViewController setSubject:@"BibApp Merkliste"];
+      [composeViewController setSubject:BALocalizedString(@"BibApp Merkliste")];
       [composeViewController setMessageBody:messageBody isHTML:NO];
       [self presentViewController:composeViewController animated:YES completion:NULL];
    }

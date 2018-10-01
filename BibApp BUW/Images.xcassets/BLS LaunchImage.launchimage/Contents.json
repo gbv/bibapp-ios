@@ -1,18 +1,45 @@
 {
   "images" : [
     {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "2436h",
+      "filename" : "BibAppLaunchImageX.png",
+      "minimum-system-version" : "11.0",
+      "orientation" : "portrait",
+      "scale" : "3x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "736h",
+      "filename" : "BibAppLaunchImage55.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "3x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "667h",
+      "filename" : "BibAppLaunchImage47.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "BibAppLaunchImage2x.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.08.14.png",
       "scale" : "2x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.08.33.png",
+      "filename" : "BibAppLaunchImageRetina4.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -20,53 +47,53 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
+      "filename" : "BibAppLaunchImagePad1x.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.08.55.png",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
+      "filename" : "BibAppLaunchImagePad2x-1.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.09.18.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "BibAppLaunchImage1x.png",
       "extent" : "full-screen",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.05.35.png",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "BibAppLaunchImage2x-1.png",
       "extent" : "full-screen",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.06.00.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "BibAppLaunchImageRetina4-1.png",
       "extent" : "full-screen",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.06.24.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
+      "filename" : "BibAppLaunchImagePad1x-1.png",
       "extent" : "full-screen",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.06.59.png",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
+      "filename" : "BibAppLaunchImagePad2x.png",
       "extent" : "full-screen",
-      "filename" : "iOS Simulator Bildschirmfoto 20.05.2014 13.07.35.png",
       "scale" : "2x"
     }
   ],

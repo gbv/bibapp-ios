@@ -11,6 +11,7 @@
 #import "BACoverViewControllerIPhone.h"
 #import "BATocListTableViewController.h"
 #import "BALocationViewControllerIPhone.h"
+#import "BALocalizeHelper.h"
 
 @interface BADetailScrollViewController ()
 
@@ -57,8 +58,8 @@
     
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(320 * [self.bookList count], 200);
-    self.scrollView.contentOffset = CGPointMake(320 * self.startPosition, 0);
+    self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width * [self.bookList count], 200);
+    self.scrollView.contentOffset = CGPointMake([[UIScreen mainScreen] bounds].size.width * self.startPosition, 0);
     
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -69,7 +70,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%ld / %ld)", self.scrollPosition+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), self.scrollPosition+1, self.maximumPosition]];
     [self loadScrollViewWithPage:self.startPosition];
     [self loadScrollViewWithPage:self.startPosition-1];
     [self loadScrollViewWithPage:self.startPosition+1];
@@ -92,9 +93,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
-    CGFloat pageWidth = 320;
+    CGFloat pageWidth = [[UIScreen mainScreen] bounds].size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), page+1, self.maximumPosition]];
     if (pageControlUsed)
     {
         return;
@@ -115,9 +116,9 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     pageControlUsed = NO;
-    CGFloat pageWidth = 320;
+    CGFloat pageWidth = [[UIScreen mainScreen] bounds].size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Detail (%d / %ld)", page+1, self.maximumPosition]];
+    [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Detail (%ld / %ld)"), page+1, self.maximumPosition]];
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     for (int i = 1; i < 5; i++) {
@@ -147,16 +148,17 @@
                 {
                     [self.views addObject:[NSNull null]];
                 }
-                self.scrollView.contentSize = CGSizeMake(320 * newCount, 200);
+                self.scrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width * newCount, 200);
                 [self.scrollViewDelegate continueSearch];
             }
             return;
         }
         if ((NSNull *)[[self views] objectAtIndex:page] == [NSNull null]) {
             CGRect frame = self.scrollView.frame;
-            frame.origin.x = 320 * page;
+            frame.origin.x = [[UIScreen mainScreen] bounds].size.width * page;
             frame.origin.y = 0;
-            frame.size.width = 320;
+            frame.size.width = [[UIScreen mainScreen] bounds].size.width;
+            frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.tabBarController.tabBar.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame) - CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
             BADetailViewController *subViewController = [[BADetailViewController alloc] initWithFrame:frame];
             [subViewController setBookList:self.bookList];
             [subViewController setCurrentEntry:[self.bookList objectAtIndex:page]];
@@ -170,7 +172,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [self.navigationItem setTitle:@"Detail"];
+    [self.navigationItem setTitle:BALocalizedString(@"Detail")];
     if ([[segue identifier] isEqualToString:@"coverSegue"]) {
         BACoverViewControllerIPhone *coverViewController = (BACoverViewControllerIPhone *)[segue destinationViewController];
         [coverViewController setCoverImage:self.tempCover];

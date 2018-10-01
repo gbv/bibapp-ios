@@ -44,6 +44,7 @@
 @property (strong, nonatomic) NSString *partNumber;
 @property (strong, nonatomic) NSString *isbn;
 @property (strong, nonatomic) NSString *year;
+@property BOOL isElectronic;
 
 - (UIImage *)mediaIcon;
 - (NSString *)statusDisplay;

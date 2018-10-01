@@ -11,6 +11,7 @@
 #import "GDataXMLNode.h"
 #import "BAConnector.h"
 #import "BAInfoItem.h"
+#import "BALocalizeHelper.h"
 #include <UIKit/UIKit.h>
 
 @interface BAInfoTableViewController ()
@@ -37,7 +38,8 @@
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self.navigationController.navigationBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
-   
+    [self.navigationItem setTitle:BALocalizedString(@"Info")];
+    
     if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
        BAConnector *checkNetworkReachabilityConnector = [BAConnector generateConnector];
        if ([checkNetworkReachabilityConnector checkNetworkReachability]) {
@@ -94,11 +96,11 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         if (indexPath.section == 0) {
-            [cell.textLabel setText:@"Kontakt"];
+            [cell.textLabel setText:BALocalizedString(@"Kontakt")];
         } else if (indexPath.section == 1) {
-            [cell.textLabel setText:@"Standorte"];
+            [cell.textLabel setText:BALocalizedString(@"Standorte")];
         } else if (indexPath.section == 2) {
-            [cell.textLabel setText:@"Impressum"];
+            [cell.textLabel setText:BALocalizedString(@"Impressum")];
         }
         return cell;
     } else {
@@ -213,9 +215,9 @@
         return @"";
     } else {
         if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
-            return @"News";
+            return BALocalizedString(@"News");
         } else {
-            return @"Website";
+            return BALocalizedString(@"Website");
         }
     }
 }

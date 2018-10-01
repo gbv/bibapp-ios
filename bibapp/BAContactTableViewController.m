@@ -8,6 +8,7 @@
 
 #import "BAContactTableViewController.h"
 #import "BAImpressumCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BAContactTableViewController ()
 
@@ -29,6 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationItem setTitle:BALocalizedString(@"Kontakt")];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     [self.contactText setText:appDelegate.configuration.currentBibContact];
@@ -53,6 +60,10 @@
     id currentObject = self.contactText.text;
     CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(280, FLT_MAX)];
     return textSize.height + 60;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return BALocalizedString(@"Kontakt");
 }
 
 @end

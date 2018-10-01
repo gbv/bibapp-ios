@@ -13,6 +13,7 @@
 #import "BADetailScrollViewController.h"
 #import "GDataXMLNode.h"
 #import "BANoSearchResultsCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BASearchViewController ()
 
@@ -50,12 +51,17 @@
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     self.searchBar.delegate = self;
+    [self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
-    [self.searchSegmentedController setTitle:[self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue] forSegmentAtIndex:0];
+    [self.searchSegmentedController setTitle:BALocalizedString([self.appDelegate.configuration getTitleForCatalog:self.appDelegate.options.selectedCatalogue]) forSegmentAtIndex:0];
+    [self.searchSegmentedController setTitle:BALocalizedString(@"GVK") forSegmentAtIndex:1];
     
-    [self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    //[self.navigationController.tabBarItem setTitle:self.appDelegate.configuration.searchTitle];
+    [self.navigationItem setTitle:BALocalizedString(self.appDelegate.configuration.searchTitle)];
+    
+    [[BALocalizeHelper sharedLocalSystem] translateTabBar:self.parentViewController.tabBarController];
     
     self.lastSearchLocal = @"";
     self.lastSearch = @"";
@@ -107,19 +113,19 @@
     [self.searchTableView reloadData];
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
-            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+            [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
         }
     } else {
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
         } else {
-            [self.navigationItem setTitle:@"GVK Suche"];
+            [self.navigationItem setTitle:BALocalizedString(@"GVK Suche")];
         }
         if ([self.booksGVK count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -136,8 +142,10 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
-       [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearchLocal]];
+       [cell.titleLabel setText:BALocalizedString(@"Keine Treffer")];
+       [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearchLocal]];
        [cell.searchGBVButton addTarget:self action:@selector(searchGBV) forControlEvents:UIControlEventTouchUpInside];
+       [cell.searchGBVButton setTitle:BALocalizedString(@"Suche im GVK wiederholen") forState:UIControlStateNormal];
        return cell;
     }
    
@@ -148,7 +156,8 @@
           NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BANoSearchResultsCell" owner:self options:nil];
           cell = [nib objectAtIndex:0];
        }
-       [cell.textView setText:[[NSString alloc] initWithFormat:@"Ihre Suche nach \"%@\" hat keine Treffer ergeben.", self.lastSearch]];
+       [cell.titleLabel setText:BALocalizedString(@"Keine Treffer")];
+       [cell.textView setText:[[NSString alloc] initWithFormat:BALocalizedString(@"Ihre Suche nach \"%@\" hat keine Treffer ergeben."), self.lastSearch]];
        [cell.searchGBVButton setHidden:YES];
        return cell;
     }
@@ -284,12 +293,12 @@
     }*/
     if ([command isEqualToString:@"searchLocal"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         }
         self.searchedLocal = YES;
     } else if ([command isEqualToString:@"searchCentral"]) {
         if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
         }
         self.searched = YES;
     }
@@ -421,6 +430,9 @@
                     } else if ([[physicalDescriptionForm stringValue] isEqualToString:@"remote"]) {
                         [tempEntry setMediaIconPhysicalDescriptionForm:@"remote"];
                     }
+                    if ([[physicalDescriptionForm stringValue] isEqualToString:@"electronic resource"]) {
+                        tempEntry.isElectronic = YES;
+                    }
                 } 
             }
             NSArray *physicalDescriptionExtents = [physicalDescription elementsForName:@"extent"];
@@ -515,10 +527,10 @@
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         [self.searchBar setText:self.lastSearchLocal];
         if (self.searchedLocal) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"Lokale Suche (%ld Treffer)", (long)self.searchCountLocal]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
         } else {
             //[self.navigationItem setTitle:@"Lokale Suche"];
-            [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+            [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         }
         if ([self.booksLocal count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -526,9 +538,9 @@
     } else {
         [self.searchBar setText:self.lastSearch];
         if (self.searched) {
-            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%ld Treffer)", (long)self.searchCount]];
+            [self.navigationItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
         } else {
-            [self.navigationItem setTitle:@"GVK Suche"];
+            [self.navigationItem setTitle:BALocalizedString(@"GVK Suche")];
         }
         if ([self.booksGVK count] > 0) {
             [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
@@ -540,7 +552,7 @@
     if ([[segue identifier] isEqualToString:@"ItemDetailSegue"]) {
         BADetailScrollViewController *detailScrollViewController = (BADetailScrollViewController *)[segue destinationViewController];
         [detailScrollViewController setScrollViewDelegate:self];
-        [self.navigationItem setTitle:@"Suche"];
+        [self.navigationItem setTitle:BALocalizedString(@"Suche")];
         if (self.currentEntry.local) {
             [detailScrollViewController setBookList:self.booksLocal];
             [detailScrollViewController setMaximumPosition:self.searchCountLocal];
@@ -626,7 +638,7 @@
     self.lastSearchLocal = @"";
     if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
         //[self.navigationItem setTitle:@"Lokale Suche"];
-        [self.navigationItem setTitle:[self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue]];
+        [self.navigationItem setTitle:BALocalizedString([self.appDelegate.configuration getSearchTitleForCatalog:self.appDelegate.options.selectedCatalogue])];
         [self.searchBar setText:@""];
         [self.searchTableView reloadData];
     }

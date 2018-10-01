@@ -9,6 +9,7 @@
 #import "BALocationTableViewController.h"
 #import "BAConnector.h"
 #import "BALocationViewControllerIPhone.h"
+#import "BALocalizeHelper.h"
 
 @interface BALocationTableViewController ()
 
@@ -36,6 +37,12 @@
 {
     [super viewDidLoad];
 
+    [self.navigationItem setTitle:BALocalizedString(@"Standorte")];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.locationList = [[NSMutableArray alloc] init];
     self.didReturnFromSegue = NO;
@@ -125,7 +132,7 @@
             [cell.textLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
         }
     } else {
-        [cell.textLabel setText:@"Keine Standortinformationen vorhanden"];
+        [cell.textLabel setText:BALocalizedString(@"Keine Standortinformationen vorhanden")];
     }
         
     return cell;

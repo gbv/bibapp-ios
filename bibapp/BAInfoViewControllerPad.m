@@ -15,6 +15,7 @@
 #import "BALocationCellPad.h"
 #import "BALocationViewControllerPad.h"
 #include <UIKit/UIKit.h>
+#import "BALocalizeHelper.h"
 
 @interface BAInfoViewControllerPad ()
 
@@ -197,32 +198,32 @@
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
            if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
               if (indexPath.section == 0) {
-                 [cell.textLabel setText:@"News"];
+                 [cell.textLabel setText:BALocalizedString(@"News")];
               } else if (indexPath.section == 1) {
-                 [cell.textLabel setText:@"Kontakt"];
+                 [cell.textLabel setText:BALocalizedString(@"Kontakt")];
               } else if (indexPath.section == 2) {
-                 [cell.textLabel setText:@"Standorte"];
+                 [cell.textLabel setText:BALocalizedString(@"Standorte")];
               } else if (indexPath.section == 3) {
-                 [cell.textLabel setText:@"Impressum"];
+                 [cell.textLabel setText:BALocalizedString(@"Impressum")];
               }
            } else {
               if (indexPath.section == 0) {
-                 [cell.textLabel setText:@"Website"];
+                 [cell.textLabel setText:BALocalizedString(@"Website")];
               } else if (indexPath.section == 1) {
-                 [cell.textLabel setText:@"Kontakt"];
+                 [cell.textLabel setText:BALocalizedString(@"Kontakt")];
               } else if (indexPath.section == 2) {
-                 [cell.textLabel setText:@"Standorte"];
+                 [cell.textLabel setText:BALocalizedString(@"Standorte")];
               } else if (indexPath.section == 3) {
-                 [cell.textLabel setText:@"Impressum"];
+                 [cell.textLabel setText:BALocalizedString(@"Impressum")];
               }
            }
         } else {
             if (indexPath.section == 0) {
-                [cell.textLabel setText:@"Kontakt"];
+                [cell.textLabel setText:BALocalizedString(@"Kontakt")];
             } else if (indexPath.section == 1) {
-                [cell.textLabel setText:@"Standorte"];
+                [cell.textLabel setText:BALocalizedString(@"Standorte")];
             } else if (indexPath.section == 2) {
-                [cell.textLabel setText:@"Impressum"];
+                [cell.textLabel setText:BALocalizedString(@"Impressum")];
             }
         }
         return cell;
@@ -252,7 +253,7 @@
                 BAInfoCell *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-                [cell.titleLabel setText:@"Kontakt"];
+                [cell.titleLabel setText:BALocalizedString(@"Kontakt")];
                 [cell.dateLabel setText:@""];
                 [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
                 [cell.contentLabel sizeToFit];
@@ -265,7 +266,7 @@
                    [cell.locationLabel setText:[(BALocation *)[self.locationList objectAtIndex:indexPath.row] name]];
                    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
                 } else {
-                   [cell.locationLabel setText:@"Standorte werden geladen ..."];
+                   [cell.locationLabel setText:BALocalizedString(@"Standorte werden geladen ...")];
                 }
                return cell;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
@@ -284,7 +285,7 @@
                 BAInfoCell *cell;
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAInfoCellPad" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-                [cell.titleLabel setText:@"Kontakt"];
+                [cell.titleLabel setText:BALocalizedString(@"Kontakt")];
                 [cell.dateLabel setText:@""];
                 [cell.contentLabel setText:self.appDelegate.configuration.currentBibContact];
                 [cell.contentLabel sizeToFit];

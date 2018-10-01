@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment version="2080" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,26 +15,39 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2" id="WgB-hh-dcr">
-                <frame key="frameInset" width="320" height="42"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="42.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5">
-                        <frame key="frameInset" minX="10" minY="5" width="300" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                        <rect key="frame" x="10" y="5" width="300" height="16"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="aQ4-cG-Zdb"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
-                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="36">
-                        <frame key="frameInset" minX="10" minY="20" width="300" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                        <rect key="frame" x="10" y="20" width="300" height="22"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="wwC-iv-Eao"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="5" firstAttribute="leading" secondItem="WgB-hh-dcr" secondAttribute="leading" constant="10" id="2b0-Nr-Rpd"/>
+                    <constraint firstItem="5" firstAttribute="top" secondItem="WgB-hh-dcr" secondAttribute="top" constant="5" id="3T8-cL-Wce"/>
+                    <constraint firstAttribute="trailing" secondItem="36" secondAttribute="trailing" constant="10" id="Pq7-ge-ecv"/>
+                    <constraint firstItem="36" firstAttribute="leading" secondItem="WgB-hh-dcr" secondAttribute="leading" constant="10" id="Qrv-xb-7fX"/>
+                    <constraint firstItem="36" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="-1" id="bkp-CR-47V"/>
+                    <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="10" id="pae-g6-hRk"/>
+                    <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" constant="0.5" id="sK9-Ux-s9C"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="labels" destination="36" id="41"/>
@@ -39,9 +55,4 @@
             </connections>
         </tableViewCell>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

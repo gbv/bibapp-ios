@@ -57,6 +57,7 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 - (void)displayError;
 - (BOOL)checkNetworkReachability;
 - (NSString *)loadISBDWithPPN:(NSString *)ppn;
+- (void)getDetailsForLocalFam:(NSString *)ppn WithStart:(long)start WithDelegate:(id)delegate;
 
 - (void)pushServiceRegisterWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate;
 - (void)pushServiceUpdateWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate;

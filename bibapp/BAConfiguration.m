@@ -25,6 +25,7 @@
 #import "BAConfigurationAEZB.h"
 #import "BAConfigurationCobi.h"
 #import "BAConfigurationIAI.h"
+#import "BALocalizeHelper.h"
 
 @implementation BAConfiguration
 
@@ -50,6 +51,11 @@
 @synthesize pushServiceUrl;
 @synthesize pushServiceApiKey;
 @synthesize pushServiceGoogleServiceFile;
+@synthesize currentBibStandardLanguage;
+@synthesize currentBibBlockOrderTypes;
+@synthesize useDAIAParser;
+@synthesize useDAIASubRequests;
+@synthesize currentBibFamURLs;
 
 - (id)init {
     self = [super init];
@@ -59,11 +65,13 @@
         self.currentBibPAIAURLs = [[NSMutableArray alloc] init];
         self.currentBibFeedURLs = [[NSMutableArray alloc] init];
         self.currentBibImprintTitles = [[NSMutableArray alloc] init];
+        self.currentBibImprintTitlesLocalized = [[NSMutableDictionary alloc] init];
         self.currentBibImprint = [[NSMutableDictionary alloc] init];
+        self.currentBibImprintLocalized = [[NSMutableDictionary alloc] init];
         self.currentBibLocationURIs = [[NSMutableArray alloc] init];
         self.currentBibSearchCountURLs = [[NSMutableArray alloc] init];
        
-        self.searchTitle = @"Suche";
+        self.searchTitle = BALocalizedString(@"Suche");
         self.hasLocalDetailURL = NO;
         
         self.currentBibStandardCatalogue = @"Standard-Katalog";
@@ -72,9 +80,9 @@
         self.currentBibFeedURLIsWebsite = NO;
         self.currentBibUsePAIAWrapper = NO;
        
-        self.currentBibRequestTitle = @"Vormerken";
+        self.currentBibRequestTitle = BALocalizedString(@"Vormerken");
        
-        self.currentBibDaiaInfoFromOpacDisplay = @"Verfügbarkeit im OPAC prüfen";
+        self.currentBibDaiaInfoFromOpacDisplay = BALocalizedString(@"Verfügbarkeit im OPAC prüfen");
        
         self.useDAIAParser = YES;
         
@@ -82,6 +90,13 @@
         self.pushServiceUrl = @"";
         self.pushServiceApiKey = @"";
         self.pushServiceGoogleServiceFile = @"";
+        self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", nil];
+        self.currentBibStandardLanguage = @"de";
+        
+        self.currentBibBlockOrderTypes = [[NSMutableDictionary alloc] init];
+
+        self.useDAIASubRequests = NO;
+        self.currentBibFamURLs = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -234,6 +249,17 @@
 
 - (BOOL)usePAIAWrapper {
    return self.currentBibUsePAIAWrapper;
+}
+
+- (NSString *)getDetailFamURLForCatalog:(NSString *)catalogue
+{
+    NSString *url;
+    for (NSArray *tempCatalogue in self.currentBibFamURLs) {
+        if ([[tempCatalogue objectAtIndex:1] isEqualToString:catalogue]) {
+            url = [tempCatalogue objectAtIndex:0];
+        }
+    }
+    return url;
 }
 
 @end

@@ -39,14 +39,17 @@
 @synthesize openaccessHref;
 @synthesize openaccessExpected;
 @synthesize daiaInfoFromOpac;
+@synthesize blockOrder;
 
 - (BOOL)order
 {
     BOOL result = NO;
-    for (BADocumentItemElement *service in self.services) {
-        if ([service.service isEqualToString:@"loan"]) {
-            if (![service.href isEqualToString:@""] && service.href != nil) {
-                result = YES;
+    if (!self.blockOrder) {
+        for (BADocumentItemElement *service in self.services) {
+            if ([service.service isEqualToString:@"loan"]) {
+                if (![service.href isEqualToString:@""] && service.href != nil) {
+                    result = YES;
+                }
             }
         }
     }

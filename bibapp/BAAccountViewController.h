@@ -31,7 +31,10 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *accountSegmentedController;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *idButton;
+@property (strong, nonatomic) NSDictionary *patron;
 
 - (IBAction)actionButtonAction:(id)sender;
+- (IBAction)idButtonAction:(id)sender;
 
 @end

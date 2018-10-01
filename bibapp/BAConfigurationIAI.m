@@ -28,6 +28,36 @@
     self.currentBibContact = @"Referat Benutzung - Leitung Dr. Ulrike Mühlschlegel\nE-Mail: muehlschlegel@iai.spk-berlin.de\n\nInformation / Auskunft\nTel.: +49 30 266 45 2210\nE-Mail: info@iai.spk-berlin.de\n\nAusleihe\nTel.: +49 30 266 45 2220";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-204", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
+    
+    self.currentBibLanguages = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Deutsch", @"de", @"Englisch", @"en", nil];
+    
+    [self.currentBibImprintTitlesLocalized setObject:[[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Umsatzsteueridentifikationsnummer", @"Presserechtliche Verantwortlichkeit", @"Datenschutzerklärung", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil] forKey:@"de"];
+    [self.currentBibImprintTitlesLocalized setObject:[[NSMutableArray alloc] initWithObjects:@"Provider", @"Representative", @"Sales tax identification number", @"Press accountability", @"Privacy policy", @"Liability", @"Design and implementation", nil] forKey:@"en"];
+    
+    NSMutableDictionary *imprintContentDE = [[NSMutableDictionary alloc] init];
+    [imprintContentDE setObject:@"Anbieter dieser App ist im Rechtssinne das Ibero-Amerikanische Institut Preußischer Kulturbesitz.\n\nIbero-Amerikanisches Institut Preußischer Kulturbesitz\nPotsdamer Str. 37\nD-10785 Berlin\n\nTel. +49 30 266 45 1500\n\nURL: www.iai.spk-berlin.de\nE-Mail: iai@iai.spk-berlin.de" forKey:@"Anbieter"];
+    [imprintContentDE setObject:@"Das IAI wird gesetzlich vertreten durch seine Direktorin." forKey:@"Vertreter"];
+    [imprintContentDE setObject:@"Die Umsatzsteueridentifikationsnummer des IAI lautet: DE 81 1176 992" forKey:@"Umsatzsteueridentifikationsnummer"];
+    [imprintContentDE setObject:@"Die Direktorin des Ibero-Amerikanischen Instituts: Dr. Barbara Göbel" forKey:@"Presserechtliche Verantwortlichkeit"];
+    [imprintContentDE setObject:@"" forKey:@"Datenschutzerklärung"];
+    [imprintContentDE setObject:@"" forKey:@"Rechtliche Hinweise zur Haftung"];
+    [imprintContentDE setObject:@"Ursprünglich: UB Lüneburg, UB Hildesheim, VZG\nAnpassung: Ibero-Amerikanische Institut Preußischer Kulturbesitz\nUmsetzung: effective WEBWORK GmbH" forKey:@"Gestaltung und Umsetzung"];
+    [self.currentBibImprintLocalized setObject:imprintContentDE forKey:@"de"];
+    
+    NSMutableDictionary *imprintContentEN = [[NSMutableDictionary alloc] init];
+    [imprintContentEN setObject:@"..." forKey:@"Provider"];
+    [imprintContentEN setObject:@"..." forKey:@"Representative"];
+    [imprintContentEN setObject:@"..." forKey:@"Sales tax identification number"];
+    [imprintContentEN setObject:@"..." forKey:@"Press accountability"];
+    [imprintContentEN setObject:@"..." forKey:@"Privacy policy"];
+    [imprintContentEN setObject:@"..." forKey:@"Liability"];
+    [imprintContentEN setObject:@"..." forKey:@"Design and implementation"];
+    [self.currentBibImprintLocalized setObject:imprintContentEN forKey:@"en"];
+    
+    [self.currentBibBlockOrderTypes setObject:[[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:1], @"b", nil] forKey:@"002@"];
+
+    self.useDAIASubRequests = YES;
+    [self.currentBibFamURLs addObject:[[NSArray alloc] initWithObjects:@"https://lhiai.gbv.de/DB=1/SET=1/TTL=1/FAM", @"Standard-Katalog", nil]];
 }
 
 @end

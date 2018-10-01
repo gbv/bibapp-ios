@@ -20,7 +20,9 @@
 @property (strong, nonatomic) NSMutableArray *currentBibFeedURLs;
 @property (strong, nonatomic) UIColor *currentBibTintColor;
 @property (strong, nonatomic) NSMutableArray *currentBibImprintTitles;
+@property (strong, nonatomic) NSMutableDictionary *currentBibImprintTitlesLocalized;
 @property (strong, nonatomic) NSMutableDictionary *currentBibImprint;
+@property (strong, nonatomic) NSMutableDictionary *currentBibImprintLocalized;
 @property (strong, nonatomic) NSString *currentBibContact;
 @property (strong, nonatomic) NSString *currentBibLocationURI;
 @property (strong, nonatomic) NSMutableArray *currentBibLocationURIs;
@@ -36,6 +38,11 @@
 @property (strong, nonatomic) NSString *pushServiceUrl;
 @property (strong, nonatomic) NSString *pushServiceApiKey;
 @property (strong, nonatomic) NSString *pushServiceGoogleServiceFile;
+@property (strong, nonatomic) NSMutableDictionary *currentBibLanguages;
+@property (strong, nonatomic) NSString *currentBibStandardLanguage;
+@property (strong, nonatomic) NSMutableDictionary *currentBibBlockOrderTypes;
+@property BOOL useDAIASubRequests;
+@property (strong, nonatomic) NSMutableArray *currentBibFamURLs;
 
 + (id)createConfiguration;
 - (void)initConfiguration;
@@ -49,5 +56,6 @@
 - (NSString *)getFeedURLForCatalog:(NSString *)catalogue;
 - (NSString *)getSearchCountURLForCatalog:(NSString *)catalogue;
 - (BOOL)usePAIAWrapper;
+- (NSString *)getDetailFamURLForCatalog:(NSString *)catalogue;
 
 @end

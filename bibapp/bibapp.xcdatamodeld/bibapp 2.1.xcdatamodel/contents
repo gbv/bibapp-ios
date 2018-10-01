@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="BAAccount" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,7 +7,7 @@
     </entity>
     <entity name="BAEntry" representedClassName="BAEntry" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="local" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="local" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="matcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="matstring" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ppn" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,19 +25,20 @@
         <attribute name="openinghours" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shortname" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="BAOptions" representedClassName="BAOptions" syncable="YES">
-        <attribute name="allowCountPixel" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="saveLocalData" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="allowCountPixel" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="saveLocalData" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="selectedCatalogue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectedLanguage" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="BAAccount" positionX="0" positionY="0" width="128" height="90"/>
         <element name="BAEntry" positionX="0" positionY="0" width="128" height="165"/>
         <element name="BALocation" positionX="0" positionY="0" width="128" height="225"/>
-        <element name="BAOptions" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="BAOptions" positionX="0" positionY="0" width="128" height="105"/>
     </elements>
 </model>

@@ -8,6 +8,7 @@
 
 #import "BAImpressumTableViewController.h"
 #import "BAImpressumCell.h"
+#import "BALocalizeHelper.h"
 
 @interface BAImpressumTableViewController ()
 
@@ -31,6 +32,12 @@
     [super viewDidLoad];
     
     self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [self.navigationItem setTitle:BALocalizedString(@"Impressum")];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = BALocalizedString(@"Info");
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +65,7 @@
    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BAImpressumCell" owner:self options:nil];
    cell = [nib objectAtIndex:0];
     
-   id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.section]];
+   id currentObject = [self getImprintTextForKey:[self getImprintKeyForSection:indexPath.section]];
     
    [cell.impressumLabel setText:(NSString *)currentObject];
    [cell.impressumLabel sizeToFit];
@@ -68,18 +75,42 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return (NSString *)[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:section];
+    return [self getImprintKeyForSection:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.section]];
+    id currentObject = [self getImprintTextForKey:[self getImprintKeyForSection:indexPath.section]];
     CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(280, FLT_MAX)];
     return textSize.height + 60;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+}
+
+- (NSString *)getImprintKeyForSection:(NSInteger)section
+{
+    if ([self.appDelegate.configuration.currentBibImprintTitlesLocalized count] > 0) {
+        NSArray *translations = [self.appDelegate.configuration.currentBibImprintTitlesLocalized objectForKey:self.appDelegate.options.selectedLanguage];
+        if ([translations isEqual:[NSNull null]]) {
+            translations = [self.appDelegate.configuration.currentBibImprintTitlesLocalized objectForKey:self.appDelegate.configuration.currentBibStandardLanguage];
+        }
+        return (NSString *)[translations objectAtIndex:section];
+    }
+    return (NSString *)[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:section];
+}
+
+- (NSString *)getImprintTextForKey:(NSString *)key
+{
+    if ([self.appDelegate.configuration.currentBibImprintLocalized count] > 0) {
+        NSDictionary *translations = [self.appDelegate.configuration.currentBibImprintLocalized objectForKey:self.appDelegate.options.selectedLanguage];
+        if ([translations isEqual:[NSNull null]]) {
+            translations = [self.appDelegate.configuration.currentBibImprintLocalized objectForKey:self.appDelegate.configuration.currentBibStandardLanguage];
+        }
+        return (NSString *)[translations objectForKey:key];
+    }
+    return [self.appDelegate.configuration.currentBibImprint objectForKey:key];
 }
 
 @end

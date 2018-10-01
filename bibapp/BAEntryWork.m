@@ -7,6 +7,7 @@
 //
 
 #import "BAEntryWork.h"
+#import "BALocalizeHelper.h"
 
 @implementation BAEntryWork
 
@@ -43,6 +44,7 @@
 @synthesize partName;
 @synthesize partNumber;
 @synthesize year;
+@synthesize isElectronic;
 
 - (UIImage *)mediaIcon
 {
@@ -129,7 +131,11 @@
                 if([self.mediaIconOriginInfoIssuance isEqualToString:@"serial"] || [self.mediaIconOriginInfoIssuance isEqualToString:@"continuing"]) {
                     [self setMatcode:@"mediaIconT.png"];
                 } else {
-                    [self setMatcode:@"mediaIconB.png"];
+                    if (!self.isElectronic) {
+                        [self setMatcode:@"mediaIconB.png"];
+                    } else {
+                        [self setMatcode:@"mediaIconBe.png"];
+                    }
                 }
             } else if([self.mediaIconTypeOfResource isEqualToString:@"software, multimedia"]) {
                 if([self.mediaIconOriginInfoIssuance isEqualToString:@"serial"] || [self.mediaIconOriginInfoIssuance isEqualToString:@"continuing"]) {
@@ -162,17 +168,17 @@
     */
    NSString *result;
    if ([self.status integerValue] == 0) {
-      result = @"verfügbar";
+      result = BALocalizedString(@"verfügbar");
    } else if ([self.status integerValue] == 1) {
-      result = @"vorgemerkt";
+      result = BALocalizedString(@"vorgemerkt");
    } else if ([self.status integerValue] == 2) {
-      result = @"bestellt";
+      result = BALocalizedString(@"bestellt");
    } else if ([self.status integerValue] == 3) {
-      result = @"ausgeliehen";
+      result = BALocalizedString(@"ausgeliehen");
    } else if ([self.status integerValue] == 4) {
-      result = @"abholbereit";
+      result = BALocalizedString(@"abholbereit");
    } else if ([self.status integerValue] == 5) {
-      result = @"abgelehnt";
+      result = BALocalizedString(@"abgelehnt");
    }
    return result;
 }

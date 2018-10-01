@@ -14,5 +14,6 @@
 @property BOOL allowCountPixel;
 @property BOOL saveLocalData;
 @property (nonatomic, retain) NSString *selectedCatalogue;
+@property (nonatomic, retain) NSString *selectedLanguage;
 
 @end

@@ -25,6 +25,7 @@
 #import "BALocation.h"
 #import "BALocationViewControllerIPhone.h"
 #import "DAIAParser.h"
+#import "BALocalizeHelper.h"
 
 #import "GDataXMLNode.h"
 
@@ -51,6 +52,9 @@
 @synthesize computedSizeOfTitleCell;
 @synthesize scrollViewController;
 @synthesize searchedCoverByISBN;
+@synthesize didCheckBlockOrderTypes;
+@synthesize blockOrderByTypes;
+@synthesize currentDaiaFamIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,6 +82,8 @@
     
     self.itemsArray = [[NSMutableArray alloc] init];
     
+    self.blockOrderByTypes = NO;
+    
 	// Do any additional setup after loading the view.
     
     NSArray *xib = [[NSBundle mainBundle] loadNibNamed:@"BAItemDetail" owner:self options:nil];
@@ -87,6 +93,11 @@
     [((BAItemDetail *)self.view).detailTableView setDelegate:self];
     [((BAItemDetail *)self.view).detailTableView setDataSource:self];
 
+    ((BAItemDetail *)self.view).detailTableView.rowHeight = UITableViewAutomaticDimension;
+    ((BAItemDetail *)self.view).detailTableView.estimatedRowHeight = 87.0;
+    
+    self.currentDaiaFamIndex = 1;
+    
     [self initDetailView];
 }
 
@@ -110,20 +121,25 @@
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
-    spinner.frame = CGRectMake(0, 0, 320, 44);
+    spinner.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
     ((BAItemDetail *)self.view).detailTableView.tableFooterView = spinner;
     
-    BAConnector *connector = [BAConnector generateConnector];
-    if (self.currentEntry.local) {
-        [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+    if ([self.appDelegate.configuration.currentBibBlockOrderTypes count] == 0) {
+        BAConnector *connector = [BAConnector generateConnector];
+        if (self.currentEntry.local) {
+            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        } else {
+            [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+        }
     } else {
-        [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+        BAConnector *unapiConnectorPica = [BAConnector generateConnector];
+        [unapiConnectorPica getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"picaxml" WithDelegate:self];
     }
     BAConnector *unapiConnector = [BAConnector generateConnector];
     [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
     BAConnector *unapiConnectorMods = [BAConnector generateConnector];
     [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
-
+    
     [self.view setNeedsDisplay];
 }
 
@@ -231,7 +247,7 @@
           DAIAParser *daiaParser = [[DAIAParser alloc] init];
           [daiaParser parseDAIAForDocument:self.currentDocument WithResult:result];
        }
-       
+        
         [((BAItemDetail *)self.view).detailTableView reloadData];
         ((BAItemDetail *)self.view).detailTableView.tableFooterView = nil;
     } else if ([command isEqualToString:@"getDetails"]) {
@@ -338,7 +354,7 @@
             BOOL foundItem = NO;
             
             if (item.department == nil) {
-                [item setDepartment:@"Zusätzliche Exemplare anderer Bibliotheken"];
+                [item setDepartment:BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken")];
             }
             
             for (BADocumentItem *tempWorkingItem in tempItems) {
@@ -355,7 +371,7 @@
                 if (item.department != nil) {
                     tempDepartment = item.department;
                 } else {
-                    tempDepartment = @"Zusätzliche Exemplare anderer Bibliotheken";
+                    tempDepartment = BALocalizedString(@"Zusätzliche Exemplare anderer Bibliotheken");
                 }
                 [workingItem setDepartment:tempDepartment];
                 [workingItem setLabel:item.label];
@@ -561,6 +577,37 @@
             [self setSearchedCoverByISBN:YES];
         }
         [((BAItemDetail *)self.view).detailTableView reloadData];
+    } else if ([command isEqualToString:@"getUNAPIDetailsPicaxml"]) {
+        NSEnumerator *picaXmlEnumerator = [self.appDelegate.configuration.currentBibBlockOrderTypes keyEnumerator];
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        NSArray *picaDatafieldsArray = [parser.rootElement elementsForName:@"datafield"];
+        for (id key in picaXmlEnumerator) {
+            for (GDataXMLElement *picaDatafield in picaDatafieldsArray) {
+                if ([[[picaDatafield attributeForName:@"tag"] stringValue] isEqualToString:key]) {
+                    NSArray *picaSubfieldsArray = [picaDatafield elementsForName:@"subfield"];
+                    for (GDataXMLElement *picaSubfield in picaSubfieldsArray) {
+                        NSEnumerator *blockOrderTypesEnumerator = [[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] keyEnumerator];
+                        for (id blockOrderTypeKey in blockOrderTypesEnumerator) {
+                            if ([[[picaSubfield stringValue] substringWithRange:NSMakeRange([[[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] objectForKey:blockOrderTypeKey] longValue], 1)] isEqualToString:blockOrderTypeKey]) {
+                                self.blockOrderByTypes = YES;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        BAConnector *connector = [BAConnector generateConnector];
+        if (!self.blockOrderByTypes) {
+            if (self.currentEntry.local) {
+                [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+            } else {
+                [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
+            }
+        } else {
+            if (self.appDelegate.configuration.useDAIASubRequests) {
+                [connector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
+        }
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
        /* NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
        if ([json count] > 0) {
@@ -578,13 +625,13 @@
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
           if ([json count] > 0) {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:@"Bestellung / Vormerkung\nerfolgreich"
-                                                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich")
+                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           } else {
              UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:@"Bestellung / Vormerkung\nleider nicht möglich"
-                                                            delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich")
+                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           }
        } else {
@@ -592,16 +639,16 @@
           if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
              NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
              if ([doc objectForKey:@"error"] == nil) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Bestellung / Vormerkung\nerfolgreich" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich") delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
              } else {
-                NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [doc objectForKey:@"error"]];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [doc objectForKey:@"error"]];
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
              }
           } else {
-             NSString *errorString = [[NSString alloc] initWithFormat:@"Bestellung / Vormerkung\nleider nicht möglich:\n%@", [json objectForKey:@"error_description"]];
-             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [json objectForKey:@"error_description"]];
+             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
              [alert show];
           }
        }
@@ -635,6 +682,26 @@
             self.foundCover = NO;
         }
         
+    } else if ([command isEqualToString:@"getDetailsLocalFam"]) {
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        
+        NSArray *items = [parser nodesForXPath:@"RESULT/SET/SHORTTITLE" error:nil];
+        for (GDataXMLElement *item in items) {
+            NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
+            if (![ppn isEqualToString:self.currentEntry.ppn]) {
+                BAConnector *connector = [BAConnector generateConnector];
+                [connector getDetailsForLocal:ppn WithDelegate:self];
+            }
+        }
+        
+        NSArray *sets = [parser nodesForXPath:@"RESULT/SET" error:nil];
+        for (GDataXMLElement *set in sets) {
+            if ([[[set attributeForName:@"hits"] stringValue] longLongValue] > (self.currentDaiaFamIndex + 10) ) {
+                self.currentDaiaFamIndex += 10;
+                BAConnector *famConnector = [BAConnector generateConnector];
+                [famConnector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
+        }
     }
 }
 
@@ -670,12 +737,12 @@
             [self setCurrentEntry:tempEntry];
         }
         
-        float top = 10;
+        //float top = 10;
         
         [cell.titleLabel setText:self.currentEntry.title];
-        [cell.titleLabel setFrame: CGRectMake(102,top,208,50)];
-        [cell.titleLabel sizeToFit];
-        if (cell.titleLabel.frame.size.height > 50) {
+        //[cell.titleLabel setFrame: CGRectMake(102,top,208,50)];
+        //[cell.titleLabel sizeToFit];
+        /* if (cell.titleLabel.frame.size.height > 50) {
             [cell.titleLabel setFrame: CGRectMake(102,top,208,50)];
         } else {
             if ((50 - cell.titleLabel.frame.size.height) > 5) {
@@ -683,15 +750,15 @@
             } else {
                 top += (50 - cell.titleLabel.frame.size.height);
             }
-        }
+        } */
         
         if (![self.currentEntry.subtitle isEqualToString:@""]) {
-            top += cell.titleLabel.frame.size.height;
+            //top += cell.titleLabel.frame.size.height;
             [cell.subTitleLabel setText:self.currentEntry.subtitle];
             [cell.subTitleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
-            [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
-            [cell.subTitleLabel sizeToFit];
-            if (cell.subTitleLabel.frame.size.height > 15) {
+            //[cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
+            //[cell.subTitleLabel sizeToFit];
+            /* if (cell.subTitleLabel.frame.size.height > 15) {
                 [cell.subTitleLabel setFrame: CGRectMake(102,top,208,50)];
             } else {
                 if ((50 - cell.subTitleLabel.frame.size.height) > 5) {
@@ -699,25 +766,24 @@
                 } else {
                     top += (50 - cell.subTitleLabel.frame.size.height);
                 }
-            }
+            } */
         } else {
             [cell.subTitleLabel setText:@""];
         }
-        top += cell.subTitleLabel.frame.size.height;
+        //top += cell.subTitleLabel.frame.size.height;
         
         if (self.didLoadISBD) {
-            [cell.isbdIndicator stopAnimating];
             [cell.infoLabel setText:self.currentEntry.infoText];
-            [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
+            //[cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
             [cell.infoLabel sizeToFit];
-            if (cell.infoLabel.frame.size.height > 75) {
+            /* if (cell.infoLabel.frame.size.height > 75) {
                 [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
-            }
+            } */
         } else {
             [cell.infoLabel setText:@""];
-            [cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
+            //[cell.infoLabel setFrame: CGRectMake(102,top,208,75)];
         }
-        top += cell.infoLabel.frame.size.height + 5;
+        //top += cell.infoLabel.frame.size.height + 5;
         
         if ([self.currentEntry isKindOfClass:[BAEntryWork class]]) {
             [cell.coverView setImage:[self.currentEntry mediaIcon]];
@@ -746,43 +812,43 @@
         
         if ([self.currentEntry.tocArray count] > 0) {
             if (self.didLoadISBD) {
-                if (top < 120) {
+                /* if (top < 120) {
                     top = 120;
-                }
-                [cell.tocInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.toc setFrame: CGRectMake(36,top+1,113,18)];
+                } */
+                //[cell.tocInfo setFrame: CGRectMake(10,top,18,19)];
+                //[cell.toc setFrame: CGRectMake(36,top+1,113,18)];
                 [cell.tocInfo setHidden:NO];
                 [cell.toc setHidden:NO];
-                top += 20;
+                //top += 20;
             }
         }
         
-        if (top < 120) {
+        /* if (top < 120) {
             top = 120;
-        }
+        } */
         
         [cell.loanInfo addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
         [cell.loan addTarget:self action:@selector(loanAction) forControlEvents:UIControlEventTouchUpInside];
         
         if (!self.currentEntry.local) {
             if (self.didLoadISBD) {
-                if (top < 120) {
+                /* if (top < 120) {
                     top = 120;
-                }
-                [cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
-                [cell.loan setFrame: CGRectMake(36,top+1,114,18)];
+                } */
+                //[cell.loanInfo setFrame: CGRectMake(10,top,18,19)];
+                //[cell.loan setFrame: CGRectMake(36,top+1,114,18)];
                 [cell.loanInfo setHidden:NO];
                 [cell.loan setHidden:NO];
-                top += 20;
+                //top += 20;
             }
         }
         
-        if (top < 120) {
+        /* if (top < 120) {
             top = 120;
-        }
+        } */
         
-        [cell setFrame: CGRectMake(0,0,320,top+10)];
-        self.computedSizeOfTitleCell = top+10;
+        //[cell setFrame: CGRectMake(0,0,[[UIScreen mainScreen] bounds].size.width,top+10)];
+        //self.computedSizeOfTitleCell = top+10;
         
         return cell;
     } else {
@@ -838,9 +904,10 @@
                 }
             }
             
+            bool foundBarcode = YES;
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
-                [status appendString:@"ausleihbar"];
+                [status appendString:BALocalizedString(@"ausleihbar")];
                 
                 if (presentation.limitation != nil) {
                     [status appendString:[[NSString alloc] initWithFormat:@"; %@", presentation.limitation]];
@@ -848,9 +915,16 @@
                 
                 if (presentation.available) {
                     if (loan.href == nil) {
-                        [statusInfo appendString:@"Bitte am Standort entnehmen"];
+                        [statusInfo appendString:BALocalizedString(@"Bitte am Standort entnehmen")];
                     } else {
-                        [statusInfo appendString:@"Bitte bestellen"];
+                        [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
+                        NSURL *loanHref = [[NSURL alloc] initWithString:loan.href];
+                        NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:loanHref resolvingAgainstBaseURL:NO];
+                        for (NSURLQueryItem *queryItem in urlComponents.queryItems) {
+                            if ([queryItem.name isEqualToString:@"bar"] && [queryItem.value isEqualToString:@""]) {
+                                foundBarcode = NO;
+                            }
+                        }
                     }
                 }
             } else {
@@ -858,17 +932,17 @@
                     NSRange match = [loan.href rangeOfString: @"loan/RES"];
                     if (match.length > 0) {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.5 blue:0.0 alpha:1.0]];
-                        [status appendString:@"ausleihbar"];
+                        [status appendString:BALocalizedString(@"ausleihbar")];
                     } else {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
-                        [status appendString:@"nicht ausleihbar"];
+                        [status appendString:BALocalizedString(@"nicht ausleihbar")];
                     }
                 } else {
                     if (self.currentEntry.onlineLocation == nil) {
                         [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
-                        [status appendString:@"nicht ausleihbar"];
+                        [status appendString:BALocalizedString(@"nicht ausleihbar")];
                     } else {
-                        [status appendString:@"Online-Ressource im Browser öffnen"];
+                        [status appendString:BALocalizedString(@"Online-Ressource im Browser öffnen")];
                     }
                 }
                 if (presentation.limitation != nil) {
@@ -882,12 +956,12 @@
                         NSRange match = [loan.href rangeOfString: @"loan/RES"];
                         if (match.length > 0) {
                             if ([loan.expected isEqualToString:@""] || [loan.expected isEqualToString:@"unknown"]) {
-                                [statusInfo appendString:@"ausgeliehen, Vormerken möglich"];
+                                [statusInfo appendString:BALocalizedString(@"ausgeliehen, Vormerken möglich")];
                             } else {
                                 NSString *year = [loan.expected substringWithRange: NSMakeRange (0, 4)];
                                 NSString *month = [loan.expected substringWithRange: NSMakeRange (5, 2)];
                                 NSString *day = [loan.expected substringWithRange: NSMakeRange (8, 2)];
-                                [statusInfo appendString:[[NSString alloc] initWithFormat:@"ausgeliehen bis %@.%@.%@, Vormerken möglich", day, month, year]];
+                                [statusInfo appendString:[[NSString alloc] initWithFormat:BALocalizedString(@"ausgeliehen bis %@.%@.%@, Vormerken möglich"), day, month, year]];
                             }
                         }
                     }
@@ -898,6 +972,14 @@
                status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
             }
            
+            if (!foundBarcode) {
+                status = [BALocalizedString(@"Blockierte Bestellung") mutableCopy];
+                statusInfo = [BALocalizedString(@"Blockierte Bestellung Info") mutableCopy];
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                [cell.statusInfo setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                tempDocumentItem.blockOrder = YES;
+            }
+            
             [cell.status setText:status];
             [cell.statusInfo setText:statusInfo];
             
@@ -971,7 +1053,7 @@
             if (loan.available) {
                 if (presentation.available) {
                     if (loan.href != nil) {
-                        [orderString appendString:@"Bestellen"];
+                        [orderString appendString:BALocalizedString(@"Bestellen")];
                     }
                 }
             } else {
@@ -986,22 +1068,22 @@
                 if (tempDocumentItem.location != nil) {
                     action = [[UIActionSheet alloc] initWithTitle:nil
                                                          delegate:self
-                                                cancelButtonTitle:@"Abbrechen"
+                                                cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                            destructiveButtonTitle:nil
-                                                otherButtonTitles:orderString, @"Standortinfo", nil];
+                                                otherButtonTitles:orderString, BALocalizedString(@"Standortinfo"), nil];
                 } else {
                     action = [[UIActionSheet alloc] initWithTitle:nil
                                                          delegate:self
-                                                cancelButtonTitle:@"Abbrechen"
+                                                cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                            destructiveButtonTitle:nil
                                                 otherButtonTitles:orderString, nil];
                 }
             } else {
                 action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
-                                            cancelButtonTitle:@"Abbrechen"
+                                            cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                        destructiveButtonTitle:nil
-                                            otherButtonTitles:@"Standortinfo", nil];
+                                            otherButtonTitles:BALocalizedString(@"Standortinfo"), nil];
             }
             [action setTag:indexPath.row+1];
             if (![orderString isEqualToString:@""] || (tempDocumentItem.location != nil)) {
@@ -1010,9 +1092,9 @@
         } else {
             UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                      delegate:self
-                                            cancelButtonTitle:@"Abbrechen"
+                                            cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                        destructiveButtonTitle:nil
-                                            otherButtonTitles:@"Im Browser öffnen", nil];
+                                            otherButtonTitles:BALocalizedString(@"Im Browser öffnen"), nil];
             [action setTag:indexPath.row+1];
             [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
 
@@ -1035,15 +1117,28 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+/* - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0)
     {
         if (self.computedSizeOfTitleCell == 0) {
-            return 215;
+            return 250;
         } else {
             return computedSizeOfTitleCell;
         }
+    } else {
+        if (self.currentEntry.local) {
+            return 87;
+        } else {
+            return 43;
+        }
+    }
+} */
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0)
+    {
+        return 250;
     } else {
         if (self.currentEntry.local) {
             return 87;
@@ -1062,9 +1157,9 @@
 {
     UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                         delegate:self
-                               cancelButtonTitle:@"Abbrechen"
+                               cancelButtonTitle:BALocalizedString(@"Abbrechen")
                           destructiveButtonTitle:nil
-                               otherButtonTitles:@"Zur Merkliste hinzufügen", nil];
+                               otherButtonTitles:BALocalizedString(@"Zur Merkliste hinzufügen"), nil];
     [action setTag:0];
     [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
 }
@@ -1102,20 +1197,20 @@
                 }
                 [self.scrollViewController.listButton setEnabled:NO];
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:@"Der Eintrag wurde Ihrer Merkliste hinzugefügt"
-                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                message:BALocalizedString(@"Der Eintrag wurde Ihrer Merkliste hinzugefügt")
+                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
             } else {
                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:@"Der Eintrag befindet sich bereits auf Ihrer Merkliste"
-                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                message:BALocalizedString(@"Der Eintrag befindet sich bereits auf Ihrer Merkliste")
+                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                 [alert show];
             }
         }
     } else if (actionSheet.tag > 0) {
         NSInteger itemIndex = actionSheet.tag-1;
         if (buttonIndex == 0) {
-            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Bestellen"] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
+            if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Bestellen")] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
                 if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
                     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
                     [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
@@ -1123,20 +1218,20 @@
                     [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
                 } else {
                     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                    message:@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto"
-                                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                                    message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                                   delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
                     [alert show];
                 }
-            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Standortinfo"]) {
+            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Standortinfo")]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
-            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:@"Im Browser öffnen"]) {
+            } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
                 NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
                 if (![[UIApplication sharedApplication] openURL:url]) {
                 }
             }
         } else if (buttonIndex == 1) {
-            if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:@"Standortinfo"]) {
+            if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             }
