@@ -2431,6 +2431,8 @@
 		8FBEB655184C9CCD00B6ED41 /* hawk_app_icon_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBEB654184C9CCD00B6ED41 /* hawk_app_icon_144x144.png */; };
 		8FC5465616F62CE4005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
 		8FC5465716F62E19005A4F6A /* BATocViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5465516F62CE4005A4F6A /* BATocViewControllerPad.m */; };
+		8FCB77642163441300AA02F8 /* Pods-BibApp HI.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF1DBB34D595BDB93F3904A6 /* Pods-BibApp HI.debug.xcconfig */; };
+		8FCB77652163441600AA02F8 /* Pods-BibApp HI.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6290A8A8B7917999B546BDCC /* Pods-BibApp HI.release.xcconfig */; };
 		8FCFF425192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
 		8FCFF426192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
 		8FCFF427192C80D700A3E93F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCFF424192C80D700A3E93F /* Reachability.m */; };
@@ -5203,6 +5205,7 @@
 				8FE94A7416DCBC8E004D33B7 /* BADocumentItemElementCellPad.xib in Resources */,
 				8FE94A7716DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8FD7C0FF16F364F20073D037 /* BAListTableViewControllerPad.h in Resources */,
+				8FCB77642163441300AA02F8 /* Pods-BibApp HI.debug.xcconfig in Resources */,
 				8FD7C10616F37EC00073D037 /* gear.png in Resources */,
 				8FD7C10816F37EC00073D037 /* gear2.png in Resources */,
 				8FE9812E16F7393600328531 /* BAInfoCellPad.xib in Resources */,
@@ -5216,6 +5219,7 @@
 				8F5319281951C3B7007E25D7 /* BibApp-SM-Info.plist in Resources */,
 				8FE5F960170466EA002EA336 /* iPadIcon.png in Resources */,
 				B4CD1F5D21481B0A008F0A46 /* mediaIconS.png in Resources */,
+				8FCB77652163441600AA02F8 /* Pods-BibApp HI.release.xcconfig in Resources */,
 				B4CD1F2721481B0A008F0A46 /* mediaIconX.png in Resources */,
 				8FE5F962170466F2002EA336 /* iPadIcon@2x.png in Resources */,
 				B4CD1EF121481B0A008F0A46 /* mediaIconV.png in Resources */,
@@ -8816,20 +8820,35 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "275103bd-efbe-4df5-b685-ab646fb72f09";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -8845,19 +8864,34 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"${PODS_ROOT}",
+					"$(inherited)",
+				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.uni-hildesheim.bib.bibapp";
 				PRODUCT_NAME = "BibApp HI";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -9653,11 +9687,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "${PODS_ROOT}";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -9673,17 +9703,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-lxml2",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -9714,11 +9737,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "${PODS_ROOT}";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -9727,18 +9746,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"-lxml2",
-					"$(inherited)",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
