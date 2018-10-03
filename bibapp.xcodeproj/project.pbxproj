@@ -3209,11 +3209,12 @@
 		B4D8B2DC2099E8650042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		C54811239537D7E6EDCB0D50 /* libPods-BibApp HI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83664362109184A160B22FE5 /* libPods-BibApp HI.a */; };
 		CC2B1B024ED98FACF3C11F6C /* libPods-BibAppUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */; };
-		CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */; };
+		CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */; };
 		DA9E9C4F46CF965EB8F98584 /* libPods-BibApp BLS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB997F8714CE6D124B036 /* libPods-BibApp BLS.a */; };
 		DC127DF40D8C15673F4A82B3 /* libPods-BibApp ThULB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DE1E47F2A579A5554B2484 /* libPods-BibApp ThULB.a */; };
 		F09C25F7970940491CED6DB1 /* libPods-BibApp DHGE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3914CECCC819049B9DB98942 /* libPods-BibApp DHGE.a */; };
 		F1D86A87DEC8AA468159B17D /* libPods-BibApp SM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA22224DB699792314DC457 /* libPods-BibApp SM.a */; };
+		F579F4BA26E388F36526A9EB /* libPods-BibApp IAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A418180E1AAD9BE90467C18 /* libPods-BibApp IAI.a */; };
 		F77B3431761CA2550816B4C9 /* libPods-BibApp EAH Jena.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D554F1D4F2F55032639ECA83 /* libPods-BibApp EAH Jena.a */; };
 /* End PBXBuildFile section */
 
@@ -3226,13 +3227,15 @@
 		223FB7F5AE64AA4726B4DA6E /* Pods-BibApp NDH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp NDH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH.debug.xcconfig"; sourceTree = "<group>"; };
 		259A53DF3CC2B2B5A2C5BD44 /* Pods-BibApp EAH Jena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.release.xcconfig"; sourceTree = "<group>"; };
 		29B38806C291A2F14D2B7129 /* libPods-BibApp NDH.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp NDH.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.release.xcconfig"; sourceTree = "<group>"; };
+		2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.release.xcconfig"; sourceTree = "<group>"; };
 		2DD54FC387CE756919AAF057 /* Pods-BibApp TU BS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.debug.xcconfig"; sourceTree = "<group>"; };
+		2F0291D254CF613B795512F5 /* Pods-BibApp IAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IAI/Pods-BibApp IAI.release.xcconfig"; sourceTree = "<group>"; };
 		30745EE446EA8EEC50298467 /* Pods-BibApp HAWK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HAWK.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK.release.xcconfig"; sourceTree = "<group>"; };
 		36603CF290E41039137F81FB /* Pods-BibApp UFB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UFB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UFB/Pods-BibApp UFB.release.xcconfig"; sourceTree = "<group>"; };
 		37B9E2C4C6E2BA5163F08D1C /* libPods-BibApp HAWK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HAWK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AB8E9DB55723F37ED0C79B /* Pods-BibApp FHE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp FHE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE.debug.xcconfig"; sourceTree = "<group>"; };
 		3914CECCC819049B9DB98942 /* libPods-BibApp DHGE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp DHGE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A418180E1AAD9BE90467C18 /* libPods-BibApp IAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp IAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B03431E174944140076CA8B /* BAURLRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAURLRequestService.h; path = Connector/Requests/BAURLRequestService.h; sourceTree = "<group>"; };
 		3B03431F174944140076CA8B /* BAURLRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAURLRequestService.m; path = Connector/Requests/BAURLRequestService.m; sourceTree = "<group>"; };
 		3E5CAF87E040CBF6291F7535 /* Pods-BibApp ThULB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ThULB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ThULB/Pods-BibApp ThULB.release.xcconfig"; sourceTree = "<group>"; };
@@ -3244,7 +3247,7 @@
 		5644A64097001FD207528D68 /* Pods-BibApp HfM WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.release.xcconfig"; sourceTree = "<group>"; };
 		5CF2D2A00A87C88196E83E6B /* Pods-BibApp HfM WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.debug.xcconfig"; sourceTree = "<group>"; };
 		5F3EEB77B67A785D4B6AD5A5 /* Pods-BibApp FHE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp FHE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE.release.xcconfig"; sourceTree = "<group>"; };
-		5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ÄZB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ÄZB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		616D5A426536820E79677C53 /* Pods-BibApp UB WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UB WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE.release.xcconfig"; sourceTree = "<group>"; };
 		6290A8A8B7917999B546BDCC /* Pods-BibApp HI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI.release.xcconfig"; sourceTree = "<group>"; };
 		6FF6887FD803B5E8D271C5A4 /* Pods-BibApp IL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -3410,7 +3413,7 @@
 		8F8A77431781C26B00CCF7DB /* BAConfigurationHAWK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHAWK.h; sourceTree = "<group>"; };
 		8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationHAWK.m; sourceTree = "<group>"; };
 		8F8EB64B1A93689000548F24 /* BibApp ÄZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp ÄZB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ÄZB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ÄZB-Info.plist"; sourceTree = "<absolute>"; };
+		8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ÄZB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ÄZB-Info.plist"; sourceTree = "<absolute>"; };
 		8F8EB64D1A9369C500548F24 /* BAConfigurationAEZB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationAEZB.h; sourceTree = "<group>"; };
 		8F8EB64E1A9369C500548F24 /* BAConfigurationAEZB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationAEZB.m; sourceTree = "<group>"; };
 		8F91495C17830DA400FE7924 /* IconIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconIL.png; path = ../IconIL.png; sourceTree = "<group>"; };
@@ -3608,6 +3611,7 @@
 		B601B8239A15168AC0F588EA /* Pods-BibApp IL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IL.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL.release.xcconfig"; sourceTree = "<group>"; };
 		BDDA8811FFF1EE7FBD9F7EFB /* libPods-BibApp UB WE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp UB WE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF1DBB34D595BDB93F3904A6 /* Pods-BibApp HI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI.debug.xcconfig"; sourceTree = "<group>"; };
+		C6D148CB995890B21B7F1B6F /* Pods-BibApp IAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IAI/Pods-BibApp IAI.debug.xcconfig"; sourceTree = "<group>"; };
 		C84E4DFA7E181EB4AD92297E /* libPods-BibApp IL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp IL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF16E310924599465342FDBC /* libPods-BibApp TU BS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp TU BS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D554F1D4F2F55032639ECA83 /* libPods-BibApp EAH Jena.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp EAH Jena.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3616,7 +3620,7 @@
 		E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibAppUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ED724114D5D4DD6660DB68 /* Pods-BibApp EAH Jena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.debug.xcconfig"; sourceTree = "<group>"; };
 		F2A19965AE67D64EC269D55E /* libPods-BibApp HfM WE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HfM WE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.debug.xcconfig"; sourceTree = "<group>"; };
+		F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.debug.xcconfig"; sourceTree = "<group>"; };
 		F6CAB997F8714CE6D124B036 /* libPods-BibApp BLS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp BLS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB160522903B212494BDC651 /* Pods-BibApp BLS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp BLS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3694,6 +3698,7 @@
 				8F4A7F242029B78400CA6C0F /* Foundation.framework in Frameworks */,
 				8F4A7F252029B78400CA6C0F /* CoreGraphics.framework in Frameworks */,
 				8F4A7F262029B78400CA6C0F /* CoreData.framework in Frameworks */,
+				F579F4BA26E388F36526A9EB /* libPods-BibApp IAI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3769,7 +3774,7 @@
 				8F8EB6021A93689000548F24 /* Foundation.framework in Frameworks */,
 				8F8EB6031A93689000548F24 /* CoreGraphics.framework in Frameworks */,
 				8F8EB6041A93689000548F24 /* CoreData.framework in Frameworks */,
-				CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */,
+				CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4012,10 +4017,12 @@
 				616D5A426536820E79677C53 /* Pods-BibApp UB WE.release.xcconfig */,
 				002D6DFBC9FF7620EE84292C /* Pods-BibApp UFB.debug.xcconfig */,
 				36603CF290E41039137F81FB /* Pods-BibApp UFB.release.xcconfig */,
-				F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */,
-				2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */,
+				F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */,
+				2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */,
 				7FB1C1C5A170AA6E53626C75 /* Pods-BibAppUnitTests.debug.xcconfig */,
 				8CBB1ED50266BC76C98F8EE7 /* Pods-BibAppUnitTests.release.xcconfig */,
+				C6D148CB995890B21B7F1B6F /* Pods-BibApp IAI.debug.xcconfig */,
+				2F0291D254CF613B795512F5 /* Pods-BibApp IAI.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -4478,8 +4485,9 @@
 				45DE1E47F2A579A5554B2484 /* libPods-BibApp ThULB.a */,
 				BDDA8811FFF1EE7FBD9F7EFB /* libPods-BibApp UB WE.a */,
 				1E5FC77F49429936F506F8B3 /* libPods-BibApp UFB.a */,
-				5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */,
+				5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */,
 				E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */,
+				3A418180E1AAD9BE90467C18 /* libPods-BibApp IAI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -4526,7 +4534,7 @@
 				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
 				8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */,
 				8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */,
-				8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */,
+				8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */,
 				8F07B1D81BFB72DC0012C325 /* BibApp Cobi-Info.plist */,
 				8F4A7F6F2029B78500CA6C0F /* BibApp-IAI-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
@@ -4683,6 +4691,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F4A7F6B2029B78400CA6C0F /* Build configuration list for PBXNativeTarget "BibApp IAI" */;
 			buildPhases = (
+				B5D6C51EBC345D010DA8BFC1 /* [CP] Check Pods Manifest.lock */,
 				8F4A7EC22029B78400CA6C0F /* Sources */,
 				8F4A7F1B2029B78400CA6C0F /* Frameworks */,
 				8F4A7F272029B78400CA6C0F /* Resources */,
@@ -4750,9 +4759,9 @@
 			productReference = 8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F8EB5A41A93689000548F24 /* BibApp ÄZB */ = {
+		8F8EB5A41A93689000548F24 /* BibApp ÄZB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */;
+			buildConfigurationList = 8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */;
 			buildPhases = (
 				2C364FE52F13F11C926D9DDC /* [CP] Check Pods Manifest.lock */,
 				8F8EB5A51A93689000548F24 /* Sources */,
@@ -5065,7 +5074,7 @@
 				8FA8F8171950233A006CD05A /* BibApp UFB */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 				8FAD97691A0CFD3600C3A5D1 /* BibApp TU BS */,
-				8F8EB5A41A93689000548F24 /* BibApp ÄZB */,
+				8F8EB5A41A93689000548F24 /* BibApp ÄZB */,
 				8F07B12C1BFB72DB0012C325 /* BibApp Cobi */,
 				8F4A7EC12029B78400CA6C0F /* BibApp IAI */,
 			);
@@ -6508,15 +6517,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp IL-checkManifestLockResult.txt",
 			);
@@ -6530,15 +6535,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp ÄZB-checkManifestLockResult.txt",
 			);
@@ -6552,15 +6553,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp EAH Jena-checkManifestLockResult.txt",
 			);
@@ -6574,15 +6571,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp HAWK-checkManifestLockResult.txt",
 			);
@@ -6596,15 +6589,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp FHE-checkManifestLockResult.txt",
 			);
@@ -6618,15 +6607,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp DHGE-checkManifestLockResult.txt",
 			);
@@ -6640,15 +6625,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp UB WE-checkManifestLockResult.txt",
 			);
@@ -6662,15 +6643,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp Cobi-checkManifestLockResult.txt",
 			);
@@ -6684,15 +6661,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp ThULB-checkManifestLockResult.txt",
 			);
@@ -6706,15 +6679,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp TU BS-checkManifestLockResult.txt",
 			);
@@ -6741,15 +6710,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp UFB-checkManifestLockResult.txt",
 			);
@@ -6763,15 +6728,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp SM-checkManifestLockResult.txt",
 			);
@@ -6785,15 +6746,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp HI-checkManifestLockResult.txt",
 			);
@@ -6807,15 +6764,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp HfM WE-checkManifestLockResult.txt",
 			);
@@ -6829,17 +6782,31 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BibApp LG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5D6C51EBC345D010DA8BFC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BibApp LG-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BibApp IAI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -6851,15 +6818,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibAppUnitTests-checkManifestLockResult.txt",
 			);
@@ -6873,15 +6836,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp NDH-checkManifestLockResult.txt",
 			);
@@ -6895,15 +6854,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BibApp BLS-checkManifestLockResult.txt",
 			);
@@ -8949,6 +8904,7 @@
 		};
 		8F4A7F6C2029B78400CA6C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D148CB995890B21B7F1B6F /* Pods-BibApp IAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
@@ -8974,6 +8930,7 @@
 		};
 		8F4A7F6D2029B78400CA6C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0291D254CF613B795512F5 /* Pods-BibApp IAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
@@ -9152,7 +9109,7 @@
 		};
 		8F8EB6491A93689000548F24 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */;
+			baseConfigurationReference = F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -9178,7 +9135,7 @@
 		};
 		8F8EB64A1A93689000548F24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */;
+			baseConfigurationReference = 2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -9914,7 +9871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */ = {
+		8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F8EB6491A93689000548F24 /* Debug */,
