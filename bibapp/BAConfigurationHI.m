@@ -34,7 +34,7 @@
     self.usePushService = YES;
     self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
     self.pushServiceApiKey = @"456";
-    self.pushServiceGoogleServiceFile = @"GoogleService-Info-HI";
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end

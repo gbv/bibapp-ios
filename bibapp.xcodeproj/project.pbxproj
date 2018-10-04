@@ -2877,8 +2877,8 @@
 		9F1661232166109D00C2EC84 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		9F1661242166109D00C2EC84 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
 		9F1661262166109D00C2EC84 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
-		9F1661302166181700C2EC84 /* GoogleService-Info-HI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F16612F2166181600C2EC84 /* GoogleService-Info-HI.plist */; };
-		9F1661322166182200C2EC84 /* GoogleService-Info-IL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F1661312166182200C2EC84 /* GoogleService-Info-IL.plist */; };
+		9F166134216619C100C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166133216619C100C2EC84 /* GoogleService-Info.plist */; };
+		9F166136216619CC00C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166135216619CC00C2EC84 /* GoogleService-Info.plist */; };
 		B4213C0320FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0420FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0520FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
@@ -3608,8 +3608,8 @@
 		9F16611F2166106B00C2EC84 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1661212166106B00C2EC84 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1661252166109D00C2EC84 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		9F16612F2166181600C2EC84 /* GoogleService-Info-HI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-HI.plist"; sourceTree = "<group>"; };
-		9F1661312166182200C2EC84 /* GoogleService-Info-IL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-IL.plist"; sourceTree = "<group>"; };
+		9F166133216619C100C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/HI/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F166135216619CC00C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IL/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
@@ -4676,8 +4676,8 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				9F16612F2166181600C2EC84 /* GoogleService-Info-HI.plist */,
-				9F1661312166182200C2EC84 /* GoogleService-Info-IL.plist */,
+				9F166135216619CC00C2EC84 /* GoogleService-Info.plist */,
+				9F166133216619C100C2EC84 /* GoogleService-Info.plist */,
 			);
 			name = Firebase;
 			sourceTree = "<group>";
@@ -5225,7 +5225,6 @@
 				8F114066167F217000E033F6 /* Default-568h@2x.png in Resources */,
 				8F114067167F217000E033F6 /* bibapp~iphone.storyboard in Resources */,
 				8F114068167F217000E033F6 /* BAItemCell.xib in Resources */,
-				9F1661302166181700C2EC84 /* GoogleService-Info-HI.plist in Resources */,
 				B4CD1F4B21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F11406E167F217000E033F6 /* BAItemDetail.xib in Resources */,
 				B4CD1E9721481B09008F0A46 /* mediaIconM.png in Resources */,
@@ -5259,6 +5258,7 @@
 				B4CD1F0321481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8FE6DA611B5E561600FF0B28 /* BANoSearchResultsCell.xib in Resources */,
 				8FE6259416CBCADE00F0D213 /* Icon.png in Resources */,
+				9F166134216619C100C2EC84 /* GoogleService-Info.plist in Resources */,
 				8FED45EC16D235A90056CD88 /* bibapp~ipad.storyboard in Resources */,
 				8FEACCAE16D38F8D00E0565E /* transparentImage.png in Resources */,
 				8F7E1ED216D642EA00EE3BF9 /* BAAccountTableHeaderViewPad.xib in Resources */,
@@ -5575,6 +5575,7 @@
 				8F8A767C1781C05400CCF7DB /* menuIconOptions@2x.png in Resources */,
 				8F8A767D1781C05400CCF7DB /* menuIconSearch@2x.png in Resources */,
 				8F8A767E1781C05400CCF7DB /* menuIconInfo.png in Resources */,
+				9F166136216619CC00C2EC84 /* GoogleService-Info.plist in Resources */,
 				B4CD1F4D21481B0A008F0A46 /* mediaIconE.png in Resources */,
 				8F8A768E1781C05400CCF7DB /* Icon.png in Resources */,
 				8F8A768F1781C05400CCF7DB /* bibapp~ipad.storyboard in Resources */,
@@ -5595,7 +5596,6 @@
 				8F8A76991781C05400CCF7DB /* BAInfoCellPad.xib in Resources */,
 				8F8A769A1781C05400CCF7DB /* BAImpressumCellPad.xib in Resources */,
 				8F8A769B1781C05400CCF7DB /* BALocationCellPad.xib in Resources */,
-				9F1661322166182200C2EC84 /* GoogleService-Info-IL.plist in Resources */,
 				8F8A769C1781C05400CCF7DB /* BATocCellPad.xib in Resources */,
 				8F8A769D1781C05400CCF7DB /* BATocListCell.xib in Resources */,
 				8F8A769E1781C05400CCF7DB /* iPadIcon.png in Resources */,
