@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="BAAccount" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushServerId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="BAEntry" representedClassName="BAEntry" syncable="YES">
@@ -36,7 +37,7 @@
         <attribute name="selectedLanguage" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BAAccount" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="BAAccount" positionX="0" positionY="0" width="128" height="105"/>
         <element name="BAEntry" positionX="0" positionY="0" width="128" height="165"/>
         <element name="BALocation" positionX="0" positionY="0" width="128" height="225"/>
         <element name="BAOptions" positionX="0" positionY="0" width="128" height="105"/>
