@@ -2867,6 +2867,16 @@
 		8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
 		8FFFCFE01667B23700326BE9 /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
 		906DBB6A83C1448F7C403FC6 /* libPods-BibApp NDH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B38806C291A2F14D2B7129 /* libPods-BibApp NDH.a */; };
+		9F1661162166106B00C2EC84 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661152166106B00C2EC84 /* libFirebaseCore.a */; };
+		9F1661182166106B00C2EC84 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */; };
+		9F16611A2166106B00C2EC84 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661192166106B00C2EC84 /* libFirebaseMessaging.a */; };
+		9F16611C2166106B00C2EC84 /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F16611B2166106B00C2EC84 /* libGoogleUtilities.a */; };
+		9F16611E2166106B00C2EC84 /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F16611D2166106B00C2EC84 /* libleveldb-library.a */; };
+		9F1661202166106B00C2EC84 /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F16611F2166106B00C2EC84 /* libnanopb.a */; };
+		9F1661222166106B00C2EC84 /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661212166106B00C2EC84 /* libProtobuf.a */; };
+		9F1661232166109D00C2EC84 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F1661242166109D00C2EC84 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F1661262166109D00C2EC84 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		B4213C0320FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0420FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0520FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
@@ -3209,7 +3219,7 @@
 		B4D8B2DC2099E8650042DD3C /* BAConfigurationIAI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A7EBF2029B63B00CA6C0F /* BAConfigurationIAI.m */; };
 		C54811239537D7E6EDCB0D50 /* libPods-BibApp HI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83664362109184A160B22FE5 /* libPods-BibApp HI.a */; };
 		CC2B1B024ED98FACF3C11F6C /* libPods-BibAppUnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */; };
-		CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */; };
+		CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */; };
 		DA9E9C4F46CF965EB8F98584 /* libPods-BibApp BLS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CAB997F8714CE6D124B036 /* libPods-BibApp BLS.a */; };
 		DC127DF40D8C15673F4A82B3 /* libPods-BibApp ThULB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DE1E47F2A579A5554B2484 /* libPods-BibApp ThULB.a */; };
 		F09C25F7970940491CED6DB1 /* libPods-BibApp DHGE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3914CECCC819049B9DB98942 /* libPods-BibApp DHGE.a */; };
@@ -3227,7 +3237,7 @@
 		223FB7F5AE64AA4726B4DA6E /* Pods-BibApp NDH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp NDH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp NDH/Pods-BibApp NDH.debug.xcconfig"; sourceTree = "<group>"; };
 		259A53DF3CC2B2B5A2C5BD44 /* Pods-BibApp EAH Jena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.release.xcconfig"; sourceTree = "<group>"; };
 		29B38806C291A2F14D2B7129 /* libPods-BibApp NDH.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp NDH.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.release.xcconfig"; sourceTree = "<group>"; };
+		2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.release.xcconfig"; sourceTree = "<group>"; };
 		2DD54FC387CE756919AAF057 /* Pods-BibApp TU BS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0291D254CF613B795512F5 /* Pods-BibApp IAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IAI/Pods-BibApp IAI.release.xcconfig"; sourceTree = "<group>"; };
 		30745EE446EA8EEC50298467 /* Pods-BibApp HAWK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HAWK.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HAWK/Pods-BibApp HAWK.release.xcconfig"; sourceTree = "<group>"; };
@@ -3247,7 +3257,7 @@
 		5644A64097001FD207528D68 /* Pods-BibApp HfM WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.release.xcconfig"; sourceTree = "<group>"; };
 		5CF2D2A00A87C88196E83E6B /* Pods-BibApp HfM WE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HfM WE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HfM WE/Pods-BibApp HfM WE.debug.xcconfig"; sourceTree = "<group>"; };
 		5F3EEB77B67A785D4B6AD5A5 /* Pods-BibApp FHE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp FHE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp FHE/Pods-BibApp FHE.release.xcconfig"; sourceTree = "<group>"; };
-		5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ÄZB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp ÄZB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		616D5A426536820E79677C53 /* Pods-BibApp UB WE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp UB WE.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp UB WE/Pods-BibApp UB WE.release.xcconfig"; sourceTree = "<group>"; };
 		6290A8A8B7917999B546BDCC /* Pods-BibApp HI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp HI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp HI/Pods-BibApp HI.release.xcconfig"; sourceTree = "<group>"; };
 		6FF6887FD803B5E8D271C5A4 /* Pods-BibApp IL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp IL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp IL/Pods-BibApp IL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -3413,7 +3423,7 @@
 		8F8A77431781C26B00CCF7DB /* BAConfigurationHAWK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationHAWK.h; sourceTree = "<group>"; };
 		8F8A77441781C26B00CCF7DB /* BAConfigurationHAWK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationHAWK.m; sourceTree = "<group>"; };
 		8F8EB64B1A93689000548F24 /* BibApp ÄZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp ÄZB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ÄZB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ÄZB-Info.plist"; sourceTree = "<absolute>"; };
+		8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BibApp-ÄZB-Info.plist"; path = "/Users/johannes/git/bibapp-ios/BibApp-ÄZB-Info.plist"; sourceTree = "<absolute>"; };
 		8F8EB64D1A9369C500548F24 /* BAConfigurationAEZB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationAEZB.h; sourceTree = "<group>"; };
 		8F8EB64E1A9369C500548F24 /* BAConfigurationAEZB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationAEZB.m; sourceTree = "<group>"; };
 		8F91495C17830DA400FE7924 /* IconIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconIL.png; path = ../IconIL.png; sourceTree = "<group>"; };
@@ -3587,6 +3597,15 @@
 		92A1DB0B8D50A3D2067F74E4 /* Pods-BibApp BLS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp BLS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS.debug.xcconfig"; sourceTree = "<group>"; };
 		9A8EDA8CF733DDDB30E23E73 /* libPods-BibApp Cobi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp Cobi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA7A449CC637207DF6A26EE /* Pods-BibApp TU BS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.release.xcconfig"; sourceTree = "<group>"; };
+		9F16611321660D5700C2EC84 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		9F1661152166106B00C2EC84 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1661192166106B00C2EC84 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F16611B2166106B00C2EC84 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F16611D2166106B00C2EC84 /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F16611F2166106B00C2EC84 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1661212166106B00C2EC84 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1661252166109D00C2EC84 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
@@ -3620,7 +3639,7 @@
 		E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibAppUnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ED724114D5D4DD6660DB68 /* Pods-BibApp EAH Jena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp EAH Jena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp EAH Jena/Pods-BibApp EAH Jena.debug.xcconfig"; sourceTree = "<group>"; };
 		F2A19965AE67D64EC269D55E /* libPods-BibApp HfM WE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp HfM WE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.debug.xcconfig"; sourceTree = "<group>"; };
+		F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp ÄZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp ÄZB/Pods-BibApp ÄZB.debug.xcconfig"; sourceTree = "<group>"; };
 		F6CAB997F8714CE6D124B036 /* libPods-BibApp BLS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp BLS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB160522903B212494BDC651 /* Pods-BibApp BLS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp BLS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp BLS/Pods-BibApp BLS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3649,6 +3668,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1661262166109D00C2EC84 /* NotificationCenter.framework in Frameworks */,
+				9F1661232166109D00C2EC84 /* UserNotifications.framework in Frameworks */,
+				9F1661242166109D00C2EC84 /* UserNotificationsUI.framework in Frameworks */,
+				9F1661162166106B00C2EC84 /* libFirebaseCore.a in Frameworks */,
+				9F1661182166106B00C2EC84 /* libFirebaseDatabase.a in Frameworks */,
+				9F16611A2166106B00C2EC84 /* libFirebaseMessaging.a in Frameworks */,
+				9F16611C2166106B00C2EC84 /* libGoogleUtilities.a in Frameworks */,
+				9F16611E2166106B00C2EC84 /* libleveldb-library.a in Frameworks */,
+				9F1661202166106B00C2EC84 /* libnanopb.a in Frameworks */,
+				9F1661222166106B00C2EC84 /* libProtobuf.a in Frameworks */,
 				8F4482B11B5D1BB700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42F192C86D400A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2416CA663A007382EE /* libxml2.dylib in Frameworks */,
@@ -3774,7 +3803,7 @@
 				8F8EB6021A93689000548F24 /* Foundation.framework in Frameworks */,
 				8F8EB6031A93689000548F24 /* CoreGraphics.framework in Frameworks */,
 				8F8EB6041A93689000548F24 /* CoreData.framework in Frameworks */,
-				CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */,
+				CFB63052E5A7B738B3834EC0 /* libPods-BibApp ÄZB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4017,8 +4046,8 @@
 				616D5A426536820E79677C53 /* Pods-BibApp UB WE.release.xcconfig */,
 				002D6DFBC9FF7620EE84292C /* Pods-BibApp UFB.debug.xcconfig */,
 				36603CF290E41039137F81FB /* Pods-BibApp UFB.release.xcconfig */,
-				F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */,
-				2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */,
+				F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */,
+				2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */,
 				7FB1C1C5A170AA6E53626C75 /* Pods-BibAppUnitTests.debug.xcconfig */,
 				8CBB1ED50266BC76C98F8EE7 /* Pods-BibAppUnitTests.release.xcconfig */,
 				C6D148CB995890B21B7F1B6F /* Pods-BibApp IAI.debug.xcconfig */,
@@ -4445,6 +4474,15 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F1661252166109D00C2EC84 /* NotificationCenter.framework */,
+				9F1661152166106B00C2EC84 /* libFirebaseCore.a */,
+				9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */,
+				9F1661192166106B00C2EC84 /* libFirebaseMessaging.a */,
+				9F16611B2166106B00C2EC84 /* libGoogleUtilities.a */,
+				9F16611D2166106B00C2EC84 /* libleveldb-library.a */,
+				9F16611F2166106B00C2EC84 /* libnanopb.a */,
+				9F1661212166106B00C2EC84 /* libProtobuf.a */,
+				9F16611321660D5700C2EC84 /* libxml2.2.dylib */,
 				8F74FC3C216276C6003B6694 /* libFirebaseCore.a */,
 				8F74FC3E216276C6003B6694 /* libFirebaseDatabase.a */,
 				8F74FC40216276C6003B6694 /* libFirebaseMessaging.a */,
@@ -4485,7 +4523,7 @@
 				45DE1E47F2A579A5554B2484 /* libPods-BibApp ThULB.a */,
 				BDDA8811FFF1EE7FBD9F7EFB /* libPods-BibApp UB WE.a */,
 				1E5FC77F49429936F506F8B3 /* libPods-BibApp UFB.a */,
-				5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */,
+				5FD141547750ABF901D82CF2 /* libPods-BibApp ÄZB.a */,
 				E3EC8066DD09A307DC6A9B66 /* libPods-BibAppUnitTests.a */,
 				3A418180E1AAD9BE90467C18 /* libPods-BibApp IAI.a */,
 			);
@@ -4534,7 +4572,7 @@
 				8F5319261951C3B7007E25D7 /* BibApp-SM-Info.plist */,
 				8FA8F8B81950233A006CD05A /* BibApp-UFB-Info.plist */,
 				8FAD98111A0CFD3700C3A5D1 /* BibApp-TU-BS-Info.plist */,
-				8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */,
+				8F8EB64C1A93689100548F24 /* BibApp-ÄZB-Info.plist */,
 				8F07B1D81BFB72DC0012C325 /* BibApp Cobi-Info.plist */,
 				8F4A7F6F2029B78500CA6C0F /* BibApp-IAI-Info.plist */,
 				8F1D83EB192A301F00A9898D /* Images.xcassets */,
@@ -4759,9 +4797,9 @@
 			productReference = 8F8A773B1781C0D800CCF7DB /* BibApp HAWK.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F8EB5A41A93689000548F24 /* BibApp ÄZB */ = {
+		8F8EB5A41A93689000548F24 /* BibApp ÄZB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */;
+			buildConfigurationList = 8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */;
 			buildPhases = (
 				2C364FE52F13F11C926D9DDC /* [CP] Check Pods Manifest.lock */,
 				8F8EB5A51A93689000548F24 /* Sources */,
@@ -5074,7 +5112,7 @@
 				8FA8F8171950233A006CD05A /* BibApp UFB */,
 				8FFF22C41786B8580077FC8B /* BibAppUnitTests */,
 				8FAD97691A0CFD3600C3A5D1 /* BibApp TU BS */,
-				8F8EB5A41A93689000548F24 /* BibApp ÄZB */,
+				8F8EB5A41A93689000548F24 /* BibApp ÄZB */,
 				8F07B12C1BFB72DB0012C325 /* BibApp Cobi */,
 				8F4A7EC12029B78400CA6C0F /* BibApp IAI */,
 			);
@@ -8775,22 +8813,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -8819,22 +8850,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(SDKROOT)/usr/include/libxml2",
-					"${PODS_ROOT}",
-					"$(inherited)",
-				);
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9109,7 +9133,7 @@
 		};
 		8F8EB6491A93689000548F24 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */;
+			baseConfigurationReference = F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -9135,7 +9159,7 @@
 		};
 		8F8EB64A1A93689000548F24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */;
+			baseConfigurationReference = 2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
@@ -9644,7 +9668,10 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "${PODS_ROOT}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -9660,8 +9687,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
@@ -9694,7 +9728,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "${PODS_ROOT}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -9703,8 +9740,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -9721,10 +9765,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
@@ -9733,7 +9779,8 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				USER_HEADER_SEARCH_PATHS = "";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9746,10 +9793,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
@@ -9758,7 +9807,8 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				USER_HEADER_SEARCH_PATHS = "";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9871,7 +9921,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */ = {
+		8F8EB6481A93689000548F24 /* Build configuration list for PBXNativeTarget "BibApp ÄZB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F8EB6491A93689000548F24 /* Debug */,
