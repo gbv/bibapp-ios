@@ -1180,10 +1180,22 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Sprache" id="wGZ-CJ-mlr">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LED-Bg-eEE">
+                                        <rect key="frame" x="0.0" y="147.5" width="540" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LED-Bg-eEE" id="vgi-gp-b36">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Konto" id="ioB-8Q-TS0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PTk-OX-XLh">
-                                        <rect key="frame" x="0.0" y="147.5" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="239.5" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTk-OX-XLh" id="dvz-ZC-R8D">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
@@ -1207,7 +1219,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HkH-JD-SyE">
-                                        <rect key="frame" x="0.0" y="191.5" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="283.5" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HkH-JD-SyE" id="FEe-9O-V93">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
@@ -1234,7 +1246,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="V77-B8-f2q">
-                                        <rect key="frame" x="0.0" y="235.5" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="327.5" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V77-B8-f2q" id="VP0-dw-uHL">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
@@ -1262,7 +1274,7 @@
                             <tableViewSection headerTitle="Datenschutz" footerTitle="Wenn Sie diese Option deaktivieren, werden keine anonymisierten Nutzungsdaten gespeichert. Weitere Hinweise s. Info / Impressum" id="tk8-A1-HXj">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="w1K-pa-SSU">
-                                        <rect key="frame" x="0.0" y="335" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="427" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1K-pa-SSU" id="c3q-L4-k5J">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
@@ -1290,7 +1302,7 @@
                             <tableViewSection headerTitle="Info" id="t2S-9S-TQV">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="22W-Vn-TjP">
-                                        <rect key="frame" x="0.0" y="463" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="555" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="22W-Vn-TjP" id="Qwl-oN-1QY">
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>

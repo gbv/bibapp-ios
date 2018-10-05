@@ -157,6 +157,18 @@
      */
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 2) {
+        if (self.appDelegate.configuration.usePushService) {
+            return 3;
+        } else {
+            return 2;
+        }
+    } else {
+        return 1;
+    }
+}
+
 - (void)viewDidUnload {
     [self setSaveLocalSwitch:nil];
     [self setCountPixelSwitch:nil];
