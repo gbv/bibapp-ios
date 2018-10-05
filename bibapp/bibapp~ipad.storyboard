@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="654"/>
                                 <subviews>
                                     <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="0.0" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bZB-Bi-bUO">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="583"/>
+                                        <rect key="frame" x="0.0" y="81" width="320" height="574"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BASearchCell" rowHeight="0.0" id="n5f-uv-axW">
@@ -42,22 +42,8 @@
                                             <outlet property="delegate" destination="clg-3E-Vgu" id="k2U-9u-bZK"/>
                                         </connections>
                                     </tableView>
-                                    <searchBar autoresizesSubviews="NO" clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQX-qP-oSZ">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <scopeButtonTitles>
-                                            <string>Title</string>
-                                            <string>Title</string>
-                                        </scopeButtonTitles>
-                                        <connections>
-                                            <outlet property="delegate" destination="clg-3E-Vgu" id="DVa-Wo-uFr"/>
-                                        </connections>
-                                    </searchBar>
                                     <segmentedControl contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-hp-mzt">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                        <rect key="frame" x="0.0" y="8" width="319" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>
@@ -71,6 +57,20 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
+                                    <searchBar autoresizesSubviews="NO" clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQX-qP-oSZ">
+                                        <rect key="frame" x="-1" y="37" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                        <connections>
+                                            <outlet property="delegate" destination="clg-3E-Vgu" id="DVa-Wo-uFr"/>
+                                        </connections>
+                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -344,7 +344,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-3409" y="-2916"/>
+            <point key="canvasLocation" x="-3409.5703125" y="-2916.40625"/>
         </scene>
         <!--Konto-->
         <scene sceneID="esZ-yv-qkb">
@@ -809,7 +809,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="654"/>
                                 <subviews>
                                     <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-pp-fRh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="654"/>
+                                        <rect key="frame" x="0.0" y="8" width="320" height="646"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BASearchCell" id="2Qg-1r-WqX">
                                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -833,7 +833,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="3OF-pp-fRh" firstAttribute="top" secondItem="sMw-LW-fcB" secondAttribute="top" id="A0U-Uo-DFp"/>
+                                    <constraint firstItem="3OF-pp-fRh" firstAttribute="top" secondItem="sMw-LW-fcB" secondAttribute="top" constant="8" id="A0U-Uo-DFp"/>
                                     <constraint firstAttribute="trailing" secondItem="3OF-pp-fRh" secondAttribute="trailing" id="LxK-Bk-OjX"/>
                                     <constraint firstAttribute="bottom" secondItem="3OF-pp-fRh" secondAttribute="bottom" id="M5L-NY-Try"/>
                                     <constraint firstItem="3OF-pp-fRh" firstAttribute="leading" secondItem="sMw-LW-fcB" secondAttribute="leading" id="QHN-1e-NgM"/>
@@ -1076,7 +1076,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-3410" y="-1403"/>
+            <point key="canvasLocation" x="-3410.15625" y="-1403.125"/>
         </scene>
         <!--Cover View Controller Pad-->
         <scene sceneID="QuG-xz-AjW">
@@ -1468,7 +1468,7 @@
         <image name="menuIconSearch.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nEM-ay-oB3"/>
+        <segue reference="Sjv-hh-bWp"/>
         <segue reference="IQa-mr-9vz"/>
         <segue reference="Uv5-wX-sJh"/>
         <segue reference="Mij-Xb-KOy"/>
