@@ -2833,6 +2833,24 @@
 		8FED45EC16D235A90056CD88 /* bibapp~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */; };
 		8FED45F616D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */; };
 		8FED45F716D25B2D0056CD88 /* BASearchViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */; };
+		8FED486E216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED486F216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4870216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4871216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4872216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4873216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4874216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4875216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4876216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4877216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4878216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED4879216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487A216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487B216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487C216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487D216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487E216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
+		8FED487F216763E000BD657D /* BAIdViewControllerPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FED486D216763E000BD657D /* BAIdViewControllerPad.m */; };
 		8FEDD874172695C800D66DE6 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD873172695C800D66DE6 /* Icon-72.png */; };
 		8FEDD876172695CE00D66DE6 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */; };
 		8FF26FFA16393BF100099665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF26FF916393BF100099665 /* UIKit.framework */; };
@@ -3557,6 +3575,8 @@
 		8FED45E616D234370056CD88 /* bibapp~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "bibapp~ipad.storyboard"; sourceTree = "<group>"; };
 		8FED45F416D25B2D0056CD88 /* BASearchViewControllerPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASearchViewControllerPad.h; sourceTree = "<group>"; };
 		8FED45F516D25B2D0056CD88 /* BASearchViewControllerPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASearchViewControllerPad.m; sourceTree = "<group>"; };
+		8FED486C216763E000BD657D /* BAIdViewControllerPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAIdViewControllerPad.h; sourceTree = "<group>"; };
+		8FED486D216763E000BD657D /* BAIdViewControllerPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAIdViewControllerPad.m; sourceTree = "<group>"; };
 		8FEDD873172695C800D66DE6 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		8FEDD875172695CE00D66DE6 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
 		8FF26FF516393BF100099665 /* BibApp LG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BibApp LG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4387,6 +4407,8 @@
 				8F57756E16D5129A009E143E /* BAAccountViewControllerPad.m */,
 				8FE94A8916DD06F6004D33B7 /* BACoverViewControllerPad.h */,
 				8FE94A8A16DD06FF004D33B7 /* BACoverViewControllerPad.m */,
+				8FED486C216763E000BD657D /* BAIdViewControllerPad.h */,
+				8FED486D216763E000BD657D /* BAIdViewControllerPad.m */,
 				8FE9812816F7241000328531 /* BAInfoViewControllerPad.h */,
 				8FE9812916F7241D00328531 /* BAInfoViewControllerPad.m */,
 				8FD7C0FD16F364F20073D037 /* BAListTableViewControllerPad.h */,
@@ -6988,6 +7010,7 @@
 				8F07B1631BFB72DB0012C325 /* BAConfigurationHFMWe.m in Sources */,
 				8F07B1641BFB72DB0012C325 /* BALocationViewControllerPad.m in Sources */,
 				8F07B1651BFB72DB0012C325 /* BALocationViewController.m in Sources */,
+				8FED487E216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F07B1661BFB72DB0012C325 /* BACoverViewControllerPad.m in Sources */,
 				8F07B1671BFB72DB0012C325 /* BACoverViewController.m in Sources */,
 				8F74013021625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7089,6 +7112,7 @@
 				8FA8F8CC195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FE94A7F16DCBFB5004D33B7 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FE94A8316DCF4C0004D33B7 /* BALocationViewControllerPad.m in Sources */,
+				8FED486F216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FE94A8816DCF992004D33B7 /* BALocationViewController.m in Sources */,
 				8FE94A8C16DD06FF004D33B7 /* BACoverViewControllerPad.m in Sources */,
 				8F74012121625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7190,6 +7214,7 @@
 				8FA8F8D2195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8F1D8375192A2E7000A9898D /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F1D8376192A2E7000A9898D /* BALocationViewControllerPad.m in Sources */,
+				8FED4875216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F1D8377192A2E7000A9898D /* BALocationViewController.m in Sources */,
 				8F1D8378192A2E7000A9898D /* BACoverViewControllerPad.m in Sources */,
 				8F74012721625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7291,6 +7316,7 @@
 				8F4A7EF92029B78400CA6C0F /* BAConfigurationHFMWe.m in Sources */,
 				8F4A7EFA2029B78400CA6C0F /* BALocationViewControllerPad.m in Sources */,
 				8F4A7EFB2029B78400CA6C0F /* BALocationViewController.m in Sources */,
+				8FED487F216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F4A7EFC2029B78400CA6C0F /* BACoverViewControllerPad.m in Sources */,
 				8F4A7EFD2029B78400CA6C0F /* BACoverViewController.m in Sources */,
 				8F74013121625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7392,6 +7418,7 @@
 				8FA8F8CD195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8F8A75AE1781BF4700CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A75AF1781BF4700CCF7DB /* BALocationViewControllerPad.m in Sources */,
+				8FED4870216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F8A75B01781BF4700CCF7DB /* BALocationViewController.m in Sources */,
 				8F8A75B11781BF4700CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F74012221625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7493,6 +7520,7 @@
 				8FA8F8CE195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8F8A76431781C05400CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A76441781C05400CCF7DB /* BALocationViewControllerPad.m in Sources */,
+				8FED4871216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F8A76451781C05400CCF7DB /* BALocationViewController.m in Sources */,
 				8F8A76461781C05400CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F74012321625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7594,6 +7622,7 @@
 				8FA8F8CF195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8F8A76D81781C0D800CCF7DB /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8F8A76D91781C0D800CCF7DB /* BALocationViewControllerPad.m in Sources */,
+				8FED4872216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F8A76DA1781C0D800CCF7DB /* BALocationViewController.m in Sources */,
 				8F8A76DB1781C0D800CCF7DB /* BACoverViewControllerPad.m in Sources */,
 				8F74012421625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7695,6 +7724,7 @@
 				8F8EB5DB1A93689000548F24 /* BAConfigurationHFMWe.m in Sources */,
 				8F8EB5DC1A93689000548F24 /* BALocationViewControllerPad.m in Sources */,
 				8F8EB5DD1A93689000548F24 /* BALocationViewController.m in Sources */,
+				8FED487D216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8F8EB5DE1A93689000548F24 /* BACoverViewControllerPad.m in Sources */,
 				8F8EB5DF1A93689000548F24 /* BACoverViewController.m in Sources */,
 				8F74012F21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7796,6 +7826,7 @@
 				8FA8F8D3195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F52119501E6B006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F52219501E6B006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED4876216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F52319501E6B006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F52419501E6B006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012821625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7897,6 +7928,7 @@
 				8FA8F8D4195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F5C319502224006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F5C419502224006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED4877216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F5C519502224006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F5C619502224006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012921625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -7998,6 +8030,7 @@
 				8FA8F8D5195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F6651950228D006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F6661950228D006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED4878216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F6671950228D006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F6681950228D006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012A21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8099,6 +8132,7 @@
 				8FA8F8D6195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F707195022BC006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F708195022BC006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED4879216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F709195022BC006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F70A195022BC006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012B21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8200,6 +8234,7 @@
 				8FA8F8D7195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F7A91950230D006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F7AA1950230D006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED487A216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F7AB1950230D006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F7AC1950230D006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012C21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8301,6 +8336,7 @@
 				8FA8F8D8195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FA8F84B1950233A006CD05A /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FA8F84C1950233A006CD05A /* BALocationViewControllerPad.m in Sources */,
+				8FED487B216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FA8F84D1950233A006CD05A /* BALocationViewController.m in Sources */,
 				8FA8F84E1950233A006CD05A /* BACoverViewControllerPad.m in Sources */,
 				8F74012D21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8402,6 +8438,7 @@
 				8FAD979F1A0CFD3600C3A5D1 /* BAConfigurationHFMWe.m in Sources */,
 				8FAD97A01A0CFD3600C3A5D1 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FAD97A11A0CFD3600C3A5D1 /* BALocationViewControllerPad.m in Sources */,
+				8FED487C216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FAD97A21A0CFD3600C3A5D1 /* BALocationViewController.m in Sources */,
 				8FAD97A31A0CFD3600C3A5D1 /* BACoverViewControllerPad.m in Sources */,
 				8F74012E21625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8503,6 +8540,7 @@
 				8FA8F8D0195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FD610A1190916EA009E2358 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FD610A2190916EA009E2358 /* BALocationViewControllerPad.m in Sources */,
+				8FED4873216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FD610A3190916EA009E2358 /* BALocationViewController.m in Sources */,
 				8FD610A4190916EA009E2358 /* BACoverViewControllerPad.m in Sources */,
 				8F74012521625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8604,6 +8642,7 @@
 				8FA8F8D1195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FD6113D190916EF009E2358 /* BADocumentItemElementCellNonLocalPad.m in Sources */,
 				8FD6113E190916EF009E2358 /* BALocationViewControllerPad.m in Sources */,
+				8FED4874216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FD6113F190916EF009E2358 /* BALocationViewController.m in Sources */,
 				8FD61140190916EF009E2358 /* BACoverViewControllerPad.m in Sources */,
 				8F74012621625D7900A5B0A3 /* BAPushService.m in Sources */,
@@ -8705,6 +8744,7 @@
 				8FA8F8CB195026F5006CD05A /* BAConfigurationHFMWe.m in Sources */,
 				8FE94A8216DCF4C0004D33B7 /* BALocationViewControllerPad.m in Sources */,
 				8FE94A8716DCF992004D33B7 /* BALocationViewController.m in Sources */,
+				8FED486E216763E000BD657D /* BAIdViewControllerPad.m in Sources */,
 				8FE94A8B16DD06FF004D33B7 /* BACoverViewControllerPad.m in Sources */,
 				8FE94A8F16DD086E004D33B7 /* BACoverViewController.m in Sources */,
 				8F74012021625D7900A5B0A3 /* BAPushService.m in Sources */,

@@ -15,6 +15,7 @@
 #import "BAFeeCell.h"
 #import "BAOptionsNavigationController.h"
 #import "BALocalizeHelper.h"
+#import "BAIdViewController.h"
 
 @interface BAAccountViewControllerPad ()
 
@@ -129,6 +130,8 @@
     [self setFeeRefreshControl:[[UIRefreshControl alloc] init]];
     [self.feeRefreshControl addTarget:self action:@selector(refreshFee:) forControlEvents:UIControlEventValueChanged];
     [self.feeTableView addSubview:self.feeRefreshControl];
+    
+    self.idButton.enabled = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -450,6 +453,9 @@
                }
             }
             [self.accountNavigationBar.topItem setTitle:displayName];
+            
+            self.patron = json;
+            self.idButton.enabled = YES;
         }
     } else {
         if ([command isEqualToString:@"accountLoadLoanList"]) {
@@ -1059,6 +1065,10 @@
    if ([[segue identifier] isEqualToString:@"optionsSegue"]) {
       BAOptionsNavigationController *optionsNavigationController = (BAOptionsNavigationController *)[segue destinationViewController];
       [optionsNavigationController setAccountViewController:self];
+   } else if ([[segue identifier] isEqualToString:@"idSegue"]) {
+       BAIdViewController *idController = (BAIdViewController *)[segue destinationViewController];
+       idController.account = self.currentAccount;
+       idController.patron = self.patron;
    }
 }
 

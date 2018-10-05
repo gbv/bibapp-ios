@@ -47,6 +47,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *loanLoadingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reservationLoadingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *feeLoadingLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *idButton;
+@property (strong, nonatomic) NSDictionary *patron;
 
 - (void)actionButtonClick:(id)sender;
 - (void)loginActionWithMessage:(NSString*) message;
