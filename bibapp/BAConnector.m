@@ -758,14 +758,14 @@ static BAConnector *sharedConnector = nil;
    return [[NSString alloc] initWithData:isbdData encoding:NSUTF8StringEncoding];
 }
 
--(void)pushServiceRegisterWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate {
+-(void)pushServiceRegisterWithPatron:(NSString *)patron deviceId:(NSString *)deviceId delegate:(id)delegate {
     [self setConnectorDelegate:delegate];
     [self setCommand:@"pushServiceRegister"];
     
     if ([self checkNetworkReachability]) {
         NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"%@/api/bibapp/register?apikey=%@", self.appDelegate.configuration.pushServiceUrl, self.appDelegate.configuration.pushServiceApiKey]];
         
-        NSString *post = [NSString stringWithFormat:@"username=%@&password=%@&device_id=%@", username, password, deviceId];
+        NSString *post = [NSString stringWithFormat:@"patron=%@&device_id=%@", patron, deviceId];
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 
         NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -779,7 +779,7 @@ static BAConnector *sharedConnector = nil;
     }
 }
 
--(void)pushServiceUpdateWithUsername:(NSString *)username password:(NSString *)password deviceId:(NSString *)deviceId delegate:(id)delegate {
+-(void)pushServiceUpdateWithPatron:(NSString *)patron deviceId:(NSString *)deviceId delegate:(id)delegate {
     [self setConnectorDelegate:delegate];
     [self setCommand:@"pushServiceUpdate"];
     

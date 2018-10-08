@@ -32,8 +32,8 @@
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20", @"Standard-Katalog", nil]];
     self.usePushService = YES;
-    self.pushServiceUrl = @"http://192.168.2.237:8080/app_dev.php";
-    self.pushServiceApiKey = @"456";
+    self.pushServiceUrl = @"http://192.168.2.241:8080/app_dev.php";
+    self.pushServiceApiKey = @"C0S5h2P9BNeJ";
     self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
