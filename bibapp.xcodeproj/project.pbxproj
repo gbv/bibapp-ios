@@ -2885,6 +2885,16 @@
 		8FFFCFDD1667B1EA00326BE9 /* BADocumentItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDC1667B1EA00326BE9 /* BADocumentItemCell.xib */; };
 		8FFFCFE01667B23700326BE9 /* BADocumentItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFCFDF1667B23700326BE9 /* BADocumentItemCell.m */; };
 		906DBB6A83C1448F7C403FC6 /* libPods-BibApp NDH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B38806C291A2F14D2B7129 /* libPods-BibApp NDH.a */; };
+		9F12A4E4216B910100B923D7 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4E3216B910100B923D7 /* libFirebaseCore.a */; };
+		9F12A4E6216B910100B923D7 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4E5216B910100B923D7 /* libFirebaseDatabase.a */; };
+		9F12A4E8216B910100B923D7 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4E7216B910100B923D7 /* libFirebaseMessaging.a */; };
+		9F12A4EA216B910100B923D7 /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4E9216B910100B923D7 /* libGoogleUtilities.a */; };
+		9F12A4EC216B910100B923D7 /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4EB216B910100B923D7 /* libleveldb-library.a */; };
+		9F12A4EE216B910100B923D7 /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4ED216B910100B923D7 /* libnanopb.a */; };
+		9F12A4EF216B91A300B923D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F12A4F0216B91A300B923D7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F12A4F1216B91A300B923D7 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F12A4F3216B91EC00B923D7 /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12A4F2216B91EC00B923D7 /* libProtobuf.a */; };
 		9F1661162166106B00C2EC84 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661152166106B00C2EC84 /* libFirebaseCore.a */; };
 		9F1661182166106B00C2EC84 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */; };
 		9F16611A2166106B00C2EC84 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661192166106B00C2EC84 /* libFirebaseMessaging.a */; };
@@ -3620,6 +3630,13 @@
 		9A8EDA8CF733DDDB30E23E73 /* libPods-BibApp Cobi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp Cobi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA7A449CC637207DF6A26EE /* Pods-BibApp TU BS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibApp TU BS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibApp TU BS/Pods-BibApp TU BS.release.xcconfig"; sourceTree = "<group>"; };
 		9F12A4E2216B801F00B923D7 /* BibApp HI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp HI.entitlements"; sourceTree = "<group>"; };
+		9F12A4E3216B910100B923D7 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4E5216B910100B923D7 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4E7216B910100B923D7 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4E9216B910100B923D7 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4EB216B910100B923D7 /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4ED216B910100B923D7 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12A4F2216B91EC00B923D7 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F16611321660D5700C2EC84 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
 		9F1661152166106B00C2EC84 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3779,6 +3796,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F12A4EF216B91A300B923D7 /* NotificationCenter.framework in Frameworks */,
+				9F12A4F0216B91A300B923D7 /* UserNotifications.framework in Frameworks */,
+				9F12A4F1216B91A300B923D7 /* UserNotificationsUI.framework in Frameworks */,
+				9F12A4E4216B910100B923D7 /* libFirebaseCore.a in Frameworks */,
+				9F12A4E6216B910100B923D7 /* libFirebaseDatabase.a in Frameworks */,
+				9F12A4E8216B910100B923D7 /* libFirebaseMessaging.a in Frameworks */,
+				9F12A4EA216B910100B923D7 /* libGoogleUtilities.a in Frameworks */,
+				9F12A4EC216B910100B923D7 /* libleveldb-library.a in Frameworks */,
+				9F12A4EE216B910100B923D7 /* libnanopb.a in Frameworks */,
+				9F12A4F3216B91EC00B923D7 /* libProtobuf.a in Frameworks */,
 				8F4482B31B5D1BC700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF431192C86F800A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76581781C05400CCF7DB /* libxml2.dylib in Frameworks */,
@@ -4502,6 +4529,13 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F12A4F2216B91EC00B923D7 /* libProtobuf.a */,
+				9F12A4E3216B910100B923D7 /* libFirebaseCore.a */,
+				9F12A4E5216B910100B923D7 /* libFirebaseDatabase.a */,
+				9F12A4E7216B910100B923D7 /* libFirebaseMessaging.a */,
+				9F12A4E9216B910100B923D7 /* libGoogleUtilities.a */,
+				9F12A4EB216B910100B923D7 /* libleveldb-library.a */,
+				9F12A4ED216B910100B923D7 /* libnanopb.a */,
 				9F1661252166109D00C2EC84 /* NotificationCenter.framework */,
 				9F1661152166106B00C2EC84 /* libFirebaseCore.a */,
 				9F1661172166106B00C2EC84 /* libFirebaseDatabase.a */,
@@ -9102,13 +9136,23 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lxml2",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
@@ -9129,13 +9173,23 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lxml2",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
