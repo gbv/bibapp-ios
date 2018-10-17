@@ -230,7 +230,9 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"login"];
    if ([self checkNetworkReachability]) {
       NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      tempAccount = [tempAccount stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
       NSString *tempPassword = [password stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      tempPassword = [tempPassword stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, tempPassword]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
@@ -244,6 +246,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"logout"];
    if ([self checkNetworkReachability]) {
       NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      tempAccount = [tempAccount stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/logout?patron=%@&access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, token]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
