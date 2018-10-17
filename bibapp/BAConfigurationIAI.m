@@ -58,6 +58,11 @@
 
     self.useDAIASubRequests = YES;
     [self.currentBibFamURLs addObject:[[NSArray alloc] initWithObjects:@"https://lhiai.gbv.de/DB=1/SET=1/TTL=1/FAM", @"Standard-Katalog", nil]];
+    
+    self.usePushService = NO;
+    //self.pushServiceUrl = @"https://daiaplus.beluga-core.de/app_dev.php";
+    //self.pushServiceApiKey = @"C0S5h2P9BNeJ";
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end

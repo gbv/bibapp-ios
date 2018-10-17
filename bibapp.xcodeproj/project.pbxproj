@@ -2449,6 +2449,17 @@
 		8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
 		8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
 		8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */; };
+		8FD1097C217716CE0050CAC3 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD1097B217716CE0050CAC3 /* libFirebaseCore.a */; };
+		8FD1097E217716CE0050CAC3 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD1097D217716CE0050CAC3 /* libFirebaseDatabase.a */; };
+		8FD10980217716CE0050CAC3 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD1097F217716CE0050CAC3 /* libFirebaseMessaging.a */; };
+		8FD10982217716CE0050CAC3 /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD10981217716CE0050CAC3 /* libGoogleUtilities.a */; };
+		8FD10984217716CE0050CAC3 /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD10983217716CE0050CAC3 /* libleveldb-library.a */; };
+		8FD10986217716CE0050CAC3 /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD10985217716CE0050CAC3 /* libnanopb.a */; };
+		8FD10988217716CE0050CAC3 /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD10987217716CE0050CAC3 /* libProtobuf.a */; };
+		8FD10989217716E10050CAC3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		8FD1098A217716E10050CAC3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		8FD1098B217716E10050CAC3 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		8FD1099021771D830050CAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */; };
 		8FD463A516F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A616F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A916F9F41600E935EC /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
@@ -3506,6 +3517,15 @@
 		8FCFF423192C80D700A3E93F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8FCFF424192C80D700A3E93F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8FCFF42D192C813100A3E93F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8FD1097B217716CE0050CAC3 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD1097D217716CE0050CAC3 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD1097F217716CE0050CAC3 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD10981217716CE0050CAC3 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD10983217716CE0050CAC3 /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD10985217716CE0050CAC3 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD10987217716CE0050CAC3 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD1098C217716FE0050CAC3 /* BibApp IAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp IAI.entitlements"; sourceTree = "<group>"; };
+		8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FD463A416F9F3F700E935EC /* BATocCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocCellPad.xib; sourceTree = "<group>"; };
 		8FD463A716F9F40500E935EC /* BATocCellPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocCellPad.h; sourceTree = "<group>"; };
 		8FD463A816F9F41600E935EC /* BATocCellPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocCellPad.m; sourceTree = "<group>"; };
@@ -3758,6 +3778,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD10989217716E10050CAC3 /* NotificationCenter.framework in Frameworks */,
+				8FD1098A217716E10050CAC3 /* UserNotifications.framework in Frameworks */,
+				8FD1098B217716E10050CAC3 /* UserNotificationsUI.framework in Frameworks */,
+				8FD1097C217716CE0050CAC3 /* libFirebaseCore.a in Frameworks */,
+				8FD1097E217716CE0050CAC3 /* libFirebaseDatabase.a in Frameworks */,
+				8FD10980217716CE0050CAC3 /* libFirebaseMessaging.a in Frameworks */,
+				8FD10982217716CE0050CAC3 /* libGoogleUtilities.a in Frameworks */,
+				8FD10984217716CE0050CAC3 /* libleveldb-library.a in Frameworks */,
+				8FD10986217716CE0050CAC3 /* libnanopb.a in Frameworks */,
+				8FD10988217716CE0050CAC3 /* libProtobuf.a in Frameworks */,
 				8F4A7F1C2029B78400CA6C0F /* MessageUI.framework in Frameworks */,
 				8F4A7F1D2029B78400CA6C0F /* SystemConfiguration.framework in Frameworks */,
 				8F4A7F1E2029B78400CA6C0F /* libxml2.dylib in Frameworks */,
@@ -4490,6 +4520,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				8FD1098C217716FE0050CAC3 /* BibApp IAI.entitlements */,
 				9F12A4E2216B801F00B923D7 /* BibApp HI.entitlements */,
 				B43CE09E20FF3F6600AFBC78 /* Localizable.strings */,
 				8FF2700116393BF100099665 /* BibApp */,
@@ -4529,6 +4560,13 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FD1097B217716CE0050CAC3 /* libFirebaseCore.a */,
+				8FD1097D217716CE0050CAC3 /* libFirebaseDatabase.a */,
+				8FD1097F217716CE0050CAC3 /* libFirebaseMessaging.a */,
+				8FD10981217716CE0050CAC3 /* libGoogleUtilities.a */,
+				8FD10983217716CE0050CAC3 /* libleveldb-library.a */,
+				8FD10985217716CE0050CAC3 /* libnanopb.a */,
+				8FD10987217716CE0050CAC3 /* libProtobuf.a */,
 				9F12A4F2216B91EC00B923D7 /* libProtobuf.a */,
 				9F12A4E3216B910100B923D7 /* libFirebaseCore.a */,
 				9F12A4E5216B910100B923D7 /* libFirebaseDatabase.a */,
@@ -4734,6 +4772,7 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */,
 				9F166135216619CC00C2EC84 /* GoogleService-Info.plist */,
 				9F166133216619C100C2EC84 /* GoogleService-Info.plist */,
 			);
@@ -5114,6 +5153,11 @@
 					};
 					8F4A7EC12029B78400CA6C0F = {
 						DevelopmentTeam = DG2S2C98D2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8F8A757E1781BF4700CCF7DB = {
 						DevelopmentTeam = DG2S2C98D2;
@@ -5484,6 +5528,7 @@
 				8F4A7F472029B78400CA6C0F /* menuIconInfo.png in Resources */,
 				8F4A7F572029B78400CA6C0F /* IconLG.png in Resources */,
 				8F4A7F582029B78400CA6C0F /* IconLG@2x.png in Resources */,
+				8FD1099021771D830050CAC3 /* GoogleService-Info.plist in Resources */,
 				8F4A7F592029B78400CA6C0F /* bibapp~ipad.storyboard in Resources */,
 				8F4A7F5A2029B78400CA6C0F /* transparentImage.png in Resources */,
 				8F4A7F5B2029B78400CA6C0F /* BAAccountTableHeaderViewPad.xib in Resources */,
@@ -9031,16 +9076,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.iai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -9057,16 +9110,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.iai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
