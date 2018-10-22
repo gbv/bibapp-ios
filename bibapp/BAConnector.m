@@ -51,6 +51,28 @@ static BAConnector *sharedConnector = nil;
    self = [super init];
    if (self) {
       self.appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
+       self.urlencodeCharacters = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                   @"%2C",          @",",
+                                   @"%3B",          @";",
+                                   @".",            @".",
+                                   @"%3A",          @":",
+                                   @"%E2%80%93",    @"–",
+                                   @"_",            @"_",
+                                   @"%23",          @"#",
+                                   @"%E2%80%99",    @"’",
+                                   @"%2B",          @"+",
+                                   @"%2A",          @"*",
+                                   @"%21",          @"!",
+                                   @"%E2%80%9C",    @"“",
+                                   @"%24",          @"$",
+                                   @"%25",          @"%",
+                                   @"%26",          @"&",
+                                   @"%2F",          @"/",
+                                   @"%28",          @"(",
+                                   @"%29",          @")",
+                                   @"%3D",          @"=",
+                                   @"%3F",          @"?",
+                                   nil];
    }
    return self;
 }
@@ -229,11 +251,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
    if ([self checkNetworkReachability]) {
-      NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-      tempAccount = [tempAccount stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-      NSString *tempPassword = [password stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-      tempPassword = [tempPassword stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, tempPassword]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], [self urlencodeString:password]]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
@@ -245,9 +263,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"logout"];
    if ([self checkNetworkReachability]) {
-      NSString *tempAccount = [account stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-      tempAccount = [tempAccount stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/logout?patron=%@&access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], tempAccount, token]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/logout?patron=%@&access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
@@ -261,7 +277,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountLoadLoanList"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_items"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
          NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
          if (theConnection) {
@@ -282,7 +298,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountLoadFees"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_fees"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
          NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
          if (theConnection) {
@@ -299,7 +315,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountLoadPatron"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_patron"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
          NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
          if (theConnection) {
@@ -321,7 +337,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountRequestDocs"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/request?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSMutableString*jsonString = [[NSMutableString alloc] init];
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             [jsonString appendString:@"["];
@@ -370,7 +386,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountRenewDocs"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/renew?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSMutableString*jsonString = [[NSMutableString alloc] init];
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             [jsonString appendString:@"["];
@@ -418,7 +434,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"accountCancelDocs"];
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"write_items"]) {
-         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], account, token]];
+         NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/cancel?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
          NSMutableString*jsonString = [[NSMutableString alloc] init];
          if ([self.appDelegate.configuration usePAIAWrapper]) {
             [jsonString appendString:@"["];
@@ -831,6 +847,14 @@ static BAConnector *sharedConnector = nil;
         if (theConnection) {
         }
     }
+}
+
+-(NSString *) urlencodeString:(NSString *)string {
+    NSString *result = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    for (NSString *character in self.urlencodeCharacters) {
+        result = [result stringByReplacingOccurrencesOfString:character withString:[self.urlencodeCharacters objectForKey:character]];
+    }
+    return result;
 }
 
 @end

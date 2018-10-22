@@ -26,6 +26,7 @@ FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;
 @property (nonatomic, retain) NSData *webDataSynchronous;
 @property (nonatomic, retain) NSURLConnection *currentConnection;
 @property (nonatomic, retain) NSString *baseURL;
+@property (nonatomic, strong) NSDictionary *urlencodeCharacters;
 
 + (id)sharedConnector;
 + (id)generateConnector;
