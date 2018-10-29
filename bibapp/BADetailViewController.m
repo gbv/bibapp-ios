@@ -686,11 +686,23 @@
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
         
         NSArray *items = [parser nodesForXPath:@"RESULT/SET/SHORTTITLE" error:nil];
-        for (GDataXMLElement *item in items) {
-            NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
-            if (![ppn isEqualToString:self.currentEntry.ppn]) {
-                BAConnector *connector = [BAConnector generateConnector];
-                [connector getDetailsForLocal:ppn WithDelegate:self];
+        if ([items count] > 0) {
+            for (GDataXMLElement *item in items) {
+                NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
+                
+                NSLog(@"PPN: %@", ppn);
+                
+                if (![ppn isEqualToString:self.currentEntry.ppn]) {
+                    BAConnector *connector = [BAConnector generateConnector];
+                    [connector getDetailsForLocal:ppn WithDelegate:self];
+                }
+            }
+        } else {
+            BAConnector *connector = [BAConnector generateConnector];
+            if (self.currentEntry.local) {
+                [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+            } else {
+                [connector getDetailsFor:[self.currentEntry ppn] WithDelegate:self];
             }
         }
         

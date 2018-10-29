@@ -209,6 +209,7 @@
                 }
             }
             
+            bool foundBarcode = YES;
             if (loan.available) {
                 [cell.status setTextColor:[[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:1.0]];
                 [status appendString:BALocalizedString(@"ausleihbar")];
@@ -222,6 +223,13 @@
                         [statusInfo appendString:BALocalizedString(@"Bitte am Standort entnehmen")];
                     } else {
                         [statusInfo appendString:BALocalizedString(@"Bitte bestellen")];
+                        NSURL *loanHref = [[NSURL alloc] initWithString:loan.href];
+                        NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:loanHref resolvingAgainstBaseURL:NO];
+                        for (NSURLQueryItem *queryItem in urlComponents.queryItems) {
+                            if ([queryItem.name isEqualToString:@"bar"] && [queryItem.value isEqualToString:@""]) {
+                                foundBarcode = NO;
+                            }
+                        }
                     }
                 }
             } else {
@@ -263,6 +271,14 @@
                status = [[NSMutableString alloc] initWithFormat:@"%@", self.appDelegate.configuration.currentBibDaiaInfoFromOpacDisplay];
             }
            
+            if (!foundBarcode) {
+                status = [BALocalizedString(@"Blockierte Bestellung") mutableCopy];
+                statusInfo = [BALocalizedString(@"Blockierte Bestellung Info") mutableCopy];
+                [cell.status setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                [cell.statusInfo setTextColor:[[UIColor alloc] initWithRed:1.0 green:0.0 blue:0.00 alpha:1.0]];
+                tempDocumentItem.blockOrder = YES;
+            }
+            
             [cell.status setText:status];
             [cell.statusInfo setText:statusInfo];
             [cell.actionButton setTag:indexPath.row];
@@ -385,7 +401,12 @@
         BAConnector *unapiConnectorMods = [BAConnector generateConnector];
         
         if (self.currentEntry.local) {
-            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+            if ([self.appDelegate.configuration.currentBibBlockOrderTypes count] == 0) {
+                [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+            } else {
+                BAConnector *unapiConnectorPica = [BAConnector generateConnector];
+                [unapiConnectorPica getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"picaxml" WithDelegate:self];
+            }
             [unapiConnector getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"isbd" WithDelegate:self];
             [unapiConnectorMods getUNAPIDetailsFor:[self.currentEntry ppn] WithFormat:@"mods" WithDelegate:self];
         } else {
@@ -855,6 +876,33 @@
         }
         [self loadCover];
         [self.detailTableView reloadData];
+    } else if ([command isEqualToString:@"getUNAPIDetailsPicaxml"]) {
+        NSEnumerator *picaXmlEnumerator = [self.appDelegate.configuration.currentBibBlockOrderTypes keyEnumerator];
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        NSArray *picaDatafieldsArray = [parser.rootElement elementsForName:@"datafield"];
+        for (id key in picaXmlEnumerator) {
+            for (GDataXMLElement *picaDatafield in picaDatafieldsArray) {
+                if ([[[picaDatafield attributeForName:@"tag"] stringValue] isEqualToString:key]) {
+                    NSArray *picaSubfieldsArray = [picaDatafield elementsForName:@"subfield"];
+                    for (GDataXMLElement *picaSubfield in picaSubfieldsArray) {
+                        NSEnumerator *blockOrderTypesEnumerator = [[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] keyEnumerator];
+                        for (id blockOrderTypeKey in blockOrderTypesEnumerator) {
+                            if ([[[picaSubfield stringValue] substringWithRange:NSMakeRange([[[self.appDelegate.configuration.currentBibBlockOrderTypes objectForKey:key] objectForKey:blockOrderTypeKey] longValue], 1)] isEqualToString:blockOrderTypeKey]) {
+                                self.blockOrderByTypes = YES;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        BAConnector *connector = [BAConnector generateConnector];
+        if (!self.blockOrderByTypes) {
+            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        } else {
+            if (self.appDelegate.configuration.useDAIASubRequests) {
+                [connector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
+        }
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
         if ([self.appDelegate.configuration usePAIAWrapper]) {
            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
@@ -886,6 +934,34 @@
               UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
               [alert show];
            }
+        }
+    } else if ([command isEqualToString:@"getDetailsLocalFam"]) {
+        GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
+        
+        NSArray *items = [parser nodesForXPath:@"RESULT/SET/SHORTTITLE" error:nil];
+        if ([items count] > 0) {
+            for (GDataXMLElement *item in items) {
+                NSString *ppn = [[item attributeForName:@"PPN"] stringValue];
+                
+                NSLog(@"PPN: %@", ppn);
+                
+                if (![ppn isEqualToString:self.currentEntry.ppn]) {
+                    BAConnector *connector = [BAConnector generateConnector];
+                    [connector getDetailsForLocal:ppn WithDelegate:self];
+                }
+            }
+        } else {
+            BAConnector *connector = [BAConnector generateConnector];
+            [connector getDetailsForLocal:[self.currentEntry ppn] WithDelegate:self];
+        }
+        
+        NSArray *sets = [parser nodesForXPath:@"RESULT/SET" error:nil];
+        for (GDataXMLElement *set in sets) {
+            if ([[[set attributeForName:@"hits"] stringValue] longLongValue] > (self.currentDaiaFamIndex + 10) ) {
+                self.currentDaiaFamIndex += 10;
+                BAConnector *famConnector = [BAConnector generateConnector];
+                [famConnector getDetailsForLocalFam:[self.currentEntry ppn] WithStart:self.currentDaiaFamIndex WithDelegate:self];
+            }
         }
     }
 }

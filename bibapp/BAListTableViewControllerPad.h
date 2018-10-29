@@ -50,6 +50,9 @@
 @property (weak, nonatomic) IBOutlet UIView *statusBarTintUIView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionIcon;
+@property BOOL didCheckBlockOrderTypes;
+@property BOOL blockOrderByTypes;
+@property long currentDaiaFamIndex;
 
 - (IBAction)trashAction:(id)sender;
 - (void) displayToc;
