@@ -2918,6 +2918,17 @@
 		9F1661262166109D00C2EC84 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F166134216619C100C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166133216619C100C2EC84 /* GoogleService-Info.plist */; };
 		9F166136216619CC00C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166135216619CC00C2EC84 /* GoogleService-Info.plist */; };
+		9F741F2D21904FCB00DB66D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */; };
+		9F741F2F2190507200DB66D8 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F2E2190507200DB66D8 /* libFirebaseCore.a */; };
+		9F741F312190507200DB66D8 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F302190507200DB66D8 /* libFirebaseDatabase.a */; };
+		9F741F332190507200DB66D8 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F322190507200DB66D8 /* libFirebaseMessaging.a */; };
+		9F741F352190507200DB66D8 /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F342190507200DB66D8 /* libGoogleUtilities.a */; };
+		9F741F372190507200DB66D8 /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F362190507200DB66D8 /* libleveldb-library.a */; };
+		9F741F392190507200DB66D8 /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F382190507200DB66D8 /* libnanopb.a */; };
+		9F741F3B2190507B00DB66D8 /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F3A2190507B00DB66D8 /* libProtobuf.a */; };
+		9F741F3E2190509C00DB66D8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F741F3F2190509C00DB66D8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F741F402190509C00DB66D8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
 		B4213C0320FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0420FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0520FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
@@ -3668,6 +3679,15 @@
 		9F1661252166109D00C2EC84 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9F166133216619C100C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/HI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F166135216619CC00C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IL/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F741F2E2190507200DB66D8 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F302190507200DB66D8 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F322190507200DB66D8 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F342190507200DB66D8 /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F362190507200DB66D8 /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F382190507200DB66D8 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F3A2190507B00DB66D8 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F741F3C2190508800DB66D8 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
@@ -3711,6 +3731,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F741F3E2190509C00DB66D8 /* NotificationCenter.framework in Frameworks */,
+				9F741F3F2190509C00DB66D8 /* UserNotifications.framework in Frameworks */,
+				9F741F402190509C00DB66D8 /* UserNotificationsUI.framework in Frameworks */,
+				9F741F3B2190507B00DB66D8 /* libProtobuf.a in Frameworks */,
+				9F741F2F2190507200DB66D8 /* libFirebaseCore.a in Frameworks */,
+				9F741F312190507200DB66D8 /* libFirebaseDatabase.a in Frameworks */,
+				9F741F332190507200DB66D8 /* libFirebaseMessaging.a in Frameworks */,
+				9F741F352190507200DB66D8 /* libGoogleUtilities.a in Frameworks */,
+				9F741F372190507200DB66D8 /* libleveldb-library.a in Frameworks */,
+				9F741F392190507200DB66D8 /* libnanopb.a in Frameworks */,
 				8F07B1851BFB72DB0012C325 /* MessageUI.framework in Frameworks */,
 				8F07B1861BFB72DB0012C325 /* SystemConfiguration.framework in Frameworks */,
 				8F07B1871BFB72DB0012C325 /* libxml2.dylib in Frameworks */,
@@ -4560,6 +4590,14 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F741F3C2190508800DB66D8 /* Network.framework */,
+				9F741F3A2190507B00DB66D8 /* libProtobuf.a */,
+				9F741F2E2190507200DB66D8 /* libFirebaseCore.a */,
+				9F741F302190507200DB66D8 /* libFirebaseDatabase.a */,
+				9F741F322190507200DB66D8 /* libFirebaseMessaging.a */,
+				9F741F342190507200DB66D8 /* libGoogleUtilities.a */,
+				9F741F362190507200DB66D8 /* libleveldb-library.a */,
+				9F741F382190507200DB66D8 /* libnanopb.a */,
 				8FD1097B217716CE0050CAC3 /* libFirebaseCore.a */,
 				8FD1097D217716CE0050CAC3 /* libFirebaseDatabase.a */,
 				8FD1097F217716CE0050CAC3 /* libFirebaseMessaging.a */,
@@ -4772,6 +4810,7 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */,
 				8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */,
 				9F166135216619CC00C2EC84 /* GoogleService-Info.plist */,
 				9F166133216619C100C2EC84 /* GoogleService-Info.plist */,
@@ -5292,6 +5331,7 @@
 				8F07B1B01BFB72DB0012C325 /* menuIconInfo.png in Resources */,
 				8F07B1C01BFB72DB0012C325 /* IconLG.png in Resources */,
 				8F07B1C11BFB72DB0012C325 /* IconLG@2x.png in Resources */,
+				9F741F2D21904FCB00DB66D8 /* GoogleService-Info.plist in Resources */,
 				8F07B1C21BFB72DB0012C325 /* bibapp~ipad.storyboard in Resources */,
 				8F07B1C31BFB72DB0012C325 /* transparentImage.png in Resources */,
 				8F07B1C41BFB72DB0012C325 /* BAAccountTableHeaderViewPad.xib in Resources */,
@@ -8902,13 +8942,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -8928,13 +8975,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bibapp/bibapp-Prefix.pch";
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.cobi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
