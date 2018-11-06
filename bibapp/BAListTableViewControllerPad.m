@@ -264,6 +264,11 @@
                            }
                         }
                     }
+                } else {
+                    NSRange match = [presentation.href rangeOfString: @"action=order"];
+                    if (match.length > 0) {
+                        [statusInfo appendString:BALocalizedString(@"Vor Ort benutzbar, bitte bestellen")];
+                    }
                 }
             }
            
@@ -1185,6 +1190,11 @@
             if (!presentation.available) {
                 if (loan.href != nil) {
                     [orderString appendString:self.appDelegate.configuration.currentBibRequestTitle];
+                }
+            } else {
+                NSRange match = [presentation.href rangeOfString: @"action=order"];
+                if (match.length > 0) {
+                    [orderString appendString:BALocalizedString(@"Bestellen")];
                 }
             }
         }

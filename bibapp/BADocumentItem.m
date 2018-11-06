@@ -50,6 +50,17 @@
                 if (![service.href isEqualToString:@""] && service.href != nil) {
                     result = YES;
                 }
+            } else if ([service.service isEqualToString:@"presentation"]) {
+                for (BADocumentItemElement *tempService in self.services) {
+                    if ([tempService.service isEqualToString:@"loan"] && [tempService.type isEqualToString:@"unavailable"]) {
+                        if (![service.href isEqualToString:@""] && service.href != nil) {
+                            NSRange match = [service.href rangeOfString: @"action=order"];
+                            if (match.length > 0) {
+                                result = YES;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
