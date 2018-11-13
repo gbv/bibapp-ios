@@ -25,7 +25,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -37,13 +37,13 @@
 	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>Die App verwendet Ihren Standort, um den Abstand zur nächstgelegenen Bibliothek zu ermitteln, die einen von Ihnen gesuchten Titel besitzt. Die Information wird nicht an die Bibliothek oder Andere übermittelt.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-    </array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>belugino.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>bibapp~iphone</string>
