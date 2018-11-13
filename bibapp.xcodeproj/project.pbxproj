@@ -2918,6 +2918,146 @@
 		9F1661262166109D00C2EC84 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F166134216619C100C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166133216619C100C2EC84 /* GoogleService-Info.plist */; };
 		9F166136216619CC00C2EC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F166135216619CC00C2EC84 /* GoogleService-Info.plist */; };
+		9F376F0E219B20FB00B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F0D219B20FB00B54BAA /* libFirebaseCore.a */; };
+		9F376F10219B20FB00B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F0F219B20FB00B54BAA /* libFirebaseDatabase.a */; };
+		9F376F12219B20FB00B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F11219B20FB00B54BAA /* libFirebaseMessaging.a */; };
+		9F376F14219B20FB00B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F13219B20FB00B54BAA /* libGoogleUtilities.a */; };
+		9F376F16219B20FB00B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F15219B20FB00B54BAA /* libleveldb-library.a */; };
+		9F376F18219B20FB00B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F17219B20FB00B54BAA /* libnanopb.a */; };
+		9F376F1A219B20FB00B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F19219B20FB00B54BAA /* libProtobuf.a */; };
+		9F376F1B219B211400B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F1C219B211400B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F1D219B211400B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F1F219B212000B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F1E219B212000B54BAA /* libFirebaseCore.a */; };
+		9F376F21219B212000B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F20219B212000B54BAA /* libFirebaseDatabase.a */; };
+		9F376F23219B212000B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F22219B212000B54BAA /* libFirebaseMessaging.a */; };
+		9F376F25219B212000B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F24219B212000B54BAA /* libGoogleUtilities.a */; };
+		9F376F27219B212000B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F26219B212000B54BAA /* libleveldb-library.a */; };
+		9F376F29219B212000B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F28219B212000B54BAA /* libnanopb.a */; };
+		9F376F2B219B212000B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F2A219B212000B54BAA /* libProtobuf.a */; };
+		9F376F2C219B212800B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F2D219B212800B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F2E219B212800B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F30219B213700B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F2F219B213700B54BAA /* libFirebaseCore.a */; };
+		9F376F32219B213700B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F31219B213700B54BAA /* libFirebaseDatabase.a */; };
+		9F376F34219B213700B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F33219B213700B54BAA /* libFirebaseMessaging.a */; };
+		9F376F36219B213700B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F35219B213700B54BAA /* libGoogleUtilities.a */; };
+		9F376F38219B213700B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F37219B213700B54BAA /* libleveldb-library.a */; };
+		9F376F3A219B213700B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F39219B213700B54BAA /* libnanopb.a */; };
+		9F376F3C219B213700B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F3B219B213700B54BAA /* libProtobuf.a */; };
+		9F376F3D219B214000B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F3E219B214000B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F3F219B214000B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F41219B215300B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F40219B215300B54BAA /* libFirebaseCore.a */; };
+		9F376F43219B215300B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F42219B215300B54BAA /* libFirebaseDatabase.a */; };
+		9F376F45219B215300B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F44219B215300B54BAA /* libFirebaseMessaging.a */; };
+		9F376F47219B215300B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F46219B215300B54BAA /* libGoogleUtilities.a */; };
+		9F376F49219B215300B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F48219B215300B54BAA /* libleveldb-library.a */; };
+		9F376F4B219B215300B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F4A219B215300B54BAA /* libnanopb.a */; };
+		9F376F4D219B215300B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F4C219B215300B54BAA /* libProtobuf.a */; };
+		9F376F4E219B215A00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F4F219B215A00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F50219B215A00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F52219B216400B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F51219B216400B54BAA /* libFirebaseCore.a */; };
+		9F376F54219B216400B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F53219B216400B54BAA /* libFirebaseDatabase.a */; };
+		9F376F56219B216400B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F55219B216400B54BAA /* libFirebaseMessaging.a */; };
+		9F376F58219B216400B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F57219B216400B54BAA /* libGoogleUtilities.a */; };
+		9F376F5A219B216400B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F59219B216400B54BAA /* libleveldb-library.a */; };
+		9F376F5C219B216400B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F5B219B216400B54BAA /* libnanopb.a */; };
+		9F376F5E219B216400B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F5D219B216400B54BAA /* libProtobuf.a */; };
+		9F376F5F219B216C00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F60219B216C00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F61219B216C00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F63219B217600B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F62219B217600B54BAA /* libFirebaseCore.a */; };
+		9F376F65219B217600B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F64219B217600B54BAA /* libFirebaseDatabase.a */; };
+		9F376F67219B217600B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F66219B217600B54BAA /* libFirebaseMessaging.a */; };
+		9F376F69219B217600B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F68219B217600B54BAA /* libGoogleUtilities.a */; };
+		9F376F6B219B217600B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F6A219B217600B54BAA /* libleveldb-library.a */; };
+		9F376F6D219B217600B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F6C219B217600B54BAA /* libnanopb.a */; };
+		9F376F6F219B217600B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F6E219B217600B54BAA /* libProtobuf.a */; };
+		9F376F70219B218000B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F71219B218000B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F72219B218000B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F74219B218D00B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F73219B218D00B54BAA /* libFirebaseCore.a */; };
+		9F376F76219B218D00B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F75219B218D00B54BAA /* libFirebaseDatabase.a */; };
+		9F376F78219B218D00B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F77219B218D00B54BAA /* libFirebaseMessaging.a */; };
+		9F376F7A219B218D00B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F79219B218D00B54BAA /* libGoogleUtilities.a */; };
+		9F376F7C219B218D00B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F7B219B218D00B54BAA /* libleveldb-library.a */; };
+		9F376F7E219B218D00B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F7D219B218D00B54BAA /* libnanopb.a */; };
+		9F376F80219B218D00B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F7F219B218D00B54BAA /* libProtobuf.a */; };
+		9F376F81219B219400B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F82219B219400B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F83219B219400B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F85219B219F00B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F84219B219F00B54BAA /* libFirebaseCore.a */; };
+		9F376F87219B219F00B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F86219B219F00B54BAA /* libFirebaseDatabase.a */; };
+		9F376F89219B219F00B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F88219B219F00B54BAA /* libFirebaseMessaging.a */; };
+		9F376F8B219B219F00B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F8A219B219F00B54BAA /* libGoogleUtilities.a */; };
+		9F376F8D219B219F00B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F8C219B219F00B54BAA /* libleveldb-library.a */; };
+		9F376F8F219B219F00B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F8E219B219F00B54BAA /* libnanopb.a */; };
+		9F376F91219B219F00B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F90219B219F00B54BAA /* libProtobuf.a */; };
+		9F376F92219B21A800B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376F93219B21A800B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376F94219B21A800B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376F96219B21B100B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F95219B21B100B54BAA /* libFirebaseCore.a */; };
+		9F376F98219B21B100B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F97219B21B100B54BAA /* libFirebaseDatabase.a */; };
+		9F376F9A219B21B100B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F99219B21B100B54BAA /* libFirebaseMessaging.a */; };
+		9F376F9C219B21B100B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F9B219B21B100B54BAA /* libGoogleUtilities.a */; };
+		9F376F9E219B21B100B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F9D219B21B100B54BAA /* libleveldb-library.a */; };
+		9F376FA0219B21B100B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376F9F219B21B100B54BAA /* libnanopb.a */; };
+		9F376FA2219B21B100B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FA1219B21B100B54BAA /* libProtobuf.a */; };
+		9F376FA3219B21BB00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FA4219B21BB00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FA5219B21BB00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376FA7219B21C600B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FA6219B21C600B54BAA /* libFirebaseCore.a */; };
+		9F376FA9219B21C600B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FA8219B21C600B54BAA /* libFirebaseDatabase.a */; };
+		9F376FAB219B21C600B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FAA219B21C600B54BAA /* libFirebaseMessaging.a */; };
+		9F376FAD219B21C600B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FAC219B21C600B54BAA /* libGoogleUtilities.a */; };
+		9F376FAF219B21C600B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FAE219B21C600B54BAA /* libleveldb-library.a */; };
+		9F376FB1219B21C600B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FB0219B21C600B54BAA /* libnanopb.a */; };
+		9F376FB3219B21C600B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FB2219B21C600B54BAA /* libProtobuf.a */; };
+		9F376FB4219B21CD00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FB5219B21CD00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FB6219B21CD00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376FB8219B21D800B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FB7219B21D800B54BAA /* libFirebaseCore.a */; };
+		9F376FBA219B21D800B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FB9219B21D800B54BAA /* libFirebaseDatabase.a */; };
+		9F376FBC219B21D800B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FBB219B21D800B54BAA /* libFirebaseMessaging.a */; };
+		9F376FBE219B21D800B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FBD219B21D800B54BAA /* libGoogleUtilities.a */; };
+		9F376FC0219B21D800B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FBF219B21D800B54BAA /* libleveldb-library.a */; };
+		9F376FC2219B21D800B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FC1219B21D800B54BAA /* libnanopb.a */; };
+		9F376FC4219B21D800B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FC3219B21D800B54BAA /* libProtobuf.a */; };
+		9F376FC5219B21E100B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FC6219B21E100B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FC7219B21E100B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376FC9219B21EC00B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FC8219B21EC00B54BAA /* libFirebaseCore.a */; };
+		9F376FCB219B21EC00B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FCA219B21EC00B54BAA /* libFirebaseDatabase.a */; };
+		9F376FCD219B21EC00B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FCC219B21EC00B54BAA /* libFirebaseMessaging.a */; };
+		9F376FCF219B21EC00B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FCE219B21EC00B54BAA /* libGoogleUtilities.a */; };
+		9F376FD1219B21EC00B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FD0219B21EC00B54BAA /* libleveldb-library.a */; };
+		9F376FD3219B21EC00B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FD2219B21EC00B54BAA /* libnanopb.a */; };
+		9F376FD5219B21EC00B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FD4219B21EC00B54BAA /* libProtobuf.a */; };
+		9F376FD6219B21F400B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FD7219B21F400B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FD8219B21F400B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376FDA219B21FE00B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FD9219B21FE00B54BAA /* libFirebaseCore.a */; };
+		9F376FDC219B21FE00B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FDB219B21FE00B54BAA /* libFirebaseDatabase.a */; };
+		9F376FDE219B21FE00B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FDD219B21FE00B54BAA /* libFirebaseMessaging.a */; };
+		9F376FE0219B21FE00B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FDF219B21FE00B54BAA /* libGoogleUtilities.a */; };
+		9F376FE2219B21FE00B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FE1219B21FE00B54BAA /* libleveldb-library.a */; };
+		9F376FE4219B21FE00B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FE3219B21FE00B54BAA /* libnanopb.a */; };
+		9F376FE6219B21FE00B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FE5219B21FE00B54BAA /* libProtobuf.a */; };
+		9F376FE7219B220600B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FE8219B220600B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FE9219B220600B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F376FEB219B221300B54BAA /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FEA219B221300B54BAA /* libFirebaseCore.a */; };
+		9F376FED219B221300B54BAA /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FEC219B221300B54BAA /* libFirebaseDatabase.a */; };
+		9F376FEF219B221300B54BAA /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FEE219B221300B54BAA /* libFirebaseMessaging.a */; };
+		9F376FF1219B221300B54BAA /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FF0219B221300B54BAA /* libGoogleUtilities.a */; };
+		9F376FF3219B221300B54BAA /* libleveldb-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FF2219B221300B54BAA /* libleveldb-library.a */; };
+		9F376FF5219B221300B54BAA /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FF4219B221300B54BAA /* libnanopb.a */; };
+		9F376FF7219B221300B54BAA /* libProtobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F376FF6219B221300B54BAA /* libProtobuf.a */; };
+		9F376FF8219B221D00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
+		9F376FF9219B221D00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
+		9F376FFA219B221D00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
 		9F741F2D21904FCB00DB66D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */; };
 		9F741F2F2190507200DB66D8 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F2E2190507200DB66D8 /* libFirebaseCore.a */; };
 		9F741F312190507200DB66D8 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F302190507200DB66D8 /* libFirebaseDatabase.a */; };
@@ -3679,6 +3819,104 @@
 		9F1661252166109D00C2EC84 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9F166133216619C100C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/HI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F166135216619CC00C2EC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IL/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F376F0D219B20FB00B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F0F219B20FB00B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F11219B20FB00B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F13219B20FB00B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F15219B20FB00B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F17219B20FB00B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F19219B20FB00B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F1E219B212000B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F20219B212000B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F22219B212000B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F24219B212000B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F26219B212000B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F28219B212000B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F2A219B212000B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F2F219B213700B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F31219B213700B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F33219B213700B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F35219B213700B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F37219B213700B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F39219B213700B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F3B219B213700B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F40219B215300B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F42219B215300B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F44219B215300B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F46219B215300B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F48219B215300B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F4A219B215300B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F4C219B215300B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F51219B216400B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F53219B216400B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F55219B216400B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F57219B216400B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F59219B216400B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F5B219B216400B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F5D219B216400B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F62219B217600B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F64219B217600B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F66219B217600B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F68219B217600B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F6A219B217600B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F6C219B217600B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F6E219B217600B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F73219B218D00B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F75219B218D00B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F77219B218D00B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F79219B218D00B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F7B219B218D00B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F7D219B218D00B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F7F219B218D00B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F84219B219F00B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F86219B219F00B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F88219B219F00B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F8A219B219F00B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F8C219B219F00B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F8E219B219F00B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F90219B219F00B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F95219B21B100B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F97219B21B100B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F99219B21B100B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F9B219B21B100B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F9D219B21B100B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376F9F219B21B100B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FA1219B21B100B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FA6219B21C600B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FA8219B21C600B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FAA219B21C600B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FAC219B21C600B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FAE219B21C600B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FB0219B21C600B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FB2219B21C600B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FB7219B21D800B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FB9219B21D800B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FBB219B21D800B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FBD219B21D800B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FBF219B21D800B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FC1219B21D800B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FC3219B21D800B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FC8219B21EC00B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FCA219B21EC00B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FCC219B21EC00B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FCE219B21EC00B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FD0219B21EC00B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FD2219B21EC00B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FD4219B21EC00B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FD9219B21FE00B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FDB219B21FE00B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FDD219B21FE00B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FDF219B21FE00B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FE1219B21FE00B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FE3219B21FE00B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FE5219B21FE00B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FEA219B221300B54BAA /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FEC219B221300B54BAA /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FEE219B221300B54BAA /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FF0219B221300B54BAA /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FF2219B221300B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FF4219B221300B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F376FF6219B221300B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F741F2E2190507200DB66D8 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F302190507200DB66D8 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3789,6 +4027,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F70219B218000B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F71219B218000B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F72219B218000B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F63219B217600B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F65219B217600B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F67219B217600B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F69219B217600B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F6B219B217600B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F6D219B217600B54BAA /* libnanopb.a in Frameworks */,
+				9F376F6F219B217600B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B71B5D1BE400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */,
@@ -3837,6 +4085,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F2C219B212800B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F2D219B212800B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F2E219B212800B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F1F219B212000B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F21219B212000B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F23219B212000B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F25219B212000B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F27219B212000B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F29219B212000B54BAA /* libnanopb.a in Frameworks */,
+				9F376F2B219B212000B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B21B5D1BBF00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF430192C86F200A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A75C31781BF4700CCF7DB /* libxml2.dylib in Frameworks */,
@@ -3885,6 +4143,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F3D219B214000B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F3E219B214000B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F3F219B214000B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F30219B213700B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F32219B213700B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F34219B213700B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F36219B213700B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F38219B213700B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F3A219B213700B54BAA /* libnanopb.a in Frameworks */,
+				9F376F3C219B213700B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B41B5D1BCE00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF432192C86FE00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76ED1781C0D800CCF7DB /* libxml2.dylib in Frameworks */,
@@ -3904,6 +4172,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FF8219B221D00B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FF9219B221D00B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FFA219B221D00B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376FEB219B221300B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376FED219B221300B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376FEF219B221300B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376FF1219B221300B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376FF3219B221300B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FF5219B221300B54BAA /* libnanopb.a in Frameworks */,
+				9F376FF7219B221300B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BF1B5D1C2500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8F8EB5FB1A93689000548F24 /* SystemConfiguration.framework in Frameworks */,
 				8F8EB5FC1A93689000548F24 /* libxml2.dylib in Frameworks */,
@@ -3923,6 +4201,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F81219B219400B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F82219B219400B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F83219B219400B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F74219B218D00B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F76219B218D00B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F78219B218D00B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F7A219B218D00B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F7C219B218D00B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F7E219B218D00B54BAA /* libnanopb.a in Frameworks */,
+				9F376F80219B218D00B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B81B5D1BEC00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F53D19501E6B006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F53E19501E6B006CD05A /* libxml2.dylib in Frameworks */,
@@ -3942,6 +4230,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F92219B21A800B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F93219B21A800B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F94219B21A800B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F85219B219F00B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F87219B219F00B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F89219B219F00B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F8B219B219F00B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F8D219B219F00B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F8F219B219F00B54BAA /* libnanopb.a in Frameworks */,
+				9F376F91219B219F00B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B91B5D1BF300EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F5DF19502224006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F5E019502224006CD05A /* libxml2.dylib in Frameworks */,
@@ -3961,6 +4259,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FA3219B21BB00B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FA4219B21BB00B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FA5219B21BB00B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F96219B21B100B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F98219B21B100B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F9A219B21B100B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F9C219B21B100B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F9E219B21B100B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FA0219B21B100B54BAA /* libnanopb.a in Frameworks */,
+				9F376FA2219B21B100B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BA1B5D1BFB00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F6811950228D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F6821950228D006CD05A /* libxml2.dylib in Frameworks */,
@@ -3980,6 +4288,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FB4219B21CD00B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FB5219B21CD00B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FB6219B21CD00B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376FA7219B21C600B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376FA9219B21C600B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376FAB219B21C600B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376FAD219B21C600B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376FAF219B21C600B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FB1219B21C600B54BAA /* libnanopb.a in Frameworks */,
+				9F376FB3219B21C600B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BB1B5D1C0400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F723195022BC006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F724195022BC006CD05A /* libxml2.dylib in Frameworks */,
@@ -3999,6 +4317,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FC5219B21E100B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FC6219B21E100B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FC7219B21E100B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376FB8219B21D800B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376FBA219B21D800B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376FBC219B21D800B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376FBE219B21D800B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376FC0219B21D800B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FC2219B21D800B54BAA /* libnanopb.a in Frameworks */,
+				9F376FC4219B21D800B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BC1B5D1C0D00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F7C51950230D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F7C61950230D006CD05A /* libxml2.dylib in Frameworks */,
@@ -4018,6 +4346,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FD6219B21F400B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FD7219B21F400B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FD8219B21F400B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376FC9219B21EC00B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376FCB219B21EC00B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376FCD219B21EC00B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376FCF219B21EC00B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376FD1219B21EC00B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FD3219B21EC00B54BAA /* libnanopb.a in Frameworks */,
+				9F376FD5219B21EC00B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BD1B5D1C1500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F8671950233A006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F8681950233A006CD05A /* libxml2.dylib in Frameworks */,
@@ -4037,6 +4375,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376FE7219B220600B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376FE8219B220600B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376FE9219B220600B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376FDA219B21FE00B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376FDC219B21FE00B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376FDE219B21FE00B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376FE0219B21FE00B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376FE2219B21FE00B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376FE4219B21FE00B54BAA /* libnanopb.a in Frameworks */,
+				9F376FE6219B21FE00B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482BE1B5D1C1E00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FAD97BF1A0CFD3600C3A5D1 /* SystemConfiguration.framework in Frameworks */,
 				8FAD97C01A0CFD3600C3A5D1 /* libxml2.dylib in Frameworks */,
@@ -4056,6 +4404,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F4E219B215A00B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F4F219B215A00B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F50219B215A00B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F41219B215300B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F43219B215300B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F45219B215300B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F47219B215300B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F49219B215300B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F4B219B215300B54BAA /* libnanopb.a in Frameworks */,
+				9F376F4D219B215300B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B51B5D1BD500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD610BD190916EA009E2358 /* libxml2.dylib in Frameworks */,
@@ -4075,6 +4433,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F5F219B216C00B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F60219B216C00B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F61219B216C00B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F52219B216400B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F54219B216400B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F56219B216400B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F58219B216400B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F5A219B216400B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F5C219B216400B54BAA /* libnanopb.a in Frameworks */,
+				9F376F5E219B216400B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B61B5D1BDD00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD61159190916EF009E2358 /* libxml2.dylib in Frameworks */,
@@ -4094,6 +4462,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F376F1B219B211400B54BAA /* NotificationCenter.framework in Frameworks */,
+				9F376F1C219B211400B54BAA /* UserNotifications.framework in Frameworks */,
+				9F376F1D219B211400B54BAA /* UserNotificationsUI.framework in Frameworks */,
+				9F376F0E219B20FB00B54BAA /* libFirebaseCore.a in Frameworks */,
+				9F376F10219B20FB00B54BAA /* libFirebaseDatabase.a in Frameworks */,
+				9F376F12219B20FB00B54BAA /* libFirebaseMessaging.a in Frameworks */,
+				9F376F14219B20FB00B54BAA /* libGoogleUtilities.a in Frameworks */,
+				9F376F16219B20FB00B54BAA /* libleveldb-library.a in Frameworks */,
+				9F376F18219B20FB00B54BAA /* libnanopb.a in Frameworks */,
+				9F376F1A219B20FB00B54BAA /* libProtobuf.a in Frameworks */,
 				8F4482B01B5D1BAA00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42E192C813100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2316CA6631007382EE /* libxml2.dylib in Frameworks */,
@@ -4590,6 +4968,104 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F376FEA219B221300B54BAA /* libFirebaseCore.a */,
+				9F376FEC219B221300B54BAA /* libFirebaseDatabase.a */,
+				9F376FEE219B221300B54BAA /* libFirebaseMessaging.a */,
+				9F376FF0219B221300B54BAA /* libGoogleUtilities.a */,
+				9F376FF2219B221300B54BAA /* libleveldb-library.a */,
+				9F376FF4219B221300B54BAA /* libnanopb.a */,
+				9F376FF6219B221300B54BAA /* libProtobuf.a */,
+				9F376FD9219B21FE00B54BAA /* libFirebaseCore.a */,
+				9F376FDB219B21FE00B54BAA /* libFirebaseDatabase.a */,
+				9F376FDD219B21FE00B54BAA /* libFirebaseMessaging.a */,
+				9F376FDF219B21FE00B54BAA /* libGoogleUtilities.a */,
+				9F376FE1219B21FE00B54BAA /* libleveldb-library.a */,
+				9F376FE3219B21FE00B54BAA /* libnanopb.a */,
+				9F376FE5219B21FE00B54BAA /* libProtobuf.a */,
+				9F376FC8219B21EC00B54BAA /* libFirebaseCore.a */,
+				9F376FCA219B21EC00B54BAA /* libFirebaseDatabase.a */,
+				9F376FCC219B21EC00B54BAA /* libFirebaseMessaging.a */,
+				9F376FCE219B21EC00B54BAA /* libGoogleUtilities.a */,
+				9F376FD0219B21EC00B54BAA /* libleveldb-library.a */,
+				9F376FD2219B21EC00B54BAA /* libnanopb.a */,
+				9F376FD4219B21EC00B54BAA /* libProtobuf.a */,
+				9F376FB7219B21D800B54BAA /* libFirebaseCore.a */,
+				9F376FB9219B21D800B54BAA /* libFirebaseDatabase.a */,
+				9F376FBB219B21D800B54BAA /* libFirebaseMessaging.a */,
+				9F376FBD219B21D800B54BAA /* libGoogleUtilities.a */,
+				9F376FBF219B21D800B54BAA /* libleveldb-library.a */,
+				9F376FC1219B21D800B54BAA /* libnanopb.a */,
+				9F376FC3219B21D800B54BAA /* libProtobuf.a */,
+				9F376FA6219B21C600B54BAA /* libFirebaseCore.a */,
+				9F376FA8219B21C600B54BAA /* libFirebaseDatabase.a */,
+				9F376FAA219B21C600B54BAA /* libFirebaseMessaging.a */,
+				9F376FAC219B21C600B54BAA /* libGoogleUtilities.a */,
+				9F376FAE219B21C600B54BAA /* libleveldb-library.a */,
+				9F376FB0219B21C600B54BAA /* libnanopb.a */,
+				9F376FB2219B21C600B54BAA /* libProtobuf.a */,
+				9F376F95219B21B100B54BAA /* libFirebaseCore.a */,
+				9F376F97219B21B100B54BAA /* libFirebaseDatabase.a */,
+				9F376F99219B21B100B54BAA /* libFirebaseMessaging.a */,
+				9F376F9B219B21B100B54BAA /* libGoogleUtilities.a */,
+				9F376F9D219B21B100B54BAA /* libleveldb-library.a */,
+				9F376F9F219B21B100B54BAA /* libnanopb.a */,
+				9F376FA1219B21B100B54BAA /* libProtobuf.a */,
+				9F376F84219B219F00B54BAA /* libFirebaseCore.a */,
+				9F376F86219B219F00B54BAA /* libFirebaseDatabase.a */,
+				9F376F88219B219F00B54BAA /* libFirebaseMessaging.a */,
+				9F376F8A219B219F00B54BAA /* libGoogleUtilities.a */,
+				9F376F8C219B219F00B54BAA /* libleveldb-library.a */,
+				9F376F8E219B219F00B54BAA /* libnanopb.a */,
+				9F376F90219B219F00B54BAA /* libProtobuf.a */,
+				9F376F73219B218D00B54BAA /* libFirebaseCore.a */,
+				9F376F75219B218D00B54BAA /* libFirebaseDatabase.a */,
+				9F376F77219B218D00B54BAA /* libFirebaseMessaging.a */,
+				9F376F79219B218D00B54BAA /* libGoogleUtilities.a */,
+				9F376F7B219B218D00B54BAA /* libleveldb-library.a */,
+				9F376F7D219B218D00B54BAA /* libnanopb.a */,
+				9F376F7F219B218D00B54BAA /* libProtobuf.a */,
+				9F376F62219B217600B54BAA /* libFirebaseCore.a */,
+				9F376F64219B217600B54BAA /* libFirebaseDatabase.a */,
+				9F376F66219B217600B54BAA /* libFirebaseMessaging.a */,
+				9F376F68219B217600B54BAA /* libGoogleUtilities.a */,
+				9F376F6A219B217600B54BAA /* libleveldb-library.a */,
+				9F376F6C219B217600B54BAA /* libnanopb.a */,
+				9F376F6E219B217600B54BAA /* libProtobuf.a */,
+				9F376F51219B216400B54BAA /* libFirebaseCore.a */,
+				9F376F53219B216400B54BAA /* libFirebaseDatabase.a */,
+				9F376F55219B216400B54BAA /* libFirebaseMessaging.a */,
+				9F376F57219B216400B54BAA /* libGoogleUtilities.a */,
+				9F376F59219B216400B54BAA /* libleveldb-library.a */,
+				9F376F5B219B216400B54BAA /* libnanopb.a */,
+				9F376F5D219B216400B54BAA /* libProtobuf.a */,
+				9F376F40219B215300B54BAA /* libFirebaseCore.a */,
+				9F376F42219B215300B54BAA /* libFirebaseDatabase.a */,
+				9F376F44219B215300B54BAA /* libFirebaseMessaging.a */,
+				9F376F46219B215300B54BAA /* libGoogleUtilities.a */,
+				9F376F48219B215300B54BAA /* libleveldb-library.a */,
+				9F376F4A219B215300B54BAA /* libnanopb.a */,
+				9F376F4C219B215300B54BAA /* libProtobuf.a */,
+				9F376F2F219B213700B54BAA /* libFirebaseCore.a */,
+				9F376F31219B213700B54BAA /* libFirebaseDatabase.a */,
+				9F376F33219B213700B54BAA /* libFirebaseMessaging.a */,
+				9F376F35219B213700B54BAA /* libGoogleUtilities.a */,
+				9F376F37219B213700B54BAA /* libleveldb-library.a */,
+				9F376F39219B213700B54BAA /* libnanopb.a */,
+				9F376F3B219B213700B54BAA /* libProtobuf.a */,
+				9F376F1E219B212000B54BAA /* libFirebaseCore.a */,
+				9F376F20219B212000B54BAA /* libFirebaseDatabase.a */,
+				9F376F22219B212000B54BAA /* libFirebaseMessaging.a */,
+				9F376F24219B212000B54BAA /* libGoogleUtilities.a */,
+				9F376F26219B212000B54BAA /* libleveldb-library.a */,
+				9F376F28219B212000B54BAA /* libnanopb.a */,
+				9F376F2A219B212000B54BAA /* libProtobuf.a */,
+				9F376F0D219B20FB00B54BAA /* libFirebaseCore.a */,
+				9F376F0F219B20FB00B54BAA /* libFirebaseDatabase.a */,
+				9F376F11219B20FB00B54BAA /* libFirebaseMessaging.a */,
+				9F376F13219B20FB00B54BAA /* libGoogleUtilities.a */,
+				9F376F15219B20FB00B54BAA /* libleveldb-library.a */,
+				9F376F17219B20FB00B54BAA /* libnanopb.a */,
+				9F376F19219B20FB00B54BAA /* libProtobuf.a */,
 				9F741F3C2190508800DB66D8 /* Network.framework */,
 				9F741F3A2190507B00DB66D8 /* libProtobuf.a */,
 				9F741F2E2190507200DB66D8 /* libFirebaseCore.a */,
