@@ -9088,7 +9088,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
 				PROVISIONING_PROFILE = "";
@@ -9113,7 +9117,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ubwe";
 				PRODUCT_NAME = "BibApp UB WE";
 				PROVISIONING_PROFILE = "";
@@ -9206,7 +9214,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
 				PROVISIONING_PROFILE = "";
@@ -9230,7 +9242,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bls";
 				PRODUCT_NAME = "BibApp BLS";
 				PROVISIONING_PROFILE = "";
@@ -9264,10 +9280,7 @@
 					"-lxml2",
 					"$(inherited)",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"-lxml2",
-					"$(inherited)",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
@@ -9301,10 +9314,7 @@
 					"-lxml2",
 					"$(inherited)",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"-lxml2",
-					"$(inherited)",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.il";
 				PRODUCT_NAME = "BibApp IL";
 				PROVISIONING_PROFILE = "";
@@ -9330,7 +9340,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
 				PROVISIONING_PROFILE = "";
@@ -9354,7 +9368,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.hawk-hhg.zimt.bibapp";
 				PRODUCT_NAME = "BibApp HAWK";
 				PROVISIONING_PROFILE = "";
@@ -9380,7 +9398,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
 				PROVISIONING_PROFILE = "";
@@ -9406,7 +9428,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.aezb";
 				PRODUCT_NAME = "BibApp ÄZB";
 				PROVISIONING_PROFILE = "";
@@ -9431,7 +9457,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp DHGE";
 				PROVISIONING_PROFILE = "";
@@ -9456,7 +9486,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.bat";
 				PRODUCT_NAME = "BibApp DHGE";
 				PROVISIONING_PROFILE = "";
@@ -9482,7 +9516,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
@@ -9508,7 +9546,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.hfmwe";
 				PRODUCT_NAME = "BibApp HfM WE";
 				PROVISIONING_PROFILE = "";
@@ -9534,7 +9576,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
@@ -9560,7 +9606,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.ndh";
 				PRODUCT_NAME = "BibApp NDH";
 				PROVISIONING_PROFILE = "";
@@ -9585,7 +9635,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
 				PROVISIONING_PROFILE = "";
@@ -9610,7 +9664,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.fhe";
 				PRODUCT_NAME = "BibApp FHE";
 				PROVISIONING_PROFILE = "";
@@ -9636,7 +9694,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
@@ -9662,7 +9724,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.sm";
 				PRODUCT_NAME = "BibApp SM";
 				PROVISIONING_PROFILE = "";
@@ -9688,7 +9754,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
@@ -9714,7 +9784,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.effective-webwork.bibapp.ufb";
 				PRODUCT_NAME = "BibApp UFB";
 				PROVISIONING_PROFILE = "";
@@ -9739,7 +9813,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
@@ -9764,7 +9842,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(rfc1034identifier)de.effective-webwork.bibapp.tubs";
 				PRODUCT_NAME = "BibApp TU BS";
 				PROVISIONING_PROFILE = "";
@@ -9789,7 +9871,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
 				PROVISIONING_PROFILE = "";
@@ -9814,7 +9900,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.thulb";
 				PRODUCT_NAME = "BibApp ThULB";
 				PROVISIONING_PROFILE = "";
@@ -9839,7 +9929,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
@@ -9864,7 +9958,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.effective-webwork.bibapp.eahj";
 				PRODUCT_NAME = "BibApp EAH Jena";
 				PROVISIONING_PROFILE = "";
@@ -9932,6 +10030,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -9986,6 +10085,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -10007,7 +10107,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -10035,7 +10139,11 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				"OTHER_LDFLAGS[arch=*]" = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "${rfc1034identifier}de.leuphana.bibliothek.bibapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
