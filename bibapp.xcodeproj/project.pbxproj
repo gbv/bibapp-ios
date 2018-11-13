@@ -10011,8 +10011,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CF2D2A00A87C88196E83E6B /* Pods-BibApp HfM WE.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10044,8 +10044,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5644A64097001FD207528D68 /* Pods-BibApp HfM WE.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "HfM WE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HfM WE LaunchImage";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
