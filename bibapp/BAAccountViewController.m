@@ -284,7 +284,7 @@
             }
             
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:@"dd.mm.yyyy"];
+            [dateFormatter setDateFormat:@"dd.MM.yyyy"];
 
             NSArray *sortedLoan = [self.loan sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
                 NSDate *first =  [dateFormatter dateFromString:[(BAEntryWork*)a endtime]];
