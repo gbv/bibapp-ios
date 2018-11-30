@@ -16,7 +16,7 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-shm2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Shm2", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Shm2", @"Standard-Katalog", nil]];
-    self.currentBibFeedURL = @"";
+    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"https://www.hs-schmalkalden.de/hochschule/einrichtungen/bibliothek.html", @"Standard-Katalog", nil]];
     self.currentBibTintColor = [UIColor colorWithRed:0.211765F green:0.305882F blue:0.427451F alpha:1.0F];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
     [self.currentBibImprint setObject:@"Hochschule Schmalkalden\nCellarius Bibliothek\nBlechhammer, Haus I\n98574 Schmalkalden\nhttp://www.hs-schmalkalden.de/bibliothek\nTel.: 03683 6881785\nFax: 03683 6881923\nE-Mail: bibliothek@hs-schmalkalden.de" forKey:@"Anbieter"];
@@ -28,6 +28,7 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Shm2", @"Standard-Katalog", nil]];
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20", @"Standard-Katalog", nil]];
+    self.currentBibFeedURLIsWebsite = YES;
 }
 
 @end

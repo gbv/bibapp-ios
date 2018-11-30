@@ -7,7 +7,7 @@
 		<key>BibApp BLS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>29</integer>
 		</dict>
 		<key>BibApp Cobi.xcscheme</key>
 		<dict>
@@ -17,7 +17,7 @@
 		<key>BibApp DHGE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>37</integer>
 		</dict>
 		<key>BibApp EAH Jena.xcscheme</key>
 		<dict>
@@ -27,7 +27,7 @@
 		<key>BibApp FHE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>34</integer>
 		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
@@ -37,7 +37,7 @@
 		<key>BibApp HI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>26</integer>
 		</dict>
 		<key>BibApp HfM WE.xcscheme</key>
 		<dict>
@@ -52,12 +52,12 @@
 		<key>BibApp IL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>28</integer>
 		</dict>
 		<key>BibApp LG.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>27</integer>
 		</dict>
 		<key>BibApp NDH.xcscheme</key>
 		<dict>
@@ -67,12 +67,12 @@
 		<key>BibApp SM.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>38</integer>
+			<integer>42</integer>
 		</dict>
 		<key>BibApp TU BS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>42</integer>
+			<integer>38</integer>
 		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
