@@ -2459,7 +2459,6 @@
 		8FD10989217716E10050CAC3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		8FD1098A217716E10050CAC3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		8FD1098B217716E10050CAC3 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
-		8FD1099021771D830050CAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */; };
 		8FD463A516F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A616F9F3F700E935EC /* BATocCellPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD463A416F9F3F700E935EC /* BATocCellPad.xib */; };
 		8FD463A916F9F41600E935EC /* BATocCellPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD463A816F9F41600E935EC /* BATocCellPad.m */; };
@@ -3058,7 +3057,9 @@
 		9F376FF8219B221D00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F376FF9219B221D00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		9F376FFA219B221D00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
-		9F741F2D21904FCB00DB66D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */; };
+		9F41096D21E373EE00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */; };
+		9F41096F21E3741700D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096E21E3741600D97F58 /* GoogleService-Info.plist */; };
+		9F41097121E3742F00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41097021E3742F00D97F58 /* GoogleService-Info.plist */; };
 		9F741F2F2190507200DB66D8 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F2E2190507200DB66D8 /* libFirebaseCore.a */; };
 		9F741F312190507200DB66D8 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F302190507200DB66D8 /* libFirebaseDatabase.a */; };
 		9F741F332190507200DB66D8 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F322190507200DB66D8 /* libFirebaseMessaging.a */; };
@@ -3069,7 +3070,6 @@
 		9F741F3E2190509C00DB66D8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F741F3F2190509C00DB66D8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		9F741F402190509C00DB66D8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
-		9F94FF6921B1926C00424F0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F94FF6821B1926B00424F0C /* GoogleService-Info.plist */; };
 		B4213C0320FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0420FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0520FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
@@ -3677,7 +3677,6 @@
 		8FD10985217716CE0050CAC3 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD10987217716CE0050CAC3 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD1098C217716FE0050CAC3 /* BibApp IAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp IAI.entitlements"; sourceTree = "<group>"; };
-		8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FD463A416F9F3F700E935EC /* BATocCellPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BATocCellPad.xib; sourceTree = "<group>"; };
 		8FD463A716F9F40500E935EC /* BATocCellPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATocCellPad.h; sourceTree = "<group>"; };
 		8FD463A816F9F41600E935EC /* BATocCellPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATocCellPad.m; sourceTree = "<group>"; };
@@ -3918,7 +3917,9 @@
 		9F376FF2219B221300B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F376FF4219B221300B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F376FF6219B221300B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/SM/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F41096E21E3741600D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IAI/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F41097021E3742F00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/Cobi/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F741F2E2190507200DB66D8 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F302190507200DB66D8 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F322190507200DB66D8 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3927,7 +3928,6 @@
 		9F741F382190507200DB66D8 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F3A2190507B00DB66D8 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F3C2190508800DB66D8 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
-		9F94FF6821B1926B00424F0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F94FF6A21B1950B00424F0C /* BibApp SM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp SM.entitlements"; sourceTree = "<group>"; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
@@ -5290,9 +5290,9 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				9F94FF6821B1926B00424F0C /* GoogleService-Info.plist */,
-				9F741F2C21904FCB00DB66D8 /* GoogleService-Info.plist */,
-				8FD1098F21771D830050CAC3 /* GoogleService-Info.plist */,
+				9F41097021E3742F00D97F58 /* GoogleService-Info.plist */,
+				9F41096E21E3741600D97F58 /* GoogleService-Info.plist */,
+				9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */,
 				9F166135216619CC00C2EC84 /* GoogleService-Info.plist */,
 				9F166133216619C100C2EC84 /* GoogleService-Info.plist */,
 			);
@@ -5817,7 +5817,7 @@
 				8F07B1B01BFB72DB0012C325 /* menuIconInfo.png in Resources */,
 				8F07B1C01BFB72DB0012C325 /* IconLG.png in Resources */,
 				8F07B1C11BFB72DB0012C325 /* IconLG@2x.png in Resources */,
-				9F741F2D21904FCB00DB66D8 /* GoogleService-Info.plist in Resources */,
+				9F41097121E3742F00D97F58 /* GoogleService-Info.plist in Resources */,
 				8F07B1C21BFB72DB0012C325 /* bibapp~ipad.storyboard in Resources */,
 				8F07B1C31BFB72DB0012C325 /* transparentImage.png in Resources */,
 				8F07B1C41BFB72DB0012C325 /* BAAccountTableHeaderViewPad.xib in Resources */,
@@ -6054,7 +6054,7 @@
 				8F4A7F472029B78400CA6C0F /* menuIconInfo.png in Resources */,
 				8F4A7F572029B78400CA6C0F /* IconLG.png in Resources */,
 				8F4A7F582029B78400CA6C0F /* IconLG@2x.png in Resources */,
-				8FD1099021771D830050CAC3 /* GoogleService-Info.plist in Resources */,
+				9F41096F21E3741700D97F58 /* GoogleService-Info.plist in Resources */,
 				8F4A7F592029B78400CA6C0F /* bibapp~ipad.storyboard in Resources */,
 				8F4A7F5A2029B78400CA6C0F /* transparentImage.png in Resources */,
 				8F4A7F5B2029B78400CA6C0F /* BAAccountTableHeaderViewPad.xib in Resources */,
@@ -6775,7 +6775,7 @@
 				8FA8F7FD1950230D006CD05A /* Icon.png in Resources */,
 				8FA8F7FE1950230D006CD05A /* bibapp~ipad.storyboard in Resources */,
 				8FA8F7FF1950230D006CD05A /* transparentImage.png in Resources */,
-				9F94FF6921B1926C00424F0C /* GoogleService-Info.plist in Resources */,
+				9F41096D21E373EE00D97F58 /* GoogleService-Info.plist in Resources */,
 				8FA8F8001950230D006CD05A /* BAAccountTableHeaderViewPad.xib in Resources */,
 				8FA8F8011950230D006CD05A /* actionButton.png in Resources */,
 				8FA8F8021950230D006CD05A /* Buch_250_gradient.png in Resources */,

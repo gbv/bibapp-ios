@@ -29,6 +29,7 @@
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=EM111&amp;page=20", @"Standard-Katalog", nil]];
     self.currentBibFeedURLIsWebsite = YES;
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end
