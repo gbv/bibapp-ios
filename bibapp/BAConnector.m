@@ -141,8 +141,8 @@ static BAConnector *sharedConnector = nil;
       term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
       term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
       term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-      //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
        
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
@@ -184,7 +184,7 @@ static BAConnector *sharedConnector = nil;
       term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
       term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
       term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://sru.gbv.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.mak=ac*+or+pica.mak=bc*+or+pica.mak=ec*+or+pica.mak=gc*+or+pica.mak=kc*+or+pica.mak=mc*+or+pica.mak=oc*+or+pica.mak=sc*+or+pica.mak=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
       
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
@@ -198,7 +198,7 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:[NSString stringWithFormat:@"getUNAPIDetails%@", [format capitalizedString]]];
    //if ([self checkNetworkReachability]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://unapi.k10plus.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
       
       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
@@ -772,7 +772,7 @@ static BAConnector *sharedConnector = nil;
 
 - (NSString *)loadISBDWithPPN:(NSString *)ppn
 {
-   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://unapi.gbv.de/?id=gvk:ppn:%@&format=isbd", ppn]];
+   NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://unapi.k10plus.de/?id=gvk:ppn:%@&format=isbd", ppn]];
    NSData *isbdData = [NSData dataWithContentsOfURL:url];
    return [[NSString alloc] initWithData:isbdData encoding:NSUTF8StringEncoding];
 }
