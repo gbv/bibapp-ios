@@ -3933,6 +3933,7 @@
 		9F741F3A2190507B00DB66D8 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F3C2190508800DB66D8 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		9F94FF6A21B1950B00424F0C /* BibApp SM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp SM.entitlements"; sourceTree = "<group>"; };
+		9FAFF214224CD5400012A93F /* BibApp Cobi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp Cobi.entitlements"; sourceTree = "<group>"; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
@@ -4935,6 +4936,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				9FAFF214224CD5400012A93F /* BibApp Cobi.entitlements */,
 				9F20A84221E3A14600E93917 /* BibApp IL.entitlements */,
 				9F20A84121E3971D00E93917 /* BibApp HfM WE.entitlements */,
 				9F94FF6A21B1950B00424F0C /* BibApp SM.entitlements */,
@@ -5665,6 +5667,11 @@
 				TargetAttributes = {
 					8F07B12C1BFB72DB0012C325 = {
 						DevelopmentTeam = DG2S2C98D2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8F114037167F217000E033F6 = {
 						DevelopmentTeam = VW9E5RXV2N;
@@ -9444,6 +9451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -9477,6 +9485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
