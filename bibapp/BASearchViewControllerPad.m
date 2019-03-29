@@ -143,6 +143,9 @@
     
     [self setInitialSearchLocal:YES];
     [self setInitialSearch:YES];
+    
+    self.picaParameters = [NSArray arrayWithObjects:@"pica.bbg", @"pica.mak", nil];
+    self.currentPicaParameterIndex = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -492,7 +495,8 @@
 - (void)continueSearchFor:(NSString *)catalog{
     if ([catalog isEqualToString:@"local"]) {
         BAConnector *connector = [BAConnector generateConnector];
-        [connector searchLocalFor:self.searchBar.text WithFirst:[self.booksLocal count]+1 WithDelegate:self];
+        //[connector searchLocalFor:self.searchBar.text WithFirst:[self.booksLocal count]+1 WithDelegate:self];
+        [connector searchLocalFor:self.searchBar.text WithPicaParameter:[self.picaParameters objectAtIndex:self.currentPicaParameterIndex] WithFirst:[self.booksLocal count]+1 WithDelegate:self];
     } else if ([catalog isEqualToString:@"nonLocal"]) {
         BAConnector *connector = [BAConnector generateConnector];
         [connector searchCentralFor:self.searchBar.text WithFirst:[self.booksGVK count]+1 WithDelegate:self];
@@ -512,7 +516,8 @@
         self.initialSearchLocal = YES;
         self.booksLocal = [[NSMutableArray alloc] init];
         BAConnector *connector = [BAConnector generateConnector];
-        [connector searchLocalFor:self.searchBar.text WithFirst:1 WithDelegate:self];
+        //[connector searchLocalFor:self.searchBar.text WithFirst:1 WithDelegate:self];
+        [connector searchLocalFor:self.searchBar.text WithPicaParameter:[self.picaParameters objectAtIndex:self.currentPicaParameterIndex] WithFirst:1 WithDelegate:self];
     } else {
         self.lastSearch = self.searchBar.text;
         self.searchCount = 0;
@@ -532,6 +537,8 @@
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
 {
     if ([command isEqualToString:@"searchLocal"] || [command isEqualToString:@"searchCentral"]) {
+        BOOL retrySearchWithNextParameter = NO;
+        
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
         
         NSMutableArray *tempArray = [[NSMutableArray alloc] init];
@@ -548,6 +555,14 @@
             } else if ([command isEqualToString:@"searchCentral"]) {
                 self.searchCount = [[set stringValue] integerValue];
             }
+        } else {
+            if (!self.searchedLocal) {
+                if ([self.picaParameters count] > (self.currentPicaParameterIndex+1)) {
+                    retrySearchWithNextParameter = YES;
+                    self.currentPicaParameterIndex++;
+                    [self searchBarSearchButtonClicked];
+                }
+            }
         }
         
         /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
@@ -557,281 +572,284 @@
             [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:@"GVK Suche (%d Treffer)", self.searchCount]];
             self.searched = YES;
         }*/
-        if ([command isEqualToString:@"searchLocal"]) {
-            if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
-            }
-            self.searchedLocal = YES;
-        } else if ([command isEqualToString:@"searchCentral"]) {
-            if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
-                [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
-            }
-            self.searched = YES;
-        }
         
-        NSArray *shorttitles = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:records/zs:record" error:nil];
-        
-        for (GDataXMLElement *shorttitle in shorttitles) {
+        if (!retrySearchWithNextParameter) {
+            if ([command isEqualToString:@"searchLocal"]) {
+                if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                    [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"Lokale Suche (%ld Treffer)"), (long)self.searchCountLocal]];
+                }
+                self.searchedLocal = YES;
+            } else if ([command isEqualToString:@"searchCentral"]) {
+                if ([self.searchSegmentedController selectedSegmentIndex] == 1) {
+                    [self.navigationBarSearch.topItem setTitle:[[NSString alloc] initWithFormat:BALocalizedString(@"GVK Suche (%ld Treffer)"), (long)self.searchCount]];
+                }
+                self.searched = YES;
+            }
             
-            GDataXMLElement *shortTitleNew = (GDataXMLElement *)[[(GDataXMLElement *)[[shorttitle elementsForName:@"zs:recordData"] objectAtIndex:0] elementsForName:@"mods"] objectAtIndex:0];
+            NSArray *shorttitles = [parser nodesForXPath:@"/zs:searchRetrieveResponse/zs:records/zs:record" error:nil];
             
-            BAEntryWork *tempEntry = [[BAEntryWork alloc] init];
-            [tempEntry setTocArray:[[NSMutableArray alloc] init]];
-            
-            GDataXMLElement *recordInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"recordInfo"] objectAtIndex:0];
-            
-            // PPN "CIANDO731060903" -> "731060903"
-            NSString *tempPpn = [(GDataXMLElement *)[[recordInfo elementsForName:@"recordIdentifier"] objectAtIndex:0] stringValue];
-            tempPpn = [tempPpn stringByReplacingOccurrencesOfString:@"CIANDO" withString:@""];
-            [tempEntry setPpn:tempPpn];
-            
-            [tempEntry setIsbn:@""];
-            GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[shortTitleNew elementsForName:@"identifier"] objectAtIndex:0];
-            if (tempISBNElement != nil) {
-                NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
-                if (rangeValue.length > 0) {
-                    NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:nil];
-                    NSArray *resultsISBN = [regexLine matchesInString:[tempISBNElement stringValue] options:0 range:NSMakeRange(0, [[tempISBNElement stringValue] length])];
-                    if ([resultsISBN count] > 0) {
-                        for (NSTextCheckingResult *match in resultsISBN) {
-                            NSRange matchRange = [match rangeAtIndex:1];
-                            [tempEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+            for (GDataXMLElement *shorttitle in shorttitles) {
+                
+                GDataXMLElement *shortTitleNew = (GDataXMLElement *)[[(GDataXMLElement *)[[shorttitle elementsForName:@"zs:recordData"] objectAtIndex:0] elementsForName:@"mods"] objectAtIndex:0];
+                
+                BAEntryWork *tempEntry = [[BAEntryWork alloc] init];
+                [tempEntry setTocArray:[[NSMutableArray alloc] init]];
+                
+                GDataXMLElement *recordInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"recordInfo"] objectAtIndex:0];
+                
+                // PPN "CIANDO731060903" -> "731060903"
+                NSString *tempPpn = [(GDataXMLElement *)[[recordInfo elementsForName:@"recordIdentifier"] objectAtIndex:0] stringValue];
+                tempPpn = [tempPpn stringByReplacingOccurrencesOfString:@"CIANDO" withString:@""];
+                [tempEntry setPpn:tempPpn];
+                
+                [tempEntry setIsbn:@""];
+                GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[shortTitleNew elementsForName:@"identifier"] objectAtIndex:0];
+                if (tempISBNElement != nil) {
+                    NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
+                    if (rangeValue.length > 0) {
+                        NSRegularExpression *regexLine = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:nil];
+                        NSArray *resultsISBN = [regexLine matchesInString:[tempISBNElement stringValue] options:0 range:NSMakeRange(0, [[tempISBNElement stringValue] length])];
+                        if ([resultsISBN count] > 0) {
+                            for (NSTextCheckingResult *match in resultsISBN) {
+                                NSRange matchRange = [match rangeAtIndex:1];
+                                [tempEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+                            }
                         }
                     }
                 }
+                
+                [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
+                [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
+                
+                /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                    [tempEntry setLocal:YES];
+                } else {
+                    [tempEntry setLocal:NO];
+                }*/
+                if ([command isEqualToString:@"searchLocal"]) {
+                    [tempEntry setLocal:YES];
+                } else if ([command isEqualToString:@"searchCentral"]) {
+                    [tempEntry setLocal:NO];
+                }
+                
+                GDataXMLElement *titleInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"titleInfo"] objectAtIndex:0];
+                NSString *tempTitleNonSort = [(GDataXMLElement *)[[titleInfo elementsForName:@"nonSort"] objectAtIndex:0] stringValue];
+                if (tempTitleNonSort == nil) {
+                    tempTitleNonSort = @"";
+                }
+                
+                NSString *tempTitle = [(GDataXMLElement *)[[titleInfo elementsForName:@"title"] objectAtIndex:0] stringValue];
+                [tempEntry setTitle:[[NSString alloc] initWithFormat:@"%@%@", tempTitleNonSort, tempTitle]];
+                
+                NSMutableString *tempCombinedSubTitle = [[NSMutableString alloc] initWithString:@""];
+                
+                NSString *tempTitlePartNumber = [(GDataXMLElement *)[[titleInfo elementsForName:@"partNumber"] objectAtIndex:0] stringValue];
+                if (tempTitlePartNumber != nil) {
+                    [tempEntry setPartNumber:tempTitlePartNumber];
+                    [tempCombinedSubTitle appendString:tempTitlePartNumber];
+                }
+                
+                NSString *tempTitlePartName = [(GDataXMLElement *)[[titleInfo elementsForName:@"partName"] objectAtIndex:0] stringValue];
+                if (tempTitlePartName != nil) {
+                    [tempEntry setPartName:tempTitlePartName];
+                    if (![tempCombinedSubTitle isEqualToString:@""]) {
+                        [tempCombinedSubTitle appendString:@"; "];
+                    }
+                    [tempCombinedSubTitle appendString:tempTitlePartName];
+                }
+                
+                NSString *tempSubTitle = [(GDataXMLElement *)[[titleInfo elementsForName:@"subTitle"] objectAtIndex:0] stringValue];
+                if (tempSubTitle != nil) {
+                    if (![tempCombinedSubTitle isEqualToString:@""]) {
+                        [tempCombinedSubTitle appendString:@"; "];
+                    }
+                    [tempCombinedSubTitle appendString:tempSubTitle];
+                }
+                
+                [tempEntry setSubtitle:tempCombinedSubTitle];
+                
+                NSArray *names = [shortTitleNew elementsForName:@"name"];
+                if ([names count] > 0) {
+                    NSMutableString *authorString = [[NSMutableString alloc] init];
+                    BOOL first = YES;
+                    for (GDataXMLElement *tempNamesElement in names) {
+                        NSArray *tempNames = [tempNamesElement elementsForName:@"namePart"];
+                        GDataXMLElement *family;
+                        GDataXMLElement *given;
+                        for (GDataXMLElement *namePart in tempNames) {
+                            if ([[[namePart attributeForName:@"type"] stringValue] isEqualToString:@"family"]) {
+                                family = namePart;
+                            } else if ([[[namePart attributeForName:@"type"] stringValue] isEqualToString:@"given"]) {
+                                given = namePart;
+                            }
+                        }
+                        if (!first) {
+                            if (![authorString isEqualToString:@""]) {
+                                [authorString appendString:@", "];
+                            }
+                        } else {
+                            first = NO;
+                        }
+                        if (given != nil) {
+                            [authorString appendFormat:@"%@", given.stringValue];
+                        }
+                        if (family != nil) {
+                            [authorString appendFormat:@" %@", family.stringValue];
+                        }
+                    }
+                    [tempEntry setAuthor:authorString];
+                }
+                
+                // Get additional information to select the correct icon
+                
+                GDataXMLElement *physicalDescription = (GDataXMLElement *)[[shortTitleNew elementsForName:@"physicalDescription"] objectAtIndex:0];
+                if (physicalDescription != nil) {
+                    NSArray *physicalDescriptionForms = [physicalDescription elementsForName:@"form"];
+                    for (GDataXMLElement *physicalDescriptionForm in physicalDescriptionForms) {
+                        NSRange rangeValue = [[[physicalDescriptionForm attributeForName:@"authority"] stringValue] rangeOfString:@"marc" options:NSCaseInsensitiveSearch];
+                        if (rangeValue.length > 0) {
+                            if ([[physicalDescriptionForm stringValue] isEqualToString:@"microform"]) {
+                                [tempEntry setMediaIconPhysicalDescriptionForm:@"microform"];
+                            } else if ([[physicalDescriptionForm stringValue] isEqualToString:@"remote"]) {
+                                [tempEntry setMediaIconPhysicalDescriptionForm:@"remote"];
+                            }
+                        }
+                    }
+                    NSArray *physicalDescriptionExtents = [physicalDescription elementsForName:@"extent"];
+                    for (GDataXMLElement *physicalDescriptionExtent in physicalDescriptionExtents) {
+                        NSRange rangeValue = [[physicalDescriptionExtent stringValue] rangeOfString:@"Mikrof" options:NSCaseInsensitiveSearch];
+                        if (rangeValue.length > 0) {
+                            [tempEntry setMediaIconPhysicalDescriptionForm:@"microform"];
+                        }
+                    }
+                }
+                
+                GDataXMLElement *typeOfResource = (GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0];
+                if (typeOfResource != nil) {
+                    NSRange rangeValueTypeOfResource = [[[typeOfResource attributeForName:@"manuscript"] stringValue] rangeOfString:@"yes" options:NSCaseInsensitiveSearch];
+                    if (rangeValueTypeOfResource.length > 0) {
+                        [tempEntry setMediaIconTypeOfResourceManuscript:@"yes"];
+                    }
+                }
+                
+                GDataXMLElement *relatedItem = (GDataXMLElement *)[[shortTitleNew elementsForName:@"relatedItem"] objectAtIndex:0];
+                if (relatedItem != nil) {
+                    NSRange rangeValueType = [[[relatedItem attributeForName:@"type"] stringValue] rangeOfString:@"host" options:NSCaseInsensitiveSearch];
+                    if (rangeValueType.length > 0) {
+                        [tempEntry setMediaIconRelatedItemType:@"host"];
+                        NSRange rangeValueDisplayLabel = [[[relatedItem attributeForName:@"displayLabel"] stringValue] rangeOfString:@"In: " options:NSCaseInsensitiveSearch];
+                        if (rangeValueDisplayLabel.length > 0) {
+                            [tempEntry setMediaIconDisplayLabel:@"In"];
+                        }
+                    }
+                }
+                
+                GDataXMLElement *originInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"originInfo"] objectAtIndex:0];
+                if (originInfo != nil) {
+                    GDataXMLElement *issuance = (GDataXMLElement *)[[originInfo elementsForName:@"issuance"] objectAtIndex:0];
+                    if (issuance != nil) {
+                        [tempEntry setMediaIconOriginInfoIssuance:[issuance stringValue]];
+                    }
+                    GDataXMLElement *dateIssued = (GDataXMLElement *)[[originInfo elementsForName:@"dateIssued"] objectAtIndex:0];
+                    if (dateIssued != nil) {
+                       [tempEntry setYear:[dateIssued stringValue]];
+                    }
+                }
+                
+                // Get link for online location
+                NSArray *onlineLocations = [shortTitleNew elementsForName:@"location"];
+                for (GDataXMLElement *onlineLocation in onlineLocations) {
+                   if (onlineLocation != nil) {
+                      GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
+                      if (onlineLocationUrl != nil) {
+                         NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
+                         if (rangeValueType.length > 0) {
+                            [tempEntry setOnlineLocation:[onlineLocationUrl stringValue]];
+                         }
+                      }
+                   }
+               }
+               
+                // Get Link table of contents
+                GDataXMLElement *relatedItemToc = (GDataXMLElement *)[[shortTitleNew elementsForName:@"relatedItem"] objectAtIndex:0];
+                if (relatedItemToc != nil) {
+                    NSArray *locationsToc = [relatedItemToc elementsForName:@"location"];
+                    if (locationsToc != nil) {
+                        for (GDataXMLElement *locationToc in locationsToc) {
+                            GDataXMLElement *urlToc = (GDataXMLElement *)[[locationToc elementsForName:@"url"] objectAtIndex:0];
+                            if (urlToc != nil) {
+                                [tempEntry.tocArray addObject:[urlToc stringValue]];
+                            }
+                        }
+                    }
+                }
+                
+                [tempArray addObject:tempEntry];
             }
-            
-            [tempEntry setMatstring:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
-            [tempEntry setMediaIconTypeOfResource:[(GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0] stringValue]];
-            
             /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-                [tempEntry setLocal:YES];
+                [self.booksLocal addObjectsFromArray:tempArray];
+                if ([tempArray count] > 0) {
+                    //self.currentEntryLocal = [tempArray objectAtIndex:0];
+                    //self.positionLocal = 0;
+                }
             } else {
-                [tempEntry setLocal:NO];
+                [self.booksGVK addObjectsFromArray:tempArray];
+                if ([tempArray count] > 0) {
+                    //self.currentEntry = [tempArray objectAtIndex:0];
+                    //self.position = 0;
+                }
             }*/
             if ([command isEqualToString:@"searchLocal"]) {
-                [tempEntry setLocal:YES];
+                [self.booksLocal addObjectsFromArray:tempArray];
             } else if ([command isEqualToString:@"searchCentral"]) {
-                [tempEntry setLocal:NO];
+                [self.booksGVK addObjectsFromArray:tempArray];
             }
+            [self.searchTableView reloadData];
             
-            GDataXMLElement *titleInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"titleInfo"] objectAtIndex:0];
-            NSString *tempTitleNonSort = [(GDataXMLElement *)[[titleInfo elementsForName:@"nonSort"] objectAtIndex:0] stringValue];
-            if (tempTitleNonSort == nil) {
-                tempTitleNonSort = @"";
-            }
-            
-            NSString *tempTitle = [(GDataXMLElement *)[[titleInfo elementsForName:@"title"] objectAtIndex:0] stringValue];
-            [tempEntry setTitle:[[NSString alloc] initWithFormat:@"%@%@", tempTitleNonSort, tempTitle]];
-            
-            NSMutableString *tempCombinedSubTitle = [[NSMutableString alloc] initWithString:@""];
-            
-            NSString *tempTitlePartNumber = [(GDataXMLElement *)[[titleInfo elementsForName:@"partNumber"] objectAtIndex:0] stringValue];
-            if (tempTitlePartNumber != nil) {
-                [tempEntry setPartNumber:tempTitlePartNumber];
-                [tempCombinedSubTitle appendString:tempTitlePartNumber];
-            }
-            
-            NSString *tempTitlePartName = [(GDataXMLElement *)[[titleInfo elementsForName:@"partName"] objectAtIndex:0] stringValue];
-            if (tempTitlePartName != nil) {
-                [tempEntry setPartName:tempTitlePartName];
-                if (![tempCombinedSubTitle isEqualToString:@""]) {
-                    [tempCombinedSubTitle appendString:@"; "];
-                }
-                [tempCombinedSubTitle appendString:tempTitlePartName];
-            }
-            
-            NSString *tempSubTitle = [(GDataXMLElement *)[[titleInfo elementsForName:@"subTitle"] objectAtIndex:0] stringValue];
-            if (tempSubTitle != nil) {
-                if (![tempCombinedSubTitle isEqualToString:@""]) {
-                    [tempCombinedSubTitle appendString:@"; "];
-                }
-                [tempCombinedSubTitle appendString:tempSubTitle];
-            }
-            
-            [tempEntry setSubtitle:tempCombinedSubTitle];
-            
-            NSArray *names = [shortTitleNew elementsForName:@"name"];
-            if ([names count] > 0) {
-                NSMutableString *authorString = [[NSMutableString alloc] init];
-                BOOL first = YES;
-                for (GDataXMLElement *tempNamesElement in names) {
-                    NSArray *tempNames = [tempNamesElement elementsForName:@"namePart"];
-                    GDataXMLElement *family;
-                    GDataXMLElement *given;
-                    for (GDataXMLElement *namePart in tempNames) {
-                        if ([[[namePart attributeForName:@"type"] stringValue] isEqualToString:@"family"]) {
-                            family = namePart;
-                        } else if ([[[namePart attributeForName:@"type"] stringValue] isEqualToString:@"given"]) {
-                            given = namePart;
-                        }
+            /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
+                if(self.initialSearchLocal){
+                    if ([tempArray count] > 0) {
+                        self.currentEntryLocal = [tempArray objectAtIndex:0];
+                        self.positionLocal = 0;
                     }
-                    if (!first) {
-                        if (![authorString isEqualToString:@""]) {
-                            [authorString appendString:@", "];
-                        }
-                    } else {
-                        first = NO;
-                    }
-                    if (given != nil) {
-                        [authorString appendFormat:@"%@", given.stringValue];
-                    }
-                    if (family != nil) {
-                        [authorString appendFormat:@" %@", family.stringValue];
-                    }
+                    [self showDetailView];
+                    [self setInitialSearchLocal:NO];
                 }
-                [tempEntry setAuthor:authorString];
+                [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+            } else {
+                if(self.initialSearch){
+                    if ([tempArray count] > 0) {
+                        self.currentEntry = [tempArray objectAtIndex:0];
+                        self.position = 0;
+                    }
+                    [self showDetailView];
+                    [self setInitialSearch:NO];
+                }
+                [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+            }*/
+            if ([command isEqualToString:@"searchLocal"]) {
+                if(self.initialSearchLocal){
+                    if ([tempArray count] > 0) {
+                        self.currentEntryLocal = [tempArray objectAtIndex:0];
+                        self.positionLocal = 0;
+                    }
+                    [self showDetailView];
+                    [self setInitialSearchLocal:NO];
+                }
+                [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+            } else if ([command isEqualToString:@"searchCentral"]) {
+                if(self.initialSearch){
+                    if ([tempArray count] > 0) {
+                        self.currentEntry = [tempArray objectAtIndex:0];
+                        self.position = 0;
+                    }
+                    [self showDetailView];
+                    [self setInitialSearch:NO];
+                }
+                [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
             }
-            
-            // Get additional information to select the correct icon
-            
-            GDataXMLElement *physicalDescription = (GDataXMLElement *)[[shortTitleNew elementsForName:@"physicalDescription"] objectAtIndex:0];
-            if (physicalDescription != nil) {
-                NSArray *physicalDescriptionForms = [physicalDescription elementsForName:@"form"];
-                for (GDataXMLElement *physicalDescriptionForm in physicalDescriptionForms) {
-                    NSRange rangeValue = [[[physicalDescriptionForm attributeForName:@"authority"] stringValue] rangeOfString:@"marc" options:NSCaseInsensitiveSearch];
-                    if (rangeValue.length > 0) {
-                        if ([[physicalDescriptionForm stringValue] isEqualToString:@"microform"]) {
-                            [tempEntry setMediaIconPhysicalDescriptionForm:@"microform"];
-                        } else if ([[physicalDescriptionForm stringValue] isEqualToString:@"remote"]) {
-                            [tempEntry setMediaIconPhysicalDescriptionForm:@"remote"];
-                        }
-                    }
-                }
-                NSArray *physicalDescriptionExtents = [physicalDescription elementsForName:@"extent"];
-                for (GDataXMLElement *physicalDescriptionExtent in physicalDescriptionExtents) {
-                    NSRange rangeValue = [[physicalDescriptionExtent stringValue] rangeOfString:@"Mikrof" options:NSCaseInsensitiveSearch];
-                    if (rangeValue.length > 0) {
-                        [tempEntry setMediaIconPhysicalDescriptionForm:@"microform"];
-                    }
-                }
-            }
-            
-            GDataXMLElement *typeOfResource = (GDataXMLElement *)[[shortTitleNew elementsForName:@"typeOfResource"] objectAtIndex:0];
-            if (typeOfResource != nil) {
-                NSRange rangeValueTypeOfResource = [[[typeOfResource attributeForName:@"manuscript"] stringValue] rangeOfString:@"yes" options:NSCaseInsensitiveSearch];
-                if (rangeValueTypeOfResource.length > 0) {
-                    [tempEntry setMediaIconTypeOfResourceManuscript:@"yes"];
-                }
-            }
-            
-            GDataXMLElement *relatedItem = (GDataXMLElement *)[[shortTitleNew elementsForName:@"relatedItem"] objectAtIndex:0];
-            if (relatedItem != nil) {
-                NSRange rangeValueType = [[[relatedItem attributeForName:@"type"] stringValue] rangeOfString:@"host" options:NSCaseInsensitiveSearch];
-                if (rangeValueType.length > 0) {
-                    [tempEntry setMediaIconRelatedItemType:@"host"];
-                    NSRange rangeValueDisplayLabel = [[[relatedItem attributeForName:@"displayLabel"] stringValue] rangeOfString:@"In: " options:NSCaseInsensitiveSearch];
-                    if (rangeValueDisplayLabel.length > 0) {
-                        [tempEntry setMediaIconDisplayLabel:@"In"];
-                    }
-                }
-            }
-            
-            GDataXMLElement *originInfo = (GDataXMLElement *)[[shortTitleNew elementsForName:@"originInfo"] objectAtIndex:0];
-            if (originInfo != nil) {
-                GDataXMLElement *issuance = (GDataXMLElement *)[[originInfo elementsForName:@"issuance"] objectAtIndex:0];
-                if (issuance != nil) {
-                    [tempEntry setMediaIconOriginInfoIssuance:[issuance stringValue]];
-                }
-                GDataXMLElement *dateIssued = (GDataXMLElement *)[[originInfo elementsForName:@"dateIssued"] objectAtIndex:0];
-                if (dateIssued != nil) {
-                   [tempEntry setYear:[dateIssued stringValue]];
-                }
-            }
-            
-            // Get link for online location
-            NSArray *onlineLocations = [shortTitleNew elementsForName:@"location"];
-            for (GDataXMLElement *onlineLocation in onlineLocations) {
-               if (onlineLocation != nil) {
-                  GDataXMLElement *onlineLocationUrl = (GDataXMLElement *)[[onlineLocation elementsForName:@"url"] objectAtIndex:0];
-                  if (onlineLocationUrl != nil) {
-                     NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
-                     if (rangeValueType.length > 0) {
-                        [tempEntry setOnlineLocation:[onlineLocationUrl stringValue]];
-                     }
-                  }
-               }
-           }
-           
-            // Get Link table of contents
-            GDataXMLElement *relatedItemToc = (GDataXMLElement *)[[shortTitleNew elementsForName:@"relatedItem"] objectAtIndex:0];
-            if (relatedItemToc != nil) {
-                NSArray *locationsToc = [relatedItemToc elementsForName:@"location"];
-                if (locationsToc != nil) {
-                    for (GDataXMLElement *locationToc in locationsToc) {
-                        GDataXMLElement *urlToc = (GDataXMLElement *)[[locationToc elementsForName:@"url"] objectAtIndex:0];
-                        if (urlToc != nil) {
-                            [tempEntry.tocArray addObject:[urlToc stringValue]];
-                        }
-                    }
-                }
-            }
-            
-            [tempArray addObject:tempEntry];
+            self.searchTableView.tableFooterView = nil;
         }
-        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            [self.booksLocal addObjectsFromArray:tempArray];
-            if ([tempArray count] > 0) {
-                //self.currentEntryLocal = [tempArray objectAtIndex:0];
-                //self.positionLocal = 0;
-            }
-        } else {
-            [self.booksGVK addObjectsFromArray:tempArray];
-            if ([tempArray count] > 0) {
-                //self.currentEntry = [tempArray objectAtIndex:0];
-                //self.position = 0;
-            }
-        }*/
-        if ([command isEqualToString:@"searchLocal"]) {
-            [self.booksLocal addObjectsFromArray:tempArray];
-        } else if ([command isEqualToString:@"searchCentral"]) {
-            [self.booksGVK addObjectsFromArray:tempArray];
-        }
-        [self.searchTableView reloadData];
-        
-        /*if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            if(self.initialSearchLocal){
-                if ([tempArray count] > 0) {
-                    self.currentEntryLocal = [tempArray objectAtIndex:0];
-                    self.positionLocal = 0;
-                }
-                [self showDetailView];
-                [self setInitialSearchLocal:NO];
-            }
-            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-        } else {
-            if(self.initialSearch){
-                if ([tempArray count] > 0) {
-                    self.currentEntry = [tempArray objectAtIndex:0];
-                    self.position = 0;
-                }
-                [self showDetailView];
-                [self setInitialSearch:NO];
-            }
-            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-        }*/
-        if ([command isEqualToString:@"searchLocal"]) {
-            if(self.initialSearchLocal){
-                if ([tempArray count] > 0) {
-                    self.currentEntryLocal = [tempArray objectAtIndex:0];
-                    self.positionLocal = 0;
-                }
-                [self showDetailView];
-                [self setInitialSearchLocal:NO];
-            }
-            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.positionLocal inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-        } else if ([command isEqualToString:@"searchCentral"]) {
-            if(self.initialSearch){
-                if ([tempArray count] > 0) {
-                    self.currentEntry = [tempArray objectAtIndex:0];
-                    self.position = 0;
-                }
-                [self showDetailView];
-                [self setInitialSearch:NO];
-            }
-            [self.searchTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.position inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-        }
-        self.searchTableView.tableFooterView = nil;
     } else if ([command isEqualToString:@"getDetailsLocal"]) {
        if (!self.appDelegate.configuration.useDAIAParser) {
           [self.currentDocument setItems:[[NSMutableArray alloc] init]];

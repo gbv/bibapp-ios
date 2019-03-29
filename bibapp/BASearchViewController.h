@@ -33,6 +33,8 @@
 @property BOOL lastSearchNoResults;
 @property NSInteger searchCountLocal;
 @property NSInteger searchCount;
+@property (strong, nonatomic) NSArray *picaParameters;
+@property NSInteger currentPicaParameterIndex;
 
 - (void) continueSearchFor:(NSString *)catalog;
 - (void) continueSearch;

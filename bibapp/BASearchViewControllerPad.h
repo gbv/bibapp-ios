@@ -66,6 +66,8 @@
 @property BOOL didCheckBlockOrderTypes;
 @property BOOL blockOrderByTypes;
 @property long currentDaiaFamIndex;
+@property (strong, nonatomic) NSArray *picaParameters;
+@property NSInteger currentPicaParameterIndex;
 
 - (IBAction)listAction:(id)sender;
 

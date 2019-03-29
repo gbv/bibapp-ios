@@ -157,6 +157,32 @@ static BAConnector *sharedConnector = nil;
    }
 }
 
+-(void)searchLocalFor:(NSString *)term WithPicaParameter:(NSString *)picaParameter WithFirst:(long)first WithDelegate:(id)delegate {
+    [self setConnectorDelegate:delegate];
+    [self setCommand:@"searchLocal"];
+    if ([self checkNetworkReachability]) {
+        term = [self encodeToPercentEscapeString:term];
+        term = [term stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
+        term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
+        //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+        NSString *urlString = [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords];
+        urlString = [urlString stringByReplacingOccurrencesOfString:@"pica.bbg" withString:picaParameter];
+        NSURL *url = [NSURL URLWithString: urlString];
+        
+        NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+        if (theConnection) {
+            if (first == 1) {
+                if (self.appDelegate.options.allowCountPixel) {
+                    BAConnector *searchCountConnector = [BAConnector generateConnector];
+                    [searchCountConnector searchCountWithDelegate:self];
+                }
+            }
+        }
+    }
+}
+
 - (void)searchCountWithDelegate:(id)delegate
 {
     if (![[self.appDelegate.configuration getSearchCountURLForCatalog:self.appDelegate.options.selectedCatalogue] isEqualToString:@""]) {
