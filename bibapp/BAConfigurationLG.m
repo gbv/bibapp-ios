@@ -30,6 +30,10 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Luen4", @"Standard-Katalog", nil]];
     //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=BD296&page=20", @"Standard-Katalog", nil]];
+    self.usePushService = YES;
+    self.pushServiceUrl = @"https://daiaplus.beluga-core.de/app_dev.php";
+    self.pushServiceApiKey = @"lsk5fwwkbjfP";
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end
