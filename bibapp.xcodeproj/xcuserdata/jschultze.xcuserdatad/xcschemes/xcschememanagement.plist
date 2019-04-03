@@ -32,7 +32,7 @@
 		<key>BibApp DHGE.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>33</integer>
 		</dict>
 		<key>BibApp EAH Jena.xcscheme</key>
 		<dict>
@@ -42,7 +42,7 @@
 		<key>BibApp EAH Jena.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>32</integer>
 		</dict>
 		<key>BibApp FHE.xcscheme</key>
 		<dict>
@@ -52,7 +52,7 @@
 		<key>BibApp FHE.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>35</integer>
 		</dict>
 		<key>BibApp HAWK.xcscheme</key>
 		<dict>
@@ -62,7 +62,7 @@
 		<key>BibApp HAWK.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>31</integer>
 		</dict>
 		<key>BibApp HI.xcscheme</key>
 		<dict>
@@ -82,7 +82,7 @@
 		<key>BibApp HfM WE.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>36</integer>
 		</dict>
 		<key>BibApp IAI.xcscheme</key>
 		<dict>
@@ -102,7 +102,7 @@
 		<key>BibApp IL.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>29</integer>
 		</dict>
 		<key>BibApp LG.xcscheme</key>
 		<dict>
@@ -122,7 +122,7 @@
 		<key>BibApp NDH.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>37</integer>
 		</dict>
 		<key>BibApp SM.xcscheme</key>
 		<dict>
@@ -142,7 +142,7 @@
 		<key>BibApp TU BS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>39</integer>
 		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
@@ -152,7 +152,7 @@
 		<key>BibApp ThULB.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>30</integer>
 		</dict>
 		<key>BibApp UB WE.xcscheme</key>
 		<dict>
@@ -162,7 +162,7 @@
 		<key>BibApp UB WE.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>34</integer>
 		</dict>
 		<key>BibApp UFB.xcscheme</key>
 		<dict>
@@ -172,7 +172,7 @@
 		<key>BibApp UFB.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>39</integer>
+			<integer>40</integer>
 		</dict>
 		<key>BibApp ÄZB.xcscheme</key>
 		<dict>
@@ -192,7 +192,7 @@
 		<key>BibAppUnitTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>40</integer>
+			<integer>41</integer>
 		</dict>
 	</dict>
 </dict>
