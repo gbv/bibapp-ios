@@ -1241,6 +1241,7 @@
             GDataXMLElement *mods = [modsArray objectAtIndex:0];
             GDataXMLElement *relatedItemToc = (GDataXMLElement *)[[mods elementsForName:@"relatedItem"] objectAtIndex:0];
             [self.currentEntry setTocArray:[[NSMutableArray alloc] init]];
+            [self.currentEntryLocal setTocArray:[[NSMutableArray alloc] init]];
             if (relatedItemToc != nil) {
                 NSArray *locationsToc = [relatedItemToc elementsForName:@"location"];
                 if (locationsToc != nil) {
@@ -1248,12 +1249,14 @@
                         GDataXMLElement *urlToc = (GDataXMLElement *)[[locationToc elementsForName:@"url"] objectAtIndex:0];
                         if (urlToc != nil) {
                             [self.currentEntry.tocArray addObject:[urlToc stringValue]];
+                            [self.currentEntryLocal.tocArray addObject:[urlToc stringValue]];
                         }
                     }
                 }
             }
            
             [self.currentEntry setOnlineLocation:nil];
+            [self.currentEntryLocal setOnlineLocation:nil];
             NSArray *onlineLocations = [mods elementsForName:@"location"];
             for (GDataXMLElement *onlineLocation in onlineLocations) {
                if (onlineLocation != nil) {
@@ -1262,12 +1265,14 @@
                      NSRange rangeValueType = [[[onlineLocationUrl attributeForName:@"usage"] stringValue] rangeOfString:@"primary display" options:NSCaseInsensitiveSearch];
                      if (rangeValueType.length > 0) {
                         [self.currentEntry setOnlineLocation:[onlineLocationUrl stringValue]];
+                        [self.currentEntryLocal setOnlineLocation:[onlineLocationUrl stringValue]];
                      }
                   }
                }
             }
            
             [self.currentEntry setIsbn:@""];
+            [self.currentEntryLocal setIsbn:@""];
             GDataXMLElement *tempISBNElement = (GDataXMLElement *)[[mods elementsForName:@"identifier"] objectAtIndex:0];
             if (tempISBNElement != nil) {
                 NSRange rangeValue = [[[tempISBNElement attributeForName:@"type"] stringValue] rangeOfString:@"isbn" options:NSCaseInsensitiveSearch];
@@ -1278,6 +1283,7 @@
                         for (NSTextCheckingResult *match in resultsISBN) {
                             NSRange matchRange = [match rangeAtIndex:1];
                             [self.currentEntry setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
+                            [self.currentEntryLocal setIsbn:[[tempISBNElement stringValue] substringWithRange:matchRange]];
                         }
                     }
                 }
