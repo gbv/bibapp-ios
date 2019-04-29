@@ -5768,6 +5768,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				de,
 				en,
 			);
