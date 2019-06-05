@@ -18,8 +18,8 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ei6", @"Eisenach", @"Eisenach", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ga20", @"Gera", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ei6", @"Eisenach", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenlbs6.thulb.uni-jena.de:7242/DE-Ga20", @"Gera", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenlbs6.thulb.uni-jena.de:7242/DE-Ei6", @"Eisenach", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ga20", @"Gera", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ei6", @"Eisenach", nil]];
     self.currentBibFeedURL = @"http://bibliothek-gera.dhge.de";
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://bibliothek-gera.dhge.de", @"Gera", nil]];
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://bibliothek-eisenach.dhge.de", @"Eisenach", nil]];
@@ -36,6 +36,7 @@
     self.currentBibFeedURLIsWebsite = YES;
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://pwk.thulb.uni-jena.de/piwik.php?idsite=4&rec=1", @"Gera", nil]];
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://pwk.thulb.uni-jena.de/piwik.php?idsite=5&rec=1", @"Eisenach", nil]];
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end
