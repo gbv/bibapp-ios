@@ -142,7 +142,7 @@
 		<key>BibApp TU BS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>39</integer>
+			<integer>41</integer>
 		</dict>
 		<key>BibApp ThULB.xcscheme</key>
 		<dict>
@@ -192,7 +192,7 @@
 		<key>BibAppUnitTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>39</integer>
 		</dict>
 	</dict>
 </dict>

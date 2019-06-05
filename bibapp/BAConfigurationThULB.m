@@ -15,7 +15,7 @@
    self.currentBibSearchMaximumRecords = @"20";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-27", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-27", @"Standard-Katalog", nil]];
-   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://jenlbs6.thulb.uni-jena.de:7242/DE-27", @"Standard-Katalog", nil]];
+   [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-27", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.thulb.uni-jena.de";
    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.thulb.uni-jena.de", @"Standard-Katalog", nil]];
    self.currentBibTintColor = [UIColor colorWithRed:0.337255F green:0.556863F blue:0.745098F alpha:1.0F];
@@ -32,6 +32,7 @@
    //self.currentBibSearchCountURL = @"http://www4.thulb.uni-jena.de/pwk/piwik.php?idsite=1&rec=1";
    [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://www4.thulb.uni-jena.de/pwk/piwik.php?idsite=1&rec=1", @"Standard-Katalog", nil]];
    self.currentBibFeedURLIsWebsite = YES;
+   self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end
