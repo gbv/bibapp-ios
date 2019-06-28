@@ -3074,6 +3074,7 @@
 		9F741F402190509C00DB66D8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
 		9FACC12D22A7BE810069B551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FACC12C22A7BE810069B551 /* GoogleService-Info.plist */; };
 		9FACC13022A7C5690069B551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FACC12F22A7C5690069B551 /* GoogleService-Info.plist */; };
+		9FE0C58522C6519A003D83FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FE0C58422C6519A003D83FC /* GoogleService-Info.plist */; };
 		B4213C0320FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0420FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
 		B4213C0520FF7434006ABD32 /* BAOptionsLanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */; };
@@ -3943,6 +3944,8 @@
 		9FACC12F22A7C5690069B551 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/DHGE/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FACC13122A7C62F0069B551 /* BibApp ThULB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp ThULB.entitlements"; sourceTree = "<group>"; };
 		9FAFF214224CD5400012A93F /* BibApp Cobi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp Cobi.entitlements"; sourceTree = "<group>"; };
+		9FE0C58422C6519A003D83FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/NDH/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FE0C58622C65242003D83FC /* BibApp NDH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp NDH.entitlements"; sourceTree = "<group>"; };
 		B1DBD07964209DFB42D573EA /* libPods-BibApp FHE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BibApp FHE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4213C0120FF7433006ABD32 /* BAOptionsLanguageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOptionsLanguageTableViewController.h; sourceTree = "<group>"; };
 		B4213C0220FF7433006ABD32 /* BAOptionsLanguageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOptionsLanguageTableViewController.m; sourceTree = "<group>"; };
@@ -4945,6 +4948,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				9FE0C58622C65242003D83FC /* BibApp NDH.entitlements */,
 				9FACC13122A7C62F0069B551 /* BibApp ThULB.entitlements */,
 				9FACC12E22A7C1950069B551 /* BibApp DHGE.entitlements */,
 				8F5432FF225205D700718BB2 /* BibApp LG.entitlements */,
@@ -5310,6 +5314,7 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				9FE0C58422C6519A003D83FC /* GoogleService-Info.plist */,
 				9FACC12F22A7C5690069B551 /* GoogleService-Info.plist */,
 				9FACC12C22A7BE810069B551 /* GoogleService-Info.plist */,
 				8F5432FD2252046900718BB2 /* GoogleService-Info.plist */,
@@ -5744,6 +5749,11 @@
 					};
 					8FA8F6311950228D006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8FA8F6D3195022BC006CD05A = {
 						DevelopmentTeam = DG2S2C98D2;
@@ -6694,6 +6704,7 @@
 				8FA8F6C91950228D006CD05A /* iPadIcon.png in Resources */,
 				B4CD1F6621481B0A008F0A46 /* mediaIconS.png in Resources */,
 				B4CD1F3021481B0A008F0A46 /* mediaIconX.png in Resources */,
+				9FE0C58522C6519A003D83FC /* GoogleService-Info.plist in Resources */,
 				8FA8F6CA1950228D006CD05A /* iPadIcon@2x.png in Resources */,
 				B4CD1EFA21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F6CB1950228D006CD05A /* Icon-72.png in Resources */,
@@ -10157,6 +10168,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp NDH.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10190,6 +10202,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp NDH.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;

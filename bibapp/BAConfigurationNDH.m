@@ -23,6 +23,7 @@
     self.currentBibContact = @"Hochschule Nordhausen\nHochschulbibliothek\nWeinberghof 4\n99734 Nordhausen\n\nTel. Information: 03631 420-184\nTel. Ausleihe: 03631 420-185\nFax: 03631 420-815\nE-Mail: bibliothek@hs-nordhausen.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-564";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-564", @"Standard-Katalog", nil]];
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end
