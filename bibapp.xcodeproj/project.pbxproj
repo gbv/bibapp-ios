@@ -407,6 +407,7 @@
 		8F1D83E9192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D83E2192A2F8700A9898D /* BAConfigurationUBWe.m */; };
 		8F1D83EA192A2F8700A9898D /* BAConfigurationUBWe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D83E2192A2F8700A9898D /* BAConfigurationUBWe.m */; };
 		8F1D83EC192A301F00A9898D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
+		8F1E2E7322CCA5CD00A0FD2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E2E7222CCA5CD00A0FD2E /* GoogleService-Info.plist */; };
 		8F1F20D4166DF5D500E74231 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F1F20D8166DF5FE00E74231 /* BAItemAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */; };
 		8F1F20DC166DF84200E74231 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
@@ -3494,6 +3495,8 @@
 		8F1D83E1192A2F8700A9898D /* BAConfigurationUBWe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAConfigurationUBWe.h; sourceTree = "<group>"; };
 		8F1D83E2192A2F8700A9898D /* BAConfigurationUBWe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAConfigurationUBWe.m; sourceTree = "<group>"; };
 		8F1D83EB192A301F00A9898D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../BibApp BUW/Images.xcassets"; sourceTree = "<group>"; };
+		8F1E2E7122CCA51D00A0FD2E /* BibApp EAH Jena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp EAH Jena.entitlements"; sourceTree = "<group>"; };
+		8F1E2E7222CCA5CD00A0FD2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/EAHJ/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemAccountCell.xib; sourceTree = "<group>"; };
 		8F1F20D6166DF5FE00E74231 /* BAItemAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAItemAccountCell.h; sourceTree = "<group>"; };
 		8F1F20D7166DF5FE00E74231 /* BAItemAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAItemAccountCell.m; sourceTree = "<group>"; };
@@ -4948,6 +4951,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				8F1E2E7122CCA51D00A0FD2E /* BibApp EAH Jena.entitlements */,
 				9FE0C58622C65242003D83FC /* BibApp NDH.entitlements */,
 				9FACC13122A7C62F0069B551 /* BibApp ThULB.entitlements */,
 				9FACC12E22A7C1950069B551 /* BibApp DHGE.entitlements */,
@@ -5314,6 +5318,7 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				8F1E2E7222CCA5CD00A0FD2E /* GoogleService-Info.plist */,
 				9FE0C58422C6519A003D83FC /* GoogleService-Info.plist */,
 				9FACC12F22A7C5690069B551 /* GoogleService-Info.plist */,
 				9FACC12C22A7BE810069B551 /* GoogleService-Info.plist */,
@@ -5782,6 +5787,11 @@
 					};
 					8FD6110D190916EF009E2358 = {
 						DevelopmentTeam = DG2S2C98D2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8FF26FF416393BF100099665 = {
 						DevelopmentTeam = J62XE98Y9H;
@@ -7174,6 +7184,7 @@
 				8FD6119F190916EF009E2358 /* iPadIcon.png in Resources */,
 				B4CD1F6221481B0A008F0A46 /* mediaIconS.png in Resources */,
 				B4CD1F2C21481B0A008F0A46 /* mediaIconX.png in Resources */,
+				8F1E2E7322CCA5CD00A0FD2E /* GoogleService-Info.plist in Resources */,
 				8FD611A0190916EF009E2358 /* iPadIcon@2x.png in Resources */,
 				B4CD1EF621481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FD611A1190916EF009E2358 /* Icon-72.png in Resources */,
@@ -10564,6 +10575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp EAH Jena.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -10596,6 +10608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp EAH Jena.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
