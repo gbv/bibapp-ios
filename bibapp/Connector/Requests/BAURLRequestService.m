@@ -46,7 +46,7 @@ static id<BAURLRequestService> sharedInstance;
    return sharedInstance;
 }
 
-- (NSURLRequest *)getRequestWithUrl:(NSURL *)url
+- (NSMutableURLRequest *)getRequestWithUrl:(NSURL *)url
 {
    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
 	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -55,7 +55,7 @@ static id<BAURLRequestService> sharedInstance;
    return theRequest;
 }
 
-- (NSURLRequest *)postRequestWithURL:(NSURL *)url HTTPBody:(NSData *)body contentLength:(NSUInteger)contentLength
+- (NSMutableURLRequest *)postRequestWithURL:(NSURL *)url HTTPBody:(NSData *)body contentLength:(NSUInteger)contentLength
 {
    NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
    

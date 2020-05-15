@@ -51,7 +51,7 @@
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     self.searchBar.delegate = self;
-    [self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
+    //[self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];
@@ -266,6 +266,12 @@
 
 - (void)command:(NSString *)command didFinishLoadingWithResult:(NSObject *)result
 {
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+    
+    NSLog(@"%@", json);
+    
+    return;
+    
     BOOL retrySearchWithNextParameter = NO;
     GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
     

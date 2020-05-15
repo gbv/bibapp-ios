@@ -79,8 +79,9 @@ static BAConnector *sharedConnector = nil;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
+   NSLog(@"%@", response);
    webData = [[NSMutableData alloc] init];
-	[webData setLength: 0];
+   [webData setLength: 0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -142,10 +143,15 @@ static BAConnector *sharedConnector = nil;
       term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
       term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
       //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
+      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://dev.folio-eww.de:9130/instance-storage/instances?offset=0&limit=100&query=title=%@", term]];
        
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+       NSMutableURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+       
+       [theRequest setValue:@"diku" forHTTPHeaderField:@"X-Okapi-Tenant"];
+       [theRequest setValue:@"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkaWt1X2FkbWluIiwidXNlcl9pZCI6ImMxZjJkMjAxLTc1YjUtNTg0MS04MWUwLWJmZDZkNzczMzdlMiIsImNhY2hlX2tleSI6IjA1ZTE1ZTA4LWM4MWUtNDE5NC04MzU2LTA1NmIyYTQzOWMxOSIsImlhdCI6MTU4OTU0NjY5OSwidGVuYW50IjoiZGlrdSJ9.yO0vGKj_NuOaqU7uFZgIk6y-zZVCBrU8CCpgQZpjVKc" forHTTPHeaderField:@"X-Okapi-Token"];
+       
+       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
           if (first == 1) {
               if (self.appDelegate.options.allowCountPixel) {
@@ -166,11 +172,18 @@ static BAConnector *sharedConnector = nil;
         term = [term stringByReplacingOccurrencesOfString:@"%2A" withString:@"*"];
         term = [term stringByReplacingOccurrencesOfString:@"%3F" withString:@"*"];
         //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
-        NSString *urlString = [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords];
-        urlString = [urlString stringByReplacingOccurrencesOfString:@"pica.bbg" withString:picaParameter];
-        NSURL *url = [NSURL URLWithString: urlString];
+        //NSString *urlString = [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords];
+        //urlString = [urlString stringByReplacingOccurrencesOfString:@"pica.bbg" withString:picaParameter];
+        //NSURL *url = [NSURL URLWithString: urlString];
         
-        NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+        NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://dev.folio-eww.de:9130/instance-storage/instances?offset=0&limit=100&query=title=%@", term]];
+         
+         NSMutableURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+         
+         [theRequest setValue:@"diku" forHTTPHeaderField:@"X-Okapi-Tenant"];
+        [theRequest setValue:@"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkaWt1X2FkbWluIiwidXNlcl9pZCI6ImMxZjJkMjAxLTc1YjUtNTg0MS04MWUwLWJmZDZkNzczMzdlMiIsImNhY2hlX2tleSI6IjA1ZTE1ZTA4LWM4MWUtNDE5NC04MzU2LTA1NmIyYTQzOWMxOSIsImlhdCI6MTU4OTU0NjY5OSwidGVuYW50IjoiZGlrdSJ9.yO0vGKj_NuOaqU7uFZgIk6y-zZVCBrU8CCpgQZpjVKc" forHTTPHeaderField:@"X-Okapi-Token"];
+        
+        
         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
         if (theConnection) {
             if (first == 1) {
@@ -277,9 +290,23 @@ static BAConnector *sharedConnector = nil;
    [self setConnectorDelegate:delegate];
    [self setCommand:@"login"];
    if ([self checkNetworkReachability]) {
-      NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], [self urlencodeString:password]]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+       //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], [self urlencodeString:password]]];
+      
+       //dev.folio-eww.de forwarded to localhost
+       NSURL *url = [NSURL URLWithString:@"http://dev.folio-eww.de:9130/bl-users/login"];
+       
+       NSMutableString*jsonString = [[NSMutableString alloc] init];
+
+       [jsonString appendString:[NSString stringWithFormat:@"{\"username\": \"%@\",\"password\": \"%@\"}", [self urlencodeString:account], [self urlencodeString:password]]];
+
+       NSUInteger contentLength = [jsonString length];
+       NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+       NSMutableURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
+       
+       [theRequest setValue:@"diku" forHTTPHeaderField:@"X-Okapi-Tenant"];
+       [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+       
+       NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
       if (theConnection) {
       }
    }
