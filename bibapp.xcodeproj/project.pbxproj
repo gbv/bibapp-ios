@@ -3933,6 +3933,7 @@
 		9F376FF4219B221300B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F376FF6219B221300B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3C740A24EA909E0021D404 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/FHE/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F3C740C24EA95430021D404 /* BibApp FHE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp FHE.entitlements"; sourceTree = "<group>"; };
 		9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/SM/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41096E21E3741600D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IAI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41097021E3742F00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/Cobi/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -4956,6 +4957,7 @@
 		8FF26FEA16393BF100099665 = {
 			isa = PBXGroup;
 			children = (
+				9F3C740C24EA95430021D404 /* BibApp FHE.entitlements */,
 				9FCDEEBF235A016A00620DCF /* BibApp BLS.entitlements */,
 				8F1E2E7122CCA51D00A0FD2E /* BibApp EAH Jena.entitlements */,
 				9FE0C58622C65242003D83FC /* BibApp NDH.entitlements */,
@@ -10264,8 +10266,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10297,8 +10301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
+				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
