@@ -24,6 +24,7 @@
     self.currentBibContact = @"Altonaer Straße 25\n99085 Erfurt\n\nAusleihtheke:\nTel.: 0361 6700-519\nFax: 0361 6700-518\n\nE-Mail: bibliothek@fh-erfurt.de ";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-546";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-546", @"Standard-Katalog", nil]];
+    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 
 @end

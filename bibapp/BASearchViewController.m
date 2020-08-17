@@ -51,7 +51,7 @@
     
     [self.searchBar setTintColor:self.appDelegate.configuration.currentBibTintColor];
     self.searchBar.delegate = self;
-    [self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
+    //[self.searchBar setValue:BALocalizedString(@"Abbrechen") forKey:@"_cancelButtonText"];
     
     [self.searchSegmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.searchSegmentedController setTintColor:self.appDelegate.configuration.currentBibTintColor];

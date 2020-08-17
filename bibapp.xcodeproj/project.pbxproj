@@ -3060,6 +3060,7 @@
 		9F376FF8219B221D00B54BAA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F376FF9219B221D00B54BAA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		9F376FFA219B221D00B54BAA /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F3C740924EA86D30021D404 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F3C740824EA86D30021D404 /* GoogleService-Info.plist */; };
 		9F41096D21E373EE00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */; };
 		9F41096F21E3741700D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096E21E3741600D97F58 /* GoogleService-Info.plist */; };
 		9F41097121E3742F00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41097021E3742F00D97F58 /* GoogleService-Info.plist */; };
@@ -3931,6 +3932,7 @@
 		9F376FF2219B221300B54BAA /* libleveldb-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libleveldb-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F376FF4219B221300B54BAA /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F376FF6219B221300B54BAA /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3C740824EA86D30021D404 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/SM/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41096E21E3741600D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IAI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41097021E3742F00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/Cobi/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -5322,6 +5324,7 @@
 		9F16612E216617EF00C2EC84 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				9F3C740824EA86D30021D404 /* GoogleService-Info.plist */,
 				9FCDEEBD235A00CF00620DCF /* GoogleService-Info.plist */,
 				8F1E2E7222CCA5CD00A0FD2E /* GoogleService-Info.plist */,
 				9FE0C58422C6519A003D83FC /* GoogleService-Info.plist */,
@@ -6804,6 +6807,7 @@
 				8FA8F76B195022BC006CD05A /* iPadIcon.png in Resources */,
 				B4CD1F6721481B0A008F0A46 /* mediaIconS.png in Resources */,
 				B4CD1F3121481B0A008F0A46 /* mediaIconX.png in Resources */,
+				9F3C740924EA86D30021D404 /* GoogleService-Info.plist in Resources */,
 				8FA8F76C195022BC006CD05A /* iPadIcon@2x.png in Resources */,
 				B4CD1EFB21481B0A008F0A46 /* mediaIconV.png in Resources */,
 				8FA8F76D195022BC006CD05A /* Icon-72.png in Resources */,
@@ -10271,6 +10275,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 2.6.2;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10303,6 +10308,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 2.6.2;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
