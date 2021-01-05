@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 #import <QuickLook/QuickLook.h>
 
-@interface BATocViewController : UIViewController <UIWebViewDelegate>
+@interface BATocViewController : UIViewController <WKNavigationDelegate>
 
 @property (strong, nonatomic) NSString *url;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;

@@ -58,10 +58,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [self.activityIndicator stopAnimating];
     [self.webView setBackgroundColor:[[UIColor alloc] initWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]];
-    self.webView.scalesPageToFit = YES;
 }
 
 - (void)viewDidUnload {
