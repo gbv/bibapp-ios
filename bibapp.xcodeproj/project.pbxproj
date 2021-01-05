@@ -9518,7 +9518,6 @@
 			baseConfigurationReference = 78C1494B66C32C8242E457DA /* Pods-BibApp Cobi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9552,7 +9551,6 @@
 			baseConfigurationReference = 862E3ED7A6206E2697F87EA4 /* Pods-BibApp Cobi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Cobi AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Cobi LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9586,7 +9584,6 @@
 			baseConfigurationReference = BF1DBB34D595BDB93F3904A6 /* Pods-BibApp HI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp HI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9624,7 +9621,6 @@
 			baseConfigurationReference = 6290A8A8B7917999B546BDCC /* Pods-BibApp HI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HI AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HI LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp HI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9661,7 +9657,6 @@
 			baseConfigurationReference = 12CE39A69E391A2FFD604EC1 /* Pods-BibApp UB WE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UB WE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UB WE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -9693,7 +9688,6 @@
 			baseConfigurationReference = 616D5A426536820E79677C53 /* Pods-BibApp UB WE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UB WE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UB WE LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -9725,7 +9719,6 @@
 			baseConfigurationReference = C6D148CB995890B21B7F1B6F /* Pods-BibApp IAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9759,7 +9752,6 @@
 			baseConfigurationReference = 2F0291D254CF613B795512F5 /* Pods-BibApp IAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IAI AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IAI LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9793,7 +9785,6 @@
 			baseConfigurationReference = 92A1DB0B8D50A3D2067F74E4 /* Pods-BibApp BLS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp BLS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9825,7 +9816,6 @@
 			baseConfigurationReference = FB160522903B212494BDC651 /* Pods-BibApp BLS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "BLS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BLS LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp BLS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9858,7 +9848,6 @@
 			baseConfigurationReference = 6FF6887FD803B5E8D271C5A4 /* Pods-BibApp IL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp IL.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9893,7 +9882,6 @@
 			baseConfigurationReference = B601B8239A15168AC0F588EA /* Pods-BibApp IL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "IL AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "IL LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp IL.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: effective WEBWORK GmbH (DG2S2C98D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -9929,7 +9917,6 @@
 			baseConfigurationReference = 7CC68D66BA3E30E9ECF48317 /* Pods-BibApp HAWK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -9960,7 +9947,6 @@
 			baseConfigurationReference = 30745EE446EA8EEC50298467 /* Pods-BibApp HAWK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HAWK AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HAWK LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -9992,7 +9978,6 @@
 			baseConfigurationReference = F48275401987EA9E06C32CEB /* Pods-BibApp ÄZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10025,7 +10010,6 @@
 			baseConfigurationReference = 2A6BFEBB2664B593258CFF20 /* Pods-BibApp ÄZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ÄZB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ÄZB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10058,7 +10042,6 @@
 			baseConfigurationReference = 409E362485F935837976BD40 /* Pods-BibApp DHGE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp DHGE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10091,7 +10074,6 @@
 			baseConfigurationReference = DA0310A9E5BE0E3669431FF4 /* Pods-BibApp DHGE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DHGE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DHGE LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp DHGE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10124,7 +10106,6 @@
 			baseConfigurationReference = 5CF2D2A00A87C88196E83E6B /* Pods-BibApp HfM WE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp HfM WE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10158,7 +10139,6 @@
 			baseConfigurationReference = 5644A64097001FD207528D68 /* Pods-BibApp HfM WE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "HFM We AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "HFM We LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp HfM WE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10192,7 +10172,6 @@
 			baseConfigurationReference = 223FB7F5AE64AA4726B4DA6E /* Pods-BibApp NDH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp NDH.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10226,7 +10205,6 @@
 			baseConfigurationReference = 0D36E30B5C059BC2A4B876A4 /* Pods-BibApp NDH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "NDH AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "NDH LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp NDH.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10260,7 +10238,6 @@
 			baseConfigurationReference = 38AB8E9DB55723F37ED0C79B /* Pods-BibApp FHE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10295,7 +10272,6 @@
 			baseConfigurationReference = 5F3EEB77B67A785D4B6AD5A5 /* Pods-BibApp FHE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "FHE AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "FHE LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10330,7 +10306,6 @@
 			baseConfigurationReference = 8CA6E2B1227405CD32DE1A80 /* Pods-BibApp SM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "SM AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp SM.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10364,7 +10339,6 @@
 			baseConfigurationReference = 7B41D5848ABFBC18A7B5ABE4 /* Pods-BibApp SM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "SM AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "SM LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp SM.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10398,7 +10372,6 @@
 			baseConfigurationReference = 002D6DFBC9FF7620EE84292C /* Pods-BibApp UFB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UFB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UFB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10431,7 +10404,6 @@
 			baseConfigurationReference = 36603CF290E41039137F81FB /* Pods-BibApp UFB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "UFB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "UFB LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DG2S2C98D2;
@@ -10464,7 +10436,6 @@
 			baseConfigurationReference = 2DD54FC387CE756919AAF057 /* Pods-BibApp TU BS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -10496,7 +10467,6 @@
 			baseConfigurationReference = 9DA7A449CC637207DF6A26EE /* Pods-BibApp TU BS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "TU BS AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "TU BS LaunchImage";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -10528,7 +10498,6 @@
 			baseConfigurationReference = 437ECC0279CAD0A310AE28B0 /* Pods-BibApp ThULB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp ThULB.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10561,7 +10530,6 @@
 			baseConfigurationReference = 3E5CAF87E040CBF6291F7535 /* Pods-BibApp ThULB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ThULB AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ThULB LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp ThULB.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10594,7 +10562,6 @@
 			baseConfigurationReference = F1ED724114D5D4DD6660DB68 /* Pods-BibApp EAH Jena.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp EAH Jena.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10627,7 +10594,6 @@
 			baseConfigurationReference = 259A53DF3CC2B2B5A2C5BD44 /* Pods-BibApp EAH Jena.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "EAH Jena AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "EAH Jena LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp EAH Jena.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10784,7 +10750,6 @@
 			baseConfigurationReference = 40584A064272C07A777D4FF3 /* Pods-BibApp LG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp LG.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -10819,7 +10784,6 @@
 			baseConfigurationReference = 0EF5C32D961DD535BE277493 /* Pods-BibApp LG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "LG AppIcon";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LG LaunchImage";
 				CODE_SIGN_ENTITLEMENTS = "BibApp LG.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
