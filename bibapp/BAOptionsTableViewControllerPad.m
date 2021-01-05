@@ -169,14 +169,6 @@
     }
 }
 
-- (void)viewDidUnload {
-    [self setSaveLocalSwitch:nil];
-    [self setCountPixelSwitch:nil];
-    [self setCatalogueLabel:nil];
-    [self setVersionLabel:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)saveLocalSwitchAction:(id)sender {
     BAAppDelegate *appDelegate = (BAAppDelegate *)[[UIApplication sharedApplication] delegate];
     if ([sender isOn]) {

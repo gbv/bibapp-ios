@@ -157,13 +157,6 @@
    }
 }
 
-- (void)viewDidUnload {
-    [self setVersionLabel:nil];
-    [self setCatalogueLabel:nil];
-    [self setCountPixelSwitch:nil];
-    [super viewDidUnload];
-}
-
 - (void)commandIsNotInScope:(NSString *)command {
    // ToDo: reset state if necessary
 }

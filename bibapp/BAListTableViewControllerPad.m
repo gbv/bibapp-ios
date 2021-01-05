@@ -1010,16 +1010,6 @@
     }
 }
 
-- (void)viewDidUnload
-{
-    [self setTrashIcon:nil];
-    [self setListNavigationBar:nil];
-    [self setDetailNavigationBar:nil];
-    [self setLoanButton:nil];
-    [self setLoanTitleButton:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)trashAction:(id)sender
 {
     if (!self.listTableView.editing) {

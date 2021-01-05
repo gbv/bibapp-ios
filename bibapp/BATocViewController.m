@@ -51,15 +51,6 @@
     [self.webView setBackgroundColor:[[UIColor alloc] initWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]];
 }
 
-- (void)viewDidUnload
-{
-    [self setWebView:nil];
-    [self setCancelButton:nil];
-    [self setActivityIndicator:nil];
-    [self setToolbar:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)cancelAction:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -164,20 +164,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload
-{
-    [self setLoanTableView:nil];
-    [self setReservationTableView:nil];
-    [self setFeeTableView:nil];
-    [self setAccountNavigationBar:nil];
-    [self setLoanToolbar:nil];
-    [self setReservationToolbar:nil];
-    [self setFeeToolbar:nil];
-    [self setLoanBarButton:nil];
-    [self setReservationBarButton:nil];
-    [super viewDidUnload];
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.

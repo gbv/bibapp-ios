@@ -1342,11 +1342,6 @@
 {
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 - (BOOL)entryOnList
 {
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];

@@ -222,27 +222,6 @@
     return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
-- (void)viewDidUnload
-{
-    [self setSearchSegmentedController:nil];
-    [self setSearchBar:nil];
-    [self setNavigationBarSearch:nil];
-    [self setNavigationBarDetail:nil];
-    [self setSearchTableView:nil];
-    [self setScrollView:nil];
-    [self setCoverView:nil];
-    [self setTitleLabel:nil];
-    [self setSubtitleLabel:nil];
-    [self setIsbdLabel:nil];
-    [self setTocButton:nil];
-    [self setListButton:nil];
-    [self setDetailTableView:nil];
-    [self setTocTitleButton:nil];
-    [self setLoanButton:nil];
-    [self setLoanTitleButton:nil];
-    [super viewDidUnload];
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;

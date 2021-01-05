@@ -477,12 +477,6 @@
     return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
-- (void)viewDidUnload
-{
-    [self setContentTableView:nil];
-    [super viewDidUnload];
-}
-
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSIndexPath *currentSelectedIndexPath = [tableView indexPathForSelectedRow];

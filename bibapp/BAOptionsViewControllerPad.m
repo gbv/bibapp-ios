@@ -108,8 +108,4 @@
     return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
-- (void)viewDidUnload {
-    [self setVersionLabel:nil];
-    [super viewDidUnload];
-}
 @end

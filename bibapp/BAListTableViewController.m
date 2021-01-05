@@ -182,12 +182,6 @@
     }
 }
 
-- (void)viewDidUnload
-{
-    [self setTrashIcon:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)trashAction:(id)sender {
     if (!self.listTableView.editing) {
         [self.listTableView setEditing:YES animated:YES];

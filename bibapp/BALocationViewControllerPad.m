@@ -43,12 +43,6 @@
     return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
-- (void)viewDidUnload
-{
-    [self setMapView:nil];
-    [super viewDidUnload];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

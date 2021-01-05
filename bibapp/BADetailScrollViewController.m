@@ -190,12 +190,6 @@
     [self.scrollViewDelegate updatePosition:self.scrollPosition];
 }
 
-- (void)viewDidUnload {
-    [self setScrollView:nil];
-    [self setListButton:nil];
-    [super viewDidUnload];
-}
-
 - (IBAction)actionButton:(id)sender {
     [(BADetailViewController *)[self.views objectAtIndex:self.scrollPosition] actionButton];
 }
