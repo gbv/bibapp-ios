@@ -1816,9 +1816,7 @@
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
             NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
-            if (![[UIApplication sharedApplication] openURL:url]) {
-                NSLog(@"%@%@",@"Failed to open url:",[url description]);
-            }
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
     } else if (buttonIndex == 1) {
         if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
@@ -1856,8 +1854,7 @@
 - (void)loanAction
 {
     NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"http://gso.gbv.de/DB=2.1/PPNSET?PPN=%@", self.currentEntry.ppn]];
-    if (![[UIApplication sharedApplication] openURL:url]) {
-    }
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

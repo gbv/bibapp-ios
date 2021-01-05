@@ -141,9 +141,7 @@
         } else {
             url = [NSURL URLWithString:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
         }
-        if (![[UIApplication sharedApplication] openURL:url]) {
-            NSLog(@"%@%@",@"Failed to open url:",[url description]);
-        }
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }
 }
 

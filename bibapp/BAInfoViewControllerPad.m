@@ -327,8 +327,7 @@
                 } else {
                    url = [NSURL URLWithString:[self.appDelegate.configuration getFeedURLForCatalog:self.appDelegate.options.selectedCatalogue]];
                 }
-                if (![[UIApplication sharedApplication] openURL:url]) {
-                }
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
                 self.currentLocation = [self.locationList objectAtIndex:indexPath.row];
                 [self performSegueWithIdentifier:@"locationSegue" sender:self];

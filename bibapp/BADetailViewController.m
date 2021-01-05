@@ -1249,8 +1249,7 @@
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
                 NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
-                if (![[UIApplication sharedApplication] openURL:url]) {
-                }
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             }
         } else if (buttonIndex == 1) {
             if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
@@ -1309,8 +1308,7 @@
 - (void)loanAction
 {
     NSURL *url = [NSURL URLWithString:[[NSString alloc] initWithFormat:@"http://gso.gbv.de/DB=2.1/PPNSET?PPN=%@", self.currentEntry.ppn]];
-    if (![[UIApplication sharedApplication] openURL:url]) {
-    }
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 }
 
 - (void)oneFingerSwipeLeft:(UITapGestureRecognizer *)recognizer
