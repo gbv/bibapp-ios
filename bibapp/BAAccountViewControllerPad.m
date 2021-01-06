@@ -731,11 +731,19 @@
        } */
     }
     
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                    message:statusString
-                                                   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert setTag:20];
-    [alert show];
+    UIAlertController * alertError = [UIAlertController
+                        alertControllerWithTitle:nil
+                                         message:statusString
+                                  preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* okAction = [UIAlertAction
+                                actionWithTitle:BALocalizedString(@"Ok")
+                                          style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                        }];
+
+    [alertError addAction:okAction];
+    [self presentViewController:alertError animated:YES completion:nil];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -941,11 +949,19 @@
             [action setTag:10];
             [action showFromBarButtonItem:self.loanBarButton animated:YES];
         } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:BALocalizedString(@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen")
-                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-            [alert setTag:21];
-            [alert show];
+            UIAlertController * alertError = [UIAlertController
+                                alertControllerWithTitle:nil
+                                                 message:BALocalizedString(@"Bitte wählen Sie die Einträge aus, die verlängert werden sollen")
+                                          preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction* okAction = [UIAlertAction
+                                        actionWithTitle:BALocalizedString(@"Ok")
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * action) {
+                                                }];
+
+            [alertError addAction:okAction];
+            [self presentViewController:alertError animated:YES completion:nil];
         }
     } else if (clicked.tag == 11) {
         BOOL foundSelected = NO;
@@ -965,11 +981,19 @@
             [action setTag:11];
             [action showFromBarButtonItem:self.reservationBarButton animated:YES];
         } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:BALocalizedString(@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen")
-                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-            [alert setTag:22];
-            [alert show];
+            UIAlertController * alertError = [UIAlertController
+                                alertControllerWithTitle:nil
+                                                 message:BALocalizedString(@"Bitte wählen Sie die Vormerkungen aus, die storniert werden sollen")
+                                          preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction* okAction = [UIAlertAction
+                                        actionWithTitle:BALocalizedString(@"Ok")
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * action) {
+                                                }];
+
+            [alertError addAction:okAction];
+            [self presentViewController:alertError animated:YES completion:nil];
         }
     }
 }
