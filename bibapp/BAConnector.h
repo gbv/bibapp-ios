@@ -12,7 +12,7 @@
 #import "BALocation.h"
 #import "Reachability.h"
 
-@interface BAConnector : NSObject <NSURLConnectionDelegate>
+@interface BAConnector : NSObject <NSURLConnectionDelegate, NSURLSessionDelegate, NSURLSessionDataDelegate, NSURLSessionTaskDelegate>
 
 FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_SCOPE;
 FOUNDATION_EXPORT NSString *const ERROR_MESSAGE_NETWORK_REACHABILITY;

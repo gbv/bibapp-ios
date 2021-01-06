@@ -80,7 +80,7 @@ static BAConnector *sharedConnector = nil;
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
    webData = [[NSMutableData alloc] init];
-	[webData setLength: 0];
+   [webData setLength: 0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -100,6 +100,28 @@ static BAConnector *sharedConnector = nil;
    } else {
       [connectorDelegate command:[self command] didFinishLoadingWithResult:webData];
    }
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    completionHandler(NSURLSessionResponseAllow);
+    webData = [[NSMutableData alloc] init];
+    [webData setLength: 0];
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    [webData appendData:data];
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    if (error) {
+        NSLog(@"%@", error);
+    } else {
+        if ([command isEqualToString:@"loadLocationForUri"]) {
+           [connectorDelegate command:[self command] didFinishLoadingWithResult:[self parseLocation:webData ForUri:self.baseURL]];
+        } else {
+           [connectorDelegate command:[self command] didFinishLoadingWithResult:webData];
+        }
+    }
 }
 
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
@@ -144,14 +166,12 @@ static BAConnector *sharedConnector = nil;
       //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%d&maximumRecords=%@&recordSchema=mods", self.appDelegate.configuration.currentBibLocalSearchURL, term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/%@?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", [self.appDelegate.configuration getURLForCatalog:self.appDelegate.options.selectedCatalogue], term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
        
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-          if (first == 1) {
-              if (self.appDelegate.options.allowCountPixel) {
-                  BAConnector *searchCountConnector = [BAConnector generateConnector];
-                  [searchCountConnector searchCountWithDelegate:self];
-              }
+      [self resumeTaskWithUrl:url];
+       
+      if (first == 1) {
+          if (self.appDelegate.options.allowCountPixel) {
+              BAConnector *searchCountConnector = [BAConnector generateConnector];
+              [searchCountConnector searchCountWithDelegate:self];
           }
       }
    }
@@ -170,14 +190,12 @@ static BAConnector *sharedConnector = nil;
         urlString = [urlString stringByReplacingOccurrencesOfString:@"pica.bbg" withString:picaParameter];
         NSURL *url = [NSURL URLWithString: urlString];
         
-        NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-        if (theConnection) {
-            if (first == 1) {
-                if (self.appDelegate.options.allowCountPixel) {
-                    BAConnector *searchCountConnector = [BAConnector generateConnector];
-                    [searchCountConnector searchCountWithDelegate:self];
-                }
+        [self resumeTaskWithUrl:url];
+        
+        if (first == 1) {
+            if (self.appDelegate.options.allowCountPixel) {
+                BAConnector *searchCountConnector = [BAConnector generateConnector];
+                [searchCountConnector searchCountWithDelegate:self];
             }
         }
     }
@@ -193,9 +211,7 @@ static BAConnector *sharedConnector = nil;
            NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
            [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
            [theRequest setHTTPMethod:@"GET"];
-           NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-           if (theConnection) {
-           }
+           [self resumeTaskWithUrl:url];
         }
     }
 }
@@ -213,9 +229,10 @@ static BAConnector *sharedConnector = nil;
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://sru.k10plus.de/gvk?version=1.1&operation=searchRetrieve&query=pica.all=%@+or+pica.tmb=%@+not+(pica.bbg=ac*+or+pica.bbg=bc*+or+pica.bbg=ec*+or+pica.bbg=gc*+or+pica.bbg=kc*+or+pica.bbg=mc*+or+pica.bbg=oc*+or+pica.bbg=sc*+or+pica.bbg=ad*)&startRecord=%ld&maximumRecords=%@&recordSchema=mods", term, term, first, self.appDelegate.configuration.currentBibSearchMaximumRecords]];
       
       NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+      NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+      NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+      [task resume];
    }
 }
 
@@ -225,11 +242,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:[NSString stringWithFormat:@"getUNAPIDetails%@", [format capitalizedString]]];
    //if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"https://unapi.k10plus.de/?id=gvk:ppn:%@&format=%@", ppn, format]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    //}
 }
 
@@ -239,10 +252,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getDetailsLocal"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?id=ppn:%@&format=json", [self.appDelegate.configuration getDetailURLForCatalog:self.appDelegate.options.selectedCatalogue], ppn]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -252,10 +262,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getDetails"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://daia.gbv.de/?id=gvk:ppn:%@&format=json", ppn]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -265,10 +272,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getCover"];
    //if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://ws.gbv.de/covers/?id=%@&format=img", number]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    //}
 }
 
@@ -278,10 +282,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"login"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/login?username=%@&password=%@&grant_type=password", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], [self urlencodeString:password]]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -290,10 +291,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"logout"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/auth/logout?patron=%@&access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -304,10 +302,7 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_items"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/items?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
-         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         [self resumeTaskWithUrl:url];
       } else {
          [self displayError];
       }
@@ -325,10 +320,7 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_fees"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@/fees?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
-         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         [self resumeTaskWithUrl:url];
       } else {
          [self displayError];
       }
@@ -342,10 +334,7 @@ static BAConnector *sharedConnector = nil;
    if ([self checkNetworkReachability]) {
       if ([self checkScope:@"read_patron"]) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/core/%@?access_token=%@", [self.appDelegate.configuration getPAIAURLForCatalog:self.appDelegate.options.selectedCatalogue], [self urlencodeString:account], token]];
-         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         [self resumeTaskWithUrl:url];
       } else {
          [self displayError];
       }
@@ -397,9 +386,10 @@ static BAConnector *sharedConnector = nil;
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
          
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+         NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+         NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+         [task resume];
       } else {
          [self displayError];
       }
@@ -445,9 +435,10 @@ static BAConnector *sharedConnector = nil;
          NSUInteger contentLength = [jsonString length];
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+         NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+         NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+         [task resume];
       } else {
          [self displayError];
       }
@@ -494,9 +485,10 @@ static BAConnector *sharedConnector = nil;
          NSData *body = [jsonString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
          NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] postRequestWithURL:url HTTPBody:body contentLength:contentLength];
          
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-         }
+         NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+         NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+         NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+         [task resume];
       } else {
          [self displayError];
       }
@@ -509,10 +501,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getInfoFeedWithDelegate"];
    //if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@", self.appDelegate.configuration.currentBibFeedURL]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    //}
 }
 
@@ -522,10 +511,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getLocationInfoForUri"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -535,12 +521,7 @@ static BAConnector *sharedConnector = nil;
    [self setCommand:@"getLocationsForLibraryByUri"];
    if ([self checkNetworkReachability]) {
       NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-      NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-      NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self startImmediately:NO];
-      [theConnection setDelegateQueue:[NSOperationQueue mainQueue]];
-      [theConnection start];
-      if (theConnection) {
-      }
+      [self resumeTaskWithUrl:url];
    }
 }
 
@@ -553,11 +534,7 @@ static BAConnector *sharedConnector = nil;
       BALocation *resultLocation = [self loadLocationFromCacheForUri:uri];
       if (resultLocation == nil) {
          NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@?format=json", uri]];
-         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
-         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-         if (theConnection) {
-            [self setCurrentConnection:theConnection];
-         }
+         [self resumeTaskWithUrl:url];
       } else {
          [delegate command:@"loadLocationForUri" didFinishLoadingWithResult:resultLocation];
       }
@@ -851,9 +828,10 @@ static BAConnector *sharedConnector = nil;
         [theRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[postData length]] forHTTPHeaderField:@"Content-Length"];
         [theRequest setHTTPBody:postData];
         
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-        if (theConnection) {
-        }
+        NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+        [task resume];
     }
 }
 
@@ -885,9 +863,10 @@ static BAConnector *sharedConnector = nil;
         NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:url];
         [theRequest setHTTPMethod:@"DELETE"];
 
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-        if (theConnection) {
-        }
+        NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+        [task resume];
     }
 }
 
@@ -900,9 +879,10 @@ static BAConnector *sharedConnector = nil;
         
         NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
         
-        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-        if (theConnection) {
-        }
+        NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+        [task resume];
     }
 }
 
@@ -912,6 +892,14 @@ static BAConnector *sharedConnector = nil;
         result = [result stringByReplacingOccurrencesOfString:character withString:[self.urlencodeCharacters objectForKey:character]];
     }
     return result;
+}
+
+-(void) resumeTaskWithUrl:(NSURL *)url {
+    NSURLRequest *theRequest = [[BAURLRequestService sharedInstance] getRequestWithUrl:url];
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:theRequest];
+    [task resume];
 }
 
 @end
