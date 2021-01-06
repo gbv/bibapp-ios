@@ -746,7 +746,7 @@ static BAConnector *sharedConnector = nil;
 
 - (NSString*)decodeFromPercentEscapeString:(NSString *)string
 {
-   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]));
+   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByRemovingPercentEncoding]));
    return returnString;
 }
 
@@ -766,11 +766,31 @@ static BAConnector *sharedConnector = nil;
 }
 
 - (void)displayError {
-   [self.connectorDelegate commandIsNotInScope:self.command];
-   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                   message:ERROR_MESSAGE_SCOPE
-                                                  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-   [alert show];
+     [self.connectorDelegate commandIsNotInScope:self.command];
+     UIAlertController * alertError = [UIAlertController
+                      alertControllerWithTitle:nil
+                                       message:ERROR_MESSAGE_SCOPE
+                                preferredStyle:UIAlertControllerStyleAlert];
+
+     UIAlertAction* okAction = [UIAlertAction
+                              actionWithTitle:@"Ok"
+                                        style:UIAlertActionStyleDefault
+                                      handler:^(UIAlertAction * action) {
+                                      }];
+
+     [alertError addAction:okAction];
+
+     id rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+     if([rootViewController isKindOfClass:[UINavigationController class]])
+     {
+         rootViewController = ((UINavigationController *)rootViewController).viewControllers.firstObject;
+     }
+     if([rootViewController isKindOfClass:[UITabBarController class]])
+     {
+         rootViewController = ((UITabBarController *)rootViewController).selectedViewController;
+     }
+
+     [rootViewController presentViewController:alertError animated:YES completion:nil];
 }
 
 - (BOOL)checkNetworkReachability {
@@ -779,10 +799,30 @@ static BAConnector *sharedConnector = nil;
    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
    if ((networkStatus != ReachableViaWiFi) && (networkStatus != ReachableViaWWAN)) {
       [self.connectorDelegate networkIsNotReachable:self.command];
-      UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                      message:ERROR_MESSAGE_NETWORK_REACHABILITY
-                                                     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-      [alert show];
+      UIAlertController * alertError = [UIAlertController
+                         alertControllerWithTitle:nil
+                                          message:ERROR_MESSAGE_NETWORK_REACHABILITY
+                                   preferredStyle:UIAlertControllerStyleAlert];
+
+      UIAlertAction* okAction = [UIAlertAction
+                                 actionWithTitle:@"Ok"
+                                           style:UIAlertActionStyleDefault
+                                         handler:^(UIAlertAction * action) {
+                                         }];
+
+      [alertError addAction:okAction];
+
+      id rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+      if([rootViewController isKindOfClass:[UINavigationController class]])
+      {
+          rootViewController = ((UINavigationController *)rootViewController).viewControllers.firstObject;
+      }
+      if([rootViewController isKindOfClass:[UITabBarController class]])
+      {
+          rootViewController = ((UITabBarController *)rootViewController).selectedViewController;
+      }
+
+      [rootViewController presentViewController:alertError animated:YES completion:nil];
    } else {
       isNetworkReachable = YES;
    }
