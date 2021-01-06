@@ -79,7 +79,10 @@
    }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotate
+{
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+
     if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
         return YES;
     } else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
@@ -87,11 +90,6 @@
     } else {
         return NO;
     }
-}
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
