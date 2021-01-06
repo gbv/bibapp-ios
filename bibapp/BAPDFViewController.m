@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 300, 460)];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(10, 10, 300, 460)];
     
     NSURL *targetURL = [NSURL URLWithString:@"http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/UIWebView_Class.pdf"];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];

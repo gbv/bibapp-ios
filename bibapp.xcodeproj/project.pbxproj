@@ -3062,6 +3062,24 @@
 		9F41096D21E373EE00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */; };
 		9F41096F21E3741700D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41096E21E3741600D97F58 /* GoogleService-Info.plist */; };
 		9F41097121E3742F00D97F58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F41097021E3742F00D97F58 /* GoogleService-Info.plist */; };
+		9F6D0EB725A5D6530049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ECB25A5D66C0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ECC25A5D6720049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ECE25A5D6860049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ECF25A5D6960049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED025A5D69B0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED125A5D6A10049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED225A5D6A50049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED325A5D6AA0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED425A5D6AF0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED525A5D6B50049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED625A5D6BB0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED725A5D6C10049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED825A5D6C60049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0ED925A5D6CB0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0EDA25A5D6CF0049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0EDB25A5D6D40049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
+		9F6D0EDC25A5D6D80049F3A3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */; };
 		9F741F2F2190507200DB66D8 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F2E2190507200DB66D8 /* libFirebaseCore.a */; };
 		9F741F312190507200DB66D8 /* libFirebaseDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F302190507200DB66D8 /* libFirebaseDatabase.a */; };
 		9F741F332190507200DB66D8 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F741F322190507200DB66D8 /* libFirebaseMessaging.a */; };
@@ -3935,6 +3953,7 @@
 		9F41096C21E373ED00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/SM/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41096E21E3741600D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/IAI/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F41097021E3742F00D97F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/Cobi/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9F741F2E2190507200DB66D8 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F302190507200DB66D8 /* libFirebaseDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseDatabase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F322190507200DB66D8 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4009,6 +4028,7 @@
 				8F07B1851BFB72DB0012C325 /* MessageUI.framework in Frameworks */,
 				8F07B1861BFB72DB0012C325 /* SystemConfiguration.framework in Frameworks */,
 				8F07B1871BFB72DB0012C325 /* libxml2.dylib in Frameworks */,
+				9F6D0EDB25A5D6D40049F3A3 /* WebKit.framework in Frameworks */,
 				8F07B1881BFB72DB0012C325 /* CoreLocation.framework in Frameworks */,
 				8F07B1891BFB72DB0012C325 /* QuickLook.framework in Frameworks */,
 				8F07B18A1BFB72DB0012C325 /* MapKit.framework in Frameworks */,
@@ -4038,6 +4058,7 @@
 				8F4482B11B5D1BB700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42F192C86D400A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2416CA663A007382EE /* libxml2.dylib in Frameworks */,
+				9F6D0ECC25A5D6720049F3A3 /* WebKit.framework in Frameworks */,
 				8F0DD15116BAA59B005DEB43 /* CoreLocation.framework in Frameworks */,
 				8F11405B167F217000E033F6 /* QuickLook.framework in Frameworks */,
 				8F11405C167F217000E033F6 /* MapKit.framework in Frameworks */,
@@ -4067,6 +4088,7 @@
 				8F4482B71B5D1BE400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF435192C871100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F1D8391192A2E7000A9898D /* libxml2.dylib in Frameworks */,
+				9F6D0ED225A5D6A50049F3A3 /* WebKit.framework in Frameworks */,
 				8F1D8392192A2E7000A9898D /* CoreLocation.framework in Frameworks */,
 				8F1D8393192A2E7000A9898D /* QuickLook.framework in Frameworks */,
 				8F1D8394192A2E7000A9898D /* MapKit.framework in Frameworks */,
@@ -4096,6 +4118,7 @@
 				8F4A7F1C2029B78400CA6C0F /* MessageUI.framework in Frameworks */,
 				8F4A7F1D2029B78400CA6C0F /* SystemConfiguration.framework in Frameworks */,
 				8F4A7F1E2029B78400CA6C0F /* libxml2.dylib in Frameworks */,
+				9F6D0EDC25A5D6D80049F3A3 /* WebKit.framework in Frameworks */,
 				8F4A7F1F2029B78400CA6C0F /* CoreLocation.framework in Frameworks */,
 				8F4A7F202029B78400CA6C0F /* QuickLook.framework in Frameworks */,
 				8F4A7F212029B78400CA6C0F /* MapKit.framework in Frameworks */,
@@ -4125,6 +4148,7 @@
 				8F4482B21B5D1BBF00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF430192C86F200A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A75C31781BF4700CCF7DB /* libxml2.dylib in Frameworks */,
+				9F6D0ECE25A5D6860049F3A3 /* WebKit.framework in Frameworks */,
 				8F8A75C41781BF4700CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A75C51781BF4700CCF7DB /* QuickLook.framework in Frameworks */,
 				8F8A75C61781BF4700CCF7DB /* MapKit.framework in Frameworks */,
@@ -4154,6 +4178,7 @@
 				8F4482B31B5D1BC700EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF431192C86F800A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76581781C05400CCF7DB /* libxml2.dylib in Frameworks */,
+				9F6D0EB725A5D6530049F3A3 /* WebKit.framework in Frameworks */,
 				8F8A76591781C05400CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A765A1781C05400CCF7DB /* QuickLook.framework in Frameworks */,
 				8F8A765B1781C05400CCF7DB /* MapKit.framework in Frameworks */,
@@ -4183,6 +4208,7 @@
 				8F4482B41B5D1BCE00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF432192C86FE00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8F8A76ED1781C0D800CCF7DB /* libxml2.dylib in Frameworks */,
+				9F6D0ECF25A5D6960049F3A3 /* WebKit.framework in Frameworks */,
 				8F8A76EE1781C0D800CCF7DB /* CoreLocation.framework in Frameworks */,
 				8F8A76EF1781C0D800CCF7DB /* QuickLook.framework in Frameworks */,
 				8F8A76F01781C0D800CCF7DB /* MapKit.framework in Frameworks */,
@@ -4212,6 +4238,7 @@
 				8F4482BF1B5D1C2500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8F8EB5FB1A93689000548F24 /* SystemConfiguration.framework in Frameworks */,
 				8F8EB5FC1A93689000548F24 /* libxml2.dylib in Frameworks */,
+				9F6D0EDA25A5D6CF0049F3A3 /* WebKit.framework in Frameworks */,
 				8F8EB5FD1A93689000548F24 /* CoreLocation.framework in Frameworks */,
 				8F8EB5FE1A93689000548F24 /* QuickLook.framework in Frameworks */,
 				8F8EB5FF1A93689000548F24 /* MapKit.framework in Frameworks */,
@@ -4241,6 +4268,7 @@
 				8F4482B81B5D1BEC00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F53D19501E6B006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F53E19501E6B006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED325A5D6AA0049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F53F19501E6B006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F54019501E6B006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F54119501E6B006CD05A /* MapKit.framework in Frameworks */,
@@ -4270,6 +4298,7 @@
 				8F4482B91B5D1BF300EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F5DF19502224006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F5E019502224006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED425A5D6AF0049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F5E119502224006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F5E219502224006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F5E319502224006CD05A /* MapKit.framework in Frameworks */,
@@ -4299,6 +4328,7 @@
 				8F4482BA1B5D1BFB00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F6811950228D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F6821950228D006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED525A5D6B50049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F6831950228D006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F6841950228D006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F6851950228D006CD05A /* MapKit.framework in Frameworks */,
@@ -4328,6 +4358,7 @@
 				8F4482BB1B5D1C0400EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F723195022BC006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F724195022BC006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED625A5D6BB0049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F725195022BC006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F726195022BC006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F727195022BC006CD05A /* MapKit.framework in Frameworks */,
@@ -4357,6 +4388,7 @@
 				8F4482BC1B5D1C0D00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F7C51950230D006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F7C61950230D006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED725A5D6C10049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F7C71950230D006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F7C81950230D006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F7C91950230D006CD05A /* MapKit.framework in Frameworks */,
@@ -4386,6 +4418,7 @@
 				8F4482BD1B5D1C1500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FA8F8671950233A006CD05A /* SystemConfiguration.framework in Frameworks */,
 				8FA8F8681950233A006CD05A /* libxml2.dylib in Frameworks */,
+				9F6D0ED825A5D6C60049F3A3 /* WebKit.framework in Frameworks */,
 				8FA8F8691950233A006CD05A /* CoreLocation.framework in Frameworks */,
 				8FA8F86A1950233A006CD05A /* QuickLook.framework in Frameworks */,
 				8FA8F86B1950233A006CD05A /* MapKit.framework in Frameworks */,
@@ -4415,6 +4448,7 @@
 				8F4482BE1B5D1C1E00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FAD97BF1A0CFD3600C3A5D1 /* SystemConfiguration.framework in Frameworks */,
 				8FAD97C01A0CFD3600C3A5D1 /* libxml2.dylib in Frameworks */,
+				9F6D0ED925A5D6CB0049F3A3 /* WebKit.framework in Frameworks */,
 				8FAD97C11A0CFD3600C3A5D1 /* CoreLocation.framework in Frameworks */,
 				8FAD97C21A0CFD3600C3A5D1 /* QuickLook.framework in Frameworks */,
 				8FAD97C31A0CFD3600C3A5D1 /* MapKit.framework in Frameworks */,
@@ -4444,6 +4478,7 @@
 				8F4482B51B5D1BD500EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF433192C870500A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD610BD190916EA009E2358 /* libxml2.dylib in Frameworks */,
+				9F6D0ED025A5D69B0049F3A3 /* WebKit.framework in Frameworks */,
 				8FD610BE190916EA009E2358 /* CoreLocation.framework in Frameworks */,
 				8FD610BF190916EA009E2358 /* QuickLook.framework in Frameworks */,
 				8FD610C0190916EA009E2358 /* MapKit.framework in Frameworks */,
@@ -4473,6 +4508,7 @@
 				8F4482B61B5D1BDD00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF434192C870B00A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FD61159190916EF009E2358 /* libxml2.dylib in Frameworks */,
+				9F6D0ED125A5D6A10049F3A3 /* WebKit.framework in Frameworks */,
 				8FD6115A190916EF009E2358 /* CoreLocation.framework in Frameworks */,
 				8FD6115B190916EF009E2358 /* QuickLook.framework in Frameworks */,
 				8FD6115C190916EF009E2358 /* MapKit.framework in Frameworks */,
@@ -4502,6 +4538,7 @@
 				8F4482B01B5D1BAA00EE6DA9 /* MessageUI.framework in Frameworks */,
 				8FCFF42E192C813100A3E93F /* SystemConfiguration.framework in Frameworks */,
 				8FB2FE2316CA6631007382EE /* libxml2.dylib in Frameworks */,
+				9F6D0ECB25A5D66C0049F3A3 /* WebKit.framework in Frameworks */,
 				8F0DD15016BAA591005DEB43 /* CoreLocation.framework in Frameworks */,
 				8F4FC4D21670CD4F00CFA4C5 /* QuickLook.framework in Frameworks */,
 				8FD47E1B16407C4F00965F12 /* MapKit.framework in Frameworks */,
@@ -5006,6 +5043,7 @@
 		8FF26FF816393BF100099665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F6D0E3A25A5D4D70049F3A3 /* WebKit.framework */,
 				9F376FEA219B221300B54BAA /* libFirebaseCore.a */,
 				9F376FEC219B221300B54BAA /* libFirebaseDatabase.a */,
 				9F376FEE219B221300B54BAA /* libFirebaseMessaging.a */,
