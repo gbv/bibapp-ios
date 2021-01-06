@@ -139,11 +139,19 @@
       if ([command isEqualToString:@"logout"]) {
          if ([json objectForKey:@"error"] || json == nil) {
             [self.appDelegate setCurrentPassword:nil];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten")
-                                                            message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
-                                                           delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-            [alert setTag:1];
-            [alert show];
+            UIAlertController * alertError = [UIAlertController
+                                 alertControllerWithTitle:BALocalizedString(@"Bei der Abmeldung ist ein Fehler aufgetreten")
+                                                  message:[[NSString alloc] initWithFormat:@"%@ - %@", [json objectForKey:@"code"], [json objectForKey:@"error"]]
+                                           preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction* okAction = [UIAlertAction
+                                         actionWithTitle:BALocalizedString(@"Ok")
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                 }];
+
+            [alertError addAction:okAction];
+            [self presentViewController:alertError animated:YES completion:nil];
          } else {
             [self.appDelegate setCurrentAccount:nil];
             [self.appDelegate setCurrentPassword:nil];
