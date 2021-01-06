@@ -740,20 +740,13 @@ static BAConnector *sharedConnector = nil;
 
 - (NSString*)encodeToPercentEscapeString:(NSString *)string
 {
-   NSString *returnString = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                                      (CFStringRef) string,
-                                                                                      NULL,
-                                                                                      (CFStringRef) @"!*'();:@&=+$,/?%#[]",
-                                                                                      kCFStringEncodingUTF8));
+   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]));
    return returnString;
 }
 
 - (NSString*)decodeFromPercentEscapeString:(NSString *)string
 {
-   NSString *returnString = CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
-                                                                                                      (CFStringRef) string,
-                                                                                                      CFSTR(""),
-                                                                                                      kCFStringEncodingUTF8));
+   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]));
    return returnString;
 }
 
