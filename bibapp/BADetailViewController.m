@@ -1177,6 +1177,7 @@
 
 - (void)actionButton
 {
+    /*
     UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                         delegate:self
                                cancelButtonTitle:BALocalizedString(@"Abbrechen")
@@ -1184,50 +1185,86 @@
                                otherButtonTitles:BALocalizedString(@"Zur Merkliste hinzufügen"), nil];
     [action setTag:0];
     [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
+    */
+    
+    UIAlertController * alert = [UIAlertController
+                    alertControllerWithTitle:nil
+                                     message:nil
+                              preferredStyle:UIAlertControllerStyleActionSheet];
+
+    UIAlertAction* addAction = [UIAlertAction
+                        actionWithTitle:BALocalizedString(@"Zur Merkliste hinzufügen")
+                                  style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+                                    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+                                    [request setEntity:entityDescription];
+                                    
+                                    NSError *error = nil;
+                                    NSArray *tempEntries = [self.appDelegate.managedObjectContext executeFetchRequest:request error:&error];
+                                    BOOL foundPpn = NO;
+                                    for (BAEntry *tempExistingEntry in tempEntries) {
+                                        if ([self.currentEntry.ppn isEqualToString:tempExistingEntry.ppn]) {
+                                            foundPpn = YES;
+                                        }
+                                    }
+                                    
+                                    NSString *message = BALocalizedString(@"Der Eintrag befindet sich bereits auf Ihrer Merkliste");;
+        
+                                    if (!foundPpn) {
+                                        BAEntry *newEntry = (BAEntry *)[NSEntityDescription insertNewObjectForEntityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
+                                        [newEntry setTitle:self.currentEntry.title];
+                                        [newEntry setSubtitle:self.currentEntry.subtitle];
+                                        [newEntry setPpn:self.currentEntry.ppn];
+                                        [newEntry setMatstring:self.currentEntry.matstring];
+                                        [newEntry setMatcode:self.currentEntry.matcode];
+                                        [newEntry setLocal:self.currentEntry.local];
+                                        [newEntry setAuthor:self.currentEntry.author];
+                                        [newEntry setYear:self.currentEntry.year];
+                                        NSError *error = nil;
+                                        if (![[self.appDelegate managedObjectContext] save:&error]) {
+                                            // Handle the error.
+                                        }
+                                        [self.scrollViewController.listButton setEnabled:NO];
+                                        message = BALocalizedString(@"Der Eintrag wurde Ihrer Merkliste hinzugefügt");
+                                    }
+        
+                                    UIAlertController * alertResult = [UIAlertController
+                                                    alertControllerWithTitle:nil
+                                                                     message:message
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+        
+                                    UIAlertAction* okAction = [UIAlertAction
+                                                            actionWithTitle:BALocalizedString(@"Ok")
+                                                                      style:UIAlertActionStyleDefault
+                                                                    handler:^(UIAlertAction * action) {
+                                                                       //Handle no, thanks button
+                                                                    }];
+
+                                    [alertResult addAction:okAction];
+        
+                                    [self presentViewController:alertResult animated:YES completion:nil];
+    }];
+
+    UIAlertAction* cancelAction = [UIAlertAction
+                            actionWithTitle:BALocalizedString(@"Abbrechen")
+                                      style:UIAlertActionStyleCancel
+                                    handler:^(UIAlertAction * action) {
+                                       //Handle no, thanks button
+                                    }];
+
+    [alert addAction:addAction];
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (actionSheet.tag == 0) {
         if (buttonIndex == 0) {
-            NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
-            NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            [request setEntity:entityDescription];
             
-            NSError *error = nil;
-            NSArray *tempEntries = [self.appDelegate.managedObjectContext executeFetchRequest:request error:&error];
-            BOOL foundPpn = NO;
-            for (BAEntry *tempExistingEntry in tempEntries) {
-                if ([self.currentEntry.ppn isEqualToString:tempExistingEntry.ppn]) {
-                    foundPpn = YES;
-                }
-            }
-            
-            if (!foundPpn) {
-                BAEntry *newEntry = (BAEntry *)[NSEntityDescription insertNewObjectForEntityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
-                [newEntry setTitle:self.currentEntry.title];
-                [newEntry setSubtitle:self.currentEntry.subtitle];
-                [newEntry setPpn:self.currentEntry.ppn];
-                [newEntry setMatstring:self.currentEntry.matstring];
-                [newEntry setMatcode:self.currentEntry.matcode];
-                [newEntry setLocal:self.currentEntry.local];
-                [newEntry setAuthor:self.currentEntry.author];
-                [newEntry setYear:self.currentEntry.year];
-                NSError *error = nil;
-                if (![[self.appDelegate managedObjectContext] save:&error]) {
-                    // Handle the error.
-                }
-                [self.scrollViewController.listButton setEnabled:NO];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:BALocalizedString(@"Der Eintrag wurde Ihrer Merkliste hinzugefügt")
-                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                [alert show];
-            } else {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                message:BALocalizedString(@"Der Eintrag befindet sich bereits auf Ihrer Merkliste")
-                                                               delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                [alert show];
-            }
         }
     } else if (actionSheet.tag > 0) {
         NSInteger itemIndex = actionSheet.tag-1;
