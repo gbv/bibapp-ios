@@ -159,11 +159,20 @@
                  [self loginActionWithMessage:@""];
               } else {
                  NSString *errorDisplay = [[NSString alloc] initWithFormat:BALocalizedString(@"Ein interner Fehler ist aufgetreten. Sollte dieser Fehler wiederholt auftreten, kontaktieren Sie bitte Ihre Bibliothek unter Angabe der folgenden Fehlernummer:\nPAIA %@"), errorCode];
-                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                 message:errorDisplay
-                                                                delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                 [alert setTag:20];
-                 [alert show];
+                 
+                 UIAlertController * alertError = [UIAlertController
+                                   alertControllerWithTitle:nil
+                                                    message:errorDisplay
+                                             preferredStyle:UIAlertControllerStyleAlert];
+
+                 UIAlertAction* okAction = [UIAlertAction
+                                           actionWithTitle:BALocalizedString(@"Ok")
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                   }];
+
+                 [alertError addAction:okAction];
+                 [self presentViewController:alertError animated:YES completion:nil];
               }
            } else {
               self.isLoggingIn = NO;

@@ -1238,7 +1238,6 @@
                                                             actionWithTitle:BALocalizedString(@"Ok")
                                                                       style:UIAlertActionStyleDefault
                                                                     handler:^(UIAlertAction * action) {
-                                                                       //Handle no, thanks button
                                                                     }];
 
                                     [alertResult addAction:okAction];
@@ -1250,7 +1249,6 @@
                             actionWithTitle:BALocalizedString(@"Abbrechen")
                                       style:UIAlertActionStyleCancel
                                     handler:^(UIAlertAction * action) {
-                                       //Handle no, thanks button
                                     }];
 
     [alert addAction:addAction];
