@@ -623,34 +623,56 @@
        } */
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+           
+          NSString *message = nil;
           if ([json count] > 0) {
-             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich")
-                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-             [alert show];
+              message = BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich");
           } else {
-             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                             message:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich")
-                                                            delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-             [alert show];
+              message = BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich");
           }
+           
+          UIAlertController * alertError = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:message
+                                       preferredStyle:UIAlertControllerStyleAlert];
+
+          UIAlertAction* okAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Ok")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                             }];
+
+          [alertError addAction:okAction];
+          [self presentViewController:alertError animated:YES completion:nil];
        } else {
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
+           
+          NSString *message = nil;
           if ([json objectForKey:@"error"] == nil && [json objectForKey:@"doc"] != nil) {
              NSDictionary *doc = [[json objectForKey:@"doc"] objectAtIndex:0];
              if ([doc objectForKey:@"error"] == nil) {
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich") delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                [alert show];
+                 message = BALocalizedString(@"Bestellung / Vormerkung\nerfolgreich");
              } else {
-                NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [doc objectForKey:@"error"]];
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                [alert show];
+                 message = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [doc objectForKey:@"error"]];
              }
           } else {
-             NSString *errorString = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [json objectForKey:@"error_description"]];
-             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:errorString delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-             [alert show];
+             message = [[NSString alloc] initWithFormat:BALocalizedString(@"Bestellung / Vormerkung\nleider nicht möglich:\n%@"), [json objectForKey:@"error_description"]];
           }
+           
+           
+          UIAlertController * alertError = [UIAlertController
+                              alertControllerWithTitle:nil
+                                               message:message
+                                        preferredStyle:UIAlertControllerStyleAlert];
+
+          UIAlertAction* okAction = [UIAlertAction
+                                      actionWithTitle:BALocalizedString(@"Ok")
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction * action) {
+                                              }];
+
+          [alertError addAction:okAction];
+          [self presentViewController:alertError animated:YES completion:nil];
        }
     } else if ([command isEqualToString:@"getLocationInfoForUri"]) {
     } else if ([command isEqualToString:@"getCover"]) {
@@ -1274,10 +1296,19 @@
                     BAConnector *requestConnector = [BAConnector generateConnector];
                     [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
                 } else {
-                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                                    message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
-                                                                   delegate:self cancelButtonTitle:BALocalizedString(@"OK") otherButtonTitles:nil];
-                    [alert show];
+                    UIAlertController * alertError = [UIAlertController
+                                       alertControllerWithTitle:nil
+                                                        message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                 preferredStyle:UIAlertControllerStyleAlert];
+
+                    UIAlertAction* okAction = [UIAlertAction
+                                               actionWithTitle:BALocalizedString(@"Ok")
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * action) {
+                                                       }];
+
+                    [alertError addAction:okAction];
+                    [self presentViewController:alertError animated:YES completion:nil];
                 }
             } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Standortinfo")]) {
                 [self.scrollViewController setTempLocation:self.currentLocation];
