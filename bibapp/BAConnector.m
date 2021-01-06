@@ -124,34 +124,27 @@ static BAConnector *sharedConnector = nil;
     }
 }
 
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
-{
-   return YES;
-}
+- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    // Add trusted hosts to this array in order to handle authentication challenges
+    NSMutableArray* trustedHosts = [NSMutableArray array];
 
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
-{
-   // Add trusted hosts to this array in order to handle authentication challenges
-   NSMutableArray* trustedHosts = [NSMutableArray array];
-
-   [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];
-   [trustedHosts addObject:@"paia-hawk-9.effective-webwork.de"];
-   [trustedHosts addObject:@"paia-hawk-4.effective-webwork.de"];
-   [trustedHosts addObject:@"paia-hawk-3.effective-webwork.de"];
-   [trustedHosts addObject:@"paia-hawk-2.effective-webwork.de"];
-   [trustedHosts addObject:@"paia-hawk-1.effective-webwork.de"];
-   [trustedHosts addObject:@"aezb.api.effective-webwork.de"];
-    
-   if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
-       [trustedHosts containsObject:challenge.protectionSpace.host])
-   {
-         [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-   }
-   else
-   {
-       [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
-   }
-
+    [trustedHosts addObject:@"paia-hawk.effective-webwork.de"];
+    [trustedHosts addObject:@"paia-hawk-9.effective-webwork.de"];
+    [trustedHosts addObject:@"paia-hawk-4.effective-webwork.de"];
+    [trustedHosts addObject:@"paia-hawk-3.effective-webwork.de"];
+    [trustedHosts addObject:@"paia-hawk-2.effective-webwork.de"];
+    [trustedHosts addObject:@"paia-hawk-1.effective-webwork.de"];
+    [trustedHosts addObject:@"aezb.api.effective-webwork.de"];
+     
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
+        [trustedHosts containsObject:challenge.protectionSpace.host])
+    {
+          [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+    }
+    else
+    {
+        [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
+    }
 }
 
 - (void)searchLocalFor:(NSString *)term WithFirst:(long)first WithDelegate:(id)delegate
@@ -887,7 +880,7 @@ static BAConnector *sharedConnector = nil;
 }
 
 -(NSString *) urlencodeString:(NSString *)string {
-    NSString *result = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *result = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     for (NSString *character in self.urlencodeCharacters) {
         result = [result stringByReplacingOccurrencesOfString:character withString:[self.urlencodeCharacters objectForKey:character]];
     }
