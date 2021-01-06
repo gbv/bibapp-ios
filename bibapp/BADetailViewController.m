@@ -609,18 +609,6 @@
             }
         }
     } else if ([command isEqualToString:@"accountRequestDocs"]) {
-       /* NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
-       if ([json count] > 0) {
-           UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                           message:@"Bestellung / Vormerkung\nerfolgreich"
-                                                          delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-           [alert show];
-       } else {
-           UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
-                                                           message:@"Bestellung / Vormerkung\nleider nicht möglich"
-                                                          delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-           [alert show];
-       } */
        if ([self.appDelegate.configuration usePAIAWrapper]) {
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
            
