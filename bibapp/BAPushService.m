@@ -39,27 +39,13 @@
 }
 
 -(void)enablePush {
-    NSLog(@"enable push");
-    
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {
-        UIUserNotificationType allNotificationTypes =
-        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
-        UIUserNotificationSettings *settings =
-        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-    } else {
-        // iOS 10 or later
-        #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
-        // For iOS 10 display notification (sent via APNS)
-        [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-        UNAuthorizationOptions authOptions =
-        UNAuthorizationOptionAlert
-        | UNAuthorizationOptionSound
-        | UNAuthorizationOptionBadge;
-        [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:authOptions completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        }];
-        #endif
-    }
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    UNAuthorizationOptions authOptions =
+    UNAuthorizationOptionAlert
+    | UNAuthorizationOptionSound
+    | UNAuthorizationOptionBadge;
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:authOptions completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    }];
     
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
@@ -71,8 +57,6 @@
 }
 
 -(void)disablePush {
-    NSLog(@"disable push");
-    
     [[UIApplication sharedApplication] unregisterForRemoteNotifications];
     
     BAConnector *connector = [BAConnector generateConnector];
@@ -80,10 +64,7 @@
 }
 
 -(void)updatePush {
-    NSLog(@"update push");
-    
     NSString *fcmToken = [FIRMessaging messaging].FCMToken;
-    NSLog(@"FCM registration token: %@", fcmToken);
     
     BAConnector *connector = [BAConnector generateConnector];
     [connector pushServiceUpdateWithPatron:self.appDelegate.currentAccount deviceId:fcmToken delegate:self];
