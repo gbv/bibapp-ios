@@ -45,7 +45,6 @@
 @synthesize searchedForCover;
 @synthesize foundCover;
 @synthesize currentLocation;
-@synthesize tocPopoverController;
 @synthesize tocTableViewController;
 @synthesize statusBarTintUIView;
 @synthesize optionsButton;
