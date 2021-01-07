@@ -1882,7 +1882,7 @@
 }
 
 - (void)displayToc {
-    //[self.tocPopoverController dismissPopoverAnimated:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self performSelector: @selector(showToc) withObject: nil afterDelay: 0];
 }
 
