@@ -14,7 +14,7 @@
 #import "BALocation.h"
 #import "BATocTableViewControllerPad.h"
 
-@interface BASearchViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate, BAConnectorDelegate>
+@interface BASearchViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, BAConnectorDelegate>
 
 @property(strong, nonatomic) BAAppDelegate *appDelegate;
 @property (strong, nonatomic) NSMutableArray *booksLocal;
@@ -54,7 +54,6 @@
 @property BOOL searchedForCover;
 @property BOOL foundCover;
 @property (strong, nonatomic) BALocation *currentLocation;
-@property (strong, nonatomic) UIPopoverPresentationController *tocPopoverController;
 @property (strong, nonatomic) BATocTableViewControllerPad *tocTableViewController;
 @property BOOL initialSearchLocal;
 @property BOOL initialSearch;

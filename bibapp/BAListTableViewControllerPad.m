@@ -1296,11 +1296,8 @@
 }
 
 - (void)tocAction:(id)sender{
-    [self setTocPopoverController: [[UIPopoverPresentationController alloc] initWithPresentedViewController:self.tocTableViewController presentingViewController:self]];
-    [self.tocPopoverController setDelegate:self];
-    //UIButton* senderButton = (UIButton*)sender;
-    //[self.tocPopoverController setPopoverContentSize:CGSizeMake(450, 200)];
-    //[self.tocPopoverController presentPopoverFromRect:senderButton.bounds inView:senderButton permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    [self setModalPresentationStyle:UIModalPresentationPopover];
+    [self presentViewController:self.tocTableViewController animated:YES completion:nil];
 }
 
 - (void)loanAction
