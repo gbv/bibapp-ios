@@ -418,26 +418,41 @@
                 } else {
                     text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] description];
                 }
-                CGSize textSize = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(576, 10000.0f)];
-                return textSize.height + 80;
+                CGRect textRect = [text boundingRectWithSize:CGSizeMake(576, 10000.0f)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                     context:nil];
+                return textRect.size.height + 80;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 1) {
-                CGSize textSize = [self.appDelegate.configuration.currentBibContact sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-                return textSize.height + 80;
+                CGRect textRect = [self.appDelegate.configuration.currentBibContact boundingRectWithSize:CGSizeMake(556, 10000.0f)
+                                                                                                 options:NSStringDrawingUsesLineFragmentOrigin
+                                                                                              attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                                                                 context:nil];
+                return textRect.size.height + 80;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 3) {
                 id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
-                CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-                return textSize.height + 40;
+                CGRect textRect = [(NSString *)currentObject boundingRectWithSize:CGSizeMake(556, 10000.0f)
+                                                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                                          context:nil];
+                return textRect.size.height + 40;
             } else {
                 return 46;
             }
         } else {
             if ([[self.infoTableView indexPathForSelectedRow] section] == 0) {
-                CGSize textSize = [self.appDelegate.configuration.currentBibContact sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-                return textSize.height + 80;
+                CGRect textRect = [self.appDelegate.configuration.currentBibContact boundingRectWithSize:CGSizeMake(556, 10000.0f)
+                                                                                                 options:NSStringDrawingUsesLineFragmentOrigin
+                                                                        attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                                                                 context:nil];
+                return textRect.size.height + 80;
             } else if ([[self.infoTableView indexPathForSelectedRow] section] == 2) {
                 id currentObject = [self.appDelegate.configuration.currentBibImprint objectForKey:[self.appDelegate.configuration.currentBibImprintTitles objectAtIndex:indexPath.row]];
-                CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(556, 10000.0f)];
-                return textSize.height + 40;
+                CGRect textRect = [(NSString *)currentObject boundingRectWithSize:CGSizeMake(556, 10000.0f)
+                                                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                                          context:nil];
+                return textRect.size.height + 40;
             } else {
                 return 46;
             }

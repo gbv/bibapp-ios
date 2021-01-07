@@ -201,8 +201,11 @@
         } else {
             text = [(BAInfoItem *)[self.infoFeed objectAtIndex:[indexPath row]] description];
         }
-        CGSize textSize = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(260, 10000.0f)];
-        return textSize.height + 80;
+        CGRect textRect = [text boundingRectWithSize:CGSizeMake(260, 10000.0f)
+                                             options:NSStringDrawingUsesLineFragmentOrigin
+                                          attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                             context:nil];
+        return textRect.size.height + 80;
     }
 }
 

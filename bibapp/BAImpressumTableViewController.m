@@ -81,8 +81,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id currentObject = [self getImprintTextForKey:[self getImprintKeyForSection:indexPath.section]];
-    CGSize textSize = [(NSString *)currentObject sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(280, FLT_MAX)];
-    return textSize.height + 60;
+    CGRect textRect = [(NSString *)currentObject boundingRectWithSize:CGSizeMake(280, FLT_MAX)
+                                                              options:NSStringDrawingUsesLineFragmentOrigin
+                                                           attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0f]}
+                                                              context:nil];
+    return textRect.size.height + 60;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
