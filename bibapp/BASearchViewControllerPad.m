@@ -1928,11 +1928,6 @@
     return YES;
 }
 
-- (void)searchDisplayController:(UISearchController *)controller didShowSearchResultsTableView:(UITableView *)tableView {
-    [tableView setFrame:CGRectMake(0, 117, 320, 582)];
-    [tableView setHidden:YES];
-}
-
 - (IBAction)listAction:(id)sender {
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"BAEntry" inManagedObjectContext:[self.appDelegate managedObjectContext]];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];

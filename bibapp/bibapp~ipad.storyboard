@@ -320,7 +320,6 @@
                         <outlet property="navigationBarSearch" destination="I5u-pp-yl1" id="pdf-5G-wjl"/>
                         <outlet property="optionsButton" destination="dX3-QP-kRP" id="Ek9-Qr-9hC"/>
                         <outlet property="searchBar" destination="pQX-qP-oSZ" id="0Ht-QL-rFM"/>
-                        <outlet property="searchDisplayController" destination="5gw-vU-K8b" id="tEa-61-7Q5"/>
                         <outlet property="searchSegmentedController" destination="F3x-hp-mzt" id="r0s-om-nas"/>
                         <outlet property="searchTableView" destination="bZB-Bi-bUO" id="TZx-ET-RPu"/>
                         <outlet property="statusBarTintUIView" destination="UbS-tV-GnB" id="wSa-Y6-mxd"/>
@@ -333,14 +332,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdC-3u-4Bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="5gw-vU-K8b">
-                    <connections>
-                        <outlet property="delegate" destination="clg-3E-Vgu" id="YD4-uz-ADH"/>
-                        <outlet property="searchContentsController" destination="clg-3E-Vgu" id="t9j-NR-3no"/>
-                        <outlet property="searchResultsDataSource" destination="clg-3E-Vgu" id="3Im-1J-xpE"/>
-                        <outlet property="searchResultsDelegate" destination="clg-3E-Vgu" id="qP9-L2-ZVb"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-3409.5703125" y="-2916.40625"/>
         </scene>
@@ -1048,7 +1039,6 @@
                         <outlet property="loanButton" destination="ywN-ph-Pts" id="kXr-jV-jzz"/>
                         <outlet property="loanTitleButton" destination="I5K-JU-7wN" id="LQI-hI-z4b"/>
                         <outlet property="optionsButton" destination="0uB-Vu-ACp" id="1MD-am-nFm"/>
-                        <outlet property="searchDisplayController" destination="5gw-vU-K8b" id="F6g-dP-twu"/>
                         <outlet property="statusBarTintUIView" destination="eDn-Qv-6R0" id="nfk-k9-H2x"/>
                         <outlet property="subtitleLabel" destination="nzD-7J-Gnk" id="zOY-Po-ONb"/>
                         <outlet property="titleLabel" destination="SNA-tw-SaE" id="Jmt-Gx-kAg"/>
@@ -1060,14 +1050,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gt5-Iz-Itj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="SIl-HB-aqa">
-                    <connections>
-                        <outlet property="delegate" destination="F8u-o1-2ap" id="zRa-ch-Nsw"/>
-                        <outlet property="searchContentsController" destination="F8u-o1-2ap" id="fQT-A0-Tb3"/>
-                        <outlet property="searchResultsDataSource" destination="F8u-o1-2ap" id="yMI-Bu-hD4"/>
-                        <outlet property="searchResultsDelegate" destination="F8u-o1-2ap" id="uhN-JC-Qxk"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-3410.15625" y="-1403.125"/>
         </scene>
@@ -1473,10 +1455,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Sjv-hh-bWp"/>
-        <segue reference="IQa-mr-9vz"/>
-        <segue reference="Uv5-wX-sJh"/>
-        <segue reference="Mij-Xb-KOy"/>
+        <segue reference="0y8-4D-qGn"/>
+        <segue reference="WjN-WC-96R"/>
+        <segue reference="f6G-SO-Bgw"/>
+        <segue reference="nvZ-Ec-xVW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="idcard.png" width="48" height="48"/>

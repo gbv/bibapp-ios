@@ -223,24 +223,12 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    // Print message ID.
-    if (userInfo[kGCMMessageIDKey]) {
-        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
-    }
-    
-    // Print full message.
-    NSLog(@"%@", userInfo);
-    
-    [self switchToAccountTab];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo

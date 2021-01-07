@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BAIdViewControllerPad : BAIdViewController
+@interface BAIdViewControllerPad : BAIdViewController <UIGestureRecognizerDelegate>
 
 @end
 
