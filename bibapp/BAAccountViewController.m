@@ -786,15 +786,43 @@
             }
         }
         if (foundSelected) {
-            UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                                delegate:self
-                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                                  destructiveButtonTitle:nil
-                                                       otherButtonTitles:BALocalizedString(@"Verlängern"), nil];
-        
-            // Show the sheet
-            [action setTag:10];
-            [action showInView:self.parentViewController.parentViewController.view];
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:nil
+                                       preferredStyle:UIAlertControllerStyleActionSheet];
+
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
+            
+            UIAlertAction* renewAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Verlängern")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                [self setSendEntries:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+                                                for (BAEntryWork *tempEmtry in self.loan) {
+                                                    if (tempEmtry.selected) {
+                                                        [self.sendEntries addObject:tempEmtry];
+                                                    }
+                                                }
+                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                                                //[spinner startAnimating];
+                                                //spinner.frame = CGRectMake(0, 0, 320, 44);
+                                                //self.accountTableView.tableHeaderView = spinner;
+                                                [self.refreshControl beginRefreshing];
+                                                [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+                                                BAConnector *renewConnector = [BAConnector generateConnector];
+                                                [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                                             }];
+
+            [alert addAction:cancelAction];
+            [alert addAction:renewAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
@@ -818,15 +846,43 @@
             }
         }
         if (foundSelected) {
-            UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                                delegate:self
-                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                                  destructiveButtonTitle:nil
-                                                       otherButtonTitles:BALocalizedString(@"Vormerkungen stornieren"), nil];
-        
-            // Show the sheet
-            [action setTag:11];
-            [action showInView:self.parentViewController.parentViewController.view];
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:nil
+                                       preferredStyle:UIAlertControllerStyleActionSheet];
+
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
+            
+            UIAlertAction* reverseAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Vormerkungen stornieren")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                [self setSendEntries:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+                                                for (BAEntryWork *tempEmtry in self.reservation) {
+                                                    if (tempEmtry.selected) {
+                                                        [self.sendEntries addObject:tempEmtry];
+                                                    }
+                                                }
+                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                                                //[spinner startAnimating];
+                                                //spinner.frame = CGRectMake(0, 0, 320, 44);
+                                                //self.accountTableView.tableHeaderView = spinner;
+                                                [self.refreshControl beginRefreshing];
+                                                [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
+                                                BAConnector *cancelConnector = [BAConnector generateConnector];
+                                                [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                                             }];
+
+            [alert addAction:cancelAction];
+            [alert addAction:reverseAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
@@ -847,50 +903,6 @@
 
 - (IBAction)idButtonAction:(id)sender {
     [self performSegueWithIdentifier:@"idSegue" sender:self];
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self.accountTableView setContentOffset:CGPointZero animated:NO];
-    if (actionSheet.tag == 10) {
-        if (buttonIndex == 0) {
-            [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
-            for (BAEntryWork *tempEmtry in self.loan) {
-                if (tempEmtry.selected) {
-                    [self.sendEntries addObject:tempEmtry];
-                }
-            }
-            //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-            //[spinner startAnimating];
-            //spinner.frame = CGRectMake(0, 0, 320, 44);
-            //self.accountTableView.tableHeaderView = spinner;
-            [self.refreshControl beginRefreshing];
-            [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-            BAConnector *renewConnector = [BAConnector generateConnector];
-            [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        }
-    } else if (actionSheet.tag == 11) {
-        if (buttonIndex == 0) {
-            [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
-            for (BAEntryWork *tempEmtry in self.reservation) {
-                if (tempEmtry.selected) {
-                    [self.sendEntries addObject:tempEmtry];
-                }
-            }
-            //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-            //[spinner startAnimating];
-            //spinner.frame = CGRectMake(0, 0, 320, 44);
-            //self.accountTableView.tableHeaderView = spinner;
-            [self.refreshControl beginRefreshing];
-            [self.accountTableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:NO];
-            BAConnector *cancelConnector = [BAConnector generateConnector];
-            [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        }
-    }
 }
 
 - (void)showRenewCancelDialog

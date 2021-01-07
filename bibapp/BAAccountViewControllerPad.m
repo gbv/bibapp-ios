@@ -563,47 +563,6 @@
     }
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if ([self.loan count] > 0) {
-        [self.loanTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
-        [self.loanTableView setContentOffset:CGPointZero animated:NO];
-    }
-    if ([self.reservation count] > 0) {
-        [self.reservationTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
-        [self.reservationTableView setContentOffset:CGPointZero animated:NO];
-    }
-    if (actionSheet.tag == 10) {
-        if (buttonIndex == 0) {
-            [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
-            for (BAEntryWork *tempEmtry in self.loan) {
-                if (tempEmtry.selected) {
-                    [self.sendEntries addObject:tempEmtry];
-                }
-            }
-            self.loanTableView.tableHeaderView = self.loanHeader;
-            BAConnector *renewConnector = [BAConnector generateConnector];
-            [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        }
-    } else if(actionSheet.tag == 11) {
-        if (buttonIndex == 0) {
-            [self setSendEntries:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
-            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
-            for (BAEntryWork *tempEmtry in self.reservation) {
-                if (tempEmtry.selected) {
-                    [self.sendEntries addObject:tempEmtry];
-                }
-            }
-            self.reservationTableView.tableHeaderView = self.reservationHeader;
-            BAConnector *cancelConnector = [BAConnector generateConnector];
-            [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
-        }
-    }
-}
-
 - (void)didPresentAlertView:(UIAlertView *)alertView
 {
     if (alertView.tag == 0) {
@@ -939,15 +898,46 @@
             }
         }
         if (foundSelected) {
-            UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                                delegate:self
-                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                                  destructiveButtonTitle:nil
-                                                       otherButtonTitles:BALocalizedString(@"Verlängern"), nil];
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:nil
+                                       preferredStyle:UIAlertControllerStyleActionSheet];
+
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
             
-            // Show the sheet
-            [action setTag:10];
-            [action showFromBarButtonItem:self.loanBarButton animated:YES];
+            UIAlertAction* renewAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Verlängern")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                if ([self.loan count] > 0) {
+                                                    [self.loanTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+                                                    [self.loanTableView setContentOffset:CGPointZero animated:NO];
+                                                }
+                                                if ([self.reservation count] > 0) {
+                                                    [self.reservationTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+                                                    [self.reservationTableView setContentOffset:CGPointZero animated:NO];
+                                                }
+                                                [self setSendEntries:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+                                                for (BAEntryWork *tempEmtry in self.loan) {
+                                                    if (tempEmtry.selected) {
+                                                        [self.sendEntries addObject:tempEmtry];
+                                                    }
+                                                }
+                                                self.loanTableView.tableHeaderView = self.loanHeader;
+                                                BAConnector *renewConnector = [BAConnector generateConnector];
+                                                [renewConnector accountRenewDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                                             }];
+
+            [alert addAction:cancelAction];
+            [alert addAction:renewAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
@@ -971,15 +961,46 @@
             }
         }
         if (foundSelected) {
-            UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                                delegate:self
-                                                       cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                                  destructiveButtonTitle:nil
-                                                       otherButtonTitles:BALocalizedString(@"Vormerkungen stornieren"), nil];
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:nil
+                                       preferredStyle:UIAlertControllerStyleActionSheet];
+
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
             
-            // Show the sheet
-            [action setTag:11];
-            [action showFromBarButtonItem:self.reservationBarButton animated:YES];
+            UIAlertAction* reverseAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Vormerkungen stornieren")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                if ([self.loan count] > 0) {
+                                                    [self.loanTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+                                                    [self.loanTableView setContentOffset:CGPointZero animated:NO];
+                                                }
+                                                if ([self.reservation count] > 0) {
+                                                    [self.reservationTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:0 animated:NO];
+                                                    [self.reservationTableView setContentOffset:CGPointZero animated:NO];
+                                                }
+                                                [self setSendEntries:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntriesWrapper:[[NSMutableArray alloc] init]];
+                                                [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
+                                                for (BAEntryWork *tempEmtry in self.reservation) {
+                                                    if (tempEmtry.selected) {
+                                                        [self.sendEntries addObject:tempEmtry];
+                                                    }
+                                                }
+                                                self.reservationTableView.tableHeaderView = self.reservationHeader;
+                                                BAConnector *cancelConnector = [BAConnector generateConnector];
+                                                [cancelConnector accountCancelDocs:self.sendEntries WithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
+                                             }];
+
+            [alert addAction:cancelAction];
+            [alert addAction:reverseAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
