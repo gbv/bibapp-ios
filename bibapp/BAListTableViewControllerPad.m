@@ -1131,49 +1131,6 @@
     }
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    BAEntryWork *tempEntry;
-    tempEntry = self.currentEntry;
-   
-    NSInteger itemIndex = actionSheet.tag;
-    if (buttonIndex == 0) {
-        if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Bestellen")] || [[actionSheet buttonTitleAtIndex:0] isEqualToString:self.appDelegate.configuration.currentBibRequestTitle]) {
-            if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
-                NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-                [tempArray addObject:[self.currentDocument.items objectAtIndex:itemIndex]];
-                BAConnector *requestConnector = [BAConnector generateConnector];
-                [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
-            } else {
-                UIAlertController * alertError = [UIAlertController
-                                     alertControllerWithTitle:nil
-                                                      message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
-                                               preferredStyle:UIAlertControllerStyleAlert];
-
-                UIAlertAction* okAction = [UIAlertAction
-                                             actionWithTitle:BALocalizedString(@"Ok")
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction * action) {
-                                                     }];
-
-                [alertError addAction:okAction];
-                [self presentViewController:alertError animated:YES completion:nil];
-            }
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Standortinfo")]) {
-            //[self showLocation];
-            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
-        } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
-            //NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
-            //[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
-        }
-    } else if (buttonIndex == 1) {
-        if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
-            //[self showLocation];
-            [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
-        }
-    }
-}
-
 - (void)actionButtonClick:(id)sender
 {
     //UIButton *clicked = (UIButton *) sender;
@@ -1216,37 +1173,100 @@
                 }
             }
         }
-        UIActionSheet *action;
+        UIAlertController *alert = [UIAlertController
+                         alertControllerWithTitle:nil
+                                          message:nil
+                                   preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction* cancelAction = [UIAlertAction
+                                 actionWithTitle:BALocalizedString(@"Abbrechen")
+                                           style:UIAlertActionStyleCancel
+                                         handler:^(UIAlertAction * action) {
+                                         }];
+        [alert addAction:cancelAction];
+        
         if (tempDocumentItem.order) {
             if (tempDocumentItem.location != nil) {
-               action = [[UIActionSheet alloc] initWithTitle:nil
-                                                    delegate:self
-                                           cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                      destructiveButtonTitle:nil
-                                           otherButtonTitles:orderString, BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
+                UIAlertAction* orderAction = [UIAlertAction
+                                         actionWithTitle:orderString
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                    if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
+                                                        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+                                                        [tempArray addObject:[self.currentDocument.items objectAtIndex:clicked.tag]];
+                                                        BAConnector *requestConnector = [BAConnector generateConnector];
+                                                        [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
+                                                    } else {
+                                                        UIAlertController * alertError = [UIAlertController
+                                                                             alertControllerWithTitle:nil
+                                                                                              message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                                                       preferredStyle:UIAlertControllerStyleAlert];
+
+                                                        UIAlertAction* okAction = [UIAlertAction
+                                                                                     actionWithTitle:BALocalizedString(@"Ok")
+                                                                                               style:UIAlertActionStyleDefault
+                                                                                             handler:^(UIAlertAction * action) {
+                                                                                             }];
+
+                                                        [alertError addAction:okAction];
+                                                        [self presentViewController:alertError animated:YES completion:nil];
+                                                    }
+                                                 }];
+                [alert addAction:orderAction];
+                
+                UIAlertAction* locationAction = [UIAlertAction
+                                         actionWithTitle:BALocalizedString(@"Standortinfo")
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                    [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
+                                                 }];
+                [alert addAction:locationAction];
             } else {
-               action = [[UIActionSheet alloc] initWithTitle:nil
-                                                    delegate:self
-                                           cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                      destructiveButtonTitle:nil
-                                           otherButtonTitles:orderString, nil];
+                UIAlertAction* orderAction = [UIAlertAction
+                                         actionWithTitle:orderString
+                                                   style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction * action) {
+                                                    if (self.appDelegate.currentAccount != nil && self.appDelegate.currentToken != nil) {
+                                                        NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+                                                        [tempArray addObject:[self.currentDocument.items objectAtIndex:clicked.tag]];
+                                                        BAConnector *requestConnector = [BAConnector generateConnector];
+                                                        [requestConnector accountRequestDocs:tempArray WithAccount:self.appDelegate.currentAccount WithToken:self.appDelegate.currentToken WithDelegate:self];
+                                                    } else {
+                                                        UIAlertController * alertError = [UIAlertController
+                                                                             alertControllerWithTitle:nil
+                                                                                              message:BALocalizedString(@"Sie müssen sich zuerst anmelden. Wechseln Sie dazu bitte in den Bereich Konto")
+                                                                                       preferredStyle:UIAlertControllerStyleAlert];
+
+                                                        UIAlertAction* okAction = [UIAlertAction
+                                                                                     actionWithTitle:BALocalizedString(@"Ok")
+                                                                                               style:UIAlertActionStyleDefault
+                                                                                             handler:^(UIAlertAction * action) {
+                                                                                             }];
+
+                                                        [alertError addAction:okAction];
+                                                        [self presentViewController:alertError animated:YES completion:nil];
+                                                    }
+                                                 }];
+                [alert addAction:orderAction];
             }
         } else {
-            action = [[UIActionSheet alloc] initWithTitle:nil
-                                                 delegate:self
-                                        cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                   destructiveButtonTitle:nil
-                                        otherButtonTitles:BALocalizedString(@"Standortinfo"), BALocalizedString(@"Abbrechen"), nil];
+            UIAlertAction* locationAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Standortinfo")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
+                                             }];
+            [alert addAction:locationAction];
         }
-        [action setTag:clicked.tag];
         CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
         if (self.currentEntry.local) {
             //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
-            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         } else {
             //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
-            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
+            //[action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         }
+        [self presentViewController:alert animated:YES completion:nil];
     } else {
         UIAlertController *alert = [UIAlertController
                          alertControllerWithTitle:nil
