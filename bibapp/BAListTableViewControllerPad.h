@@ -15,7 +15,7 @@
 #import "BALocation.h"
 #import "BATocTableViewControllerPad.h"
 
-@interface BAListTableViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UIPopoverControllerDelegate, MFMailComposeViewControllerDelegate, BAConnectorDelegate>
+@interface BAListTableViewControllerPad : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate, MFMailComposeViewControllerDelegate, BAConnectorDelegate>
 
 @property(strong, nonatomic) BAAppDelegate *appDelegate;
 @property (strong, nonatomic) NSArray *dummyBooksMerkliste;
@@ -43,7 +43,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *listNavigationBar;
 @property (weak, nonatomic) IBOutlet UINavigationBar *detailNavigationBar;
 @property (strong, nonatomic) BALocation *currentLocation;
-@property (strong, nonatomic) UIPopoverController *tocPopoverController;
+@property (strong, nonatomic) UIPopoverPresentationController *tocPopoverController;
 @property (strong, nonatomic) BATocTableViewControllerPad *tocTableViewController;
 @property (weak, nonatomic) IBOutlet UIButton *loanButton;
 @property (weak, nonatomic) IBOutlet UIButton *loanTitleButton;

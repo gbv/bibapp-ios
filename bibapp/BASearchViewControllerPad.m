@@ -1883,7 +1883,7 @@
 }
 
 - (void)displayToc {
-    [self.tocPopoverController dismissPopoverAnimated:NO];
+    //[self.tocPopoverController dismissPopoverAnimated:NO];
     [self performSelector: @selector(showToc) withObject: nil afterDelay: 0];
 }
 
@@ -1896,11 +1896,11 @@
 }
 
 - (void)tocAction:(id)sender{
-    [self setTocPopoverController: [[UIPopoverController alloc] initWithContentViewController:self.tocTableViewController]];
+    [self setTocPopoverController: [[UIPopoverPresentationController alloc] initWithPresentedViewController:self.tocTableViewController presentingViewController:self]];
     [self.tocPopoverController setDelegate:self];
-    UIButton* senderButton = (UIButton*)sender;
-    [self.tocPopoverController setPopoverContentSize:CGSizeMake(450, 200)];
-    [self.tocPopoverController presentPopoverFromRect:senderButton.bounds inView:senderButton permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    //UIButton* senderButton = (UIButton*)sender;
+    //[self.tocPopoverController setPopoverContentSize:CGSizeMake(450, 200)];
+    //[self.tocPopoverController presentPopoverFromRect:senderButton.bounds inView:senderButton permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
 - (void)loanAction
