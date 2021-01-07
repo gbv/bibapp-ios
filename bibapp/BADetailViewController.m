@@ -1201,16 +1201,6 @@
 
 - (void)actionButton
 {
-    /*
-    UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                        delegate:self
-                               cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                          destructiveButtonTitle:nil
-                               otherButtonTitles:BALocalizedString(@"Zur Merkliste hinzufügen"), nil];
-    [action setTag:0];
-    [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
-    */
-    
     UIAlertController * alert = [UIAlertController
                     alertControllerWithTitle:nil
                                      message:nil

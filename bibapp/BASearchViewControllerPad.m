@@ -1790,21 +1790,6 @@
             }
         }
     } else {
-        /*UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                            delegate:self
-                                                   cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                              destructiveButtonTitle:nil
-                                                   otherButtonTitles:BALocalizedString(@"Im Browser öffnen"), BALocalizedString(@"Abbrechen"), nil];
-        [action setTag:clicked.tag];
-        CGRect cellRect = [self.detailTableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:clicked.tag inSection:0]];
-        if ([self.searchSegmentedController selectedSegmentIndex] == 0) {
-            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-7, 200, 100) inView:self.detailTableView animated:YES];
-            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
-        } else {
-            //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
-            [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
-        }*/
-        
         UIAlertController *alert = [UIAlertController
                          alertControllerWithTitle:nil
                                           message:nil
