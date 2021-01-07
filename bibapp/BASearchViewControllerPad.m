@@ -1790,7 +1790,7 @@
             }
         }
     } else {
-        UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
+        /*UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
                                                             delegate:self
                                                    cancelButtonTitle:BALocalizedString(@"Abbrechen")
                                               destructiveButtonTitle:nil
@@ -1803,7 +1803,31 @@
         } else {
             //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
             [action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
-        }
+        }*/
+        
+        UIAlertController *alert = [UIAlertController
+                         alertControllerWithTitle:nil
+                                          message:nil
+                                   preferredStyle:UIAlertControllerStyleActionSheet];
+
+        UIAlertAction* cancelAction = [UIAlertAction
+                                 actionWithTitle:BALocalizedString(@"Abbrechen")
+                                           style:UIAlertActionStyleCancel
+                                         handler:^(UIAlertAction * action) {
+                                         }];
+        
+        UIAlertAction* openAction = [UIAlertAction
+                                 actionWithTitle:BALocalizedString(@"Im Browser öffnen")
+                                           style:UIAlertActionStyleDefault
+                                         handler:^(UIAlertAction * action) {
+                                            NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
+                                            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+                                         }];
+
+        [alert addAction:cancelAction];
+        [alert addAction:openAction];
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -1842,8 +1866,8 @@
             //[self showLocation];
             [self performSelector: @selector(showLocation) withObject: nil afterDelay: 0];
         } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
-            NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
-            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            //NSURL *url = [NSURL URLWithString:tempEntry.onlineLocation];
+            //[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
     } else if (buttonIndex == 1) {
         if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {

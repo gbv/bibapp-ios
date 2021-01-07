@@ -1122,18 +1122,32 @@
                 [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
             }
         } else {
-            UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:nil
-                                                     delegate:self
-                                            cancelButtonTitle:BALocalizedString(@"Abbrechen")
-                                       destructiveButtonTitle:nil
-                                            otherButtonTitles:BALocalizedString(@"Im Browser öffnen"), nil];
-            [action setTag:indexPath.row+1];
-            [action showInView:self.scrollViewController.parentViewController.parentViewController.view];
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:nil
+                                              message:nil
+                                       preferredStyle:UIAlertControllerStyleActionSheet];
 
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
+            
+            UIAlertAction* openAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Im Browser öffnen")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
+                                                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+                                             }];
+
+            [alert addAction:cancelAction];
+            [alert addAction:openAction];
+            
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -1302,8 +1316,8 @@
                 [self.scrollViewController setTempLocation:self.currentLocation];
                 [self.scrollViewController performSegueWithIdentifier:@"ItemDetailLocationSegue" sender:self];
             } else if ([[actionSheet buttonTitleAtIndex:0] isEqualToString:BALocalizedString(@"Im Browser öffnen")]) {
-                NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
-                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+                //NSURL *url = [NSURL URLWithString:self.currentEntry.onlineLocation];
+                //[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             }
         } else if (buttonIndex == 1) {
             if ([[actionSheet buttonTitleAtIndex:1] isEqualToString:BALocalizedString(@"Standortinfo")]) {
