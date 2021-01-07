@@ -196,7 +196,7 @@
             }
         }
     }
-	 [cell.titleLabel setText:entry.title];
+	[cell.titleLabel setText:entry.title];
     [cell.subtitleLabel setText:entry.subtitle];
     [cell.image setImage:[entry mediaIcon]];
     [cell.authorLabel setText:entry.author];
