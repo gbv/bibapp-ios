@@ -526,50 +526,48 @@
                }
             }
             [displayString appendString:BALocalizedString(@"Unter Optionen können Sie das Speichern der Login-Daten aktivieren.\nDort können Sie ebenfalls die aktuelle Sitzung beenden.")];
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:BALocalizedString(@"Anmeldung")
-                                                            message:displayString
-                                                           delegate:self cancelButtonTitle:BALocalizedString(@"Abbrechen") otherButtonTitles:BALocalizedString(@"Anmelden"), nil];
-            [alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
-            [alert setTag:0];
-            if (self.currentAccount != nil) {
-                [[alert textFieldAtIndex:0] setText:self.currentAccount];
-            }
-            [[alert textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-            [[alert textFieldAtIndex:0] setPlaceholder:BALocalizedString(@"Benutzernummer")];
-            [[alert textFieldAtIndex:1] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-            [alert show];
-        }
-    }
-}
+            UIAlertController *alert = [UIAlertController
+                             alertControllerWithTitle:BALocalizedString(@"Anmeldung")
+                                              message:displayString
+                                       preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addTextFieldWithConfigurationHandler:
+             ^(UITextField *textField) {
+               textField.placeholder = BALocalizedString(@"Login");
+            }];
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView.tag == 0) {
-        if (buttonIndex == 0) {
-            self.isLoggingIn = NO;
-        } else if(buttonIndex == 1) {
-            [self setCurrentAccount:[[alertView textFieldAtIndex:0] text]];
-            [self setCurrentPassword:[[alertView textFieldAtIndex:1] text]];
-            if (self.appDelegate.options.saveLocalData) {
-                [self.appDelegate.account setAccount:[[alertView textFieldAtIndex:0] text]];
-                [self.appDelegate.account setPassword:[[alertView textFieldAtIndex:1] text]];
-                if (![[self.appDelegate managedObjectContext] save:nil]) {
-                    // Handle the error.
-                }
-            }
-            BAConnector *accountConnector = [BAConnector generateConnector];
-            [accountConnector loginWithAccount:[[alertView textFieldAtIndex:0] text] WithPassword:[[alertView textFieldAtIndex:1] text] WithDelegate:self];
-        }
-    }
-}
+            [alert addTextFieldWithConfigurationHandler:
+             ^(UITextField *textField) {
+               textField.placeholder = BALocalizedString(@"Passwort");
+               textField.secureTextEntry = YES;
+            }];
+            
+            UIAlertAction* cancelAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Abbrechen")
+                                               style:UIAlertActionStyleCancel
+                                             handler:^(UIAlertAction * action) {
+                                             }];
+            [alert addAction:cancelAction];
+            
+            UIAlertAction* loginAction = [UIAlertAction
+                                     actionWithTitle:BALocalizedString(@"Anmelden")
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * action) {
+                                                [self setCurrentAccount:[[[alert textFields] objectAtIndex:0] text]];
+                                                [self setCurrentPassword:[[[alert textFields] objectAtIndex:1] text]];
+                                                if (self.appDelegate.options.saveLocalData) {
+                                                    [self.appDelegate.account setAccount:[[[alert textFields] objectAtIndex:0] text]];
+                                                    [self.appDelegate.account setPassword:[[[alert textFields] objectAtIndex:1] text]];
+                                                    if (![[self.appDelegate managedObjectContext] save:nil]) {
+                                                        // Handle the error.
+                                                    }
+                                                }
+                                                BAConnector *accountConnector = [BAConnector generateConnector];
+                                                [accountConnector loginWithAccount:[[[alert textFields] objectAtIndex:0] text] WithPassword:[[[alert textFields] objectAtIndex:1] text] WithDelegate:self];
+                                             }];
+            [alert addAction:loginAction];
 
-- (void)didPresentAlertView:(UIAlertView *)alertView
-{
-    if (alertView.tag == 0) {
-        if (self.currentAccount != nil) {
-            if (![self.currentAccount isEqualToString:@""]) {
-                [[alertView textFieldAtIndex:1] becomeFirstResponder];
-            }
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }

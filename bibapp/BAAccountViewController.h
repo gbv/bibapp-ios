@@ -11,7 +11,7 @@
 #import "BAAccount.h"
 #import "BAConnectorDelegate.h"
 
-@interface BAAccountViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIAlertViewDelegate, UIActionSheetDelegate, BAConnectorDelegate>
+@interface BAAccountViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIActionSheetDelegate, BAConnectorDelegate>
 
 @property (strong, nonatomic) BAAppDelegate *appDelegate;
 @property (strong, nonatomic) NSMutableArray *loan;
