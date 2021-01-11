@@ -541,14 +541,14 @@
             item = nil;
         }
         
-        UIColor *textColor = [UIColor darkTextColor];
+        UIColor *textColor = [UIColor labelColor];
         BOOL isOverdue = NO;
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *date = [dateFormat dateFromString:item.endtime];
         NSDate *now = [NSDate date];
         if ([now compare:date] == NSOrderedDescending) {
-            textColor = [UIColor redColor];
+            textColor = [UIColor systemRedColor];
             isOverdue = YES;
         }
         

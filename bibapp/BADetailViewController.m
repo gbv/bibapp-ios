@@ -1035,13 +1035,13 @@
             [cell.labels setText:tempDocumentItem.label];
             
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor whiteColor];
-                cell.title.backgroundColor = [UIColor whiteColor];
-                cell.labels.backgroundColor = [UIColor whiteColor];
+                //cell.contentView.backgroundColor = [UIColor whiteColor];
+                //cell.title.backgroundColor = [UIColor whiteColor];
+                //cell.labels.backgroundColor = [UIColor whiteColor];
             }else {
-                cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
-                cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
-                cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                //cell.contentView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                //cell.title.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+                //cell.labels.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
             }
             
             return cell;

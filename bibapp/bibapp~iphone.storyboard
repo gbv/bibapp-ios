@@ -253,13 +253,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-sw-Dsx">
-                                <rect key="frame" x="32" y="80" width="256" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnt-50-Cu4">
+                                <rect key="frame" x="22" y="70" width="276" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-sw-Dsx">
+                                        <rect key="frame" x="10" y="10" width="256" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="RAf-iX-twZ"/>
+                                    <constraint firstItem="s1i-sw-Dsx" firstAttribute="top" secondItem="Qnt-50-Cu4" secondAttribute="top" constant="10" id="SZ8-YJ-LM8"/>
+                                    <constraint firstAttribute="trailing" secondItem="s1i-sw-Dsx" secondAttribute="trailing" constant="10" id="ngh-UU-Gjg"/>
+                                    <constraint firstAttribute="height" constant="110" id="opP-dO-Uge"/>
+                                    <constraint firstItem="s1i-sw-Dsx" firstAttribute="leading" secondItem="Qnt-50-Cu4" secondAttribute="leading" constant="10" id="vPL-yX-ZHQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="s1i-sw-Dsx" secondAttribute="bottom" constant="10" id="xua-tn-VJA"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1k-q5-MgD">
                                 <rect key="frame" x="16" y="180" width="288" height="21"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -293,15 +303,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="s1i-sw-Dsx" firstAttribute="top" secondItem="b7N-yL-Bd8" secondAttribute="bottom" constant="36" id="3bN-CW-qV8"/>
+                            <constraint firstItem="k1k-q5-MgD" firstAttribute="top" secondItem="Qnt-50-Cu4" secondAttribute="bottom" id="42B-8w-DcS"/>
                             <constraint firstItem="RZe-9e-Z3i" firstAttribute="leading" secondItem="a6t-Dx-LkF" secondAttribute="leadingMargin" id="8KY-dX-EiU"/>
-                            <constraint firstItem="k1k-q5-MgD" firstAttribute="top" secondItem="s1i-sw-Dsx" secondAttribute="bottom" id="92l-QS-6lr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qnt-50-Cu4" secondAttribute="trailing" constant="6" id="Ae9-ZT-UDa"/>
                             <constraint firstItem="Gc1-Sy-B9l" firstAttribute="leading" secondItem="a6t-Dx-LkF" secondAttribute="leadingMargin" id="HJV-mD-hpi"/>
+                            <constraint firstItem="Qnt-50-Cu4" firstAttribute="leading" secondItem="a6t-Dx-LkF" secondAttribute="leadingMargin" constant="6" id="Nee-bU-Z6g"/>
                             <constraint firstItem="k1k-q5-MgD" firstAttribute="leading" secondItem="a6t-Dx-LkF" secondAttribute="leadingMargin" id="awP-lA-6Lb"/>
-                            <constraint firstItem="s1i-sw-Dsx" firstAttribute="leading" secondItem="a6t-Dx-LkF" secondAttribute="leadingMargin" constant="16" id="bE9-vR-qiC"/>
                             <constraint firstItem="Gc1-Sy-B9l" firstAttribute="trailing" secondItem="a6t-Dx-LkF" secondAttribute="trailingMargin" id="cAR-4K-yor"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="s1i-sw-Dsx" secondAttribute="trailing" constant="16" id="cbK-8v-u3r"/>
                             <constraint firstItem="RZe-9e-Z3i" firstAttribute="trailing" secondItem="a6t-Dx-LkF" secondAttribute="trailingMargin" id="hmL-nb-cTT"/>
+                            <constraint firstItem="Qnt-50-Cu4" firstAttribute="top" secondItem="b7N-yL-Bd8" secondAttribute="bottom" constant="26" id="jDv-p6-fnf"/>
                             <constraint firstItem="RZe-9e-Z3i" firstAttribute="top" secondItem="Gc1-Sy-B9l" secondAttribute="bottom" constant="8" id="uUf-aQ-UCO"/>
                             <constraint firstItem="Gc1-Sy-B9l" firstAttribute="top" secondItem="k1k-q5-MgD" secondAttribute="bottom" constant="46" id="v1i-9o-UoD"/>
                             <constraint firstItem="k1k-q5-MgD" firstAttribute="trailing" secondItem="a6t-Dx-LkF" secondAttribute="trailingMargin" id="w26-UK-PJ0"/>
@@ -1070,7 +1080,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CbU-PR-FJM"/>
-        <segue reference="EAD-4d-1KH"/>
+        <segue reference="NMk-sz-0Om"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="idcard.png" width="48" height="48"/>

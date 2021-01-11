@@ -47,6 +47,7 @@
                 </subviews>
                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <connections>
                 <outlet property="actionButton" destination="42" id="43"/>
                 <outlet property="labels" destination="36" id="41"/>
