@@ -19,14 +19,13 @@
                 <subviews>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
                         <rect key="frame" x="102" y="10" width="208" height="14.5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="12">
                         <rect key="frame" x="10" y="10" width="84" height="102"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="width" constant="84" id="bCz-eJ-haA"/>
@@ -35,21 +34,21 @@
                     </imageView>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19">
                         <rect key="frame" x="102" y="59" width="208" height="14.5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
-                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="135">
                         <rect key="frame" x="36" y="191.5" width="107" height="18"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="Ahv-7K-Vyj"/>
                             <constraint firstAttribute="width" constant="107" id="dmj-i6-i6A"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                         <state key="normal" title="Mehr zum Inhalt">
-                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" systemColor="systemBlueColor"/>
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
@@ -58,14 +57,14 @@
                     </button>
                     <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="143">
                         <rect key="frame" x="249" y="193.5" width="61" height="13"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="61" id="UU5-Pr-GgJ"/>
                             <constraint firstAttribute="height" constant="13" id="fee-LU-Gmr"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <state key="normal" title="Abstract">
-                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" systemColor="systemBlueColor"/>
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <state key="highlighted">
@@ -77,7 +76,7 @@
                     </button>
                     <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="363">
                         <rect key="frame" x="10" y="190.5" width="22" height="22"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="4cf-Dm-m69"/>
                             <constraint firstAttribute="width" constant="22" id="PpV-AP-wyt"/>
@@ -85,7 +84,7 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                         <state key="normal">
-                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" systemColor="systemBlueColor"/>
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <state key="highlighted">
@@ -94,21 +93,21 @@
                     </button>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="366">
                         <rect key="frame" x="102" y="34.5" width="208" height="14.5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="370">
                         <rect key="frame" x="36" y="217.5" width="114" height="18"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="CxU-UT-KaS"/>
                             <constraint firstAttribute="width" constant="114" id="dwf-9V-fBM"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                         <state key="normal" title="Fernleihoptionen">
-                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" systemColor="systemBlueColor"/>
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
@@ -117,14 +116,14 @@
                     </button>
                     <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="372">
                         <rect key="frame" x="10" y="216.5" width="22" height="22"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="ahr-Vf-tYV"/>
                             <constraint firstAttribute="height" constant="22" id="hsN-Hd-ZpS"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                         <state key="normal">
-                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleColor" systemColor="systemBlueColor"/>
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <state key="highlighted">
@@ -132,6 +131,7 @@
                         </state>
                     </button>
                 </subviews>
+                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="370" firstAttribute="leading" secondItem="372" secondAttribute="trailing" constant="4" id="0bk-H9-qXH"/>
                     <constraint firstAttribute="trailing" secondItem="143" secondAttribute="trailing" constant="10" id="4ML-9L-MeA"/>
@@ -173,8 +173,14 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

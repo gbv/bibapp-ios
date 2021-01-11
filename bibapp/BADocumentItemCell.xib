@@ -34,8 +34,9 @@
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <connections>
                 <outlet property="subtitle" destination="12" id="63"/>
                 <outlet property="title" destination="13" id="62"/>
@@ -46,6 +47,9 @@
     <resources>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
