@@ -177,7 +177,7 @@
         entry = [self.booksLocal objectAtIndex:indexPath.row];
         if (indexPath.row == ([self.booksLocal count]-1)) {
             if (self.searchCountLocal-1 > indexPath.row) {
-                UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                 [spinner startAnimating];
                 spinner.frame = CGRectMake(0, 0, 320, 44);
                 self.searchTableView.tableFooterView = spinner;
@@ -188,7 +188,7 @@
         entry = [self.booksGVK objectAtIndex:indexPath.row];
         if (indexPath.row == ([self.booksGVK count])-1) {
             if (self.searchCount-1 > indexPath.row) {
-                UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                 [spinner startAnimating];
                 spinner.frame = CGRectMake(0, 0, 320, 44);
                 self.searchTableView.tableFooterView = spinner;
@@ -229,7 +229,7 @@
 
 - (void)searchBarSearchButtonClicked
 {
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
     [spinner startAnimating];
     spinner.frame = CGRectMake(0, 0, 320, 44);
     self.searchTableView.tableFooterView = spinner;

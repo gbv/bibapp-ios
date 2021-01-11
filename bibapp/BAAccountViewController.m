@@ -97,7 +97,7 @@
            [self.successfulEntries removeAllObjects];
            [self.sendEntries removeAllObjects];
            [self.actionButton setEnabled:YES];
-           //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+           //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
            //[spinner startAnimating];
            //spinner.frame = CGRectMake(0, 0, 320, 44);
            //self.accountTableView.tableHeaderView = spinner;
@@ -184,7 +184,7 @@
                 [self setCurrentScope:[[json objectForKey:@"scope"] componentsSeparatedByString:@" "]];
                 [self.appDelegate setCurrentScope: self.currentScope];
                 
-                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                 //[spinner startAnimating];
                 //spinner.frame = CGRectMake(0, 0, 320, 44);
                 //self.accountTableView.tableHeaderView = spinner;
@@ -816,7 +816,7 @@
                                                         [self.sendEntries addObject:tempEmtry];
                                                     }
                                                 }
-                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                                                 //[spinner startAnimating];
                                                 //spinner.frame = CGRectMake(0, 0, 320, 44);
                                                 //self.accountTableView.tableHeaderView = spinner;
@@ -876,7 +876,7 @@
                                                         [self.sendEntries addObject:tempEmtry];
                                                     }
                                                 }
-                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                                                //UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
                                                 //[spinner startAnimating];
                                                 //spinner.frame = CGRectMake(0, 0, 320, 44);
                                                 //self.accountTableView.tableHeaderView = spinner;

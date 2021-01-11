@@ -158,7 +158,7 @@
             frame.origin.x = [[UIScreen mainScreen] bounds].size.width * page;
             frame.origin.y = 0;
             frame.size.width = [[UIScreen mainScreen] bounds].size.width;
-            frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.tabBarController.tabBar.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame) - CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
+            frame.size.height = self.view.frame.size.height - CGRectGetHeight(self.tabBarController.tabBar.frame) - CGRectGetHeight(self.navigationController.navigationBar.frame) - CGRectGetHeight([UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager.statusBarFrame);
             BADetailViewController *subViewController = [[BADetailViewController alloc] initWithFrame:frame];
             [subViewController setBookList:self.bookList];
             [subViewController setCurrentEntry:[self.bookList objectAtIndex:page]];

@@ -119,7 +119,7 @@
     BADocument *document = [[BADocument alloc] init];
     [self setCurrentDocument:document];
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
     [spinner startAnimating];
     spinner.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44);
     ((BAItemDetail *)self.view).detailTableView.tableFooterView = spinner;

@@ -89,11 +89,11 @@
 
 - (BOOL)shouldAutorotate
 {
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
 
-    if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+    if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
         return YES;
-    } else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+    } else if (deviceOrientation == UIDeviceOrientationLandscapeRight) {
         return YES;
     } else {
         return NO;

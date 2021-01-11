@@ -63,7 +63,7 @@
        if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
           self.infoFeed = [[NSMutableArray alloc] init];
     
-          UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+          UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
           [spinner startAnimating];
           spinner.frame = CGRectMake(0, 0, 320, 44);
           self.contentTableView.tableFooterView = spinner;
@@ -472,11 +472,11 @@
 
 - (BOOL)shouldAutorotate
 {
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
 
-    if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+    if (deviceOrientation == UIDeviceOrientationLandscapeLeft) {
         return YES;
-    } else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+    } else if (deviceOrientation == UIDeviceOrientationLandscapeRight) {
         return YES;
     } else {
         return NO;

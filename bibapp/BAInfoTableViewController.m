@@ -46,7 +46,7 @@
           if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
              self.infoFeed = [[NSMutableArray alloc] init];
            
-             UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+             UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
              [spinner startAnimating];
              spinner.frame = CGRectMake(0, 0, 320, 44);
              self.infoTableView.tableFooterView = spinner;

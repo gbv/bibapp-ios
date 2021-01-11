@@ -56,7 +56,7 @@
         [self.locationList removeAllObjects];
         [self.tableView reloadData];
         
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
         [spinner startAnimating];
         spinner.frame = CGRectMake(0, 0, 320, 44);
         self.tableView.tableFooterView = spinner;
