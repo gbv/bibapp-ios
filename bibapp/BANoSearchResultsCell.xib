@@ -48,7 +48,7 @@
                         </state>
                     </button>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="lVg-rT-rjW" firstAttribute="top" secondItem="bWj-Ic-pK6" secondAttribute="bottom" constant="8" id="AIH-bR-atX"/>
                     <constraint firstItem="yOO-yy-TNn" firstAttribute="trailing" secondItem="9Fi-ZQ-mGd" secondAttribute="trailingMargin" id="AtT-Sa-xu7"/>
@@ -62,6 +62,7 @@
                     <constraint firstItem="lVg-rT-rjW" firstAttribute="leading" secondItem="9Fi-ZQ-mGd" secondAttribute="leadingMargin" id="gVX-cg-fCi"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <connections>
                 <outlet property="searchGBVButton" destination="yOO-yy-TNn" id="eve-mK-A9z"/>
                 <outlet property="textLabel" destination="lVg-rT-rjW" id="Z05-kl-0CD"/>
@@ -75,8 +76,8 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

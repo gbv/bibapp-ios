@@ -118,7 +118,8 @@
     [self.defaultTextView setEditable:NO];
     [self.defaultTextView setUserInteractionEnabled:NO];
     [self.defaultTextView setOpaque:YES];
-    //[self.defaultTextView setBackgroundColor:[UIColor whiteColor]];
+    [self.defaultTextView setBackgroundColor:[UIColor clearColor]];
+    [self.defaultTextView setTextColor:[UIColor labelColor]];
     [self.view addSubview:self.defaultTextView];
     
     self.defaultImageView = [[UIImageView alloc] initWithFrame:CGRectMake(547, 214, 250, 150)];

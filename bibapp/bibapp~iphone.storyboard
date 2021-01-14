@@ -78,11 +78,11 @@
                             </tableView>
                             <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tha-RQ-EyF">
                                 <rect key="frame" x="0.0" y="73" width="320" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5fJ-8x-iSE"/>
                                 </constraints>
-                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <color key="barTintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -93,7 +93,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I6E-gq-r1R" firstAttribute="top" secondItem="u16-WO-XY6" secondAttribute="bottom" id="3aU-Q6-JBF"/>
                             <constraint firstAttribute="trailing" secondItem="Tha-RQ-EyF" secondAttribute="trailing" id="BkW-ra-MuM"/>
@@ -1081,7 +1081,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CbU-PR-FJM"/>
-        <segue reference="NMk-sz-0Om"/>
+        <segue reference="EAD-4d-1KH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="idcard.png" width="48" height="48"/>
