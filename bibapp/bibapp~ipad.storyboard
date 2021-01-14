@@ -640,10 +640,11 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-jZ-SzC">
                                 <rect key="frame" x="0.0" y="19" width="1024" height="44"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="iHv-Sd-muS"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <items>
                                     <navigationItem title="Info" id="NmR-MO-HLH">
                                         <barButtonItem key="rightBarButtonItem" image="menuIconOptions.png" id="IPX-Bi-HrN">
@@ -659,7 +660,7 @@
                                 <subviews>
                                     <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="EXN-9X-abF">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="655"/>
-                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BASearchCell" id="73X-kb-YfP">
                                                 <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
@@ -690,7 +691,7 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="LuW-3E-51W">
                                         <rect key="frame" x="0.0" y="0.0" width="704" height="655"/>
-                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoContentCell" id="qAo-GP-KRZ">
                                                 <rect key="frame" x="0.0" y="55.5" width="704" height="44"/>
@@ -719,10 +720,10 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhm-II-KOy">
                                 <rect key="frame" x="0.0" y="-1" width="1024" height="20"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7lz-SD-p5I" firstAttribute="leading" secondItem="8uf-CA-TBz" secondAttribute="leading" constant="320" id="05q-aJ-WLv"/>
                             <constraint firstItem="gOX-jZ-SzC" firstAttribute="leading" secondItem="cgi-or-n8F" secondAttribute="leading" id="1s2-Ku-RK2"/>
@@ -1464,10 +1465,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0y8-4D-qGn"/>
+        <segue reference="rQv-b2-BRp"/>
         <segue reference="WjN-WC-96R"/>
         <segue reference="f6G-SO-Bgw"/>
-        <segue reference="nvZ-Ec-xVW"/>
+        <segue reference="biQ-aV-VIq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="idcard.png" width="48" height="48"/>

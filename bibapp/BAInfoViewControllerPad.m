@@ -193,7 +193,7 @@
     if (tableView.tag == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
            if (!self.appDelegate.configuration.currentBibFeedURLIsWebsite) {
@@ -315,8 +315,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.tag == 0) {
-        [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
+        //[[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
         //[[tableView cellForRowAtIndexPath:indexPath].textLabel setTextColor:[UIColor whiteColor]];
+        [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:[UIColor tertiarySystemBackgroundColor]];
         [self.contentTableView reloadData];
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
@@ -494,8 +495,7 @@
     if (currentSelectedIndexPath != nil)
     {
         if (tableView.tag == 0) {
-            //[[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
-            //[[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
+            [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
         }
     }
     
@@ -507,13 +507,11 @@
     if (tableView.tag == 0) {
         if (cell.isSelected == YES)
         {
-            [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-            //[cell.textLabel setTextColor:[UIColor whiteColor]];
+            [cell setBackgroundColor:[UIColor tertiarySystemBackgroundColor]];
         }
         else
         {
-            //[cell setBackgroundColor:[UIColor clearColor]];
-            //[cell.textLabel setTextColor:[UIColor blackColor]];
+            [cell setBackgroundColor:[UIColor clearColor]];
         }
     }
 }
