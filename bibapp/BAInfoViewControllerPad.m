@@ -316,7 +316,7 @@
 {
     if (tableView.tag == 0) {
         [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-        [[tableView cellForRowAtIndexPath:indexPath].textLabel setTextColor:[UIColor whiteColor]];
+        //[[tableView cellForRowAtIndexPath:indexPath].textLabel setTextColor:[UIColor whiteColor]];
         [self.contentTableView reloadData];
     } else {
         if (![self.appDelegate.configuration.currentBibFeedURL isEqualToString:@""]) {
@@ -494,8 +494,8 @@
     if (currentSelectedIndexPath != nil)
     {
         if (tableView.tag == 0) {
-            [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
-            [[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
+            //[[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
+            //[[tableView cellForRowAtIndexPath:currentSelectedIndexPath].textLabel setTextColor:[UIColor blackColor]];
         }
     }
     
@@ -508,12 +508,12 @@
         if (cell.isSelected == YES)
         {
             [cell setBackgroundColor:self.appDelegate.configuration.currentBibTintColor];
-            [cell.textLabel setTextColor:[UIColor whiteColor]];
+            //[cell.textLabel setTextColor:[UIColor whiteColor]];
         }
         else
         {
-            [cell setBackgroundColor:[UIColor clearColor]];
-            [cell.textLabel setTextColor:[UIColor blackColor]];
+            //[cell setBackgroundColor:[UIColor clearColor]];
+            //[cell.textLabel setTextColor:[UIColor blackColor]];
         }
     }
 }

@@ -58,7 +58,7 @@
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="3" firstAttribute="top" secondItem="fuN-Ix-GpI" secondAttribute="top" constant="6" id="4AF-DD-3JM"/>
                     <constraint firstItem="279" firstAttribute="leading" secondItem="fuN-Ix-GpI" secondAttribute="leading" constant="10" id="A5N-02-c8Z"/>
@@ -75,7 +75,7 @@
                     <constraint firstItem="7" firstAttribute="leading" secondItem="fuN-Ix-GpI" secondAttribute="leading" constant="10" id="uxe-6j-VXD"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
             <connections>
                 <outlet property="status" destination="275" id="276"/>
                 <outlet property="statusInfo" destination="279" id="280"/>
@@ -86,11 +86,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -1011,9 +1011,9 @@
             [cell.statusInfo setText:statusInfo];
             
             if (indexPath.row % 2) {
-                cell.contentView.backgroundColor = [UIColor secondarySystemBackgroundColor];
+                //cell.contentView.backgroundColor = [UIColor secondarySystemBackgroundColor];
             } else {
-                cell.contentView.backgroundColor = [UIColor secondarySystemBackgroundColor];
+                //cell.contentView.backgroundColor = [UIColor secondarySystemBackgroundColor];
             }
             
             return cell;
