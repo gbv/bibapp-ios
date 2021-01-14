@@ -65,7 +65,7 @@
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ekZ-lF-Vd4" firstAttribute="top" secondItem="64" secondAttribute="bottom" constant="-6" id="3vt-aa-4tF"/>
                     <constraint firstItem="61" firstAttribute="top" secondItem="60" secondAttribute="bottom" constant="-5" id="62P-NU-Uae"/>

@@ -312,6 +312,7 @@
                     [header setFrame:CGRectMake(0, 0, 320, 30)];
                     [header setTextAlignment:NSTextAlignmentCenter];
                     self.accountTableView.tableHeaderView = header;
+                    [self.accountTableView.tableHeaderView setBackgroundColor:[UIColor secondarySystemBackgroundColor]];
                 }
             }
            [self.refreshControl endRefreshing];
@@ -415,6 +416,7 @@
                 [header setFrame:CGRectMake(0, 0, 320, 30)];
                 [header setTextAlignment:NSTextAlignmentCenter];
                 self.accountTableView.tableHeaderView = header;
+                [self.accountTableView.tableHeaderView setBackgroundColor:[UIColor secondarySystemBackgroundColor]];
             }
             [self.refreshControl endRefreshing];
         } else if ([command isEqualToString:@"accountLoadFees"]) {

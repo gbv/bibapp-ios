@@ -1659,6 +1659,30 @@
     } else if (tableView.tag == 1) {
         [self actionButtonClick:[tableView cellForRowAtIndexPath:indexPath]];
     }
+    [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:[UIColor tertiarySystemBackgroundColor]];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *currentSelectedIndexPath = [tableView indexPathForSelectedRow];
+    if (currentSelectedIndexPath != nil)
+    {
+        [[tableView cellForRowAtIndexPath:currentSelectedIndexPath] setBackgroundColor:[UIColor clearColor]];
+    }
+    
+    return indexPath;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (cell.isSelected == YES)
+    {
+        [cell setBackgroundColor:[UIColor tertiarySystemBackgroundColor]];
+    }
+    else
+    {
+        [cell setBackgroundColor:[UIColor clearColor]];
+    }
 }
 
 - (void)activateActionButton:(UIButton *) button
