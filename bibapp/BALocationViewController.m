@@ -61,6 +61,7 @@
     [self.textView setScrollEnabled:YES];
     [self.textView setEditable:NO];
     [self.textView setDataDetectorTypes:UIDataDetectorTypeAll];
+    [self.textView setFont:[UIFont fontWithName:@"System" size:14.0]];
     UITextView *tempTextView = self.textView;
     [self.view addSubview:tempTextView];
     
