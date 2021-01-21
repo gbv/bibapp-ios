@@ -147,9 +147,9 @@
            [self.successfulEntriesWrapper removeAllObjects];
            [self setSuccessfulEntries:[[NSMutableDictionary alloc] init]];
            [self.sendEntries removeAllObjects];
-           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
-           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
-           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
+           [self.loanLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
+           [self.reservationLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
+           [self.feeLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
            BAConnector *accountLoanConnector = [BAConnector generateConnector];
            [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
            BAConnector *accountFeesConnector = [BAConnector generateConnector];
@@ -376,8 +376,8 @@
                 }
            [self.loanRefreshControl endRefreshing];
            [self.reservationRefreshControl endRefreshing];
-           [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
-           [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
+           [self.loanLoadingLabel setText:@""];
+           [self.reservationLoadingLabel setText:@""];
         } else if ([command isEqualToString:@"accountLoadFees"]) {
             [self.feesSum removeAllObjects];
             [self.fees removeAllObjects];
@@ -420,7 +420,7 @@
                     [self.feeTableView setTableHeaderView:nil];
                 }
            [self.feeRefreshControl endRefreshing];
-           [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:@""];
+           [self.feeLoadingLabel setText:@""];
         } else if ([command isEqualToString:@"accountLoadInterloanList"]) {
         } else if ([command isEqualToString:@"accountRenewDocs"]) {
             BAConnector *accountLoanConnector = [BAConnector generateConnector];
@@ -1039,8 +1039,8 @@
       [self reset];
       [self loginActionWithMessage:@""];
    } else {
-      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
-      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
+      [self.loanLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
+      [self.reservationLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
       BAConnector *accountLoanConnector = [BAConnector generateConnector];
       [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
    }
@@ -1051,7 +1051,7 @@
       [self reset];
       [self loginActionWithMessage:@""];
    } else {
-      [self.feeLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
+      [self.feeLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
       BAConnector *accountFeesConnector = [BAConnector generateConnector];
       [accountFeesConnector accountLoadFeesWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
    }
@@ -1088,13 +1088,13 @@
 
 - (void)commandIsNotInScope:(NSString *)command {
    if ([command isEqualToString:@"accountRenewDocs"]) {
-      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
-      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
+      [self.loanLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
+      [self.reservationLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
       BAConnector *accountLoanConnector = [BAConnector generateConnector];
       [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
    } else if ([command isEqualToString:@"accountCancelDocs"]) {
-      [self.loanLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
-      [self.reservationLoadingLabel performSelectorInBackground:@selector(setText:) withObject:BALocalizedString(@"wird geladen ...")];
+      [self.loanLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
+      [self.reservationLoadingLabel setText:BALocalizedString(@"wird geladen ...")];
       BAConnector *accountLoanConnector = [BAConnector generateConnector];
       [accountLoanConnector accountLoadLoanListWithAccount:self.currentAccount WithToken:self.currentToken WithDelegate:self];
    }
