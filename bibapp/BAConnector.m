@@ -710,13 +710,13 @@ static BAConnector *sharedConnector = nil;
 
 - (NSString*)encodeToPercentEscapeString:(NSString *)string
 {
-   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]));
+   NSString *returnString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
    return returnString;
 }
 
 - (NSString*)decodeFromPercentEscapeString:(NSString *)string
 {
-   NSString *returnString = CFBridgingRelease((__bridge CFTypeRef _Nullable)([string stringByRemovingPercentEncoding]));
+   NSString *returnString = [string stringByRemovingPercentEncoding];
    return returnString;
 }
 
