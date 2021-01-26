@@ -700,16 +700,19 @@
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
             if ([[self.loan objectAtIndex:newIndexPath.row] canRenewCancel]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                [((BAItemAccountCell *)cell).checkbox setHidden:YES];
                 [[self.loan objectAtIndex:newIndexPath.row] setSelected:YES];
             }
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {
             if ([[self.reservation objectAtIndex:newIndexPath.row] canRenewCancel]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                [((BAItemAccountCell *)cell).checkbox setHidden:YES];
                 [[self.reservation objectAtIndex:newIndexPath.row] setSelected:YES];
             }
         }
     } else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
+        [((BAItemAccountCell *)cell).checkbox setHidden:NO];
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
             [[self.loan objectAtIndex:newIndexPath.row] setSelected:NO];
         } else if ([self.accountSegmentedController selectedSegmentIndex] == 1) {

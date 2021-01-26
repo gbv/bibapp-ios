@@ -22,10 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="checkbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="28">
-                        <rect key="frame" x="293" y="63" width="23" height="23"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="checkbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="28">
+                        <rect key="frame" x="277" y="65" width="23" height="23"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="wMr-t9-fqP"/>
+                            <constraint firstAttribute="width" constant="23" id="yZn-dm-5ur"/>
+                        </constraints>
                     </imageView>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Signatur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51">
                         <rect key="frame" x="119" y="44" width="166" height="11"/>
@@ -118,9 +121,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="28" firstAttribute="top" secondItem="hVc-aC-Sg1" secondAttribute="top" constant="65" id="RXx-HI-VMF"/>
+                    <constraint firstAttribute="trailing" secondItem="28" secondAttribute="trailing" constant="20" id="qv2-Ki-MuO"/>
+                </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <connections>
                 <outlet property="checkbox" destination="28" id="50"/>
                 <outlet property="dateLabel" destination="52" id="54"/>
@@ -146,9 +153,6 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

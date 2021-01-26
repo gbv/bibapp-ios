@@ -857,16 +857,19 @@
         if (theTableView.tag == 0) {
             if ([[self.loan objectAtIndex:newIndexPath.row] canRenewCancel]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                [((BAItemAccountCell *)cell).checkbox setHidden:YES];
                 [[self.loan objectAtIndex:newIndexPath.row] setSelected:YES];
             }
         } else if (theTableView.tag == 1) {
             if ([[self.reservation objectAtIndex:newIndexPath.row] canRenewCancel]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                [((BAItemAccountCell *)cell).checkbox setHidden:YES];
                 [[self.reservation objectAtIndex:newIndexPath.row] setSelected:YES];
             }
         }
     } else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
+        [((BAItemAccountCell *)cell).checkbox setHidden:NO];
         if (theTableView.tag == 0) {
             [[self.loan objectAtIndex:newIndexPath.row] setSelected:NO];
         } else if (theTableView.tag == 1) {

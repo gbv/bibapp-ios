@@ -130,7 +130,6 @@
 		8F07B19D1BFB72DB0012C325 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F07B19E1BFB72DB0012C325 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F07B19F1BFB72DB0012C325 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F07B1A01BFB72DB0012C325 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F07B1A11BFB72DB0012C325 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F07B1A21BFB72DB0012C325 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8F07B1A31BFB72DB0012C325 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
@@ -252,7 +251,6 @@
 		8F11407B167F217000E033F6 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F11407D167F217000E033F6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F114080167F217000E033F6 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F180736192B3A7B0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8F180737192B3A7B0099F579 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
@@ -365,7 +363,6 @@
 		8F1D83A9192A2E7000A9898D /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F1D83AA192A2E7000A9898D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F1D83AD192A2E7000A9898D /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F1D83AE192A2E7000A9898D /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8F1D83AF192A2E7000A9898D /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -628,7 +625,6 @@
 		8F4A7F342029B78400CA6C0F /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F4A7F352029B78400CA6C0F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F4A7F362029B78400CA6C0F /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F4A7F372029B78400CA6C0F /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F4A7F382029B78400CA6C0F /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F4A7F392029B78400CA6C0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8F4A7F3A2029B78400CA6C0F /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
@@ -901,7 +897,6 @@
 		8F8A75DB1781BF4700CCF7DB /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F8A75DC1781BF4700CCF7DB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F8A75DD1781BF4700CCF7DB /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F8A75DE1781BF4700CCF7DB /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F8A75DF1781BF4700CCF7DB /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F8A75E01781BF4700CCF7DB /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8F8A75E11781BF4700CCF7DB /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1024,7 +1019,6 @@
 		8F8A76701781C05400CCF7DB /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F8A76711781C05400CCF7DB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F8A76721781C05400CCF7DB /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F8A76731781C05400CCF7DB /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F8A76741781C05400CCF7DB /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F8A76751781C05400CCF7DB /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8F8A76761781C05400CCF7DB /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1147,7 +1141,6 @@
 		8F8A77051781C0D800CCF7DB /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F8A77061781C0D800CCF7DB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F8A77071781C0D800CCF7DB /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F8A77081781C0D800CCF7DB /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F8A77091781C0D800CCF7DB /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F8A770A1781C0D800CCF7DB /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8F8A770B1781C0D800CCF7DB /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1302,7 +1295,6 @@
 		8F8EB6121A93689000548F24 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8F8EB6131A93689000548F24 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8F8EB6141A93689000548F24 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8F8EB6151A93689000548F24 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8F8EB6161A93689000548F24 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8F8EB6171A93689000548F24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8F8EB6181A93689000548F24 /* BAImpressumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA876B16820535005A9962 /* BAImpressumCell.xib */; };
@@ -1463,7 +1455,6 @@
 		8FA8F55719501E6B006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F55819501E6B006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F55919501E6B006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F55A19501E6B006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F55B19501E6B006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F55C19501E6B006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F55D19501E6B006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1599,7 +1590,6 @@
 		8FA8F5F919502224006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F5FA19502224006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F5FB19502224006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F5FC19502224006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F5FD19502224006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F5FE19502224006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F5FF19502224006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1735,7 +1725,6 @@
 		8FA8F69B1950228D006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F69C1950228D006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F69D1950228D006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F69E1950228D006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F69F1950228D006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F6A01950228D006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F6A11950228D006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -1871,7 +1860,6 @@
 		8FA8F73D195022BC006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F73E195022BC006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F73F195022BC006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F740195022BC006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F741195022BC006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F742195022BC006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F743195022BC006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2007,7 +1995,6 @@
 		8FA8F7DF1950230D006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F7E01950230D006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F7E11950230D006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F7E21950230D006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F7E31950230D006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F7E41950230D006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F7E51950230D006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2143,7 +2130,6 @@
 		8FA8F8811950233A006CD05A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FA8F8821950233A006CD05A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FA8F8831950233A006CD05A /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FA8F8841950233A006CD05A /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FA8F8851950233A006CD05A /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FA8F8861950233A006CD05A /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FA8F8871950233A006CD05A /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2369,7 +2355,6 @@
 		8FAD97D91A0CFD3600C3A5D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1D83EB192A301F00A9898D /* Images.xcassets */; };
 		8FAD97DA1A0CFD3600C3A5D1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FAD97DB1A0CFD3600C3A5D1 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FAD97DC1A0CFD3600C3A5D1 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FAD97DD1A0CFD3600C3A5D1 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FAD97DE1A0CFD3600C3A5D1 /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FAD97DF1A0CFD3600C3A5D1 /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2568,7 +2553,6 @@
 		8FD610D5190916EA009E2358 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8FD610D6190916EA009E2358 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FD610D7190916EA009E2358 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FD610D8190916EA009E2358 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FD610D9190916EA009E2358 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FD610DA190916EA009E2358 /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FD610DB190916EA009E2358 /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2698,7 +2682,6 @@
 		8FD61171190916EF009E2358 /* BAItemAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20D3166DF5D500E74231 /* BAItemAccountCell.xib */; };
 		8FD61172190916EF009E2358 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20DB166DF84200E74231 /* Icon@2x.png */; };
 		8FD61173190916EF009E2358 /* BAFeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F20E0166E1EA700E74231 /* BAFeeCell.xib */; };
-		8FD61174190916EF009E2358 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FD61175190916EF009E2358 /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FD61176190916EF009E2358 /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
 		8FD61177190916EF009E2358 /* menuIconList.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76B116B1448300844658 /* menuIconList.png */; };
@@ -2873,7 +2856,6 @@
 		8FF2701016393BF200099665 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2700F16393BF200099665 /* Default@2x.png */; };
 		8FF2701216393BF200099665 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF2701116393BF200099665 /* Default-568h@2x.png */; };
 		8FF2701516393BF200099665 /* bibapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2701316393BF200099665 /* bibapp.xcdatamodeld */; };
-		8FF5BFE7166F2FAD0039AB6C /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE6166F2FAD0039AB6C /* checkbox.png */; };
 		8FF5BFE9166F82520039AB6C /* BAItemDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */; };
 		8FF5BFEC166F85A50039AB6C /* BAItemDetailTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5BFEB166F85A50039AB6C /* BAItemDetailTitleCell.m */; };
 		8FFE76B416B1448300844658 /* menuIconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FFE76AF16B1448300844658 /* menuIconAccount.png */; };
@@ -3090,6 +3072,24 @@
 		9F741F3E2190509C00DB66D8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1661252166109D00C2EC84 /* NotificationCenter.framework */; };
 		9F741F3F2190509C00DB66D8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D4F2162681100776F14 /* UserNotifications.framework */; };
 		9F741F402190509C00DB66D8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F670D5721626C0C00776F14 /* UserNotificationsUI.framework */; };
+		9F7DBDC425C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDC525C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDC625C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDC725C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDC825C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDC925C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCA25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCB25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCC25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCD25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCE25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDCF25C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD025C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD125C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD225C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD325C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD425C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
+		9F7DBDD525C05B1C00CD3D0E /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */; };
 		9FACC12D22A7BE810069B551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FACC12C22A7BE810069B551 /* GoogleService-Info.plist */; };
 		9FACC13022A7C5690069B551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FACC12F22A7C5690069B551 /* GoogleService-Info.plist */; };
 		9FCDEEBE235A00CF00620DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDEEBD235A00CF00620DCF /* GoogleService-Info.plist */; };
@@ -3802,7 +3802,6 @@
 		8FF2701116393BF200099665 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8FF2701416393BF200099665 /* bibapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bibapp.xcdatamodel; sourceTree = "<group>"; };
 		8FF2701C16393BF200099665 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8FF5BFE6166F2FAD0039AB6C /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
 		8FF5BFE8166F82520039AB6C /* BAItemDetailTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAItemDetailTitleCell.xib; sourceTree = "<group>"; };
 		8FF5BFEA166F85A50039AB6C /* BAItemDetailTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAItemDetailTitleCell.h; sourceTree = "<group>"; };
 		8FF5BFEB166F85A50039AB6C /* BAItemDetailTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAItemDetailTitleCell.m; sourceTree = "<group>"; };
@@ -3962,6 +3961,7 @@
 		9F741F382190507200DB66D8 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F3A2190507B00DB66D8 /* libProtobuf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtobuf.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F741F3C2190508800DB66D8 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
 		9F94FF6A21B1950B00424F0C /* BibApp SM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp SM.entitlements"; sourceTree = "<group>"; };
 		9FACC12C22A7BE810069B551 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase/ThULB/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FACC12E22A7C1950069B551 /* BibApp DHGE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BibApp DHGE.entitlements"; sourceTree = "<group>"; };
@@ -4666,7 +4666,7 @@
 				8FFE76AE16B1447000844658 /* menuIcons */,
 				8FFE768F16B142ED00844658 /* mediaIcons */,
 				8F7E1ED716D6569100EE3BF9 /* actionButton.png */,
-				8FF5BFE6166F2FAD0039AB6C /* checkbox.png */,
+				9F7DBDC325C05B1C00CD3D0E /* checkbox@2x.png */,
 				8FEACCAC16D38F8D00E0565E /* transparentImage.png */,
 				8FD7C10316F37EC00073D037 /* gear.png */,
 				8FD7C10416F37EC00073D037 /* gear2.png */,
@@ -5916,7 +5916,6 @@
 				8F07B19D1BFB72DB0012C325 /* BAItemAccountCell.xib in Resources */,
 				8F07B19E1BFB72DB0012C325 /* Icon@2x.png in Resources */,
 				8F07B19F1BFB72DB0012C325 /* BAFeeCell.xib in Resources */,
-				8F07B1A01BFB72DB0012C325 /* checkbox.png in Resources */,
 				8F07B1A11BFB72DB0012C325 /* BAItemDetailTitleCell.xib in Resources */,
 				8F07B1A21BFB72DB0012C325 /* Images.xcassets in Resources */,
 				8F07B1A31BFB72DB0012C325 /* BAImpressumCell.xib in Resources */,
@@ -5930,6 +5929,7 @@
 				B4CD1F7E21481B0A008F0A46 /* mediaIconT.png in Resources */,
 				B4CD1EA621481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8F07B1A81BFB72DB0012C325 /* menuIconSearch.png in Resources */,
+				9F7DBDD425C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F07B1A91BFB72DB0012C325 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F07B1AA1BFB72DB0012C325 /* menuIconAccount@2x.png in Resources */,
 				8F07B1AB1BFB72DB0012C325 /* menuIconInfo@2x.png in Resources */,
@@ -6000,7 +6000,6 @@
 				B4CD1F1521481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F11407E167F217000E033F6 /* BAFeeCell.xib in Resources */,
 				B43CE0A120FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8F114080167F217000E033F6 /* checkbox.png in Resources */,
 				8F114081167F217000E033F6 /* BAItemDetailTitleCell.xib in Resources */,
 				8FFE76B516B1448300844658 /* menuIconAccount.png in Resources */,
 				8FFE76B916B1448300844658 /* menuIconList.png in Resources */,
@@ -6026,6 +6025,7 @@
 				8FE94A7716DCBC9B004D33B7 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8FD7C0FF16F364F20073D037 /* BAListTableViewControllerPad.h in Resources */,
 				8FD7C10616F37EC00073D037 /* gear.png in Resources */,
+				9F7DBDC525C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FD7C10816F37EC00073D037 /* gear2.png in Resources */,
 				8FE9812E16F7393600328531 /* BAInfoCellPad.xib in Resources */,
 				8FE9813516F74A2800328531 /* BAImpressumCellPad.xib in Resources */,
@@ -6079,7 +6079,6 @@
 				B4CD1F1B21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8F1D83AB192A2E7000A9898D /* BAFeeCell.xib in Resources */,
 				B43CE0A720FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8F1D83AC192A2E7000A9898D /* checkbox.png in Resources */,
 				8F1D83AD192A2E7000A9898D /* BAItemDetailTitleCell.xib in Resources */,
 				8F1D83AE192A2E7000A9898D /* menuIconAccount.png in Resources */,
 				8F1D83AF192A2E7000A9898D /* menuIconList.png in Resources */,
@@ -6087,6 +6086,7 @@
 				8F1D83B1192A2E7000A9898D /* menuIconSearch.png in Resources */,
 				8F1D83B2192A2E7000A9898D /* menuIconAccount@2x.png in Resources */,
 				8F1D83B3192A2E7000A9898D /* menuIconInfo@2x.png in Resources */,
+				9F7DBDCB25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				B4CD1EE521481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8F1D83B4192A2E7000A9898D /* menuIconList@2x.png in Resources */,
 				8F1D83B5192A2E7000A9898D /* menuIconOptions@2x.png in Resources */,
@@ -6151,7 +6151,6 @@
 				8F4A7F342029B78400CA6C0F /* BAItemAccountCell.xib in Resources */,
 				8F4A7F352029B78400CA6C0F /* Icon@2x.png in Resources */,
 				8F4A7F362029B78400CA6C0F /* BAFeeCell.xib in Resources */,
-				8F4A7F372029B78400CA6C0F /* checkbox.png in Resources */,
 				8F4A7F382029B78400CA6C0F /* BAItemDetailTitleCell.xib in Resources */,
 				8F4A7F392029B78400CA6C0F /* Images.xcassets in Resources */,
 				8F4A7F3A2029B78400CA6C0F /* BAImpressumCell.xib in Resources */,
@@ -6165,6 +6164,7 @@
 				B4CD1F7F21481B0A008F0A46 /* mediaIconT.png in Resources */,
 				B4CD1EA721481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8F4A7F3F2029B78400CA6C0F /* menuIconSearch.png in Resources */,
+				9F7DBDD525C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F4A7F402029B78400CA6C0F /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F4A7F412029B78400CA6C0F /* menuIconAccount@2x.png in Resources */,
 				8F4A7F422029B78400CA6C0F /* menuIconInfo@2x.png in Resources */,
@@ -6231,7 +6231,6 @@
 				8F8A75DD1781BF4700CCF7DB /* BAFeeCell.xib in Resources */,
 				8F85FD8A215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F1621481B0A008F0A46 /* mediaIconK.png in Resources */,
-				8F8A75DE1781BF4700CCF7DB /* checkbox.png in Resources */,
 				8F8A75DF1781BF4700CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A75E01781BF4700CCF7DB /* menuIconAccount.png in Resources */,
 				8F8A75E11781BF4700CCF7DB /* menuIconList.png in Resources */,
@@ -6243,6 +6242,7 @@
 				B4CD1E8621481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A75E41781BF4700CCF7DB /* menuIconAccount@2x.png in Resources */,
 				B4CD1EAA21481B0A008F0A46 /* mediaIconBe.png in Resources */,
+				9F7DBDC625C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F180738192B3A7C0099F579 /* Images.xcassets in Resources */,
 				8F8A75E51781BF4700CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A75E61781BF4700CCF7DB /* menuIconList@2x.png in Resources */,
@@ -6315,7 +6315,6 @@
 				8F8A76721781C05400CCF7DB /* BAFeeCell.xib in Resources */,
 				8F85FD8B215CCB670003029A /* idcard@2x.png in Resources */,
 				B4CD1F1721481B0A008F0A46 /* mediaIconK.png in Resources */,
-				8F8A76731781C05400CCF7DB /* checkbox.png in Resources */,
 				8F8A76741781C05400CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
 				8F8A76751781C05400CCF7DB /* menuIconAccount.png in Resources */,
 				8F8A76761781C05400CCF7DB /* menuIconList.png in Resources */,
@@ -6327,6 +6326,7 @@
 				B4CD1E8721481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A76791781C05400CCF7DB /* menuIconAccount@2x.png in Resources */,
 				B4CD1EAB21481B0A008F0A46 /* mediaIconBe.png in Resources */,
+				9F7DBDC725C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F180739192B3A7D0099F579 /* Images.xcassets in Resources */,
 				8F8A767A1781C05400CCF7DB /* menuIconInfo@2x.png in Resources */,
 				8F8A767B1781C05400CCF7DB /* menuIconList@2x.png in Resources */,
@@ -6394,7 +6394,6 @@
 				8F8A77051781C0D800CCF7DB /* BAItemAccountCell.xib in Resources */,
 				8F8A77061781C0D800CCF7DB /* Icon@2x.png in Resources */,
 				8F8A77071781C0D800CCF7DB /* BAFeeCell.xib in Resources */,
-				8F8A77081781C0D800CCF7DB /* checkbox.png in Resources */,
 				8F6CC95921494DFF0099B0CF /* belugino.ttf in Resources */,
 				B4CD1F0621481B0A008F0A46 /* mediaIconH.png in Resources */,
 				8F8A77091781C0D800CCF7DB /* BAItemDetailTitleCell.xib in Resources */,
@@ -6447,6 +6446,7 @@
 				B4CD1E8821481B09008F0A46 /* mediaIconB.png in Resources */,
 				8F8A77371781C0D800CCF7DB /* BibApp-HI-Info.plist in Resources */,
 				8F36FC3A1784611900C99951 /* BACatalogueTableViewCell.xib in Resources */,
+				9F7DBDC825C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F5E217D17858B7F00EDD948 /* IconHAWK.png in Resources */,
 				8F5E217F17858B8700EDD948 /* IconHAWK@2x.png in Resources */,
 				8F5E218117858B9000EDD948 /* iPadIconHAWK.png in Resources */,
@@ -6484,7 +6484,6 @@
 				8F8EB6121A93689000548F24 /* BAItemAccountCell.xib in Resources */,
 				8F8EB6131A93689000548F24 /* Icon@2x.png in Resources */,
 				8F8EB6141A93689000548F24 /* BAFeeCell.xib in Resources */,
-				8F8EB6151A93689000548F24 /* checkbox.png in Resources */,
 				8F8EB6161A93689000548F24 /* BAItemDetailTitleCell.xib in Resources */,
 				8F8EB6171A93689000548F24 /* Images.xcassets in Resources */,
 				8F8EB6181A93689000548F24 /* BAImpressumCell.xib in Resources */,
@@ -6519,6 +6518,7 @@
 				8F8EB63B1A93689000548F24 /* BADocumentItemElementCellPad.xib in Resources */,
 				8F8EB63C1A93689000548F24 /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				B43CE0AF20FF3F6700AFBC78 /* Localizable.strings in Resources */,
+				9F7DBDD325C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F8EB63D1A93689000548F24 /* BAListTableViewControllerPad.h in Resources */,
 				8F8EB63E1A93689000548F24 /* gear.png in Resources */,
 				8F8EB63F1A93689000548F24 /* gear2.png in Resources */,
@@ -6567,7 +6567,6 @@
 				B4CD1F1C21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F55919501E6B006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0A820FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FA8F55A19501E6B006CD05A /* checkbox.png in Resources */,
 				8FA8F55B19501E6B006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F55C19501E6B006CD05A /* menuIconAccount.png in Resources */,
 				8FA8F55D19501E6B006CD05A /* menuIconList.png in Resources */,
@@ -6593,6 +6592,7 @@
 				8FA8F57D19501E6B006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F57E19501E6B006CD05A /* gear.png in Resources */,
 				8FA8F57F19501E6B006CD05A /* gear2.png in Resources */,
+				9F7DBDCC25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FA8F58019501E6B006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F58119501E6B006CD05A /* BAImpressumCellPad.xib in Resources */,
 				B4CD1F7621481B0A008F0A46 /* mediaIconT.png in Resources */,
@@ -6646,7 +6646,6 @@
 				B4CD1F1D21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F5FB19502224006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0A920FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FA8F5FC19502224006CD05A /* checkbox.png in Resources */,
 				8FA8F5FD19502224006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F5FE19502224006CD05A /* menuIconAccount.png in Resources */,
 				8FA8F5FF19502224006CD05A /* menuIconList.png in Resources */,
@@ -6672,6 +6671,7 @@
 				8FA8F61F19502224006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F62019502224006CD05A /* gear.png in Resources */,
 				8FA8F62119502224006CD05A /* gear2.png in Resources */,
+				9F7DBDCD25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FA8F62219502224006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F62319502224006CD05A /* BAImpressumCellPad.xib in Resources */,
 				B4CD1F7721481B0A008F0A46 /* mediaIconT.png in Resources */,
@@ -6725,7 +6725,6 @@
 				B4CD1F1E21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F69D1950228D006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AA20FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FA8F69E1950228D006CD05A /* checkbox.png in Resources */,
 				8FA8F69F1950228D006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F6A01950228D006CD05A /* menuIconAccount.png in Resources */,
 				8FA8F6A11950228D006CD05A /* menuIconList.png in Resources */,
@@ -6751,6 +6750,7 @@
 				8FA8F6C11950228D006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F6C21950228D006CD05A /* gear.png in Resources */,
 				8FA8F6C31950228D006CD05A /* gear2.png in Resources */,
+				9F7DBDCE25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FA8F6C41950228D006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F6C51950228D006CD05A /* BAImpressumCellPad.xib in Resources */,
 				B4CD1F7821481B0A008F0A46 /* mediaIconT.png in Resources */,
@@ -6804,7 +6804,6 @@
 				B4CD1F1F21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F73F195022BC006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AB20FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FA8F740195022BC006CD05A /* checkbox.png in Resources */,
 				8FA8F741195022BC006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F742195022BC006CD05A /* menuIconAccount.png in Resources */,
 				8FA8F743195022BC006CD05A /* menuIconList.png in Resources */,
@@ -6830,6 +6829,7 @@
 				8FA8F762195022BC006CD05A /* BADocumentItemElementCellNonLocalPad.xib in Resources */,
 				8FA8F763195022BC006CD05A /* BAListTableViewControllerPad.h in Resources */,
 				8FA8F764195022BC006CD05A /* gear.png in Resources */,
+				9F7DBDCF25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FA8F765195022BC006CD05A /* gear2.png in Resources */,
 				8FA8F766195022BC006CD05A /* BAInfoCellPad.xib in Resources */,
 				8FA8F767195022BC006CD05A /* BAImpressumCellPad.xib in Resources */,
@@ -6880,7 +6880,6 @@
 				8FA8F7DF1950230D006CD05A /* Images.xcassets in Resources */,
 				8FA8F7E01950230D006CD05A /* Icon@2x.png in Resources */,
 				8FA8F7E11950230D006CD05A /* BAFeeCell.xib in Resources */,
-				8FA8F7E21950230D006CD05A /* checkbox.png in Resources */,
 				B4CD1EEA21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F7E31950230D006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F7E41950230D006CD05A /* menuIconAccount.png in Resources */,
@@ -6891,6 +6890,7 @@
 				B4CD1F7A21481B0A008F0A46 /* mediaIconT.png in Resources */,
 				B4CD1EA221481B0A008F0A46 /* mediaIconM.png in Resources */,
 				8FA8F7E71950230D006CD05A /* menuIconSearch.png in Resources */,
+				9F7DBDD025C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FA8F7E81950230D006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F7E91950230D006CD05A /* menuIconInfo@2x.png in Resources */,
 				8FA8F7EA1950230D006CD05A /* menuIconList@2x.png in Resources */,
@@ -6961,7 +6961,6 @@
 				B4CD1F2121481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FA8F8831950233A006CD05A /* BAFeeCell.xib in Resources */,
 				B43CE0AD20FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FA8F8841950233A006CD05A /* checkbox.png in Resources */,
 				8FA8F8851950233A006CD05A /* BAItemDetailTitleCell.xib in Resources */,
 				8FA8F8861950233A006CD05A /* menuIconAccount.png in Resources */,
 				8FA8F8871950233A006CD05A /* menuIconList.png in Resources */,
@@ -6969,6 +6968,7 @@
 				8FA8F8891950233A006CD05A /* menuIconSearch.png in Resources */,
 				8FA8F88A1950233A006CD05A /* menuIconAccount@2x.png in Resources */,
 				8FA8F88B1950233A006CD05A /* menuIconInfo@2x.png in Resources */,
+				9F7DBDD125C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				B4CD1EEB21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FA8F88C1950233A006CD05A /* menuIconList@2x.png in Resources */,
 				8FA8F88D1950233A006CD05A /* menuIconOptions@2x.png in Resources */,
@@ -7039,7 +7039,6 @@
 				B4CD1F2221481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FAD97DB1A0CFD3600C3A5D1 /* BAFeeCell.xib in Resources */,
 				B43CE0AE20FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FAD97DC1A0CFD3600C3A5D1 /* checkbox.png in Resources */,
 				8FAD97DD1A0CFD3600C3A5D1 /* BAItemDetailTitleCell.xib in Resources */,
 				8FAD97DE1A0CFD3600C3A5D1 /* menuIconAccount.png in Resources */,
 				8FAD97DF1A0CFD3600C3A5D1 /* menuIconList.png in Resources */,
@@ -7047,6 +7046,7 @@
 				8FAD97E11A0CFD3600C3A5D1 /* menuIconSearch.png in Resources */,
 				8FAD97E21A0CFD3600C3A5D1 /* menuIconAccount@2x.png in Resources */,
 				8FAD97E31A0CFD3600C3A5D1 /* menuIconInfo@2x.png in Resources */,
+				9F7DBDD225C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				B4CD1EEC21481B0A008F0A46 /* mediaIconA.png in Resources */,
 				8FAD97E41A0CFD3600C3A5D1 /* menuIconList@2x.png in Resources */,
 				8FAD97E51A0CFD3600C3A5D1 /* menuIconOptions@2x.png in Resources */,
@@ -7117,7 +7117,6 @@
 				B4CD1F1921481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FD610D7190916EA009E2358 /* BAFeeCell.xib in Resources */,
 				B43CE0A520FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FD610D8190916EA009E2358 /* checkbox.png in Resources */,
 				8FD610D9190916EA009E2358 /* BAItemDetailTitleCell.xib in Resources */,
 				8FD610DA190916EA009E2358 /* menuIconAccount.png in Resources */,
 				8FD610DB190916EA009E2358 /* menuIconList.png in Resources */,
@@ -7143,6 +7142,7 @@
 				8FD610FB190916EA009E2358 /* BAListTableViewControllerPad.h in Resources */,
 				8FD610FC190916EA009E2358 /* gear.png in Resources */,
 				8FD610FD190916EA009E2358 /* gear2.png in Resources */,
+				9F7DBDC925C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FD610FE190916EA009E2358 /* BAInfoCellPad.xib in Resources */,
 				8FD610FF190916EA009E2358 /* BAImpressumCellPad.xib in Resources */,
 				B4CD1F7321481B0A008F0A46 /* mediaIconT.png in Resources */,
@@ -7196,7 +7196,6 @@
 				B4CD1F1A21481B0A008F0A46 /* mediaIconK.png in Resources */,
 				8FD61173190916EF009E2358 /* BAFeeCell.xib in Resources */,
 				B43CE0A620FF3F6700AFBC78 /* Localizable.strings in Resources */,
-				8FD61174190916EF009E2358 /* checkbox.png in Resources */,
 				8FD61175190916EF009E2358 /* BAItemDetailTitleCell.xib in Resources */,
 				8FD61176190916EF009E2358 /* menuIconAccount.png in Resources */,
 				8FD61177190916EF009E2358 /* menuIconList.png in Resources */,
@@ -7222,6 +7221,7 @@
 				8FD61197190916EF009E2358 /* BAListTableViewControllerPad.h in Resources */,
 				8FD61198190916EF009E2358 /* gear.png in Resources */,
 				8FD61199190916EF009E2358 /* gear2.png in Resources */,
+				9F7DBDCA25C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8FD6119A190916EF009E2358 /* BAInfoCellPad.xib in Resources */,
 				8FD6119B190916EF009E2358 /* BAImpressumCellPad.xib in Resources */,
 				B4CD1F7421481B0A008F0A46 /* mediaIconT.png in Resources */,
@@ -7269,7 +7269,6 @@
 				8F1F20D4166DF5D500E74231 /* BAItemAccountCell.xib in Resources */,
 				8F1F20DC166DF84200E74231 /* Icon@2x.png in Resources */,
 				8F1F20E1166E1EA700E74231 /* BAFeeCell.xib in Resources */,
-				8FF5BFE7166F2FAD0039AB6C /* checkbox.png in Resources */,
 				8FF5BFE9166F82520039AB6C /* BAItemDetailTitleCell.xib in Resources */,
 				8F180736192B3A7B0099F579 /* Images.xcassets in Resources */,
 				8FBA876C16820535005A9962 /* BAImpressumCell.xib in Resources */,
@@ -7283,6 +7282,7 @@
 				B4CD1F6E21481B0A008F0A46 /* mediaIconT.png in Resources */,
 				B4CD1E9621481B09008F0A46 /* mediaIconM.png in Resources */,
 				8FFE76BC16B1448300844658 /* menuIconSearch.png in Resources */,
+				9F7DBDC425C05B1C00CD3D0E /* checkbox@2x.png in Resources */,
 				8F2190B516B2AFA100512C85 /* BAAccountTableHeaderTextView.xib in Resources */,
 				8F0D9F7A16B68AD8000CED81 /* menuIconAccount@2x.png in Resources */,
 				8F0D9F7C16B68AD8000CED81 /* menuIconInfo@2x.png in Resources */,
