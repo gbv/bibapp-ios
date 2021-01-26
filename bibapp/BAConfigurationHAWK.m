@@ -15,24 +15,8 @@
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibStandardCatalogue = @"HAWK Bibliothek – Gesamtbestand";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", @"Lokale Suche", @"Lokale Suche", nil]];
-    //[self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", @"Lokale Suche BSG", @"Lokale Suche BSG", nil]];
-    //[self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-4", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", @"Lokale Suche GK", @"Lokale Suche GK", nil]];
-    //[self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-3", @"Holzminden, Management, Soziale Arbeit, Bauen", @"Lokale Suche MSB", @"Lokale Suche MSB", nil]];
-    //[self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-2", @"Göttingen, Ressourcenmanagement", @"Lokale Suche R", @"Lokale Suche R", nil]];
-    //[self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3-1", @"Göttingen, Naturwissenschaften", @"Lokale Suche N", @"Lokale Suche N", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-9", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
-    //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-4", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];
-    //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-3", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
-    //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-2", @"Göttingen, Ressourcenmanagement", nil]];
-    //[self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3-1", @"Göttingen, Naturwissenschaften", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-neu.effective-webwork.de/", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-9.effective-webwork.de/", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-4.effective-webwork.de/", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-3.effective-webwork.de/", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-2.effective-webwork.de/", @"Göttingen, Ressourcenmanagement", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"http://paia-hawk-1.effective-webwork.de/", @"Göttingen, Naturwissenschaften", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.01 green:0.11 blue:0.26 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Impressum", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
@@ -43,12 +27,6 @@
     self.currentBibContact = @"HAWK Hochschule für angewandte Wissenschaft und Kunst\nHildesheim/Holzminden/Göttingen\nhttp://www.hawk-hhg.de/bibliothek/default.php\n\nHildesheim\nBibliothek auf dem Campus\nRenatastr. 11 Haus A\n31134 Hildesheim\nTel.: +49(0)5121 881-119\nE-Mail: bibliothek.bib@hawk-hhg.de\n\nHolzminden\nBibliothek Management, Soziale Arbeit, Bauen\nBillerbeck 2\n37603 Holzminden\nTel.: +49(0)5531 126-256\nE-Mail: bibliothek-hol.bib@hawk-hhg.de\n\nGöttingen\nBibliothek Ressourcenmanagement\nBüsgenweg 1A\n37077 Göttingen\nTel.: +49(0)551 5032-153\nE-Mail: bibliothek-r.bib@hawk-hhg.de\n\nBibliothek Naturwissenschaften und Technik\nVon-Ossietzky-Str. 99\n37085 Göttingen\nTel.: +49(0)551 3705-156\nE-Mail: bibliothek-n.bib@hawk-hhg.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil3";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
-    //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Hildesheim, Bauwesen, Soziale Arbeit und Gesundheit", nil]];
-    //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Hildesheim, Gestaltung, Erhaltung von Kulturgut", nil]];
-    //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Holzminden, Management, Soziale Arbeit, Bauen", nil]];
-    //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Ressourcenmanagement", nil]];
-    //[self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil3", @"Göttingen, Naturwissenschaften", nil]];
-    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=BC061&page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=BC061&page=20", @"HAWK Bibliothek – Gesamtbestand", nil]];
 }
 

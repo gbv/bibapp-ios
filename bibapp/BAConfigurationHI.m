@@ -15,7 +15,6 @@
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
-    //[self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-Hil2", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil2", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"https://www.uni-hildesheim.de/index.php?id=8920&type=100";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.85 green:0.2 blue:0.32 alpha:1.0];
@@ -29,10 +28,8 @@
     self.currentBibContact = @"Anschrift\nUniversitätsbibliothek Hildesheim\nMarienburger Platz 22\n31141 Hildesheim\n\nwww.uni-hildesheim.de/bibliothek\n\nAuskunft\nTelefon: (05121) 883-93010\nE-Mail: auskunft@uni-hildesheim.de\n\nAusleihe\nTelefon: (05121) 883-93020\nE-Mail: ausleihe@uni-hildesheim.de";
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-Hil2";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-Hil2", @"Standard-Katalog", nil]];
-    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id=AN087&page=20", @"Standard-Katalog", nil]];
     self.usePushService = YES;
-    //self.pushServiceUrl = @"http://192.168.2.241:8080/app_dev.php";
     self.pushServiceUrl = @"https://daiaplus.beluga-core.de/app_dev.php";
     self.pushServiceApiKey = @"C0S5h2P9BNeJ";
     self.pushServiceGoogleServiceFile = @"GoogleService-Info";

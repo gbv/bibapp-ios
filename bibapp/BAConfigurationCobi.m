@@ -32,8 +32,6 @@
    [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-205", @"Standard-Katalog", nil]];
     
    self.usePushService = NO;
-   //self.pushServiceUrl = @"https://daiaplus.beluga-core.de/app_dev.php";
-   //self.pushServiceApiKey = @"C0S5h2P9BNeJ";
    self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 

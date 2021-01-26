@@ -32,7 +32,6 @@
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-1876", @"UFB Erfurt/Gotha", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-547", @"UB Erfurt", nil]];
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-39", @"FB Gotha", nil]];
-    //self.currentBibSearchCountURL = @"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20";
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"UFB Erfurt/Gotha", nil]];
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"UB Erfurt", nil]];
     [self.currentBibSearchCountURLs addObject:[[NSArray alloc] initWithObjects:@"http://dbspixel.hbz-nrw.de/count?id_EX461&amp;page=20", @"FB Gotha", nil]];
