@@ -509,7 +509,7 @@
        
        for (int i = currentLine; i < [newStringArray count]-1; i++) {
           NSString *tempString = [newStringArray objectAtIndex:i];
-          if ([tempString hasPrefix:@"In: "]) {
+          if ([tempString hasPrefix:@"In: "] || [tempString hasPrefix:@"Enthalten in: "]) {
              if (![displayString isEqualToString:@""]) {
                 [displayString appendString:@"\n"];
              }

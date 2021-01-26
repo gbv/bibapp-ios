@@ -473,6 +473,9 @@
                 if (rangeValueType.length > 0) {
                     [tempEntry setMediaIconRelatedItemType:@"host"];
                     NSRange rangeValueDisplayLabel = [[[relatedItem attributeForName:@"displayLabel"] stringValue] rangeOfString:@"In: " options:NSCaseInsensitiveSearch];
+                    if (rangeValueDisplayLabel.length == 0) {
+                        rangeValueDisplayLabel = [[[relatedItem attributeForName:@"displayLabel"] stringValue] rangeOfString:@"Enthalten in: " options:NSCaseInsensitiveSearch];
+                    }
                     if (rangeValueDisplayLabel.length > 0) {
                         [tempEntry setMediaIconDisplayLabel:@"In"];
                     }
