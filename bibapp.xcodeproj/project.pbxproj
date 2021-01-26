@@ -9559,6 +9559,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9569,6 +9570,7 @@
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9592,6 +9594,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp Cobi.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9602,6 +9605,7 @@
 				INFOPLIST_FILE = "BibApp Cobi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9626,6 +9630,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VW9E5RXV2N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9636,6 +9641,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -9663,6 +9669,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VW9E5RXV2N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9673,6 +9680,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9706,6 +9714,7 @@
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9737,6 +9746,7 @@
 				INFOPLIST_FILE = "BibApp-UB-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9760,6 +9770,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9770,6 +9781,7 @@
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9793,6 +9805,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp IAI.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -9803,6 +9816,7 @@
 				INFOPLIST_FILE = "BibApp-IAI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9835,6 +9849,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9866,6 +9881,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-BLS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9900,6 +9916,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9934,6 +9951,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-IL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9966,6 +9984,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -9996,6 +10015,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-HAWK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10028,6 +10048,7 @@
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10060,6 +10081,7 @@
 				INFOPLIST_FILE = "BibApp-ÄZB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10083,6 +10105,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp DHGE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10092,6 +10115,7 @@
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10115,6 +10139,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp DHGE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10124,6 +10149,7 @@
 				INFOPLIST_FILE = "BibApp-DHGE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10147,6 +10173,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp HfM WE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -10157,6 +10184,7 @@
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10180,6 +10208,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp HfM WE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DG2S2C98D2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -10190,6 +10219,7 @@
 				INFOPLIST_FILE = "BibApp-HfM-WE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10223,6 +10253,7 @@
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10256,6 +10287,7 @@
 				INFOPLIST_FILE = "BibApp-NDH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10279,7 +10311,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10289,7 +10321,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.6.2;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10313,7 +10345,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp FHE.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10323,7 +10355,7 @@
 				INFOPLIST_FILE = "BibApp-FHE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.6.2;
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10357,6 +10389,7 @@
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10390,6 +10423,7 @@
 				INFOPLIST_FILE = "BibApp-SM-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10422,6 +10456,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10454,6 +10489,7 @@
 				INFOPLIST_FILE = "BibApp-UFB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10485,6 +10521,7 @@
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10516,6 +10553,7 @@
 				INFOPLIST_FILE = "BibApp-TU-BS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10539,6 +10577,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp ThULB.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10548,6 +10587,7 @@
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10571,6 +10611,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp ThULB.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -10580,6 +10621,7 @@
 				INFOPLIST_FILE = "BibApp-ThULB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10612,6 +10654,7 @@
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10644,6 +10687,7 @@
 				INFOPLIST_FILE = "BibApp-EAH-Jena-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10791,6 +10835,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp LG.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -10801,6 +10846,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
@@ -10825,6 +10871,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BibApp LG.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
@@ -10835,6 +10882,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/bibapp/BibApp-LG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 3.0.0;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"$(inherited)",
