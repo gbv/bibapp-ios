@@ -14,7 +14,7 @@
 {
    self.currentBibSearchMaximumRecords = @"20";
    [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-27", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-27", @"Standard-Katalog", nil]];
+   [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-27/daia", @"Standard-Katalog", nil]];
    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-27", @"Standard-Katalog", nil]];
    self.currentBibFeedURL = @"http://www.thulb.uni-jena.de";
    [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.thulb.uni-jena.de", @"Standard-Katalog", nil]];

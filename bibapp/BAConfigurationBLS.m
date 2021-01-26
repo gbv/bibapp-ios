@@ -15,8 +15,8 @@
     self.searchTitle = @"Recherche";
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-h360", @"Standard-Katalog", @"OPAC", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-H360", @"Standard-Katalog", nil]];
-    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/isil/DE-H360", @"Standard-Katalog", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-H360/daia", @"Standard-Katalog", nil]];
+    [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-H360", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.62 green:0.12 blue:0.19 alpha:1.0];
     self.currentBibImprintTitles = [[NSMutableArray alloc] initWithObjects:@"Anbieter", @"Vertreter", @"Angaben zum Datenschutz", @"Rechtliche Hinweise zur Haftung", @"Gestaltung und Umsetzung", nil];
@@ -29,7 +29,6 @@
     self.currentBibLocationURI = @"http://uri.gbv.de/organization/isil/DE-H360";
     [self.currentBibLocationURIs addObject:[[NSArray alloc] initWithObjects:@"http://uri.gbv.de/organization/isil/DE-H360", @"Standard-Katalog", nil]];
     self.currentBibHideDepartment = YES;
-    self.currentBibUsePAIAWrapper = YES;
     self.pushServiceGoogleServiceFile = @"GoogleService-Info";
 }
 

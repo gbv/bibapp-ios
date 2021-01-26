@@ -14,7 +14,7 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ilm1", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ilm1", @"Standard-Katalog", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Ilm1/daia", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Ilm1", @"Standard-Katalog", nil]];
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"http://www.tu-ilmenau.de/ub/nachrichtenarchiv/", @"Standard-Katalog", nil]];
     self.currentBibFeedURLIsWebsite = YES;

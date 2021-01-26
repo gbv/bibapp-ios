@@ -17,9 +17,9 @@
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-1876", @"UFB Erfurt/Gotha", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-547", @"UB Erfurt", @"Lokale Suche", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-39", @"FB Gotha", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UFB Erfurt/Gotha", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"UB Erfurt", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-547", @"FB Gotha", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547/daia", @"UFB Erfurt/Gotha", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547/daia", @"UB Erfurt", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547/daia", @"FB Gotha", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UFB Erfurt/Gotha", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"UB Erfurt", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://opac.uni-erfurt.de/DE-547", @"FB Gotha", nil]];

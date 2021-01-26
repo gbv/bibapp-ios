@@ -14,7 +14,7 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-wim8", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Wim8", @"Standard-Katalog", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Wim8/daia", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Wim8", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [UIColor colorWithRed:0.200000F green:0.403922F blue:0.701961F alpha:1.0F];

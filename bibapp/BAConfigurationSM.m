@@ -14,7 +14,7 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-shm2", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Shm2", @"Standard-Katalog", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Shm2/daia", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Shm2", @"Standard-Katalog", nil]];
     [self.currentBibFeedURLs addObject:[[NSArray alloc] initWithObjects:@"https://www.hs-schmalkalden.de/hochschule/einrichtungen/bibliothek.html", @"Standard-Katalog", nil]];
     self.currentBibTintColor = [UIColor colorWithRed:0.211765F green:0.305882F blue:0.427451F alpha:1.0F];

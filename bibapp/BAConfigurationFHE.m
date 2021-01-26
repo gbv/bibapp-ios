@@ -14,7 +14,7 @@
 {
     self.currentBibSearchMaximumRecords = @"20";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-546", @"Standard-Katalog", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-546", @"Standard-Katalog", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-546/daia", @"Standard-Katalog", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-546", @"Standard-Katalog", nil]];
     self.currentBibFeedURL = @"http://www.fh-erfurt.de/fhe/?id=663&type=100&tx_ttnews[cat]=2";
     self.currentBibTintColor = [UIColor colorWithRed:0.000000F green:0.200000F blue:0.400000F alpha:1.0F];

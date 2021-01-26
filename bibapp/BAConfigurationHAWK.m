@@ -15,7 +15,7 @@
     self.currentBibSearchMaximumRecords = @"20";
     self.currentBibStandardCatalogue = @"HAWK Bibliothek – Gesamtbestand";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-hil3", @"HAWK Bibliothek – Gesamtbestand", @"Lokale Suche", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/de-hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil3/daia", @"HAWK Bibliothek – Gesamtbestand", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.gbv.de/DE-Hil3", @"HAWK Bibliothek – Gesamtbestand", nil]];
     self.currentBibFeedURL = @"";
     self.currentBibTintColor = [[UIColor alloc] initWithRed:0.01 green:0.11 blue:0.26 alpha:1.0];

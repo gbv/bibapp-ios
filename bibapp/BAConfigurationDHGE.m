@@ -16,8 +16,8 @@
     self.currentBibStandardCatalogue = @"Gera";
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ga20", @"Gera", @"Gera", @"Lokale Suche", nil]];
     [self.currentBibLocalSearchURLs addObject:[[NSArray alloc] initWithObjects:@"opac-de-ei6", @"Eisenach", @"Eisenach", @"Lokale Suche", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ga20", @"Gera", nil]];
-    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"http://daia.gbv.de/isil/DE-Ei6", @"Eisenach", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ga20/daia", @"Gera", nil]];
+    [self.currentBibDetailURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ei6/daia", @"Eisenach", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ga20", @"Gera", nil]];
     [self.currentBibPAIAURLs addObject:[[NSArray alloc] initWithObjects:@"https://paia.thulb.uni-jena.de/DE-Ei6", @"Eisenach", nil]];
     self.currentBibFeedURL = @"http://bibliothek-gera.dhge.de";
