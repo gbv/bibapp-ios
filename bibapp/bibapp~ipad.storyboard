@@ -1496,7 +1496,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVT-Bl-hDj">
-                                <rect key="frame" x="20" y="279" width="500" height="21"/>
+                                <rect key="frame" x="20" y="299" width="500" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LbE-UT-lx3"/>
                                 </constraints>
@@ -1504,15 +1504,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xl8-Cz-S5u">
-                                <rect key="frame" x="142" y="83" width="256" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPm-iA-dSi">
+                                <rect key="frame" x="132" y="73" width="276" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xl8-Cz-S5u">
+                                        <rect key="frame" x="10" y="10" width="256" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="Xc2-Xx-cmb"/>
-                                    <constraint firstAttribute="height" constant="100" id="w4R-5F-rzv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xl8-Cz-S5u" secondAttribute="bottom" constant="10" id="4FY-x2-Qok"/>
+                                    <constraint firstAttribute="width" constant="276" id="Brl-QS-B3r"/>
+                                    <constraint firstItem="Xl8-Cz-S5u" firstAttribute="top" secondItem="XPm-iA-dSi" secondAttribute="top" constant="10" id="JJ0-fB-ByC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xl8-Cz-S5u" secondAttribute="trailing" constant="10" id="Up3-dB-eWk"/>
+                                    <constraint firstItem="Xl8-Cz-S5u" firstAttribute="leading" secondItem="XPm-iA-dSi" secondAttribute="leading" constant="10" id="VUG-yT-qD7"/>
+                                    <constraint firstItem="Xl8-Cz-S5u" firstAttribute="top" secondItem="XPm-iA-dSi" secondAttribute="top" constant="10" id="X2N-95-C3d"/>
+                                    <constraint firstAttribute="height" constant="120" id="cfK-TA-Ez4"/>
+                                    <constraint firstItem="Xl8-Cz-S5u" firstAttribute="leading" secondItem="XPm-iA-dSi" secondAttribute="leading" constant="10" id="iOy-Uq-UGA"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-gT-fbf">
-                                <rect key="frame" x="20" y="250" width="500" height="21"/>
+                                <rect key="frame" x="20" y="270" width="500" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Rny-xi-62b"/>
                                 </constraints>
@@ -1521,7 +1533,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMe-7D-OZt">
-                                <rect key="frame" x="20" y="183" width="500" height="21"/>
+                                <rect key="frame" x="20" y="203" width="500" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pPq-Ae-J0k"/>
                                 </constraints>
@@ -1530,19 +1542,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MVT-Bl-hDj" firstAttribute="top" secondItem="WYc-gT-fbf" secondAttribute="bottom" constant="8" id="0V2-1e-Lm0"/>
                             <constraint firstItem="MVT-Bl-hDj" firstAttribute="leading" secondItem="un7-O7-oSi" secondAttribute="leadingMargin" id="4sR-fy-fSR"/>
                             <constraint firstItem="QMe-7D-OZt" firstAttribute="trailing" secondItem="un7-O7-oSi" secondAttribute="trailingMargin" id="7H1-P9-rpX"/>
                             <constraint firstItem="WYc-gT-fbf" firstAttribute="trailing" secondItem="un7-O7-oSi" secondAttribute="trailingMargin" id="7Li-7U-8iI"/>
                             <constraint firstItem="MVT-Bl-hDj" firstAttribute="trailing" secondItem="un7-O7-oSi" secondAttribute="trailingMargin" id="7hm-Ve-UtU"/>
+                            <constraint firstItem="XPm-iA-dSi" firstAttribute="leading" secondItem="un7-O7-oSi" secondAttribute="leadingMargin" constant="112" id="8ia-Oh-WdQ"/>
                             <constraint firstItem="WYc-gT-fbf" firstAttribute="top" secondItem="QMe-7D-OZt" secondAttribute="bottom" constant="46" id="AZA-e7-vTB"/>
                             <constraint firstItem="QMe-7D-OZt" firstAttribute="leading" secondItem="un7-O7-oSi" secondAttribute="leadingMargin" id="DYY-r4-dVh"/>
-                            <constraint firstItem="Xl8-Cz-S5u" firstAttribute="top" secondItem="s3J-TY-BxY" secondAttribute="bottom" constant="83" id="aEx-xx-oCm"/>
+                            <constraint firstItem="XPm-iA-dSi" firstAttribute="top" secondItem="s3J-TY-BxY" secondAttribute="bottom" constant="73" id="eOT-XA-RJv"/>
                             <constraint firstItem="WYc-gT-fbf" firstAttribute="leading" secondItem="un7-O7-oSi" secondAttribute="leadingMargin" id="f8n-cn-G7I"/>
-                            <constraint firstItem="Xl8-Cz-S5u" firstAttribute="centerX" secondItem="un7-O7-oSi" secondAttribute="centerX" id="nX1-eW-Y5x"/>
-                            <constraint firstItem="QMe-7D-OZt" firstAttribute="top" secondItem="Xl8-Cz-S5u" secondAttribute="bottom" id="uGZ-qy-CAT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XPm-iA-dSi" secondAttribute="trailing" constant="112" id="mRD-ZE-N5h"/>
+                            <constraint firstItem="QMe-7D-OZt" firstAttribute="top" secondItem="XPm-iA-dSi" secondAttribute="bottom" constant="10" id="xcs-a7-geS"/>
                         </constraints>
                     </view>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
