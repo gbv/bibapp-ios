@@ -720,13 +720,15 @@
             item = nil;
         }
         
-        UIColor *textColor = [UIColor darkTextColor];
+        UIColor *textColorLabel = [UIColor labelColor];
+        UIColor *textColor = [UIColor secondaryLabelColor];
         BOOL isOverdue = NO;
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *date = [dateFormat dateFromString:item.endtime];
         NSDate *now = [NSDate date];
         if ([now compare:date] == NSOrderedDescending) {
+            textColorLabel = [UIColor redColor];
             textColor = [UIColor redColor];
             isOverdue = YES;
         }
@@ -737,7 +739,7 @@
         [cell.labelLabel setText:item.label];
         
         if (tableView.tag == 0) {
-           [cell.dateTitleLabel setTextColor:textColor];
+           [cell.dateTitleLabel setTextColor:textColorLabel];
            [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
            [cell.dateLabel setTextColor:textColor];
            [cell.dateLabel setText:item.endtime];

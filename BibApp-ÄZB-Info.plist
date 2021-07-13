@@ -35,6 +35,8 @@
 	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>Die App verwendet Ihren Standort, um den Abstand zur nächstgelegenen Bibliothek zu ermitteln, die einen von Ihnen gesuchten Titel besitzt. Die Information wird nicht an die Bibliothek oder Andere übermittelt.</string>
+	<key>UILaunchStoryboardName</key>
+	<string>bibapp-launchscreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>bibapp~iphone</string>
 	<key>UIMainStoryboardFile~ipad</key>

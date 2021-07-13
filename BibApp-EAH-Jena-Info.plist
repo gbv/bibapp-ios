@@ -41,6 +41,8 @@
 	<array>
 		<string>belugino.ttf</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>bibapp-launchscreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>bibapp~iphone</string>
 	<key>UIMainStoryboardFile~ipad</key>

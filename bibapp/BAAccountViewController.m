@@ -543,6 +543,7 @@
             item = nil;
         }
         
+        UIColor *textColorLabel = [UIColor labelColor];
         UIColor *textColor = [UIColor labelColor];
         BOOL isOverdue = NO;
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -550,6 +551,7 @@
         NSDate *date = [dateFormat dateFromString:item.endtime];
         NSDate *now = [NSDate date];
         if ([now compare:date] == NSOrderedDescending) {
+            textColorLabel = [UIColor redColor];
             textColor = [UIColor systemRedColor];
             isOverdue = YES;
         }
@@ -560,7 +562,7 @@
         [cell.labelLabel setText:item.label];
         
         if ([self.accountSegmentedController selectedSegmentIndex] == 0) {
-            [cell.dateTitleLabel setTextColor:textColor];
+            [cell.dateTitleLabel setTextColor:textColorLabel];
             [cell.dateTitleLabel setText:BALocalizedString(@"Leihfristende:")];
             [cell.dateLabel setTextColor:textColor];
             [cell.dateLabel setText:item.endtime];
