@@ -149,11 +149,3 @@ target 'BibApp IAI' do
   # Pods for BibApp ÄZB
 
 end
-
-target 'BibAppUnitTests' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for BibAppUnitTests
-
-end
