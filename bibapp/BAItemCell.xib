@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,8 +13,8 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BAItemCell" rowHeight="63" id="2" customClass="BAItemCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="2" id="kaC-0C-gbW">
-                <rect key="frame" x="0.0" y="0.0" width="293" height="73"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2" id="kaC-0C-gbW">
+                <rect key="frame" x="0.0" y="0.0" width="294.5" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mediaIconB.png" translatesAutoresizingMaskIntoConstraints="NO" id="3">
@@ -26,39 +26,39 @@
                         </constraints>
                     </imageView>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60">
-                        <rect key="frame" x="37" y="5" width="252" height="21"/>
+                        <rect key="frame" x="39" y="5" width="251.5" height="16"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="zEv-tE-DHX"/>
+                            <constraint firstAttribute="height" constant="16" id="zEv-tE-DHX"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61">
-                        <rect key="frame" x="37" y="21" width="252" height="21"/>
+                        <rect key="frame" x="39" y="21" width="251.5" height="16"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="fKD-dD-STd"/>
+                            <constraint firstAttribute="height" constant="16" id="fKD-dD-STd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64">
-                        <rect key="frame" x="37" y="37" width="252" height="21"/>
+                        <rect key="frame" x="39" y="37" width="251.5" height="16"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="moU-Ch-9Ss"/>
+                            <constraint firstAttribute="height" constant="16" id="moU-Ch-9Ss"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekZ-lF-Vd4">
-                        <rect key="frame" x="37" y="52" width="252" height="21"/>
+                        <rect key="frame" x="39" y="53" width="251.5" height="16"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="ahZ-Xr-TYe"/>
+                            <constraint firstAttribute="height" constant="16" id="ahZ-Xr-TYe"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -67,21 +67,21 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="ekZ-lF-Vd4" firstAttribute="top" secondItem="64" secondAttribute="bottom" constant="-6" id="3vt-aa-4tF"/>
-                    <constraint firstItem="61" firstAttribute="top" secondItem="60" secondAttribute="bottom" constant="-5" id="62P-NU-Uae"/>
-                    <constraint firstItem="64" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="37" id="A23-In-OAw"/>
-                    <constraint firstItem="3" firstAttribute="top" secondItem="kaC-0C-gbW" secondAttribute="top" constant="4" id="Aao-V0-24L"/>
-                    <constraint firstAttribute="trailing" secondItem="61" secondAttribute="trailing" constant="4" id="Fcn-DX-7Qn"/>
-                    <constraint firstAttribute="trailing" secondItem="ekZ-lF-Vd4" secondAttribute="trailing" constant="4" id="Mcd-Ps-knf"/>
-                    <constraint firstItem="3" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="3" id="TMp-Rh-4Sd"/>
-                    <constraint firstAttribute="trailing" secondItem="64" secondAttribute="trailing" constant="4" id="WpI-1r-VEd"/>
-                    <constraint firstItem="60" firstAttribute="top" secondItem="kaC-0C-gbW" secondAttribute="top" constant="5" id="frm-Kg-QA8"/>
-                    <constraint firstAttribute="trailing" secondItem="60" secondAttribute="trailing" constant="4" id="iHc-79-bBI"/>
-                    <constraint firstItem="61" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="2" id="kgw-bX-bYK"/>
-                    <constraint firstItem="64" firstAttribute="top" secondItem="61" secondAttribute="bottom" constant="-5" id="nx9-Og-bnZ"/>
-                    <constraint firstAttribute="bottom" secondItem="ekZ-lF-Vd4" secondAttribute="bottom" constant="-0.5" id="ytN-mc-uMy"/>
-                    <constraint firstItem="ekZ-lF-Vd4" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="37" id="zWh-Ud-6mS"/>
-                    <constraint firstItem="60" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="2" id="ztf-PX-MCP"/>
+                    <constraint firstItem="3" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="3" id="2f1-eh-Oeu"/>
+                    <constraint firstItem="ekZ-lF-Vd4" firstAttribute="top" secondItem="64" secondAttribute="bottom" id="DZs-4E-mDJ"/>
+                    <constraint firstItem="ekZ-lF-Vd4" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="39" id="MfA-s6-FKq"/>
+                    <constraint firstItem="64" firstAttribute="leading" secondItem="kaC-0C-gbW" secondAttribute="leading" constant="39" id="Tvd-TO-l6d"/>
+                    <constraint firstItem="60" firstAttribute="top" secondItem="kaC-0C-gbW" secondAttribute="top" constant="5" id="Uox-7M-ZEo"/>
+                    <constraint firstItem="3" firstAttribute="top" secondItem="kaC-0C-gbW" secondAttribute="top" constant="4" id="YUR-MY-86D"/>
+                    <constraint firstAttribute="bottom" secondItem="ekZ-lF-Vd4" secondAttribute="bottom" constant="4" id="ddS-ce-1ao"/>
+                    <constraint firstAttribute="trailing" secondItem="ekZ-lF-Vd4" secondAttribute="trailing" constant="4" id="dyT-5L-PIU"/>
+                    <constraint firstAttribute="trailing" secondItem="64" secondAttribute="trailing" constant="4" id="eCt-kM-pa7"/>
+                    <constraint firstItem="64" firstAttribute="top" secondItem="61" secondAttribute="bottom" id="qS9-yX-g27"/>
+                    <constraint firstAttribute="trailing" secondItem="61" secondAttribute="trailing" constant="4" id="rCB-hS-DJB"/>
+                    <constraint firstAttribute="trailing" secondItem="60" secondAttribute="trailing" constant="4" id="tjt-iQ-vuK"/>
+                    <constraint firstItem="61" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="4" id="uVP-6P-Tmf"/>
+                    <constraint firstItem="60" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="4" id="vop-kM-IuJ"/>
+                    <constraint firstItem="61" firstAttribute="top" secondItem="60" secondAttribute="bottom" id="xkl-8T-yaW"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -92,7 +92,7 @@
                 <outlet property="titleLabel" destination="60" id="62"/>
                 <outlet property="yearLabel" destination="ekZ-lF-Vd4" id="jm0-6Y-vUt"/>
             </connections>
-            <point key="canvasLocation" x="742.02898550724649" y="210.26785714285714"/>
+            <point key="canvasLocation" x="536" y="156"/>
         </tableViewCell>
     </objects>
     <resources>
