@@ -1322,7 +1322,7 @@
                                               }];
 
           [alertError addAction:okAction];
-          [self presentViewController:alertError animated:YES completion:nil];
+          [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
        } else {
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
            
@@ -1350,7 +1350,7 @@
                                                }];
 
           [alertError addAction:okAction];
-          [self presentViewController:alertError animated:YES completion:nil];
+          [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
        }
     } else if ([command isEqualToString:@"getDetailsLocalFam"]) {
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
@@ -1815,7 +1815,7 @@
                                                                                            }];
 
                                                         [alertError addAction:okAction];
-                                                        [self presentViewController:alertError animated:YES completion:nil];
+                                                        [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
                                                     }
                                                  }];
                 [alert addAction:orderAction];
@@ -1850,7 +1850,7 @@
                                                                                            }];
 
                                                         [alertError addAction:okAction];
-                                                        [self presentViewController:alertError animated:YES completion:nil];
+                                                        [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
                                                     }
                                                  }];
                 [alert addAction:orderAction];
@@ -1873,7 +1873,7 @@
                 //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
                 //[action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
             }
-            [self presentViewController:alert animated:YES completion:nil];
+            [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
         }
     } else {
         UIAlertController *alert = [UIAlertController
@@ -1898,7 +1898,7 @@
         [alert addAction:cancelAction];
         [alert addAction:openAction];
         
-        [self presentViewController:alert animated:YES completion:nil];
+        [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
 }
 
@@ -1921,7 +1921,7 @@
 
 - (void)tocAction:(id)sender{
     [self setModalPresentationStyle:UIModalPresentationPopover];
-    [self presentViewController:self.tocTableViewController animated:YES completion:nil];
+    [self.view.window.rootViewController presentViewController:self.tocTableViewController animated:YES completion:nil];
 }
 
 - (void)loanAction
@@ -2019,7 +2019,7 @@
                                        }];
 
     [alertError addAction:okAction];
-    [self presentViewController:alertError animated:YES completion:nil];
+    [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
 }
 
 - (void)changeCatalogue:(NSNotification *)notif
