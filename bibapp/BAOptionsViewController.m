@@ -151,7 +151,7 @@
                                                  }];
 
             [alertError addAction:okAction];
-            [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+            [self presentViewController:alertError animated:YES completion:nil];
          } else {
             [self.appDelegate setCurrentAccount:nil];
             [self.appDelegate setCurrentPassword:nil];

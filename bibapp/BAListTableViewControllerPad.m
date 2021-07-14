@@ -955,7 +955,7 @@
                                                }];
 
            [alertError addAction:okAction];
-           [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+           [self presentViewController:alertError animated:YES completion:nil];
         } else {
            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
             
@@ -983,7 +983,7 @@
                                                 }];
 
            [alertError addAction:okAction];
-           [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+           [self presentViewController:alertError animated:YES completion:nil];
         }
     } else if ([command isEqualToString:@"getDetailsLocalFam"]) {
         GDataXMLDocument *parser = [[GDataXMLDocument alloc] initWithData:(NSData *)result options:0 error:nil];
@@ -1122,7 +1122,7 @@
       [composeViewController setToRecipients:@[@""]];
       [composeViewController setSubject:BALocalizedString(@"BibApp Merkliste")];
       [composeViewController setMessageBody:messageBody isHTML:NO];
-      [self.view.window.rootViewController presentViewController:composeViewController animated:YES completion:NULL];
+      [self presentViewController:composeViewController animated:YES completion:NULL];
    }
 }
 
@@ -1233,7 +1233,7 @@
                                                                                              }];
 
                                                         [alertError addAction:okAction];
-                                                        [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                                                        [self presentViewController:alertError animated:YES completion:nil];
                                                     }
                                                  }];
                 [alert addAction:orderAction];
@@ -1268,7 +1268,7 @@
                                                                                              }];
 
                                                         [alertError addAction:okAction];
-                                                        [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                                                        [self presentViewController:alertError animated:YES completion:nil];
                                                     }
                                                  }];
                 [alert addAction:orderAction];
@@ -1290,7 +1290,7 @@
             //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
             //[action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
         }
-        [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        [self presentViewController:alert animated:YES completion:nil];
     } else {
         UIAlertController *alert = [UIAlertController
                          alertControllerWithTitle:nil
@@ -1314,14 +1314,14 @@
         [alert addAction:cancelAction];
         [alert addAction:openAction];
         
-        [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        [self presentViewController:alert animated:YES completion:nil];
     }
     
 }
 
 - (void)tocAction:(id)sender{
     [self setModalPresentationStyle:UIModalPresentationPopover];
-    [self.view.window.rootViewController presentViewController:self.tocTableViewController animated:YES completion:nil];
+    [self presentViewController:self.tocTableViewController animated:YES completion:nil];
 }
 
 - (void)loanAction

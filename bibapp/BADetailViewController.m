@@ -631,7 +631,7 @@
                                              }];
 
           [alertError addAction:okAction];
-          [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+          [self presentViewController:alertError animated:YES completion:nil];
        } else {
           NSDictionary* json = [NSJSONSerialization JSONObjectWithData:(NSData *)result options:kNilOptions error:nil];
            
@@ -660,7 +660,7 @@
                                               }];
 
           [alertError addAction:okAction];
-          [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+          [self presentViewController:alertError animated:YES completion:nil];
        }
     } else if ([command isEqualToString:@"getLocationInfoForUri"]) {
     } else if ([command isEqualToString:@"getCover"]) {
@@ -1123,7 +1123,7 @@
                                                                                                }];
 
                                                             [alertError addAction:okAction];
-                                                            [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                                                            [self presentViewController:alertError animated:YES completion:nil];
                                                         }
                                                      }];
                     [alert addAction:orderAction];
@@ -1160,7 +1160,7 @@
                                                                                                }];
 
                                                             [alertError addAction:okAction];
-                                                            [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                                                            [self presentViewController:alertError animated:YES completion:nil];
                                                         }
                                                      }];
                     [alert addAction:orderAction];
@@ -1176,7 +1176,7 @@
                 [alert addAction:locationAction];
             }
             if (![orderString isEqualToString:@""] || (tempDocumentItem.location != nil)) {
-                [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+                [self presentViewController:alert animated:YES completion:nil];
             }
         } else {
             UIAlertController *alert = [UIAlertController
@@ -1201,7 +1201,7 @@
             [alert addAction:cancelAction];
             [alert addAction:openAction];
             
-            [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }
@@ -1313,7 +1313,7 @@
 
                                     [alertResult addAction:okAction];
         
-                                    [self.view.window.rootViewController presentViewController:alertResult animated:YES completion:nil];
+                                    [self presentViewController:alertResult animated:YES completion:nil];
     }];
 
     UIAlertAction* cancelAction = [UIAlertAction
@@ -1325,7 +1325,7 @@
     [alert addAction:addAction];
     [alert addAction:cancelAction];
     
-    [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:alert animated:YES completion:nil];
     
 }
 

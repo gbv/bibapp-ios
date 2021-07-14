@@ -221,7 +221,7 @@
                                                     }];
 
                    [alertError addAction:okAction];
-                   [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                   [self presentViewController:alertError animated:YES completion:nil];
                 }
             } else {
                 self.isLoggingIn = NO;
@@ -244,7 +244,7 @@
                                                   }];
 
                 [alertError addAction:okAction];
-                [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+                [self presentViewController:alertError animated:YES completion:nil];
             } else {
                 [self.appDelegate setIsLoggedIn:YES];
                 [self setCurrentToken:[json objectForKey:@"access_token"]];
@@ -567,7 +567,7 @@
                                              }];
             [alert addAction:loginAction];
 
-            [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }
@@ -700,7 +700,7 @@
                                         }];
 
     [alertError addAction:okAction];
-    [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+    [self presentViewController:alertError animated:YES completion:nil];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -940,7 +940,7 @@
             [alert addAction:cancelAction];
             [alert addAction:renewAction];
             
-            [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
@@ -954,7 +954,7 @@
                                                 }];
 
             [alertError addAction:okAction];
-            [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+            [self presentViewController:alertError animated:YES completion:nil];
         }
     } else if (clicked.tag == 11) {
         BOOL foundSelected = NO;
@@ -1003,7 +1003,7 @@
             [alert addAction:cancelAction];
             [alert addAction:reverseAction];
             
-            [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
                                 alertControllerWithTitle:nil
@@ -1017,7 +1017,7 @@
                                                 }];
 
             [alertError addAction:okAction];
-            [self.view.window.rootViewController presentViewController:alertError animated:YES completion:nil];
+            [self presentViewController:alertError animated:YES completion:nil];
         }
     }
 }

@@ -207,7 +207,7 @@
       [composeViewController setToRecipients:@[@""]];
       [composeViewController setSubject:BALocalizedString(@"BibApp Merkliste")];
       [composeViewController setMessageBody:messageBody isHTML:NO];
-      [self.view.window.rootViewController presentViewController:composeViewController animated:YES completion:NULL];
+      [self presentViewController:composeViewController animated:YES completion:NULL];
    }
 }
 
