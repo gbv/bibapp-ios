@@ -124,7 +124,7 @@ static BAConnector *sharedConnector = nil;
     }
 }
 
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+/* - (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
     // Add trusted hosts to this array in order to handle authentication challenges
     NSMutableArray* trustedHosts = [NSMutableArray array];
 
@@ -145,7 +145,7 @@ static BAConnector *sharedConnector = nil;
     {
         [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
     }
-}
+} */
 
 - (void)searchLocalFor:(NSString *)term WithFirst:(long)first WithDelegate:(id)delegate
 {

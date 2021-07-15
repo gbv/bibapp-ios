@@ -1600,7 +1600,8 @@
         }
        
         [self.coverActivityIndicator startAnimating];
-        [self performSelectorInBackground:@selector(loadCover) withObject:nil];
+        //[self performSelectorInBackground:@selector(loadCover) withObject:nil];
+        [self loadCover];
     } else {
         [self initDetailView];
     }
@@ -1873,6 +1874,11 @@
                 //[action showFromRect:CGRectMake(cellRect.origin.x+625, cellRect.origin.y-28, 200, 100) inView:self.detailTableView animated:YES];
                 //[action showFromRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, 200, 100) inView:self.detailTableView animated:YES];
             }
+            
+            UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+            popPresenter.sourceView = sender;
+            [popPresenter setPermittedArrowDirections:UIPopoverArrowDirectionUp];
+            
             [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
         }
     } else {
@@ -1897,6 +1903,10 @@
 
         [alert addAction:cancelAction];
         [alert addAction:openAction];
+        
+        UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+        popPresenter.sourceView = sender;
+        [popPresenter setPermittedArrowDirections:UIPopoverArrowDirectionUp];
         
         [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }

@@ -940,6 +940,9 @@
             [alert addAction:cancelAction];
             [alert addAction:renewAction];
             
+            UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+            popPresenter.barButtonItem = (UIBarButtonItem *)clicked;
+            
             [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
         } else {
             UIAlertController * alertError = [UIAlertController
@@ -1002,6 +1005,9 @@
 
             [alert addAction:cancelAction];
             [alert addAction:reverseAction];
+            
+            UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+            popPresenter.barButtonItem = (UIBarButtonItem *)clicked;
             
             [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
         } else {
