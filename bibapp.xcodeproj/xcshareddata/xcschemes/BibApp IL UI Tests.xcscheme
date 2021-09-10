@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F8A76131781C05400CCF7DB"
-               BuildableName = "BibApp IL.app"
-               BlueprintName = "BibApp IL"
+               BlueprintIdentifier = "9F3D599826EB9B8700FF0C58"
+               BuildableName = "BibApp IL UI Tests.xctest"
+               BlueprintName = "BibApp IL UI Tests"
                ReferencedContainer = "container:bibapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,31 +42,14 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F8A76131781C05400CCF7DB"
-            BuildableName = "BibApp IL.app"
-            BlueprintName = "BibApp IL"
-            ReferencedContainer = "container:bibapp.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8F8A76131781C05400CCF7DB"
-            BuildableName = "BibApp IL.app"
-            BlueprintName = "BibApp IL"
+            BlueprintIdentifier = "9F3D599826EB9B8700FF0C58"
+            BuildableName = "BibApp IL UI Tests.xctest"
+            BlueprintName = "BibApp IL UI Tests"
             ReferencedContainer = "container:bibapp.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

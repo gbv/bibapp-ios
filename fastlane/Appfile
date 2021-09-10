@@ -1,0 +1,8 @@
+app_identifier("de.effective-webwork.Test.BibApp-IL-UI-Tests") # The bundle identifier of your app
+apple_id("johannesschultze@effective-webwork.de") # Your Apple email address
+
+itc_team_id("852696") # App Store Connect Team ID
+team_id("DG2S2C98D2") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
