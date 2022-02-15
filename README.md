@@ -1,3 +1,6 @@
+**Dieses Projekt ist inaktiv wird nicht mehr weiterentwickelt**
+
+
 bibapp-ios
 ==========
 
